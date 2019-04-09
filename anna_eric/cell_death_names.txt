@@ -1,0 +1,29 @@
+cell death
+apoptosis
+necrosis
+necroptosis
+reduced viability
+cytotoxicity
+mitochondrial outer membrane permeabilization
+MOMP
+mitochondrial disruption
+cytochrome c release
+caspase activation
+mitochondria-mediated apoptosis
+Lysosome related terms: lysosome
+lysosomal leakage
+lysosomal disruption
+lysosomal permeabilization
+lysosomal membrane permeabilization
+LMP\ndisrupt lysosome function
+lysosomal dysfunction
+lysosome leakage
+lysosome disruption
+lysosome-dependent cell death
+lysosomal cell death
+macroautophagy
+autophagy
+lysosome-mediated apoptosis
+lysosomal function
+lysosomal membrane
+lysosomal enzyme
