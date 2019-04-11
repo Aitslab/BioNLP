@@ -3,4 +3,5 @@
 __pycache__
 *.swp
 .idea
-../.idea
+*.exe
+*.o
