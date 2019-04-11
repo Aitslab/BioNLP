@@ -5,3 +5,6 @@ __pycache__
 .idea
 *.exe
 *.o
+abstracts/
+*.abstracts
+corpus/
