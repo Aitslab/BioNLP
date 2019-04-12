@@ -1,0 +1,950 @@
+Source	Subset Code	Subset Name	Concept Code	Source PT	Source Synonyms(s)	Source Definition
+FDA	C133240	SPL Blood Form Donor Type Terminology	C133267	Allogeneic		
+FDA	C133240	SPL Blood Form Donor Type Terminology	C133268	Autologous		
+FDA	C133240	SPL Blood Form Donor Type Terminology	C133269	Dedicated		
+FDA	C133240	SPL Blood Form Donor Type Terminology	C133270	Designated		
+FDA	C133240	SPL Blood Form Donor Type Terminology	C133272	Directed		
+FDA	C133241	SPL Blood Form Establishment Functions Terminology	C113077	Test		
+FDA	C133241	SPL Blood Form Establishment Functions Terminology	C133275	Irradiated		
+FDA	C133241	SPL Blood Form Establishment Functions Terminology	C133276	Leukocytes Reduced		
+FDA	C133241	SPL Blood Form Establishment Functions Terminology	C133279	Pooled		
+FDA	C133241	SPL Blood Form Establishment Functions Terminology	C133282	Pathogen Reduced		
+FDA	C133241	SPL Blood Form Establishment Functions Terminology	C133292	Store and Distribute to Others		
+FDA	C133241	SPL Blood Form Establishment Functions Terminology	C133293	Prepare		
+FDA	C133241	SPL Blood Form Establishment Functions Terminology	C133294	Collect		
+FDA	C133241	SPL Blood Form Establishment Functions Terminology	C133327	Bacterial Testing		
+FDA	C133241	SPL Blood Form Establishment Functions Terminology	C133332	Donor Retested		
+FDA	C133241	SPL Blood Form Establishment Functions Terminology	C133333	Automated Apheresis		
+FDA	C133241	SPL Blood Form Establishment Functions Terminology	C133334	Manual Apheresis		
+FDA	C133242	SPL Blood Form Establishment Type Terminology	C133264	Hospital Blood Bank		
+FDA	C133242	SPL Blood Form Establishment Type Terminology	C133265	Community (Non-Hospital) Blood Bank		
+FDA	C133242	SPL Blood Form Establishment Type Terminology	C133299	Manufacturer of Licensed Device		
+FDA	C133242	SPL Blood Form Establishment Type Terminology	C133300	Broker/Warehouse		
+FDA	C133242	SPL Blood Form Establishment Type Terminology	C133301	Collection Facility		
+FDA	C133242	SPL Blood Form Establishment Type Terminology	C133302	Component Preparation Facility		
+FDA	C133242	SPL Blood Form Establishment Type Terminology	C133303	Distribution Center		
+FDA	C133242	SPL Blood Form Establishment Type Terminology	C133304	Irradiation Facility		
+FDA	C133242	SPL Blood Form Establishment Type Terminology	C133305	Hospital Transfusion Service - Approved Medicare		
+FDA	C133242	SPL Blood Form Establishment Type Terminology	C133306	Hospital Transfusion Service - Not Approved Medicare		
+FDA	C133242	SPL Blood Form Establishment Type Terminology	C133325	Plasmapheresis Center		
+FDA	C133242	SPL Blood Form Establishment Type Terminology	C133330	Product Testing Laboratory - Associated with Community or Hospital Blood Bank		
+FDA	C133242	SPL Blood Form Establishment Type Terminology	C133331	Product Testing Laboratory - Independent		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133260	Cryoprecipitated AHF		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133266	Plasma		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133271	Blood Products for Diagnostic Use		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133273	Granulocytes		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133277	Other		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133278	Platelets		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133280	Red Blood Cells		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133281	Source Leukocytes		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133335	Blood Bank Reagents		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133336	Platelets PAS (Platelets Additive Solution)		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133342	PF24 Plasma		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133343	PF24RT24 Plasma		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133344	Recovered Plasma		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133345	Plasma Cryoprecipitated Reduced		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133346	Liquid Plasma		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133347	Source Plasma		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133348	Therapeutic Exchange Plasma		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133349	Platelets Extended Dating		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133350	Platelets Washed		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133351	Red Blood Cells Deglycerolized		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133352	Red Blood Cells Frozen		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133353	Red Blood Cells Rejuvenated Frozen		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133354	Red Blood Cells Reconstituted		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133355	Red Blood Cells Rejuvenated Frozen Deglycerolized		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133356	Red Blood Cells Rejuvenated		
+FDA	C133243	SPL Blood Form Product Type Terminology	C133357	Red Blood Cells Washed		
+FDA	C133243	SPL Blood Form Product Type Terminology	C41067	Whole Blood		
+FDA	C133243	SPL Blood Form Product Type Terminology	C89783	Fresh Frozen Plasma		
+FDA	C133245	SPL Blood Form Type of Ownership Terminology	C133307	Cooperative Association		
+FDA	C133245	SPL Blood Form Type of Ownership Terminology	C133308	County/Municipal/Hospital Authority		
+FDA	C133245	SPL Blood Form Type of Ownership Terminology	C133309	Federal (non-military)		
+FDA	C133245	SPL Blood Form Type of Ownership Terminology	C133310	Corporation (for Profit)		
+FDA	C133245	SPL Blood Form Type of Ownership Terminology	C133311	Corporation (Non-Profit)		
+FDA	C133245	SPL Blood Form Type of Ownership Terminology	C133312	Single Proprietorship		
+FDA	C133245	SPL Blood Form Type of Ownership Terminology	C133313	State		
+FDA	C133245	SPL Blood Form Type of Ownership Terminology	C133358	U.S. Military		
+FDA	C133245	SPL Blood Form Type of Ownership Terminology	C54138	Partnership		
+FDA	C117110	SPL Business Entity Qualifier Terminology	C117113	Doing Business As		
+FDA	C101885	SPL Business Operation Qualifier Terminology	C101886	Manufactures Non-Generics		
+FDA	C101885	SPL Business Operation Qualifier Terminology	C106643	Manufactures human prescription drug products		
+FDA	C101885	SPL Business Operation Qualifier Terminology	C111077	Distributes human prescription drug products		
+FDA	C101885	SPL Business Operation Qualifier Terminology	C111078	Distributes human over-the-counter drug products		
+FDA	C101885	SPL Business Operation Qualifier Terminology	C112087	Intent to compound 506E (drug shortage) drugs		
+FDA	C101885	SPL Business Operation Qualifier Terminology	C112091	No intent to compound 506E (drug shortage) drugs		
+FDA	C101885	SPL Business Operation Qualifier Terminology	C112092	Compounding from bulk ingredient		
+FDA	C101885	SPL Business Operation Qualifier Terminology	C112093	Not compounding from bulk ingredient		
+FDA	C101885	SPL Business Operation Qualifier Terminology	C112094	Compounding sterile products		
+FDA	C101885	SPL Business Operation Qualifier Terminology	C112095	Not compounding sterile products		
+FDA	C101885	SPL Business Operation Qualifier Terminology	C114889	Manufactures animal prescription drug products		
+FDA	C101885	SPL Business Operation Qualifier Terminology	C114890	Manufactures veterinary feed directive Type A medicated article drug products		
+FDA	C101885	SPL Business Operation Qualifier Terminology	C114891	Manufactures animal over-the-counter drug products		
+FDA	C101885	SPL Business Operation Qualifier Terminology	C114892	Manufactures animal over-the-counter Type A medicated article drug products		
+FDA	C101885	SPL Business Operation Qualifier Terminology	C123274	Warehouses human prescription drug products		
+FDA	C101885	SPL Business Operation Qualifier Terminology	C126091	Transfills Medical Gas		
+FDA	C101885	SPL Business Operation Qualifier Terminology	C131708	Manufactures Human Over-the-Counter Drug Products Produced Under a Monograph		
+FDA	C101885	SPL Business Operation Qualifier Terminology	C131709	Manufactures Human Over-the-Counter Drug Products Produced Under an Approved Drug Application		
+FDA	C101885	SPL Business Operation Qualifier Terminology	C131710	Manufactures Human Over-the-Counter Drug Products Not Produced Under an Approved Application or Under a Monograph		
+FDA	C101885	SPL Business Operation Qualifier Terminology	C132491	Contract Manufacturing		
+FDA	C73600	SPL Business Operation Terminology	C101509	API/FDF ANALYTICAL TESTING		
+FDA	C73600	SPL Business Operation Terminology	C101510	FDF MANUFACTURE		
+FDA	C73600	SPL Business Operation Terminology	C101511	CLINICAL BIOEQUIVALENCE OR BIOAVALABILITY STUDY		
+FDA	C73600	SPL Business Operation Terminology	C101512	IN VITRO BIOEQUIVALENCE OR BIOANALYTICAL TESTING		
+FDA	C73600	SPL Business Operation Terminology	C112113	Human Drug Compounding Outsourcing Facility		
+FDA	C73600	SPL Business Operation Terminology	C118411	Wholesale Drug Distributor		
+FDA	C73600	SPL Business Operation Terminology	C118412	Third-Party Logistics Provider		
+FDA	C73600	SPL Business Operation Terminology	C122061	Outsourcing Animal Drug Compounding		
+FDA	C73600	SPL Business Operation Terminology	C125710	Transfill		
+FDA	C73600	SPL Business Operation Terminology	C25391	ANALYSIS		
+FDA	C73600	SPL Business Operation Terminology	C43360	MANUFACTURE		
+FDA	C73600	SPL Business Operation Terminology	C70827	Salvage		
+FDA	C73600	SPL Business Operation Terminology	C71586	EXPORT		
+FDA	C73600	SPL Business Operation Terminology	C73330	UNITED STATES AGENT		
+FDA	C73600	SPL Business Operation Terminology	C73599	IMPORT		
+FDA	C73600	SPL Business Operation Terminology	C73606	REPACK		
+FDA	C73600	SPL Business Operation Terminology	C73607	RELABEL		
+FDA	C73600	SPL Business Operation Terminology	C73608	Distributes drug products under own private label		
+FDA	C73600	SPL Business Operation Terminology	C82401	API MANUFACTURE		
+FDA	C73600	SPL Business Operation Terminology	C82434	OUTSOURCING HUMAN DRUG COMPOUNDING		
+FDA	C73600	SPL Business Operation Terminology	C84382	STERILIZE		
+FDA	C73600	SPL Business Operation Terminology	C84386	PARTICLE SIZE REDUCTION		
+FDA	C73600	SPL Business Operation Terminology	C84635	MEDICATED ANIMAL FEED MANUFACTURE		
+FDA	C73600	SPL Business Operation Terminology	C84731	PACK		
+FDA	C73600	SPL Business Operation Terminology	C84732	LABEL		
+FDA	C73600	SPL Business Operation Terminology	C91403	POSITRON EMISSION TOMOGRAPHY DRUG PRODUCTION		
+FDA	C54453	SPL Color Terminology	C48323	BLACK		
+FDA	C54453	SPL Color Terminology	C48324	GRAY		
+FDA	C54453	SPL Color Terminology	C48325	WHITE		
+FDA	C54453	SPL Color Terminology	C48326	RED		
+FDA	C54453	SPL Color Terminology	C48327	PURPLE		
+FDA	C54453	SPL Color Terminology	C48328	PINK		
+FDA	C54453	SPL Color Terminology	C48329	GREEN		
+FDA	C54453	SPL Color Terminology	C48330	YELLOW		
+FDA	C54453	SPL Color Terminology	C48331	ORANGE		
+FDA	C54453	SPL Color Terminology	C48332	BROWN		
+FDA	C54453	SPL Color Terminology	C48333	BLUE		
+FDA	C54453	SPL Color Terminology	C48334	TURQUOISE		
+FDA	C102833	SPL Combination Product Type Terminology	C102834	Type 1: Convenience Kit or Co-Package		
+FDA	C102833	SPL Combination Product Type Terminology	C102835	Type 2: Prefilled Drug Delivery Device/System (syringe, patch, etc.)		
+FDA	C102833	SPL Combination Product Type Terminology	C102836	Type 3: Prefilled Biologic Delivery Device/System (syringe, patch, etc.)		
+FDA	C102833	SPL Combination Product Type Terminology	C102837	Type 4: Device Coated/Impregnated/Otherwise Combined with Drug		
+FDA	C102833	SPL Combination Product Type Terminology	C102838	Type 5: Device Coated or Otherwise Combined with Biologic		
+FDA	C102833	SPL Combination Product Type Terminology	C102839	Type 6: Drug/Biologic Combination		
+FDA	C102833	SPL Combination Product Type Terminology	C102840	Type 7: Separate Products Requiring Cross Labeling		
+FDA	C102833	SPL Combination Product Type Terminology	C102841	Type 8: Possible Combination Based on Cross Labeling of Separate Products (Temporary Type)		
+FDA	C102833	SPL Combination Product Type Terminology	C102842	Type 9: Other Type of Part 3 Combination Product (e.g., Drug/Device/Biological Product)		
+FDA	C102833	SPL Combination Product Type Terminology	C112160	Type 0: Not a Combination Product		
+FDA	C111661	SPL Contributing Factor-General Terminology	C1949	FOOD OR FOOD PRODUCT		
+FDA	C54459	SPL DEA Schedule Terminology	C48672	CI		
+FDA	C54459	SPL DEA Schedule Terminology	C48675	CII		
+FDA	C54459	SPL DEA Schedule Terminology	C48676	CIII		
+FDA	C54459	SPL DEA Schedule Terminology	C48677	CIV		
+FDA	C54459	SPL DEA Schedule Terminology	C48679	CV		
+FDA	C87299	SPL Document Type Terminology	C79163	PROMOTIONAL MATERIALS		
+FDA	C54455	SPL Drug Route of Administration Terminology	C132737	Intracanalicular		
+FDA	C54455	SPL Drug Route of Administration Terminology	C28161	INTRAMUSCULAR		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38192	AURICULAR (OTIC)		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38193	BUCCAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38194	CONJUNCTIVAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38197	DENTAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38198	SOFT TISSUE		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38200	HEMODIALYSIS		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38203	IONTOPHORESIS		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38205	ENDOCERVICAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38206	ENDOSINUSIAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38207	INTRATHORACIC		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38208	ENDOTRACHEAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38209	ENTERAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38210	EPIDURAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38211	EXTRA-AMNIOTIC		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38212	EXTRACORPOREAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38215	INFILTRATION		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38216	RESPIRATORY (INHALATION)		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38217	INTRACORONAL, DENTAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38218	INTRACORONARY		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38219	INTERSTITIAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38220	INTRA-ABDOMINAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38221	INTRA-AMNIOTIC		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38222	INTRA-ARTERIAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38223	INTRA-ARTICULAR		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38224	INTRABILIARY		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38225	INTRABRONCHIAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38226	INTRABURSAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38227	INTRACARDIAC		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38228	INTRACARTILAGINOUS		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38229	INTRACAUDAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38230	INTRACAVERNOUS		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38231	INTRACAVITARY		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38232	INTRACEREBRAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38233	INTRACISTERNAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38234	INTRACORNEAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38235	INTRACORPORUS CAVERNOSUM		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38236	INTRACRANIAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38238	INTRADERMAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38239	INTRADISCAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38240	INTRADUCTAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38241	INTRADUODENAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38242	INTRADURAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38243	INTRAEPIDERMAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38245	INTRAESOPHAGEAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38246	INTRAGASTRIC		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38247	INTRAGINGIVAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38248	INTRAHEPATIC		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38249	INTRAILEAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38250	INTRALESIONAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38251	INTRALUMINAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38252	INTRALYMPHATIC		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38253	INTRAMEDULLARY		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38254	INTRAMENINGEAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38255	INTRAOCULAR		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38256	INTRAOVARIAN		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38257	INTRAPERICARDIAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38258	INTRAPERITONEAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38259	INTRAPLEURAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38260	INTRAPROSTATIC		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38261	INTRAPULMONARY		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38262	INTRASINAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38263	INTRASPINAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38264	INTRASYNOVIAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38265	INTRATENDINOUS		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38266	INTRATESTICULAR		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38267	INTRATHECAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38268	INTRATUBULAR		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38269	INTRATUMOR		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38270	INTRATYMPANIC		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38271	URETHRAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38272	INTRAUTERINE		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38273	INTRAVASCULAR		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38274	INTRAVENOUS BOLUS		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38276	INTRAVENOUS		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38277	INTRAVENTRICULAR		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38278	INTRAVESICAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38279	INTRAVENOUS DRIP		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38280	INTRAVITREAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38281	IRRIGATION		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38282	LARYNGEAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38283	TRANSMUCOSAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38284	NASAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38285	NASOGASTRIC		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38286	OCCLUSIVE DRESSING TECHNIQUE		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38287	OPHTHALMIC		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38288	ORAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38289	OROPHARYNGEAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38290	OTHER		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38291	PARENTERAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38292	PERIARTICULAR		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38293	PERINEURAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38294	PERIODONTAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38295	RECTAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38296	RETROBULBAR		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38297	SUBARACHNOID		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38298	SUBCONJUNCTIVAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38299	SUBCUTANEOUS		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38300	SUBLINGUAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38301	SUBMUCOSAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38304	TOPICAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38305	TRANSDERMAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38307	TRANSPLACENTAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38308	TRANSTRACHEAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38309	TRANSTYMPANIC		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38310	UNASSIGNED		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38311	UNKNOWN		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38312	URETERAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38313	VAGINAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38633	ELECTRO-OSMOSIS		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38675	CUTANEOUS		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38676	PERCUTANEOUS		
+FDA	C54455	SPL Drug Route of Administration Terminology	C38677	PERIDURAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C48623	NOT APPLICABLE		
+FDA	C54455	SPL Drug Route of Administration Terminology	C65103	SUBGINGIVAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C79137	INTRAMAMMARY		
+FDA	C54455	SPL Drug Route of Administration Terminology	C79138	INTRALINGUAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C79139	INTRARUMINAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C79141	INTRANODAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C79142	INTRAOMENTUM		
+FDA	C54455	SPL Drug Route of Administration Terminology	C79143	SUBRETINAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C79144	INTRAEPICARDIAL		
+FDA	C54455	SPL Drug Route of Administration Terminology	C79145	TRANSENDOCARDIAL		
+FDA	C111660	SPL Equivalence Codes Terminology	C64637	SAME		
+FDA	C73339	SPL Flavor Terminology	C100097	GINGER		
+FDA	C73339	SPL Flavor Terminology	C73360	ALMOND		
+FDA	C73339	SPL Flavor Terminology	C73361	ANISE		
+FDA	C73339	SPL Flavor Terminology	C73362	APPLE		
+FDA	C73339	SPL Flavor Terminology	C73363	APRICOT		
+FDA	C73339	SPL Flavor Terminology	C73364	BANANA		
+FDA	C73339	SPL Flavor Terminology	C73365	BERRY		
+FDA	C73339	SPL Flavor Terminology	C73366	BLACKBERRY		
+FDA	C73339	SPL Flavor Terminology	C73367	BLUEBERRY		
+FDA	C73339	SPL Flavor Terminology	C73368	BUBBLE GUM		
+FDA	C73339	SPL Flavor Terminology	C73369	BURGUNDY		
+FDA	C73339	SPL Flavor Terminology	C73370	BUTTER PECAN		
+FDA	C73339	SPL Flavor Terminology	C73371	BUTTERMINT		
+FDA	C73339	SPL Flavor Terminology	C73372	BUTTERSCOTCH		
+FDA	C73339	SPL Flavor Terminology	C73373	CARAMEL		
+FDA	C73339	SPL Flavor Terminology	C73374	CHEESE		
+FDA	C73339	SPL Flavor Terminology	C73375	CHERRY		
+FDA	C73339	SPL Flavor Terminology	C73376	CHOCOLATE		
+FDA	C73339	SPL Flavor Terminology	C73377	CINNAMON		
+FDA	C73339	SPL Flavor Terminology	C73378	CITRUS		
+FDA	C73339	SPL Flavor Terminology	C73379	COCONUT		
+FDA	C73339	SPL Flavor Terminology	C73380	COFFEE		
+FDA	C73339	SPL Flavor Terminology	C73381	COLA		
+FDA	C73339	SPL Flavor Terminology	C73382	COTTON CANDY		
+FDA	C73339	SPL Flavor Terminology	C73383	CRANBERRY		
+FDA	C73339	SPL Flavor Terminology	C73384	CREME DE MENTHE		
+FDA	C73339	SPL Flavor Terminology	C73385	CURACAO		
+FDA	C73339	SPL Flavor Terminology	C73386	CUSTARD		
+FDA	C73339	SPL Flavor Terminology	C73387	EGG NOG		
+FDA	C73339	SPL Flavor Terminology	C73388	FIG		
+FDA	C73339	SPL Flavor Terminology	C73389	FRUIT		
+FDA	C73339	SPL Flavor Terminology	C73390	FRUIT PUNCH		
+FDA	C73339	SPL Flavor Terminology	C73391	GRAPE		
+FDA	C73339	SPL Flavor Terminology	C73392	GRAPEFRUIT		
+FDA	C73339	SPL Flavor Terminology	C73393	GUARANA		
+FDA	C73339	SPL Flavor Terminology	C73394	HONEY		
+FDA	C73339	SPL Flavor Terminology	C73395	KIWI		
+FDA	C73339	SPL Flavor Terminology	C73396	LEMON		
+FDA	C73339	SPL Flavor Terminology	C73397	LICORICE		
+FDA	C73339	SPL Flavor Terminology	C73398	LIME		
+FDA	C73339	SPL Flavor Terminology	C73399	LIVER		
+FDA	C73339	SPL Flavor Terminology	C73400	MANGO		
+FDA	C73339	SPL Flavor Terminology	C73402	MEAT		
+FDA	C73339	SPL Flavor Terminology	C73403	MENTHOL		
+FDA	C73339	SPL Flavor Terminology	C73404	MINT		
+FDA	C73339	SPL Flavor Terminology	C73405	ORANGE BANANA		
+FDA	C73339	SPL Flavor Terminology	C73406	ORANGE		
+FDA	C73339	SPL Flavor Terminology	C73407	PEACH		
+FDA	C73339	SPL Flavor Terminology	C73408	PEPPERMINT		
+FDA	C73339	SPL Flavor Terminology	C73409	PINEAPPLE		
+FDA	C73339	SPL Flavor Terminology	C73410	PLUM		
+FDA	C73339	SPL Flavor Terminology	C73411	POMEGRANATE		
+FDA	C73339	SPL Flavor Terminology	C73412	RAISIN		
+FDA	C73339	SPL Flavor Terminology	C73413	RASPBERRY		
+FDA	C73339	SPL Flavor Terminology	C73414	ROOT BEER		
+FDA	C73339	SPL Flavor Terminology	C73415	RUM		
+FDA	C73339	SPL Flavor Terminology	C73416	SPEARMINT		
+FDA	C73339	SPL Flavor Terminology	C73417	STRAWBERRY		
+FDA	C73339	SPL Flavor Terminology	C73418	TANGERINE		
+FDA	C73339	SPL Flavor Terminology	C73419	TROPICAL FRUIT PUNCH		
+FDA	C73339	SPL Flavor Terminology	C73420	TUTTI FRUTTI		
+FDA	C73339	SPL Flavor Terminology	C73421	VANILLA		
+FDA	C73339	SPL Flavor Terminology	C73422	WALNUT		
+FDA	C73339	SPL Flavor Terminology	C73423	WATERMELON		
+FDA	C73339	SPL Flavor Terminology	C73424	WINTERGREEN		
+FDA	C73339	SPL Flavor Terminology	C73433	MAQUE TREE		
+FDA	C73339	SPL Flavor Terminology	C79134	FISH		
+FDA	C73339	SPL Flavor Terminology	C82400	MARSHMALLOW		
+FDA	C73339	SPL Flavor Terminology	C87298	BOYSENBERRY		
+FDA	C73339	SPL Flavor Terminology	C92709	CHICKEN		
+FDA	C73339	SPL Flavor Terminology	C92710	MALT		
+FDA	C118404	SPL License Disciplinary Action Terminology	C118406	Suspended		
+FDA	C118404	SPL License Disciplinary Action Terminology	C118407	Revoked		
+FDA	C118404	SPL License Disciplinary Action Terminology	C118408	Active		
+FDA	C118404	SPL License Disciplinary Action Terminology	C118471	Resolved		
+FDA	C118404	SPL License Disciplinary Action Terminology	C118472	Other		
+FDA	C118777	SPL Licensing Terminology	C118779	Licensed		
+FDA	C54599	SPL Limitation of Use Terminology	C41332	ADVERSE REACTION		
+FDA	C54599	SPL Limitation of Use Terminology	C50646	CONTRAINDICATION		
+FDA	C54599	SPL Limitation of Use Terminology	C54346	DOSE MODIFICATION		
+FDA	C54599	SPL Limitation of Use Terminology	C54350	SECOND LINE TREATMENT		
+FDA	C54599	SPL Limitation of Use Terminology	C54351	USE WITH CAUTION		
+FDA	C54599	SPL Limitation of Use Terminology	C54352	LIMITED OR NO INFORMATION		
+FDA	C54599	SPL Limitation of Use Terminology	C54708	INTERACTION		
+FDA	C54599	SPL Limitation of Use Terminology	C60654	CONDITIONAL APPROVAL		
+FDA	C54599	SPL Limitation of Use Terminology	C60655	DURATION OF USE		
+FDA	C106324	SPL Lot Distribution Data - Distribution Codes	C106325	Distributed per reporting interval		
+FDA	C106324	SPL Lot Distribution Data - Distribution Codes	C106326	Distributed - anticipated total		
+FDA	C106324	SPL Lot Distribution Data - Distribution Codes	C106328	Returned		
+FDA	C73582	SPL Marketing Category Terminology	C101533	UNAPPROVED DRUG FOR USE IN DRUG SHORTAGE		
+FDA	C73582	SPL Marketing Category Terminology	C117717	Master File		
+FDA	C73582	SPL Marketing Category Terminology	C132333	Approved Drug Product Manufactured Under Contract		
+FDA	C73582	SPL Marketing Category Terminology	C132334	OTC Monograph Drug Product Manufactured Under Contract		
+FDA	C73582	SPL Marketing Category Terminology	C132335	Unapproved Drug Product Manufactured Under Contract		
+FDA	C73582	SPL Marketing Category Terminology	C73583	ANADA		
+FDA	C73582	SPL Marketing Category Terminology	C73584	ANDA		
+FDA	C73582	SPL Marketing Category Terminology	C73585	BLA		
+FDA	C73582	SPL Marketing Category Terminology	C73586	BULK ACTIVE INGREDIENT		
+FDA	C73582	SPL Marketing Category Terminology	C73587	BULK INACTIVE INGREDIENT		
+FDA	C73582	SPL Marketing Category Terminology	C73588	CONDITIONAL NADA		
+FDA	C73582	SPL Marketing Category Terminology	C73590	EXPORT ONLY		
+FDA	C73582	SPL Marketing Category Terminology	C73593	NADA		
+FDA	C73582	SPL Marketing Category Terminology	C73594	NDA		
+FDA	C73582	SPL Marketing Category Terminology	C73603	OTC MONOGRAPH FINAL		
+FDA	C73582	SPL Marketing Category Terminology	C73604	OTC MONOGRAPH NOT FINAL		
+FDA	C73582	SPL Marketing Category Terminology	C73605	NDA AUTHORIZED GENERIC		
+FDA	C73582	SPL Marketing Category Terminology	C73613	UNAPPROVED MEDICAL GAS		
+FDA	C73582	SPL Marketing Category Terminology	C73614	UNAPPROVED HOMEOPATHIC		
+FDA	C73582	SPL Marketing Category Terminology	C73615	UNAPPROVED VITAMIN DRUG		
+FDA	C73582	SPL Marketing Category Terminology	C73626	BULK INGREDIENT		
+FDA	C73582	SPL Marketing Category Terminology	C73627	UNAPPROVED DRUG OTHER MARKETING CATEGORY		
+FDA	C73582	SPL Marketing Category Terminology	C75302	IND		
+FDA	C73582	SPL Marketing Category Terminology	C80438	EXEMPT DEVICE		
+FDA	C73582	SPL Marketing Category Terminology	C80440	HUMANITARIAN DEVICE EXEMPTION		
+FDA	C73582	SPL Marketing Category Terminology	C80441	PREMARKET APPLICATION		
+FDA	C73582	SPL Marketing Category Terminology	C80442	PREMARKET NOTIFICATION	510(k)	
+FDA	C73582	SPL Marketing Category Terminology	C86952	DIETARY SUPPLEMENT		
+FDA	C73582	SPL Marketing Category Terminology	C86964	MEDICAL FOOD		
+FDA	C73582	SPL Marketing Category Terminology	C86965	COSMETIC		
+FDA	C73582	SPL Marketing Category Terminology	C92556	LEGALLY MARKETED UNAPPROVED NEW ANIMAL DRUGS FOR MINOR SPECIES		
+FDA	C73582	SPL Marketing Category Terminology	C94795	DRUG FOR FURTHER PROCESSING		
+FDA	C73582	SPL Marketing Category Terminology	C95600	APPROVED DRUG PRODUCT MANUFACTURED EXCLUSIVELY FOR PRIVATE LABEL DISTRIBUTOR		
+FDA	C73582	SPL Marketing Category Terminology	C95601	OTC MONOGRAPH DRUG PRODUCT MANUFACTURED EXCLUSIVELY FOR PRIVATE LABEL DISTRIBUTOR		
+FDA	C73582	SPL Marketing Category Terminology	C95602	UNAPPROVED DRUG PRODUCT MANUFACTURED EXCLUSIVELY FOR PRIVATE LABEL DISTRIBUTOR		
+FDA	C73582	SPL Marketing Category Terminology	C96793	BULK INGREDIENT FOR HUMAN PRESCRIPTION COMPOUNDING		
+FDA	C73582	SPL Marketing Category Terminology	C96794	BULK INGREDIENT FOR ANIMAL PRESCRIPTION COMPOUNDING		
+FDA	C73582	SPL Marketing Category Terminology	C98252	BULK INGREDIENT FOR ANIMAL DRUG COMPOUNDING		
+FDA	C118778	SPL Marketing Status Terminology	C53292	Marketing		
+FDA	C99288	SPL Miscellaneous Identifier Types Terminology	C99285	Model Number		
+FDA	C99288	SPL Miscellaneous Identifier Types Terminology	C99286	Catalog Number		
+FDA	C99288	SPL Miscellaneous Identifier Types Terminology	C99287	Reference Number		
+FDA	C54457	SPL Package Type Terminology	C123723	Not Applicable	NA	
+FDA	C54457	SPL Package Type Terminology	C16738	INHALER		
+FDA	C54457	SPL Package Type Terminology	C42794	TUBE		
+FDA	C54457	SPL Package Type Terminology	C43165	AMPULE		
+FDA	C54457	SPL Package Type Terminology	C43166	APPLICATOR		
+FDA	C54457	SPL Package Type Terminology	C43167	BAG		
+FDA	C54457	SPL Package Type Terminology	C43168	BLISTER PACK		
+FDA	C54457	SPL Package Type Terminology	C43169	BOTTLE		
+FDA	C54457	SPL Package Type Terminology	C43170	BOTTLE, DISPENSING		
+FDA	C54457	SPL Package Type Terminology	C43171	BOTTLE, DROPPER		
+FDA	C54457	SPL Package Type Terminology	C43172	BOTTLE, GLASS		
+FDA	C54457	SPL Package Type Terminology	C43173	BOTTLE, PLASTIC		
+FDA	C54457	SPL Package Type Terminology	C43174	BOTTLE, PUMP		
+FDA	C54457	SPL Package Type Terminology	C43175	BOTTLE, SPRAY		
+FDA	C54457	SPL Package Type Terminology	C43176	BOTTLE, UNIT-DOSE		
+FDA	C54457	SPL Package Type Terminology	C43177	BOTTLE, WITH APPLICATOR		
+FDA	C54457	SPL Package Type Terminology	C43178	BOX		
+FDA	C54457	SPL Package Type Terminology	C43179	Box, Unit-Dose		
+FDA	C54457	SPL Package Type Terminology	C43180	CAN		
+FDA	C54457	SPL Package Type Terminology	C43181	CANISTER		
+FDA	C54457	SPL Package Type Terminology	C43182	CARTON		
+FDA	C54457	SPL Package Type Terminology	C43183	CARTRIDGE		
+FDA	C54457	SPL Package Type Terminology	C43184	CASE		
+FDA	C54457	SPL Package Type Terminology	C43185	CELLO PACK		
+FDA	C54457	SPL Package Type Terminology	C43186	CONTAINER		
+FDA	C54457	SPL Package Type Terminology	C43187	CUP		
+FDA	C54457	SPL Package Type Terminology	C43188	CUP, UNIT-DOSE		
+FDA	C54457	SPL Package Type Terminology	C43189	CYLINDER		
+FDA	C54457	SPL Package Type Terminology	C43190	DEWAR		
+FDA	C54457	SPL Package Type Terminology	C43191	DIALPACK		
+FDA	C54457	SPL Package Type Terminology	C43192	DOSE PACK		
+FDA	C54457	SPL Package Type Terminology	C43193	DRUM		
+FDA	C54457	SPL Package Type Terminology	C43194	INHALER, REFILL		
+FDA	C54457	SPL Package Type Terminology	C43195	JAR		
+FDA	C54457	SPL Package Type Terminology	C43196	JUG		
+FDA	C54457	SPL Package Type Terminology	C43197	KIT		
+FDA	C54457	SPL Package Type Terminology	C43198	PACKAGE, COMBINATION		
+FDA	C54457	SPL Package Type Terminology	C43199	PACKET		
+FDA	C54457	SPL Package Type Terminology	C43200	POUCH		
+FDA	C54457	SPL Package Type Terminology	C43201	SUPERSACK		
+FDA	C54457	SPL Package Type Terminology	C43202	SYRINGE		
+FDA	C54457	SPL Package Type Terminology	C43203	SYRINGE, GLASS		
+FDA	C54457	SPL Package Type Terminology	C43204	SYRINGE, PLASTIC		
+FDA	C54457	SPL Package Type Terminology	C43205	TABMINDER		
+FDA	C54457	SPL Package Type Terminology	C43206	TANK		
+FDA	C54457	SPL Package Type Terminology	C43207	TUBE, WITH APPLICATOR		
+FDA	C54457	SPL Package Type Terminology	C43208	VIAL, DISPENSING		
+FDA	C54457	SPL Package Type Terminology	C43209	VIAL, GLASS		
+FDA	C54457	SPL Package Type Terminology	C43210	VIAL, MULTI-DOSE		
+FDA	C54457	SPL Package Type Terminology	C43211	VIAL, PATENT DELIVERY SYSTEM		
+FDA	C54457	SPL Package Type Terminology	C43212	VIAL, PHARMACY BULK PACKAGE		
+FDA	C54457	SPL Package Type Terminology	C43213	VIAL, PIGGYBACK		
+FDA	C54457	SPL Package Type Terminology	C43214	VIAL, PLASTIC		
+FDA	C54457	SPL Package Type Terminology	C43215	VIAL, SINGLE-DOSE		
+FDA	C54457	SPL Package Type Terminology	C43216	VIAL, SINGLE-USE		
+FDA	C54457	SPL Package Type Terminology	C43226	VIAL		
+FDA	C54457	SPL Package Type Terminology	C43233	PACKAGE		
+FDA	C54457	SPL Package Type Terminology	C48626	NOT STATED		
+FDA	C54457	SPL Package Type Terminology	C53438	TRAY		
+FDA	C54457	SPL Package Type Terminology	C79135	FLEXIBLE INTERMEDIATE BULK CONTAINER		
+FDA	C54457	SPL Package Type Terminology	C79136	PAIL		
+FDA	C54457	SPL Package Type Terminology	C82332	PATCH		
+FDA	C54457	SPL Package Type Terminology	C92708	CAPSULE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C100103	CELLULAR SHEET		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C113106	INJECTABLE FOAM		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C124794	TABLET, CHEWABLE, EXTENDED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C134876	Chewable Gel		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C147579	Tablet with Sensor		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C17423	DRUG DELIVERY SYSTEM	SYSTEM	
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C25158	CAPSULE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C25394	PILL		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C28944	CREAM		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C29167	LOTION		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C29269	MOUTHWASH		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42679	DOUCHE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42763	DRESSING		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42887	AEROSOL		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42888	AEROSOL, FOAM		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42889	AEROSOL, SPRAY		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42890	BEAD		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42892	BAR, CHEWABLE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42893	TABLET, CHEWABLE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42894	GUM, CHEWING		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42895	CAPSULE, COATED		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42896	CAPSULE, COATED PELLETS		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42897	TABLET, COATED		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42898	SOLUTION, CONCENTRATE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42899	INJECTION, SOLUTION, CONCENTRATE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42901	CRYSTAL		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42902	CAPSULE, DELAYED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42903	GRANULE, DELAYED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42904	CAPSULE, DELAYED RELEASE PELLETS		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42905	TABLET, DELAYED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42906	GEL, DENTIFRICE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42907	PASTE, DENTIFRICE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42908	POWDER, DENTIFRICE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42909	GRANULE, EFFERVESCENT		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42910	TABLET, EFFERVESCENT		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42911	PATCH, EXTENDED RELEASE, ELECTRICALLY CONTROLLED		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42912	ELIXIR		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42913	EMULSION		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42914	INJECTION, EMULSION		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42915	ENEMA		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42916	CAPSULE, EXTENDED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42917	CAPSULE, COATED, EXTENDED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42918	PELLETS, COATED, EXTENDED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42920	FILM, EXTENDED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42921	GRANULE, FOR SUSPENSION, EXTENDED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42922	INSERT, EXTENDED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42923	PATCH, EXTENDED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42924	SUPPOSITORY, EXTENDED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42925	SUSPENSION, EXTENDED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42926	INJECTION, SUSPENSION, EXTENDED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42927	TABLET, EXTENDED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42928	CAPSULE, FILM COATED, EXTENDED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42929	EXTRACT		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42930	TABLET, FILM COATED, EXTENDED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42931	TABLET, FILM COATED		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42932	FILM		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42933	GAS		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42934	GEL		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42935	SOLUTION, GEL FORMING, EXTENDED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42936	CAPSULE, GELATIN COATED		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42937	GLOBULE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42938	GRANULE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42939	GRANULE, FOR SOLUTION		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42940	GRANULE, FOR SUSPENSION		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42942	IMPLANT		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42943	PELLET, IMPLANTABLE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42944	INHALANT		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42945	INJECTION, SOLUTION		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42946	INJECTION		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42947	IRRIGANT		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42948	JELLY		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42949	LINIMENT		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42950	INJECTION, LIPID COMPLEX		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42951	INJECTION, SUSPENSION, LIPOSOMAL		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42952	LIPSTICK		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42953	LIQUID		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42954	CAPSULE, LIQUID FILLED		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42955	LOZENGE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42956	INJECTION, POWDER, LYOPHILIZED, FOR SUSPENSION, EXTENDED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42957	INJECTION, POWDER, LYOPHILIZED, FOR SOLUTION		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42958	INJECTION, POWDER, LYOPHILIZED, FOR SUSPENSION		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42959	INJECTION, POWDER, LYOPHILIZED, FOR LIPOSOMAL SUSPENSION		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42960	AEROSOL, METERED		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42961	POWDER, METERED		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42962	SPRAY, METERED		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42963	TABLET, MULTILAYER, EXTENDED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42964	TABLET, MULTILAYER		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42965	OIL		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42966	OINTMENT		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42967	PASTE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42968	PATCH		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42969	PELLET		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42970	PLASTER		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42971	AEROSOL, POWDER		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42972	POWDER		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42973	POWDER, FOR SOLUTION		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42974	INJECTION, POWDER, FOR SOLUTION		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42975	POWDER, FOR SUSPENSION		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42976	INJECTION, POWDER, FOR SUSPENSION		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42977	INJECTION, POWDER, FOR SUSPENSION, EXTENDED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42979	RINSE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42980	SALVE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42981	SHAMPOO		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42982	SHAMPOO, SUSPENSION		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42983	SOAP		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42984	FILM, SOLUBLE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42985	TABLET, SOLUBLE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42986	SOLUTION		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42987	SOLUTION, FOR SLUSH		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42988	INJECTION, SUSPENSION, SONICATED		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42989	SPRAY		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42990	SPRAY, SUSPENSION		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42991	STICK		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42992	TABLET, SUGAR COATED		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42993	SUPPOSITORY		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42994	SUSPENSION		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42995	INJECTION, SUSPENSION		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42996	SYRUP		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42997	TABLET, DELAYED RELEASE PARTICLES		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42998	TABLET		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C42999	TABLET, ORALLY DISINTEGRATING		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C43000	TINCTURE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C43001	TROCHE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C43003	WAFER		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C43525	DISC		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C47892	TAMPON		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C47897	TAPE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C47898	SWAB		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C47912	SPONGE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C47913	POULTICE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C47914	STRIP		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C47915	INTRAUTERINE DEVICE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C47916	KIT		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C48624	NOT APPLICABLE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C60884	CLOTH		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C60891	CONCENTRATE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C60897	CREAM, AUGMENTED		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C60926	FIBER, EXTENDED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C60927	FOR SOLUTION		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C60928	FOR SUSPENSION		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C60929	FOR SUSPENSION, EXTENDED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C60930	GEL, METERED		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C60931	INJECTABLE, LIPOSOMAL		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C60933	INSERT		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C60934	LIQUID, EXTENDED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C60957	LOTION, AUGMENTED		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C60958	LOTION/SHAMPOO		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C60984	OINTMENT, AUGMENTED		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C60985	PASTILLE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C60988	RING		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C60992	SOLUTION/DROPS		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C60994	SOLUTION, GEL FORMING/DROPS		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C60995	SUSPENSION/DROPS		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C60997	TABLET, COATED PARTICLES		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C61004	TABLET, FOR SOLUTION		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C61005	TABLET, FOR SUSPENSION		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C61006	TABLET, ORALLY DISINTEGRATING, DELAYED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C64884	POWDER, EFFERVESCENT		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C69067	GRANULE, EXTENDED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C87536	SMOKE STICK		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C87537	SMOKE PAPER		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C87538	INTRARUMINAL DEVICE, EXTENDED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C87539	TAG		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C87540	GRANULE FOR SUSPENSION, DELAYED RELEASE		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C87541	POWDER, LYOPHILIZED		
+FDA	C54456	SPL Pharmaceutical Dosage Form Terminology	C87542	PENDANT		
+FDA	C54600	SPL Pharmacokinetic Effect Consequences Terminology	C54355	INCREASED DRUG LEVEL		
+FDA	C54600	SPL Pharmacokinetic Effect Consequences Terminology	C54356	DECREASED DRUG LEVEL		
+FDA	C54600	SPL Pharmacokinetic Effect Consequences Terminology	C54357	INCREASED CONCOMITANT DRUG LEVEL		
+FDA	C54600	SPL Pharmacokinetic Effect Consequences Terminology	C54358	DECREASED CONCOMITANT DRUG LEVEL		
+FDA	C54600	SPL Pharmacokinetic Effect Consequences Terminology	C54602	INCREASED DRUG CMAX		
+FDA	C54600	SPL Pharmacokinetic Effect Consequences Terminology	C54603	INCREASED DRUG HALF LIFE		
+FDA	C54600	SPL Pharmacokinetic Effect Consequences Terminology	C54604	INCREASED DRUG TMAX		
+FDA	C54600	SPL Pharmacokinetic Effect Consequences Terminology	C54605	INCREASED DRUG AUC		
+FDA	C54600	SPL Pharmacokinetic Effect Consequences Terminology	C54606	DECREASED DRUG CMAX		
+FDA	C54600	SPL Pharmacokinetic Effect Consequences Terminology	C54607	DECREASED DRUG HALF LIFE		
+FDA	C54600	SPL Pharmacokinetic Effect Consequences Terminology	C54608	DECREASED DRUG TMAX		
+FDA	C54600	SPL Pharmacokinetic Effect Consequences Terminology	C54609	DECREASED DRUG AUC		
+FDA	C54600	SPL Pharmacokinetic Effect Consequences Terminology	C54610	INCREASED CONCOMITANT DRUG CMAX		
+FDA	C54600	SPL Pharmacokinetic Effect Consequences Terminology	C54611	INCREASED CONCOMITANT DRUG HALF LIFE		
+FDA	C54600	SPL Pharmacokinetic Effect Consequences Terminology	C54612	INCREASED CONCOMITANT DRUG TMAX		
+FDA	C54600	SPL Pharmacokinetic Effect Consequences Terminology	C54613	INCREASED CONCOMITANT DRUG AUC		
+FDA	C54600	SPL Pharmacokinetic Effect Consequences Terminology	C54614	DECREASED CONCOMITANT DRUG AUC		
+FDA	C54600	SPL Pharmacokinetic Effect Consequences Terminology	C54615	DECREASED CONCOMITANT DRUG CMAX		
+FDA	C54600	SPL Pharmacokinetic Effect Consequences Terminology	C54616	DECREASED CONCOMITANT DRUG HALF LIFE		
+FDA	C54600	SPL Pharmacokinetic Effect Consequences Terminology	C54617	DECREASED CONCOMITANT DRUG TMAX		
+FDA	C107675	SPL Race Terminology	C16352	Black or African American		
+FDA	C107675	SPL Race Terminology	C41219	NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER		
+FDA	C107675	SPL Race Terminology	C41259	AMERICAN INDIAN OR ALASKA NATIVE		
+FDA	C107675	SPL Race Terminology	C41260	ASIAN		
+FDA	C107675	SPL Race Terminology	C41261	WHITE		
+FDA	C128492	SPL REMS Protocol Terminology	C128528	Protocol		
+FDA	C128492	SPL REMS Protocol Terminology	C128529	REMS Certification		
+FDA	C128492	SPL REMS Protocol Terminology	C128530	Pharmacotherapy Initiation		
+FDA	C128492	SPL REMS Protocol Terminology	C128531	Pharmacotherapy Continuation		
+FDA	C128492	SPL REMS Protocol Terminology	C128532	All Pharmacotherapy Prescriptions		
+FDA	C128492	SPL REMS Protocol Terminology	C128533	Medication Dispensing		
+FDA	C128492	SPL REMS Protocol Terminology	C128534	Medication Administration		
+FDA	C128492	SPL REMS Protocol Terminology	C128535	Pharmacotherapy Discontinuation		
+FDA	C128492	SPL REMS Protocol Terminology	C128536	Medication Distribution		
+FDA	C128491	SPL REMS Requirement Terminology	C128494	Requirement		
+FDA	C128491	SPL REMS Requirement Terminology	C128495	Designate a Healthcare Setting Representative		
+FDA	C128491	SPL REMS Requirement Terminology	C128496	Be Able To Perform a Clinical Activity		
+FDA	C128491	SPL REMS Requirement Terminology	C128497	Have Necessary Healthcare Personnel or Equipment		
+FDA	C128491	SPL REMS Requirement Terminology	C128498	Review Prescribing Information		
+FDA	C128491	SPL REMS Requirement Terminology	C128499	Review Training or Educational Materials		
+FDA	C128491	SPL REMS Requirement Terminology	C128500	Complete Knowledge Assessment		
+FDA	C128491	SPL REMS Requirement Terminology	C128501	Train Staff		
+FDA	C128491	SPL REMS Requirement Terminology	C128502	Participate in Training Session		
+FDA	C128491	SPL REMS Requirement Terminology	C128503	Establish Processes and Procedures to Verify REMS Safe Use Conditions		
+FDA	C128491	SPL REMS Requirement Terminology	C128504	Enroll in the REMS		
+FDA	C128491	SPL REMS Requirement Terminology	C128505	Counsel Patient		
+FDA	C128491	SPL REMS Requirement Terminology	C128506	Provide Patient with Materials		
+FDA	C128491	SPL REMS Requirement Terminology	C128507	Assess Patient Condition or Health Status		
+FDA	C128491	SPL REMS Requirement Terminology	C128508	Complete Patient Form		
+FDA	C128491	SPL REMS Requirement Terminology	C128509	Enroll Patient in the REMS		
+FDA	C128491	SPL REMS Requirement Terminology	C128510	Do Not Prescribe Refills		
+FDA	C128491	SPL REMS Requirement Terminology	C128511	Do Not Dispense Refills		
+FDA	C128491	SPL REMS Requirement Terminology	C128512	Prescribe limited days' supply		
+FDA	C128491	SPL REMS Requirement Terminology	C128513	Dispense limited days' supply		
+FDA	C128491	SPL REMS Requirement Terminology	C128514	Use REMS Prescription Ordering Form		
+FDA	C128491	SPL REMS Requirement Terminology	C128515	Verify Safe Use Conditions		
+FDA	C128491	SPL REMS Requirement Terminology	C128516	Obtain REMS Dispensing Authorization		
+FDA	C128491	SPL REMS Requirement Terminology	C128517	Return Unused Product		
+FDA	C128491	SPL REMS Requirement Terminology	C128518	Do Not Distribute, Transfer, Loan, or Sell Product		
+FDA	C128491	SPL REMS Requirement Terminology	C128519	Maintain Records		
+FDA	C128491	SPL REMS Requirement Terminology	C128520	Report Adverse Events		
+FDA	C128491	SPL REMS Requirement Terminology	C128521	Cooperate with REMS Audits		
+FDA	C128491	SPL REMS Requirement Terminology	C128523	Get Lab Test or Monitoring		
+FDA	C128491	SPL REMS Requirement Terminology	C128524	Receive Counseling		
+FDA	C128491	SPL REMS Requirement Terminology	C128525	Complete Patient Questionnaire		
+FDA	C128491	SPL REMS Requirement Terminology	C128526	Adhere to REMS Patient Safe Use Conditions		
+FDA	C128491	SPL REMS Requirement Terminology	C128527	Inform Prescriber		
+FDA	C128491	SPL REMS Requirement Terminology	C135014	Dispense Limited Quantity		
+FDA	C128491	SPL REMS Requirement Terminology	C135015	Prescribe Limited Quantity		
+FDA	C128493	SPL REMS Stakeholder Terminology	C128537	Stakeholder		
+FDA	C128493	SPL REMS Stakeholder Terminology	C128538	Medication Prescriber		
+FDA	C128493	SPL REMS Stakeholder Terminology	C128539	Medication Dispenser		
+FDA	C128493	SPL REMS Stakeholder Terminology	C128540	Non-Prescribing Non-Dispensing Healthcare Provider		
+FDA	C128493	SPL REMS Stakeholder Terminology	C128541	Medication-Taking Patient		
+FDA	C128493	SPL REMS Stakeholder Terminology	C128542	Non-Manufacturing Medication Distributor		
+FDA	C128490	SPL Risk Evaluation and Mitigation Strategies Terminology	C128899	REMS Approval		
+FDA	C113350	SPL Sex Terminology	C16576	FEMALE		
+FDA	C113350	SPL Sex Terminology	C20197	MALE		
+FDA	C54454	SPL Shape Terminology	C48335	BULLET		
+FDA	C54454	SPL Shape Terminology	C48336	CAPSULE		
+FDA	C54454	SPL Shape Terminology	C48337	CLOVER		
+FDA	C54454	SPL Shape Terminology	C48338	DIAMOND		
+FDA	C54454	SPL Shape Terminology	C48339	DOUBLE CIRCLE		
+FDA	C54454	SPL Shape Terminology	C48340	FREEFORM		
+FDA	C54454	SPL Shape Terminology	C48341	GEAR		
+FDA	C54454	SPL Shape Terminology	C48342	HEPTAGON (7 sided)		
+FDA	C54454	SPL Shape Terminology	C48343	HEXAGON (6 sided)		
+FDA	C54454	SPL Shape Terminology	C48344	OCTAGON (8 sided)		
+FDA	C54454	SPL Shape Terminology	C48345	OVAL		
+FDA	C54454	SPL Shape Terminology	C48346	PENTAGON (5 sided)		
+FDA	C54454	SPL Shape Terminology	C48347	RECTANGLE		
+FDA	C54454	SPL Shape Terminology	C48348	ROUND		
+FDA	C54454	SPL Shape Terminology	C48349	SEMI-CIRCLE		
+FDA	C54454	SPL Shape Terminology	C48350	SQUARE		
+FDA	C54454	SPL Shape Terminology	C48351	TEAR		
+FDA	C54454	SPL Shape Terminology	C48352	TRAPEZOID		
+FDA	C54454	SPL Shape Terminology	C48353	TRIANGLE		
+FDA	C105631	SPL Substance Indexing Terminology	C103198	RACEMIC		
+FDA	C105631	SPL Substance Indexing Terminology	C103199	ORGANISM PART		
+FDA	C105631	SPL Substance Indexing Terminology	C103200	ORGANISM PART LOCATION		
+FDA	C105631	SPL Substance Indexing Terminology	C103201	OPTICAL ACTIVITY		
+FDA	C105631	SPL Substance Indexing Terminology	C103202	DEXTROROTATORY	(+)	
+FDA	C105631	SPL Substance Indexing Terminology	C103203	LEVOROTATORY	(-)	
+FDA	C105631	SPL Substance Indexing Terminology	C103204	NONROTATORY	(+/-)	
+FDA	C105631	SPL Substance Indexing Terminology	C103205	CHEMICAL SUBSTANCE		
+FDA	C105631	SPL Substance Indexing Terminology	C103206	STRUCTURALLY DIVERSE SUBSTANCE		
+FDA	C105631	SPL Substance Indexing Terminology	C103207	CHIRAL	enantiomer	
+FDA	C105631	SPL Substance Indexing Terminology	C103208	ACHIRAL		
+FDA	C105631	SPL Substance Indexing Terminology	C103209	EPIMERIC		
+FDA	C105631	SPL Substance Indexing Terminology	C103210	MESO		
+FDA	C105631	SPL Substance Indexing Terminology	C103211	SQUARE PLANAR 1	SP-4-1	
+FDA	C105631	SPL Substance Indexing Terminology	C103212	SQUARE PLANAR 2	SP-4-2	
+FDA	C105631	SPL Substance Indexing Terminology	C103213	SQUARE PLANAR 3	SP-4-3	
+FDA	C105631	SPL Substance Indexing Terminology	C103214	SQUARE PLANAR 4	SP-4-4	
+FDA	C105631	SPL Substance Indexing Terminology	C103215	TETRAHEDRAL	T-4	
+FDA	C105631	SPL Substance Indexing Terminology	C103216	OCTAHEDRAL 12	OC-6-12|trans-octahedral	
+FDA	C105631	SPL Substance Indexing Terminology	C103217	OCTAHEDRAL 22	OC-6-22|mer-octahedral	
+FDA	C105631	SPL Substance Indexing Terminology	C103218	OCTAHEDRAL 21	OC-6-21|cis-octahedral|fac-octahedral	
+FDA	C105631	SPL Substance Indexing Terminology	C103219	CAHN-INGOLD-PRELOG PRIORITY SYSTEM	CIP System	
+FDA	C105631	SPL Substance Indexing Terminology	C103220	AXIAL R	DELTA|P|Ra	
+FDA	C105631	SPL Substance Indexing Terminology	C103221	AXIAL S	LAMBDA|M|Sa	
+FDA	C105631	SPL Substance Indexing Terminology	C103227	PROTEIN/PEPTIDE SUBSTANCE		
+FDA	C105631	SPL Substance Indexing Terminology	C103240	CHEMICAL STRUCTURE		
+FDA	C105631	SPL Substance Indexing Terminology	C103241	DISPERSITY		
+FDA	C105631	SPL Substance Indexing Terminology	C103243	MIXTURE COMPONENT		
+FDA	C105631	SPL Substance Indexing Terminology	C103246	CHEMICAL MOIETY		
+FDA	C105631	SPL Substance Indexing Terminology	C118424	PROTEIN SUBUNIT		
+FDA	C105631	SPL Substance Indexing Terminology	C118425	STRUCTURAL MODIFICATION		
+FDA	C105631	SPL Substance Indexing Terminology	C118426	AMINO ACID SUBSTITUTION POINT		
+FDA	C105631	SPL Substance Indexing Terminology	C118427	AMINO ACID CONNECTION POINTS		
+FDA	C105631	SPL Substance Indexing Terminology	C118428	HUMAN TYPE GLYCAN		
+FDA	C105631	SPL Substance Indexing Terminology	C118429	AVIAN TYPE GLYCAN		
+FDA	C105631	SPL Substance Indexing Terminology	C118430	BACTERIAL TYPE GLYCAN		
+FDA	C105631	SPL Substance Indexing Terminology	C118431	MAMMALIAN TYPE GLYCAN		
+FDA	C105631	SPL Substance Indexing Terminology	C118432	FUNGAL TYPE GLYCAN		
+FDA	C105631	SPL Substance Indexing Terminology	C128564	PLANT TYPE GLYCAN		
+FDA	C105631	SPL Substance Indexing Terminology	C13187	AMINO ACID SEQUENCE		
+FDA	C105631	SPL Substance Indexing Terminology	C132921	LINEAR STRUCTURAL REPEAT UNIT CONNECTION POINTS		
+FDA	C105631	SPL Substance Indexing Terminology	C132923	STRUCTURAL REPEAT UNIT SUBSTITUTION POINT		
+FDA	C105631	SPL Substance Indexing Terminology	C14050	STRUCTURAL ATTACHMENT POINT		
+FDA	C105631	SPL Substance Indexing Terminology	C158047	INSECT TYPE GLYCAN		
+FDA	C105631	SPL Substance Indexing Terminology	C158048	REPTILIAN TYPE GLYCAN		
+FDA	C105631	SPL Substance Indexing Terminology	C158049	MAMMALIAN AFUCOSYLATED GLYCAN		
+FDA	C105631	SPL Substance Indexing Terminology	C158050	MOLLUSCAN TYPE GLYCAN		
+FDA	C105631	SPL Substance Indexing Terminology	C18188	STEREOCHEMISTRY		
+FDA	C105631	SPL Substance Indexing Terminology	C25250	COMPLETE		
+FDA	C105631	SPL Substance Indexing Terminology	C25259	MIXED		
+FDA	C105631	SPL Substance Indexing Terminology	C45305	MIXTURE SUBSTANCE		
+FDA	C105631	SPL Substance Indexing Terminology	C45306	SUBSTANCE		
+FDA	C105631	SPL Substance Indexing Terminology	C45829	ABSOLUTE		
+FDA	C105631	SPL Substance Indexing Terminology	C47933	ISOTOPE		
+FDA	C105631	SPL Substance Indexing Terminology	C48803	POLYMER SUBSTANCE		
+FDA	C105631	SPL Substance Indexing Terminology	C49160	INCOMPLETE		
+FDA	C105631	SPL Substance Indexing Terminology	C706	NUCLEIC ACID SUBSTANCE		
+FDA	C121832	SPL Suspect Drug Classification of Notification Terminology	C121834	Counterfeit		
+FDA	C121832	SPL Suspect Drug Classification of Notification Terminology	C121835	Diverted		
+FDA	C121832	SPL Suspect Drug Classification of Notification Terminology	C121836	Stolen		
+FDA	C121832	SPL Suspect Drug Classification of Notification Terminology	C121837	Intentional adulteration		
+FDA	C121832	SPL Suspect Drug Classification of Notification Terminology	C121838	Unfit for distribution		
+FDA	C121832	SPL Suspect Drug Classification of Notification Terminology	C121839	Fraudulent transaction		
+FDA	C121833	SPL Suspect Drug Use Terminology	C121840	Human Use		
+FDA	C121833	SPL Suspect Drug Use Terminology	C121841	Other than Human Use		
+FDA	C133247	SPL Tissue Form Donor Type Terminology	C133314	Anonymous		
+FDA	C133247	SPL Tissue Form Donor Type Terminology	C133315	Directed		
+FDA	C133247	SPL Tissue Form Donor Type Terminology	C133316	Sexually intimate partner		
+FDA	C133247	SPL Tissue Form Donor Type Terminology	C28000	Autologous		
+FDA	C133247	SPL Tissue Form Donor Type Terminology	C28343	Allogeneic Family Related		
+FDA	C133248	SPL Tissue Form Establishment Functions Terminology	C133283	Testing for Relevant Communicable Disease Agents and Diseases		
+FDA	C133248	SPL Tissue Form Establishment Functions Terminology	C133284	Package		
+FDA	C133248	SPL Tissue Form Establishment Functions Terminology	C133285	Process		
+FDA	C133248	SPL Tissue Form Establishment Functions Terminology	C133286	Recover		
+FDA	C133248	SPL Tissue Form Establishment Functions Terminology	C133287	Screen		
+FDA	C133248	SPL Tissue Form Establishment Functions Terminology	C133288	Store		
+FDA	C133248	SPL Tissue Form Establishment Functions Terminology	C133289	Distribute		
+FDA	C133248	SPL Tissue Form Establishment Functions Terminology	C133290	Label		
+FDA	C133248	SPL Tissue Form Establishment Functions Terminology	C133291	Testing for Microorganisms Only		
+FDA	C133249	SPL Tissue Form Establishment Type Terminology	C133263	Cord blood bank		
+FDA	C133249	SPL Tissue Form Establishment Type Terminology	C133297	Fertility clinic		
+FDA	C133249	SPL Tissue Form Establishment Type Terminology	C133298	None of the above		
+FDA	C133249	SPL Tissue Form Establishment Type Terminology	C133319	Apheresis collection facility		
+FDA	C133249	SPL Tissue Form Establishment Type Terminology	C133320	Eye bank		
+FDA	C133249	SPL Tissue Form Establishment Type Terminology	C133321	Satellite recovery establishment		
+FDA	C133249	SPL Tissue Form Establishment Type Terminology	C133322	Hospital based cell or tissue processing facility		
+FDA	C133249	SPL Tissue Form Establishment Type Terminology	C133323	Non-hospital based cell or tissue processing facility		
+FDA	C133249	SPL Tissue Form Establishment Type Terminology	C133324	Organ and tissue procurement organization		
+FDA	C133249	SPL Tissue Form Establishment Type Terminology	C133326	Irradiation facility only		
+FDA	C133251	SPL Tissue Form Product Group Terminology	C12608	Human Pancreatic Islet Cells		
+FDA	C133251	SPL Tissue Form Product Group Terminology	C133274	Human Peripheral And Cord Blood Cell Product		
+FDA	C133251	SPL Tissue Form Product Group Terminology	C133296	Other Human, Cell and Tissue Products (HCT/Ps)		
+FDA	C133251	SPL Tissue Form Product Group Terminology	C133340	Human Ocular Tissue		
+FDA	C133251	SPL Tissue Form Product Group Terminology	C133360	Human Vascular Tissue		
+FDA	C133251	SPL Tissue Form Product Group Terminology	C133362	Human Cardiac Tissue		
+FDA	C133251	SPL Tissue Form Product Group Terminology	C133364	Human Musculoskeletal Tissue		
+FDA	C133251	SPL Tissue Form Product Group Terminology	C33563	Human Skin		
+FDA	C133251	SPL Tissue Form Product Group Terminology	C41609	Human Reproductive Tissue		
+FDA	C133251	SPL Tissue Form Product Group Terminology	C49332	Human Dura Mater		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C12342	Human Cornea		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C12470	Human Skin		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C12472	Human Adipose Tissue		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C12598	Human Oocyte (Egg)		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C12608	Human Pancreatic Islet Cells		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C12679	Human Blood Vessel		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C12770	Human Peritoneal Membrane		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C12784	Human Sclera		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C13005	Human Pericardium		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C13045	Human Tendon		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C13046	Human Ligament		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C13052	Human Nerve Tissue		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C13076	Human Bone		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C13108	Human Fascia		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C13188	Human Amniotic Fluid		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C13277	Human Semen (Sperm)		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C133261	Human Bone Marrow Aspirate		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C133262	Human Placental Blood Derived Cells		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C133295	Human Demineralized Bone Matrix		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C133317	Human Amniotic Membrane		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C133318	Human Umbilical Cord Tissue		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C133328	Human HPC, Apheresis		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C133329	Human HPC, Cord Blood		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C133338	Human Heart Valve		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C133339	Human Cardiac Tissue Non-valved		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C133341	Human Placenta		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C138971	Human Synovial Fluid Derived Cells		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C138972	Peripheral Blood Mononuclear cells		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C138973	Human Tooth Pulp		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C28147	Human Embryo		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C32268	Human Cartilage		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C33246	Human Ovarian Tissue		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C33270	Human Parathyroid		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C33758	Human Testicular Tissue		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C49332	Human Dura Mater		
+FDA	C133250	SPL Tissue Form Product Type Terminology	C78740	Human Menstrual Blood		
+FDA	C54618	SPL Type of Drug Interaction Consequence Terminology	C54027	PATIENT PROBLEM	PATIENT PROBLEM CODE	
+FDA	C54618	SPL Type of Drug Interaction Consequence Terminology	C54386	PHARMACOKINETIC EFFECT		
+FDA	C87300	SPL Unit of Presentation Terminology	C25397	APPLICATION		
+FDA	C87300	SPL Unit of Presentation Terminology	C25488	DOSE		
+FDA	C87300	SPL Unit of Presentation Terminology	C44278	UNITS		
+FDA	C87300	SPL Unit of Presentation Terminology	C48460	SQUARE CENTIMETER		
+FDA	C87300	SPL Unit of Presentation Terminology	C48473	AMPULE		
+FDA	C87300	SPL Unit of Presentation Terminology	C48474	BAG		
+FDA	C87300	SPL Unit of Presentation Terminology	C48475	BAR		
+FDA	C87300	SPL Unit of Presentation Terminology	C48476	BOLUS		
+FDA	C87300	SPL Unit of Presentation Terminology	C48477	BOTTLE		
+FDA	C87300	SPL Unit of Presentation Terminology	C48478	BOX		
+FDA	C87300	SPL Unit of Presentation Terminology	C48479	CAN		
+FDA	C87300	SPL Unit of Presentation Terminology	C48480	CAPSULE		
+FDA	C87300	SPL Unit of Presentation Terminology	C48481	CARTRIDGE		
+FDA	C87300	SPL Unit of Presentation Terminology	C48482	CLINICAL UNITS		
+FDA	C87300	SPL Unit of Presentation Terminology	C48483	COAT		
+FDA	C87300	SPL Unit of Presentation Terminology	C48484	CONTAINER		
+FDA	C87300	SPL Unit of Presentation Terminology	C48485	COUNT		
+FDA	C87300	SPL Unit of Presentation Terminology	C48489	CYLINDER		
+FDA	C87300	SPL Unit of Presentation Terminology	C48490	DISK		
+FDA	C87300	SPL Unit of Presentation Terminology	C48491	DROPS		
+FDA	C87300	SPL Unit of Presentation Terminology	C48492	DRUM		
+FDA	C87300	SPL Unit of Presentation Terminology	C48496	GENERATOR		
+FDA	C87300	SPL Unit of Presentation Terminology	C48498	HOMEOPATHIC DILUTION		
+FDA	C87300	SPL Unit of Presentation Terminology	C48499	IMPLANT		
+FDA	C87300	SPL Unit of Presentation Terminology	C48501	INHALATION		
+FDA	C87300	SPL Unit of Presentation Terminology	C48502	JAR		
+FDA	C87300	SPL Unit of Presentation Terminology	C48503	KALLIKREIN INHIBITOR UNIT		
+FDA	C87300	SPL Unit of Presentation Terminology	C48504	KIT		
+FDA	C87300	SPL Unit of Presentation Terminology	C48506	LOZENGE		
+FDA	C87300	SPL Unit of Presentation Terminology	C48520	PACKAGE		
+FDA	C87300	SPL Unit of Presentation Terminology	C48521	PACKET		
+FDA	C87300	SPL Unit of Presentation Terminology	C48522	PARTS		
+FDA	C87300	SPL Unit of Presentation Terminology	C48524	PATCH		
+FDA	C87300	SPL Unit of Presentation Terminology	C48525	PELLET		
+FDA	C87300	SPL Unit of Presentation Terminology	C48530	POUCH		
+FDA	C87300	SPL Unit of Presentation Terminology	C48532	PRESSOR UNITS		
+FDA	C87300	SPL Unit of Presentation Terminology	C48533	PROTEIN NITROGEN UNITS		
+FDA	C87300	SPL Unit of Presentation Terminology	C48535	SATURATED		
+FDA	C87300	SPL Unit of Presentation Terminology	C48536	SCOOPFUL		
+FDA	C87300	SPL Unit of Presentation Terminology	C48537	SPRAY		
+FDA	C87300	SPL Unit of Presentation Terminology	C48538	STRIP		
+FDA	C87300	SPL Unit of Presentation Terminology	C48539	SUPPOSITORY		
+FDA	C87300	SPL Unit of Presentation Terminology	C48540	SYRINGE		
+FDA	C87300	SPL Unit of Presentation Terminology	C48542	TABLET		
+FDA	C87300	SPL Unit of Presentation Terminology	C48543	TAMPON		
+FDA	C87300	SPL Unit of Presentation Terminology	C48545	TEST		
+FDA	C87300	SPL Unit of Presentation Terminology	C48548	TROCHE		
+FDA	C87300	SPL Unit of Presentation Terminology	C48549	TUBE		
+FDA	C87300	SPL Unit of Presentation Terminology	C48551	VIAL		
+FDA	C87300	SPL Unit of Presentation Terminology	C48552	WAFER		
+FDA	C87300	SPL Unit of Presentation Terminology	C53495	BEAD		
+FDA	C87300	SPL Unit of Presentation Terminology	C53498	BLOCK		
+FDA	C87300	SPL Unit of Presentation Terminology	C53499	FILM		
+FDA	C87300	SPL Unit of Presentation Terminology	C53502	SPONGE		
+FDA	C87300	SPL Unit of Presentation Terminology	C53503	STICK		
+FDA	C87300	SPL Unit of Presentation Terminology	C53504	SWAB		
+FDA	C87300	SPL Unit of Presentation Terminology	C54564	BLISTER		
+FDA	C87300	SPL Unit of Presentation Terminology	C54702	CARTON		
+FDA	C87300	SPL Unit of Presentation Terminology	C54703	CUP		
+FDA	C87300	SPL Unit of Presentation Terminology	C54704	TRAY		
+FDA	C87300	SPL Unit of Presentation Terminology	C61569	BLISTER PACK		
+FDA	C87300	SPL Unit of Presentation Terminology	C62274	CELLO PACK		
+FDA	C87300	SPL Unit of Presentation Terminology	C62275	INHALER		
+FDA	C87300	SPL Unit of Presentation Terminology	C62276	INSERT		
+FDA	C87300	SPL Unit of Presentation Terminology	C62412	APPLICATOR		
+FDA	C87300	SPL Unit of Presentation Terminology	C62413	CANISTER		
+FDA	C87300	SPL Unit of Presentation Terminology	C62414	CASE		
+FDA	C87300	SPL Unit of Presentation Terminology	C62415	DEWAR		
+FDA	C87300	SPL Unit of Presentation Terminology	C62416	DIALPACK		
+FDA	C87300	SPL Unit of Presentation Terminology	C62417	DOSE PACK		
+FDA	C87300	SPL Unit of Presentation Terminology	C62418	INHALER, REFILL		
+FDA	C87300	SPL Unit of Presentation Terminology	C62419	JUG		
+FDA	C87300	SPL Unit of Presentation Terminology	C62420	SUPERSACK		
+FDA	C87300	SPL Unit of Presentation Terminology	C62421	TABMINDER		
+FDA	C87300	SPL Unit of Presentation Terminology	C62422	TANK		
+FDA	C87300	SPL Unit of Presentation Terminology	C62609	RING		
+FDA	C87300	SPL Unit of Presentation Terminology	C80697	PAIL		
+FDA	C87300	SPL Unit of Presentation Terminology	C82480	BALE		
+FDA	C87300	SPL Unit of Presentation Terminology	C82481	COLLAR		
+FDA	C87300	SPL Unit of Presentation Terminology	C82482	CRYOGENIC AMPULE		
+FDA	C87300	SPL Unit of Presentation Terminology	C82483	DIP		
+FDA	C87300	SPL Unit of Presentation Terminology	C82484	PAPER		
+FDA	C87300	SPL Unit of Presentation Terminology	C82485	RAILCAR		
+FDA	C87300	SPL Unit of Presentation Terminology	C82486	TAG		
+FDA	C87300	SPL Unit of Presentation Terminology	C82487	TRUCKLOAD		
+FDA	C87300	SPL Unit of Presentation Terminology	C89446	PIECE		
+FDA	C87300	SPL Unit of Presentation Terminology	C91803	GLOBULE		

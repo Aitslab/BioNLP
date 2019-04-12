@@ -1,0 +1,21 @@
+﻿Source	Subset Code	Subset Name	Concept Code	Source PT	Source Definition	Source Synonym(s)
+FDA	C54600	Structured Product Labeling Pharmacokinetic Effect Consequences Terminology	C54614	DECREASED CONCOMITANT DRUG AUC	NULL	NULL
+FDA	C54600	Structured Product Labeling Pharmacokinetic Effect Consequences Terminology	C54615	DECREASED CONCOMITANT DRUG CMAX	NULL	NULL
+FDA	C54600	Structured Product Labeling Pharmacokinetic Effect Consequences Terminology	C54616	DECREASED CONCOMITANT DRUG HALF LIFE	NULL	NULL
+FDA	C54600	Structured Product Labeling Pharmacokinetic Effect Consequences Terminology	C54358	DECREASED CONCOMITANT DRUG LEVEL	NULL	NULL
+FDA	C54600	Structured Product Labeling Pharmacokinetic Effect Consequences Terminology	C54617	DECREASED CONCOMITANT DRUG TMAX	NULL	NULL
+FDA	C54600	Structured Product Labeling Pharmacokinetic Effect Consequences Terminology	C54609	DECREASED DRUG AUC	NULL	NULL
+FDA	C54600	Structured Product Labeling Pharmacokinetic Effect Consequences Terminology	C54606	DECREASED DRUG CMAX	NULL	NULL
+FDA	C54600	Structured Product Labeling Pharmacokinetic Effect Consequences Terminology	C54607	DECREASED DRUG HALF LIFE	NULL	NULL
+FDA	C54600	Structured Product Labeling Pharmacokinetic Effect Consequences Terminology	C54356	DECREASED DRUG LEVEL	NULL	NULL
+FDA	C54600	Structured Product Labeling Pharmacokinetic Effect Consequences Terminology	C54608	DECREASED DRUG TMAX	NULL	NULL
+FDA	C54600	Structured Product Labeling Pharmacokinetic Effect Consequences Terminology	C54613	INCREASED CONCOMITANT DRUG AUC	NULL	NULL
+FDA	C54600	Structured Product Labeling Pharmacokinetic Effect Consequences Terminology	C54610	INCREASED CONCOMITANT DRUG CMAX	NULL	NULL
+FDA	C54600	Structured Product Labeling Pharmacokinetic Effect Consequences Terminology	C54611	INCREASED CONCOMITANT DRUG HALF LIFE	NULL	NULL
+FDA	C54600	Structured Product Labeling Pharmacokinetic Effect Consequences Terminology	C54357	INCREASED CONCOMITANT DRUG LEVEL	NULL	NULL
+FDA	C54600	Structured Product Labeling Pharmacokinetic Effect Consequences Terminology	C54612	INCREASED CONCOMITANT DRUG TMAX	NULL	NULL
+FDA	C54600	Structured Product Labeling Pharmacokinetic Effect Consequences Terminology	C54605	INCREASED DRUG AUC	NULL	NULL
+FDA	C54600	Structured Product Labeling Pharmacokinetic Effect Consequences Terminology	C54602	INCREASED DRUG CMAX	NULL	NULL
+FDA	C54600	Structured Product Labeling Pharmacokinetic Effect Consequences Terminology	C54603	INCREASED DRUG HALF LIFE	NULL	NULL
+FDA	C54600	Structured Product Labeling Pharmacokinetic Effect Consequences Terminology	C54355	INCREASED DRUG LEVEL	NULL	NULL
+FDA	C54600	Structured Product Labeling Pharmacokinetic Effect Consequences Terminology	C54604	INCREASED DRUG TMAX	NULL	NULL
