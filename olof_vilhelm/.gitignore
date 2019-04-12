@@ -8,3 +8,4 @@ __pycache__
 abstracts/
 *.abstracts
 corpus/
+libs/
