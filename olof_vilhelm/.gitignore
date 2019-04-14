@@ -1,0 +1,11 @@
+.ipynb_checkpoints
+
+__pycache__
+*.swp
+.idea
+*.exe
+*.o
+abstracts/
+*.abstracts
+corpus/
+libs/
