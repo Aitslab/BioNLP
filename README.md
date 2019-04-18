@@ -18,7 +18,7 @@ https://www.uniprot.org/
 
 ## 3. Corpora for validation  
 GeneTag  
-To evaluate the dictionary approach as well as train a model for annotating proteins; also available in BioC format and updated version GeneTag-05
+To evaluate the dictionary approach as well as train a model for annotating proteins; also available in BioC format and updated version GeneTag-05  
 https://www.ncbi.nlm.nih.gov/pubmed/15960837
 
 Corpora in BioC format  
