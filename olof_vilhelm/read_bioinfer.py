@@ -55,17 +55,29 @@ class BioInfer:
                         break
 
                 for link in links.findall("link"):
-                    t_id_from = link.attrib["token1"]
-                    t_id_to = link.attrib["token2"]
+                    t_id_1 = link.attrib["token1"]
+                    t_id_2 = link.attrib["token2"]
                     deprel = link.attrib["type"]
-                    t_index_from = self.__t_id_t_index_dict[s_id][t_id_from]
-                    t_index_to = self.__t_id_t_index_dict[s_id][t_id_to]
+                    if deprel == "None":
+                        continue
+                    head_id = None
+                    word_id = None
+                    if "<" in deprel:
+                        head_id = t_id_2
+                        word_id = t_id_1
+                    elif ">" in deprel:
+                        head_id = t_id_1
+                        word_id = t_id_2
+
+                    deprel = deprel.replace("<", "").replace(">", "")
+                    head_index = self.__t_id_t_index_dict[s_id][head_id]
+                    word_index = self.__t_id_t_index_dict[s_id][word_id]
                     dpndncy = {
                         "deprel": deprel,
-                        "t1": t_index_from,
-                        "t2": t_index_to,
-                        "t1_id": t_id_from,
-                        "t2_id": t_id_to
+                        "head": head_index,
+                        "word": word_index,
+                        "head_id": head_id,
+                        "word_id": word_id
                     }
                     self.__dependencies[s_id].append(dpndncy)
 
@@ -125,8 +137,17 @@ if __name__ == "__main__":
     fn = "corpus/BioInfer_corpus_1.1.1.xml"
     print("Reading file: '" + fn + "'.")
     bioinfer = BioInfer(fn)
+    sentence = None
 
-    sentence = bioinfer.sentences()[SENTENCE_NR]
+    for i in range(len(bioinfer.sentences())):
+        s = bioinfer.sentences()[i]
+        if s["id"] == "2008":
+            sentence = s
+            SENTENCE_NR = i
+            break
+
+
+    #sentence = bioinfer.sentences()[SENTENCE_NR]
     print("\nSentence " + str(SENTENCE_NR) + ", id:", sentence["id"])
     print(sentence["text"])
 
@@ -144,11 +165,11 @@ if __name__ == "__main__":
     print("\nDependencies:")
     dependencies = bioinfer.dependencies(sentence["id"])
     for dependency in dependencies:
-        print(dependency["deprel"] + "\t" + str(dependency["t1"]) + "\t" + str(dependency["t2"]))
+        print(dependency["deprel"] + "\t" + str(dependency["head"]) + "\t" + str(dependency["word"]))
 
     print("\nDependencies (readable):")
     dependencies = bioinfer.dependencies(sentence["id"])
     for dependency in dependencies:
-        t_1 = tokens[dependency["t1"]]
-        t_2 = tokens[dependency["t2"]]
+        t_1 = tokens[dependency["head"]]
+        t_2 = tokens[dependency["word"]]
         print(dependency["deprel"] + "\t" + t_1["text"] + "\t" + t_2["text"])
