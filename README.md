@@ -2,7 +2,27 @@
 
 Repository for student projects within biomedical text mining from Lund University.
 
-# Corporas
+# Resources
 
+1. NLP Python packages
+scispaCy
+scispaCy is a Python package containing spaCy models for processing biomedical, scientific or clinical text
+https://allenai.github.io/scispacy/
+
+
+2. Resources for dictionaries
 UniprotKB - To create a dictionary of protein names.
+https://www.uniprot.org/
+
+
+3. Corpora for validation
 GeneTag - To evaluate the dictionary approach as well as train a model for annotating proteins.
+https://www.ncbi.nlm.nih.gov/pubmed/15960837
+
+
+4. Other (relevant blogs, discussion forums, etc)
+devblog with working example code for med-text relations extraction
+https://www.microsoft.com/developerblog/2016/09/13/training-a-classifier-for-relation-extraction-from-medical-literature/
+
+BioStars bioinformatics forum
+https://www.biostars.org/
