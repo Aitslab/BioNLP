@@ -1,11 +1,8 @@
-# BioNLP
-
+BioNLP
 Repository for student projects within biomedical text mining from Lund University.
 
-# Resources
-
+Resources
 1. NLP Python packages
-
 scispaCy
 scispaCy is a Python package containing spaCy models for processing biomedical, scientific or clinical text
 https://allenai.github.io/scispacy/
@@ -22,7 +19,7 @@ https://www.ncbi.nlm.nih.gov/pubmed/15960837
 
 
 4. Other (relevant blogs, discussion forums, etc)
-devblog with working example code for med-text relations extraction
+Devblog with working example code for med-text relations extraction
 https://www.microsoft.com/developerblog/2016/09/13/training-a-classifier-for-relation-extraction-from-medical-literature/
 
 BioStars bioinformatics forum
