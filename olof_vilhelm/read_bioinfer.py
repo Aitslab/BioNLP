@@ -3,6 +3,8 @@ import xml.etree.cElementTree as ET
 
 
 class BioInfer:
+    NEGATIVE_CLASSES = {"INHIBIT", "DOWNREGULATE", "SUPPRESS"}
+    POSITIVE_CLASSES = {"MEDIATE", "UPREGULATE", "STIMULATE", "ACTIVATE", "CATALYZE"}
 
     def __init__(self, filename):
         self.__sentences = list()
@@ -10,9 +12,11 @@ class BioInfer:
         self.__subtokens = dict()
         self.__dependencies = dict()
         self.__entities = dict()
+        self.__relationships = dict()
 
         self.__t_id_t_index_dict = dict()
         self.__st_id_st_index_dict = dict()
+        self.__e_id_e_index_dict = dict()
 
         root = ET.parse(filename).getroot()
         if root.tag == "bioinfer":
@@ -82,6 +86,8 @@ class BioInfer:
                     self.__dependencies[s_id].append(dpndncy)
 
                 self.__entities[s_id] = list()
+                self.__e_id_e_index_dict[s_id] = dict()
+                e_counter = 0
                 for entity in sntnc.findall("entity"):
                     e_id = entity.attrib["id"]
                     e_type= entity.attrib["type"]
@@ -100,6 +106,41 @@ class BioInfer:
                         "st_ids": e_st_ids
                     }
                     self.__entities[s_id].append(ntty)
+                    self.__e_id_e_index_dict[s_id][e_id] = e_counter
+                    e_counter += 1
+
+                self.__relationships[s_id] = list()
+                for formula in sntnc.find("formulas").findall("formula"):
+                    rel_e = formula.find("relnode")
+                    if "entity" in rel_e.attrib:
+                        rel_e_id = rel_e.attrib["entity"]
+                    rel_bioinfer_class = rel_e.attrib["predicate"]
+
+                    rel_entities = rel_e.findall("entitynode")
+                    if len(rel_entities) == 2:
+                        source_entity_id = rel_entities[0].attrib["entity"]
+                        target_entity_id = rel_entities[1].attrib["entity"]
+                        source_entity_index = self.__e_id_e_index_dict[s_id][source_entity_id]
+                        target_entity_index = self.__e_id_e_index_dict[s_id][target_entity_id]
+                        rel_class = "OTHER"
+                        if rel_bioinfer_class in BioInfer.NEGATIVE_CLASSES:
+                            rel_class = "NEGATIVE"
+                        elif rel_bioinfer_class in BioInfer.POSITIVE_CLASSES:
+                            rel_class = "POSITIVE"
+
+                        rel_fine_class = ""
+                        if "entity" in rel_e.attrib:
+                            rel_e_index = self.__e_id_e_index_dict[s_id][rel_e_id]
+                            rel_fine_class = self.__entities[s_id][rel_e_index]["text"]
+                        rltnshp = {
+                            "source": source_entity_index,
+                            "target": target_entity_index,
+                            "class": rel_class,
+                            "fine_class": rel_fine_class,
+                            "bioinfer_class": rel_bioinfer_class,
+                            "bioinfer_rel_entity_index": rel_e_index
+                        }
+                        self.__relationships[s_id].append(rltnshp)
 
         else:
             print("File \'" + filename + "\' is not a bioinfer corpus.")
@@ -116,6 +157,9 @@ class BioInfer:
 
     def entities(self, sentence_id):
         return self.__entities[sentence_id]
+
+    def relationships(self, sentence_id):
+        return self.__relationships[sentence_id]
 
 
 # SEE HERE FOR USAGE OF BioInfer CLASS
@@ -137,39 +181,43 @@ if __name__ == "__main__":
     fn = "corpus/BioInfer_corpus_1.1.1.xml"
     print("Reading file: '" + fn + "'.")
     bioinfer = BioInfer(fn)
-    sentence = None
+    sentence = bioinfer.sentences()[SENTENCE_NR]
+    tokens = bioinfer.tokens(sentence["id"])
+    dependencies = bioinfer.dependencies(sentence["id"])
+    entities = bioinfer.entities(sentence["id"])
+    relationships = bioinfer.relationships(sentence["id"])
 
-    for i in range(len(bioinfer.sentences())):
-        s = bioinfer.sentences()[i]
-        if s["id"] == "2008":
-            sentence = s
-            SENTENCE_NR = i
-            break
-
-
-    #sentence = bioinfer.sentences()[SENTENCE_NR]
     print("\nSentence " + str(SENTENCE_NR) + ", id:", sentence["id"])
     print(sentence["text"])
 
     print("\nEntities:")
-    entities = bioinfer.entities(sentence["id"])
     for entity in entities:
         print(entity["text"] + "\t" + entity["type"] + "\t(" + entity["id"] + ")")
 
+    print("\nRelationships:")
+    if len(relationships) == 0:
+        print("No relationships.")
+    for relation in relationships:
+        src_index = relation["source"]
+        src_text = tokens[src_index]["text"]
+        tgt_index = relation["target"]
+        tgt_text = tokens[tgt_index]["text"]
+
+        rel_class = relation["class"]
+        fine_rel_class = relation["fine_class"]
+        print(src_text + " [" + str(src_index) + "]\t" + rel_class + "(" + fine_rel_class + ")" + "\t" + tgt_text + " [" + str(tgt_index) + "]")
+
     print("\nTokens:")
-    tokens = bioinfer.tokens(sentence["id"])
     for i in range(len(tokens)):
         token = tokens[i]
         print(str(i) + "\t" + token["text"] + "\t(" + token["id"] + ")")
 
-    print("\nDependencies:")
-    dependencies = bioinfer.dependencies(sentence["id"])
-    for dependency in dependencies:
-        print(dependency["deprel"] + "\t" + str(dependency["head"]) + "\t" + str(dependency["word"]))
 
-    print("\nDependencies (readable):")
-    dependencies = bioinfer.dependencies(sentence["id"])
+
+    print("\nDependencies:")
     for dependency in dependencies:
-        t_1 = tokens[dependency["head"]]
-        t_2 = tokens[dependency["word"]]
-        print(dependency["deprel"] + "\t" + t_1["text"] + "\t" + t_2["text"])
+        h_index = dependency["head"]
+        w_index = dependency["word"]
+        h_text = tokens[h_index]["text"]
+        w_text = tokens[w_index]["text"]
+        print(dependency["deprel"] + "\t" + h_text + " [" + str(h_index) + "]\t" + w_text + " [" + str(w_index) + "]")
