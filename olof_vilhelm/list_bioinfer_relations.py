@@ -19,20 +19,20 @@ for sentence in bioinfer.sentences():
             print("  " + entity["text"] + "\t" + entity["type"] + "\t(" + entity["id"] + ")")
 
         relationships = bioinfer.relationships(s_id)
-        tokens = bioinfer.tokens(s_id)
+        entities = bioinfer.entities(s_id)
         print("\nRelationships:")
         if len(relationships) == 0:
             print("No relationships.")
         for relation in relationships:
             src_index = relation["source"]
-            src_text = tokens[src_index]["text"]
+            src_text = entities[src_index]["text"]
+            src_id = relation["source_id"]
             tgt_index = relation["target"]
-            tgt_text = tokens[tgt_index]["text"]
+            tgt_text = entities[tgt_index]["text"]
+            tgt_id = relation["target_id"]
 
             rel_class = relation["class"]
             fine_rel_class = relation["fine_class"]
-            print("  " + src_text + " [" + str(
-                src_index) + "]\t" + rel_class + "(" + fine_rel_class + ")" + "\t" + tgt_text + " [" + str(
-                tgt_index) + "]")
+            print("  " + src_text + " [" + src_id + "]\t" + rel_class + "(" + fine_rel_class + ")" + "\t" + tgt_text + " [" + tgt_id + "]")
 
         print("\n######################################################")

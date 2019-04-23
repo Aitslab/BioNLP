@@ -90,14 +90,19 @@ class BioInfer:
                 e_counter = 0
                 for entity in sntnc.findall("entity"):
                     e_id = entity.attrib["id"]
-                    e_type= entity.attrib["type"]
+                    e_type = entity.attrib["type"]
                     e_st_ids = list()
                     for e_sbtkns in entity.findall("nestedsubtoken"):
                         e_st_ids.append(e_sbtkns.attrib["id"])
                     e_text = ""
-                    for e_st_id in e_st_ids:
+                    for i in range(len(e_st_ids)):
+                        e_st_id = e_st_ids[i]
                         e_st_index = self.__st_id_st_index_dict[s_id][e_st_id]
                         e_text += self.__subtokens[s_id][e_st_index]["text"]
+                        if i+1 in range(len(e_st_ids)):
+                            e_st_id_prev = e_st_ids[i-1]
+                            if not BioInfer.__from_same_token(e_st_id, e_st_id_prev):
+                                e_text += " "
 
                     ntty = {
                         "id": e_id,
@@ -134,7 +139,9 @@ class BioInfer:
                             rel_fine_class = self.__entities[s_id][rel_e_index]["text"]
                         rltnshp = {
                             "source": source_entity_index,
+                            "source_id": source_entity_id,
                             "target": target_entity_index,
+                            "target_id": target_entity_id,
                             "class": rel_class,
                             "fine_class": rel_fine_class,
                             "bioinfer_class": rel_bioinfer_class,
@@ -146,8 +153,27 @@ class BioInfer:
             print("File \'" + filename + "\' is not a bioinfer corpus.")
             exit(1)
 
+    @staticmethod
+    def __from_same_token(st1_id, st2_id):
+        type_1 = st1_id.split(".")[0]
+        type_2 = st2_id.split(".")[0]
+        if type_1 == "st" and type_2 == "st":
+            s_id_1 = st1_id.split(".")[1]
+            s_id_2 = st2_id.split(".")[1]
+            t_id_1 = st1_id.split(".")[2]
+            t_id_2 = st2_id.split(".")[2]
+            if s_id_1 == s_id_2 and t_id_1 == t_id_2:
+                return True
+
+        return False
+
     def sentences(self):
         return self.__sentences
+
+    def sentence(self, sentence_id):
+        for sentence in self.__sentences:
+            if sentence["id"] == sentence_id:
+                return sentence
 
     def tokens(self, sentence_id):
         return self.__tokens[sentence_id]
@@ -166,13 +192,20 @@ class BioInfer:
 if __name__ == "__main__":
 
     # JUST SOME COMMAND-LINE OPTIONS
-    SENTENCE_NR = 0
+    sentence_nr = -1
+    sentence_id = ""
     if len(sys.argv) > 1:
         try:
-            SENTENCE_NR = int(sys.argv[1])
-            print("Analyzing sentence " + str(SENTENCE_NR) + ".")
+            sentence_nr = int(sys.argv[1])
+            print("Analyzing sentence nr " + str(sentence_nr) + ".")
         except ValueError:
-            print("Second argument isn't a number. Analyzing (default) sentence 0.")
+            if sys.argv[1] == "id" and len(sys.argv) > 2:
+                sentence_id = sys.argv[2]
+                print("Analyzing sentence with id " + sentence_id)
+            else:
+                print("Incorrect input. Exiting")
+                print()
+
     else:
         print("Analyzing (default) sentence 0. Pass a number as the second argument to analyze that sentence instead.")
 
@@ -181,38 +214,41 @@ if __name__ == "__main__":
     fn = "corpus/BioInfer_corpus_1.1.1.xml"
     print("Reading file: '" + fn + "'.")
     bioinfer = BioInfer(fn)
-    sentence = bioinfer.sentences()[SENTENCE_NR]
-    tokens = bioinfer.tokens(sentence["id"])
-    dependencies = bioinfer.dependencies(sentence["id"])
-    entities = bioinfer.entities(sentence["id"])
-    relationships = bioinfer.relationships(sentence["id"])
+    if sentence_nr != -1:
+        sentence = bioinfer.sentences()[sentence_nr]
+        sentence_id = sentence["id"]
+    tokens = bioinfer.tokens(sentence_id)
+    dependencies = bioinfer.dependencies(sentence_id)
+    entities = bioinfer.entities(sentence_id)
+    relationships = bioinfer.relationships(sentence_id)
 
-    print("\nSentence " + str(SENTENCE_NR) + ", id:", sentence["id"])
-    print(sentence["text"])
+    print("\nSentence " + str(sentence_nr) + ", id:", sentence_id)
+    print(bioinfer.sentence(sentence_id)["text"])
 
     print("\nEntities:")
-    for entity in entities:
-        print(entity["text"] + "\t" + entity["type"] + "\t(" + entity["id"] + ")")
+    for i in range(len(entities)):
+        entity = entities[i]
+        print(str(i) + "\t" + entity["text"] + "\t" + entity["type"] + "\t(" + entity["id"] + ")")
 
     print("\nRelationships:")
     if len(relationships) == 0:
         print("No relationships.")
     for relation in relationships:
         src_index = relation["source"]
-        src_text = tokens[src_index]["text"]
+        src_text = entities[src_index]["text"]
+        src_id = relation["source_id"]
         tgt_index = relation["target"]
-        tgt_text = tokens[tgt_index]["text"]
+        tgt_text = entities[tgt_index]["text"]
+        tgt_id = relation["target_id"]
 
         rel_class = relation["class"]
         fine_rel_class = relation["fine_class"]
-        print(src_text + " [" + str(src_index) + "]\t" + rel_class + "(" + fine_rel_class + ")" + "\t" + tgt_text + " [" + str(tgt_index) + "]")
+        print(src_text + " [" + src_id + "]\t" + rel_class + "(" + fine_rel_class + ")" + "\t" + tgt_text + " [" + tgt_id + "]")
 
     print("\nTokens:")
     for i in range(len(tokens)):
         token = tokens[i]
         print(str(i) + "\t" + token["text"] + "\t(" + token["id"] + ")")
-
-
 
     print("\nDependencies:")
     for dependency in dependencies:
