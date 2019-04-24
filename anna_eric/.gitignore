@@ -7,6 +7,7 @@ uniprot_sprot.xml/
 uniprot_sprot.xml
 *.xml
 *.xml/
+*.fst
 
 # C extensions
 *.so

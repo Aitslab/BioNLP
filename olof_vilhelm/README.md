@@ -5,3 +5,4 @@ Jupyter worklog in _Log.ipynb_
 ## Dependencies
 
 - [nltk]()
+- [stanfordcorecnlp]()
