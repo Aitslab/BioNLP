@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Label drug="TENEX" setid="886e050c-dd22-4f35-ac3b-243f091125c3">
+<Text><Section name="CONTRAINDICATIONS SECTION" id="34070-3">
+CONTRAINDICATIONS 
+
+ Tenex is contraindicated in patients with known hypersensitivity to
+ guanfacine hydrochloride.</Section>
+<Section name="PRECAUTIONS SECTION" id="42232-9">
+PRECAUTIONS 
+
+ General 
+ Like other antihypertensive agents, Tenex (guanfacine hydrochloride)
+ should be used with caution in patients with severe coronary insufficiency,
+ recent myocardial infarction, cerebrovascular disease, or chronic renal or
+ hepatic failure. 
+
+ Sedation 
+ Tenex, like other orally active central
+ α 2 -adrenergic agonists, causes sedation or drowsiness,
+ especially when beginning therapy. These symptoms are dose-related (see
+
+ ADVERSE REACTIONS 
+ ). When Tenex is
+ used with other centrally active depressants (such as phenothiazines,
+ barbiturates, or benzodiazepines), the potential for additive sedative effects
+ should be considered. 
+
+ Rebound 
+ Abrupt cessation of therapy with orally active central
+ α 2 -adrenergic agonists may be associated with increases
+ (from depressed on-therapy levels) in plasma and urinary catecholamines,
+ symptoms of "nervousness and anxiety" and, less commonly, increases in blood
+ pressure to levels significantly greater than those prior to
+ therapy.</Section>
+<Section name="DRUG INTERACTIONS SECTION" id="34073-7">
+Drug Interactions 
+
+ The potential for increased sedation when Tenex is given with other
+ CNS-depressant drugs should be appreciated. 
+ The administration of guanfacine concomitantly with a known microsomal
+ enzyme inducer (phenobarbital or phenytoin) to two patients with renal
+ impairment reportedly resulted in significant reductions in elimination
+ half-life and plasma concentration. In such cases, therefore, more frequent
+ dosing may be required to achieve or maintain the desired hypotensive response.
+ Further, if guanfacine is to be discontinued in such patients, careful tapering
+ of the dosage may be necessary in order to avoid rebound phenomena (see
+
+ Rebound 
+ above). 
+ Anticoagulants 
+ Ten patients who were stabilized on oral anticoagulants were given
+ guanfacine, 1 - 2 mg/day, for 4 weeks. No changes were observed in the degree
+ of anticoagulation. 
+ In several well-controlled studies, guanfacine was administered
+ together with diuretics with no drug interactions reported. In the long-term
+ safety studies, Tenex was given concomitantly with many drugs without evidence
+ of any interactions. The principal drugs given (number of patients in
+ parentheses) were: cardiac glycosides (115), sedatives and hypnotics (103),
+ coronary vasodilators (52), oral hypoglycemics (45), cough and cold
+ preparations (45), NSAIDs (38), antihyperlipidemics (29), antigout drugs (24),
+ oral contraceptives (18), bronchodilators (13), insulin (10), and beta blockers
+ (10).</Section>
+<Section name="DRUG &amp; OR LABORATORY TEST INTERACTIONS SECTION" id="34074-5">
+Drug/Laboratory Test Interactions 
+
+ No laboratory test abnormalities related to the use of Tenex
+ (guanfacine hydrochloride) have been identified.</Section>
+<Section name="DOSAGE &amp; ADMINISTRATION SECTION" id="34068-7">
+DOSAGE AND ADMINISTRATION 
+
+ The recommended initial dose of Tenex (guanfacine hydrochloride) when
+ given alone or in combination with another antihypertensive drug is 1 mg daily
+ given at bedtime to minimize somnolence. If after 3 to 4 weeks of therapy 1 mg
+ does not give a satisfactory result, a dose of 2 mg may be given, although most
+ of the effect of Tenex is seen at 1 mg (see 
+ CLINICAL PHARMACOLOGY 
+ ). Higher daily doses have been used, but
+ adverse reactions increase significantly with doses above 3 mg/day. 
+ The frequency of rebound hypertension is low, but it can occur. When
+ rebound occurs, it does so after 2 - 4 days, which is delayed compared with
+ clonidine hydrochloride. This is consistent with the longer half-life of
+ guanfacine. In most cases, after abrupt withdrawal of guanfacine, blood
+ pressure returns to pretreatment levels slowly (within 2 - 4 days) without ill
+ effects.</Section>
+</Text><Sentences>
+<Sentence id="386" LabelDrug="TENEX" section="34068-7">
+<SentenceText>The recommended initial dose of Tenex ( guanfacine hydrochloride ) when given alone or in combination with another antihypertensive drug is 1 mg daily given at bedtime to minimize somnolence .</SentenceText>
+</Sentence>
+<Sentence id="387" LabelDrug="TENEX" section="34073-7">
+<SentenceText>Anticoagulants Ten patients who were stabilized on oral anticoagulants were given guanfacine, 1 - 2 mg/day, for 4 weeks.</SentenceText>
+</Sentence>
+<Sentence id="388" LabelDrug="TENEX" section="34073-7">
+<SentenceText>Further, if guanfacine is to be discontinued in such patients, careful tapering of the dosage may be necessary in order to avoid rebound phenomena (see Rebound above).</SentenceText>
+</Sentence>
+<Sentence id="389" LabelDrug="TENEX" section="34073-7">
+<SentenceText>In several well-controlled studies , guanfacine was administered together with diuretics with no drug interactions reported .</SentenceText>
+</Sentence>
+<Sentence id="390" LabelDrug="TENEX" section="34073-7">
+<SentenceText>In such cases, therefore, more frequent dosing may be required to achieve or maintain the desired hypotensive response.</SentenceText>
+</Sentence>
+<Sentence id="391" LabelDrug="TENEX" section="34073-7">
+<SentenceText>In the long-term safety studies, Tenex was given concomitantly with many drugs without evidence of any interactions.</SentenceText>
+</Sentence>
+<Sentence id="392" LabelDrug="TENEX" section="34073-7">
+<SentenceText>No changes were observed in the degree of anticoagulation.</SentenceText>
+</Sentence>
+<Sentence id="393" LabelDrug="TENEX" section="34073-7">
+<SentenceText>Ten patients who were stabilized on oral anticoagulants were given guanfacine , 1 - 2 mg/day , for 4 weeks .</SentenceText>
+</Sentence>
+<Sentence id="394" LabelDrug="TENEX" section="34073-7">
+<SentenceText>The administration of guanfacine concomitantly with a known microsomal enzyme inducer ( phenobarbital or phenytoin ) to two patients with renal impairment reportedly resulted in significant reductions in elimination half-life and plasma concentration .</SentenceText>
+<Mention id="M9" type="Trigger" span="190 35" str="reductions in elimination half-life"/>
+<Mention id="M4" type="Precipitant" span="60 25" str="microsomal enzyme inducer" code="NO MAP"/>
+<Mention id="M11" type="Trigger" span="190 13;230 20" str="reductions in | plasma concentration"/>
+<Mention id="M8" type="Precipitant" span="88 13" str="phenobarbital" code="N0000005893"/>
+<Mention id="M12" type="Precipitant" span="105 9" str="phenytoin" code="N0000006023"/>
+<Interaction id="I1" type="Pharmacokinetic interaction" trigger="M9" precipitant="M4" effect="C54607"/>
+<Interaction id="I2" type="Pharmacokinetic interaction" trigger="M11" precipitant="M4" effect="C54356"/>
+<Interaction id="I3" type="Pharmacokinetic interaction" trigger="M9" precipitant="M8" effect="C54607"/>
+<Interaction id="I4" type="Pharmacokinetic interaction" trigger="M11" precipitant="M8" effect="C54356"/>
+<Interaction id="I5" type="Pharmacokinetic interaction" trigger="M9" precipitant="M12" effect="C54607"/>
+<Interaction id="I6" type="Pharmacokinetic interaction" trigger="M11" precipitant="M12" effect="C54356"/>
+</Sentence>
+<Sentence id="394" LabelDrug="TENEX" section="34073-7">
+<SentenceText>The administration of guanfacine concomitantly with a known microsomal enzyme inducer ( phenobarbital or phenytoin ) to two patients with renal impairment reportedly resulted in significant reductions in elimination half-life and plasma concentration .</SentenceText>
+<Mention id="M21" type="Trigger" span="190 35" str="reductions in elimination half-life"/>
+<Mention id="M16" type="Precipitant" span="60 25" str="microsomal enzyme inducer" code="NO MAP"/>
+<Mention id="M23" type="Trigger" span="190 13;230 20" str="reductions in | plasma concentration"/>
+<Mention id="M20" type="Precipitant" span="88 13" str="phenobarbital" code="N0000005893"/>
+<Mention id="M24" type="Precipitant" span="105 9" str="phenytoin" code="N0000006023"/>
+<Interaction id="I7" type="Pharmacokinetic interaction" trigger="M21" precipitant="M16" effect="C54607"/>
+<Interaction id="I8" type="Pharmacokinetic interaction" trigger="M23" precipitant="M16" effect="C54356"/>
+<Interaction id="I9" type="Pharmacokinetic interaction" trigger="M21" precipitant="M20" effect="C54607"/>
+<Interaction id="I10" type="Pharmacokinetic interaction" trigger="M23" precipitant="M20" effect="C54356"/>
+<Interaction id="I11" type="Pharmacokinetic interaction" trigger="M21" precipitant="M24" effect="C54607"/>
+<Interaction id="I12" type="Pharmacokinetic interaction" trigger="M23" precipitant="M24" effect="C54356"/>
+</Sentence>
+<Sentence id="394" LabelDrug="TENEX" section="34073-7">
+<SentenceText>The administration of guanfacine concomitantly with a known microsomal enzyme inducer ( phenobarbital or phenytoin ) to two patients with renal impairment reportedly resulted in significant reductions in elimination half-life and plasma concentration .</SentenceText>
+<Mention id="M33" type="Trigger" span="190 35" str="reductions in elimination half-life"/>
+<Mention id="M28" type="Precipitant" span="60 25" str="microsomal enzyme inducer" code="NO MAP"/>
+<Mention id="M35" type="Trigger" span="190 13;230 20" str="reductions in | plasma concentration"/>
+<Mention id="M32" type="Precipitant" span="88 13" str="phenobarbital" code="N0000005893"/>
+<Mention id="M36" type="Precipitant" span="105 9" str="phenytoin" code="N0000006023"/>
+<Interaction id="I13" type="Pharmacokinetic interaction" trigger="M33" precipitant="M28" effect="C54607"/>
+<Interaction id="I14" type="Pharmacokinetic interaction" trigger="M35" precipitant="M28" effect="C54356"/>
+<Interaction id="I15" type="Pharmacokinetic interaction" trigger="M33" precipitant="M32" effect="C54607"/>
+<Interaction id="I16" type="Pharmacokinetic interaction" trigger="M35" precipitant="M32" effect="C54356"/>
+<Interaction id="I17" type="Pharmacokinetic interaction" trigger="M33" precipitant="M36" effect="C54607"/>
+<Interaction id="I18" type="Pharmacokinetic interaction" trigger="M35" precipitant="M36" effect="C54356"/>
+</Sentence>
+<Sentence id="394" LabelDrug="TENEX" section="34073-7">
+<SentenceText>The administration of guanfacine concomitantly with a known microsomal enzyme inducer ( phenobarbital or phenytoin ) to two patients with renal impairment reportedly resulted in significant reductions in elimination half-life and plasma concentration .</SentenceText>
+<Mention id="M45" type="Trigger" span="190 35" str="reductions in elimination half-life"/>
+<Mention id="M40" type="Precipitant" span="60 25" str="microsomal enzyme inducer" code="NO MAP"/>
+<Mention id="M47" type="Trigger" span="190 13;230 20" str="reductions in | plasma concentration"/>
+<Mention id="M44" type="Precipitant" span="88 13" str="phenobarbital" code="N0000005893"/>
+<Mention id="M48" type="Precipitant" span="105 9" str="phenytoin" code="N0000006023"/>
+<Interaction id="I19" type="Pharmacokinetic interaction" trigger="M45" precipitant="M40" effect="C54607"/>
+<Interaction id="I20" type="Pharmacokinetic interaction" trigger="M47" precipitant="M40" effect="C54356"/>
+<Interaction id="I21" type="Pharmacokinetic interaction" trigger="M45" precipitant="M44" effect="C54607"/>
+<Interaction id="I22" type="Pharmacokinetic interaction" trigger="M47" precipitant="M44" effect="C54356"/>
+<Interaction id="I23" type="Pharmacokinetic interaction" trigger="M45" precipitant="M48" effect="C54607"/>
+<Interaction id="I24" type="Pharmacokinetic interaction" trigger="M47" precipitant="M48" effect="C54356"/>
+</Sentence>
+<Sentence id="394" LabelDrug="TENEX" section="34073-7">
+<SentenceText>The administration of guanfacine concomitantly with a known microsomal enzyme inducer ( phenobarbital or phenytoin ) to two patients with renal impairment reportedly resulted in significant reductions in elimination half-life and plasma concentration .</SentenceText>
+<Mention id="M57" type="Trigger" span="190 35" str="reductions in elimination half-life"/>
+<Mention id="M52" type="Precipitant" span="60 25" str="microsomal enzyme inducer" code="NO MAP"/>
+<Mention id="M59" type="Trigger" span="190 13;230 20" str="reductions in | plasma concentration"/>
+<Mention id="M56" type="Precipitant" span="88 13" str="phenobarbital" code="N0000005893"/>
+<Mention id="M60" type="Precipitant" span="105 9" str="phenytoin" code="N0000006023"/>
+<Interaction id="I25" type="Pharmacokinetic interaction" trigger="M57" precipitant="M52" effect="C54607"/>
+<Interaction id="I26" type="Pharmacokinetic interaction" trigger="M59" precipitant="M52" effect="C54356"/>
+<Interaction id="I27" type="Pharmacokinetic interaction" trigger="M57" precipitant="M56" effect="C54607"/>
+<Interaction id="I28" type="Pharmacokinetic interaction" trigger="M59" precipitant="M56" effect="C54356"/>
+<Interaction id="I29" type="Pharmacokinetic interaction" trigger="M57" precipitant="M60" effect="C54607"/>
+<Interaction id="I30" type="Pharmacokinetic interaction" trigger="M59" precipitant="M60" effect="C54356"/>
+</Sentence>
+<Sentence id="394" LabelDrug="TENEX" section="34073-7">
+<SentenceText>The administration of guanfacine concomitantly with a known microsomal enzyme inducer ( phenobarbital or phenytoin ) to two patients with renal impairment reportedly resulted in significant reductions in elimination half-life and plasma concentration .</SentenceText>
+<Mention id="M69" type="Trigger" span="190 35" str="reductions in elimination half-life"/>
+<Mention id="M64" type="Precipitant" span="60 25" str="microsomal enzyme inducer" code="NO MAP"/>
+<Mention id="M71" type="Trigger" span="190 13;230 20" str="reductions in | plasma concentration"/>
+<Mention id="M68" type="Precipitant" span="88 13" str="phenobarbital" code="N0000005893"/>
+<Mention id="M72" type="Precipitant" span="105 9" str="phenytoin" code="N0000006023"/>
+<Interaction id="I31" type="Pharmacokinetic interaction" trigger="M69" precipitant="M64" effect="C54607"/>
+<Interaction id="I32" type="Pharmacokinetic interaction" trigger="M71" precipitant="M64" effect="C54356"/>
+<Interaction id="I33" type="Pharmacokinetic interaction" trigger="M69" precipitant="M68" effect="C54607"/>
+<Interaction id="I34" type="Pharmacokinetic interaction" trigger="M71" precipitant="M68" effect="C54356"/>
+<Interaction id="I35" type="Pharmacokinetic interaction" trigger="M69" precipitant="M72" effect="C54607"/>
+<Interaction id="I36" type="Pharmacokinetic interaction" trigger="M71" precipitant="M72" effect="C54356"/>
+</Sentence>
+<Sentence id="395" LabelDrug="TENEX" section="34073-7">
+<SentenceText>The potential for increased sedation when Tenex is given with other CNS-depressant drugs should be appreciated .</SentenceText>
+<Mention id="M73" type="Trigger" span="4 23" str="potential for increased"/>
+<Mention id="M74" type="Precipitant" span="68 20" str="CNS-depressant drugs" code="N0000175758"/>
+<Mention id="M75" type="SpecificInteraction" span="18 18" str="increased sedation" code="17971005: Sedated (finding)"/>
+<Interaction id="I37" type="Pharmacodynamic interaction" trigger="M73" precipitant="M74" effect="M75"/>
+</Sentence>
+<Sentence id="396" LabelDrug="TENEX" section="34073-7">
+<SentenceText>The principal drugs given (number of patients in parentheses) were: cardiac glycosides (115), sedatives and hypnotics (103), coronary vasodilators (52), oral hypoglycemics (45), cough and cold preparations (45), NSAIDs (38), antihyperlipidemics (29), antigout drugs (24), oral contraceptives (18), bronchodilators (13), insulin (10), and beta blockers (10).</SentenceText>
+</Sentence>
+<Sentence id="397" LabelDrug="TENEX" section="42232-9">
+<SentenceText>Like other antihypertensive agents , Tenex ( guanfacine hydrochloride ) should be used with caution in patients with severe coronary insufficiency , recent myocardial infarction , cerebrovascular disease , or chronic renal or hepatic failure .</SentenceText>
+</Sentence>
+<Sentence id="398" LabelDrug="TENEX" section="42232-9">
+<SentenceText>Tenex , like other orally active central 2-adrenergic agonists , causes sedation or drowsiness , especially when beginning therapy .</SentenceText>
+</Sentence>
+<Sentence id="399" LabelDrug="TENEX" section="42232-9">
+<SentenceText>When Tenex is used with other centrally active depressants ( such as phenothiazines , barbiturates , or benzodiazepines ) , the potential for additive sedative effects should be considered .</SentenceText>
+<Mention id="M85" type="Trigger" span="142 8;160 7" str="additive | effects"/>
+<Mention id="M77" type="Precipitant" span="86 12" str="barbiturates" code="N0000008016"/>
+<Mention id="M87" type="SpecificInteraction" span="142 25" str="additive sedative effects" code="17971005: Sedated (finding)"/>
+<Mention id="M80" type="Precipitant" span="104 15" str="benzodiazepines" code="N0000007542"/>
+<Mention id="M83" type="Precipitant" span="30 28" str="centrally active depressants" code="n0000175758"/>
+<Mention id="M86" type="Precipitant" span="69 14" str="phenothiazines" code="N0000175746"/>
+<Interaction id="I38" type="Pharmacodynamic interaction" trigger="M85" precipitant="M77" effect="M87"/>
+<Interaction id="I39" type="Pharmacodynamic interaction" trigger="M85" precipitant="M80" effect="M87"/>
+<Interaction id="I40" type="Pharmacodynamic interaction" trigger="M85" precipitant="M83" effect="M87"/>
+<Interaction id="I41" type="Pharmacodynamic interaction" trigger="M85" precipitant="M86" effect="M87"/>
+</Sentence>
+<Sentence id="399" LabelDrug="TENEX" section="42232-9">
+<SentenceText>When Tenex is used with other centrally active depressants ( such as phenothiazines , barbiturates , or benzodiazepines ) , the potential for additive sedative effects should be considered .</SentenceText>
+<Mention id="M97" type="Trigger" span="142 8;160 7" str="additive | effects"/>
+<Mention id="M89" type="Precipitant" span="86 12" str="barbiturates" code="N0000008016"/>
+<Mention id="M99" type="SpecificInteraction" span="142 25" str="additive sedative effects" code="17971005: Sedated (finding)"/>
+<Mention id="M92" type="Precipitant" span="104 15" str="benzodiazepines" code="N0000007542"/>
+<Mention id="M95" type="Precipitant" span="30 28" str="centrally active depressants" code="n0000175758"/>
+<Mention id="M98" type="Precipitant" span="69 14" str="phenothiazines" code="N0000175746"/>
+<Interaction id="I42" type="Pharmacodynamic interaction" trigger="M97" precipitant="M89" effect="M99"/>
+<Interaction id="I43" type="Pharmacodynamic interaction" trigger="M97" precipitant="M92" effect="M99"/>
+<Interaction id="I44" type="Pharmacodynamic interaction" trigger="M97" precipitant="M95" effect="M99"/>
+<Interaction id="I45" type="Pharmacodynamic interaction" trigger="M97" precipitant="M98" effect="M99"/>
+</Sentence>
+<Sentence id="399" LabelDrug="TENEX" section="42232-9">
+<SentenceText>When Tenex is used with other centrally active depressants ( such as phenothiazines , barbiturates , or benzodiazepines ) , the potential for additive sedative effects should be considered .</SentenceText>
+<Mention id="M109" type="Trigger" span="142 8;160 7" str="additive | effects"/>
+<Mention id="M101" type="Precipitant" span="86 12" str="barbiturates" code="N0000008016"/>
+<Mention id="M111" type="SpecificInteraction" span="142 25" str="additive sedative effects" code="17971005: Sedated (finding)"/>
+<Mention id="M104" type="Precipitant" span="104 15" str="benzodiazepines" code="N0000007542"/>
+<Mention id="M107" type="Precipitant" span="30 28" str="centrally active depressants" code="n0000175758"/>
+<Mention id="M110" type="Precipitant" span="69 14" str="phenothiazines" code="N0000175746"/>
+<Interaction id="I46" type="Pharmacodynamic interaction" trigger="M109" precipitant="M101" effect="M111"/>
+<Interaction id="I47" type="Pharmacodynamic interaction" trigger="M109" precipitant="M104" effect="M111"/>
+<Interaction id="I48" type="Pharmacodynamic interaction" trigger="M109" precipitant="M107" effect="M111"/>
+<Interaction id="I49" type="Pharmacodynamic interaction" trigger="M109" precipitant="M110" effect="M111"/>
+</Sentence>
+<Sentence id="399" LabelDrug="TENEX" section="42232-9">
+<SentenceText>When Tenex is used with other centrally active depressants ( such as phenothiazines , barbiturates , or benzodiazepines ) , the potential for additive sedative effects should be considered .</SentenceText>
+<Mention id="M121" type="Trigger" span="142 8;160 7" str="additive | effects"/>
+<Mention id="M113" type="Precipitant" span="86 12" str="barbiturates" code="N0000008016"/>
+<Mention id="M123" type="SpecificInteraction" span="142 25" str="additive sedative effects" code="17971005: Sedated (finding)"/>
+<Mention id="M116" type="Precipitant" span="104 15" str="benzodiazepines" code="N0000007542"/>
+<Mention id="M119" type="Precipitant" span="30 28" str="centrally active depressants" code="n0000175758"/>
+<Mention id="M122" type="Precipitant" span="69 14" str="phenothiazines" code="N0000175746"/>
+<Interaction id="I50" type="Pharmacodynamic interaction" trigger="M121" precipitant="M113" effect="M123"/>
+<Interaction id="I51" type="Pharmacodynamic interaction" trigger="M121" precipitant="M116" effect="M123"/>
+<Interaction id="I52" type="Pharmacodynamic interaction" trigger="M121" precipitant="M119" effect="M123"/>
+<Interaction id="I53" type="Pharmacodynamic interaction" trigger="M121" precipitant="M122" effect="M123"/>
+</Sentence>
+</Sentences>
+<LabelInteractions><LabelInteraction type="Pharmacokinetic interaction" precipitant="microsomal enzyme inducer" precipitantCode="NO MAP" effect="C54356"/>
+<LabelInteraction type="Pharmacokinetic interaction" precipitant="microsomal enzyme inducer" precipitantCode="NO MAP" effect="C54607"/>
+<LabelInteraction type="Pharmacokinetic interaction" precipitant="phenobarbital" precipitantCode="N0000005893" effect="C54356"/>
+<LabelInteraction type="Pharmacokinetic interaction" precipitant="phenobarbital" precipitantCode="N0000005893" effect="C54607"/>
+<LabelInteraction type="Pharmacokinetic interaction" precipitant="phenytoin" precipitantCode="N0000006023" effect="C54356"/>
+<LabelInteraction type="Pharmacokinetic interaction" precipitant="phenytoin" precipitantCode="N0000006023" effect="C54607"/>
+<LabelInteraction type="Pharmacodynamic interaction" precipitant="cns-depressant drugs" precipitantCode="N0000175758" effect="17971005: Sedated (finding)"/>
+<LabelInteraction type="Pharmacodynamic interaction" precipitant="barbiturates" precipitantCode="N0000008016" effect="17971005: Sedated (finding)"/>
+<LabelInteraction type="Pharmacodynamic interaction" precipitant="benzodiazepines" precipitantCode="N0000007542" effect="17971005: Sedated (finding)"/>
+<LabelInteraction type="Pharmacodynamic interaction" precipitant="centrally active depressants" precipitantCode="n0000175758" effect="17971005: Sedated (finding)"/>
+<LabelInteraction type="Pharmacodynamic interaction" precipitant="phenothiazines" precipitantCode="N0000175746" effect="17971005: Sedated (finding)"/>
+
+</LabelInteractions></Label>
