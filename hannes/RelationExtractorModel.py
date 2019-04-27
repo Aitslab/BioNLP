@@ -1,19 +1,29 @@
 from sklearn import svm
 from sklearn.model_selection import train_test_split
+from sklearn.pipeline import Pipeline
+from sklearn.feature_extraction import DictVectorizer
+from sklearn.tree import DecisionTreeClassifier
 
 
 class RelationExtractorModel:
 
     def __init__(self):
-        self.model = svm.SVC(gamma='scale')
+        self.model = Pipeline([
+            ('vectorizer', DictVectorizer(sparse=False)),
+            ('classifier', DecisionTreeClassifier(criterion='entropy'))
+        ])
 
     def train(self, features, targets):
         if len(features) != len(targets):
             raise ValueError('number of targets mismatch number of data sets')
         self.model.fit(features, targets)
+        print("model trained!")
 
     def reset_model(self):
-        self.model = svm.SVC(gamma='scale')
+        self.model = Pipeline([
+            ('vectorizer', DictVectorizer(sparse=False)),
+            ('classifier', DecisionTreeClassifier(criterion='entropy'))
+        ])
 
     def predict(self, features):
         return self.model.predict(features)

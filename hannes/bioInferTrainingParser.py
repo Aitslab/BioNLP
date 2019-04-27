@@ -24,7 +24,7 @@ def parse_training_set(file_name):
                 tokens.append(tkn)
             entry['tokens'] = tokens
 
-            entetities = [None] * len(tokens)
+            entities = [None] * len(tokens)
             for entity in sentence.findall("entity"):
                 token_indices = list()
                 if entity.get("type") != "RELATIONSHIP_TEXTBINDING":
@@ -32,8 +32,8 @@ def parse_training_set(file_name):
                         token_indices.append(int(subtoken.get("id").split(".")[2]))
                         # "st.2.6.0" where the 6 is the token index in the sentence
                     #  print(int(entity.get("id").split(".")[2]))
-                    entetities[int(entity.get("id").split(".")[2])] = token_indices
-            entry['proteins'] = entetities
+                    entities[int(entity.get("id").split(".")[2])] = token_indices
+            entry['entities'] = entities
 
             interactions = list()
             for formulas in sentence.findall("formulas"):
