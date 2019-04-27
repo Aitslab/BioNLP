@@ -3,15 +3,15 @@ from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.linear_model import SGDClassifier
+from sklearn.feature_extraction.text import TfidfTransformer
 
 
 class RelationExtractorModel:
 
     def __init__(self):
-        self.model = Pipeline([
-            ('vectorizer', DictVectorizer(sparse=False)),
-            ('classifier', DecisionTreeClassifier(criterion='entropy'))
-        ])
+        self.model = Pipeline([('vect', DictVectorizer()), ('tfidf', TfidfTransformer()), (
+        'clf-svm', SGDClassifier(loss='hinge', penalty='l2', alpha=1e-3, n_iter=5, random_state=42))])
 
     def train(self, features, targets):
         if len(features) != len(targets):

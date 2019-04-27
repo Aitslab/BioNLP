@@ -25,33 +25,23 @@ def main():
             except ValueError:
                 continue
             features.append(ft)
-            targets.append(inpt['predicates'][i][1])
+            targets.append(inpt['predicates'][i][2])
             i += 1
 
         entity_list = inpt["entities"]
-        max_number_of_no_interactions = 2
-
         clean_entity_list = [x for x in entity_list if x is not None]
         if len(clean_entity_list) > 1:
-            print(clean_entity_list)
-            # print(clean_entity_list)
             index1 = random.randint(0, len(clean_entity_list)-1)
-            # print(index1)
             entity = clean_entity_list[index1]
             number = list(range(0, index1)) + list(range(index1+1, len(clean_entity_list)))
-            # print(number)
             entity2 = clean_entity_list[random.choice(number)]
             if not (entity is None or entity2 is None or entity == entity2 or [entity_list.index(entity), entity_list.index(entity)] in interaction_list):
                 try:
-                    print(entity)
-                    print(entity2)
                     ft2 = build_features(inpt, entity, entity2)
                     features.append(ft2)
                     targets.append('no_interaction')
                 except ValueError:
                     pass
-    # print(ft2)
-    # print(targets)
 
     rem = REM()
 
