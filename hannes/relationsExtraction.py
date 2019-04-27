@@ -2,6 +2,7 @@ from bioInferTrainingParser import parse_training_set
 import text_tools as tt
 import copy
 from RelationExtractorModel import RelationExtractorModel as REM
+import random
 
 
 def main():
@@ -17,28 +18,38 @@ def main():
         interaction_list = inpt["interactions"]
 
         #  building features with interaction
+        i = 0
         for interaction in interaction_list:
             try:
                 ft = build_features(inpt, inpt["entities"][interaction[0]], inpt["entities"][interaction[1]])
             except ValueError:
                 continue
             features.append(ft)
-            targets.append(1)
+            targets.append(inpt['predicates'][i][1])
+            i += 1
 
         entity_list = inpt["entities"]
-        for entity in entity_list:
-            for entity2 in entity_list:
-                if entity is None or entity2 is None or entity == entity2 or [
-                    entity_list.index(entity),
-                    entity_list.index(
-                        entity)] in interaction_list:
-                    continue
+        max_number_of_no_interactions = 2
+
+        clean_entity_list = [x for x in entity_list if x is not None]
+        if len(clean_entity_list) > 1:
+            print(clean_entity_list)
+            # print(clean_entity_list)
+            index1 = random.randint(0, len(clean_entity_list)-1)
+            # print(index1)
+            entity = clean_entity_list[index1]
+            number = list(range(0, index1)) + list(range(index1+1, len(clean_entity_list)))
+            # print(number)
+            entity2 = clean_entity_list[random.choice(number)]
+            if not (entity is None or entity2 is None or entity == entity2 or [entity_list.index(entity), entity_list.index(entity)] in interaction_list):
                 try:
+                    print(entity)
+                    print(entity2)
                     ft2 = build_features(inpt, entity, entity2)
+                    features.append(ft2)
+                    targets.append('no_interaction')
                 except ValueError:
-                    continue
-                features.append(ft2)
-                targets.append(0)
+                    pass
     # print(ft2)
     # print(targets)
 
@@ -52,6 +63,7 @@ def main():
     print(train_feat[0])
     print(train_targ)
     rem.train(train_feat, train_targ)
+    print(rem.predict(test_feat[0]))
     print("f1 = " + str(100*rem.sklearn_test(test_feat, test_targ)) + '%')
 
 
@@ -100,16 +112,16 @@ def build_features(inpt, entity, entity2):
         else:
             right = [tokens[in2]] + right
 
-    features = {  # 'prefix1-m1': left[0],
-                # 'prefix2-m1': left[1],
+    features = {'prefix1-m1': left[0],
+                'prefix2-m1': left[1],
                 'suffix1-m1': left[2],
                 'suffix2-m1': left[3],
                 'suffix3-m1': left[4],
                 'suffix4-m1': left[5],
                 'suffix5-m1': left[6],
 
-                # 'suffix1-m2': right[0],
-                # 'suffix2-m2': right[1],
+                'suffix1-m2': right[0],
+                'suffix2-m2': right[1],
                 'prefix1-m2': right[2],
                 'prefix2-m2': right[3],
                 'prefix3-m2': right[4],

@@ -36,6 +36,7 @@ def parse_training_set(file_name):
             entry['entities'] = entities
 
             interactions = list()
+            predicates = list()
             for formulas in sentence.findall("formulas"):
                 for formula in formulas.findall("formula"):
                     for relnode in formula.findall("relnode"):
@@ -43,7 +44,9 @@ def parse_training_set(file_name):
                         for node in relnode.findall("entitynode"):
                             entity_indices.append(int(node.get("entity").split(".")[2]))
                         interactions.append(entity_indices)
+                        predicates.append(relnode.get('predicate').split('_'))
             entry["interactions"] = interactions
+            entry['predicates'] = predicates
             inputs.append(entry)
     return inputs
 
