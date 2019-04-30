@@ -5,6 +5,7 @@ from sklearn.feature_extraction import DictVectorizer
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.linear_model import SGDClassifier
 from sklearn.feature_extraction.text import TfidfTransformer
+import spacy
 
 
 class RelationExtractorModel:

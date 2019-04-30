@@ -3,12 +3,11 @@ import text_tools as tt
 import copy
 from RelationExtractorModel import RelationExtractorModel as REM
 import random
+import spacy
 
 
 def main():
     inpts = parse_training_set('trainingFiles/BioInfer_corpus_1.2.0b.binarised.xml')
-    test_text = inpts[0]['text']
-    # print(tt.tokenize(test_text))
 
     # build the features
     features = []
@@ -68,60 +67,57 @@ def build_features(inpt, entity, entity2):
         tokens = join_tokens(tokens, entity2, "ENTITY1")
 
     sentence = " ".join(tokens)
+    # pos = pos_tag(sentence)
+    # print(pos)
     tokens = tt.tokenize(sentence)
 
     index1 = tokens.index("entity1")
     index2 = tokens.index("entity2")
 
-    left = list()
-    right = list()
+    pre1 = build_gram(2, -1, tokens, index1)
+    suf1 = build_gram(5, 1, tokens, index1)
+    pre2 = build_gram(5, -1, tokens, index2)
+    suf2 = build_gram(2, 1, tokens, index2)
 
-    for i in range(2):
-        in1 = index1 - 1 - i
-        in2 = index2 + 1 + i
+    features = {'prefix1-m1': pre1[0],
+                'prefix2-m1': pre1[1],
+                'suffix1-m1': suf1[0],
+                'suffix2-m1': suf1[1],
+                'suffix3-m1': suf1[2],
+                'suffix4-m1': suf1[3],
+                'suffix5-m1': suf1[4],
 
-        if in1 < 0:
-            left = ['NaN'] + left
-        else:
-            left = [tokens[in1]] + left
-        if in2 > len(tokens) - 1:
-            right.append('NaN')
-        else:
-            right.append(tokens[in2])
-
-    for i in range(5):
-        in1 = index1 + 1 + i
-        in2 = index2 - 1 - i
-
-        if in1 > len(tokens) - 1:
-            left.append('NaN')
-        else:
-            left.append(tokens[in1])
-        if in2 < 0:
-            right = ['NaN'] + right
-        else:
-            right = [tokens[in2]] + right
-
-    features = {'prefix1-m1': left[0],
-                'prefix2-m1': left[1],
-                'suffix1-m1': left[2],
-                'suffix2-m1': left[3],
-                'suffix3-m1': left[4],
-                'suffix4-m1': left[5],
-                'suffix5-m1': left[6],
-
-                'suffix1-m2': right[0],
-                'suffix2-m2': right[1],
-                'prefix1-m2': right[2],
-                'prefix2-m2': right[3],
-                'prefix3-m2': right[4],
-                'prefix4-m2': right[5],
-                'prefix5-m2': right[6],
+                'suffix1-m2': suf2[0],
+                'suffix2-m2': suf2[1],
+                'prefix1-m2': pre2[0],
+                'prefix2-m2': pre2[1],
+                'prefix3-m2': pre2[2],
+                'prefix4-m2': pre2[3],
+                'prefix5-m2': pre2[4],
 
                 'distance': index2-index1
                 }
 
     return features
+
+
+def build_gram(size, direction, tokens, index):
+    index
+    gram = list()
+    for i in range(size):
+        ind = index + direction*(1 + i)
+
+        if ind < 0 or ind >= len(tokens):
+            if direction < 0:
+                gram = ['NaN'] + gram
+            else:
+                gram.append('NaN')
+        else:
+            if direction < 0:
+                gram = [tokens[ind]] + gram
+            else:
+                gram.append(tokens[ind])
+    return gram
 
 
 def join_tokens(tokens, entity, string):
@@ -131,6 +127,13 @@ def join_tokens(tokens, entity, string):
 
 def build_token(tokens, entity):
     return ''.join(tokens[entity[0]:entity[len(entity) - 1] + 1])
+
+
+def pos_tag(text):
+    # spacy.load("sciSpacy/en_core_sci_md-0.2.0")
+    nlp = spacy.load("en")
+    doc = nlp(text)
+    return [i for i in doc]
 
 
 if __name__ == "__main__":

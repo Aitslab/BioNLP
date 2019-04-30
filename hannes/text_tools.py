@@ -42,5 +42,3 @@ def replace_tokens(tokens, word_variations, new_word):
         else:
             new_tokens.append(token)
     return new_tokens
-
-
