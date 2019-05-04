@@ -8,7 +8,8 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         if "s" in sys.argv[1]:
             long = True
-
+    posneg_relations = 0
+    other_relations = 0
     for sentence in bioinfer.sentences():
         interesting_sentence = False
         s_id = sentence["id"]
@@ -46,6 +47,7 @@ if __name__ == "__main__":
             else:
                 for relation in relationships:
                     if relation["class"] != "OTHER":
+                        posneg_relations += 1
                         src_index = relation["source"]
                         src_text = entities[src_index]["text"]
                         tgt_index = relation["target"]
@@ -54,5 +56,9 @@ if __name__ == "__main__":
                         fine_rel_class = relation["fine_class"]
                         print(
                             "  " + src_text + "\t" + rel_class + "(" + fine_rel_class + ")" + "\t" + tgt_text)
+                    else:
+                        other_relations += 1
 
-
+    print()
+    print(posneg_relations, "POSITIVE/NEGATIVE relations found.")
+    print(other_relations, "OTHER relations discarded.")
