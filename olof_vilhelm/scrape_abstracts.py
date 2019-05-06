@@ -22,10 +22,11 @@ def main(filename, mode, batch_size=-1):
     file_encoding = get_encoding(filename)
     save_abstracts(abstracts, filename, file_encoding, mode, batch_size)
 
-
-def get_abstracts(filename):
-    abstracts = list()
-    print("Parsing XML document \'" + filename + "\'...")
+''' Returns'''
+def get_abstracts(filename, verbose=False):
+    abstracts = dict()
+    if verbose:
+        print("Parsing XML document \'" + filename + "\'...")
     root = ET.parse(filename).getroot()
     if root.tag == "PubmedArticleSet":
         print("Pubmed article set detected. Gathering abstracts...")
@@ -43,7 +44,7 @@ def get_abstracts(filename):
 
             if abstract != "" and pmid is not None:
                 normalized_abstract = normalize_text(abstract)
-                abstracts.append((pmid, normalized_abstract))
+                abstracts[pmid] = normalized_abstract
 
     else:
         print("Unknown corpus type detected. Root tag: \'" + root.tag + "\'")
@@ -67,7 +68,8 @@ def save_abstracts(abstracts, filename, file_encoding, mode, batch_size=-1):
     elif mode == ABSTRACTS_SEPARATE_FILES:
         abstracts_dir = filename_no_suffix + SEPARATE_ABSTRACT_DIR
         os.makedirs(abstracts_dir, exist_ok=True)
-        for pmid, abstract in abstracts:
+        for pmid in abstracts:
+            abstract = abstracts[pmid]
             abstract_fn = abstracts_dir + str(pmid) + ABSTRACTS_SUFFIX
             with open(abstract_fn, 'w+', encoding=file_encoding) as abstract_file:
                 abstract_file.write(abstract)
