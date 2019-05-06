@@ -17,18 +17,21 @@ BATCHED_PMID_SUFFIX = ".pmids"
 ABSTRACTS_FILE_PMID_LINE = "#PMID="
 
 
-def main(filename, mode, batch_size=-1):
-    abstracts = get_abstracts(filename)
+def main(filename, mode, batch_size=-1, verbose=False):
+    abstracts = get_abstracts(filename, verbose)
     file_encoding = get_encoding(filename)
     save_abstracts(abstracts, filename, file_encoding, mode, batch_size)
 
 
-def get_abstracts(filename):
-    abstracts = list()
-    print("Parsing XML document \'" + filename + "\'...")
+# Returns a dictionary of abstracts, key: PMID, value: the abstract text.
+def get_abstracts(filename, verbose=False):
+    abstracts = dict()
+    if verbose:
+        print("Parsing XML document \'" + filename + "\'...")
     root = ET.parse(filename).getroot()
     if root.tag == "PubmedArticleSet":
-        print("Pubmed article set detected. Gathering abstracts...")
+        if verbose:
+            print("Pubmed article set detected. Gathering abstracts...")
         for article in root:
             pmid = None
             abstract = ""
@@ -42,8 +45,7 @@ def get_abstracts(filename):
                     abstract += el.text
 
             if abstract != "" and pmid is not None:
-                normalized_abstract = normalize_text(abstract)
-                abstracts.append((pmid, normalized_abstract))
+                abstracts[pmid] = abstract
 
     else:
         print("Unknown corpus type detected. Root tag: \'" + root.tag + "\'")
@@ -67,7 +69,8 @@ def save_abstracts(abstracts, filename, file_encoding, mode, batch_size=-1):
     elif mode == ABSTRACTS_SEPARATE_FILES:
         abstracts_dir = filename_no_suffix + SEPARATE_ABSTRACT_DIR
         os.makedirs(abstracts_dir, exist_ok=True)
-        for pmid, abstract in abstracts:
+        for pmid in abstracts:
+            abstract = abstracts[pmid]
             abstract_fn = abstracts_dir + str(pmid) + ABSTRACTS_SUFFIX
             with open(abstract_fn, 'w+', encoding=file_encoding) as abstract_file:
                 abstract_file.write(abstract)
@@ -83,7 +86,8 @@ def save_abstracts(abstracts, filename, file_encoding, mode, batch_size=-1):
         b_abstract_file = open(b_abstract_fn, "w+", encoding=file_encoding)
         b_pmid_fn = abstracts_dir + "batch_" + str(batch_nr) + BATCHED_PMID_SUFFIX
         b_pmid_file = open(b_pmid_fn, "w+", encoding=file_encoding)
-        for i in range(len(abstracts)):
+        i = 0
+        for pmid in abstracts:
             if batch_nr < int(i / batch_size):
                 batch_nr = int(i / batch_size)
 
@@ -95,10 +99,11 @@ def save_abstracts(abstracts, filename, file_encoding, mode, batch_size=-1):
                 b_pmid_fn = abstracts_dir + "batch_" + str(batch_nr) + BATCHED_PMID_SUFFIX
                 b_pmid_file = open(b_pmid_fn, "w+", encoding=file_encoding)
 
-            pmid, abstract = abstracts[i]
+            abstract = abstracts[pmid]
             b_abstract_file.write(ABSTRACTS_FILE_PMID_LINE + str(pmid) + "\n")
             b_abstract_file.write(abstract)
             b_pmid_file.write(pmid + "\n")
+            i += 1
 
         b_abstract_file.close()
         b_pmid_file.close()
@@ -127,6 +132,7 @@ def print_help():
     print("[FILE]      : An XML file containing abstracts.")
     print("Options:")
     print("  -s        : (Default) Puts abstracts into a single file named [FILE].abstracts.")
+    print("  -v        : Provides extra output to display progress.")
     print("  -S        : Put abstracts into individual files named [PMID].abstract in ./[FILE]_abstracts/")
     print("  -b [N]    : Put batches of [N] abstracts into files.")
     exit()
@@ -136,6 +142,7 @@ def handle_options(args):
     filename = None
     mode = ABSTRACTS_SINGLE_FILE
     batch_size = -1
+    verbose = False
     if len(args) <= 1:
         print_help()
     elif len(args) <= 2:
@@ -143,6 +150,8 @@ def handle_options(args):
     elif len(args) <= 3:
         if "h" in args[1]:
             print_help()
+        if "v" in args[1]:
+            verbose = True
         if "s" in args[1]:
             mode = ABSTRACTS_SINGLE_FILE
         if "S" in args[1]:
@@ -170,12 +179,12 @@ def handle_options(args):
     try:
         f = open(filename, 'r')
         f.close()
-        return filename, mode, batch_size
+        return filename, mode, batch_size, verbose
     except FileNotFoundError:
         print("File \'" + filename + "\' not found. Exiting...")
         exit(1)
 
 
 if __name__ == '__main__':
-    fn, m, nb = handle_options(sys.argv)
-    main(fn, m, nb)
+    fn, m, nb, v = handle_options(sys.argv)
+    main(fn, m, nb, v)
