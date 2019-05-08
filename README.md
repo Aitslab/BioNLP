@@ -56,7 +56,13 @@ BioRxiv
 Wikipedia
 
 
-## 5. Other (relevant blogs, discussion forums, etc)  
+## 5. Tasks and conferences within BioNLP
+ACL-BioNLP2019 Workshop and associated MEDIQA 2019 task
+https://sites.google.com/view/mediqa2019
+https://aclweb.org/aclwiki/BioNLP_Workshop
+
+
+## 6. Other (relevant blogs, discussion forums, etc)  
 Devblog with working example code for med-text relations extraction  
 https://www.microsoft.com/developerblog/2016/09/13/training-a-classifier-for-relation-extraction-from-medical-literature/
 
@@ -65,3 +71,7 @@ https://www.biostars.org/
 
 Link list with many resources   
 https://www2.informatik.hu-berlin.de/~hakenber/links/benchmarks.html
+
+http://www.nactem.ac.uk/software.php
+
+
