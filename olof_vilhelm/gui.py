@@ -1,26 +1,37 @@
 import tkinter as tk
-
+from entity_relations_model import *
 
 class Gui:
 
-    def __init__(self, list_data, text_data, relations):
+    def __init__(self, entities, relations):
+        if not all(isinstance(e, Entity) for e in entities):
+            TypeError("Argument 'entities' must be a list of", type(Entity), "objects.")
+        elif not all(isinstance(r, Relation) for r in relations):
+            TypeError("Argument 'relations' must be a list of", type(Relation), "objects.")
+
         self.root = tk.Tk()
         self.root.title("Gui")
         self.root.geometry("1500x1100")
-
-        self.top_selected = None
-        self.relation_selected = tk.StringVar()
-        self.relation_selected.set(relations[0])
-        self.bottom_selected = None
-        self.list_data = list_data
-        self.text_data = text_data
-
         self.left_panel = tk.Frame(self.root)
+
+        relation_types = set()
+        for relation in relations:
+            relation_types.add(relation.word)
+        relation_types = list(relation_types)
+
+        self.entities = entities
+        self.relations = relations
+        self.filtered_relations = list()
+
+        self.top_selected_i = -1
+        self.relation_type_selected = tk.StringVar()
+        self.relation_type_selected.set(relation_types[0])
+        self.bottom_selected_i = -1
 
         self.big_font = ("Helvetica", 20)
         self.top_scrollbar = tk.Scrollbar(self.left_panel, orient=tk.VERTICAL)
         self.top_listbox = tk.Listbox(self.left_panel, yscrollcommand=self.top_scrollbar.set, font=self.big_font, exportselection=False)
-        self.middle = tk.OptionMenu(self.left_panel, self.relation_selected, *tuple(relations))
+        self.middle = tk.OptionMenu(self.left_panel, self.relation_type_selected, *tuple(relation_types))
         self.bottom_scrollbar = tk.Scrollbar(self.left_panel, orient=tk.VERTICAL)
         self.bottom_listbox = tk.Listbox(self.left_panel, yscrollcommand=self.bottom_scrollbar.set, font=self.big_font, exportselection=False)
 
@@ -29,7 +40,7 @@ class Gui:
 
         self.__style_gui_()
         self.__setup_triggers()
-        self.__add_list_data(list_data)
+        self.__init_top_entities()
         self.root.mainloop()
 
     def __style_gui_(self):
@@ -59,52 +70,50 @@ class Gui:
 
     def __setup_triggers(self):
         def update_selected_top_item(event):
-            self.top_selected = self.top_listbox.get(tk.ACTIVE)
+            self.top_selected_i = self.top_listbox.index(tk.ACTIVE)
             self.__update_bottom_listbox()
 
         def update_selected_relation(*args):
-
             self.__update_bottom_listbox()
 
         def update_selected_bottom_item(event):
-            self.bottom_selected = self.bottom_listbox.get(tk.ACTIVE)
+            self.bottom_selected_i = self.bottom_listbox.index(tk.ACTIVE)
             self.update_text_view()
 
         self.top_listbox.bind("<Double-Button-1>", update_selected_top_item)
         self.bottom_listbox.bind("<Double-Button-1>", update_selected_bottom_item)
-        self.relation_selected.trace("w", update_selected_relation)
+        self.relation_type_selected.trace("w", update_selected_relation)
         # TODO on_resize_window
         # TODO manage text longer than textbox
 
-    def __add_list_data(self, data):
-        self.data = data
+    def __init_top_entities(self):
         self.top_listbox.delete(0, tk.END)
-        list_items = list(data.keys())
-        for i in range(len(list_items)):
-            item = list_items[i]
+
+        for i in range(len(self.entities)):
+            item = self.entities[i].name
             self.top_listbox.insert(i, item)
 
     def __update_bottom_listbox(self):
         self.bottom_listbox.delete(0, tk.END)
-        bottom_items = self.list_data[self.top_selected][self.relation_selected.get()]
-        print(bottom_items)
-        for i in range(len(bottom_items)):
-            self.bottom_listbox.insert(i, bottom_items[i])
+
+        entity = self.entities[self.top_selected_i]
+        self.filtered_relations = list(filter(lambda r: r.word == self.relation_type_selected.get(), entity.relations))
+        for i in range(len(self.filtered_relations)):
+            rel = self.filtered_relations[i]
+            other_entity = rel.to_entity if rel.from_entity == entity else rel.from_entity
+            self.bottom_listbox.insert(i, other_entity.name)
 
     def update_text_view(self):
-        text = self.text_data[self.top_selected][self.bottom_selected]["text"]
-        entities = self.text_data[self.top_selected][self.bottom_selected]["entities"]
-        relations = self.text_data[self.top_selected][self.bottom_selected]["relations"]
-
+        relation = self.filtered_relations[self.bottom_selected_i]
         self.textbox.config(state=tk.NORMAL)
         self.textbox.delete(1.0, tk.END)
-        self.textbox.insert(tk.END, text)
+        self.textbox.insert(tk.END, relation.source.text)
 
         # Mark text
-        for s_i, e_i in entities:
+        for s_i, e_i in [relation.indices(Relation.FROM), relation.indices(Relation.TO)]:
             self.textbox.tag_add("entity", "1.0+" + str(s_i) + "chars", "1.0+" + str(e_i) + "chars")
 
-        for s_i, e_i in relations:
+        for s_i, e_i in [relation.indices(Relation.RELATION)]:
             self.textbox.tag_add("relation", "1.0+" + str(s_i) + "chars", "1.0+" + str(e_i) + "chars")
 
         self.textbox.tag_config("entity", background="cyan")
@@ -113,51 +122,67 @@ class Gui:
         self.textbox.config(state=tk.DISABLED)
 
 
+
 def main():
-    vowels = ["A", "E", "I", "O", "U", "Y"]
-    consonants = ["B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N ", "P", "Q", "R", "S", "T", "V", "W", "X", "Z"]
-    alphabet = (vowels + consonants)
-    alphabet.sort()
+    vowels = {"A", "E", "I", "O", "U", "Y"}
+    voiced_consonants = {"L", "M", "N", "R", "V", "W", "Z"}
+    consonants = {"B", "C", "D", "F", "G", "H", "J", "K", "P", "Q", "S", "T", "X"} | voiced_consonants
+    alphabet = vowels | consonants
+    test_entities = list(map(lambda n: Entity(n), alphabet))
 
-    test_relations = ["related", "not related"]
-    test_list_data = dict()
-    test_text_data = dict()
-    for i in range(len(alphabet)):
-        c_1 = alphabet[i]
-        test_list_data[c_1] = dict()
-        test_list_data[c_1][test_relations[0]] = list()
-        test_list_data[c_1][test_relations[1]] = list()
+    def __relation(type, c_1, c_2):
+        text = ""
+        if type == "strong":
+            e_1_is = (len(text), len(text) + len(c_1))
+            text += c_1 +" is... something to "
+            e_2_is = (len(text), len(text) + len(c_2))
+            text += c_2 + ". What was it? I can't really remember hmm... It was something about a connection between two entites, it's on the tip of my tongue. Goddamn it how come i can't remember? Oh yes i do remember, I was just lying and writing alot so this text becomes superlong, anyways the word is \""
+            r = "related"
+            r_is = (len(text), len(text) + len(r))
+            text += r + "\"."
 
-        test_text_data[c_1] = dict()
-        for j in range(len(alphabet)):
+        elif type== "weak":
+            e_1_is = (len(text), len(text) + len(c_1))
+            text += c_1 + " is "
+            r = "not really related"
+            r_is = (len(text), len(text) + len(r))
+            text += r + " to "
+            e_2_is = (len(text), len(text) + len(c_2))
+            text += c_2 + ", as one is a vowel, but the other is a voiced consonant."
+
+        else:
+            e_1_is = (len(text), len(text) + len(c_1))
+            text += c_1 + " and "
+            e_2_is = (len(text), len(text) + len(c_2))
+            text += c_2 + " are "
+            r = "not related"
+            r_is = (len(text), len(text) + len(r))
+            text += r + "."
+
+        return text, e_1_is, e_2_is, r, r_is
+
+    test_relations = list()
+    for i in range(len(test_entities)):
+        for j in range(i, len(test_entities)):
             if i != j:
-                c_2 = alphabet[j]
-                if c_1 in vowels and c_2 in vowels:
-                    curr_relation = test_relations[0]
-                    text = c_1 + " is... something to " + c_2 + ". What was it? I can't really remember hmm... It was something about a connection between two entites, it's on the tip of my tongue. Goddamn it how come i can't remember? Oh yes i do remember, I was just lying and writing alot so this text becomes superlong, anyways the word is \"related\"."
-                elif c_1 in consonants and c_2 in consonants:
-                    curr_relation = test_relations[0]
-                    text = c_1 + " is related to " + c_2 + ", as both are consonants."
+                e_1 = test_entities[i]
+                e_2 = test_entities[j]
+                e_set = {e_1.name, e_2.name}
+                if e_set.issubset(vowels) or e_set.issubset(consonants):
+                    text, e_1_is, e_2_is, r, r_is = __relation("strong", e_1.name, e_2.name)
+                    src = Source(text, "test_data")
+                    test_relations.append(Relation(src, r, *r_is).from_(e_1, *e_1_is).to_(e_2, *e_2_is))
                 else:
-                    curr_relation = test_relations[1]
-                    text = c_1 + " and " + c_2 + " are not related."
-
-                test_list_data[c_1][curr_relation].append(c_2)
-
-                relation_s = text.find(curr_relation)
-                relation_e = relation_s + len(curr_relation)
-                entity_1_s = text.find(c_1)
-                entity_1_e = entity_1_s + len(c_1)
-                entity_2_s = text.find(c_2)
-                entity_2_e = entity_2_s + len(c_2)
-
-                entities_i = [(entity_1_s, entity_1_e), (entity_2_s, entity_2_e)]
-                relations_i = [(relation_s, relation_e)]
-                value = {"text": text, "entities": entities_i, "relations":relations_i}
-                test_text_data[c_1][c_2] = value
+                    if e_set.issubset(vowels | voiced_consonants):
+                        text, e_1_is, e_2_is, r, r_is = __relation("weak", e_1.name, e_2.name)
+                        src = Source(text, "test_data")
+                        test_relations.append(Relation(src, r, *r_is).from_(e_1, *e_1_is).to_(e_2, *e_2_is))
+                    text, e_1_is, e_2_is, r, r_is = __relation("none", e_1.name, e_2.name)
+                    src = Source(text, "test_data")
+                    test_relations.append(Relation(src, r, *r_is).from_(e_1, *e_1_is).to_(e_2, *e_2_is))
 
     print ("Starting gui...")
-    gui = Gui(test_list_data, test_text_data, test_relations)
+    Gui(test_entities, test_relations)
 
 
 if __name__ == "__main__":
