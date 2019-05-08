@@ -56,10 +56,16 @@ BioRxiv
 Wikipedia
 
 
-## 5. Tasks and conferences within BioNLP
+## 5. Shared tasks and conferences within BioNLP
 ACL-BioNLP2019 Workshop and associated MEDIQA 2019 task
 https://sites.google.com/view/mediqa2019
 https://aclweb.org/aclwiki/BioNLP_Workshop
+
+BioCreative
+https://biocreative.bioinformatics.udel.edu/
+
+BioASQ
+http://www.bioasq.org/
 
 
 ## 6. Other (relevant blogs, discussion forums, etc)  
