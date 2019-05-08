@@ -60,7 +60,8 @@ def save_abstracts(abstracts, filename, file_encoding, mode, batch_size=-1):
     if mode == ABSTRACTS_SINGLE_FILE:
         abstracts_fn = filename_no_suffix + ABSTRACTS_SUFFIX
         with open(abstracts_fn, "w+", encoding=file_encoding) as abstracts_file:
-            for pmid, abstract in abstracts:
+            for pmid in abstracts:
+                abstract = normalize_text(abstracts[pmid])
                 abstracts_file.write(ABSTRACTS_FILE_PMID_LINE + str(pmid) + "\n")
                 abstracts_file.write(abstract)
 
@@ -70,7 +71,7 @@ def save_abstracts(abstracts, filename, file_encoding, mode, batch_size=-1):
         abstracts_dir = filename_no_suffix + SEPARATE_ABSTRACT_DIR
         os.makedirs(abstracts_dir, exist_ok=True)
         for pmid in abstracts:
-            abstract = abstracts[pmid]
+            abstract = normalize_text(abstracts[pmid])
             abstract_fn = abstracts_dir + str(pmid) + ABSTRACTS_SUFFIX
             with open(abstract_fn, 'w+', encoding=file_encoding) as abstract_file:
                 abstract_file.write(abstract)
@@ -99,7 +100,7 @@ def save_abstracts(abstracts, filename, file_encoding, mode, batch_size=-1):
                 b_pmid_fn = abstracts_dir + "batch_" + str(batch_nr) + BATCHED_PMID_SUFFIX
                 b_pmid_file = open(b_pmid_fn, "w+", encoding=file_encoding)
 
-            abstract = abstracts[pmid]
+            abstract = normalize_text(abstracts[pmid])
             b_abstract_file.write(ABSTRACTS_FILE_PMID_LINE + str(pmid) + "\n")
             b_abstract_file.write(abstract)
             b_pmid_file.write(pmid + "\n")
