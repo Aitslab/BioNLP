@@ -2,6 +2,8 @@ import spacy
 import neuralcoref
 import datetime
 from scrape_abstracts import get_abstracts
+from entity_relations_model import *
+import gui
 
 
 def find_prep(doc, root, depth=0):
@@ -53,6 +55,8 @@ if __name__ == '__main__':
     cnt = 0
     print("Analyzing abstracts...")
     #print(str(datetime.datetime.now()).split('.')[0])
+    entities = list()
+    relations = list()
     start_time = datetime.datetime.now()
     for abstract in abstracts:
         nsubjstring = None
@@ -108,6 +112,23 @@ if __name__ == '__main__':
                             print(nsubjstring.text, keyword.text, dobjstring.text)
                             print("Without coreferencing: ")
                             print(norigin.text, keyword.text, dorigin.text, '\n')
+
+                            e1 = Entity(nsubjstring.text)
+                            e1_i_e = len(doc[0:nsubjstring[-1].i + 1].text)
+                            e1_i_s = e1_i_e - len(nsubjstring.text)
+
+                            e2 = Entity(dobjstring.text)
+                            e2_i_e = len(doc[0:dobjstring[-1].i + 1].text)
+                            e2_i_s = e2_i_e - len(dobjstring.text)
+
+                            r_i_e = len(doc[0:keyword.i + 1].text)
+                            r_i_s = r_i_e - len(keyword.text)
+
+                            entities += [e1, e2]
+                            relation = Relation(Source(doc.text, "id=???"), keyword.text, r_i_s, r_i_e)
+                            relation.from_(e1, e1_i_s, e1_i_e).to_(e2, e2_i_s, e2_i_e)
+                            relations.append(relation)
+
                 cnt += 1
         break #  bara för att testa en enda mening
 
@@ -133,3 +154,5 @@ if __name__ == '__main__':
     nlp_time = datetime.datetime.now() - start_time
     #print(str(datetime.datetime.now()).split('.')[0])
     print(cnt, "keywords found in", nlp_time.seconds, "seconds.")
+    gui.Gui(entities, relations)
+
