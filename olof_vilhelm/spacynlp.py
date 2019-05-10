@@ -71,26 +71,20 @@ if __name__ == '__main__':
             print(token.i, token.text, token.dep_, token.head.text, token.head.pos_,
                   [child for child in token.children])
             text += token.text + " "
-        #print(doc._.coref_clusters)
-        #for cluster in doc._.coref_clusters:
-            #print(cluster.mentions)
-        #print("Abstract ", abstract, ": ", abstracts[abstract], '\n')
-        print()
+
         for chunk in doc.noun_chunks:
             if (chunk.root.dep_ == 'nsubj' or chunk.root.dep_ == 'nsubjpass') and chunk.root.head.text in keywords:
-                print("\tInteresting chunk found!")
                 nsubjstring = chunk
                 norigin = chunk
                 nsubjstring = find_prep(doc, chunk.root)
-                for i in range(len(doc._.coref_clusters)):
-                    cluster = doc._.coref_clusters[i]
-                    for mention in cluster.mentions:
-                        print("\t", mention.text)
                 for cluster in doc._.coref_clusters:
                     a = []
                     a.append(cluster.mentions)
                     for mention in a:
-                        if chunk.text == mention:
+                        mention_is = list(set(t.i for t in span) for span in mention)
+                        chunk_is = set(t.i for t in chunk)
+                        if any(chunk_is.issuperset(m) or chunk_is.issubset(m) for m in mention_is):
+                            print("replaced nsubjstring (chunk) '" + nsubjstring + "' with '" + cluster.mentions[1].text + "'")
                             nsubjstring = cluster.mentions[1]
 
                 keyword = chunk.root.head
@@ -103,8 +97,11 @@ if __name__ == '__main__':
                             b = []
                             b.append(cluster.mentions)
                             for mention in b:
-                                if chunk2.text == mention:
-                                    dobjstring = cluster.mentions[1]  # why index 1?
+                                mention_is = list(set(t.i for t in span) for span in mention)
+                                chunk2_is = set(t.i for t in chunk2)
+                                if any(chunk2_is.issuperset(m) or chunk2_is.issubset(m) for m in mention_is):
+                                    print("replaced dobjstring (chunk2) '" + dobjstring + "' with '" + cluster.mentions[1].text + "'")
+                                    dobjstring = cluster.mentions[1]
 
                         if nsubjstring is not None or dobjstring is not None:
                             print("With coreferencing:")
