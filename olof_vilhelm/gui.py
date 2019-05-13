@@ -19,7 +19,7 @@ class Gui:
             relation_types.add(relation.word)
         relation_types = list(relation_types)
 
-        self.entities = entities
+        self.entities = list(relation.from_entity for relation in relations)
         self.relations = relations
         self.filtered_relations = list()
 
