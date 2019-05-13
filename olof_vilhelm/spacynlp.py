@@ -7,6 +7,20 @@ from entity_relations_model import *
 import gui
 
 
+def gen_indices(doc, tokenlist):
+    indices = list()
+    i = 0
+    while i < len(tokenlist):
+        c_index_start = len(doc[0:tokenlist[i].i + 1].text) - len(tokenlist[i].text)
+        while i < len(tokenlist) - 1 and tokenlist[i+1].i == tokenlist[i].i + 1:
+            i += 1
+        c_index_end = len(doc[0:tokenlist[i].i + 1].text)
+        indices += [c_index_start, c_index_end]
+        i += 1
+    return tuple(indices)
+
+
+
 def find_prep(root, tokens, depth):  # unfinished
     children = root.children
     newtokens = []
@@ -60,8 +74,8 @@ if __name__ == '__main__':
     entities = list()
     relations = list()
 
-    for abstract in abstracts:
-        text = abstracts[abstract]
+    for pmid in abstracts:
+        text = abstracts[pmid]
         doc = nlp(text)
         #print(text, "\n")
         for token in doc:
@@ -104,19 +118,10 @@ if __name__ == '__main__':
                             print("{", nsubjstring, "} {",  keyword.text, "} {",  dobjstring, "}\n")
 
                         e1 = Entity(nsubjstring)
-                        e1_i_e = len(doc[0:nsubjtokenlist[-1].i + 1].text)
-                        e1_i_s = e1_i_e - len(nsubjstring)
-
                         e2 = Entity(dobjstring)
-                        e2_i_e = len(doc[0:dobjtokenlist[-1].i + 1].text)
-                        e2_i_s = e2_i_e - len(dobjstring)
-
-                        r_i_e = len(doc[0:keyword.i + 1].text)
-                        r_i_s = r_i_e - len(keyword.text)
-
                         entities += [e1, e2]
-                        relation = Relation(Source(doc.text, "id=???"), keyword.text, r_i_s, r_i_e)
-                        relation.from_(e1, e1_i_s, e1_i_e).to_(e2, e2_i_s, e2_i_e)
+                        relation = Relation(Source(doc.text, "PMID=" + pmid), keyword.text, *gen_indices(doc, keywordlist))
+                        relation.from_(e1, *gen_indices(doc, nsubjtokenlist)).to_(e2, *gen_indices(doc, dobjtokenlist))
                         relations.append(relation)
                         nsubjstring = ""
                         dobjstring = ""
