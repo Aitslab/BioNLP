@@ -100,7 +100,8 @@ if __name__ == '__main__':
                         sentencelist = list(dict.fromkeys(sentencelist)) # removes duplicates
                         """
                         if nsubjstring != "" or dobjstring != "":
-                            print(nsubjtokenlist, keywordlist, dobjtokenlist, "\n")
+                            print(nsubjtokenlist, keywordlist, dobjtokenlist)
+                            print("{", nsubjstring, "} {",  keyword.text, "} {",  dobjstring, "}\n")
 
                         e1 = Entity(nsubjstring)
                         e1_i_e = len(doc[0:nsubjtokenlist[-1].i + 1].text)
