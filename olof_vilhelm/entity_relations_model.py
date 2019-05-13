@@ -28,13 +28,11 @@ class Relation:
         if len(indices) % 2 != 0 and len(indices) < 2:
             raise ValueError("An even number of indices must be passed as argument ('start' and 'end' character indices). ")
 
-        print("Gui.__init__, indices:", indices, "len:", len(indices))
         self.source = source
         self.word = relation_word
         self.__relation_c_indices = list()
         for i in range(0, len(indices), 2):
             self.__relation_c_indices.append((indices[i], indices[i + 1]))
-        print("Gui.__init__, self.__relation_c_indices:", self.__relation_c_indices)
 
         self.from_entity = None
         self.__from_entity_c_indices = list()
@@ -50,10 +48,8 @@ class Relation:
             raise ValueError("An even number of indices must be passed as argument ('start' and 'end' character indices). ")
 
         self.from_entity = entity
-        print("Gui.from_, indices:", indices, "len:", len(indices))
         for i in range(0, len(indices), 2):
             self.__from_entity_c_indices.append((indices[i], indices[i + 1]))
-        print("Gui.from_, self.__from_entity_c_indices:", self.__from_entity_c_indices)
         self.from_entity.relations.add(self)
         return self
 
@@ -64,11 +60,9 @@ class Relation:
         if len(indices) % 2 != 0 and len(indices) < 2:
             raise ValueError("An even number of indices must be passed as argument ('start' and 'end' character indices). ")
 
-        print("Gui.to_, indices:", indices, "len:", len(indices))
         self.to_entity = entity
         for i in range(0, len(indices), 2):
             self.__to_entity_c_indices.append((indices[i], indices[i + 1]))
-        print("Gui.to_, self.__to_entity_c_indices:", self.__to_entity_c_indices)
         self.to_entity.relations.add(self)
         return self
 
