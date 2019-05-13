@@ -107,20 +107,32 @@ class Gui:
         relation = self.filtered_relations[self.bottom_selected_i]
         self.textbox.config(state=tk.NORMAL)
         self.textbox.delete(1.0, tk.END)
+        self.textbox.insert(tk.END, relation.source.identifier + "\n\n")
+        self.textbox.mark_set("abstract", tk.INSERT)
+        self.textbox.mark_gravity("abstract", tk.LEFT)
         self.textbox.insert(tk.END, relation.source.text)
 
         # Mark text
-        for s_i, e_i in [relation.indices(Relation.FROM), relation.indices(Relation.TO)]:
-            self.textbox.tag_add("entity", "1.0+" + str(s_i) + "chars", "1.0+" + str(e_i) + "chars")
+        print("entity from indices length:", len(relation.indices(Relation.FROM)))
+        for s_i, e_i in relation.indices(Relation.FROM):
+            print("\tentity_from:", s_i, e_i)
+            self.textbox.tag_add("entityfrom", "abstract+" + str(s_i) + "chars", "abstract+" + str(e_i) + "chars")
 
-        for s_i, e_i in [relation.indices(Relation.RELATION)]:
-            self.textbox.tag_add("relation", "1.0+" + str(s_i) + "chars", "1.0+" + str(e_i) + "chars")
+        print("entity TO indices length:", len(relation.indices(Relation.TO)))
+        for s_i, e_i in relation.indices(Relation.TO):
+            print("\tentity_to", s_i, e_i)
+            self.textbox.tag_add("entityto", "abstract+" + str(s_i) + "chars", "abstract+" + str(e_i) + "chars")
 
-        self.textbox.tag_config("entity", background="cyan")
-        self.textbox.tag_config("relation", background="yellow")
+        print("relation indices length:", len(relation.indices(Relation.RELATION)))
+        for s_i, e_i in relation.indices(Relation.RELATION):
+            print("\trelation:", s_i, e_i)
+            self.textbox.tag_add("relation", "abstract+" + str(s_i) + "chars", "abstract+" + str(e_i) + "chars")
+
+        self.textbox.tag_config("entityfrom", background="orange")
+        self.textbox.tag_config("entityto", background="yellow")
+        self.textbox.tag_config("relation", background="cyan")
 
         self.textbox.config(state=tk.DISABLED)
-
 
 
 def main():
