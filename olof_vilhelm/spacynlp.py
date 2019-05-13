@@ -20,8 +20,7 @@ def gen_indices(doc, tokenlist):
     return tuple(indices)
 
 
-
-def find_prep(root, tokens, depth):  # unfinished
+def find_prep(root, tokens, depth):
     children = root.children
     newtokens = []
     for child in children:
@@ -77,16 +76,19 @@ if __name__ == '__main__':
     for pmid in abstracts:
         text = abstracts[pmid]
         doc = nlp(text)
-        #print(text, "\n")
+        # print(text, "\n")
         for token in doc:
+            #print(token.text, token.dep_, token.head.text, token.pos_,
+                  #[child for child in token.children])
             if token.text in keywords:
                 actualkeycnt += 1
+
         for chunk in doc.noun_chunks:
             nsubjstring = ""
             dobjstring = ""
             keyword = chunk.root.head
             keywordlist = [chunk.root.head]
-            if (chunk.root.dep_ == 'nsubj' or chunk.root.dep_ == 'nsubjpass') and chunk.root.head.text in keywords:
+            if (chunk.root.dep_ == 'nsubj' or chunk.root.dep_ == 'nsubjpass') and keyword.text in keywords:
                 # print(text, "\n")
                 nsubjtokenlist = []
                 for i in range(len(chunk)):
@@ -94,7 +96,7 @@ if __name__ == '__main__':
                 norigin = chunk.text
                 nsubjtokenlist = find_prep(chunk.root, nsubjtokenlist, 0)
                 for chunk2 in doc.noun_chunks:
-                    if chunk2.root.dep_ == 'dobj' and chunk2.root.head.text == keyword.text:
+                    if chunk2.root.dep_ == 'dobj' and chunk2.root.head == keyword:
                         dobjtokenlist = []
                         for i in range(len(chunk2)):
                             dobjtokenlist.append(chunk2[i])
@@ -114,11 +116,11 @@ if __name__ == '__main__':
                         sentencelist = list(dict.fromkeys(sentencelist)) # removes duplicates
                         """
                         if nsubjstring != "" or dobjstring != "":
-                            print(nsubjtokenlist, keywordlist, dobjtokenlist)
-                            print("{", nsubjstring, "} {",  keyword.text, "} {",  dobjstring, "}\n")
+                            print(nsubjtokenlist, keywordlist, dobjtokenlist, "\n")
 
                         e1 = Entity(nsubjstring)
                         e2 = Entity(dobjstring)
+
                         entities += [e1, e2]
                         relation = Relation(Source(doc.text, "PMID=" + pmid), keyword.text, *gen_indices(doc, keywordlist))
                         relation.from_(e1, *gen_indices(doc, nsubjtokenlist)).to_(e2, *gen_indices(doc, dobjtokenlist))
