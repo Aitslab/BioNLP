@@ -118,6 +118,8 @@ if __name__ == '__main__':
                         relation = Relation(Source(doc.text, "id=???"), keyword.text, r_i_s, r_i_e)
                         relation.from_(e1, e1_i_s, e1_i_e).to_(e2, e2_i_s, e2_i_e)
                         relations.append(relation)
+                        nsubjstring = ""
+                        dobjstring = ""
 
                 cnt += 1
     print("seconds: ", floor((time.time()-s)))
