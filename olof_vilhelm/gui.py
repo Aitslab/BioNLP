@@ -31,7 +31,7 @@ class Gui:
         self.big_font = ("Helvetica", 20)
         self.top_scrollbar = tk.Scrollbar(self.left_panel, orient=tk.VERTICAL)
         self.top_listbox = tk.Listbox(self.left_panel, yscrollcommand=self.top_scrollbar.set, font=self.big_font, exportselection=False)
-        self.middle = tk.OptionMenu(self.left_panel, self.relation_type_selected, *tuple(relation_types))
+        self.relations_menu = tk.OptionMenu(self.left_panel, self.relation_type_selected, *tuple(relation_types))
         self.bottom_scrollbar = tk.Scrollbar(self.left_panel, orient=tk.VERTICAL)
         self.bottom_listbox = tk.Listbox(self.left_panel, yscrollcommand=self.bottom_scrollbar.set, font=self.big_font, exportselection=False)
 
@@ -48,8 +48,9 @@ class Gui:
         self.top_scrollbar.grid(row=0, column=1, sticky="nswe")
         self.top_scrollbar.config(command=self.top_listbox.yview)
 
-        self.middle.grid(row=1, sticky="nswe")
-        self.middle.config(font=self.big_font)
+        self.relations_menu.grid(row=1, sticky="nswe")
+        self.relations_menu.config(font=self.big_font)
+        self.relations_menu.config()
 
         self.bottom_listbox.grid(row=2, column=0, sticky="nswe")
         self.bottom_scrollbar.grid(row=2, column=1, sticky="nswe")
@@ -71,7 +72,7 @@ class Gui:
     def __setup_triggers(self):
         def update_selected_top_item(event):
             self.top_selected_i = self.top_listbox.index(tk.ACTIVE)
-            self.__update_bottom_listbox()
+            self.__update_relations_menu()
 
         def update_selected_relation(*args):
             self.__update_bottom_listbox()
@@ -93,6 +94,15 @@ class Gui:
             item = self.entities[i].name
             self.top_listbox.insert(i, item)
 
+    def __update_relations_menu(self):
+        relations = self.entities[self.top_selected_i].relations
+        relation_types = list(set(relation.word for relation in relations))
+        self.relation_type_selected.set(relation_types[0])
+
+        self.relations_menu['menu'].delete(0, tk.END)
+        for relation in relation_types:
+            self.relations_menu['menu'].add_command(label=relation, command=tk._setit(self.relation_type_selected, relation))
+
     def __update_bottom_listbox(self):
         self.bottom_listbox.delete(0, tk.END)
 
@@ -113,19 +123,13 @@ class Gui:
         self.textbox.insert(tk.END, relation.source.text)
 
         # Mark text
-        print("entity from indices length:", len(relation.indices(Relation.FROM)))
         for s_i, e_i in relation.indices(Relation.FROM):
-            print("\tentity_from:", s_i, e_i)
             self.textbox.tag_add("entityfrom", "abstract+" + str(s_i) + "chars", "abstract+" + str(e_i) + "chars")
 
-        print("entity TO indices length:", len(relation.indices(Relation.TO)))
         for s_i, e_i in relation.indices(Relation.TO):
-            print("\tentity_to", s_i, e_i)
             self.textbox.tag_add("entityto", "abstract+" + str(s_i) + "chars", "abstract+" + str(e_i) + "chars")
 
-        print("relation indices length:", len(relation.indices(Relation.RELATION)))
         for s_i, e_i in relation.indices(Relation.RELATION):
-            print("\trelation:", s_i, e_i)
             self.textbox.tag_add("relation", "abstract+" + str(s_i) + "chars", "abstract+" + str(e_i) + "chars")
 
         self.textbox.tag_config("entityfrom", background="orange")
@@ -153,7 +157,7 @@ def main():
             r_is = (len(text), len(text) + len(r))
             text += r + "\"."
 
-        elif type== "weak":
+        elif type == "weak":
             e_1_is = (len(text), len(text) + len(c_1))
             text += c_1 + " is "
             r = "not really related"
@@ -193,7 +197,7 @@ def main():
                     src = Source(text, "test_data")
                     test_relations.append(Relation(src, r, *r_is).from_(e_1, *e_1_is).to_(e_2, *e_2_is))
 
-    print ("Starting gui...")
+    print("Starting gui...")
     Gui(test_entities, test_relations)
 
 
