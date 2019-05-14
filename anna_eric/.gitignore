@@ -5,6 +5,7 @@ __pycache__/
 
 uniprot_sprot.xml/
 uniprot_sprot.xml
+*.dat
 *.xml
 *.xml/
 *.fst
