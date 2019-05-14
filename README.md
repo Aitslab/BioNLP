@@ -75,9 +75,11 @@ https://www.microsoft.com/developerblog/2016/09/13/training-a-classifier-for-rel
 BioStars bioinformatics forum  
 https://www.biostars.org/
 
-Link list with many resources   
+Link lists with many resources   
 https://www2.informatik.hu-berlin.de/~hakenber/links/benchmarks.html
 
 http://www.nactem.ac.uk/software.php
+
+http://www.becalm.eu/NerResources
 
 
