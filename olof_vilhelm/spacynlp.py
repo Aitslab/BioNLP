@@ -1,27 +1,43 @@
 import spacy
 import neuralcoref
-import datetime
+import time
+from math import floor
 from scrape_abstracts import get_abstracts
 from entity_relations_model import *
 import gui
 
 
-def find_prep(doc, root, depth=0):
+def gen_indices(doc, tokenlist):
+    indices = list()
+    i = 0
+    while i < len(tokenlist):
+        c_index_start = len(doc[0:tokenlist[i].i + 1].text) - len(tokenlist[i].text)
+        while i < len(tokenlist) - 1 and tokenlist[i+1].i == tokenlist[i].i + 1:
+            i += 1
+        c_index_end = len(doc[0:tokenlist[i].i + 1].text)
+        indices += [c_index_start, c_index_end]
+        i += 1
+    return tuple(indices)
+
+
+def find_prep(root, tokens, depth):
     children = root.children
-    prep_children = doc[root.i: root.i + 1]
+    newtokens = []
     for child in children:
-        print("\t", child.i, child.text, child.dep_)
-        if child.dep_ == 'compound' or child.dep_ == 'nmod' or child.dep_ == 'amod':
-            start = min (child.i,  prep_children[0].i)
-            end = max(child.i, prep_children[-1].i)
-            prep_children = doc[start: end]  # Ofärdig - här läggs nouns dubbelt
+        """
+        (child.dep_ == 'compound' or child.dep_ == 'nmod' or child.dep_ == 'amod' or child.dep_ == 'pobj'
+                or child.dep_ == 'nummod' or child.dep_ == 'punct')
+        """
+        if child.dep_ != 'prep' and depth != 0:
+            newtokens.append(child)
+            newtokens = find_prep(child, newtokens, depth + 1)
+
         if child.dep_ == 'prep':
-            #prep_children = doc[prep_children[0].i: child.i + 1]
-            child_preps = find_prep(doc, child, depth + 1)
-            start = min(child_preps[0].i, prep_children[0].i)
-            end = max(child_preps[-1].i, prep_children[-1].i)
-            prep_children = doc[start: end]  # Ofärdig - här läggs nouns dubbelt
-    return prep_children
+            newtokens.append(child)
+            newtokens = find_prep(child, newtokens, depth + 1)
+
+    tokens.extend(newtokens)
+    return tokens
 
 
 if __name__ == '__main__':
@@ -29,17 +45,18 @@ if __name__ == '__main__':
     # spacy.prefer_gpu()
     nlp = spacy.load("en_core_web_sm")
     neuralcoref.add_to_pipe(nlp)
-    filename = 'corpus/pubmed19n0651.xml'
+    filename = 'corpus/pubmed19n0195.xml'
     print("Scraping abstracts from " + filename + "...")
     unfiltered_abstracts = get_abstracts(filename)
-    keywords = {'activates', 'activate', 'activating', 'induces', 'induce', 'inducing', 'impairs', 'impair', 'impairing',
-                'inhibits', 'inhibit', 'inhibitors', 'inhibitor', 'inhibiting', 'promotes', 'promote', 'promoting',
-                'localizes', 'localize', 'localizing', 'leading', 'lead', 'leads', 'enhances', 'enhance', 'enhancing',
-                'activator', 'stabilizes', 'stabilize', 'stabilizing', 'agonist', 'increase', 'increases', 'increasing',
-                'mediates', 'mediate', 'mediator', 'executes', 'execute', 'causes', 'causing', 'cause', 'inactivate',
-                'inactivates', 'block', 'blocks', 'repress', 'represses', 'antagonist', 'reduces', 'reduce', 'reducing',
-                'disrupts', 'disrupt', 'disrupting', 'prevents', 'prevent', 'preventing', 'participates', 'contributes',
-                'participate', 'contribute', 'participating', 'contributing'}  # should contain all keywords?
+    keywords = {'activates', 'activate', 'activated', 'induces', 'induce', 'induced', 'impairs', 'impair', 'impaired',
+                'inhibits', 'inhibit', 'inhibitors', 'inhibitor', 'inhibited', 'promotes', 'promote', 'promoted',
+                'localizes', 'localized', 'localize', 'leading', 'lead', 'leads', 'enhances', 'enhance', 'enhancing',
+                'enhanced', 'activator', 'stabilizes', 'stabilize', 'stabilized', 'agonist', 'increase', 'increases',
+                'increased', 'mediates', 'mediate', 'mediator', 'executes', 'execute', 'causes', 'cause', 'inactivate',
+                'executed', 'caused', 'inactivated', 'blocked', 'repressed', 'reduced', 'disrupted', 'prevented',
+                'inactivates', 'block', 'blocks', 'repress', 'represses', 'antagonist', 'reduces', 'reduce',
+                'disrupts', 'disrupt', 'prevents', 'prevent', 'participates', 'contributes', 'contributed'
+                'participate', 'contribute', 'participated'}  # should contain all keywords?
 
     print("Filtering abstracts...")
     abstracts = dict()
@@ -49,110 +66,71 @@ if __name__ == '__main__':
             if word in keywords:
                 abstracts[pmid] = text
                 break
-    # could use lemma instead to skip all other forms of words
-
-    # large file holds 3960 mentions of keywords?, small file only 21
     cnt = 0
+    actualkeycnt = 0
+    s = time.time()
     print("Analyzing abstracts...")
-    #print(str(datetime.datetime.now()).split('.')[0])
     entities = list()
     relations = list()
-    start_time = datetime.datetime.now()
-    for abstract in abstracts:
-        nsubjstring = None
-        keyword = None
-        dobjstring = None
-        norigin = None
-        dorigin = None
-        text = abstracts[abstract] #  meningen under är för att testa så att det fungerar
-        text = 'Interleukin 1 (IL-1) is a 17 kDa protein highly conserved through evolution and is a key mediator of inflammation, fever and the acute-phase response. IL-1 has important functions in the innate immune defense against microbes, trauma and stress, and is also an effector molecule involved in tissue destruction and fibrosis. The inhibition of IL-1 action has clinical efficacy in many inflammatory diseases, such as hereditary autoinflammatory disorders, familial hereditary fever, gout, rheumatoid arthritis and type 2 diabetes mellitus (T2DM). The latter is a common metabolic condition caused by insulin resistance and pancreatic beta-cell failure, the causes of both of which have inflammatory components. IL-1 signaling has roles in beta-cell dysfunction and destruction via the NFkappaB and mitogen-activated-protein-kinase pathways, leading to endoplasmic reticulum and mitochondrial stress and eventually activating the apoptotic machinery. In addition, IL-1 acts on T-lymphocyte regulation. The modulating effect of IL-1 on the interaction between the innate and adaptive immune systems and the effects of IL-1 on the beta-cell point to this molecule being a potential interventional target in autoimmune diabetes mellitus. Genetic or pharmacological abrogation of IL-1 action reduces disease incidence in animal models of type 1 diabetes mellitus (T1DM) and clinical trials have been started to study the feasibility, safety and efficacy of IL-1 therapy in patients with T1DM. Here, we review the rationale for blocking IL-1 in patients with T1DM.'
-        doc = nlp(text)  # break down an abstract to sentences
-        print(text + "\n")
-        for i in range(len(doc)):
-            token = doc[i]
-            #tc_i_e = len(doc[0:i + 1].text)
-            #tc_i_s = tc_i_e - len(token.text)
-            print(token.i, token.text, token.dep_, token.head.text, token.head.pos_,
-                  [child for child in token.children])
-            text += token.text + " "
+
+    for pmid in abstracts:
+        text = abstracts[pmid]
+        doc = nlp(text)
+        # print(text, "\n")
+        for token in doc:
+            #print(token.text, token.dep_, token.head.text, token.pos_,
+                  #[child for child in token.children])
+            if token.text in keywords:
+                actualkeycnt += 1
 
         for chunk in doc.noun_chunks:
-            if (chunk.root.dep_ == 'nsubj' or chunk.root.dep_ == 'nsubjpass') and chunk.root.head.text in keywords:
-                nsubjstring = chunk
-                norigin = chunk
-                nsubjstring = find_prep(doc, chunk.root)
-                for cluster in doc._.coref_clusters:
-                    a = []
-                    a.append(cluster.mentions)
-                    for mention in a:
-                        mention_is = list(set(t.i for t in span) for span in mention)
-                        chunk_is = set(t.i for t in chunk)
-                        if any(chunk_is.issuperset(m) or chunk_is.issubset(m) for m in mention_is):
-                            print("replaced nsubjstring (chunk) '" + nsubjstring + "' with '" + cluster.mentions[1].text + "'")
-                            nsubjstring = cluster.mentions[1]
-
-                keyword = chunk.root.head
+            nsubjstring = ""
+            dobjstring = ""
+            keyword = chunk.root.head
+            keywordlist = [chunk.root.head]
+            if (chunk.root.dep_ == 'nsubj' or chunk.root.dep_ == 'nsubjpass') and keyword.text in keywords:
+                # print(text, "\n")
+                nsubjtokenlist = []
+                for i in range(len(chunk)):
+                    nsubjtokenlist.append(chunk[i])
+                norigin = chunk.text
+                nsubjtokenlist = find_prep(chunk.root, nsubjtokenlist, 0)
                 for chunk2 in doc.noun_chunks:
                     if chunk2.root.dep_ == 'dobj' and chunk2.root.head == keyword:
-                        dobjstring = chunk2
-                        dorigin = chunk2
-                        dobjstring = find_prep(doc, chunk2.root)
-                        for cluster in doc._.coref_clusters:
-                            b = []
-                            b.append(cluster.mentions)
-                            for mention in b:
-                                mention_is = list(set(t.i for t in span) for span in mention)
-                                chunk2_is = set(t.i for t in chunk2)
-                                if any(chunk2_is.issuperset(m) or chunk2_is.issubset(m) for m in mention_is):
-                                    print("replaced dobjstring (chunk2) '" + dobjstring + "' with '" + cluster.mentions[1].text + "'")
-                                    dobjstring = cluster.mentions[1]
+                        dobjtokenlist = []
+                        for i in range(len(chunk2)):
+                            dobjtokenlist.append(chunk2[i])
+                        dobjtokenlist = find_prep(chunk2.root, dobjtokenlist, 0)
+                        nsubjtokenlist = sorted(nsubjtokenlist, key=lambda tok: tok.i)
+                        for token in nsubjtokenlist:
+                            nsubjstring += token.text + " "
 
-                        if nsubjstring is not None or dobjstring is not None:
-                            print("With coreferencing:")
-                            print(nsubjstring.text, keyword.text, dobjstring.text)
-                            print("Without coreferencing: ")
-                            print(norigin.text, keyword.text, dorigin.text, '\n')
+                        dobjtokenlist = sorted(dobjtokenlist, key=lambda tok: tok.i)
+                        for token in dobjtokenlist:
+                            dobjstring += token.text + " "
 
-                            e1 = Entity(nsubjstring.text)
-                            e1_i_e = len(doc[0:nsubjstring[-1].i + 1].text)
-                            e1_i_s = e1_i_e - len(nsubjstring.text)
+                        """
+                        sentencelist = nsubjtokenlist
+                        sentencelist.extend(keywordlist)
+                        sentencelist.extend(dobjtokenlist)
+                        sentencelist = list(dict.fromkeys(sentencelist)) # removes duplicates
+                        """
+                        if nsubjstring != "" or dobjstring != "":
+                            print(nsubjtokenlist, keywordlist, dobjtokenlist, "\n")
 
-                            e2 = Entity(dobjstring.text)
-                            e2_i_e = len(doc[0:dobjstring[-1].i + 1].text)
-                            e2_i_s = e2_i_e - len(dobjstring.text)
+                        e1 = Entity(nsubjstring)
+                        e2 = Entity(dobjstring)
 
-                            r_i_e = len(doc[0:keyword.i + 1].text)
-                            r_i_s = r_i_e - len(keyword.text)
-
-                            entities += [e1, e2]
-                            relation = Relation(Source(doc.text, "id=???"), keyword.text, r_i_s, r_i_e)
-                            relation.from_(e1, e1_i_s, e1_i_e).to_(e2, e2_i_s, e2_i_e)
-                            relations.append(relation)
+                        entities += [e1, e2]
+                        relation = Relation(Source(doc.text, "PMID=" + pmid), keyword.text, *gen_indices(doc, keywordlist))
+                        relation.from_(e1, *gen_indices(doc, nsubjtokenlist)).to_(e2, *gen_indices(doc, dobjtokenlist))
+                        relations.append(relation)
+                        nsubjstring = ""
+                        dobjstring = ""
 
                 cnt += 1
-        break #  bara för att testa en enda mening
-
-        """
-        # chunking strategy - take one sentence at a time, chunk, and match nsubj and dobj with the keyword
-        for s in doc.sents:
-            sent = nlp(s.text)  # break down a sentence into deprels, POS, NEr etc
-            nsubjstring = ""
-            keyword = ""
-            dobjstring = ""
-            for chunk in sent.noun_chunks:
-                if chunk.root.dep_ == 'nsubj' and chunk.root.head.text in keywords:
-                    nsubjstring = chunk.text
-                    keyword = chunk.root.head.text
-                    cnt += 1
-                if chunk.root.dep_ == 'dobj' and chunk.root.head.text in keywords:
-                    dobjstring = chunk.text
-                    keyword = chunk.root.head.text
-
-            if nsubjstring != "" and dobjstring != "":
-                print(nsubjstring, keyword, dobjstring)
-        """
-    nlp_time = datetime.datetime.now() - start_time
-    #print(str(datetime.datetime.now()).split('.')[0])
-    print(cnt, "keywords found in", nlp_time.seconds, "seconds.")
+    print("seconds: ", floor((time.time()-s)))
+    print("keywords with nsubj found: ", cnt)
+    print("Abstracts with keywords in them: ", len(abstracts))
+    print("actual keywords found: ", actualkeycnt)
     gui.Gui(entities, relations)
-

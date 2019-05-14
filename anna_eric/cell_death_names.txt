@@ -1,29 +1,70 @@
-cell death
 apoptosis
-necrosis
-necroptosis
-reduced viability
-cytotoxicity
-mitochondrial outer membrane permeabilization
-MOMP
-mitochondrial disruption
-cytochrome c release
-caspase activation
-mitochondria-mediated apoptosis
-Lysosome related terms: lysosome
-lysosomal leakage
-lysosomal disruption
-lysosomal permeabilization
-lysosomal membrane permeabilization
-LMP\ndisrupt lysosome function
-lysosomal dysfunction
-lysosome leakage
-lysosome disruption
 lysosome-dependent cell death
-lysosomal cell death
-macroautophagy
-autophagy
-lysosome-mediated apoptosis
+Exposure of Phosphatidylserine
+necroptosis
+Lower cell number
+Parthanatos
+Neuronal death
+MOMP
+lysosome leakage
+lysosomal dysfunction
+Ferroptosis
+Cell death
+Apoptosis
+Reduced viability
+caspase activation
+Lower viability
 lysosomal function
+Reduced cell survival
+Anoikis
+Apoptotic
+Reduced cell number
+lysosome-mediated apoptosis
+Necrotic
 lysosomal membrane
+Cytochrome c release
+Cell demise
+Neuron death
+NETosis
+mitochondria-mediated apoptosis
+autophagy
+Cellular demise
+Mitochondrial outer membrane permeabilization, MOMP
+necrosis
+DNA laddering
+Cornification
+Necrosis
+Lysosome related terms: lysosome
+Cell killing
+Autolysis
+Lysosomal membrane permeabilization, LMP
+lysosomal leakage
+LMP\ndisrupt lysosome function
+lysosomal permeabilization
+Toxic
+Pyroptosis
+mitochondrial disruption
+Decreased cell survival
+Reduced cell count
+Decrease in cell survival
+macroautophagy
+Cellular killing
+cytochrome c release
+lysosomal membrane permeabilization
+cell death
+Decrease in viability
+Necroptosis
+Lower cell survival
+reduced viability
+PARP cleavage
+lysosome disruption
 lysosomal enzyme
+Phosphatidylserine exposure
+Cellular death
+lysosomal cell death
+cytotoxicity
+Oncosis
+Release of cytochrome c
+Lower cell count
+mitochondrial outer membrane permeabilization
+lysosomal disruption
