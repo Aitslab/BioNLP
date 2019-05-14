@@ -51,6 +51,8 @@ Pubmed abstracts
 
 Pubmed Central full-length articles
 
+Europe PMC
+
 BioRxiv
 
 Wikipedia
