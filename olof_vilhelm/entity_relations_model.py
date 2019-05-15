@@ -1,3 +1,40 @@
+class EntitySet:
+    def __init__(self):
+        self.__entities = list()
+
+    def list(self):
+        return self.__entities
+
+    def add(self, other):
+        if isinstance(other, EntitySet):
+            self.add(oe for oe in other.__entities)
+        elif isinstance(other, Entity):
+            if not any(e == other for e in self.__entities):
+                self.__entities.append(other)
+        else:
+            raise ValueError("Argument 'other' must be of type", type(Entity), "or", type(EntitySet))
+
+        return self
+
+    def append(self, other):
+        return self.add(other)
+
+    def __add__(self, other):
+        return self.add(other)
+
+    def __iadd__(self, other):
+        return self.add(other)
+
+    def __or__(self, other):
+        return self.add(other)
+
+    def __ior__(self, other):
+        return self.add(other)
+
+
+
+
+
 class Entity:
 
     def __init__(self, name: str, ):
