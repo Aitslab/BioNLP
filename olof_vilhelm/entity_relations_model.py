@@ -6,13 +6,20 @@ class EntitySet:
         return self.__entities
 
     def add(self, other):
-        if isinstance(other, EntitySet):
-            self.add(oe for oe in other.__entities)
-        elif isinstance(other, Entity):
+        if isinstance(other, Entity):
             if not any(e == other for e in self.__entities):
                 self.__entities.append(other)
+        elif isinstance(other, EntitySet):
+            for oe in other.__entities:
+                self.add(oe)
         else:
-            raise ValueError("Argument 'other' must be of type", type(Entity), "or", type(EntitySet))
+            try:
+                _ = iter(other)
+                if all(isinstance(oe, Entity) for oe in other):
+                    for oe in other:
+                        self.add(oe)
+            except TypeError:
+                raise TypeError("Argument 'other' must be of type " + str(type(Entity)) + ",", type(EntitySet), "or some Iterable with", type(Entity), "objects in it.")
 
         return self
 
@@ -32,14 +39,11 @@ class EntitySet:
         return self.add(other)
 
 
-
-
-
 class Entity:
 
     def __init__(self, name: str, ):
         if not isinstance(name, str):
-            raise TypeError("Entity name has to be a string.")
+            raise TypeError("Argument 'name' must be a string.")
 
         self.name = name
         self.relations = set()
@@ -51,6 +55,12 @@ class Entity:
                 other.relation = self.relations
                 return True
         return False
+
+    def __lt__(self, other):
+        if isinstance(other, Entity):
+            return self.name < other.name
+        else:
+            raise TypeError("Argument 'other' must be of type", type(Entity))
 
 
 class Relation:
@@ -79,7 +89,7 @@ class Relation:
 
     def from_(self, entity, *indices: int):
         if not isinstance(entity, Entity):
-            raise ValueError("Argument 'entity' must be of type", type(Entity))
+            raise TypeError("Argument 'entity' must be of type", type(Entity))
 
         if len(indices) % 2 != 0 and len(indices) < 2:
             raise ValueError("An even number of indices must be passed as argument ('start' and 'end' character indices). ")
@@ -92,7 +102,7 @@ class Relation:
 
     def to_(self, entity, *indices: int):
         if not isinstance(entity, Entity):
-            raise ValueError("Argument 'entity' must be of type", type(Entity))
+            raise TypeError("Argument 'entity' must be of type", type(Entity))
 
         if len(indices) % 2 != 0 and len(indices) < 2:
             raise ValueError("An even number of indices must be passed as argument ('start' and 'end' character indices). ")
