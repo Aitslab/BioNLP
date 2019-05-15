@@ -3,8 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+uniprot_less.txt
 uniprot_sprot.xml/
 uniprot_sprot.xml
+*.dat
 *.xml
 *.xml/
 *.fst

@@ -4,43 +4,52 @@ import copy
 from RelationExtractorModel import RelationExtractorModel as REM
 import random
 import spacy
+import scispacy
 
 
 def main():
     inpts = parse_training_set('trainingFiles/BioInfer_corpus_1.2.0b.binarised.xml')
+    nlp = spacy.load("en_core_sci_md")
 
     # build the features
     features = []
     targets = []
+    print("Building features...")
     for inpt in inpts:
-        #  print(inpt)
-        interaction_list = inpt["interactions"]
-
         #  building features with interaction
-        i = 0
-        for interaction in interaction_list:
-            try:
-                ft = build_features(inpt, inpt["entities"][interaction[0]], inpt["entities"][interaction[1]])
-            except ValueError:
-                continue
-            features.append(ft)
-            targets.append(inpt['predicates'][i][2])
-            i += 1
 
         entity_list = inpt["entities"]
         clean_entity_list = [x for x in entity_list if x is not None]
-        if len(clean_entity_list) > 1:
-            index1 = random.randint(0, len(clean_entity_list)-1)
+        interaction_list = inpt["interactions"]
+
+        used = list()
+        i = 0
+        for interaction in interaction_list:
+            try:
+                ft = build_features(inpt, inpt["entities"][interaction[0]], inpt["entities"][interaction[1]], nlp)
+
+                features.append(ft)
+                targets.append(inpt['predicates'][i][1])  # inpt['predicates'][i][j] j = -> POS/NEG, etc.
+                i += 1
+            except ValueError:
+                i += 1
+                continue
+
+            index1 = random.randint(0, len(clean_entity_list) - 1)
             entity = clean_entity_list[index1]
-            number = list(range(0, index1)) + list(range(index1+1, len(clean_entity_list)))
+            number = list(range(0, index1)) + list(range(index1 + 1, len(clean_entity_list)))
             entity2 = clean_entity_list[random.choice(number)]
-            if not (entity is None or entity2 is None or entity == entity2 or [entity_list.index(entity), entity_list.index(entity)] in interaction_list):
+
+            if not ([entity_list.index(entity), entity_list.index(entity2)] in interaction_list or [entity_list.index(entity), entity_list.index(entity2)] in used):
                 try:
-                    ft2 = build_features(inpt, entity, entity2)
-                    features.append(ft2)
-                    targets.append('no_interaction')
+                    ft2 = build_features(inpt, entity, entity2, nlp)
                 except ValueError:
-                    pass
+                    continue
+                features.append(ft2)
+                targets.append('no_interaction')
+                used.append([entity_list.index(entity), entity_list.index(entity2)])
+
+    print("Features Built!")
 
     rem = REM()
 
@@ -49,51 +58,152 @@ def main():
     train_targ = sk[2]
     test_feat = sk[1]
     test_targ = sk[3]
-    print(train_feat[0])
-    print(train_targ)
+    # print(train_feat[0])
+    print(test_targ)
     rem.train(train_feat, train_targ)
-    print(rem.predict(test_feat[0]))
+    predict = ""
+    for i in range(1000):
+        predict = predict + str(rem.predict(test_feat[i]))
+        predict = predict + ", "
+    print(predict)
     print("f1 = " + str(100*rem.sklearn_test(test_feat, test_targ)) + '%')
 
 
-def build_features(inpt, entity, entity2):
-    tokens = copy.copy(inpt["tokens"])
+def build_features(inpt, entity, entity2, nlp):
+    bad_tokens = copy.deepcopy(inpt['tokens'])
 
     if entity[0] < entity2[0]:
-        tokens = join_tokens(tokens, entity, "ENTITY1")
-        tokens = join_tokens(tokens, entity2, "ENTITY2")
+        tokens = join_tokens(bad_tokens, entity, "entity1")
+        tokens = join_tokens(tokens, entity2, "entity2")
     else:
-        tokens = join_tokens(tokens, entity, "ENTITY2")
-        tokens = join_tokens(tokens, entity2, "ENTITY1")
+        tokens = join_tokens(bad_tokens, entity2, "entity1")
+        tokens = join_tokens(tokens, entity, "entity2")
+    # token1 = build_token(bad_tokens, entity)
+    # token2 = build_token(bad_tokens, entity2)
 
-    sentence = " ".join(tokens)
-    # pos = pos_tag(sentence)
-    # print(pos)
-    tokens = tt.tokenize(sentence)
+    sentence = " ".join(tt.tokenize(" ".join(tokens)))
+    doc = nlp(sentence)
+
+    tokens = list()
+    pos = list()
+    tag = list()
+    dep = list()
+    for token in doc:
+        tokens.append(token.text)
+        pos.append(token.pos_)
+        tag.append(token.tag_)
+        dep.append(token.dep_)
+
+    # if len(tokens)-len(pos) != 0:
+    #     print(pos)
+    #     print(tokens)
+    #     raise ValueError
 
     index1 = tokens.index("entity1")
     index2 = tokens.index("entity2")
 
-    pre1 = build_gram(2, -1, tokens, index1)
-    suf1 = build_gram(5, 1, tokens, index1)
-    pre2 = build_gram(5, -1, tokens, index2)
-    suf2 = build_gram(2, 1, tokens, index2)
+    window_size1 = 1
+    window_size2 = 3
 
-    features = {'prefix1-m1': pre1[0],
-                'prefix2-m1': pre1[1],
-                'suffix1-m1': suf1[0],
-                'suffix2-m1': suf1[1],
-                'suffix3-m1': suf1[2],
-                'suffix4-m1': suf1[3],
-                'suffix5-m1': suf1[4],
+    pre1 = build_gram(window_size1, -1, tokens, index1)
+    p_pos1 = build_gram(window_size1, -1, pos, index1)
+    p_tag1 = build_gram(window_size1, -1, tag, index1)
+    p_dep1 = build_gram(window_size1, -1, dep, index1)
 
-                'suffix1-m2': suf2[0],
-                'suffix2-m2': suf2[1],
-                'prefix1-m2': pre2[0],
-                'prefix2-m2': pre2[1],
-                'prefix3-m2': pre2[2],
-                'prefix4-m2': pre2[3],
-                'prefix5-m2': pre2[4],
+    suf1 = build_gram(window_size2, 1, tokens, index1)
+    s_pos1 = build_gram(window_size2, 1, pos, index1)
+    s_tag1 = build_gram(window_size2, 1, tag, index1)
+    s_dep1 = build_gram(window_size2, 1, dep, index1)
+
+    pre2 = build_gram(window_size2, -1, tokens, index2)
+    p_pos2 = build_gram(window_size2, -1, pos, index2)
+    p_tag2 = build_gram(window_size2, -1, tag, index2)
+    p_dep2 = build_gram(window_size2, -1, dep, index2)
+
+    suf2 = build_gram(window_size1, 1, tokens, index2)
+    s_pos2 = build_gram(window_size1, 1, pos, index2)
+    s_tag2 = build_gram(window_size1, 1, tag, index2)
+    s_dep2 = build_gram(window_size1, 1, dep, index2)
+
+    features = {
+                # 'prefix1-m1': pre1[0],
+                # 'prefix2-m1': pre1[1],
+                #
+                # 'suffix1-m1': suf1[0],
+                # 'suffix2-m1': suf1[1],
+                # 'suffix3-m1': suf1[2],
+                # 'suffix4-m1': suf1[3],
+                # 'suffix5-m1': suf1[4],
+
+
+                'p_pos1-m1': p_pos1[0],
+                # 'p_pos2-m1': p_pos1[1],
+
+                's_pos1-m1': s_pos1[0],
+                's_pos2-m1': s_pos1[1],
+                's_pos3-m1': s_pos1[2],
+                # 's_pos4-m1': s_pos1[3],
+                # 's_pos5-m1': s_pos1[4],
+
+
+                'p_tag1-m1': p_tag1[0],
+                # 'p_tag2-m1': p_tag1[1],
+
+                's_tag1-m1': s_tag1[0],
+                's_tag2-m1': s_tag1[1],
+                's_tag3-m1': s_tag1[2],
+                # 's_tag4-m1': s_tag1[3],
+                # 's_tag5-m1': s_tag1[4],
+
+
+                'p_dep1-m1': p_dep1[0],
+                # 'p_dep2-m1': p_dep1[1],
+
+                's_dep1-m1': s_dep1[0],
+                's_dep2-m1': s_dep1[1],
+                's_dep3-m1': s_dep1[2],
+                # 's_dep4-m1': s_dep1[3],
+                # 's_dep5-m1': s_dep1[4],
+
+
+                # 'prefix1-m2': pre2[0],
+                # 'prefix2-m2': pre2[1],
+                # 'prefix3-m2': pre2[2],
+                # 'prefix4-m2': pre2[3],
+                # 'prefix5-m2': pre2[4],
+                #
+                # 'suffix1-m2': suf2[0],
+                # 'suffix2-m2': suf2[1],
+
+
+                'p_pos1-m2': p_pos2[0],
+                'p_pos2-m2': p_pos2[1],
+                'p_pos3-m2': p_pos2[2],
+                # 'p_pos4-m2': p_pos2[3],
+                # 'p_pos5-m2': p_pos2[4],
+
+                's_pos1-m2': s_pos2[0],
+                # 's_pos2-m2': s_pos2[1],
+
+
+                'p_tag1-m2': p_tag2[0],
+                'p_tag2-m2': p_tag2[1],
+                'p_tag3-m2': p_tag2[2],
+                # 'p_tag4-m2': p_tag2[3],
+                # 'p_tag5-m2': p_tag2[4],
+
+                's_tag1-m2': s_tag2[0],
+                # 's_tag2-m2': s_tag2[1],
+
+
+                'p_dep1-m2': p_dep2[0],
+                'p_dep2-m2': p_dep2[1],
+                'p_dep3-m2': p_dep2[2],
+                # 'p_dep4-m2': p_dep2[3],
+                # 'p_dep5-m2': p_dep2[4],
+
+                's_dep1-m2': s_dep2[0],
+                # 's_dep2-m2': s_dep2[1],
 
                 'distance': index2-index1
                 }
@@ -121,6 +231,7 @@ def build_gram(size, direction, tokens, index):
 
 
 def join_tokens(tokens, entity, string):
+    # tokens[entity[0]:entity[len(entity) - 1] + 1] = [''.join(tokens[entity[0]:entity[len(entity) - 1] + 1])]
     tokens[entity[0]:entity[len(entity) - 1] + 1] = [string]
     return tokens
 
@@ -129,9 +240,7 @@ def build_token(tokens, entity):
     return ''.join(tokens[entity[0]:entity[len(entity) - 1] + 1])
 
 
-def pos_tag(text):
-    # spacy.load("sciSpacy/en_core_sci_md-0.2.0")
-    nlp = spacy.load("en")
+def pos_tag(text, nlp):
     doc = nlp(text)
     return [i for i in doc]
 
