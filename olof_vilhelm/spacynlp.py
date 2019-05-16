@@ -70,7 +70,7 @@ if __name__ == '__main__':
     actualkeycnt = 0
     s = time.time()
     print("Analyzing abstracts...")
-    entities = list()
+    entities = EntitySet()
     relations = list()
 
     for pmid in abstracts:
@@ -133,4 +133,4 @@ if __name__ == '__main__':
     print("keywords with nsubj found: ", cnt)
     print("Abstracts with keywords in them: ", len(abstracts))
     print("actual keywords found: ", actualkeycnt)
-    gui.Gui(entities, relations)
+    gui.Gui(sorted(entities.list()), relations)
