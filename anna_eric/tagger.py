@@ -8,8 +8,12 @@ import os.path
 from docria.algorithm import group_by_span, dominant_right_span, dominant_right
 from docria.printout import options
 from docria.storage import DocumentIO
+from nltk.corpus import stopwords
+
 
 set_large_screen()
+stop_w = set()
+[stop_w.add(t) for t in stopwords.words('english')]
 
 def connect_jvm(port):
     from py4j.java_gateway import GatewayParameters, JavaGateway
@@ -41,6 +45,15 @@ def create_doc(id, text, app, i, i2):
     doc = MsgpackCodec.decode(search_binary_doc)
     return doc
 
+def filter_away_nodes(d):
+    rm_nodes = []
+    for node in d['protmatches']:
+        #If node is a stopword or number or length less than 2
+        if len(str(node["text"])) < 2 or re.match( "^[0-9-]+$", str(node["text"])) or str(node["text"]) in stop_w:
+            rm_nodes.append(node)
+    [t.detach() for t in rm_nodes]
+    return d
+
 #Taggs the abstracts in abstracts_genetag
 def file_tagger(app, indx, indx2):
     # Add the abstracts[key = PMID] = Abstract Text
@@ -52,6 +65,8 @@ def file_tagger(app, indx, indx2):
     out = []; dr = []
     for key in abstracts:
         dr.append(create_doc(key, abstracts[key], app, indx, indx2))
+    for d in dr:
+        d = filter_away_nodes(d)
 
     # Print one file per 50 000 abstracts
     i = 0; j = 0
@@ -61,14 +76,14 @@ def file_tagger(app, indx, indx2):
                 dw.write(dr[i])
                 i += 1
         j += 1
-
     return len(dr)
 
 
 # Tags a given string, s, and prints matches and returns new string, s_out
 def text_tagger(s, app, indx, indx2):
 
-    doc = create_doc('', s, app, indx, indx2)
+    doc = filter_away_nodes(create_doc('id', s, app, indx, indx2))
+
 
     tuls = []
     for term in doc["protmatches"]:
@@ -96,7 +111,7 @@ def text_tagger(s, app, indx, indx2):
 
 #A tagger which prints to genetag in eval format
 def score_tagger(c):
-    p = 'protein_name/protein_names_uniprot'
+    p = 'protein_name/protein_names_uniprot(2)'
 
     (app, indx, indx2) = setup_java(p, c)
 
@@ -108,7 +123,7 @@ def score_tagger(c):
     out = []
 
     for key in d:
-        doc = create_doc(key, d[key], app, indx, indx2)
+        doc = filter_away_nodes(create_doc(key, d[key], app, indx, indx2))
         tuls = []
 
         for term in doc["protmatches"]:
@@ -134,10 +149,11 @@ if run == 'file':
     start = time.time()
     l = file_tagger(app, indx, indx2)
     end = time.time()
-    print('total time: {} s\n, nbr of abstracts: {}\n time per abstract: {} s'.format(str(end-start), l, str((end-start)/l)))
+    print('total time: {} s\nnbr of abstracts: {}\ntime per abstract: {} s'.format(str(end-start), l, str((end-start)/l)))
 
 elif run == 'text':
-    text = "apoptosis. The constraints of Cr10HGO, 110 kDa antigen, and the effects of additional proteins on oligoribonucleotide synthesis by the 63-kDa gene 4 protein have been examined using templates of defined sequence. cell death is caused by cells dying."
+    #text = 'Improvement of nursing instruction to be given at the time of discharge from the ward for premature infants'
+    text = "the apoptosis the. The constraints of Cr10HGO, 110 kDa antigen, and the effects of additional proteins on oligoribonucleotide synthesis by the 63-kDa gene 4 protein have been examined using templates of defined sequence. cell death is caused by cells dying."
     s = text_tagger(text, app, indx, indx2)
     matches = "{} \n\n\033[43m{}\033[m\n\033[45m{}\033[m".format(s, 'PROTEIN', 'CELL DEATH')
     print(matches)
