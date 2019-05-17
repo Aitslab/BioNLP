@@ -1,13 +1,25 @@
 class EntitySet:
-    def __init__(self):
+    def __init__(self, entities=None):
         self.__entities = list()
+        if entities is not None:
+            try:
+                _ = iter(entities)
+                self.add(entities)
+            except TypeError:
+                raise TypeError("Argument 'entities' must be some iterable with", type(Entity), "objects in it.")
 
     def list(self):
         return self.__entities
 
     def add(self, other):
         if isinstance(other, Entity):
-            if not any(e == other for e in self.__entities):
+            combined_relation = False
+            for e in self.__entities:
+                if e == other:
+                    e.combine_relations(other)
+                    combined_relation = True
+
+            if not combined_relation:
                 self.__entities.append(other)
         elif isinstance(other, EntitySet):
             for oe in other.__entities:
@@ -18,6 +30,8 @@ class EntitySet:
                 if all(isinstance(oe, Entity) for oe in other):
                     for oe in other:
                         self.add(oe)
+                else:
+                    raise TypeError("Argument 'entities' must be some iterable with", type(Entity), "objects in it.")
             except TypeError:
                 raise TypeError("Argument 'other' must be of type " + str(type(Entity)) + ",", type(EntitySet), "or some Iterable with", type(Entity), "objects in it.")
 
@@ -48,11 +62,14 @@ class Entity:
         self.name = name
         self.relations = set()
 
+    def combine_relations(self, other):
+        if self == other:
+            self.relations |= other.relations
+            other.relation = self.relations
+
     def __eq__(self, other):
         if isinstance(other, Entity):
             if self.name == other.name:
-                self.relations |= other.relations
-                other.relation = self.relations
                 return True
         return False
 
