@@ -8,6 +8,7 @@ import copy
 import random
 import numpy as np
 import os
+
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # export TF_CPP_MIN_LOG_LEVEL=2
 import tensorflow as tf
 import keras
@@ -18,19 +19,20 @@ def main():
         print('Default GPU Device: {}'.format(tf.test.gpu_device_name()))
     else:
         print("Please install GPU version of TF")
-        
+
     inpts = parse_training_set('../trainingFiles/BioInfer_corpus_1.2.0b.binarised.xml')
     nlp = spacy.load("en_core_sci_md")
 
     print("Building features...")
     training_sentences, training_targets = build_sentences_and_targets(inpts, nlp)
-    X_neg, y_neg = build_negatives(round(2*len(training_sentences)), inpts, nlp)
+    X_neg, y_neg = build_negatives(round(2 * len(training_sentences)), inpts, nlp)
     training_sentences = training_sentences + X_neg
     training_targets = training_targets + y_neg
     print("Features: " + str(training_sentences))
     print("Targets: " + str(training_targets))
 
-    training_sentences, test_sentences, training_targets, test_targets = REM.split_data(training_sentences, training_targets, 0.2)
+    training_sentences, test_sentences, training_targets, test_targets = REM.split_data(training_sentences,
+                                                                                        training_targets, 0.15)
 
     # (x_trainn, y_trainn), (x_testt, y_testt) = reuters.load_data(test_split=0.2)
     #
@@ -58,8 +60,8 @@ def main():
 
     # print(X)
     # print(X[0])
-    print(X.shape[1])
-    print(y)
+    # print(X.shape[1])
+    # print(y)
 
     print('\n')
     model = kms.build_model(X.shape[1], y.shape[1])

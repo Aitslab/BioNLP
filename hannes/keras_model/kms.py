@@ -2,6 +2,7 @@ from keras.models import Sequential
 from keras import layers
 from keras.preprocessing.text import one_hot
 from sklearn.feature_extraction.text import CountVectorizer
+from keras.optimizers import Adam
 
 
 def build_model(feature_shape, target_shape):  # add embeddings and attention layer?
@@ -10,7 +11,8 @@ def build_model(feature_shape, target_shape):  # add embeddings and attention la
     model.add(layers.Dense(100, activation='softmax'))
     model.add(layers.Dense(target_shape, activation='sigmoid'))
 
-    model.compile(loss='mean_squared_error', optimizer='Adam', metrics=['accuracy'])
+    opt = Adam(lr=.0001)
+    model.compile(loss='mean_squared_error', optimizer='AdaDelta', metrics=['accuracy'])
     model.summary()
     return model
 
