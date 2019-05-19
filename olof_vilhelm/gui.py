@@ -12,7 +12,9 @@ class Gui:
         self.root = tk.Tk()
         self.root.title("Gui")
         self.root.geometry("1500x1100")
+        #self.container = tk.PanedWindow(orient=tk.HORIZONTAL)
         self.left_panel = tk.Frame(self.root)
+        #self.left_panel = tk.Frame(self.container)
 
         relation_types = set()
         for relation in relations:
@@ -28,7 +30,7 @@ class Gui:
         self.relation_type_selected.set(relation_types[0])
         self.bottom_selected_i = -1
 
-        self.big_font = ("Helvetica", 20)
+        self.big_font = ("Helvetica", 18)
         self.top_scrollbar = tk.Scrollbar(self.left_panel, orient=tk.VERTICAL)
         self.top_listbox = tk.Listbox(self.left_panel, yscrollcommand=self.top_scrollbar.set, font=self.big_font, exportselection=False)
         self.relations_menu = tk.OptionMenu(self.left_panel, self.relation_type_selected, *tuple(relation_types))
@@ -36,6 +38,7 @@ class Gui:
         self.bottom_listbox = tk.Listbox(self.left_panel, yscrollcommand=self.bottom_scrollbar.set, font=self.big_font, exportselection=False)
 
         self.textbox = tk.Text(self.root, font=self.big_font)
+        #self.textbox = tk.Text(self.container, font=self.big_font)
         self.textbox.insert(tk.END, "The protein interaction text will appear here")
 
         self.__style_gui_()
@@ -48,7 +51,7 @@ class Gui:
         self.top_scrollbar.grid(row=0, column=1, sticky="nswe")
         self.top_scrollbar.config(command=self.top_listbox.yview)
 
-        self.relations_menu.grid(row=1, sticky="nswe")
+        self.relations_menu.grid(row=1, sticky="nswe", pady=(10, 10))
         self.relations_menu.config(font=self.big_font)
         self.relations_menu.config()
 
@@ -58,32 +61,39 @@ class Gui:
 
         self.left_panel.grid(row=0, column=0, sticky="nswe")
         self.left_panel.grid_rowconfigure(0, weight=2, uniform="left_panel")
-        self.left_panel.grid_rowconfigure(1, weight=1, uniform="left_panel")
+        #self.left_panel.grid_rowconfigure(1, weight=1, uniform="left_panel")
         self.left_panel.grid_rowconfigure(2, weight=2, uniform="left_panel")
         self.left_panel.grid_columnconfigure(0, weight=1)
 
         self.textbox.grid(row=0, column=1, sticky="nswe")
         self.textbox.config(state=tk.DISABLED, wrap=tk.WORD)
 
+        #self.container.insert(0, self.left_panel, weight=1)
+        #self.container.insert(1, self.textbox, weight=2)
         self.root.rowconfigure(0, weight=1)
-        self.root.columnconfigure(0, weight=1, uniform="root")
-        self.root.columnconfigure(1, weight=2, uniform="root")
+        self.root.columnconfigure(0, weight=1)
+        self.root.columnconfigure(1, weight=2)
+
 
     def __setup_triggers(self):
-        def update_selected_top_item(event):
+        def on_select_top_item(event):
             self.top_selected_i = self.top_listbox.index(tk.ACTIVE)
             self.__update_relations_menu()
 
-        def update_selected_relation(*args):
+        def on_select_relation(*args):
             self.__update_bottom_listbox()
 
-        def update_selected_bottom_item(event):
+        def on_select_bottom_item(event):
             self.bottom_selected_i = self.bottom_listbox.index(tk.ACTIVE)
             self.update_text_view()
 
-        self.top_listbox.bind("<Double-Button-1>", update_selected_top_item)
-        self.bottom_listbox.bind("<Double-Button-1>", update_selected_bottom_item)
-        self.relation_type_selected.trace("w", update_selected_relation)
+        def on_window_resize(event):
+            self.__update_container_children_width()
+
+        self.top_listbox.bind("<Double-Button-1>", on_select_top_item)
+        self.bottom_listbox.bind("<Double-Button-1>", on_select_bottom_item)
+        self.root.bind("<Configure>", on_window_resize)
+        self.relation_type_selected.trace("w", on_select_relation)
         # TODO on_resize_window
         # TODO manage text longer than textbox
 
@@ -91,7 +101,8 @@ class Gui:
         self.top_listbox.delete(0, tk.END)
 
         for i in range(len(self.entities)):
-            item = self.entities[i].name
+            nr_relations = str(len(self.entities[i].relations))
+            item = "[" + nr_relations + "] " + self.entities[i].name
             self.top_listbox.insert(i, item)
 
     def __update_relations_menu(self):
@@ -112,6 +123,11 @@ class Gui:
             rel = self.filtered_relations[i]
             other_entity = rel.to_entity if rel.from_entity == entity else rel.from_entity
             self.bottom_listbox.insert(i, other_entity.name)
+
+    def __update_container_children_width(self):
+        #TODO
+        print("Window size updated")
+        pass
 
     def update_text_view(self):
         relation = self.filtered_relations[self.bottom_selected_i]

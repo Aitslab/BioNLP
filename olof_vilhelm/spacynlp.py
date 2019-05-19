@@ -4,6 +4,8 @@ import time
 from math import floor
 from scrape_abstracts import get_abstracts
 from entity_relations_model import *
+import docria
+
 import gui
 
 
@@ -46,8 +48,11 @@ if __name__ == '__main__':
     nlp = spacy.load("en_core_web_sm")
     neuralcoref.add_to_pipe(nlp)
     filename = 'corpus/pubmed19n0195.xml'
+
+    """
     print("Scraping abstracts from " + filename + "...")
     unfiltered_abstracts = get_abstracts(filename)
+    """
     keywords = {'activates', 'activate', 'activated', 'induces', 'induce', 'induced', 'impairs', 'impair', 'impaired',
                 'inhibits', 'inhibit', 'inhibitors', 'inhibitor', 'inhibited', 'promotes', 'promote', 'promoted',
                 'localizes', 'localized', 'localize', 'leading', 'lead', 'leads', 'enhances', 'enhance', 'enhancing',
@@ -57,7 +62,7 @@ if __name__ == '__main__':
                 'inactivates', 'block', 'blocks', 'repress', 'represses', 'antagonist', 'reduces', 'reduce',
                 'disrupts', 'disrupt', 'prevents', 'prevent', 'participates', 'contributes', 'contributed'
                 'participate', 'contribute', 'participated'}  # should contain all keywords?
-
+    """
     print("Filtering abstracts...")
     abstracts = dict()
     for pmid in unfiltered_abstracts:
@@ -66,20 +71,22 @@ if __name__ == '__main__':
             if word in keywords:
                 abstracts[pmid] = text
                 break
+    """
     cnt = 0
     actualkeycnt = 0
     s = time.time()
     print("Analyzing abstracts...")
-    entities = list()
+    entities = EntitySet()
     relations = list()
 
-    for pmid in abstracts:
-        text = abstracts[pmid]
+    docria_reader = docria.DocumentIO.read('pubmed1905_0_.docria')
+    for docria in docria_reader:
+        text = docria.text['main'].text  # reads text directly from
         doc = nlp(text)
         # print(text, "\n")
         for token in doc:
-            #print(token.text, token.dep_, token.head.text, token.pos_,
-                  #[child for child in token.children])
+            # print(token.text, token.dep_, token.head.text, token.pos_,
+                  # [child for child in token.children])
             if token.text in keywords:
                 actualkeycnt += 1
 
@@ -109,28 +116,38 @@ if __name__ == '__main__':
                         for token in dobjtokenlist:
                             dobjstring += token.text + " "
 
-                        """
-                        sentencelist = nsubjtokenlist
-                        sentencelist.extend(keywordlist)
-                        sentencelist.extend(dobjtokenlist)
-                        sentencelist = list(dict.fromkeys(sentencelist)) # removes duplicates
-                        """
                         if nsubjstring != "" or dobjstring != "":
                             print(nsubjtokenlist, keywordlist, dobjtokenlist, "\n")
+                        else:
+                            break
+                        matches = list()  # adds allmatches from the docria document into one list
+                        for prot in docria.layer['protmatches']:
+                            matches.append(str(prot['text']))
+                        for lys in docria.layer['lysomatches']:
+                            matches.append(str(lys['text']))
+                        print(matches)
+                        interesting = False
+                        sentencelist = nsubjtokenlist
+                        sentencelist.extend(dobjtokenlist)
+                        for n in sentencelist:  # checks if any of the found words in either nsubj or dobj
+                            if n.text in matches:    # are a detected protein or lysosome word. if so, proceed
+                                interesting = True
+                                break
 
-                        e1 = Entity(nsubjstring)
-                        e2 = Entity(dobjstring)
+                        if interesting:
+                            e1 = Entity(nsubjstring)
+                            e2 = Entity(dobjstring)
 
-                        entities += [e1, e2]
-                        relation = Relation(Source(doc.text, "PMID=" + pmid), keyword.text, *gen_indices(doc, keywordlist))
-                        relation.from_(e1, *gen_indices(doc, nsubjtokenlist)).to_(e2, *gen_indices(doc, dobjtokenlist))
-                        relations.append(relation)
+                            entities += [e1, e2]
+                            relation = Relation(Source(doc.text, "PMID=" + docria.props['id']),
+                                                keyword.text, *gen_indices(doc, keywordlist))
+                            relation.from_(e1, *gen_indices(doc, nsubjtokenlist)).to_(e2, *gen_indices(doc, dobjtokenlist))
+                            relations.append(relation)
                         nsubjstring = ""
                         dobjstring = ""
 
                 cnt += 1
     print("seconds: ", floor((time.time()-s)))
     print("keywords with nsubj found: ", cnt)
-    print("Abstracts with keywords in them: ", len(abstracts))
     print("actual keywords found: ", actualkeycnt)
-    gui.Gui(entities, relations)
+    gui.Gui(sorted(entities.list()), relations)
