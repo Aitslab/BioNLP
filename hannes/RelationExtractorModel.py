@@ -15,7 +15,7 @@ class RelationExtractorModel:
         # self.model = Pipeline([('vect', DictVectorizer()), ('tfidf', TfidfTransformer()), (
         # 'clf-svm', SGDClassifier(loss='hinge', penalty='l2', alpha=1e-3, n_iter=5, random_state=42))])
         self.model = Pipeline([('vect', DictVectorizer()), ('tfidf', TfidfTransformer()), (
-            'clf-svm', svm.SVC(kernel='rbf', gamma=0.1, C=1, degree=1))])
+            'clf-svm', svm.SVC(kernel='poly', gamma=1, C=1, degree=2))])
 
     def train(self, features, targets):
         print("training started")

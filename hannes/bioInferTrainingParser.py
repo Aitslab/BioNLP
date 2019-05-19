@@ -51,7 +51,7 @@ def parse_training_set(file_name):
     return inputs
 
 
-inp = parse_training_set("trainingFiles\BioInfer_corpus_1.2.0b.binarised.xml")
+# inp = parse_training_set("trainingFiles\BioInfer_corpus_1.2.0b.binarised.xml")
 #  inp = parse_all_files("trainingFiles/")
 #  print(inp[140])
 #  print(inp[len(inp) - 1])
