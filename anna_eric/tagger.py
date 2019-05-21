@@ -12,8 +12,6 @@ from nltk.corpus import stopwords
 
 
 set_large_screen()
-stop_w = set()
-[stop_w.add(t) for t in stopwords.words('english')]
 
 def connect_jvm(port):
     from py4j.java_gateway import GatewayParameters, JavaGateway
@@ -45,17 +43,17 @@ def create_doc(id, text, app, i, i2):
     doc = MsgpackCodec.decode(search_binary_doc)
     return doc
 
-def filter_away_nodes(d):
+def filter_away_nodes(d, stop_w):
     rm_nodes = []
     for node in d['protmatches']:
         #If node is a stopword or number or length less than 2
         if len(str(node["text"])) < 2 or re.match( "^[0-9-]+$", str(node["text"])) or str(node["text"]) in stop_w:
             rm_nodes.append(node)
-    [t.detach() for t in rm_nodes]
+    [n.detach() for n in rm_nodes]
     return d
 
 #Taggs the abstracts in abstracts_genetag
-def file_tagger(app, indx, indx2):
+def file_tagger(app, indx, indx2, stop_w):
     # Add the abstracts[key = PMID] = Abstract Text
     abstracts = {}
     with open('genetag/abstracts_genetag.txt', 'r',encoding="utf-8", errors='ignore') as file:
@@ -66,7 +64,7 @@ def file_tagger(app, indx, indx2):
     for key in abstracts:
         dr.append(create_doc(key, abstracts[key], app, indx, indx2))
     for d in dr:
-        d = filter_away_nodes(d)
+        d = filter_away_nodes(d, stop_w)
 
     # Print one file per 50 000 abstracts
     i = 0; j = 0
@@ -83,7 +81,6 @@ def file_tagger(app, indx, indx2):
 def text_tagger(s, app, indx, indx2):
 
     doc = filter_away_nodes(create_doc('id', s, app, indx, indx2))
-
 
     tuls = []
     for term in doc["protmatches"]:
@@ -140,6 +137,9 @@ def score_tagger(c):
 p = 'protein_name/protein_names_uniprot(2)'
 c = 'cell_death_names'
 
+stop_w = set()
+[stop_w.add(t) for t in stopwords.words('english')]
+
 (app, indx, indx2) = setup_java(p, c)
 
 #file_tagger = 'file', text_tagger = 'text',  score_tagger = 'score'
@@ -147,7 +147,7 @@ run = 'file'
 
 if run == 'file':
     start = time.time()
-    l = file_tagger(app, indx, indx2)
+    l = file_tagger(app, indx, indx2, stop_w)
     end = time.time()
     print('total time: {} s\nnbr of abstracts: {}\ntime per abstract: {} s'.format(str(end-start), l, str((end-start)/l)))
 
