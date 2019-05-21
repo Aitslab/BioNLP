@@ -29,7 +29,7 @@ def main():
                 ft = build_features(inpt, inpt["entities"][interaction[0]], inpt["entities"][interaction[1]], nlp)
 
                 features.append(ft)
-                targets.append(inpt['predicates'][i][1])  # inpt['predicates'][i][j] j = -> POS/NEG, etc.
+                targets.append(inpt['predicates'][i][0])  # inpt['predicates'][i][j] j = -> POS/NEG, etc.
                 i += 1
             except ValueError:
                 i += 1
@@ -53,11 +53,7 @@ def main():
 
     rem = REM()
 
-    sk = rem.split_data(features, targets, 0.75)
-    train_feat = sk[0]
-    train_targ = sk[2]
-    test_feat = sk[1]
-    test_targ = sk[3]
+    train_feat, test_feat, train_targ, test_targ = rem.split_data(features, targets, 0.85)
     # print(train_feat[0])
     print(test_targ)
     rem.train(train_feat, train_targ)
@@ -94,11 +90,6 @@ def build_features(inpt, entity, entity2, nlp):
         tag.append(token.tag_)
         dep.append(token.dep_)
 
-    # if len(tokens)-len(pos) != 0:
-    #     print(pos)
-    #     print(tokens)
-    #     raise ValueError
-
     index1 = tokens.index("entity1")
     index2 = tokens.index("entity2")
 
@@ -128,7 +119,7 @@ def build_features(inpt, entity, entity2, nlp):
     features = {
                 # 'prefix1-m1': pre1[0],
                 # 'prefix2-m1': pre1[1],
-                #
+
                 # 'suffix1-m1': suf1[0],
                 # 'suffix2-m1': suf1[1],
                 # 'suffix3-m1': suf1[2],
