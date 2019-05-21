@@ -5,6 +5,7 @@ from math import floor
 from scrape_abstracts import get_abstracts
 from entity_relations_model import *
 import docria
+import pickle
 
 import gui
 
@@ -53,6 +54,12 @@ if __name__ == '__main__':
     print("Scraping abstracts from " + filename + "...")
     unfiltered_abstracts = get_abstracts(filename)
     """
+    positive_kw = {'activates', 'activate', 'activated', 'induces', 'induce', 'induced', 'promotes', 'promote',
+                   'promoted', 'localizes', 'localized', 'localize', 'leading', 'lead', 'leads', 'enhances', 'enhance',
+                   'enhancing', 'enhanced', 'activator', 'stabilizes', 'stabilize', 'stabilized', 'increase',
+                   'increases', 'increased', 'mediates', 'mediate', 'mediator', 'executes', 'execute', 'causes',
+                   'cause', 'executed', 'caused', 'participates', 'contributes', 'contributed', 'participate',
+                   'contribute', 'participated'}
     keywords = {'activates', 'activate', 'activated', 'induces', 'induce', 'induced', 'impairs', 'impair', 'impaired',
                 'inhibits', 'inhibit', 'inhibitors', 'inhibitor', 'inhibited', 'promotes', 'promote', 'promoted',
                 'localizes', 'localized', 'localize', 'leading', 'lead', 'leads', 'enhances', 'enhance', 'enhancing',
@@ -62,47 +69,52 @@ if __name__ == '__main__':
                 'inactivates', 'block', 'blocks', 'repress', 'represses', 'antagonist', 'reduces', 'reduce',
                 'disrupts', 'disrupt', 'prevents', 'prevent', 'participates', 'contributes', 'contributed'
                 'participate', 'contribute', 'participated'}  # should contain all keywords?
-    """
-    print("Filtering abstracts...")
-    abstracts = dict()
-    for pmid in unfiltered_abstracts:
-        text = unfiltered_abstracts[pmid]
-        for word in text.split():
-            if word in keywords:
-                abstracts[pmid] = text
-                break
-    """
+
     cnt = 0
+    dcnt = 0
     actualkeycnt = 0
     s = time.time()
     print("Analyzing abstracts...")
     entities = EntitySet()
     relations = list()
+    output = {}
+    docria_reader = docria.DocumentIO.read('out_json_pubmed19n0010.xml.txt.docria')
 
-    docria_reader = docria.DocumentIO.read('pubmed1905_0_.docria')
     for docria in docria_reader:
+        dcnt += 1
         text = docria.text['main'].text  # reads text directly from
         doc = nlp(text)
         # print(text, "\n")
+
+        output[docria.props['id']] = {'text': text, 'entities': [], 'relations': []}
+
         for token in doc:
-            # print(token.text, token.dep_, token.head.text, token.pos_,
-                  # [child for child in token.children])
             if token.text in keywords:
                 actualkeycnt += 1
-
+        entity_triples = []
+        j = 0
         for chunk in doc.noun_chunks:
+            j += 1
             nsubjstring = ""
             dobjstring = ""
             keyword = chunk.root.head
             keywordlist = [chunk.root.head]
+
+            e = []
+            for i in range(len(chunk)):
+                e.append(chunk[i].i)
+            output[docria.props['id']]['entities'].append(e)
+            # finds chunks where both nsubj and dobj point to a keyword
             if (chunk.root.dep_ == 'nsubj' or chunk.root.dep_ == 'nsubjpass') and keyword.text in keywords:
                 # print(text, "\n")
                 nsubjtokenlist = []
                 for i in range(len(chunk)):
                     nsubjtokenlist.append(chunk[i])
                 norigin = chunk.text
-                nsubjtokenlist = find_prep(chunk.root, nsubjtokenlist, 0)
+                nsubjtokenlist = find_prep(chunk.root, nsubjtokenlist, 0)  # adds prepositions for context
+                k = 0
                 for chunk2 in doc.noun_chunks:
+                    k += 1
                     if chunk2.root.dep_ == 'dobj' and chunk2.root.head == keyword:
                         dobjtokenlist = []
                         for i in range(len(chunk2)):
@@ -125,16 +137,20 @@ if __name__ == '__main__':
                             matches.append(str(prot['text']))
                         for lys in docria.layer['lysomatches']:
                             matches.append(str(lys['text']))
-                        print(matches)
                         interesting = False
                         sentencelist = nsubjtokenlist
                         sentencelist.extend(dobjtokenlist)
-                        for n in sentencelist:  # checks if any of the found words in either nsubj or dobj
+                        for n in sentencelist:       # checks if any of the found words in either nsubj or dobj
                             if n.text in matches:    # are a detected protein or lysosome word. if so, proceed
                                 interesting = True
                                 break
 
                         if interesting:
+                            if keyword.text in positive_kw:
+                                output[docria.props['id']]['relations'].append([(j, k, 'P')])
+                            else:
+                                output[docria.props['id']]['relations'].append([(j, k, 'N')])
+
                             e1 = Entity(nsubjstring)
                             e2 = Entity(dobjstring)
 
@@ -145,9 +161,20 @@ if __name__ == '__main__':
                             relations.append(relation)
                         nsubjstring = ""
                         dobjstring = ""
-
                 cnt += 1
     print("seconds: ", floor((time.time()-s)))
     print("keywords with nsubj found: ", cnt)
+    print("documents in docria: ", dcnt)
     print("actual keywords found: ", actualkeycnt)
+    print(output)
+    for r in output:
+        if len(output[r]['relations']) > 0:
+            print(output[r]['relations'])
+    pickle.dump(output, open("relations.p", "wb"))
     gui.Gui(sorted(entities.list()), relations)
+
+"""
+dict av PMID   
+    varje PMID har {text, (entity, entity, value)} där entity är [token_i1, token_i2...]
+
+"""
