@@ -1,3 +1,5 @@
+__author__ = 'Hannes Berntsson'
+
 from keras_model import kms
 from bioInferTrainingParser import parse_training_set
 from RelationExtractorModel import RelationExtractorModel as REM
@@ -26,7 +28,7 @@ def main():
 
     print("Building features...")
     training_sentences, training_targets = build_sentences_and_targets(inpts, nlp)
-    X_neg, y_neg = build_negatives(round(2 * len(training_sentences)), inpts, nlp)
+    X_neg, y_neg = build_negatives(round(0.33 * len(training_sentences)), inpts, nlp)
     training_sentences = training_sentences + X_neg
     training_targets = training_targets + y_neg
     # print("Features: " + str(training_sentences))
@@ -67,7 +69,7 @@ def main():
     print('\n')
     model = kms.build_model(X.shape[1], y.shape[1])
     print("Training Model...")
-    kms.train(model, X, y, 30, X_test, y_test, 20, verbose=True)
+    kms.train(model, X, y, 10, X_test, y_test, 50, verbose=True)
     print("Training set: ")
     kms.print_accuracy(model, X, y)
     print('\n')

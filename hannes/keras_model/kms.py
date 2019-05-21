@@ -1,3 +1,5 @@
+__author__ = 'Hannes Berntsson'
+
 from keras.models import Sequential
 from keras import layers
 from keras.preprocessing.text import one_hot
@@ -19,7 +21,7 @@ def build_model(feature_shape, target_shape):  # add embeddings and attention la
 
 def make_vectorizer(sentences, n_gram):
     if n_gram:
-        vectorizer = CountVectorizer(analyzer="word", binary=True, ngram_range=(3, 3))
+        vectorizer = CountVectorizer(analyzer="word", binary=True, ngram_range=(3, 3), lowercase=False)
     else:
         vectorizer = CountVectorizer(min_df=0, lowercase=False)
     vectorizer.fit(sentences)
@@ -27,7 +29,7 @@ def make_vectorizer(sentences, n_gram):
 
 
 def train(model, X, y, epochs, X_test, y_test, batch_size, verbose):
-    model.fit(X, y, epochs=epochs, verbose=True, validation_data=(X_test, y_test), batch_size=batch_size)
+    model.fit(X, y, epochs=epochs, verbose=verbose, validation_data=(X_test, y_test), batch_size=batch_size)
 
 
 def print_accuracy(model, X, y):
