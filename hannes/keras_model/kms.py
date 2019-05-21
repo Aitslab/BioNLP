@@ -12,18 +12,21 @@ def build_model(feature_shape, target_shape):  # add embeddings and attention la
     model.add(layers.Dense(target_shape, activation='sigmoid'))
 
     opt = Adam(lr=.0001)
-    model.compile(loss='mean_squared_error', optimizer='AdaDelta', metrics=['accuracy'])
+    model.compile(loss='mean_squared_error', optimizer='Adam', metrics=['accuracy'])
     model.summary()
     return model
 
 
-def make_vectorizer(sentences):
-    vectorizer = CountVectorizer(min_df=0, lowercase=False)
+def make_vectorizer(sentences, n_gram):
+    if n_gram:
+        vectorizer = CountVectorizer(analyzer="word", binary=True, ngram_range=(3, 3))
+    else:
+        vectorizer = CountVectorizer(min_df=0, lowercase=False)
     vectorizer.fit(sentences)
     return vectorizer
 
 
-def train(model, X, y, epochs, X_test, y_test, batch_size):
+def train(model, X, y, epochs, X_test, y_test, batch_size, verbose):
     model.fit(X, y, epochs=epochs, verbose=True, validation_data=(X_test, y_test), batch_size=batch_size)
 
 

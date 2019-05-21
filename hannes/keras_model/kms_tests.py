@@ -15,6 +15,7 @@ import keras
 
 
 def main():
+    tf.logging.set_verbosity(tf.logging.ERROR)
     if tf.test.gpu_device_name():
         print('Default GPU Device: {}'.format(tf.test.gpu_device_name()))
     else:
@@ -28,8 +29,8 @@ def main():
     X_neg, y_neg = build_negatives(round(2 * len(training_sentences)), inpts, nlp)
     training_sentences = training_sentences + X_neg
     training_targets = training_targets + y_neg
-    print("Features: " + str(training_sentences))
-    print("Targets: " + str(training_targets))
+    # print("Features: " + str(training_sentences))
+    # print("Targets: " + str(training_targets))
 
     training_sentences, test_sentences, training_targets, test_targets = REM.split_data(training_sentences,
                                                                                         training_targets, 0.15)
@@ -45,15 +46,15 @@ def main():
 
     print(len(training_sentences))
     print(len(test_sentences))
-    print(training_sentences)
-    print(training_targets)
+    # print(training_sentences)
+    # print(training_targets)
 
-    vec = kms.make_vectorizer(training_sentences)
+    vec = kms.make_vectorizer(training_sentences, n_gram=True)
     print(vec.vocabulary_)
     X = vec.transform(training_sentences)
     X_test = vec.transform(test_sentences)
 
-    vecy = kms.make_vectorizer(training_targets)
+    vecy = kms.make_vectorizer(training_targets, n_gram=False)
     print(vecy.vocabulary_)
     y = vecy.transform(training_targets)
     y_test = vecy.transform(test_targets)
@@ -66,7 +67,7 @@ def main():
     print('\n')
     model = kms.build_model(X.shape[1], y.shape[1])
     print("Training Model...")
-    kms.train(model, X, y, 30, X_test, y_test, 20)
+    kms.train(model, X, y, 30, X_test, y_test, 20, verbose=True)
     print("Training set: ")
     kms.print_accuracy(model, X, y)
     print('\n')
