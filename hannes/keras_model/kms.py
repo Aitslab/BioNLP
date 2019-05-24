@@ -1,7 +1,10 @@
+__author__ = 'Hannes Berntsson'
+
 from keras.models import Sequential
 from keras import layers
 from keras.preprocessing.text import one_hot
 from sklearn.feature_extraction.text import CountVectorizer
+from keras.optimizers import Adam
 
 
 def build_model(feature_shape, target_shape):  # add embeddings and attention layer?
@@ -10,19 +13,23 @@ def build_model(feature_shape, target_shape):  # add embeddings and attention la
     model.add(layers.Dense(100, activation='softmax'))
     model.add(layers.Dense(target_shape, activation='sigmoid'))
 
+    opt = Adam(lr=.0001)
     model.compile(loss='mean_squared_error', optimizer='Adam', metrics=['accuracy'])
     model.summary()
     return model
 
 
-def make_vectorizer(sentences):
-    vectorizer = CountVectorizer(min_df=0, lowercase=False)
+def make_vectorizer(sentences, n_gram):
+    if n_gram:
+        vectorizer = CountVectorizer(analyzer="word", binary=True, ngram_range=(3, 3), lowercase=False)
+    else:
+        vectorizer = CountVectorizer(min_df=0, lowercase=False)
     vectorizer.fit(sentences)
     return vectorizer
 
 
-def train(model, X, y, epochs, X_test, y_test, batch_size):
-    model.fit(X, y, epochs=epochs, verbose=True, validation_data=(X_test, y_test), batch_size=batch_size)
+def train(model, X, y, epochs, X_test, y_test, batch_size, verbose):
+    model.fit(X, y, epochs=epochs, verbose=verbose, validation_data=(X_test, y_test), batch_size=batch_size)
 
 
 def print_accuracy(model, X, y):
