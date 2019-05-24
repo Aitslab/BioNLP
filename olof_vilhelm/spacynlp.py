@@ -3,6 +3,7 @@ import neuralcoref
 import time
 from math import floor
 from scrape_abstracts import get_abstracts
+from keywords import keywords, inverse_keywords
 from entity_relations_model import *
 import docria
 
@@ -52,17 +53,7 @@ if __name__ == '__main__':
     """
     print("Scraping abstracts from " + filename + "...")
     unfiltered_abstracts = get_abstracts(filename)
-    """
-    keywords = {'activates', 'activate', 'activated', 'induces', 'induce', 'induced', 'impairs', 'impair', 'impaired',
-                'inhibits', 'inhibit', 'inhibitors', 'inhibitor', 'inhibited', 'promotes', 'promote', 'promoted',
-                'localizes', 'localized', 'localize', 'leading', 'lead', 'leads', 'enhances', 'enhance', 'enhancing',
-                'enhanced', 'activator', 'stabilizes', 'stabilize', 'stabilized', 'agonist', 'increase', 'increases',
-                'increased', 'mediates', 'mediate', 'mediator', 'executes', 'execute', 'causes', 'cause', 'inactivate',
-                'executed', 'caused', 'inactivated', 'blocked', 'repressed', 'reduced', 'disrupted', 'prevented',
-                'inactivates', 'block', 'blocks', 'repress', 'represses', 'antagonist', 'reduces', 'reduce',
-                'disrupts', 'disrupt', 'prevents', 'prevent', 'participates', 'contributes', 'contributed'
-                'participate', 'contribute', 'participated'}  # should contain all keywords?
-    """
+
     print("Filtering abstracts...")
     abstracts = dict()
     for pmid in unfiltered_abstracts:
@@ -76,10 +67,11 @@ if __name__ == '__main__':
     actualkeycnt = 0
     s = time.time()
     print("Analyzing abstracts...")
-    entities = EntitySet()
+    entities = RelationalSet()
     relations = list()
 
-    docria_reader = docria.DocumentIO.read('pubmed1905_0_.docria')
+    filename = 'corpus/out_json_pubmed19n0001.xml.txt.docria'
+    docria_reader = docria.DocumentIO.read(filename)
     for docria in docria_reader:
         text = docria.text['main'].text  # reads text directly from
         doc = nlp(text)
@@ -139,8 +131,8 @@ if __name__ == '__main__':
                             e2 = Entity(dobjstring)
 
                             entities += [e1, e2]
-                            relation = Relation(Source(doc.text, "PMID=" + docria.props['id']),
-                                                keyword.text, *gen_indices(doc, keywordlist))
+                            relation = Relation(Source(doc.text, filename + "\nPMID=" + docria.props['id']),
+                                                keyword.text, inverse_keywords[keyword.text], *gen_indices(doc, keywordlist))
                             relation.from_(e1, *gen_indices(doc, nsubjtokenlist)).to_(e2, *gen_indices(doc, dobjtokenlist))
                             relations.append(relation)
                         nsubjstring = ""
