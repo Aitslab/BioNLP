@@ -72,6 +72,7 @@ if __name__ == '__main__':
 
     cnt = 0
     dcnt = 0
+    icnt = 0
     actualkeycnt = 0
     s = time.time()
     print("Analyzing abstracts...")
@@ -82,25 +83,29 @@ if __name__ == '__main__':
 
     for docria in docria_reader:
         dcnt += 1
+        if dcnt % 10 == 0:
+            print(dcnt)
         text = docria.text['main'].text  # reads text directly from
         doc = nlp(text)
         # print(text, "\n")
 
-        output[docria.props['id']] = {'text': text, 'entities': [], 'relations': []}
-
+        output[docria.props['id']] = {'text': text, 'tokens': [], 'entities': [], 'relations': []}
+        text_tokens = []
         for token in doc:
+            text_tokens.append(token.text)
             if token.text in keywords:
                 actualkeycnt += 1
-        entity_triples = []
         j = 0
+        output[docria.props['id']]['tokens'] = text_tokens
         for chunk in doc.noun_chunks:
-            j += 1
+
             nsubjstring = ""
             dobjstring = ""
             keyword = chunk.root.head
             keywordlist = [chunk.root.head]
 
             e = []
+
             for i in range(len(chunk)):
                 e.append(chunk[i].i)
             output[docria.props['id']]['entities'].append(e)
@@ -114,7 +119,6 @@ if __name__ == '__main__':
                 nsubjtokenlist = find_prep(chunk.root, nsubjtokenlist, 0)  # adds prepositions for context
                 k = 0
                 for chunk2 in doc.noun_chunks:
-                    k += 1
                     if chunk2.root.dep_ == 'dobj' and chunk2.root.head == keyword:
                         dobjtokenlist = []
                         for i in range(len(chunk2)):
@@ -129,7 +133,8 @@ if __name__ == '__main__':
                             dobjstring += token.text + " "
 
                         if nsubjstring != "" or dobjstring != "":
-                            print(nsubjtokenlist, keywordlist, dobjtokenlist, "\n")
+                            pass
+                            #print(nsubjtokenlist, keywordlist, dobjtokenlist, "\n")
                         else:
                             break
                         matches = list()  # adds allmatches from the docria document into one list
@@ -144,12 +149,12 @@ if __name__ == '__main__':
                             if n.text in matches:    # are a detected protein or lysosome word. if so, proceed
                                 interesting = True
                                 break
-
-                        if interesting:
+                        if interesting and doc[keyword.i-1].dep_ != 'neg':
+                            icnt += 1
                             if keyword.text in positive_kw:
-                                output[docria.props['id']]['relations'].append([(j, k, 'P')])
+                                output[docria.props['id']]['relations'].append((j, k, 'P'))
                             else:
-                                output[docria.props['id']]['relations'].append([(j, k, 'N')])
+                                output[docria.props['id']]['relations'].append((j, k, 'N'))
 
                             e1 = Entity(nsubjstring)
                             e2 = Entity(dobjstring)
@@ -161,20 +166,38 @@ if __name__ == '__main__':
                             relations.append(relation)
                         nsubjstring = ""
                         dobjstring = ""
+                    k += 1
                 cnt += 1
+            j += 1
     print("seconds: ", floor((time.time()-s)))
     print("keywords with nsubj found: ", cnt)
     print("documents in docria: ", dcnt)
     print("actual keywords found: ", actualkeycnt)
-    print(output)
+    print("interesting keywords found: ", icnt)
+    # print(output)
+    """
     for r in output:
         if len(output[r]['relations']) > 0:
-            print(output[r]['relations'])
+            rel = output[r]['relations'][0][0]  # första relationen, och så tar man 'from'
+            print(rel)
+            ent = output[r]['entities'][rel][0]  # första ordet i entityn.
+            print(ent)
+            tok = output[r]['tokens'][ent]  # har bara ett värde så då tar vi det
+            print(tok)
+    """
     pickle.dump(output, open("relations.p", "wb"))
     gui.Gui(sorted(entities.list()), relations)
 
+
+
+
+
+
+
+
+
 """
 dict av PMID   
-    varje PMID har {text, (entity, entity, value)} där entity är [token_i1, token_i2...]
+    varje PMID har {text, [tokens], [entities], [relations]} där entity är [token_i1, token_i2...]
 
 """
