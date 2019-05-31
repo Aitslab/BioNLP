@@ -1,3 +1,5 @@
+#Created by Anna Palmqvist Sjövall and Eric Holmström
+
 #Process protein names and cell death names using docria and print docria to file
 
 import json
@@ -34,16 +36,19 @@ def setup_java(p, c):
     return (app, indx, indx2)
 
 # Create a document and tag it
-def create_doc(id, text, app, i, i2):
+def create_doc(key, text, app, i, i2):
     doc = Document()
     doc.add_text("main", text)
-    doc.props["id"] = id
+    doc.props["id"] = key
     binary_doc = MsgpackCodec.encode(doc)
     search_binary_doc = app.search(i, i2, binary_doc)
     doc = MsgpackCodec.decode(search_binary_doc)
     return doc
 
-def filter_away_nodes(d, stop_w):
+def filter_away_nodes(d):
+    stop_w = set()
+    [stop_w.add(t) for t in stopwords.words('english')]
+
     rm_nodes = []
     for node in d['protmatches']:
         #If node is a stopword or number or length less than 2
@@ -53,27 +58,19 @@ def filter_away_nodes(d, stop_w):
     return d
 
 #Taggs the abstracts in abstracts_genetag
-def file_tagger(app, indx, indx2, stop_w):
-    # Add the abstracts[key = PMID] = Abstract Text
-    abstracts = {}
-    with open('genetag/abstracts_genetag.txt', 'r',encoding="utf-8", errors='ignore') as file:
-        abstracts = json.loads(file.read())
-
+def file_tagger(app, indx, indx2, abstracts, filename):
     # One doc for each abstract
     out = []; dr = []
     for key in abstracts:
-        dr.append(create_doc(key, abstracts[key], app, indx, indx2))
-    for d in dr:
-        d = filter_away_nodes(d, stop_w)
+        text = ''.join(filter(None, abstracts[key]))
+        dr.append(create_doc(key, text, app, indx, indx2))
+    with DocumentIO.write('docria/out_{}.docria'.format(filename[:-4])) as dw:
+        prot = 0
+        lyso = 0
+        for d in dr:
+            d = filter_away_nodes(d)
+            dw.write(d)
 
-    # Print one file per 50 000 abstracts
-    i = 0; j = 0
-    while i < len(dr):
-        with DocumentIO.write('pubmed/pubmed1905({}).docria'.format(str(j))) as dw:
-            while i < len(dr) and i < 50000:
-                dw.write(dr[i])
-                i += 1
-        j += 1
     return len(dr)
 
 
@@ -136,9 +133,9 @@ def score_tagger(c):
 
 p = 'protein_name/protein_names_uniprot(2)'
 c = 'cell_death_names'
+path = 'pubmed/'
+directory = os.fsencode(path)
 
-stop_w = set()
-[stop_w.add(t) for t in stopwords.words('english')]
 
 (app, indx, indx2) = setup_java(p, c)
 
@@ -146,13 +143,20 @@ stop_w = set()
 run = 'file'
 
 if run == 'file':
-    start = time.time()
-    l = file_tagger(app, indx, indx2, stop_w)
-    end = time.time()
-    print('total time: {} s\nnbr of abstracts: {}\ntime per abstract: {} s'.format(str(end-start), l, str((end-start)/l)))
+    for file in os.listdir(directory):
+    filename = os.fsdecode(file)
+    if filename.startswith('json'):
+        with open(path + filename, 'r',encoding="utf-8", errors='ignore') as file:
+            start = time.time()
+            d = json.loads(file.read())
+            l = file_tagger(app, indx, indx2, stop_w, d, filename)
+            end = time.time()
+            div = 0
+            if l > 0:
+                div = (end-start)/l
+            print('total time: {} s\nnbr of abstracts: {}\ntime per abstract: {} s'.format(str(end-start), l, str(div)))
 
 elif run == 'text':
-    #text = 'Improvement of nursing instruction to be given at the time of discharge from the ward for premature infants'
     text = "the apoptosis the. The constraints of Cr10HGO, 110 kDa antigen, and the effects of additional proteins on oligoribonucleotide synthesis by the 63-kDa gene 4 protein have been examined using templates of defined sequence. cell death is caused by cells dying."
     s = text_tagger(text, app, indx, indx2)
     matches = "{} \n\n\033[43m{}\033[m\n\033[45m{}\033[m".format(s, 'PROTEIN', 'CELL DEATH')
