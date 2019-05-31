@@ -27,13 +27,16 @@ All docria files can be found in the folder [docria](https://www.dropbox.com/sh/
 The xml file can be downloaded directly at [uniprot](ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.xml.gz "download") or at their [website](https://www.uniprot.org/downloads "uniprot") and selecting the Reviewed (Swiss-Prot) version.
 
 ### Docria
-*For python: ```pip install docria```
-*For java: ```git clone https://github.com/marcusklang/docria.git
+* For python: ```pip install docria```
+* For java: 
+```
+git clone https://github.com/marcusklang/docria.git
 cd docria/java
-mvn install```
+mvn install
+```
 
 ## Running Java server
-Before running the python code, the Java server needs to be setup. First, make sure that docria is downloaded properly as shown above. Then unzip the file provided by Marcus Klang:[klang](klang.zip), some modifications have been done to his original files. Go to /klang/mention-index-py4j/, and run the commands 
+Before running the python code, the Java server needs to be setup. First, make sure that docria is downloaded properly as shown above. Then unzip the file provided by Marcus Klang: [klang](klang.zip), some modifications have been done to his original files. Go to /klang/mention-index-py4j/, and run the commands 
 ```
 mvn package
 cd target
@@ -42,7 +45,7 @@ java -jar mentions-index-py4j-1.0-SNAPSHOT.jar
 The server should then be up and running and you are ready to run the python code.
 
 
-##Running the dictionary
+## Running the dictionary
 Unpack the pubmed abstracts in the repo (anna_eric/pubmed2018). Then the python code [xml_to_json](xml_to_json) can be run to unpack the zipped xml files and turn them into json files.
 
 Then the file [tagger](tagger.py) can be run to process each of these json files to docria files with matches. By changing the 'run' variable, this python code can also be used to run the highlighter on given text (```run = 'text'```). Also to get a file format that can be used with the GENETAG scorer (```run = 'score'```).
@@ -54,5 +57,5 @@ Downloading GENETAG from medtag, the evaluator can be run using perl in the term
 ```perl alt_eval.perl [Gold] [Scored file]```
 
 If alt_eval.perl is in the same folder as the repo, the evaluator can be run on e.g. the file genetag_all.out specifically with:
-```perl alt_eval.perl Gold2.format genetag/genetag_all.out````. Use this [Gold2.format](Gold2.format) instead of the Gold.format file that you get from GENETAG. 
+```perl alt_eval.perl Gold2.format genetag/genetag_all.out``` . Use this [Gold2.format](Gold2.format) instead of the Gold.format file that you get from GENETAG. 
 
