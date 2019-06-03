@@ -6,11 +6,15 @@ Repository for student projects within biomedical text mining from Lund Universi
 # Resources
 ## 1. NLP packages  
 AllenNLP
+
 NLP library built on PyTorch
+
 https://allennlp.org/
 
 scispaCy  
+
 scispaCy is a Python package containing spaCy models for processing biomedical, scientific or clinical text  
+
 https://allenai.github.io/scispacy/
 
 
