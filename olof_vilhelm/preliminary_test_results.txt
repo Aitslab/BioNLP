@@ -1,0 +1,92 @@
+These three abstracts were manually read and scraped of relations.
+Using gene/protein/lysosome/cell death matches found from Anna and Eric, we read through the abstracts
+and noted all relations containing one of these matches in the 'RELATIONS' sections. We then ran our
+prediction algorithm on the texts and put the found relations in the 'FOUND' sections.
+
+1.
+TEXT:
+To reveal the role of miR-191 in apoptosis of renal tubular epithelial cells and in the involvement of renal ischemia-reperfusion injury. Renal transplantation rat model was established. miR-191 and Cystathionine-β-synthase (CBS) were measured by qRT-PCR and Western blot. The regulation of miR-191 on CBS was detected by luciferase reporter assay. miR-191 expression in platelets and platelet microvesicles (P-MVs) of patients and model rats was significantly upregulated than that of health and normal rats. Also, mRNA and protein levels of CBS in renal tissues of patients were significantly downregulated than that of health and normal rats. We also found that P-MVs could transfer miR-191 to HK-2 cells. Luciferase reporter assay showed that CBS was a direct target of miR-191. In addition, we proved that P-MVs-secreted miR-191 inhibited CBS expression in HK-2 cells, and P-MVs-secreted miR-191 promoted HK-2 cell apoptosis via CBS. Finally, we verified the trends of CBS expressions, HK-2 cell apoptosis and apoptosis-related proteins in vivo were similar as the trends in vitro. CBS was a direct target of miR-191, and miR-191 could transfer to HK-2 cells via P-MVs to decrease the expression of CBS, thus to promote cell apoptosis and renal IR injury.
+
+MATCHES:
+"miR-191", "apoptosis", "Cystathionine-β-synthase (CBS)", "CBS", "luciferase"
+
+RELATIONS:
+P-MVs-secreted miR-191 - inhibited - CBS expression in HK-2 cells
+P-MVs-secreted miR-191 - promoted - HK-2 cell apoptosis via CBS
+miR-191 - decrease expression - CBS
+miR-191 - promote - cell apoptosis
+miR-191 - promote - renal IR injury
+
+FOUND:
+None
+
+
+2.
+TEXT:
+Podocyte apoptosis is considered as the important element that promotes the development and progress of membranous nephropathy (MN). Unfortunately, the underlying mechanism of podocytes apoptosis in MN remains elusive. We compared the renal expressions of miR-130a-5p and M-type phospholipase A2 receptor (PLA2R) between MN patients (n = 30) and 30 controls by qRT-PCR and western blot, respectively. The podocyte damage model in vitro was established by angiotensin II (Ang II, 100 nmol/L) exposure for 24 h. Interaction between miR-130a-5p and PLA2R was determined using dual-luciferase reporter gene assay. MN mice were induced by intravenous injection of cBSA. In this study, miR-130a-5p expression was significantly decreased both in the renal biopsy specimens from MN patients and podocyte cell line AB8/13 following stimulation of Ang II. Overexpressed miR-130a-5p in AB8/13 cells significantly attenuated the Ang II induced-apoptosis in vitro. In contrast, down-regulated miR-130a-5p induced podocyte apoptosis. PLA2R was identified as the target of miR-130a-5p in AB8/13 cells. And up-regulated or down-regulated PLA2R could obviously attenuate the effect of miR-130a-5p overexpression or knockdown on the apoptosis of AB8/13 cells. Furthermore, it was also observed that overexpressed miR-130a-5p by miR-130a-5p agomir could obviously alleviate renal injury in MN mice. In conclusion, decreased miR-130a-5p was contributed to the pathological mechanism of MN through increasing PLA2R expression, which induced podocyte apoptosis.
+
+MATCHES:
+"apoptosis", "miR-130a-5p", "M-type phospholipase A2 receptor (PLA2R)", "angiotensin II", "Ang II", "PLA2R", "luciferase", "cBSA"
+
+RELATIONS:
+Podocyte apoptosis - promotes - development and progress of membranous nephropathy (MN)
+miR-130a-5p expression - significantly decreased by - stimulation of Ang II
+Overexpressed miR-130a-5p in AB8/13 cells - significantly attenuated - Ang II induced-apoptosis in vitro
+down-regulated miR-130a-5p - induced - podocyte apoptosis
+up-regulated or down-regulated PLA2R - attenuate - the effect of miR-130a-5p overexpression
+decreased miR-130a-5p - contributed to - pathological mechanism of MN
+decreased miR-130a-5p - increasing PLA2R expression
+increasing PLA2R expression - induced - podocyte apoptosis
+
+FOUND:
+None
+
+11.
+TEXT:
+Microtubule-disturbing drugs inhibit lysosomal trafficking and induce lysosomal membrane permeabilization followed by cathepsin-dependent cell death. To identify specific trafficking-related proteins that control cell survival and lysosomal stability, we screened a molecular motor siRNA library in human MCF7 breast cancer cells. SiRNAs targeting four kinesins (KIF11/Eg5, KIF20A, KIF21A, KIF25), myosin 1G (MYO1G), myosin heavy chain 1 (MYH1) and tropomyosin 2 (TPM2) were identified as effective inducers of non-apoptotic cell death. The cell death induced by KIF11, KIF21A, KIF25, MYH1 or TPM2 siRNAs was preceded by lysosomal membrane permeabilization, and all identified siRNAs induced several changes in the endo-lysosomal compartment, i.e. increased lysosomal volume (KIF11, KIF20A, KIF25, MYO1G, MYH1), increased cysteine cathepsin activity (KIF20A, KIF25), altered lysosomal localization (KIF25, MYH1, TPM2), increased dextran accumulation (KIF20A), or reduced autophagic flux (MYO1G, MYH1). Importantly, all seven siRNAs also killed human cervix cancer (HeLa) and osteosarcoma (U-2-OS) cells and sensitized cancer cells to other lysosome-destabilizing treatments, i.e. photo-oxidation, siramesine, etoposide or cisplatin. Similarly to KIF11 siRNA, the KIF11 inhibitor monastrol induced lysosomal membrane permeabilization and sensitized several cancer cell lines to siramesine. While KIF11 inhibitors are under clinical development as mitotic blockers, our data reveal a new function for KIF11 in controlling lysosomal stability and introduce six other molecular motors as putative cancer drug targets.
+
+MATCHES:
+"lysosomal", "lysosomal membrane permeabilization", "cathepsin", "cell death", "cell survival", "lysosomal stability", "kinesins", "KIF11/Eg5", "KIF20A", "KIF21A", "KIF25", "myosin 1G", "MYO1G", "myosin heavy chain 1", "MYH1", "tropomyosin 2", "TPM2", "non-apoptotic cell death", "KIF11", "lysosomal compartment", "autophagic", "lysosome-destabilizing"
+
+RELATIONS:
+Microtubule-disturbing drugs - inhibit - lysosomal trafficking
+Microtubule-disturbing drugs - induce - lysosomal membrane permeabilization
+Microtubule-disturbing drugs - induce - bycathepsin-dependentcell death
+KIF11/Eg5 - inducer of - non-apoptotic cell death
+KIF20A - inducer of - non-apoptotic cell death
+KIF21A - inducer of - non-apoptotic cell death
+KIF25) - inducer of - non-apoptotic cell death
+myosin 1G (MYO1G) - inducer of - non-apoptotic cell death
+myosin heavy chain 1 (MYH1) - inducer of - non-apoptotic cell death
+tropomyosin 2 (TPM2) - inducer of - non-apoptotic cell death
+all identified siRNAs - induced - changes in the endo-lysosomal compartment
+KIF11 - increased - lysosomal volume
+KIF20A - increased - lysosomal volume
+KIF25 - increased - lysosomal volume
+MYO1G- increased - lysosomal volume
+MYH1 - increased - lysosomal volume
+KIF20A - increased - cysteine cathepsin activity
+KIF25 - increased - cysteine cathepsin activity
+KIF25 - altered - lysosomal localization
+MYH1 - altered - lysosomal localization
+TPM2 - altered - lysosomal localization
+KIF20A - increased - dextran accumulation
+MYO1G - reduced- autophagic flux
+MYH1 - reduced- autophagic flux
+all seven siRNAs - killed - human cervix cancer
+all seven siRNAs - killed - osteosarcoma (U-2-OS) cells
+all seven siRNAs - killed - sensitized cancer cells to other lysosome-destabilizing treatments
+monastrol - inhibits - KIF11
+monastrol  - induced - lysosomal membrane permeabilization
+monastrol  - induced - sensitized several cancer cell lines to siramesine
+KIF11 - controlling - lysosomal stability
+
+FOUND:
+[TP] Microtubule-disturbing drugs - inhibit - lysosomal trafficking
+[TP] all identified siRNAs - induced - several changes in the endo-lysosomal compartment
+[TP] the KIF11 inhibitor monastrol - induced - lysosomal membrane permeabilization
+
+RESULTS:
+3 TP, 0 FP, 28+8+5=41 FN
+Recall = 3/(3+41) = 0.068 (0.068181818181818...)
+Precision = 3/(3+0) = 1
