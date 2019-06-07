@@ -1,0 +1,146 @@
+Keywords with nsubj found:	118
+Nr documents analyzed:		1100
+Actual keywords found:		351
+Nr of BioInfer relations:	2772
+Nr of predicted relations:	66
+
+RESULT NOTES:
+Contains descriptions and categorizations of our False Positive matches. The numbers under the
+categories are the BioInfer id's of the related articles. Additional notes on the match is appended
+after the '|' character.
+
+(15) True Positives [TP]
+	13
+	16
+	165			| Datum contains 1 TP and 1 FP relations
+	196
+	374
+	695
+	779			| Datum contains 1 TP and 1 ?FP relations
+	845
+	994
+	1219
+	1221
+	1418
+	1570
+	1857
+	1913
+
+(31) False Positives [FP]
+
+	(11) Too long to be useful
+		36
+		48
+		149
+		351
+		428
+		716
+		887
+		1113
+		1162
+		1406
+		1688
+	
+	(6) Coreferences
+		283
+		1052
+		1144
+		1365
+		1407
+		1709
+
+	(10) Incorrect entities
+		75
+		165		| Datum contains 1 TP and 1 FP relations
+		235
+		614
+		980
+		1014
+		1545	| Has a coreference where the origin isn't included in the datum, but "to-entity" is still obviously incorrect.
+		1724
+		1758
+		1962
+
+	(1) Statement of no relation
+		1263
+
+	(3) Other
+		1805
+		1977
+		2047
+
+(20) Unclear False positives [?FP]
+
+	(14) Relation probably should've been included in test set
+		54		| 2 T relations
+		237		| 2 T relations
+		277		| 0 T relations
+		400		| 3 T relations
+		563		| 1 T relations
+		779		| 14 T relations	| Datum contains 1 TP and 1 ?FP relations
+		897		| 4 T relations
+		959		| 0 T relations
+		1017	| 4 T relations
+		1020	| 0 T relations
+		1105	| 9 T relations
+		1243	| 6 T relations
+		1888	| 0 T relations
+		1937	| 0 T relations
+
+	(3) Coreferences, but origin not included in datum
+		920		| 0 T relations
+		978		| 1 T relations
+		2023	| 1 T relations
+
+	(3) Other
+		257		| 0 T relations		| Datum probably missing context
+		759		| 3 T relations		| "to-entity" is long, but contains 3 T relations. Interpret this as 3 TP in 'Optimist' interpretation.
+		993		| 0 T relations		| Unclear if "to-entity" is incorrect or if relation should've been included in test set.
+
+
+CALCULATION METHODS:
+
+	Precision:	(TP) / (TP + FP)
+	Recall:		(TP) / (TP + FN)
+	F1-score:	2 * Precision * Recall / (Precision + Recall)
+
+RESULTS:
+
+	PESSIMIST INTERPRETATION:
+		Interpret ?FP as FP:
+		Add 20 to FP relations.
+		15 TP, 51 FP, 2757 FN, 2772 True relations
+		
+		Precision:	0.227272727
+		Recall:		0.005411255
+		F1-score:	0.010570823
+
+	OPTIMIST INTERPRETATION:
+		Interpret all ?FP as TP
+		Add 22 relations to TP and 19 True relations (See note on datum with id 759).
+
+		37 TP, 31 FP, 2754 FN, 2791 True relations.
+
+		Precision:	0.544117647
+		Recall:		0.013256897
+		F1-score:	0.025883175
+
+	DISMISSIVE INTERPRETATION:
+		Remove all datum containing ?FP.
+		Remove 1 TP and 50 T relations.
+
+		14 TP, 31 FP, 2708 FN, 2722 True relations.
+
+		Precision:	0.311111111
+		Recall:		0.005143277
+		F1-score:	0.010119262
+
+	DISMISSIVE SLIGHT-OPTIMIST INTERPRETATION
+		Interpret category 'Relation probably should've been included in test set' as TP.
+		Add those 14 to True relations. Remove datum from other ?FP categories.
+
+		29 TP, 31 FP, 2708 FN, 2781 True relations.
+
+		Precision:	0.483333333
+		Recall:		0.010427903
+		F1-score:	0.020415345

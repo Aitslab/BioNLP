@@ -1,18 +1,28 @@
 import sys
 import xml.etree.cElementTree as ET
 
+""" Part of a 'gist', retrieved at 2019-06-06, from https://gist.github.com/cbare/4678963 made by Christopher Bare (cbare)
+at https://cbare.github.io/ or https://github.com/cbare """
+class Dynamic(dict):
+    """Dynamic objects are just bags of properties, some of which may happen to be functions"""
+    def __init__(self, **kwargs):
+        self.__dict__ = self
+        self.update(kwargs)
+
+    def __setattr__(self, name, value):
+        import types
+        if isinstance(value, types.FunctionType):
+            self[name] = types.MethodType(value, self)
+        else:
+            super(Dynamic, self).__setattr__(name, value)
+
 
 class BioInfer:
     NEGATIVE_CLASSES = {"INHIBIT", "DOWNREGULATE", "SUPPRESS"}
     POSITIVE_CLASSES = {"MEDIATE", "UPREGULATE", "STIMULATE", "ACTIVATE", "CATALYZE"}
 
     def __init__(self, filename):
-        self.__sentences = list()
-        self.__tokens = dict()
-        self.__subtokens = dict()
-        self.__dependencies = dict()
-        self.__entities = dict()
-        self.__relationships = dict()
+        self.__sentences = dict()
 
         self.__t_id_t_index_dict = dict()
         self.__st_id_st_index_dict = dict()
@@ -25,10 +35,10 @@ class BioInfer:
                 s_id = sntnc.attrib["id"]
                 s_text = sntnc.attrib["origText"]
                 s = {"text": s_text, "id": s_id}
-                self.__sentences.append(s)
+                self.__sentences[s_id] = s
 
-                self.__tokens[s_id] = list()
-                self.__subtokens[s_id] = list()
+                self.__sentences[s_id]['tokens'] = list()
+                self.__sentences[s_id]['subtokens'] = list()
                 self.__t_id_t_index_dict[s_id] = dict()
                 self.__st_id_st_index_dict[s_id] = dict()
                 t_counter = 0
@@ -42,16 +52,16 @@ class BioInfer:
                         st_id = subtoken.attrib["id"]
                         st_text = subtoken.attrib["text"]
                         sbtkn = {"text": st_text, "id": st_id}
-                        self.__subtokens[s_id].append(sbtkn)
+                        self.__sentences[s_id]['subtokens'].append(sbtkn)
                         self.__st_id_st_index_dict[s_id][st_id] = st_counter
                         st_counter += 1
 
                     t = {"text": t_text, "id": t_id}
-                    self.__tokens[s_id].append(t)
+                    self.__sentences[s_id]['tokens'].append(t)
                     self.__t_id_t_index_dict[s_id][t_id] = t_counter
                     t_counter += 1
 
-                self.__dependencies[s_id] = list()
+                self.__sentences[s_id]['dependencies'] = list()
                 links = None
                 for lnkg in sntnc.find("linkages").findall("linkage"):
                     if lnkg.attrib["type"] == "stanford":
@@ -83,9 +93,9 @@ class BioInfer:
                         "head_id": head_id,
                         "word_id": word_id
                     }
-                    self.__dependencies[s_id].append(dpndncy)
+                    self.__sentences[s_id]['dependencies'].append(dpndncy)
 
-                self.__entities[s_id] = list()
+                self.__sentences[s_id]['entities'] = list()
                 self.__e_id_e_index_dict[s_id] = dict()
                 e_counter = 0
                 for entity in sntnc.findall("entity"):
@@ -98,7 +108,7 @@ class BioInfer:
                     for i in range(len(e_st_ids)):
                         e_st_id = e_st_ids[i]
                         e_st_index = self.__st_id_st_index_dict[s_id][e_st_id]
-                        e_text += self.__subtokens[s_id][e_st_index]["text"]
+                        e_text += self.__sentences[s_id]['subtokens'][e_st_index]["text"]
                         if i+1 in range(len(e_st_ids)):
                             e_st_id_prev = e_st_ids[i-1]
                             if not BioInfer.__from_same_token(e_st_id, e_st_id_prev):
@@ -110,11 +120,11 @@ class BioInfer:
                         "text": e_text,
                         "st_ids": e_st_ids
                     }
-                    self.__entities[s_id].append(ntty)
+                    self.__sentences[s_id]['entities'].append(ntty)
                     self.__e_id_e_index_dict[s_id][e_id] = e_counter
                     e_counter += 1
 
-                self.__relationships[s_id] = list()
+                self.__sentences[s_id]['relations'] = list()
                 for formula in sntnc.find("formulas").findall("formula"):
                     rel_e = formula.find("relnode")
                     if "entity" in rel_e.attrib:
@@ -127,6 +137,8 @@ class BioInfer:
                         target_entity_id = rel_entities[1].attrib["entity"]
                         source_entity_index = self.__e_id_e_index_dict[s_id][source_entity_id]
                         target_entity_index = self.__e_id_e_index_dict[s_id][target_entity_id]
+                        source_text = self.__sentences[s_id]["entities"][source_entity_index]["text"]
+                        target_text = self.__sentences[s_id]["entities"][target_entity_index]["text"]
                         rel_class = "OTHER"
                         if rel_bioinfer_class in BioInfer.NEGATIVE_CLASSES:
                             rel_class = "NEGATIVE"
@@ -134,20 +146,32 @@ class BioInfer:
                             rel_class = "POSITIVE"
 
                         rel_fine_class = ""
+                        rel_e_index = -1
                         if "entity" in rel_e.attrib:
                             rel_e_index = self.__e_id_e_index_dict[s_id][rel_e_id]
-                            rel_fine_class = self.__entities[s_id][rel_e_index]["text"]
+                            rel_fine_class = self.__sentences[s_id]['entities'][rel_e_index]["text"]
                         rltnshp = {
-                            "source": source_entity_index,
-                            "source_id": source_entity_id,
-                            "target": target_entity_index,
-                            "target_id": target_entity_id,
-                            "class": rel_class,
-                            "fine_class": rel_fine_class,
-                            "bioinfer_class": rel_bioinfer_class,
-                            "bioinfer_rel_entity_index": rel_e_index
+                            "source": {
+                                "index": source_entity_index,
+                                "id": source_entity_id,
+                                "text": source_text,
+                            },
+                            "target": {
+                                "index": target_entity_index,
+                                "id": target_entity_id,
+                                "text": target_text
+                            },
+                            "relation": {
+                                "index": rel_e_index,
+                                "id": rel_e_id,
+                                "text": rel_fine_class,
+                                "class": rel_class,
+                                "fine_class": rel_fine_class,
+                                "bioinfer_class": rel_bioinfer_class,
+                                "bioinfer_rel_entity_index": rel_e_index
+                            }
                         }
-                        self.__relationships[s_id].append(rltnshp)
+                        self.__sentences[s_id]['relations'].append(rltnshp)
 
         else:
             print("File \'" + filename + "\' is not a bioinfer corpus.")
@@ -170,80 +194,61 @@ class BioInfer:
     def sentences(self):
         return self.__sentences
 
-    def sentence(self, sentence_id):
-        for sentence in self.__sentences:
-            if sentence["id"] == sentence_id:
-                return sentence
-
-    def tokens(self, sentence_id):
-        return self.__tokens[sentence_id]
-
-    def dependencies(self, sentence_id):
-        return self.__dependencies[sentence_id]
-
-    def entities(self, sentence_id):
-        return self.__entities[sentence_id]
-
-    def relationships(self, sentence_id):
-        return self.__relationships[sentence_id]
-
 
 # SEE HERE FOR USAGE OF BioInfer CLASS
 if __name__ == "__main__":
 
     # JUST SOME COMMAND-LINE OPTIONS
-    sentence_nr = -1
+    sentence_nr = 0
     sentence_id = ""
     if len(sys.argv) > 1:
         try:
             sentence_nr = int(sys.argv[1])
-            print("Analyzing sentence nr " + str(sentence_nr) + ".")
         except ValueError:
             if sys.argv[1] == "id" and len(sys.argv) > 2:
                 sentence_id = sys.argv[2]
-                print("Analyzing sentence with id " + sentence_id)
             else:
-                print("Incorrect input. Exiting")
-                print()
-
-    else:
-        print("Analyzing (default) sentence 0. Pass a number as the second argument to analyze that sentence instead.")
-
+                print("Incorrect input. Exiting...")
+                exit()
 
     # MAIN USE OF BioInfer CLASS
-    fn = "corpus/BioInfer_corpus_1.1.1.xml"
+    fn = "corpus/BioInfer_corpus_1.2.0b.binarised.xml"
     print("Reading file: '" + fn + "'.")
     bioinfer = BioInfer(fn)
-    if sentence_nr != -1:
-        sentence = bioinfer.sentences()[sentence_nr]
-        sentence_id = sentence["id"]
-    tokens = bioinfer.tokens(sentence_id)
-    dependencies = bioinfer.dependencies(sentence_id)
-    entities = bioinfer.entities(sentence_id)
-    relationships = bioinfer.relationships(sentence_id)
+    sentence = None
+    s_cnt = 0
+    for s_id in bioinfer.sentences():
+        if sentence_nr == s_cnt:
+            sentence = bioinfer.sentences()[s_id]
+            break
+        s_cnt += 1
 
-    print("\nSentence " + str(sentence_nr) + ", id:", sentence_id)
-    print(bioinfer.sentence(sentence_id)["text"])
+    if sentence_id != "":
+        sentence = bioinfer.sentences()[sentence_id]
+    else:
+        sentence_id = sentence['id']
+
+    tokens = sentence['tokens']
+    dependencies = sentence['dependencies']
+    entities = sentence['entities']
+    relations = sentence['relations']
+
+    print("\nSentence " + str(sentence_nr) + " of " + str(len(bioinfer.sentences())) + " sentences, id:", sentence_id)
+    print(sentence["text"])
 
     print("\nEntities:")
     for i in range(len(entities)):
         entity = entities[i]
         print(str(i) + "\t" + entity["text"] + "\t" + entity["type"] + "\t(" + entity["id"] + ")")
 
-    print("\nRelationships:")
-    if len(relationships) == 0:
-        print("No relationships.")
-    for relation in relationships:
-        src_index = relation["source"]
-        src_text = entities[src_index]["text"]
-        src_id = relation["source_id"]
-        tgt_index = relation["target"]
-        tgt_text = entities[tgt_index]["text"]
-        tgt_id = relation["target_id"]
-
-        rel_class = relation["class"]
-        fine_rel_class = relation["fine_class"]
-        print(src_text + " [" + src_id + "]\t" + rel_class + "(" + fine_rel_class + ")" + "\t" + tgt_text + " [" + tgt_id + "]")
+    print("\nRelations:")
+    if len(relations) == 0:
+        print("No relations.")
+    for relation in relations:
+        src = relation["source"]
+        tgt = relation["target"]
+        rel = relation["relation"]
+        print(src['text'] + " [" + src['id'] + "]\t" + rel['text'] + " [" + rel['bioinfer_class'] + "]" + "\t" + tgt['text'] + " [" + tgt['id'] + "]")
 
     print("\nTokens:")
     for i in range(len(tokens)):
