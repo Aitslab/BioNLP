@@ -1,0 +1,1059 @@
+In temp_19n0968:
+
+First abstracts in its 'concentrated' form, then the docria file matches:
+
+1. To reveal the role of miR-191 in apoptosis of renal tubular epithelial cells and in the involvement of renal ischemia-reperfusion injury.Renal transplantation rat model was established. miR-191 and Cystathionine-β-synthase (CBS) were measured by qRT-PCR and Western blot. The regulation of miR-191 on CBS was detected by luciferase reporter assay.miR-191 expression in platelets and platelet microvesicles (P-MVs) of patients and model rats was significantly upregulated than that of health and normal rats. Also, mRNA and protein levels of CBS in renal tissues of patients were significantly downregulated than that of health and normal rats. We also found that P-MVs could transfer miR-191 to HK-2 cells. Luciferase reporter assay showed that CBS was a direct target of miR-191. In addition, we proved that P-MVs-secreted miR-191 inhibited CBS expression in HK-2 cells, and P-MVs-secreted miR-191 promoted HK-2 cell apoptosis via CBS. Finally, we verified the trends of CBS expressions, HK-2 cell apoptosis and apoptosis-related proteins in vivo were similar as the trends in vitro.CBS was a direct target of miR-191, and miR-191 could transfer to HK-2 cells via P-MVs to decrease the expression of CBS, thus to promote cell apoptosis and renal IR injury.{'id': '30394829'}
+
+2. Podocyte apoptosis is considered as the important element that promotes the development and progress of membranous nephropathy (MN). Unfortunately, the underlying mechanism of podocytes apoptosis in MN remains elusive. We compared the renal expressions of miR-130a-5p and M-type phospholipase A2 receptor (PLA2R) between MN patients (n = 30) and 30 controls by qRT-PCR and western blot, respectively. The podocyte damage model in vitro was established by angiotensin II (Ang II, 100 nmol/L) exposure for 24 h. Interaction between miR-130a-5p and PLA2R was determined using dual-luciferase reporter gene assay. MN mice were induced by intravenous injection of cBSA. In this study, miR-130a-5p expression was significantly decreased both in the renal biopsy specimens from MN patients and podocyte cell line AB8/13 following stimulation of Ang II. Overexpressed miR-130a-5p in AB8/13 cells significantly attenuated the Ang II induced-apoptosis in vitro. In contrast, down-regulated miR-130a-5p induced podocyte apoptosis. PLA2R was identified as the target of miR-130a-5p in AB8/13 cells. And up-regulated or down-regulated PLA2R could obviously attenuate the effect of miR-130a-5p overexpression or knockdown on the apoptosis of AB8/13 cells. Furthermore, it was also observed that overexpressed miR-130a-5p by miR-130a-5p agomir could obviously alleviate renal injury in MN mice. In conclusion, decreased miR-130a-5p was contributed to the pathological mechanism of MN through increasing PLA2R expression, which induced podocyte apoptosis.{'id': '30394845'}
+
+3. Epithelial ovarian cancer (EOC) is the most fatal gynecologic malignancy due to its late diagnosis and lack of curative therapy. The antimalaria compound artemisinin and its derivatives, such as artesunate (ART) and dihydroartemisinin (DHA), have proven to be potent anticancer drugs and act through various anticancer mechanisms. To identify novel targets of artemisinin derivatives in EOC cells, we investigated the effects of ART and DHA on SKOV3 and primary EOC cell growth via CCK-8 assay. Both ART and DHA inhibited EOC cell growth. A cell cycle distribution analysis showed that ART and DHA caused G2/M cell cycle arrest. Moreover, ART and DHA induced autophagy in EOC cells, whereas autophagy inhibitors reversed the cell growth inhibition and cell cycle arrest induced by ART and DHA. Western blot analysis showed that ART and DHA also suppressed the cell cycle-related NF-κB-signaling pathway in EOC cells. These data suggest that artemisinin derivatives induce autophagy, block the cell cycle, and inhibit cell growth in EOC cells. Our research provides new targets for artemisinin derivatives for EOC treatment.{'id': '30395153'}
+
+4. Rottlerin as a natural agent, which is isolated from Mallotus philippinensis, has been identified to play a critical role in tumor inhibition. However, the molecular mechanism of rottlerin-mediated anti-tumor activity is still ambiguous. It has been reported that EZH2 exhibits oncogenic functions in a variety of human cancers. Therefore, inhibition of EZH2 could be a promising strategy for the treatment of human cancers. In this study, we aim to explore whether rottlerin could inhibit tumorigenesis via suppression of EZH2 in prostate cancer cells. Multiple approaches such as FACS, Transwell invasion assay, RT-PCR, Western blotting, and transfection were performed to determine our aim. We found that rottlerin treatment led to inhibition of cell growth, migration and invasion, but induction of apoptosis in prostate cancer cells. Importantly, we defined that rottlerin decreased the expression of EZH2 and H3K27me3 in prostate cancer cells. Moreover, overexpression of EZH2 abrogated the rottlerin-induced inhibition of cell growth, migration, and invasion in prostate cancer cells. Consistently, down-regulation of EZH2 enhanced rottlerin-triggered anti-tumor function. Collectively, our work demonstrated that rottlerin exerted its tumor suppressive function via inhibition of EZH2 expression in prostate cancer cells. Our findings indicated that rottlerin might be a potential therapeutic compound for treating patients with prostate cancer.{'id': '30394832'}
+
+5. Antigen-presenting cells play a dominant role in cancer immunotherapy. Tumor cells, however, can still resort to several mechanisms of immune evasion that ultimately lead to the development of tumor tissues. In the current study, we performed surface modification of live macrophages with nucleic acid aptamers with the aim to enhance their affinity for tumor cells. Intercellular adhesion of tumor cells to surface-modified macrophages and the functions of the macrophages when in contact with tumor cells were investigated. To immobilize thiol-terminated nucleic acid aptamers that showed high affinity for the membrane protein of the tumor cells, methacryloyl groups were delivered into the sialic acids of the macrophages via metabolic glycoengineering (MGE). The proposed surface modification was cytocompatible and did not induce any undesirable activation of macrophages. According to the cell proliferation assay, the density of aptamers immobilized on a macrophage was found to decrease over time. However, the presence of aptamers on the cell surface was observed for more than 24 h after the immobilization. The number of adherent tumor cells on aptamer-immobilized macrophages was significantly larger than that of non-immobilized macrophages. Although the number of adherent tumor cells on aptamer-immobilized macrophages was not influenced by the pretreatment of doxorubicin to induce apoptosis in tumor cells, the apoptosis-induced tumor cells were highly phagocytosed by the aptamer-immobilized macrophages. The secretion amount of proinflammatory cytokines (TNF-α and IL-12) from the macrophages was coincident with the phagocytic index, which increased with the phagocytic uptake of tumor cells by the macrophages. In addition, the expression level of the major histocompatibility complex (MHC) class I and II molecules, required for antigen presentation, increased in nucleic acid aptamer-immobilized macrophages. Overall, the surface modification of macrophages with nucleic acid aptamers improved the tumor cell recognition of macrophages, indicating that the combination of cell surface engineering and anticancer drug treatment could constitute a promising strategy for tumor cell elimination.{'id': '30395444'}
+
+6. Dendrites function as the primary sites for synaptic input and integration with impairments in dendritic arborization being associated with dysfunctional neuronal circuitry. Post-mitotic neurons require high levels of basal autophagy to clear cytotoxic materials and autophagic dysfunction under native or cellular stress conditions has been linked to neuronal cell death as well as axo-dendritic degeneration. However, relatively little is known regarding the developmental role of basal autophagy in directing aspects of dendritic arborization or the mechanisms by which the autophagic machinery may be transcriptionally regulated to promote dendritic diversification. We demonstrate that autophagy-related (Atg) genes are positively regulated by the homeodomain transcription factor Cut, and that basal autophagy functions as a downstream effector pathway for Cut-mediated dendritic terminal branching in Drosophila multidendritic (md) sensory neurons. Further, loss of function analyses implicate Atg genes in promoting cell type-specific dendritic arborization and terminal branching, while gain of function studies suggest that excessive autophagy leads to dramatic reductions in dendritic complexity. We demonstrate that the Atg1 initiator kinase interacts with the dual leucine zipper kinase (DLK) pathway by negatively regulating the E3 ubiquitin ligase Highwire and positively regulating the MAPKKK Wallenda. Finally, autophagic induction partially rescues dendritic atrophy defects observed in a model of polyglutamine toxicity. Collectively, these studies implicate transcriptional control of basal autophagy in directing dendritic terminal branching and demonstrate the importance of homeostatic control of autophagic levels for dendritic arbor complexity under native or cellular stress conditions.{'id': '30395636'}
+
+7. V565 is a novel oral anti-tumor necrosis factor (TNF)-α domain antibody being developed for topical treatment of inflammatory bowel disease (IBD) patients. Protein engineering rendered the molecule resistant to intestinal proteases. Here we investigate the formulation of V565 required to provide gastro-protection and enable optimal delivery to the lower intestinal tract in monkeys.Enteric-coated V565 mini-tablets were prepared and dissolution characteristics tested in vitro. Oral dosing of monkeys with enteric-coated mini-tablets containing V565 and methylene blue dye enabled in vivo localization of mini-tablet dissolution. V565 distribution in luminal contents and feces was measured by enzyme-linked immunosorbent assay (ELISA). To mimic transit across the damaged intestinal epithelium seen in IBD patients an intravenous (i.v.) bolus of V565 was given to monkeys and pharmacokinetic parameters of V565 measured in serum and urine by ELISA.Enteric-coated mini-tablets resisted dissolution in 0.1 M HCl, before dissolving in a sustained release fashion at neutral pH. In orally dosed monkeys methylene blue intestinal staining indicated the jejunum and ileum as sites for mini-tablet dissolution. Measurements of V565 in monkey feces confirmed V565 survival through the intestinal tract. Systemic exposure after oral dosing was very low consistent with limited V565 mucosal penetration in healthy monkeys. The rapid clearance of V565 after i.v. dosing was consistent with renal excretion as the primary route for elimination of any V565 reaching the circulation.These results suggest that mini-tablets with a 24% Eudragit enteric coating are suitable for targeted release of orally delivered V565 in the intestine for topical treatment of IBD.{'id': '30395728'}
+
+8. Cytokine production by human peripheral blood mononuclear cells including monocytes, is frequently assessed by measuring secreted cytokines using enzyme linked immunosorbent assay (ELISA), whereby the total concentration of one cytokine of interest is obtained without information regarding the cell type responsible for making the cytokine. Cytokines can be retained inside the cell using protein transport inhibitors. Subsequent analysis by flow cytometry not only identifies the cell type producing the cytokine but can semi-quantitate the amount of cytokine produced by measuring the geometric mean fluorescence intensity (gMFI) and is amenable to analyzing more than one protein associated with the same cell (multiplexing). We hypothesized that a more comprehensive and biologically meaningful cytokine profile could be acquired by measuring both secreted and the retained intracellular cytokines in parallel cultures of magnetic-sorted CD14+ monocytes. Peripheral monocytes were isolated from 18 healthy donors and treated with standardized molecules that stimulate cytokine production; Toll-like receptor (TLR)4 agonist (lipopolysaccharide, LPS) or TLR7/8 agonist (R848). Pro-inflammatory cytokines (interleukin (IL)-6, IL-8 and tumour necrosis factor (TNF)) secreted into the culture medium were measured by ELISA. Parallel cultures were treated with LPS and R848 in the presence of brefeldin A (protein transport inhibitor) and the accumulated intracellular cytokines measured by flow cytometry. Each cytokine (IL-6/IL-8/TNF) gave a unique general pattern when secreted versus intracellular cytokine measurements (frequency and gMFI) were plotted to determine correlation. For monocytes treated with the TLR4 agonist, secreted IL-8 correlated with the frequency of IL-8 positive cells (R = 0.559, p = .016) and not with the amount (gMFI) of IL-8 per cell. In contrast, monocytes treated with the TLR7/8 agonist showed no correlation of secreted IL-8 with the frequency of IL-8 positive cells, but with this treatment secreted IL-6 was correlated with an increase in the frequency of IL-6 positive cells (R = 0.501, p = .034). TNF secretion from monocytes treated with either the TLR4 or TLR7/8 agonist did not correlate with the frequency or gMFI of TNF positive cells. However, there were significant correlations between the TLR4 and TLR7/8 induced TNF response (secreted and gMFI). We conclude that there are fundamental differences in secreted and intracellular IL-6/IL-8/TNF production after monocytes are treated with TLR agonists. Furthermore, secreted and intracellular cytokine analyses are complementary measures that should be used in parallel to explore inflammatory response and cytokine biology.{'id': '30395817'}
+
+9. Mast cells and Kupffer cells secrete interleukin (IL)-1β, interferon (IFN)-γ, and tumor necrosis factor (TNF)-α, which stimulate excess nitric oxide (NO) producing-inducible NO synthase (iNOS). Unlike Kupffer cells, immunoglobulin E-sensitized mast cells elicit sustained NO production. We investigated the participation of mast cell-released NO and cytokine-derived iNOS activation in type 1 allergy-suppressed hepatic cytochrome P450 (CYP) metabolism. Aminoguanidine, a selective iNOS inhibitor, completely suppressed serum nitrate plus nitrite (NOx) concentrations after primary and secondary sensitization of ICR mice and markedly attenuated allergy-suppressed hepatic CYP1A2, CYP2C, CYP2E1, and CYP3A activities. In the liver, primary and secondary sensitization enhanced iNOS-stimulating IFN-γ (5-15-fold) and TNF-α (3-5-fold) mRNA levels more than IL-1β (2-fold) and F4/80-positive Kupffer cell (2-fold) mRNA levels. When mast cell-deficient (-/-) mice were sensitized, hepatic CYP activities were not suppressed. Serum NOx levels in the sensitized -/- mice were similar with those in saline-treated ICR and -/- mice. In the liver of -/- mice, secondary sensitization markedly enhanced mRNA expression of iNOS (20-fold), IFN-γ (15-fold), and TNF-α (3-fold). However, hepatic total NOS activities in -/- mice were not significantly different between saline treatment and sensitization. Similarly, primary and secondary ICR mice did not significantly enhance total NOS activities in the liver and hepatocytes. The total NOS activities observed did not relate to the high levels of iNOS, IFN-γ, and TNF-α mRNA in the liver. Hepatic c-kit-positive mast cells in sensitized ICR mice were maintained at control levels. Therefore, our data suggest that mast cell-released NO participates in type 1 allergy-suppressed CYP1A2, CYP2C, CYP2E1, and CYP3A metabolism.{'id': '30395837'}
+
+10. Chemotherapy has been the standard for cancer therapy, but the non-specific cytotoxicity of chemotherapeutic agents and drug resistance of tumor cells has limited its efficacy. However, multidrug combination therapy and targeting therapy have resulted in enhanced anti-cancer effects and have become increasingly important strategies in clinical applications. In this study, a biotin-/lactobionic acid modified poly(ethylene glycol)-poly(lactic-co-glycolic acid)-poly(ethylene glycol) (BLPP) copolymer was synthesized, and curcumin (CUR) and 5-fluorouracil (5-FU) loaded nanoparticles (BLPPNPs/C+F) were prepared to enhance the treatment of hepatocellular carcinoma (HCC). Blank BLPPNPs were shown to have great biocompatibility via both in vitro and in vivo studies. Good targeting of tumor cells of BLPPNPs was confirmed by flow cytometry, fluorescence microscopy, and biodistribution. The synergistic anticancer effects of BLPPNPs/C+F were demonstrated by cytotoxicity and animal studies, while western blotting was used to further verify the synergistic effect of CUR and 5-FU. The dual-targeting and drug-loaded co-delivery nanosystem demonstrated higher cellular uptake and stronger cytotoxicity for tumor cells. Therefore, these dual-targeting NPs are a promising co-delivery carrier that could be made available for cellular targeting of anticancer drugs to achieve better intracellular delivery and synergistic anticancer efficacy.{'id': '30395829'}
+
+################################################################################
+
+To reveal the role of miR-191 in apoptosis of renal tubular epithelial cells and in the involvement of renal ischemia-reperfusion injury.Renal transplantation rat model was established. miR-191 and Cystathionine-β-synthase (CBS) were measured by qRT-PCR and Western blot. The regulation of miR-191 on CBS was detected by luciferase reporter assay.miR-191 expression in platelets and platelet microvesicles (P-MVs) of patients and model rats was significantly upregulated than that of health and normal rats. Also, mRNA and protein levels of CBS in renal tissues of patients were significantly downregulated than that of health and normal rats. We also found that P-MVs could transfer miR-191 to HK-2 cells. Luciferase reporter assay showed that CBS was a direct target of miR-191. In addition, we proved that P-MVs-secreted miR-191 inhibited CBS expression in HK-2 cells, and P-MVs-secreted miR-191 promoted HK-2 cell apoptosis via CBS. Finally, we verified the trends of CBS expressions, HK-2 cell apoptosis and apoptosis-related proteins in vivo were similar as the trends in vitro.CBS was a direct target of miR-191, and miR-191 could transfer to HK-2 cells via P-MVs to decrease the expression of CBS, thus to promote cell apoptosis and renal IR injury.{'id': '30394829'}            Node protmatches#0
+
+  field    value
+
+  id       93381
+  terms    [Node<terms#254>]
+  text     span(main[22 ... 27]) = 'CBS'
+            Node protmatches#1
+
+  field    value
+
+  id       469720
+  terms    [Node<terms#254>]
+  text     span(main[25 ... 53]) = 'PCR'
+            Node protmatches#2
+
+  field    value
+
+  id       93381
+  terms    [Node<terms#254>]
+  text     span(main[30 ... 04]) = 'CBS'
+            Node protmatches#3
+
+  field    value
+
+  id       705256
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[32 ... se reporter'
+            Node protmatches#4
+
+  field    value
+
+  id       93381
+  terms    [Node<terms#254>]
+  text     span(main[54 ... 44]) = 'CBS'
+            Node protmatches#5
+
+  field    value
+
+  id       283393
+  terms    [Node<terms#254>]
+  text     span(main[69 ... 697]) = 'HK'
+            Node protmatches#6
+
+  field    value
+
+  id       339335
+  terms    [Node<terms#254>]
+  text     span(main[70 ... 'Luciferase'
+            Node protmatches#7
+
+  field    value
+
+  id       93381
+  terms    [Node<terms#254>]
+  text     span(main[74 ... 48]) = 'CBS'
+            Node protmatches#8
+
+  field    value
+
+  id       93381
+  terms    [Node<terms#254>]
+  text     span(main[84 ... 45]) = 'CBS'
+            Node protmatches#9
+
+  field    value
+
+  id       283393
+  terms    [Node<terms#254>]
+  text     span(main[86 ... 862]) = 'HK'
+           Node protmatches#10
+
+  field    value
+
+  id       283393
+  terms    [Node<terms#254>]
+  text     span(main[90 ... 910]) = 'HK'
+           Node protmatches#11
+
+  field    value
+
+  id       93381
+  terms    [Node<terms#254>]
+  text     span(main[93 ... 35]) = 'CBS'
+           Node protmatches#12
+
+  field    value
+
+  id       93381
+  terms    [Node<terms#254>]
+  text     span(main[97 ... 75]) = 'CBS'
+           Node protmatches#13
+
+  field    value
+
+  id       283393
+  terms    [Node<terms#254>]
+  text     span(main[98 ... 991]) = 'HK'
+           Node protmatches#14
+
+  field    value
+
+  id       93381
+  terms    [Node<terms#254>]
+  text     span(main[10 ... 87]) = 'CBS'
+           Node protmatches#15
+
+  field    value
+
+  id       283393
+  terms    [Node<terms#254>]
+  text     span(main[11 ... 152]) = 'HK'
+           Node protmatches#16
+
+  field    value
+
+  id       93381
+  terms    [Node<terms#254>]
+  text     span(main[12 ... 04]) = 'CBS'
+           Node protmatches#17
+
+  field    value
+
+  id       297688
+  terms    [Node<terms#254>]
+  text     span(main[12 ... 249]) = 'IR'
+            Node lysomatches#0
+
+  field    value
+
+  id       0
+  terms    [Node<terms#509>]
+  text     span(main[33 ...  'apoptosis'
+            Node lysomatches#1
+
+  field    value
+
+  id       0
+  terms    [Node<terms#509>]
+  text     span(main[91 ...  'apoptosis'
+            Node lysomatches#2
+
+  field    value
+
+  id       0
+  terms    [Node<terms#509>]
+  text     span(main[99 ...  'apoptosis'
+            Node lysomatches#3
+
+  field    value
+
+  id       0
+  terms    [Node<terms#509>]
+  text     span(main[10 ...  'apoptosis'
+            Node lysomatches#4
+
+  field    value
+
+  id       0
+  terms    [Node<terms#509>]
+  text     span(main[12 ...  'apoptosis'
+--------------------
+
+
+Podocyte apoptosis is considered as the important element that promotes the development and progress of membranous nephropathy (MN). Unfortunately, the underlying mechanism of podocytes apoptosis in MN remains elusive. We compared the renal expressions of miR-130a-5p and M-type phospholipase A2 receptor (PLA2R) between MN patients (n = 30) and 30 controls by qRT-PCR and western blot, respectively. The podocyte damage model in vitro was established by angiotensin II (Ang II, 100 nmol/L) exposure for 24 h. Interaction between miR-130a-5p and PLA2R was determined using dual-luciferase reporter gene assay. MN mice were induced by intravenous injection of cBSA. In this study, miR-130a-5p expression was significantly decreased both in the renal biopsy specimens from MN patients and podocyte cell line AB8/13 following stimulation of Ang II. Overexpressed miR-130a-5p in AB8/13 cells significantly attenuated the Ang II induced-apoptosis in vitro. In contrast, down-regulated miR-130a-5p induced podocyte apoptosis. PLA2R was identified as the target of miR-130a-5p in AB8/13 cells. And up-regulated or down-regulated PLA2R could obviously attenuate the effect of miR-130a-5p overexpression or knockdown on the apoptosis of AB8/13 cells. Furthermore, it was also observed that overexpressed miR-130a-5p by miR-130a-5p agomir could obviously alleviate renal injury in MN mice. In conclusion, decreased miR-130a-5p was contributed to the pathological mechanism of MN through increasing PLA2R expression, which induced podocyte apoptosis.{'id': '30394845'}            Node protmatches#0
+
+  field    value
+
+  id       703295
+  terms    [Node<terms#311>]
+  text     span(main[27 ... ospholipase'
+            Node protmatches#1
+
+  field    value
+
+  id       15984
+  terms    [Node<terms#311>]
+  text     span(main[29 ... 295]) = 'A2'
+            Node protmatches#2
+
+  field    value
+
+  id       462220
+  terms    [Node<terms#311>]
+  text     span(main[30 ... ]) = 'PLA2R'
+            Node protmatches#3
+
+  field    value
+
+  id       469720
+  terms    [Node<terms#311>]
+  text     span(main[36 ... 68]) = 'PCR'
+            Node protmatches#4
+
+  field    value
+
+  id       713206
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[45 ... iotensin II'
+            Node protmatches#5
+
+  field    value
+
+  id       33667
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[47 ... ) = 'Ang II'
+            Node protmatches#6
+
+  field    value
+
+  id       462220
+  terms    [Node<terms#311>]
+  text     span(main[54 ... ]) = 'PLA2R'
+            Node protmatches#7
+
+  field    value
+
+  id       705614
+  terms    [3 nodes fro ... ayer: terms]
+  text     span(main[57 ... porter gene'
+            Node protmatches#8
+
+  field    value
+
+  id       33667
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[83 ... ) = 'Ang II'
+            Node protmatches#9
+
+  field    value
+
+  id       33667
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[91 ... ) = 'Ang II'
+           Node protmatches#10
+
+  field    value
+
+  id       462220
+  terms    [Node<terms#311>]
+  text     span(main[10 ... ]) = 'PLA2R'
+           Node protmatches#11
+
+  field    value
+
+  id       462220
+  terms    [Node<terms#311>]
+  text     span(main[11 ... ]) = 'PLA2R'
+           Node protmatches#12
+
+  field    value
+
+  id       462220
+  terms    [Node<terms#311>]
+  text     span(main[14 ... ]) = 'PLA2R'
+            Node lysomatches#0
+
+  field    value
+
+  id       0
+  terms    [Node<terms#623>]
+  text     span(main[9: ...  'apoptosis'
+            Node lysomatches#1
+
+  field    value
+
+  id       0
+  terms    [Node<terms#623>]
+  text     span(main[18 ...  'apoptosis'
+            Node lysomatches#2
+
+  field    value
+
+  id       0
+  terms    [Node<terms#623>]
+  text     span(main[93 ...  'apoptosis'
+            Node lysomatches#3
+
+  field    value
+
+  id       0
+  terms    [Node<terms#623>]
+  text     span(main[10 ...  'apoptosis'
+            Node lysomatches#4
+
+  field    value
+
+  id       0
+  terms    [Node<terms#623>]
+  text     span(main[12 ...  'apoptosis'
+            Node lysomatches#5
+
+  field    value
+
+  id       0
+  terms    [Node<terms#623>]
+  text     span(main[15 ...  'apoptosis'
+--------------------
+
+Epithelial ovarian cancer (EOC) is the most fatal gynecologic malignancy due to its late diagnosis and lack of curative therapy. The antimalaria compound artemisinin and its derivatives, such as artesunate (ART) and dihydroartemisinin (DHA), have proven to be potent anticancer drugs and act through various anticancer mechanisms. To identify novel targets of artemisinin derivatives in EOC cells, we investigated the effects of ART and DHA on SKOV3 and primary EOC cell growth via CCK-8 assay. Both ART and DHA inhibited EOC cell growth. A cell cycle distribution analysis showed that ART and DHA caused G2/M cell cycle arrest. Moreover, ART and DHA induced autophagy in EOC cells, whereas autophagy inhibitors reversed the cell growth inhibition and cell cycle arrest induced by ART and DHA. Western blot analysis showed that ART and DHA also suppressed the cell cycle-related NF-κB-signaling pathway in EOC cells. These data suggest that artemisinin derivatives induce autophagy, block the cell cycle, and inhibit cell growth in EOC cells. Our research provides new targets for artemisinin derivatives for EOC treatment.{'id': '30395153'}            Node protmatches#0
+
+  field    value
+
+  id       17063
+  terms    [Node<terms#202>]
+  text     span(main[28 ... 91]) = 'act'
+            Node protmatches#1
+
+  field    value
+
+  id       98432
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[48 ... ]) = 'CCK-8'
+            Node protmatches#2
+
+  field    value
+
+  id       75503
+  terms    [Node<terms#202>]
+  text     span(main[60 ... 607]) = 'G2'
+            Node protmatches#3
+
+  field    value
+
+  id       704971
+  terms    [Node<terms#202>]
+  text     span(main[87 ... 881]) = 'NF'
+            Node lysomatches#0
+
+  field    value
+
+  id       29
+  terms    [Node<terms#405>]
+  text     span(main[65 ...  'autophagy'
+            Node lysomatches#1
+
+  field    value
+
+  id       29
+  terms    [Node<terms#405>]
+  text     span(main[69 ...  'autophagy'
+            Node lysomatches#2
+
+  field    value
+
+  id       29
+  terms    [Node<terms#405>]
+  text     span(main[97 ...  'autophagy'
+--------------------
+
+
+Rottlerin as a natural agent, which is isolated from Mallotus philippinensis, has been identified to play a critical role in tumor inhibition. However, the molecular mechanism of rottlerin-mediated anti-tumor activity is still ambiguous. It has been reported that EZH2 exhibits oncogenic functions in a variety of human cancers. Therefore, inhibition of EZH2 could be a promising strategy for the treatment of human cancers. In this study, we aim to explore whether rottlerin could inhibit tumorigenesis via suppression of EZH2 in prostate cancer cells. Multiple approaches such as FACS, Transwell invasion assay, RT-PCR, Western blotting, and transfection were performed to determine our aim. We found that rottlerin treatment led to inhibition of cell growth, migration and invasion, but induction of apoptosis in prostate cancer cells. Importantly, we defined that rottlerin decreased the expression of EZH2 and H3K27me3 in prostate cancer cells. Moreover, overexpression of EZH2 abrogated the rottlerin-induced inhibition of cell growth, migration, and invasion in prostate cancer cells. Consistently, down-regulation of EZH2 enhanced rottlerin-triggered anti-tumor function. Collectively, our work demonstrated that rottlerin exerted its tumor suppressive function via inhibition of EZH2 expression in prostate cancer cells. Our findings indicated that rottlerin might be a potential therapeutic compound for treating patients with prostate cancer.{'id': '30394832'}            Node protmatches#0
+
+  field    value
+
+  id       207785
+  terms    [Node<terms#246>]
+  text     span(main[26 ... 8]) = 'EZH2'
+            Node protmatches#1
+
+  field    value
+
+  id       207785
+  terms    [Node<terms#246>]
+  text     span(main[35 ... 8]) = 'EZH2'
+            Node protmatches#2
+
+  field    value
+
+  id       207785
+  terms    [Node<terms#246>]
+  text     span(main[52 ... 7]) = 'EZH2'
+            Node protmatches#3
+
+  field    value
+
+  id       468196
+  terms    [Node<terms#246>]
+  text     span(main[61 ... 616]) = 'RT'
+            Node protmatches#4
+
+  field    value
+
+  id       469720
+  terms    [Node<terms#246>]
+  text     span(main[61 ... 20]) = 'PCR'
+            Node protmatches#5
+
+  field    value
+
+  id       207785
+  terms    [Node<terms#246>]
+  text     span(main[90 ... 0]) = 'EZH2'
+            Node protmatches#6
+
+  field    value
+
+  id       207785
+  terms    [Node<terms#246>]
+  text     span(main[97 ... 2]) = 'EZH2'
+            Node protmatches#7
+
+  field    value
+
+  id       207785
+  terms    [Node<terms#246>]
+  text     span(main[11 ... 9]) = 'EZH2'
+            Node protmatches#8
+
+  field    value
+
+  id       207785
+  terms    [Node<terms#246>]
+  text     span(main[12 ... 2]) = 'EZH2'
+            Node lysomatches#0
+
+  field    value
+
+  id       0
+  terms    [Node<terms#493>]
+  text     span(main[80 ...  'apoptosis'
+--------------------
+
+
+Antigen-presenting cells play a dominant role in cancer immunotherapy. Tumor cells, however, can still resort to several mechanisms of immune evasion that ultimately lead to the development of tumor tissues. In the current study, we performed surface modification of live macrophages with nucleic acid aptamers with the aim to enhance their affinity for tumor cells. Intercellular adhesion of tumor cells to surface-modified macrophages and the functions of the macrophages when in contact with tumor cells were investigated. To immobilize thiol-terminated nucleic acid aptamers that showed high affinity for the membrane protein of the tumor cells, methacryloyl groups were delivered into the sialic acids of the macrophages via metabolic glycoengineering (MGE). The proposed surface modification was cytocompatible and did not induce any undesirable activation of macrophages. According to the cell proliferation assay, the density of aptamers immobilized on a macrophage was found to decrease over time. However, the presence of aptamers on the cell surface was observed for more than 24 h after the immobilization. The number of adherent tumor cells on aptamer-immobilized macrophages was significantly larger than that of non-immobilized macrophages. Although the number of adherent tumor cells on aptamer-immobilized macrophages was not influenced by the pretreatment of doxorubicin to induce apoptosis in tumor cells, the apoptosis-induced tumor cells were highly phagocytosed by the aptamer-immobilized macrophages. The secretion amount of proinflammatory cytokines (TNF-α and IL-12) from the macrophages was coincident with the phagocytic index, which increased with the phagocytic uptake of tumor cells by the macrophages. In addition, the expression level of the major histocompatibility complex (MHC) class I and II molecules, required for antigen presentation, increased in nucleic acid aptamer-immobilized macrophages. Overall, the surface modification of macrophages with nucleic acid aptamers improved the tumor cell recognition of macrophages, indicating that the combination of cell surface engineering and anticancer drug treatment could constitute a promising strategy for tumor cell elimination.{'id': '30395444'}            Node protmatches#0
+
+  field    value
+
+  id       629547
+  terms    [Node<terms#362>]
+  text     span(main[15 ... 78]) = 'TNF'
+            Node protmatches#1
+
+  field    value
+
+  id       702737
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[15 ... ]) = 'IL-12'
+            Node protmatches#2
+
+  field    value
+
+  id       710091
+  terms    [Node<terms#362>]
+  text     span(main[18 ... 11]) = 'MHC'
+            Node lysomatches#0
+
+  field    value
+
+  id       0
+  terms    [Node<terms#725>]
+  text     span(main[13 ...  'apoptosis'
+            Node lysomatches#1
+
+  field    value
+
+  id       0
+  terms    [Node<terms#725>]
+  text     span(main[14 ...  'apoptosis'
+--------------------
+
+Dendrites function as the primary sites for synaptic input and integration with impairments in dendritic arborization being associated with dysfunctional neuronal circuitry. Post-mitotic neurons require high levels of basal autophagy to clear cytotoxic materials and autophagic dysfunction under native or cellular stress conditions has been linked to neuronal cell death as well as axo-dendritic degeneration. However, relatively little is known regarding the developmental role of basal autophagy in directing aspects of dendritic arborization or the mechanisms by which the autophagic machinery may be transcriptionally regulated to promote dendritic diversification. We demonstrate that autophagy-related (Atg) genes are positively regulated by the homeodomain transcription factor Cut, and that basal autophagy functions as a downstream effector pathway for Cut-mediated dendritic terminal branching in Drosophila multidendritic (md) sensory neurons. Further, loss of function analyses implicate Atg genes in promoting cell type-specific dendritic arborization and terminal branching, while gain of function studies suggest that excessive autophagy leads to dramatic reductions in dendritic complexity. We demonstrate that the Atg1 initiator kinase interacts with the dual leucine zipper kinase (DLK) pathway by negatively regulating the E3 ubiquitin ligase Highwire and positively regulating the MAPKKK Wallenda. Finally, autophagic induction partially rescues dendritic atrophy defects observed in a model of polyglutamine toxicity. Collectively, these studies implicate transcriptional control of basal autophagy in directing dendritic terminal branching and demonstrate the importance of homeostatic control of autophagic levels for dendritic arbor complexity under native or cellular stress conditions.{'id': '30395636'}            Node protmatches#0
+
+  field    value
+
+  id       710608
+  terms    [3 nodes fro ... ayer: terms]
+  text     span(main[75 ... tion factor'
+            Node protmatches#1
+
+  field    value
+
+  id       326313
+  terms    [Node<terms#266>]
+  text     span(main[13 ... 04]) = 'DLK'
+            Node protmatches#2
+
+  field    value
+
+  id       498008
+  terms    [3 nodes fro ... ayer: terms]
+  text     span(main[13 ... itin ligase'
+            Node lysomatches#0
+
+  field    value
+
+  id       29
+  terms    [Node<terms#533>]
+  text     span(main[22 ...  'autophagy'
+            Node lysomatches#1
+
+  field    value
+
+  id       53
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[36 ... 'cell death'
+            Node lysomatches#2
+
+  field    value
+
+  id       29
+  terms    [Node<terms#533>]
+  text     span(main[48 ...  'autophagy'
+            Node lysomatches#3
+
+  field    value
+
+  id       29
+  terms    [Node<terms#533>]
+  text     span(main[69 ...  'autophagy'
+            Node lysomatches#4
+
+  field    value
+
+  id       29
+  terms    [Node<terms#533>]
+  text     span(main[80 ...  'autophagy'
+            Node lysomatches#5
+
+  field    value
+
+  id       29
+  terms    [Node<terms#533>]
+  text     span(main[11 ...  'autophagy'
+            Node lysomatches#6
+
+  field    value
+
+  id       29
+  terms    [Node<terms#533>]
+  text     span(main[16 ...  'autophagy'
+--------------------
+
+
+V565 is a novel oral anti-tumor necrosis factor (TNF)-α domain antibody being developed for topical treatment of inflammatory bowel disease (IBD) patients. Protein engineering rendered the molecule resistant to intestinal proteases. Here we investigate the formulation of V565 required to provide gastro-protection and enable optimal delivery to the lower intestinal tract in monkeys.Enteric-coated V565 mini-tablets were prepared and dissolution characteristics tested in vitro. Oral dosing of monkeys with enteric-coated mini-tablets containing V565 and methylene blue dye enabled in vivo localization of mini-tablet dissolution. V565 distribution in luminal contents and feces was measured by enzyme-linked immunosorbent assay (ELISA). To mimic transit across the damaged intestinal epithelium seen in IBD patients an intravenous (i.v.) bolus of V565 was given to monkeys and pharmacokinetic parameters of V565 measured in serum and urine by ELISA.Enteric-coated mini-tablets resisted dissolution in 0.1 M HCl, before dissolving in a sustained release fashion at neutral pH. In orally dosed monkeys methylene blue intestinal staining indicated the jejunum and ileum as sites for mini-tablet dissolution. Measurements of V565 in monkey feces confirmed V565 survival through the intestinal tract. Systemic exposure after oral dosing was very low consistent with limited V565 mucosal penetration in healthy monkeys. The rapid clearance of V565 after i.v. dosing was consistent with renal excretion as the primary route for elimination of any V565 reaching the circulation.These results suggest that mini-tablets with a 24% Eudragit enteric coating are suitable for targeted release of orally delivered V565 in the intestine for topical treatment of IBD.{'id': '30395728'}          Node protmatches#0
+
+  field    value
+
+  id       629547
+  terms    [Node<terms#300>]
+  text     span(main[49:52]) = 'TNF'
+            Node protmatches#1
+
+  field    value
+
+  id       420177
+  terms    [Node<terms#300>]
+  text     span(main[57 ... 74]) = 'dye'
+            Node lysomatches#0
+
+  field    value
+
+  id       32
+  terms    [Node<terms#601>]
+  text     span(main[32 ... = 'necrosis'
+--------------------
+
+
+Cytokine production by human peripheral blood mononuclear cells including monocytes, is frequently assessed by measuring secreted cytokines using enzyme linked immunosorbent assay (ELISA), whereby the total concentration of one cytokine of interest is obtained without information regarding the cell type responsible for making the cytokine. Cytokines can be retained inside the cell using protein transport inhibitors. Subsequent analysis by flow cytometry not only identifies the cell type producing the cytokine but can semi-quantitate the amount of cytokine produced by measuring the geometric mean fluorescence intensity (gMFI) and is amenable to analyzing more than one protein associated with the same cell (multiplexing). We hypothesized that a more comprehensive and biologically meaningful cytokine profile could be acquired by measuring both secreted and the retained intracellular cytokines in parallel cultures of magnetic-sorted CD14+ monocytes. Peripheral monocytes were isolated from 18 healthy donors and treated with standardized molecules that stimulate cytokine production; Toll-like receptor (TLR)4 agonist (lipopolysaccharide, LPS) or TLR7/8 agonist (R848). Pro-inflammatory cytokines (interleukin (IL)-6, IL-8 and tumour necrosis factor (TNF)) secreted into the culture medium were measured by ELISA. Parallel cultures were treated with LPS and R848 in the presence of brefeldin A (protein transport inhibitor) and the accumulated intracellular cytokines measured by flow cytometry. Each cytokine (IL-6/IL-8/TNF) gave a unique general pattern when secreted versus intracellular cytokine measurements (frequency and gMFI) were plotted to determine correlation. For monocytes treated with the TLR4 agonist, secreted IL-8 correlated with the frequency of IL-8 positive cells (R = 0.559, p = .016) and not with the amount (gMFI) of IL-8 per cell. In contrast, monocytes treated with the TLR7/8 agonist showed no correlation of secreted IL-8 with the frequency of IL-8 positive cells, but with this treatment secreted IL-6 was correlated with an increase in the frequency of IL-6 positive cells (R = 0.501, p = .034). TNF secretion from monocytes treated with either the TLR4 or TLR7/8 agonist did not correlate with the frequency or gMFI of TNF positive cells. However, there were significant correlations between the TLR4 and TLR7/8 induced TNF response (secreted and gMFI). We conclude that there are fundamental differences in secreted and intracellular IL-6/IL-8/TNF production after monocytes are treated with TLR agonists. Furthermore, secreted and intracellular cytokine analyses are complementary measures that should be used in parallel to explore inflammatory response and cytokine biology.{'id': '30395817'}            Node protmatches#0
+
+  field    value
+
+  id       98780
+  terms    [Node<terms#489>]
+  text     span(main[94 ... 7]) = 'CD14'
+            Node protmatches#1
+
+  field    value
+
+  id       635478
+  terms    [Node<terms#489>]
+  text     span(main[11 ... 52]) = 'LPS'
+            Node protmatches#2
+
+  field    value
+
+  id       626045
+  terms    [Node<terms#489>]
+  text     span(main[11 ... 1]) = 'TLR7'
+            Node protmatches#3
+
+  field    value
+
+  id       712688
+  terms    [Node<terms#489>]
+  text     span(main[11 ... 83]) = 'Pro'
+            Node protmatches#4
+
+  field    value
+
+  id       294371
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[12 ... 2]) = 'IL-8'
+            Node protmatches#5
+
+  field    value
+
+  id       629547
+  terms    [Node<terms#489>]
+  text     span(main[12 ... 64]) = 'TNF'
+            Node protmatches#6
+
+  field    value
+
+  id       635478
+  terms    [Node<terms#489>]
+  text     span(main[13 ... 63]) = 'LPS'
+            Node protmatches#7
+
+  field    value
+
+  id       294209
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[15 ... 5]) = 'IL-6'
+            Node protmatches#8
+
+  field    value
+
+  id       294371
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[15 ... 0]) = 'IL-8'
+            Node protmatches#9
+
+  field    value
+
+  id       629547
+  terms    [Node<terms#489>]
+  text     span(main[15 ... 34]) = 'TNF'
+           Node protmatches#10
+
+  field    value
+
+  id       625986
+  terms    [Node<terms#489>]
+  text     span(main[17 ... 8]) = 'TLR4'
+           Node protmatches#11
+
+  field    value
+
+  id       294371
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[17 ... 1]) = 'IL-8'
+           Node protmatches#12
+
+  field    value
+
+  id       294371
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[17 ... 9]) = 'IL-8'
+           Node protmatches#13
+
+  field    value
+
+  id       294371
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[18 ... 5]) = 'IL-8'
+           Node protmatches#14
+
+  field    value
+
+  id       448698
+  terms    [Node<terms#489>]
+  text     span(main[18 ... 59]) = 'per'
+           Node protmatches#15
+
+  field    value
+
+  id       626045
+  terms    [Node<terms#489>]
+  text     span(main[19 ... 0]) = 'TLR7'
+           Node protmatches#16
+
+  field    value
+
+  id       294371
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[19 ... 9]) = 'IL-8'
+           Node protmatches#17
+
+  field    value
+
+  id       294371
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[19 ... 6]) = 'IL-8'
+           Node protmatches#18
+
+  field    value
+
+  id       294209
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[20 ... 0]) = 'IL-6'
+           Node protmatches#19
+
+  field    value
+
+  id       294209
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[20 ... 7]) = 'IL-6'
+           Node protmatches#20
+
+  field    value
+
+  id       629547
+  terms    [Node<terms#489>]
+  text     span(main[21 ... 39]) = 'TNF'
+           Node protmatches#21
+
+  field    value
+
+  id       625986
+  terms    [Node<terms#489>]
+  text     span(main[21 ... 3]) = 'TLR4'
+           Node protmatches#22
+
+  field    value
+
+  id       626045
+  terms    [Node<terms#489>]
+  text     span(main[21 ... 1]) = 'TLR7'
+           Node protmatches#23
+
+  field    value
+
+  id       629547
+  terms    [Node<terms#489>]
+  text     span(main[22 ... 63]) = 'TNF'
+           Node protmatches#24
+
+  field    value
+
+  id       625986
+  terms    [Node<terms#489>]
+  text     span(main[23 ... 1]) = 'TLR4'
+           Node protmatches#25
+
+  field    value
+
+  id       626045
+  terms    [Node<terms#489>]
+  text     span(main[23 ... 0]) = 'TLR7'
+           Node protmatches#26
+
+  field    value
+
+  id       629547
+  terms    [Node<terms#489>]
+  text     span(main[23 ... 64]) = 'TNF'
+           Node protmatches#27
+
+  field    value
+
+  id       294209
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[24 ... 0]) = 'IL-6'
+           Node protmatches#28
+
+  field    value
+
+  id       294371
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[24 ... 5]) = 'IL-8'
+           Node protmatches#29
+
+  field    value
+
+  id       629547
+  terms    [Node<terms#489>]
+  text     span(main[24 ... 89]) = 'TNF'
+            Node lysomatches#0
+
+  field    value
+
+  id       32
+  terms    [Node<terms#979>]
+  text     span(main[12 ... = 'necrosis'
+--------------------
+
+Chemotherapy has been the standard for cancer therapy, but the non-specific cytotoxicity of chemotherapeutic agents and drug resistance of tumor cells has limited its efficacy. However, multidrug combination therapy and targeting therapy have resulted in enhanced anti-cancer effects and have become increasingly important strategies in clinical applications. In this study, a biotin-/lactobionic acid modified poly(ethylene glycol)-poly(lactic-co-glycolic acid)-poly(ethylene glycol) (BLPP) copolymer was synthesized, and curcumin (CUR) and 5-fluorouracil (5-FU) loaded nanoparticles (BLPPNPs/C+F) were prepared to enhance the treatment of hepatocellular carcinoma (HCC). Blank BLPPNPs were shown to have great biocompatibility via both in vitro and in vivo studies. Good targeting of tumor cells of BLPPNPs was confirmed by flow cytometry, fluorescence microscopy, and biodistribution. The synergistic anticancer effects of BLPPNPs/C+F were demonstrated by cytotoxicity and animal studies, while western blotting was used to further verify the synergistic effect of CUR and 5-FU. The dual-targeting and drug-loaded co-delivery nanosystem demonstrated higher cellular uptake and stronger cytotoxicity for tumor cells. Therefore, these dual-targeting NPs are a promising co-delivery carrier that could be made available for cellular targeting of anticancer drugs to achieve better intracellular delivery and synergistic anticancer efficacy.{'id': '30395829'}            Node protmatches#0
+
+  field    value
+
+  id       705049
+  terms    [Node<terms#259>]
+  text     span(main[37 ... ) = 'biotin'
+            Node protmatches#1
+
+  field    value
+
+  id       268872
+  terms    [Node<terms#259>]
+  text     span(main[66 ... 70]) = 'HCC'
+            Node lysomatches#0
+
+  field    value
+
+  id       64
+  terms    [Node<terms#519>]
+  text     span(main[76 ... ytotoxicity'
+            Node lysomatches#1
+
+  field    value
+
+  id       64
+  terms    [Node<terms#519>]
+  text     span(main[95 ... ytotoxicity'
+            Node lysomatches#2
+
+  field    value
+
+  id       64
+  terms    [Node<terms#519>]
+  text     span(main[11 ... ytotoxicity'
+---------------------
+
+
+Mast cells and Kupffer cells secrete interleukin (IL)-1β, interferon (IFN)-γ, and tumor necrosis factor (TNF)-α, which stimulate excess nitric oxide (NO) producing-inducible NO synthase (iNOS). Unlike Kupffer cells, immunoglobulin E-sensitized mast cells elicit sustained NO production. We investigated the participation of mast cell-released NO and cytokine-derived iNOS activation in type 1 allergy-suppressed hepatic cytochrome P450 (CYP) metabolism. Aminoguanidine, a selective iNOS inhibitor, completely suppressed serum nitrate plus nitrite (NOx) concentrations after primary and secondary sensitization of ICR mice and markedly attenuated allergy-suppressed hepatic CYP1A2, CYP2C, CYP2E1, and CYP3A activities. In the liver, primary and secondary sensitization enhanced iNOS-stimulating IFN-γ (5-15-fold) and TNF-α (3-5-fold) mRNA levels more than IL-1β (2-fold) and F4/80-positive Kupffer cell (2-fold) mRNA levels. When mast cell-deficient (-/-) mice were sensitized, hepatic CYP activities were not suppressed. Serum NOx levels in the sensitized -/- mice were similar with those in saline-treated ICR and -/- mice. In the liver of -/- mice, secondary sensitization markedly enhanced mRNA expression of iNOS (20-fold), IFN-γ (15-fold), and TNF-α (3-fold). However, hepatic total NOS activities in -/- mice were not significantly different between saline treatment and sensitization. Similarly, primary and secondary ICR mice did not significantly enhance total NOS activities in the liver and hepatocytes. The total NOS activities observed did not relate to the high levels of iNOS, IFN-γ, and TNF-α mRNA in the liver. Hepatic c-kit-positive mast cells in sensitized ICR mice were maintained at control levels. Therefore, our data suggest that mast cell-released NO participates in type 1 allergy-suppressed CYP1A2, CYP2C, CYP2E1, and CYP3A metabolism.{'id': '30395837'}            Node protmatches#0
+
+  field    value
+
+  id       708861
+  terms    [Node<terms#399>]
+  text     span(main[58 ... 'interferon'
+          Node protmatches#1
+
+  field    value
+
+  id       290479
+  terms    [Node<terms#399>]
+  text     span(main[70:73]) = 'IFN'
+            Node protmatches#2
+
+  field    value
+
+  id       712539
+  terms    [3 nodes fro ... ayer: terms]
+  text     span(main[82 ... osis factor'
+            Node protmatches#3
+
+  field    value
+
+  id       629547
+  terms    [Node<terms#399>]
+  text     span(main[10 ... 08]) = 'TNF'
+            Node protmatches#4
+
+  field    value
+
+  id       405091
+  terms    [Node<terms#399>]
+  text     span(main[18 ... 1]) = 'iNOS'
+            Node protmatches#5
+
+  field    value
+
+  id       707360
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[21 ... oglobulin E'
+            Node protmatches#6
+
+  field    value
+
+  id       405091
+  terms    [Node<terms#399>]
+  text     span(main[36 ... 1]) = 'iNOS'
+            Node protmatches#7
+
+  field    value
+
+  id       252971
+  terms    [Node<terms#399>]
+  text     span(main[43 ... 5]) = 'P450'
+            Node protmatches#8
+
+  field    value
+
+  id       159707
+  terms    [Node<terms#399>]
+  text     span(main[43 ... 40]) = 'CYP'
+            Node protmatches#9
+
+  field    value
+
+  id       405091
+  terms    [Node<terms#399>]
+  text     span(main[48 ... 6]) = 'iNOS'
+           Node protmatches#10
+
+  field    value
+
+  id       130746
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[67 ... ) = 'CYP1A2'
+           Node protmatches#11
+
+  field    value
+
+  id       131618
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[68 ... ) = 'CYP2E1'
+           Node protmatches#12
+
+  field    value
+
+  id       405091
+  terms    [Node<terms#399>]
+  text     span(main[77 ... 1]) = 'iNOS'
+           Node protmatches#13
+
+  field    value
+
+  id       290479
+  terms    [Node<terms#399>]
+  text     span(main[79 ... 97]) = 'IFN'
+           Node protmatches#14
+
+  field    value
+
+  id       629547
+  terms    [Node<terms#399>]
+  text     span(main[81 ... 19]) = 'TNF'
+           Node protmatches#15
+
+  field    value
+
+  id       706363
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[85 ... 9]) = 'IL-1'
+           Node protmatches#16
+
+  field    value
+
+  id       434953
+  terms    [Node<terms#399>]
+  text     span(main[87 ... 876]) = 'F4'
+           Node protmatches#17
+
+  field    value
+
+  id       159707
+  terms    [Node<terms#399>]
+  text     span(main[98 ... 88]) = 'CYP'
+           Node protmatches#18
+
+  field    value
+
+  id       405091
+  terms    [Node<terms#399>]
+  text     span(main[12 ... 6]) = 'iNOS'
+           Node protmatches#19
+
+  field    value
+
+  id       290479
+  terms    [Node<terms#399>]
+  text     span(main[12 ... 31]) = 'IFN'
+           Node protmatches#20
+
+  field    value
+
+  id       629547
+  terms    [Node<terms#399>]
+  text     span(main[12 ... 52]) = 'TNF'
+           Node protmatches#21
+
+  field    value
+
+  id       405318
+  terms    [Node<terms#399>]
+  text     span(main[12 ... 91]) = 'NOS'
+           Node protmatches#22
+
+  field    value
+
+  id       405318
+  terms    [Node<terms#399>]
+  text     span(main[14 ... 73]) = 'NOS'
+           Node protmatches#23
+
+  field    value
+
+  id       405318
+  terms    [Node<terms#399>]
+  text     span(main[15 ... 28]) = 'NOS'
+           Node protmatches#24
+
+  field    value
+
+  id       405091
+  terms    [Node<terms#399>]
+  text     span(main[15 ... 0]) = 'iNOS'
+           Node protmatches#25
+
+  field    value
+
+  id       290479
+  terms    [Node<terms#399>]
+  text     span(main[15 ... 95]) = 'IFN'
+           Node protmatches#26
+
+  field    value
+
+  id       629547
+  terms    [Node<terms#399>]
+  text     span(main[16 ... 06]) = 'TNF'
+           Node protmatches#27
+
+  field    value
+
+  id       710423
+  terms    [3 nodes fro ... ayer: terms]
+  text     span(main[16 ... ]) = 'c-kit'
+           Node protmatches#28
+
+  field    value
+
+  id       130746
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[18 ... ) = 'CYP1A2'
+           Node protmatches#29
+
+  field    value
+
+  id       131618
+  terms    [2 nodes fro ... ayer: terms]
+  text     span(main[18 ... ) = 'CYP2E1'
+            Node lysomatches#0
+
+  field    value
+
+  id       32
+  terms    [Node<terms#799>]
+  text     span(main[88 ... = 'necrosis'
+--------------------
