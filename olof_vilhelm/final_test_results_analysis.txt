@@ -17,7 +17,7 @@ after the '|' character.
 	374
 	695
 	779			| Datum contains 1 TP and 1 ?FP relations
-	845
+	846
 	994
 	1219
 	1221
@@ -26,7 +26,7 @@ after the '|' character.
 	1857
 	1913
 
-(31) False Positives [FP]
+(32) False Positives [FP]
 
 	(11) Too long to be useful
 		36
@@ -49,12 +49,13 @@ after the '|' character.
 		1407
 		1709
 
-	(10) Incorrect entities
+	(11) Incorrect entities
 		75
 		165		| Datum contains 1 TP and 1 FP relations
 		235
 		614
 		980
+		959
 		1014
 		1545	| Has a coreference where the origin isn't included in the datum, but "to-entity" is still obviously incorrect.
 		1724
@@ -69,9 +70,9 @@ after the '|' character.
 		1977
 		2047
 
-(20) Unclear False positives [?FP]
+(19) Questionable False positives [?FP]
 
-	(14) Relation probably should've been included in test set
+	(13) Possible miss in BioInfer
 		54		| 2 T relations
 		237		| 2 T relations
 		277		| 0 T relations
@@ -79,7 +80,6 @@ after the '|' character.
 		563		| 1 T relations
 		779		| 14 T relations	| Datum contains 1 TP and 1 ?FP relations
 		897		| 4 T relations
-		959		| 0 T relations
 		1017	| 4 T relations
 		1020	| 0 T relations
 		1105	| 9 T relations
@@ -106,41 +106,41 @@ CALCULATION METHODS:
 
 RESULTS:
 
-	PESSIMIST INTERPRETATION:
-		Interpret ?FP as FP:
-		Add 20 to FP relations.
-		15 TP, 51 FP, 2757 FN, 2772 True relations
-		
-		Precision:	0.227272727
-		Recall:		0.005411255
-		F1-score:	0.010570823
-
-	OPTIMIST INTERPRETATION:
-		Interpret all ?FP as TP
-		Add 22 relations to TP and 19 True relations (See note on datum with id 759).
-
-		37 TP, 31 FP, 2754 FN, 2791 True relations.
-
-		Precision:	0.544117647
-		Recall:		0.013256897
-		F1-score:	0.025883175
-
 	DISMISSIVE INTERPRETATION:
 		Remove all datum containing ?FP.
 		Remove 1 TP and 50 T relations.
 
-		14 TP, 31 FP, 2708 FN, 2722 True relations.
+		14 TP, 32 FP, 2708 FN, 2722 True relations.
 
-		Precision:	0.311111111
+		Precision:	0.304347826
 		Recall:		0.005143277
-		F1-score:	0.010119262
+		F1-score:	0.010115606
+
+	PESSIMIST INTERPRETATION:
+		Interpret ?FP as FP:
+		Add 19 to FP relations.
+		15 TP, 51 FP, 2757 FN, 2772 True relations
+		
+		Precision:	0.227272727
+		Recall:		0.005411255
+		F1-score:	0.010570824
+
+	OPTIMIST INTERPRETATION:
+		Interpret all ?FP as TP
+		Add 21 relations to TP and 19 True relations (See note on datum with id 759).
+
+		36 TP, 32 FP, 2754 FN, 2790 True relations.
+
+		Precision:	0.529411764
+		Recall:		0.012903225
+		F1-score:	0.025192442
 
 	DISMISSIVE SLIGHT-OPTIMIST INTERPRETATION
 		Interpret category 'Relation probably should've been included in test set' as TP.
-		Add those 14 to True relations. Remove datum from other ?FP categories.
+		Add those 13 to True relations. Remove 5 T relations from the other ?FP categories.
 
-		29 TP, 31 FP, 2708 FN, 2781 True relations.
+		28 TP, 32 FP, 2752 FN, 2780 True relations.
 
-		Precision:	0.483333333
-		Recall:		0.010427903
-		F1-score:	0.020415345
+		Precision:	0.466666666
+		Recall:		0.010071942
+		F1-score:	0.019718309

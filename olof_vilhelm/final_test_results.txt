@@ -256,7 +256,7 @@ ACTUAL RELATIONS:
 cofilin - binding - actin
 
 PREDICTED RELATIONS
-Activation  - induces - dephosphorylation of cofilin ( an actin / PIP2-binding protein ) and its translocation to plasma membranes in leukocytes]. [?FP]
+Activation  - induces - dephosphorylation of cofilin ( an actin / PIP2-binding protein ) and its translocation to plasma membranes in leukocytes]. [FP]
 
 1 predicted relations found.
 
@@ -321,7 +321,7 @@ Addition of EGTA (3 mM) to the extracellular media completely inhibited the clea
 ACTUAL RELATIONS:
 
 PREDICTED RELATIONS
-Addition of EGTA to the extracellular media  - inhibited - the cleavage of actin - binding protein , talin , and pp60src [?FP]
+Addition of EGTA to the extracellular media  - inhibited - the cleavage of actin - binding protein , talin , and pp60src [FP]
 
 1 predicted relations found.
 
@@ -475,7 +475,7 @@ protein kinase - activity by - LIMK2
 LIMK2 - activities for phosphorylation - cofilin
 
 PREDICTED RELATIONS
-replacement by glutamate  - enhanced - the protein kinase activity and stress fiber formation [?FP]
+replacement by glutamate  - enhanced - the protein kinase activity and stress fiber formation [FP]
 
 1 predicted relations found.
 
@@ -881,7 +881,7 @@ A pre-treatment of cells with SGE from partially fed ticks in amounts correspond
 ACTUAL RELATIONS:
 
 PREDICTED RELATIONS
-A pre - treatment of cells with SGE from partially fed ticks in amounts corresponding to 1 or 3 salivary glands  - increased - the level of both viral nucleocapsid ( N ) protein and phosphoprotein ( P ) [?FP]
+A pre - treatment of cells with SGE from partially fed ticks in amounts corresponding to 1 or 3 salivary glands  - increased - the level of both viral nucleocapsid ( N ) protein and phosphoprotein ( P ) [FP]
 
 1 predicted relations found.
 
@@ -1583,9 +1583,9 @@ By the use of HSV mutants for the UL9 gene we show here that HSV can induce DNA 
 ACTUAL RELATIONS:
 
 PREDICTED RELATIONS
-HSV  - induce - DNA amplification 
+HSV  - induce - DNA amplification [?FP]
 
-1 predicted relations found. [?FP]
+1 predicted relations found.
 
 SENTENCE ID: 278 FROM corpus/BioInfer_corpus_1.2.0b.binarised.xml
 TEXT:
@@ -3450,7 +3450,7 @@ ACTUAL RELATIONS:
 alpha-catenin - complexed with - E-cadherin
 
 PREDICTED RELATIONS
-HGF / SF treatment of LoVo  - reduced - the amount of alpha - catenin complexed [?FP]
+HGF / SF treatment of LoVo  - reduced - the amount of alpha - catenin complexed [FP]
 
 1 predicted relations found.
 
@@ -4173,7 +4173,7 @@ In addition, we report that radiation induced transient activation of c-Jun N-te
 ACTUAL RELATIONS:
 
 PREDICTED RELATIONS
-radiation  - induced - transient activation of c - Jun N - terminal kinase / stress - activated protein kinase ( JNK / SAPK ) activation and the transcription factor [?FP]
+radiation  - induced - transient activation of c - Jun N - terminal kinase / stress - activated protein kinase ( JNK / SAPK ) activation and the transcription factor [FP]
 
 1 predicted relations found.
 
@@ -4419,7 +4419,7 @@ EGF - inhibited increases in - SMHC
 EGF - inhibited increases in - sarcomeric myosin heavy chain
 
 PREDICTED RELATIONS
-EGF  - inhibited - increases in immunoreactive sarcomeric actin and sarcomeric myosin heavy chain ( SMHC ) normally seen after serum withdrawal [?TP][MULTI]
+EGF  - inhibited - increases in immunoreactive sarcomeric actin and sarcomeric myosin heavy chain ( SMHC ) normally seen after serum withdrawal [?FP][MULTI]
 
 1 predicted relations found.
 
@@ -4570,7 +4570,7 @@ cyclin E-associated kinase - concomitant - KIP1
 
 PREDICTED RELATIONS
 pRb  - induces - senescence [?FP]
-pRb  - causes - a posttranscriptional accumulation of the cyclin - dependent kinase inhibitor p27(KIP1 [?TP]
+pRb  - causes - a posttranscriptional accumulation of the cyclin - dependent kinase inhibitor p27(KIP1 [TP]
 
 2 predicted relations found.
 
@@ -5229,7 +5229,7 @@ ACTUAL RELATIONS:
 profilin - Introduction of slowing of elongation - actin
 
 PREDICTED RELATIONS
-Introduction of high concentrations of profilin into infected PtK2 cells  - causes - a marked slowing of actin tail elongation and bacterial migration [?TP]
+Introduction of high concentrations of profilin into infected PtK2 cells  - causes - a marked slowing of actin tail elongation and bacterial migration [FP]
 
 1 predicted relations found.
 
@@ -5371,7 +5371,7 @@ It reduced the rate of actin polymerization as reported in the cases of profilin
 ACTUAL RELATIONS:
 
 PREDICTED RELATIONS
-It  - reduced - the rate of actin polymerization [FP]
+It  - reduced - the rate of actin polymerization [?FP]
 
 1 predicted relations found.
 
@@ -5617,7 +5617,7 @@ MC159 and E8 inhibited both TNFR-1- and CD-95-induced apoptosis as well as killi
 ACTUAL RELATIONS:
 
 PREDICTED RELATIONS
-MC159  - inhibited - both TNFR-1- [?FP]
+MC159  - inhibited - both TNFR-1- [FP]
 
 1 predicted relations found.
 
@@ -5870,7 +5870,7 @@ Monocytes and in vitro differentiated U937 cells induce focal loss in the staini
 ACTUAL RELATIONS:
 
 PREDICTED RELATIONS
-Monocytes  - induce - focal loss [FP]
+Monocytes  - induce - focal loss [?FP]
 
 1 predicted relations found.
 
@@ -5882,7 +5882,7 @@ ACTUAL RELATIONS:
 profilin - addition of depolymerization - actin
 
 PREDICTED RELATIONS
-addition of profilin to steady - state actin filaments  - causes - slow depolymerization [?TP]
+addition of profilin to steady - state actin filaments  - causes - slow depolymerization [TP]
 
 1 predicted relations found.
 
@@ -6638,7 +6638,7 @@ Pervanadate caused a dramatic augmentation of the phosphorylation of E-cadherin,
 ACTUAL RELATIONS:
 
 PREDICTED RELATIONS
-Pervanadate  - caused - a dramatic augmentation of the phosphorylation of E - cadherin , beta - catenin , and gamma - catenin ( plakoglobin ) [?FP]
+Pervanadate  - caused - a dramatic augmentation of the phosphorylation of E - cadherin , beta - catenin , and gamma - catenin ( plakoglobin ) [FP]
 
 1 predicted relations found.
 
@@ -6943,7 +6943,7 @@ muscle actin - affinity for - profilin
 muscle actin - reduces affinity for - profilin
 
 PREDICTED RELATIONS
-Pyrenyliodoacetamide labeling of cysteine  - reduces - the affinity for profilin 10-fold [?FP]
+Pyrenyliodoacetamide labeling of cysteine  - reduces - the affinity for profilin 10-fold [FP]
 
 1 predicted relations found.
 
@@ -9301,7 +9301,7 @@ The long repeats, which are interdigitated between the PRRs, increased the frequ
 ACTUAL RELATIONS:
 
 PREDICTED RELATIONS
-The long repeats  - increased - the frequency [?FP]
+The long repeats  - increased - the frequency [FP]
 
 1 predicted relations found.
 
@@ -11767,7 +11767,7 @@ actin-binding proteins -  - tropomyosin
 Cdc42p -  - GFP
 
 PREDICTED RELATIONS
-treatment with the actin - depolymerizing drug latrunculin - A  - disrupted - the medial region [?FP]
+treatment with the actin - depolymerizing drug latrunculin - A  - disrupted - the medial region [FP]
 
 1 predicted relations found.
 
@@ -12006,7 +12006,7 @@ ACTUAL RELATIONS:
 profilin - at - actin
 
 PREDICTED RELATIONS
-this complex  - mediate - the cortical functions of profilin [FP]
+this complex  - mediate - the cortical functions of profilin [?FP]
 
 1 predicted relations found.
 
