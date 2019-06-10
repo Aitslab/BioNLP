@@ -12,7 +12,7 @@ It's been modified to read the binarized BioInfer corpus, and also bypasses the 
 
 ## Dependencies
 
-- [nltk](https://www.ntlk.org)
+- [nltk](https://www.nltk.org)
 - [spacy](https://spacy.io)
 - [neuralcoref](https://github.com/huggingface/neuralcoref)
 - [docria](https://pypi.org/project/docria)
