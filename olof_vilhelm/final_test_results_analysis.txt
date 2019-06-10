@@ -1,32 +1,71 @@
+SONJA EDIT:
+After sending the '[?FP] - Possible miss in bioinfer' predictions to Sonja Aits, she confirmed/denied our predicted relations, as well as noting other relations that were missed in the Bioinfer corpus. Confirmed predictions are tagged as [STP], denied are tagged as [SFP], new True relations are tagged as [S].
+
 Keywords with nsubj found:	118
 Nr documents analyzed:		1100
 Actual keywords found:		351
 Nr of BioInfer relations:	2772
+Nr of added relations [S]:	15
+Updated relations total:	2786
 Nr of predicted relations:	66
+
+(15) New True Relations, added by Sonja [S]
+	The new relations are individually tagged with these ID's, along with an [S] tag.
+	54-S1
+	237-S1
+	277-S1
+	400-S1
+	563-S1
+	779-S1
+	897-S1
+	897-S2
+	1017-S1
+	1017-S2
+	1020-S1
+	1105-S1
+	1243-S1
+	1888-S1
+	1937-S1
 
 RESULT NOTES:
 Contains descriptions and categorizations of our False Positive matches. The numbers under the
 categories are the BioInfer id's of the related articles. Additional notes on the match is appended
 after the '|' character.
 
-(15) True Positives [TP]
-	13
-	16
-	165			| Datum contains 1 TP and 1 FP relations
-	196
-	374
-	695
-	779			| Datum contains 1 TP and 1 ?FP relations
-	846
-	994
-	1219
-	1221
-	1418
-	1570
-	1857
-	1913
+(27) True Positives [TP]
+	
+	(15) Original TP
+		13
+		16
+		165		| Datum contains 1 TP and 1 FP relations
+		196
+		374
+		695
+		779		| Datum contains 1 TP and 1 STP relations
+		846
+		994
+		1219
+		1221
+		1418
+		1570
+		1857
+		1913
 
-(32) False Positives [FP]
+	(12) Sonja Edit True Positives [STP]
+		54
+		237
+		277
+		400
+		563
+		779		| Datum contains 1 TP and 1 STP relations
+		897
+		1020
+		1105
+		1243
+		1888
+		1937
+
+(33) False Positives [FP]
 
 	(11) Too long to be useful
 		36
@@ -49,7 +88,7 @@ after the '|' character.
 		1407
 		1709
 
-	(11) Incorrect entities
+	(12) Incorrect entities
 		75
 		165		| Datum contains 1 TP and 1 FP relations
 		235
@@ -57,6 +96,7 @@ after the '|' character.
 		980
 		959
 		1014
+		1017	| Denied by Sonja
 		1545	| Has a coreference where the origin isn't included in the datum, but "to-entity" is still obviously incorrect.
 		1724
 		1758
@@ -70,22 +110,7 @@ after the '|' character.
 		1977
 		2047
 
-(19) Questionable False positives [?FP]
-
-	(13) Possible miss in BioInfer
-		54		| 2 T relations
-		237		| 2 T relations
-		277		| 0 T relations
-		400		| 3 T relations
-		563		| 1 T relations
-		779		| 14 T relations	| Datum contains 1 TP and 1 ?FP relations
-		897		| 4 T relations
-		1017	| 4 T relations
-		1020	| 0 T relations
-		1105	| 9 T relations
-		1243	| 6 T relations
-		1888	| 0 T relations
-		1937	| 0 T relations
+(6) Questionable False positives [?FP]
 
 	(3) Coreferences, but origin not included in datum
 		920		| 0 T relations
@@ -104,11 +129,12 @@ CALCULATION METHODS:
 	Recall:		(TP) / (TP + FN)
 	F1-score:	2 * Precision * Recall / (Precision + Recall)
 
-RESULTS:
 
-	DISMISSIVE INTERPRETATION:
-		Remove all datum containing ?FP.
-		Remove 1 TP and 50 T relations.
+EVALUATION:
+
+	ORIGINAL DISMISSIVE INTERPRETATION:
+		Remove all Sonja edits and data containing ?FP.
+		Remove 12+1 TP, 1 FP and 15+50 T relations.
 
 		14 TP, 32 FP, 2708 FN, 2722 True relations.
 
@@ -116,31 +142,20 @@ RESULTS:
 		Recall:		0.005143277
 		F1-score:	0.010115606
 
-	PESSIMIST INTERPRETATION:
-		Interpret ?FP as FP:
-		Add 19 to FP relations.
-		15 TP, 51 FP, 2757 FN, 2772 True relations
+	REVISED DISMISSIVE INTERPRETATION:
+		Remove all data containing ?FP: Remove 5 T relations.
+
+		27 TP, 33 FP, 2755 FN, 2782 True relations.
+
+		Precision:	0.45
+		Recall:		0.009705248
+		F1-score:	0.019000704
+
+	REVISED PESSIMIST INTERPRETATION:
+		Interpret ?FP as FP: Add 6 to FP relations.
+
+		27 TP, 39 FP, 2760 FN, 2787 True relations
 		
-		Precision:	0.227272727
-		Recall:		0.005411255
-		F1-score:	0.010570824
-
-	OPTIMIST INTERPRETATION:
-		Interpret all ?FP as TP
-		Add 21 relations to TP and 19 True relations (See note on datum with id 759).
-
-		36 TP, 32 FP, 2754 FN, 2790 True relations.
-
-		Precision:	0.529411764
-		Recall:		0.012903225
-		F1-score:	0.025192442
-
-	DISMISSIVE SLIGHT-OPTIMIST INTERPRETATION
-		Interpret category 'Relation probably should've been included in test set' as TP.
-		Add those 13 to True relations. Remove 5 T relations from the other ?FP categories.
-
-		28 TP, 32 FP, 2752 FN, 2780 True relations.
-
-		Precision:	0.466666666
-		Recall:		0.010071942
-		F1-score:	0.019718309
+		Precision:	0.409090909
+		Recall:		0.009687836
+		F1-score:	0.018927445

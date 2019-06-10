@@ -351,9 +351,10 @@ ADP-ribosylation of actin at Arg 177 by Clostridium perfringens iota toxin incre
 ACTUAL RELATIONS:
 iota toxin - ADP-ribosylation of by - actin
 iota toxin - without affecting - profilin
+ADP - ribosylation of actin at Arg 177 by Clostridium perfringens iota toxin  - increased - the nucleotide dissociation rate [S] 54-S1
 
 PREDICTED RELATIONS
-ADP - ribosylation of actin at Arg 177 by Clostridium perfringens iota toxin  - increased - the nucleotide dissociation rate [?FP]
+ADP - ribosylation of actin at Arg 177 by Clostridium perfringens iota toxin  - increased - the nucleotide dissociation rate [STP]
 
 1 predicted relations found.
 
@@ -1325,9 +1326,10 @@ Bistratene A causes phosphorylation of talin and redistribution of actin microfi
 ACTUAL RELATIONS:
 PKC-delta - causes phosphorylation of role for - talin
 PKC-delta - causes redistribution of role for - actin
+Bistratene A  - causes - phosphorylation of talin and redistribution of actin microfilaments in fibroblasts [S] 237-S1
 
 PREDICTED RELATIONS
-Bistratene A  - causes - phosphorylation of talin and redistribution of actin microfilaments in fibroblasts [?FP]
+Bistratene A  - causes - phosphorylation of talin and redistribution of actin microfilaments in fibroblasts [STP]
 
 1 predicted relations found.
 
@@ -1581,9 +1583,10 @@ TEXT:
 By the use of HSV mutants for the UL9 gene we show here that HSV can induce DNA amplification in the absence of lytic viral growth in contrast to replication-negative mutants for either the UL8 or UL52 gene used as control. 
 
 ACTUAL RELATIONS:
+HSV  - induce - DNA amplification [S] 277-S1
 
 PREDICTED RELATIONS
-HSV  - induce - DNA amplification [?FP]
+HSV  - induce - DNA amplification [STP]
 
 1 predicted relations found.
 
@@ -2310,9 +2313,10 @@ ACTUAL RELATIONS:
 RVS161 - homologous to - RVS167
 RVS167 - required for localization - actin
 RVS167 - homologous to - END6
+Disruption of the RVS167 gene ,  - blocks - endocytosis [S] 400-S1
 
 PREDICTED RELATIONS
-Disruption of the RVS167 gene ,  - blocks - endocytosis [?FP]
+Disruption of the RVS167 gene ,  - blocks - endocytosis [STP]
 
 1 predicted relations found.
 
@@ -3084,9 +3088,10 @@ Here we demonstrate that accessory receptor triggering induces the transient ass
 
 ACTUAL RELATIONS:
 cofilin - association of with - actin
+accessory receptor triggering  - induces - the transient association of cofilin with the actin cytoskeleton [S] 563-S1
 
 PREDICTED RELATIONS
-accessory receptor triggering  - induces - the transient association of cofilin with the actin cytoskeleton [?FP]
+accessory receptor triggering  - induces - the transient association of cofilin with the actin cytoskeleton [STP]
 
 1 predicted relations found.
 
@@ -4567,9 +4572,10 @@ cyclin-dependent kinase inhibitor -  - KIP1
 p27 - accompanied by - p27
 pRb - causes accumulation of - p27
 cyclin E-associated kinase - concomitant - KIP1
+pRb  - induces - senescence [S] 779-S1
 
 PREDICTED RELATIONS
-pRb  - induces - senescence [?FP]
+pRb  - induces - senescence [STP]
 pRb  - causes - a posttranscriptional accumulation of the cyclin - dependent kinase inhibitor p27(KIP1 [TP]
 
 2 predicted relations found.
@@ -5262,9 +5268,12 @@ mitogen-activated protein kinase kinases -  - MEK2
 PDGF-AB - activation stimulated by - PDGF receptor
 PDGF-AB - phosphorylation stimulated by - PDGF receptor
 mitogen-activated protein kinase kinases -  - MEK1
+suramin - blocked - PDGF receptor phosphorylation [S] 897-S1
+suramin - inhibited - activation of mitogen-acitvated protein kinase (ERK) kinases (MEK1/2) and ERK1/2 [S] 897-S2
+
 
 PREDICTED RELATIONS
-suramin  - blocked - PDGF receptor activation [?FP]
+suramin  - blocked - PDGF receptor activation [STP]
 
 1 predicted relations found.
 
@@ -6005,9 +6014,11 @@ amphiphysin - homologs - RVS167
 RVS161 - cause - actin
 amphiphysin - homologs - RVS161
 RVS167 - cause - actin
+Mutations in RVS161 and RVS167  - cause - a depolarized actin cytoskeleton [S] 1017-S1
+Mutations in RVS161 and RVS167  - cause - a defect in the internalization step of endocytosis [S] 1017-S2
 
 PREDICTED RELATIONS
-Mutations in RVS161 and RVS167  - cause - very similar growth phenotypes [?FP]
+Mutations in RVS161 and RVS167  - cause - very similar growth phenotypes [SFP]
 
 1 predicted relations found.
 
@@ -6016,9 +6027,10 @@ TEXT:
 Mutations in RAD27 cause increased rates of mitotic crossing over and are lethal in combination with mutations in RAD51 and RAD52. 
 
 ACTUAL RELATIONS:
+Mutations in RAD27  - cause - increased rates of mitotic crossing over [S] 1020-S1
 
 PREDICTED RELATIONS
-Mutations in RAD27  - cause - increased rates of mitotic crossing over [?FP]
+Mutations in RAD27  - cause - increased rates of mitotic crossing over [STP]
 
 1 predicted relations found.
 
@@ -6589,9 +6601,10 @@ p21 - inhibit - PCNA
 cyclin-dependent kinase inhibitor -  - p21
 p21WAF1 - inhibit - proliferating cell nuclear antigen
 p21WAF1 - inhibit - PCNA
+p21  - induces - G1 arrest [S] 1105-S1
 
 PREDICTED RELATIONS
-p21  - induces - G1 arrest [?FP]
+p21  - induces - G1 arrest [STP]
 
 1 predicted relations found.
 
@@ -7479,9 +7492,10 @@ CREB - by promoting interaction with - CREB binding protein
 CREB - by promoting interaction with - CBP
 CREB - interaction with - CREB binding protein
 CREB - interaction with - CBP
+Ser-133 phosphorylation  - enhances - CREB activity [S] 1243-S1
 
 PREDICTED RELATIONS
-Ser-133 phosphorylation  - enhances - CREB activity [?FP]
+Ser-133 phosphorylation  - enhances - CREB activity [STP]
 
 1 predicted relations found.
 
@@ -11379,9 +11393,10 @@ TEXT:
 TNF also inhibited muscle differentiation as measured by several parameters, including cell fusion and the expression of other muscle-specific genes, such as alpha-skeletal actin and myosin heavy chain. 
 
 ACTUAL RELATIONS:
+TNF  - inhibited - muscle differentiation [S] 1888-S1
 
 PREDICTED RELATIONS
-TNF  - inhibited - muscle differentiation [?FP]
+TNF  - inhibited - muscle differentiation [STP]
 
 1 predicted relations found.
 
@@ -11670,9 +11685,10 @@ TEXT:
 Treatment of cells with gamma linolenic acid (GLA) increased alpha catenin expression in most cell lines, while beta catenin levels were reduced, and gamma catenin expression was unchanged. 
 
 ACTUAL RELATIONS:
+Treatment of cells with gamma linolenic acid ( GLA )  - increased - alpha catenin expression [S] 1937-S1
 
 PREDICTED RELATIONS
-Treatment of cells with gamma linolenic acid ( GLA )  - increased - alpha catenin expression [?FP]
+Treatment of cells with gamma linolenic acid ( GLA )  - increased - alpha catenin expression [STP]
 
 1 predicted relations found.
 
