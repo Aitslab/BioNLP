@@ -3,7 +3,7 @@
 Jupyter worklog in `Log.ipynb`.
 
 `spacynlp.py` contains the main algorithm for predicting relations. It uses `gui.py` and `entity_relations_model.py` to show the results in a GUI. 
-During previous iterations of the algorithm we analyzed sentences scrape from BioInfer using `read_bioinfer.py` and abstracts scraped from PubMed using `scrape_abstracts.py`.
+During previous iterations of the algorithm we analyzed sentences scraped from BioInfer using `read_bioinfer.py` and abstracts scraped from PubMed using `scrape_abstracts.py`.
 
 Now in the last (2019-06-10) iteration it uses abstracts from PubMed, but in a docria file with protein/gene/lysosome/cell-death term matches added onto it by Anna Palmqvist Sjövall & Eric Holmström. It generates an output file intended for use by Hannes Berntsson.
 
