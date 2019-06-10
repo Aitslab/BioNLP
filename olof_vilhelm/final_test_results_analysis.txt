@@ -11,21 +11,21 @@ Nr of predicted relations:	66
 
 (15) New True Relations, added by Sonja [S]
 	The new relations are individually tagged with these ID's, along with an [S] tag.
-	54-S1
-	237-S1
-	277-S1
-	400-S1
-	563-S1
-	779-S1
-	897-S1
+	54-S1		| Contains 2 T relations
+	237-S1		| Contains 2 T relations
+	277-S1		| Contains 0 T relations
+	400-S1		| Contains 3 T relations
+	563-S1		| Contains 1 T relations
+	779-S1		| Contains 14 T relations
+	897-S1		| Contains 4 T relations
 	897-S2
-	1017-S1
+	1017-S1		| Contains 4 T relations
 	1017-S2
-	1020-S1
-	1105-S1
-	1243-S1
-	1888-S1
-	1937-S1
+	1020-S1		| Contains 0 T relations
+	1105-S1		| Contains 9 T relations
+	1243-S1		| Contains 6 T relations
+	1888-S1		| Contains 0 T relations
+	1937-S1		| Contains 0 T relations
 
 RESULT NOTES:
 Contains descriptions and categorizations of our False Positive matches. The numbers under the
@@ -96,7 +96,7 @@ after the '|' character.
 		980
 		959
 		1014
-		1017	| Denied by Sonja
+		1017	| Contains 4 T relations	| Denied by Sonja
 		1545	| Has a coreference where the origin isn't included in the datum, but "to-entity" is still obviously incorrect.
 		1724
 		1758
@@ -113,14 +113,14 @@ after the '|' character.
 (6) Questionable False positives [?FP]
 
 	(3) Coreferences, but origin not included in datum
-		920		| 0 T relations
-		978		| 1 T relations
-		2023	| 1 T relations
+		920		| Contains 0 T relations
+		978		| Contains 1 T relations
+		2023	| Contains 1 T relations
 
 	(3) Other
-		257		| 0 T relations		| Datum probably missing context
-		759		| 3 T relations		| "to-entity" is long, but contains 3 T relations. Interpret this as 3 TP in 'Optimist' interpretation.
-		993		| 0 T relations		| Unclear if "to-entity" is incorrect or if relation should've been included in test set.
+		257		| Contains 0 T relations		| Datum probably missing context
+		759		| Contains 3 T relations		| "to-entity" is long, but contains 3 T relations. Interpret this as 3 TP in 'Optimist' interpretation.
+		993		| Contains 0 T relations		| Unclear if "to-entity" is incorrect or if relation should've been included in test set.
 
 
 CALCULATION METHODS:
