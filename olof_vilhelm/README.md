@@ -8,7 +8,7 @@ During previous iterations of the algorithm we analyzed sentences scraped from B
 Now in the last (2019-06-10) iteration it uses abstracts from PubMed, but in a docria file with protein/gene/lysosome/cell-death term matches added onto it by Anna Palmqvist Sjövall & Eric Holmström. It generates an output file intended for use by Hannes Berntsson.
 
 There is also a slightly modified version of `spacynlp.py` called `final_test_predict_bioinfer.py`, which was used to generate test data, i.e. the results in `test_results/final_test_results.txt`.
-It's been modified to read the binarized BioInfer corpus, and also bypasses the matching for protein/gene/lysosome/cell-death terms from Anna & Eric. This allowed us to evaluate the performance of our algorithm independently.
+It's been modified to read the binarized BioInfer corpus, and also bypasses the matching for protein/gene/lysosome/cell-death terms from Anna & Eric. This allowed us to evaluate the performance of our algorithm independently. Top-level analysis of the test data is visible in `test_results/final_test_results_analysis.txt`.
 
 ## Dependencies
 
