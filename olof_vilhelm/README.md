@@ -1,6 +1,7 @@
 # Detecting relationships (A inhibits B)
 
-Jupyter worklog in _Log.ipynb_
+Jupyter worklog in `Log.ipynb`.
+
 `spacynlp.py` contains the main algorithm for predicting relations. It uses `gui.py` and `entity_relations_model.py` to show the results in a GUI. 
 During previous iterations of the algorithm we analyzed sentences scrape from BioInfer using `read_bioinfer.py` and abstracts scraped from PubMed using `scrape_abstracts.py`.
 
