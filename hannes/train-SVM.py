@@ -1,13 +1,13 @@
 from bioInferTrainingParser import parse_training_set
 import text_tools as tt
 import copy
-from RelationExtractorModel import RelationExtractorModel as REM
+from svm_model import RelationExtractorModel as REM
 import random
 import spacy
 
 
 def main():
-    inpts = parse_training_set('trainingFiles/BioInfer_corpus_1.2.0b.binarised.xml')
+    inpts = parse_training_set('svm/BioInfer_corpus_1.2.0b.binarised.xml')
     nlp = spacy.load("en_core_sci_md")
 
     # build the features
