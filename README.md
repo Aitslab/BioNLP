@@ -20,11 +20,13 @@ https://allenai.github.io/scispacy/
 
 ## 2. Resources for dictionaries  
 UniprotKB  
+
 To create a dictionary of gene/protein names (contains protein and gene names including synonyms)  
 
 https://www.uniprot.org/
 
 PubChem
+
 To create a dictionary of chemicals/drugs (contains small molecules, but also larger molecules such as nucleotides, carbohydrates, lipids, peptides, and chemically-modified macromolecules) 
 
 https://pubchem.ncbi.nlm.nih.gov/
