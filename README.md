@@ -116,4 +116,8 @@ http://www.nactem.ac.uk/software.php
 
 http://www.becalm.eu/NerResources
 
+http://bio.nlplab.org/
+
+https://github.com/sebastianruder/NLP-progress/blob/master/english/entity_linking.md
+
 
