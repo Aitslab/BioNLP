@@ -91,6 +91,9 @@ BioASQ
 
 http://www.bioasq.org/
 
+List of several conferences with description
+
+https://bionlp.info/bionlp-conferences/
 
 ## 6. Tools, scripts, software
 Jensen Lab Tagger
