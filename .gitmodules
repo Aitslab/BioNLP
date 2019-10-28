@@ -1,0 +1,3 @@
+[submodule "marcus/dictionarytagger/docria"]
+	path = marcus/dictionarytagger/docria
+	url = https://github.com/marcusklang/docria.git
