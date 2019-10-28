@@ -214,12 +214,14 @@ public class MentionIndex {
             MentionTypeAttribute mentionTypeAttribute = tokenStream.addAttribute(MentionTypeAttribute.class);
 
             tokenStream.reset();
+            int i = 0;
             while (tokenStream.incrementToken()) {
                 int startOffset = offsetAttribute.startOffset();
                 int endOffset = offsetAttribute.endOffset();
                 String term = charTermAttribute.toString();
 
-                termlist.add(new MentionTerm(startOffset, endOffset, term, text.substring(startOffset,endOffset), mentionTypeAttribute.getSym()));
+                termlist.add(new MentionTerm(startOffset, endOffset, term, text.substring(startOffset,endOffset), mentionTypeAttribute.getSym(),i));
+                i += 1;
             }
 
             tokenStream.close();
@@ -245,15 +247,17 @@ public class MentionIndex {
             CharTermAttribute charTermAttribute = tokenStream.addAttribute(CharTermAttribute.class);
             MentionTypeAttribute mentionTypeAttribute = tokenStream.addAttribute(MentionTypeAttribute.class);
 
+            int i = 0;
+
             tokenStream.reset();
             while (tokenStream.incrementToken()) {
                 int startOffset = offsetAttribute.startOffset();
                 int endOffset = offsetAttribute.endOffset();
                 String term = charTermAttribute.toString();
 
-                terms.add(new MentionTerm(startOffset, endOffset, term, text.substring(startOffset,endOffset), mentionTypeAttribute.getSym()));
-
+                terms.add(new MentionTerm(startOffset, endOffset, term, text.substring(startOffset,endOffset), mentionTypeAttribute.getSym(), i));
                 segments.add(new ByteRefSegment(term, new BytesRef(term), startOffset, endOffset));
+                i += 1;
             }
 
             List<MentionSegment> closest = closest(this.fst, segments.stream().map(seg -> seg.ref).collect(Collectors.toList()));
