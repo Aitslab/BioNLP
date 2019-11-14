@@ -17,11 +17,13 @@ contains joint dictionaries made from files in databaseprocessed
 
 Format of proteins/genes dictionary:
 
-column 1: self-created unique identifier: LUGEspeciesidentifierrandomnumber (speciesidentifer = 8 digits (from NCBI taxonomy database), all 0 if species not defined; randomnumber = 8 digits, start with 00000001)
+column 1: self-created unique identifier: LUGEspeciesidentifierrandomnumber (speciesidentifer = 8 digits (from NCBI taxonomy database), all 0 if species not defined; randomnumber = 8 digits, start with 00000001); example for first human protein: LUGE0000960600000001
 
 column 2: UniProtId
 
-column 3-x: names
+column 3: official gene symbol
+
+column 4-x: names
 
 
 Format of compound dictionary:
