@@ -217,4 +217,23 @@ public class Mentions {
         }
     }
 
+    public static class KeyEntry<T> {
+        public String[] id;
+        public final String item;
+        protected BytesRef itemRef;
+        public final T payload;
+
+        public KeyEntry(String item, String...id) {
+            this.item = item;
+            this.id = id;
+            this.payload = null;
+        }
+
+        public KeyEntry(String item, T payload, String...id) {
+            this.item = item;
+            this.id = id;
+            this.payload = payload;
+        }
+    }
+
 }
