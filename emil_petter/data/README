@@ -1,0 +1,7 @@
+Data files to large to put on git, refer to these links instead:
+
+UniProt:
+ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.xml.gz
+
+HGNC:
+ftp://ftp.ebi.ac.uk/pub/databases/genenames/new/json/hgnc_complete_set.json
