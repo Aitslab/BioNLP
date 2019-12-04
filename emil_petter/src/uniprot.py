@@ -1,13 +1,12 @@
-import json
+import pickle
 from lxml import etree
 
-# counter = 0
 prefix = "{http://uniprot.org/uniprot}"
 
 proteins = {}
 
 for event, element in etree.iterparse("../data/uniprot_sprot.xml", tag=prefix + "entry"):
-    prot = {"altNames": []}
+    prot = {"altNames": set()}
     for child in element.getchildren():
 
         # Gets uniprot ID
@@ -20,7 +19,7 @@ for event, element in etree.iterparse("../data/uniprot_sprot.xml", tag=prefix + 
 
                 if entry.tag == prefix + "recommendedName" or entry.tag == prefix + "alternativeName":
                     for name in entry.getchildren():
-                        prot["altNames"].append(name.text)
+                        prot["altNames"].add(name.text)
 
         # Gets name and more alternative names
         elif child.tag == prefix + "gene":
@@ -30,7 +29,7 @@ for event, element in etree.iterparse("../data/uniprot_sprot.xml", tag=prefix + 
                     if entry.attrib["type"] == "primary":
                         prot["name"] = entry.text
                     elif entry.attrib["type"] == "synonym":
-                        prot["altNames"].append(entry.text)
+                        prot["altNames"].add(entry.text)
 
         # Gets species name and ID
         elif child.tag == prefix + "organism":
@@ -55,15 +54,7 @@ for event, element in etree.iterparse("../data/uniprot_sprot.xml", tag=prefix + 
                 elif entry.tag == "property" and entry.attrib["type"] == "gene ID":
                     prot["ensemblGeneID"] = child.attrib["value"]
 
-    # ID = ""
-    # if prot["speciesID"] is not None:
-    #     ID = "LUGE" + "{:08d}".format(int(prot["speciesID"])) + "{:08d}".format(counter)
-    # else:
-    #     ID = "LUGE00000000" + "{:08d}".format(counter)
-    # counter += 1
-    # proteins[ID] = prot
-
     proteins[prot["uniprotID"]] = prot
     element.clear()
 
-json.dump(proteins, open("uniprot.json", "w+"))
+pickle.dump(proteins, open("uniprot.out", "wb"))
