@@ -1,0 +1,65 @@
+Abdominal Aortic Aneurysm	D0001
+Acanthamoeba Infection	D0002
+ACE	D0003
+Adverse Childhood Experiences	D0004
+Acinetobacter Infection	D0005
+Acquired Immune Deficiency Syndrome	D0006
+AIDS	D0007
+Acquired Immunodeficiency Syndrome	D0008
+Adenovirus Infection	D0009
+Adenovirus Vaccination	D0010
+ADHD	D0011
+Attention Deficit/Hyperactivity Disorder	D0012
+Adult Vaccinations	D0013
+Adverse Childhood Experiences	D0014
+ACE	D0015
+AFib	D0016
+AF	D0017
+Atrial fibrillation	D0018
+African Trypanosomiasis	D0019
+Sleeping Sickness	D0020
+Agricultural Safety	D0021
+AHF	D0022
+Alkhurma hemorrhagic fever	D0023
+Acquired Immune Deficiency Syndrome	D0024
+Acquired Immunodeficiency Syndrome	D0025
+Alkhurma hemorrhagic fever	D0026
+AHF	D0027
+ALS	D0028
+Amyotrophic Lateral Sclerosis	D0029
+Alzheimer's Disease	D0030
+Amebiasis, Intestinal	D0031
+Entamoeba histolytica infection	D0032
+American Indian and Alaska Native Vaccination	D0033
+American Trypanosomiasis	D0034
+Chagas Disease	D0035
+Ancylostoma duodenale Infection, Necator americanus Infection — see Human Hookworm	D0036
+Angiostrongylus Infection	D0037
+Animal-Related Diseases	D0038
+Anisakiasis	D0039
+Anisakis Infection	D0040
+Anisakiasis	D0041
+Anthrax Vaccination	D0042
+Anthrax	D0043
+Bacillus anthracis Infection	D0044
+Aortic Aneurysm	D0045
+Aortic Dissection	D0046
+Arenavirus Infection	D0047
+Arthritis	D0048
+Childhood Arthritis	D0049
+Fibromyalgia	D0050
+Gout	D0051
+Osteoarthritis	D0052
+OA	D0053
+Rheumatoid Arthritis	D0054
+RA	D0055
+Ascariasis	D0056
+Ascaris Infection	D0057
+Aseptic Meningitis	D0058
+Viral Meningitis	D0059
+Aspergillosis	D0060
+Aspergillus Infection	D0061
+Asthma	D0062
+Attention Deficit/Hyperactivity Disorder	D0063
+Autism	D0064
+Avian Influenza	D0065
