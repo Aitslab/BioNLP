@@ -6,16 +6,18 @@ prefix = "{http://uniprot.org/uniprot}"
 proteins = {}
 
 for event, element in etree.iterparse("../data/uniprot_sprot.xml", tag=prefix + "entry"):
-    prot = {"altNames": set()}
+    prot = {}
     nonEukaryotProtein = False
+    uniprotID = None
 
     for child in element.getchildren():
         if nonEukaryotProtein:
             break
 
         # Gets uniprot ID
-        if child.tag == prefix + "accession" and "uniprotID" not in prot:
-            prot["uniprotID"] = child.text
+        if child.tag == prefix + "accession" and uniprotID is None:
+            prot.setdefault("uniprotID", set()).add(child.text)
+            uniprotID = child.text
 
         # Gets alternative names
         elif child.tag.endswith("protein"):
@@ -23,7 +25,7 @@ for event, element in etree.iterparse("../data/uniprot_sprot.xml", tag=prefix + 
 
                 if entry.tag == prefix + "recommendedName" or entry.tag == prefix + "alternativeName":
                     for name in entry.getchildren():
-                        prot["altNames"].add(name.text)
+                        prot.setdefault("altNames", set()).add(name.text)
 
         # Gets name and more alternative names
         elif child.tag == prefix + "gene":
@@ -33,7 +35,7 @@ for event, element in etree.iterparse("../data/uniprot_sprot.xml", tag=prefix + 
                     if entry.attrib["type"] == "primary":
                         prot["name"] = entry.text
                     elif entry.attrib["type"] == "synonym":
-                        prot["altNames"].add(entry.text)
+                        prot.setdefault("altNames", set()).add(entry.text)
 
         # Gets species name and ID
         elif child.tag == prefix + "organism":
@@ -48,27 +50,29 @@ for event, element in etree.iterparse("../data/uniprot_sprot.xml", tag=prefix + 
                         nonEukaryotProtein = True
                         child.clear()
                         break
-                        
 
         # Gets hgnc ID
         elif child.tag == prefix + "dbReference" and child.attrib["type"] == "HGNC":
-            prot["hgncID"] = child.attrib["id"]
+            prot.setdefault("hgncID", set()).add(child.attrib["id"])
 
         # Gets ensembl IDs
         elif child.tag == prefix + "dbReference" and child.attrib["type"] == "Ensembl":
-            prot["ensemblTranscriptID"] = child.attrib["id"]
+            prot.setdefault("ensemblTranscriptID", set()).add(child.attrib["id"])
             for entry in child.getchildren():
 
                 if entry.tag == "property" and entry.attrib["type"] == "protein sequence ID":
-                    prot["ensemblPropertyID"] = child.attrib["value"]
+                    prot.setdefault("ensemblProteinID", set()).add(child.attrib["value"])
                 elif entry.tag == "property" and entry.attrib["type"] == "gene ID":
-                    prot["ensemblGeneID"] = child.attrib["value"]
-        
+                    prot.setdefault("ensemblGeneID", set()).add(child.attrib["value"])
+
         child.clear()
 
     element.clear()
     if nonEukaryotProtein:
         continue
-    proteins[prot["uniprotID"]] = prot
 
-pickle.dump(proteins, open("uniprot.out", "wb"))
+    proteins[uniprotID] = prot
+
+f = open("out/uniprot.out", "wb")
+pickle.dump(proteins, f)
+f.close()

@@ -1,23 +1,33 @@
 import pickle
 
-combined = pickle.load(open("combined.out", "rb"))
+combined = pickle.load(open("out/combined.out", "rb"))
 
-dictByName = {}
+dictBySpecies = {}
 for key in combined:
-    altNames = combined[key]["altNames"]
-    
-    for altName in altNames:
-        dictByName.setdefault(altName, set()).add(key)
+    dictByName = {}
+    if "speciesName" in combined[key]:
+        dictBySpecies.setdefault(combined[key]["speciesName"], dictByName)
+    else:
+        dictBySpecies.setdefault("-1", dictByName)
 
-    if "name" in combined[key]:
-        dictByName.setdefault(combined[key]["name"], set()).add(key)
+    if "altNames" in combined[key]:
+        altNames = combined[key]["altNames"]
 
-ambiguous = {}
-for key in dictByName:
-    altNames = dictByName[key]
-    if len(altNames) > 1:
-        ambiguous[key] = dictByName[key]
+        for altName in altNames:
+            dictByName.setdefault(altName, set()).add(key)
 
-print(len(dictByName))
-print(len(ambiguous))
+        if "name" in combined[key]:
+            dictByName.setdefault(combined[key]["name"], set()).add(key)
+
+counter = 0
+for species in dictBySpecies:
+    dictByName = dictBySpecies[species]
+
+    for key in dictByName:
+        altNames = dictByName[key]
+        if len(altNames) > 1:
+            counter += 1
+
+print(len(dictBySpecies))
+print(counter)
 print(len(combined))
