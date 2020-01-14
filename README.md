@@ -187,9 +187,11 @@ Molecular Process Ontology
 
 
 ## Corpora for training and validation  
+http://compbio.ucdenver.edu/ccp/corpora/obtaining.shtml
+
 Pubannotation
 
-public repository of text annotationin  life sciences
+public repository of text annotation in  life sciences
 
 http://pubannotation.org/
 
@@ -197,13 +199,19 @@ Corpora in BioC format
 
 http://bioc.sourceforge.net/
 
+BC5CDR
+
+1500 PubMed titles and abstracts from CTD-Pfizer corpus used in BioCreative V chemical-disease relation task
+ 
 CRAFT
+
+97 full-text PMC articles
 
 https://github.com/UCDenver-ccp/CRAFT
 
 GeneTag  
 
-also available in BioC format and updated version GeneTag-05  
+20K Medline sentences; also available in BioC format and updated version GeneTag-05  
 
 https://www.ncbi.nlm.nih.gov/pubmed/15960837
 
@@ -211,9 +219,12 @@ Med Mentions
 
 https://github.com/chanzuckerberg/MedMentions
 
+n2c2 (i2b2) corpora
 
+https://portal.dbmi.hms.harvard.edu/projects/n2c2-nlp/
 
-
+NCBI disease
+https://www.sciencedirect.com/science/article/pii/S1532046413001974?via%3Dihub
 
 ## Biomedical text sources
 Pubmed abstracts
@@ -259,6 +270,10 @@ BioASQ
 
 http://www.bioasq.org/
 
+n2c2 (i2b2)
+
+https://portal.dbmi.hms.harvard.edu/data-challenges/
+
 List of several conferences with description
 
 https://bionlp.info/bionlp-conferences/
@@ -280,10 +295,14 @@ https://www2.informatik.hu-berlin.de/~hakenber/links/benchmarks.html
 
 http://www.nactem.ac.uk/software.php
 
+https://portal.dbmi.hms.harvard.edu/
+
 http://www.becalm.eu/NerResources
 
 http://bio.nlplab.org/
 
 https://github.com/sebastianruder/NLP-progress/
+
+https://transmartfoundation.org/
 
 
