@@ -27,30 +27,41 @@ scispaCy is a Python package containing spaCy models for processing biomedical, 
 
 https://allenai.github.io/scispacy/
 
+keras
+
+### Tokenizers
+NLTK word_tokenize
+
+NLTK regexp_tokenize
+
+Regular expressions tokenizer
+
+spaCy tokenizer
+
+scispaCy tokenizer
+
+keras text_to_word_sequence
 
 
-## Tools, scripts, software
+
+## Taggers for NER
+TaggerOne
+https://www.ncbi.nlm.nih.gov/research/bionlp/Tools/taggerone/
+
 Jensen Lab Tagger
 
 https://bitbucket.org/larsjuhljensen/tagger/src/default/
 
 
-## Bioinformatics databases (can be used to build dictionaries)
+## Bioinformatics databases and ontologies (can be used to build dictionaries)
+### Proteins & Genes
 UniprotKB  
 
 To create a dictionary of gene/protein names (contains protein and gene names including synonyms)  
 
 https://www.uniprot.org/
 
-PubChem
-
-To create a dictionary of chemicals/drugs (contains small molecules, but also larger molecules such as nucleotides, carbohydrates, lipids, peptides, and chemically-modified macromolecules) 
-
-https://pubchem.ncbi.nlm.nih.gov/
-
-Disease Ontology  
-
-http://disease-ontology.org/
+HGNC
 
 Gene Ontology  
 
@@ -58,22 +69,64 @@ Database with known function of genes
 
 http://geneontology.org/
 
+Protein Ontology
+
+https://proconsortium.org/
+
+Ensembl
+
+NCBI Gene
+
+### Chemicals
+
+CHEBI
+
+
+PubChem
+
+To create a dictionary of chemicals/drugs (contains small molecules, but also larger molecules such as nucleotides, carbohydrates, lipids, peptides, and chemically-modified macromolecules) 
+
+https://pubchem.ncbi.nlm.nih.gov/
+
 Drugbank
 
 www.drugbank.ca
 
 Database with drugs and known protein targets (including references for the interaction)
 
+### Diseases
+
+Disease Ontology  
+
+http://disease-ontology.org/
+
 OMIM  
 
 Database with human diseases and known genes
 
- 
+### Tissues & Species
+Cellosaurus
+https://web.expasy.org/cellosaurus/
+
+Cell Ontology
+
+UBERON
+anatomical entities; multicellular organisms and life-cycle stages
+
+NCBI Taxonomy
+
+### Pathways & Reactions
 KEGG
 Database with known protein signalling pathways
 
+Molecular Process Ontology
+
 
 ## Corpora for training and validation  
+CRAFT
+
+https://github.com/UCDenver-ccp/CRAFT
+
 GeneTag  
 To evaluate the dictionary approach as well as train a model for annotating proteins; also available in BioC format and updated version GeneTag-05  
 
@@ -98,6 +151,23 @@ Wikipedia
 
 
 ## Shared tasks and conferences within BioNLP
+BioNLP Open Shared Tasks (BioNLP-OST) 
+
+continuation of BioNLP Shared Task (BioNLP-ST)series
+
+https://2019.bionlp-ost.org/
+
+BioNLP Shared Task (BioNLP-ST) (2009, 2011, 2013, 2016)
+
+http://2016.bionlp-st.org/
+
+http://2013.bionlp-st.org/
+
+http://2011.bionlp-st.org/
+
+http://www.geniaproject.org/shared-tasks/bionlp-shared-task-2009
+
+
 ACL-BioNLP2019 Workshop and associated MEDIQA 2019 task
 
 https://sites.google.com/view/mediqa2019
