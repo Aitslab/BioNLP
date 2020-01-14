@@ -83,6 +83,10 @@ Jensen Lab Tagger
 
 https://bitbucket.org/larsjuhljensen/tagger/src/default/
 
+EVEX/Turku Event Extraction System
+
+https://turkunlp.org/bionlp.html
+
 Ab3P 
 
 abbreviation detection tool
@@ -304,5 +308,7 @@ http://bio.nlplab.org/
 https://github.com/sebastianruder/NLP-progress/
 
 https://transmartfoundation.org/
+
+http://compbio.ucdenver.edu/corpora/bcresources.html
 
 
