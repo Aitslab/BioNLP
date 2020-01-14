@@ -34,6 +34,10 @@ NLTK word_tokenize
 
 NLTK regexp_tokenize
 
+NLTK treebank tokenizer
+
+https://www.nltk.org/_modules/nltk/tokenize/treebank.html
+
 Regular expressions tokenizer
 
 spaCy tokenizer
