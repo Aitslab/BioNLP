@@ -4,12 +4,22 @@ Repository for student projects within biomedical text mining from Lund Universi
 
 
 # Resources
-## 1. NLP packages  
+## NLP libraries 
+CoreNLP
+
+contains many of Stanford’s NLP tools
+
+https://stanfordnlp.github.io/CoreNLP/
+
 AllenNLP
 
 NLP library built on PyTorch
 
 https://allennlp.org/
+
+spaCy
+
+https://spacy.io/
 
 scispaCy  
 
@@ -18,7 +28,14 @@ scispaCy is a Python package containing spaCy models for processing biomedical, 
 https://allenai.github.io/scispacy/
 
 
-## 2. Resources for dictionaries  
+
+## Tools, scripts, software
+Jensen Lab Tagger
+
+https://bitbucket.org/larsjuhljensen/tagger/src/default/
+
+
+## Bioinformatics databases (can be used to build dictionaries)
 UniprotKB  
 
 To create a dictionary of gene/protein names (contains protein and gene names including synonyms)  
@@ -35,8 +52,28 @@ Disease Ontology
 
 http://disease-ontology.org/
 
+Gene Ontology  
 
-## 3. Corpora for training and validation  
+Database with known function of genes 
+
+http://geneontology.org/
+
+Drugbank
+
+www.drugbank.ca
+
+Database with drugs and known protein targets (including references for the interaction)
+
+OMIM  
+
+Database with human diseases and known genes
+
+ 
+KEGG
+Database with known protein signalling pathways
+
+
+## Corpora for training and validation  
 GeneTag  
 To evaluate the dictionary approach as well as train a model for annotating proteins; also available in BioC format and updated version GeneTag-05  
 
@@ -46,25 +83,9 @@ Corpora in BioC format
 
 http://bioc.sourceforge.net/
 
-Drugbank
-
-www.drugbank.ca
-
-Database with drugs and known protein targets (including references for the interaction) => for validation  
-
-OMIM  
-Database with human diseases and known genes => for validation  
-
-KEGG
-Database with known protein signalling pathways => for validation
-
-Gene Ontology  
-Database with known function of genes => extract list of cell death genes for validation  
-
-http://geneontology.org/
 
 
-## 4. Biomedical text sources
+## Biomedical text sources
 Pubmed abstracts
 
 Pubmed Central full-length articles
@@ -76,7 +97,7 @@ BioRxiv
 Wikipedia
 
 
-## 5. Shared tasks and conferences within BioNLP
+## Shared tasks and conferences within BioNLP
 ACL-BioNLP2019 Workshop and associated MEDIQA 2019 task
 
 https://sites.google.com/view/mediqa2019
@@ -95,14 +116,9 @@ List of several conferences with description
 
 https://bionlp.info/bionlp-conferences/
 
-## 6. Tools, scripts, software
-Jensen Lab Tagger
-
-https://bitbucket.org/larsjuhljensen/tagger/src/default/
 
 
-
-## 7. Other (relevant blogs, discussion forums, etc)  
+## Other (relevant blogs, discussion forums, etc)  
 Devblog with working example code for med-text relations extraction  
 
 https://www.microsoft.com/developerblog/2016/09/13/training-a-classifier-for-relation-extraction-from-medical-literature/
@@ -121,6 +137,6 @@ http://www.becalm.eu/NerResources
 
 http://bio.nlplab.org/
 
-https://github.com/sebastianruder/NLP-progress/blob/master/english/entity_linking.md
+https://github.com/sebastianruder/NLP-progress/
 
 
