@@ -29,6 +29,10 @@ https://allenai.github.io/scispacy/
 
 keras
 
+Hugging Face
+
+https://github.com/huggingface
+
 ### Tokenizers
 NLTK word_tokenize
 
@@ -67,6 +71,22 @@ https://drive.google.com/open?id=1xCVL5lMF021BuqzX3L6A2RhbRqJYXY8a
 
 Clark, S., & Curran, J. R. (2007). Wide-coverage efficient statistical parsing with CCG and log-linear models. Computational Linguistics, 33(4), 493-552.
 
+## Co-reference resolution and abbreviation resolution
+https://github.com/huggingface/neuralcoref
+
+Ab3P 
+
+abbreviation detection tool
+
+Sohn S, Comeau DC, Kim W, Wilbur WJ. (2008) Abbreviation definition identification based on automatic precision estimates. BMC Bioinformatics.  25;9:402. PubMed ID: 1881755
+
+https://drive.google.com/file/d/1nKfgpZ01Qdd_vYm6llYxhZjsadkWM15J/view
+
+scispaCy abbreviation tool
+
+https://github.com/allenai/scispacy
+
+
 ## other BioNLP tools
 SPECIALIST NLP tools
 
@@ -91,13 +111,6 @@ EVEX/Turku Event Extraction System
 
 https://turkunlp.org/bionlp.html
 
-Ab3P 
-
-abbreviation detection tool
-
-Sohn S, Comeau DC, Kim W, Wilbur WJ. (2008) Abbreviation definition identification based on automatic precision estimates. BMC Bioinformatics.  25;9:402. PubMed ID: 1881755
-
-https://drive.google.com/file/d/1nKfgpZ01Qdd_vYm6llYxhZjsadkWM15J/view
 
 
 ## Bioinformatics databases and ontologies (can be used to build dictionaries)
@@ -195,17 +208,17 @@ Molecular Process Ontology
 
 
 ## Corpora for training and validation  
+Comparison of corpora
+
+https://f1000research.com/articles/3-96/v1
+
+Links to several corpora
+
 http://compbio.ucdenver.edu/ccp/corpora/obtaining.shtml
 
-Pubannotation
+Pubannotation http://pubannotation.org/
 
-public repository of text annotation in  life sciences
-
-http://pubannotation.org/
-
-Corpora in BioC format  
-
-http://bioc.sourceforge.net/
+Corpora in BioC format  http://bioc.sourceforge.net/
 
 BC5CDR
 
