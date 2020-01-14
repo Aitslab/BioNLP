@@ -208,17 +208,26 @@ Molecular Process Ontology
 
 
 ## Corpora for training and validation  
+### General
 Comparison of corpora
 
 https://f1000research.com/articles/3-96/v1
 
-Links to several corpora
+Links to download several corpora
 
 http://compbio.ucdenver.edu/ccp/corpora/obtaining.shtml
 
 Pubannotation http://pubannotation.org/
 
 Corpora in BioC format  http://bioc.sourceforge.net/
+
+https://github.com/dmis-lab/biobert
+
+https://github.com/cambridgeltl/MTL-Bioinformatics-2016
+
+https://github.com/openbiocorpora
+
+### Individual corpora
 
 BC5CDR
 
