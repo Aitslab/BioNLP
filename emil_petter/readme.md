@@ -1,42 +1,27 @@
 This is the repository for a student project at LU in Fall term 2019
 
-Folders and content
-=======
-
-## databaseraw
-
-contains raw data from bioinformatics databases; subfolders named Databasename_downloaddate
-
-## databaseprocessed
-
-contains cleaned files named Databasename_downloaddate_processeddate and a database_summary file describing the databases and extracted information
-
-## dictionaries
-
-contains joint dictionaries made from files in databaseprocessed
-
-Format of proteins/genes dictionary:
-
-column 1: self-created unique identifier: LUGEspeciesidentifierrandomnumber (speciesidentifer = 8 digits (from NCBI taxonomy database), all 0 if species not defined; randomnumber = 8 digits, start with 00000001); example for first human protein: LUGE0000960600000001
-
-column 2: UniProtId
-
-column 3: official gene symbol
-
-column 4-x: names
+It contains the following code:
 
 
-Format of compound dictionary:
+protein.py: A datastructure used to represent a protein
 
-column 1: self-created unique identifier: LUCOrandomnumber (16 digits)
+buildUniprot.py: Reads the xml representation of the UniprotKB/Swiss-Prot database and parses all the data into a list which is then saved using pickle as /out/uniprot.out
 
-column 2-x: names
+buildHGNC.py: Reads the json representation of the HGNC database and parses all the data into a list which is then saved using pickle as /out/hgnc.out
 
+buildCombined.py: Combines the the two file outputed by the above scripts and combines them into a unified dictionary, assigning all proteins a unique ID. This dictionary is then used to create an index that can be used in conjuntion with Marcus Klang's dictionary tagger. !NOTICE! This script requires the server from Marcus Klang's dictionary tagger to be running. The code for this can be found here: https://github.com/Aitslab/BioNLP/tree/master/marcus/dictionarytagger
 
-Format of disease dictionary:
+corpus.py: Reads through the corpus file /in/test.tsv to create a list of all entitites found in the text.
 
-column 1: self-created unique identifier: LUDIrandomnumber (16 digits)
+evalDict.py: Runs Marcus Klang's dictionary tagger with the previouslt generated index file and finds all matches. It then evalues these matches and prints precision, recall and F1-score. !NOTICE! This script also requires the server from Marcus Klang's dictionary tagger to be running.
 
-column 2-x: names
+evalBert.py: Evaluates the BioBERT results and prints precision, recall and F1-score.
 
+evalCombined.py: Creates a union and an intersection of the dictionary and BioBERT results and evalueates them. Prints precision, recall and F1-score
+
+The mentionindex folder is part of Marcus Klang's code.
+
+All necessary files except for the Uniprot xml and the HGNC json can be found here. This is due to file size constraint on github. These can be downloaded here:
+Uniprot - ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.xml.gz
+HGNC - ftp://ftp.ebi.ac.uk/pub/databases/genenames/new/json/hgnc_complete_set.json
 

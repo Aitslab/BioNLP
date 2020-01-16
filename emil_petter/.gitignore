@@ -1,4 +1,5 @@
 *.vscode*
 *__pycache__*
-data/*
-*.out
+out/*
+in/uniprot_sprot.xml
+in/hgnc_complete_set.json
