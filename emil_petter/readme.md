@@ -22,6 +22,8 @@ evalCombined.py: Creates a union and an intersection of the dictionary and BioBE
 The mentionindex folder is part of Marcus Klang's code.
 
 All necessary files except for the Uniprot xml and the HGNC json can be found here. This is due to file size constraint on github. These can be downloaded here:
+
 Uniprot - ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.xml.gz
+
 HGNC - ftp://ftp.ebi.ac.uk/pub/databases/genenames/new/json/hgnc_complete_set.json
 
