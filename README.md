@@ -5,17 +5,25 @@ Repository for student projects within biomedical text mining from Lund Universi
 
 # Resources
 ## NLP libraries 
+AllenNLP
+
+NLP library built on PyTorch
+
+https://allennlp.org/
+
 CoreNLP
 
 contains many of Stanford’s NLP tools
 
 https://stanfordnlp.github.io/CoreNLP/
 
-AllenNLP
+NLTK
 
-NLP library built on PyTorch
+https://www.nltk.org/
 
-https://allennlp.org/
+pytext
+
+https://github.com/facebookresearch/pytext
 
 spaCy
 
@@ -33,7 +41,21 @@ Hugging Face
 
 https://github.com/huggingface
 
-### Tokenizers
+Gensim
+
+for topic modelling
+
+https://radimrehurek.com/gensim/
+
+
+## Embeddings
+
+fastText
+
+https://fasttext.cc/
+
+
+## Tokenizers
 NLTK word_tokenize
 
 NLTK regexp_tokenize
@@ -50,7 +72,7 @@ scispaCy tokenizer
 
 keras text_to_word_sequence
 
-### Parsers
+## Parsers
 Stanford Parser
 
 Klein, D. and Manning, C. (2002). Fast Exact Inference with a Factored Model for Natural Language Parsing. In Advances in Neural Information Processing Systems.
