@@ -56,6 +56,10 @@ https://fasttext.cc/
 
 
 ## Tokenizers
+ChemTok
+
+https://www.ncbi.nlm.nih.gov/pubmed/26942193
+
 NLTK word_tokenize
 
 NLTK regexp_tokenize
