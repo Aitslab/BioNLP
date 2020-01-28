@@ -68,10 +68,6 @@ NLTK treebank tokenizer
 
 https://www.nltk.org/_modules/nltk/tokenize/treebank.html
 
-Regular expressions tokenizer
-
-spaCy tokenizer
-
 scispaCy tokenizer
 
 keras text_to_word_sequence
