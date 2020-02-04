@@ -249,6 +249,10 @@ https://github.com/cambridgeltl/MTL-Bioinformatics-2016
 
 https://github.com/openbiocorpora
 
+https://www2.informatik.hu-berlin.de/~hakenber/links/benchmarks.html
+
+http://mars.cs.utu.fi/PPICorpora/
+
 ### Individual corpora
 
 BC5CDR
