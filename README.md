@@ -109,6 +109,10 @@ scispaCy abbreviation tool
 https://github.com/allenai/scispacy
 
 
+## Annotation tools
+http://brat.nlplab.org/
+
+
 ## other BioNLP tools
 SPECIALIST NLP tools
 
@@ -132,7 +136,6 @@ https://bitbucket.org/larsjuhljensen/tagger/src/default/
 EVEX/Turku Event Extraction System
 
 https://turkunlp.org/bionlp.html
-
 
 
 ## Bioinformatics databases and ontologies (can be used to build dictionaries)
