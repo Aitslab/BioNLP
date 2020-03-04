@@ -40,10 +40,11 @@ SARS 2019
 
 
 # disease identifiers
-U07.1
-RA01.0
-Q84263196
+ICD-10:U07.1
+ICD-11:RA01.0
+wikidata:Q84263196
 DOID:0080600
+MeSH:C000657245 
 
   
 # virus names
@@ -54,6 +55,7 @@ new corona virus
 novel coronavirus
 novel corona virus
 Wuhan virus
+Wuhan pneumonia virus
 Wuhan coronavirus
 Wuhan corona virus
 Wuhancoronavirus
@@ -61,7 +63,8 @@ Wuhancorona virus
 Wuhan seafood market pneumonia virus
 Wuhan seafood market virus
 seafood market virus
-Wuhan pneumonia virus
+seafood market coronavirus
+seafood market corona virus
 Chinese coronavirus
 Chinese corona virus
 2019 novel coronavirus
@@ -76,6 +79,10 @@ severe acute respiratory syndrome coronavirus 2
 severe acute respiratory syndrome corona virus 2
 severe acute respiratory syndrome coronavirus2
 severe acute respiratory syndrome corona virus2
+Severe acute respiratory syndrome-related coronavirus 2
+Severe acute respiratory syndrome-related corona virus 2
+Severe acute respiratory syndrome-related coronavirus2
+Severe acute respiratory syndrome-related corona virus2
 SARS coronavirus 2
 SARS corona virus 2
 SARS coronavirus2
