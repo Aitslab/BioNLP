@@ -4,6 +4,8 @@ covid 19
 NCP
 coronavirus disease 2019
 corona virus disease 2019
+coronavirus disease-19
+corona virus disease-19
 2019 novel coronavirus respiratory syndrome
 2019 novel corona virus respiratory syndrome
 Wuhan respiratory syndrome
@@ -15,6 +17,8 @@ SARS 2
 SARS2
 SARS 2019
 2019 SARS
+coronavirus disease 2019 
+
 
 [virus name or Wuhan or Hubei] infection
 [virus name or Wuhan or Hubei] disease
@@ -26,6 +30,11 @@ SARS 2019
 [virus name or Wuhan or Hubei] acute syndrome
 [virus name or Wuhan or Hubei] acute disorder
 [virus name or Wuhan or Hubei] acute pneumonia
+[virus name or Wuhan or Hubei] severe infection
+[virus name or Wuhan or Hubei] severe disease
+[virus name or Wuhan or Hubei] severe syndrome
+[virus name or Wuhan or Hubei] severe disorder
+[virus name or Wuhan or Hubei] severe pneumonia
 [virus name or Wuhan or Hubei] respiratory infection
 [virus name or Wuhan or Hubei] respiratory disease
 [virus name or Wuhan or Hubei] respiratory syndrome
@@ -34,6 +43,28 @@ SARS 2019
 [virus name or Wuhan or Hubei] acute respiratory disease
 [virus name or Wuhan or Hubei] acute respiratory syndrome
 [virus name or Wuhan or Hubei] acute respiratory disorder
+[virus name or Wuhan or Hubei] severe respiratory infection
+[virus name or Wuhan or Hubei] severe respiratory disease
+[virus name or Wuhan or Hubei] severe respiratory syndrome
+[virus name or Wuhan or Hubei] severe respiratory disorder
+[virus name or Wuhan or Hubei] acute severe infection
+[virus name or Wuhan or Hubei] acute severe disease
+[virus name or Wuhan or Hubei] acute severe syndrome
+[virus name or Wuhan or Hubei] acute severe disorder
+[virus name or Wuhan or Hubei] acute severe pneumonia
+[virus name or Wuhan or Hubei] severe acute infection
+[virus name or Wuhan or Hubei] severe acute disease
+[virus name or Wuhan or Hubei] severe acute syndrome
+[virus name or Wuhan or Hubei] severe acute disorder
+[virus name or Wuhan or Hubei] severe acute pneumonia
+[virus name or Wuhan or Hubei] acute severe respiratory infection
+[virus name or Wuhan or Hubei] acute severe respiratory disease
+[virus name or Wuhan or Hubei] acute severe respiratory syndrome
+[virus name or Wuhan or Hubei] acute severe respiratory disorder
+[virus name or Wuhan or Hubei] severe acute respiratory infection
+[virus name or Wuhan or Hubei] asevere acute respiratory disease
+[virus name or Wuhan or Hubei] severe acute respiratory syndrome
+[virus name or Wuhan or Hubei] severe acute respiratory disorder
 
 2019, 2019-novel and 2019-new as pre- or 2019 suffix if not in virus name
 
