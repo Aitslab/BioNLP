@@ -8,8 +8,6 @@ coronavirus disease-19
 corona virus disease-19
 2019 novel coronavirus respiratory syndrome
 2019 novel corona virus respiratory syndrome
-Wuhan respiratory syndrome
-(WuRS)
 WuRS
 seafood market pneumonia
 severe acute respiratory syndrome type 2
@@ -17,7 +15,8 @@ SARS 2
 SARS2
 SARS 2019
 2019 SARS
-coronavirus disease 2019 
+severe acute respiratory syndrome 2019
+
 
 
 [virus name or Wuhan or Hubei] infection
@@ -67,7 +66,9 @@ coronavirus disease 2019
 [virus name or Wuhan or Hubei] severe acute respiratory disorder
 
 2019, 2019-novel and 2019-new as pre- or 2019 suffix if not in virus name
-
+[disease name] caused by [virus name]
+[disease name] due to [virus name]
+[disease name] from [virus name]
 
 
 # disease identifiers
@@ -79,6 +80,7 @@ MeSH:C000657245
 
   
 # virus names
+COVID-19 virus
 sarscov2
 sars cov 2
 new coronavirus
@@ -120,8 +122,12 @@ SARS coronavirus2
 SARS coronavirus 2
 virus responsible for covid19
 virus causing covid19
+
+# virus identifiers
 NCBI Taxonomy ID: 2697049
 NCBI:txid2697049
+DiseasesDB:60833
+MeSH:M000679178
 
 
 
