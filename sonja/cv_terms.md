@@ -108,6 +108,12 @@ Chinese corona virus
 2019 corona virus
 2019ncov
 2019 ncov
+SARS coronavirus 2
+SARS corona virus 2
+SARS coronavirus2
+SARS coronavirus 2
+virus responsible for covid19
+virus causing covid19
 severe acute respiratory syndrome coronavirus 2
 severe acute respiratory syndrome corona virus 2
 severe acute respiratory syndrome coronavirus2
@@ -116,12 +122,7 @@ Severe acute respiratory syndrome-related coronavirus 2
 Severe acute respiratory syndrome-related corona virus 2
 Severe acute respiratory syndrome-related coronavirus2
 Severe acute respiratory syndrome-related corona virus2
-SARS coronavirus 2
-SARS corona virus 2
-SARS coronavirus2
-SARS coronavirus 2
-virus responsible for covid19
-virus causing covid19
+
 
 # virus identifiers
 NCBI Taxonomy ID: 2697049
