@@ -20,60 +20,88 @@ severe acute respiratory syndrome 2019
 
 
 [virus name or Wuhan or Hubei] infection
+[virus name or Wuhan or Hubei] illness
 [virus name or Wuhan or Hubei] disease
 [virus name or Wuhan or Hubei] syndrome
 [virus name or Wuhan or Hubei] disorder
 [virus name or Wuhan or Hubei] pneumonia
 [virus name or Wuhan or Hubei] acute infection
+[virus name or Wuhan or Hubei] acute illness
 [virus name or Wuhan or Hubei] acute disease
 [virus name or Wuhan or Hubei] acute syndrome
 [virus name or Wuhan or Hubei] acute disorder
 [virus name or Wuhan or Hubei] acute pneumonia
 [virus name or Wuhan or Hubei] severe infection
+[virus name or Wuhan or Hubei] severe illness
 [virus name or Wuhan or Hubei] severe disease
 [virus name or Wuhan or Hubei] severe syndrome
 [virus name or Wuhan or Hubei] severe disorder
 [virus name or Wuhan or Hubei] severe pneumonia
 [virus name or Wuhan or Hubei] respiratory infection
+[virus name or Wuhan or Hubei] respiratory illness
 [virus name or Wuhan or Hubei] respiratory disease
 [virus name or Wuhan or Hubei] respiratory syndrome
 [virus name or Wuhan or Hubei] respiratory disorder
 [virus name or Wuhan or Hubei] acute respiratory infection
+[virus name or Wuhan or Hubei] acute respiratory illness
 [virus name or Wuhan or Hubei] acute respiratory disease
 [virus name or Wuhan or Hubei] acute respiratory syndrome
 [virus name or Wuhan or Hubei] acute respiratory disorder
 [virus name or Wuhan or Hubei] severe respiratory infection
+[virus name or Wuhan or Hubei] severe respiratory illness
 [virus name or Wuhan or Hubei] severe respiratory disease
 [virus name or Wuhan or Hubei] severe respiratory syndrome
 [virus name or Wuhan or Hubei] severe respiratory disorder
 [virus name or Wuhan or Hubei] acute severe infection
+[virus name or Wuhan or Hubei] acute severe illness
 [virus name or Wuhan or Hubei] acute severe disease
 [virus name or Wuhan or Hubei] acute severe syndrome
 [virus name or Wuhan or Hubei] acute severe disorder
 [virus name or Wuhan or Hubei] acute severe pneumonia
 [virus name or Wuhan or Hubei] severe acute infection
+[virus name or Wuhan or Hubei] severe acute illness
 [virus name or Wuhan or Hubei] severe acute disease
 [virus name or Wuhan or Hubei] severe acute syndrome
 [virus name or Wuhan or Hubei] severe acute disorder
 [virus name or Wuhan or Hubei] severe acute pneumonia
 [virus name or Wuhan or Hubei] acute severe respiratory infection
+[virus name or Wuhan or Hubei] acute severe respiratory illness
 [virus name or Wuhan or Hubei] acute severe respiratory disease
 [virus name or Wuhan or Hubei] acute severe respiratory syndrome
 [virus name or Wuhan or Hubei] acute severe respiratory disorder
 [virus name or Wuhan or Hubei] severe acute respiratory infection
+[virus name or Wuhan or Hubei] severe acute respiratory illness
 [virus name or Wuhan or Hubei] asevere acute respiratory disease
 [virus name or Wuhan or Hubei] severe acute respiratory syndrome
 [virus name or Wuhan or Hubei] severe acute respiratory disorder
 
-2019, 2019-novel and 2019-new as pre- or 2019 suffix if not in virus name
-[disease name] caused by [virus name]
-[disease name] due to [virus name]
-[disease name] from [virus name]
+infection caused by [virus name]
+illness caused by [virus name]
+disease caused by [virus name]
+syndrome caused by [virus name]
+disorder caused by [virus name]
+pneumonia caused by [virus name]
+infection due to [virus name]
+illness due to [virus name]
+disease due to [virus name]
+syndrome due to [virus name]
+disorder due to [virus name]
+pneumonia due to [virus name]
+infection from [virus name]
+illness from [virus name]
+disease from [virus name]
+syndrome from [virus name]
+disorder from [virus name]
+pneumonia from [virus name]
 
 
 # disease identifiers
 ICD-10:U07.1
+ICD-10: U07.1
+U07.1
 ICD-11:RA01.0
+ICD-11: RA01.0
+RA01.0
 wikidata:Q84263196
 DOID:0080600
 MeSH:C000657245 
@@ -127,6 +155,7 @@ Severe acute respiratory syndrome-related corona virus2
 # virus identifiers
 NCBI Taxonomy ID: 2697049
 NCBI:txid2697049
+txid2697049
 DiseasesDB:60833
 MeSH:M000679178
 
