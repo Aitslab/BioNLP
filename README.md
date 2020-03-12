@@ -121,7 +121,17 @@ Inception
 
 https://inception-project.github.io/
 
+BioC-JSON
 
+converts between BioC XML and BioC json format
+
+https://github.com/ncbi-nlp/BioC-JSON
+
+BioCconvert
+
+converts between BioC and PubAnnotation format
+
+http://bioc.sourceforge.net/
 
 ## other BioNLP tools
 dkpro core
