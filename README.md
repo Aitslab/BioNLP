@@ -110,10 +110,24 @@ https://github.com/allenai/scispacy
 
 
 ## Annotation tools
+BioQrator
+
+http://www.bioqrator.org/
+
+brat
 http://brat.nlplab.org/
+
+Inception
+
+https://inception-project.github.io/
+
 
 
 ## other BioNLP tools
+dkpro core
+
+https://github.com/dkpro/dkpro-core
+
 SPECIALIST NLP tools
 
 https://lexsrv3.nlm.nih.gov/Specialist/Home/index.html
@@ -239,6 +253,8 @@ Comparison of corpora
 https://f1000research.com/articles/3-96/v1
 
 Links to download several corpora
+
+https://github.com/dterg/biomedical_corpora
 
 http://compbio.ucdenver.edu/ccp/corpora/obtaining.shtml
 
