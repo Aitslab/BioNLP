@@ -110,6 +110,11 @@ https://github.com/allenai/scispacy
 
 
 ## Annotation tools
+Comparison of different annotators:
+
+http://knot.fit.vutbr.cz/annotations/comparison.html
+
+
 BioQrator
 
 http://www.bioqrator.org/
