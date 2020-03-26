@@ -55,6 +55,7 @@ fastText
 https://fasttext.cc/
 
 
+
 ## Tokenizers
 ChemTok
 
@@ -137,6 +138,11 @@ BioCconvert
 converts between BioC and PubAnnotation format
 
 http://bioc.sourceforge.net/
+
+## Pretrained models, word vectors, embeddings
+word2vec applied to corpus of 10,876,004 English abstracts of biomedical articles from PubMed
+
+http://participants-area.bioasq.org/general_information/Task8a/
 
 ## other BioNLP tools
 dkpro core
