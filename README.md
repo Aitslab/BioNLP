@@ -48,13 +48,6 @@ for topic modelling
 https://radimrehurek.com/gensim/
 
 
-## Embeddings
-
-fastText
-
-https://fasttext.cc/
-
-
 
 ## Tokenizers
 ChemTok
@@ -140,9 +133,21 @@ converts between BioC and PubAnnotation format
 http://bioc.sourceforge.net/
 
 ## Pretrained models, word vectors, embeddings
+fastText
+
+https://fasttext.cc/
+
+
 word2vec applied to corpus of 10,876,004 English abstracts of biomedical articles from PubMed
 
 http://participants-area.bioasq.org/general_information/Task8a/
+
+## dictionaries
+VerbNet
+
+https://verbs.colorado.edu/verbnet/
+
+https://github.com/cu-clear/verbnet
 
 ## other BioNLP tools
 dkpro core
