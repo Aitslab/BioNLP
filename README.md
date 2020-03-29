@@ -371,6 +371,10 @@ BioRxiv
 
 Wikipedia
 
+1findr
+
+https://1findr.1science.com/home
+
 ## Biomedical nomenclature
 Drug naming rules
 
