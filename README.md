@@ -264,6 +264,16 @@ provides normalized names for clinical drugs and links its names to many of the 
 https://www.nlm.nih.gov/research/umls/rxnorm/index.html
 
 ### Diseases & phenotypes
+Mondo
+
+https://mondo.monarchinitiative.org/pages/resources/
+
+http://www.ontobee.org/ontology/MONDO?iri=http://purl.obolibrary.org/obo/MONDO_0000001
+
+
+Human Phenotype Ontology
+
+https://hpo.jax.org/app/
 
 Disease Ontology  
 
@@ -284,6 +294,7 @@ https://web.expasy.org/cellosaurus/
 Cell Ontology
 
 UBERON
+
 anatomical entities; multicellular organisms and life-cycle stages
 
 NCBI Taxonomy
