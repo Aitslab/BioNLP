@@ -142,12 +142,38 @@ word2vec applied to corpus of 10,876,004 English abstracts of biomedical article
 
 http://participants-area.bioasq.org/general_information/Task8a/
 
-## dictionaries
+## Dictionaries & lexical databases
+Open English Dictionary
+
+https://www.learnthat.org/dictionary
+
+WordNet
+
+https://wordnet.princeton.edu/
+
 VerbNet
 
 https://verbs.colorado.edu/verbnet/
 
 https://github.com/cu-clear/verbnet
+
+BioVerbNet
+
+https://github.com/cambridgeltl/bio-verbnet
+
+UMLS Metathesaurus
+
+https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/index.html
+
+https://www.ncbi.nlm.nih.gov/books/NBK9684/
+
+SPECIALIST Lexicon
+
+https://lexsrv3.nlm.nih.gov/Specialist/Summary/lexicon.html
+
+British National Corpus
+
+http://www.natcorp.ox.ac.uk/
 
 ## other BioNLP tools
 dkpro core
@@ -186,12 +212,6 @@ http://obofoundry.org/
 BioPortal
 
 http://bioportal.bioontology.org/
-
-UMLS Metathesaurus
-
-https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/index.html
-
-https://www.ncbi.nlm.nih.gov/books/NBK9684/
 
 
 ### Proteins & Genes
@@ -327,6 +347,12 @@ https://portal.dbmi.hms.harvard.edu/projects/n2c2-nlp/
 NCBI disease
 https://www.sciencedirect.com/science/article/pii/S1532046413001974?via%3Dihub
 
+PubMed 200k RCT dataset
+
+to evaluate sentence classification
+
+https://github.com/Franck-Dernoncourt/pubmed-rct
+
 ## Biomedical text sources
 Pubmed abstracts
 
@@ -337,6 +363,11 @@ Europe PMC
 BioRxiv
 
 Wikipedia
+
+## Biomedical nomenclature
+Drug naming rules
+
+https://druginfo.nlm.nih.gov/drugportal/jsp/drugportal/DrugNameGenericStems.jsp
 
 
 ## Shared tasks and conferences within BioNLP
