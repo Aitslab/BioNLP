@@ -203,6 +203,9 @@ EVEX/Turku Event Extraction System
 
 https://turkunlp.org/bionlp.html
 
+PMCID - PMID - Manuscript ID - DOI Converter
+
+https://www.ncbi.nlm.nih.gov/pmc/pmctopmid/
 
 ## Bioinformatics databases and ontologies (can be used to build dictionaries)
 ### General & metadatabases
@@ -284,6 +287,10 @@ UBERON
 anatomical entities; multicellular organisms and life-cycle stages
 
 NCBI Taxonomy
+
+International Committee on Taxonomy of Viruses
+
+https://talk.ictvonline.org/files/master-species-lists/m/msl/8266
 
 ### Pathways & Reactions
 KEGG
