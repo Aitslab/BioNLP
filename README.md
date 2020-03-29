@@ -354,6 +354,10 @@ GeneTag
 
 https://www.ncbi.nlm.nih.gov/pubmed/15960837
 
+HPO Gold Standard Corpus
+
+http://www.bio-lark.org/hpo_res.html
+
 Med Mentions
 
 https://github.com/chanzuckerberg/MedMentions
