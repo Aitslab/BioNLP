@@ -1,6 +1,6 @@
 BioNLP
 =======
-Repository for student projects within biomedical text mining from Lund University.
+Repository for student projects within biomedical text mining from Lund University. All code comes with a GPLv3 licence.
 
 
 # Resources
