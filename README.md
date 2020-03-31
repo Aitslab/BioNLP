@@ -175,6 +175,12 @@ British National Corpus
 
 http://www.natcorp.ox.ac.uk/
 
+## Annotation and corpus formats
+Comparison of Pubtator, BioC, PubAnnotations
+
+https://www.ncbi.nlm.nih.gov/CBBresearch/Lu/Demo/tmTools/Format.html
+
+
 ## other BioNLP tools
 dkpro core
 
