@@ -103,10 +103,14 @@ scispaCy abbreviation tool
 https://github.com/allenai/scispacy
 
 
-## Annotation tools
-Comparison of different annotators:
+## Annotation tools and formats
+Comparison of different annotators
 
 http://knot.fit.vutbr.cz/annotations/comparison.html
+
+Comparison of Pubtator, BioC, PubAnnotations on an example
+
+https://www.ncbi.nlm.nih.gov/CBBresearch/Lu/Demo/tmTools/Format.html
 
 
 BioQrator
@@ -175,10 +179,6 @@ British National Corpus
 
 http://www.natcorp.ox.ac.uk/
 
-## Annotation and corpus formats
-Comparison of Pubtator, BioC, PubAnnotations
-
-https://www.ncbi.nlm.nih.gov/CBBresearch/Lu/Demo/tmTools/Format.html
 
 
 ## other BioNLP tools
