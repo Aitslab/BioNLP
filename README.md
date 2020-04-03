@@ -382,13 +382,42 @@ to evaluate sentence classification
 https://github.com/Franck-Dernoncourt/pubmed-rct
 
 ## Biomedical text sources
-Pubmed abstracts
+Cinahl
 
-Pubmed Central full-length articles
+nursing, physical therapy and occupational therapy
 
-Europe PMC
+Google scholar
 
-BioRxiv
+Embase
+
+including Emtree vocabulary, specialized in pharmacology and toxicology
+
+
+PubMed
+
+PMC
+
+EuropePMC
+
+Web of Science
+
+multidisciplinary database with citation indexing
+
+Libris
+
+Swedish national search service containing titles held by Swedish research and many public libraries: books, reports, dissertations, etc.
+
+Ovid
+
+database interface providing access to PsycInfo, Medline or Global Health
+
+SveMed+
+
+bibliographic database that contains references to articles from Scandinavian journals in the disciplines of medicine, dentistry, health care, occupational therapy, nursing and physiotherapy
+
+Worldcat
+
+largest network of library content and services; excellent for finding books, ebooks, theses and dissertations
 
 Wikipedia
 
