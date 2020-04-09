@@ -54,7 +54,17 @@ https://github.com/chanzuckerberg/MedMentions
 https://universaldependencies.org/format.html
 
 
-# Conversion tools
+# Conversion tools by our group
+
+CORD-19 json to BioBERT input format
+
+https://github.com/AnttonLA/BINP37/tree/master/dataset_generation
+
+BioBERT output format to PubAnnotation format
+
+https://github.com/AnttonLA/BINP37/tree/master/output_generation
+
+# Conversion tools by others
 ## BioC convert
 
 http://sourceforge.net/projects/bioc/files/BioCconvert-0.1.tar.gz/download
