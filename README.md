@@ -191,6 +191,14 @@ SPECIALIST NLP tools
 https://lexsrv3.nlm.nih.gov/Specialist/Home/index.html
 
 
+SimConcept
+
+a tool for resolving composite expressions such as BCA1/2 and galectin1-4
+
+https://dl.acm.org/doi/10.1145/2649387.2649420
+
+
+
 GENIA tagger
 
 part-of-speech tagging, shallow parsing, and named entity recognition for biomedical text
