@@ -360,6 +360,10 @@ Molecular Process Ontology
 
 ## Corpora for training and validation  
 ### General
+Description of common BioNLP corpora
+
+https://github.com/cambridgeltl/MTL-Bioinformatics-2016/blob/master/Additional%20file%201.pdf
+
 Comparison of corpora
 
 https://f1000research.com/articles/3-96/v1
