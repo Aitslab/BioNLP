@@ -35,6 +35,8 @@ scispaCy is a Python package containing spaCy models for processing biomedical, 
 
 https://allenai.github.io/scispacy/
 
+https://arxiv.org/abs/1902.07669v3
+
 keras
 
 Hugging Face
@@ -203,6 +205,14 @@ British National Corpus
 
 http://www.natcorp.ox.ac.uk/
 
+
+
+## Named entity linking
+MetaMap
+
+maps terms to UMLS
+
+https://metamap.nlm.nih.gov/
 
 
 ## other BioNLP tools
@@ -391,6 +401,15 @@ GeneTag
 20K Medline sentences; also available in BioC format and updated version GeneTag-05  
 
 https://www.ncbi.nlm.nih.gov/pubmed/15960837
+
+GENIA
+
+http://www.geniaproject.org/
+
+Universal Dependencies (v1.0) for the GENIA 1.0 Treebank, along with additional raw abstracts and metadata. 
+
+https://github.com/allenai/genia-dependency-trees
+
 
 HPO Gold Standard Corpus
 
