@@ -87,6 +87,13 @@ https://drive.google.com/open?id=1xCVL5lMF021BuqzX3L6A2RhbRqJYXY8a
 
 Clark, S., & Curran, J. R. (2007). Wide-coverage efficient statistical parsing with CCG and log-linear models. Computational Linguistics, 33(4), 493-552.
 
+## negation and uncertainty detection
+
+negSpacy
+
+https://spacy.io/universe/project/negspacy
+
+
 ## Co-reference resolution and abbreviation resolution
 https://github.com/huggingface/neuralcoref
 
@@ -101,6 +108,12 @@ https://drive.google.com/file/d/1nKfgpZ01Qdd_vYm6llYxhZjsadkWM15J/view
 scispaCy abbreviation tool
 
 https://github.com/allenai/scispacy
+
+SpanBERT
+
+for co-reference resolution
+
+https://github.com/facebookresearch/SpanBERT
 
 
 ## Annotation tools and formats
