@@ -91,9 +91,15 @@ Clark, S., & Curran, J. R. (2007). Wide-coverage efficient statistical parsing w
 
 ## Negation and uncertainty detection
 
+negBio
+
+https://github.com/ncbi-nlp/NegBio
+
 negSpacy
 
 https://spacy.io/universe/project/negspacy
+
+
 
 
 ## Co-reference resolution and abbreviation resolution
