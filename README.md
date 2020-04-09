@@ -87,7 +87,7 @@ https://drive.google.com/open?id=1xCVL5lMF021BuqzX3L6A2RhbRqJYXY8a
 
 Clark, S., & Curran, J. R. (2007). Wide-coverage efficient statistical parsing with CCG and log-linear models. Computational Linguistics, 33(4), 493-552.
 
-## negation and uncertainty detection
+## Negation and uncertainty detection
 
 negSpacy
 
@@ -125,6 +125,17 @@ Comparison of Pubtator, BioC, PubAnnotations on an example
 
 https://www.ncbi.nlm.nih.gov/CBBresearch/Lu/Demo/tmTools/Format.html
 
+
+BioC Viewer
+
+for viewing and merging BioC annotations
+
+http://viewer.bioqrator.org/
+
+https://github.com/dongseop/bioc_viewer
+
+
+http://viewer.bioqrator.org/
 
 BioQrator
 
