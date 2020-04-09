@@ -3,14 +3,18 @@
 ##Positive relation:
 cause
 activate
+induce
 
 
 ##Negative relation:
 inhibit
+block
 
 
 ##Other relation:
 bind
+phosphorylate
+acetylate
 
 
 ##No relation
