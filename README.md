@@ -295,8 +295,37 @@ Ensembl
 NCBI Gene
 
 ### Chemicals
+Lists of databases
+
+https://www.ebi.ac.uk/unichem/ucquery/listSources
+
+https://www.sciencedirect.com/science/article/pii/S1740674915000062?via%
+
+http://www.chemspider.com/DataSources.aspx
+
+ChEMBL
+
+manually curated database of bioactive molecules with drug-like properties
+
+https://www.ebi.ac.uk/chembl/
 
 CHEBI
+
+https://www.ebi.ac.uk/chebi/
+
+Chemspider
+
+http://www.chemspider.com/
+
+Human Metabolome Database
+
+https://hmdb.ca/
+ 
+FoodDB
+
+information on food, food components and food additives
+
+https://foodb.ca/
 
 
 PubChem
@@ -316,6 +345,10 @@ RxNorm
 provides normalized names for clinical drugs and links its names to many of the drug vocabularies
 
 https://www.nlm.nih.gov/research/umls/rxnorm/index.html
+
+Toxic Exposome Database
+
+http://www.t3db.ca/
 
 ### Diseases & phenotypes
 Mondo
