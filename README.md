@@ -462,6 +462,10 @@ Med Mentions
 
 https://github.com/chanzuckerberg/MedMentions
 
+Multilangual Named entity linking corpus
+
+https://github.com/lasigeBioTM/MultiNEL-corpus
+
 n2c2 (i2b2) corpora
 
 https://portal.dbmi.hms.harvard.edu/projects/n2c2-nlp/
