@@ -56,6 +56,12 @@ ChemTok
 
 https://www.ncbi.nlm.nih.gov/pubmed/26942193
 
+Huggingface tokenizers
+
+https://github.com/huggingface/tokenizers
+
+https://www.kaggle.com/funtowiczmo/hugging-face-tutorials-training-tokenizer
+
 NLTK word_tokenize
 
 NLTK regexp_tokenize
