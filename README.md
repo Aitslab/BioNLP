@@ -180,6 +180,10 @@ fastText
 https://fasttext.cc/
 
 
+sciBERT
+
+https://github.com/allenai/scibert
+
 word2vec applied to corpus of 10,876,004 English abstracts of biomedical articles from PubMed
 
 http://participants-area.bioasq.org/general_information/Task8a/
@@ -421,7 +425,7 @@ http://compbio.ucdenver.edu/ccp/corpora/obtaining.shtml
 
 https://github.com/bionlp-hzau/BioNLP-Corpus
 
-https://github.com/cambridgeltl/MTL-Bioinformatics-2016
+https://github.com/allenai/scibert
 
 https://github.com/wonjininfo/CollaboNet
 
