@@ -419,6 +419,12 @@ https://github.com/dterg/biomedical_corpora
 
 http://compbio.ucdenver.edu/ccp/corpora/obtaining.shtml
 
+https://github.com/bionlp-hzau/BioNLP-Corpus
+
+https://github.com/cambridgeltl/MTL-Bioinformatics-2016
+
+https://github.com/wonjininfo/CollaboNet
+
 Pubannotation http://pubannotation.org/
 
 Corpora in BioC format  http://bioc.sourceforge.net/
