@@ -24,5 +24,6 @@ Column 9: runtime
 
 
 
-### gold_corpus contains all papers in cord19 json input format (10 papers). 
-
+gold_papers.tar.gz contains all papers in cord19 json input format (10 papers). 
+Gold_std_Pubannotation_1.json and Gold_std_Pubannotation_2.json are annotated corpus  in Pubannotation format with Pubmed sourceid all 10 corpus in one json file, one with indentation and the other not.	
+Updated_gold_standard.json and	Updated_gold_standard_2.json 	are annotated corpus  in Pubannotation format with PMC sourceid all 10 corpus in one json file, one with indentation and the other not.	
