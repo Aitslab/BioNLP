@@ -19,3 +19,10 @@ Column 7: precision for all classes combined
 Column 8: recall for all classes combined
 
 Column 9: runtime
+
+
+
+
+
+### gold_corpus contains all papers in cord19 json input format (10 papers). 
+
