@@ -9,7 +9,7 @@ buildUniprot.py: Reads the xml representation of the UniprotKB/Swiss-Prot databa
 
 buildHGNC.py: Reads the json representation of the HGNC database and parses all the data into a list which is then saved using pickle as /out/hgnc.out
 
-buildCombined.py: Combines the the two file outputed by the above scripts and combines them into a unified dictionary, assigning all proteins a unique ID. This dictionary is then used to create an index that can be used in conjuntion with Marcus Klang's dictionary tagger. !NOTICE! This script requires the server from Marcus Klang's dictionary tagger to be running. The code for this can be found here: https://github.com/Aitslab/BioNLP/tree/master/marcus/dictionarytagger
+buildDict.py: Combines the the two file outputed by the above scripts and combines them into a unified dictionary, assigning all proteins a unique ID. This dictionary is then used to create an index that can be used in conjuntion with Marcus Klang's dictionary tagger. !NOTICE! This script requires the server from Marcus Klang's dictionary tagger to be running. The code for this can be found here: https://github.com/Aitslab/BioNLP/tree/master/marcus/dictionarytagger
 
 corpus.py: Reads through the corpus file /in/test.tsv to create a list of all entitites found in the text.
 
