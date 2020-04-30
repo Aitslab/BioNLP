@@ -11,24 +11,6 @@ buildHGNC.py: Reads the json representation of the HGNC database and parses all 
 
 buildDict.py: Combines the the two file outputed by the above scripts and combines them into a unified dictionary, assigning all proteins a unique ID. This dictionary is then used to create an index that can be used in conjuntion with Marcus Klang's dictionary tagger. !NOTICE! This script requires the server from Marcus Klang's dictionary tagger to be running. The code for this can be found here: https://github.com/Aitslab/BioNLP/tree/master/marcus/dictionarytagger
 
-To start Marcus Klang's dictionary tagger:
-*Linux/OSX*
-
-Open a terminal and navigate to this directory, run:
-```sh
-sh -c 'cd ../marcus/dictionarytagger/mention-index-py4j && ./gradlew run'
-```
-
-This will run the server, until you terminate it, run the script as normal in another terminal window.
-
-*Windows*
-
-Open a terminal and navigate to this directiory, run:
-```sh
-cd ../marcus/dictionarytagger/mention-index-py4j
-gradlew.bat run
-```
-
 corpus.py: Reads through the corpus file /in/test.tsv to create a list of all entitites found in the text.
 
 evalDict.py: Runs Marcus Klang's dictionary tagger with the previouslt generated index file and finds all matches. It then evalues these matches and prints precision, recall and F1-score. !NOTICE! This script also requires the server from Marcus Klang's dictionary tagger to be running.
@@ -44,4 +26,27 @@ All necessary files except for the Uniprot xml and the HGNC json can be found he
 Uniprot - ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.xml.gz
 
 HGNC - ftp://ftp.ebi.ac.uk/pub/databases/genenames/new/json/hgnc_complete_set.json
+
+Starting Marcus Klang dictionarytagger server:
+----------------------------------------------
+
+To start Marcus Klang's dictionary tagger:
+
+**Linux/OSX**
+
+Open a terminal and navigate to this directory, run:
+```sh
+sh -c 'cd ../marcus/dictionarytagger/mention-index-py4j && ./gradlew run'
+```
+
+This will run the server, until you terminate it, run the script as normal in another terminal window.
+
+**Windows**
+
+Open a terminal and navigate to this directiory, run:
+```sh
+cd ../marcus/dictionarytagger/mention-index-py4j
+gradlew.bat run
+```
+
 
