@@ -20,6 +20,8 @@ Column 8: recall for all classes combined
 
 Column 9: runtime
 
+Column 10: date of evaluation (YYYYMMDD)
+
 
 
 
