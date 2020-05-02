@@ -1,0 +1,234 @@
+{ 
+  "cord_uid": "0brhn8oc",
+  "sourcedb": "PMC",
+  "sourceid": "PMC1149493",
+  "divid": "2",
+  "text": "R NA molecules fulfi ll a diverse set of biological functions within cells, from the transfer of genetic information from DNA to protein, to enzymatic catalysis. Refl ecting this range of roles, simple linear strings of RNA-made up of uracil, guanine, cytosine, and adenine-form a variety of complex three-dimensional structures. Just as proteins form distinct structural motifs such as zinc fi ngers and beta barrels, certain structures are also commonly adopted by RNA molecules. Among the most prevalent RNA structures is a motif known as the pseudoknot. First recognized in the turnip yellow mosaic virus [1] , a pseudoknot is an RNA structure that is minimally composed of two helical segments connected by single-stranded regions or loops ( Figure 1 ). Although several distinct folding topologies of pseudoknots exist, the best characterized is the H type. In the H-type fold, the bases in the loop of a hairpin form intramolecular pairs with bases outside of the stem ( Figure 1A and 1B) . This causes the formation of a second stem and loop, resulting in a pseudoknot with two stems and two loops ( Figure 1C ). The two stems are able to stack on top of each other to form a quasi-continuous helix with one continuous and one discontinuous strand. The singlestranded loop regions often interact with the adjacent stems (loop 1-stem 2 or loop 2-stem 1) to form hydrogen bonds and to participate in the overall structure of the molecule. Hence, this relatively simple fold can yield very complex and stable RNA structures. Due to variation of the lengths of the loops and stems, as well as the types of interactions between them, pseudoknots represent a structurally diverse group. It is fi tting that they play a variety of diverse roles in biology. These roles include forming the catalytic core of various ribozymes [2, 3] , self-splicing introns [4] , and telomerase [5] . Additionally, pseudoknots play critical roles in altering gene expression by inducing ribosomal frameshifting in many viruses [6] [7] [8] [9] .",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "bionlpg13cg_T1",
+      "span": {
+        "begin": 582,
+        "end": 612
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T2",
+      "span": {
+        "begin": 235,
+        "end": 241
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bionlpg13cg_T3",
+      "span": {
+        "begin": 243,
+        "end": 250
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bionlpg13cg_T4",
+      "span": {
+        "begin": 252,
+        "end": 260
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bionlpg13cg_T5",
+      "span": {
+        "begin": 387,
+        "end": 400
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bionlpg13cg_T6",
+      "span": {
+        "begin": 1369,
+        "end": 1383
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bionlpg13cg_T7",
+      "span": {
+        "begin": 1826,
+        "end": 1860
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bionlpg13cg_T8",
+      "span": {
+        "begin": 2010,
+        "end": 2025
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T9",
+      "span": {
+        "begin": 603,
+        "end": 608
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T10",
+      "span": {
+        "begin": 2002,
+        "end": 2009
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T11",
+      "span": {
+        "begin": 5,
+        "end": 14
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T12",
+      "span": {
+        "begin": 129,
+        "end": 136
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T13",
+      "span": {
+        "begin": 235,
+        "end": 241
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T14",
+      "span": {
+        "begin": 243,
+        "end": 250
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T15",
+      "span": {
+        "begin": 252,
+        "end": 260
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T16",
+      "span": {
+        "begin": 338,
+        "end": 346
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T17",
+      "span": {
+        "begin": 387,
+        "end": 391
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T18",
+      "span": {
+        "begin": 546,
+        "end": 556
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T19",
+      "span": {
+        "begin": 1066,
+        "end": 1076
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T20",
+      "span": {
+        "begin": 1369,
+        "end": 1377
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T21",
+      "span": {
+        "begin": 1435,
+        "end": 1443
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T22",
+      "span": {
+        "begin": 2,
+        "end": 4
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T23",
+      "span": {
+        "begin": 235,
+        "end": 241
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T24",
+      "span": {
+        "begin": 243,
+        "end": 250
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T25",
+      "span": {
+        "begin": 252,
+        "end": 260
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T26",
+      "span": {
+        "begin": 266,
+        "end": 278
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T27",
+      "span": {
+        "begin": 387,
+        "end": 391
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T28",
+      "span": {
+        "begin": 1369,
+        "end": 1377
+      },
+      "obj": "chemical"
+    }
+  ] 
+}

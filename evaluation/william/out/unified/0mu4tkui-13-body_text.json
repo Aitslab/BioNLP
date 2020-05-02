@@ -1,0 +1,58 @@
+{ 
+  "cord_uid": "0mu4tkui",
+  "sourcedb": "PMC",
+  "sourceid": "PMC3817278",
+  "divid": "13",
+  "text": "The percentage of viral sequences was calculated by dividing the number of virus derived reads in the sample by the total numbers of reads in the same sample. The enrichment index was calculated by dividing the percentage of viral sequences in the captured sample by the percentage viral sequences in the input sample. A value above 1 indicates antibody capture of the virus, which suggests a immunogenic course of infection.",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "craft_T1",
+      "span": {
+        "begin": 18,
+        "end": 33
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T2",
+      "span": {
+        "begin": 75,
+        "end": 80
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T3",
+      "span": {
+        "begin": 225,
+        "end": 240
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T4",
+      "span": {
+        "begin": 282,
+        "end": 297
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T5",
+      "span": {
+        "begin": 369,
+        "end": 374
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bc5cdr_T6",
+      "span": {
+        "begin": 415,
+        "end": 424
+      },
+      "obj": "disease"
+    }
+  ] 
+}
