@@ -1,0 +1,18 @@
+{ 
+  "cord_uid": "0mu4tkui",
+  "sourcedb": "PMC",
+  "sourceid": "PMC3817278",
+  "divid": "12",
+  "text": "Primers, MIDs and ribosomal RNA sequences were trimmed from the reads. Sequences were compared with all available sequences in the nonredundant Genbank database [16] via the BlastN (http://blast.ncbI.nlm.nih.gov/Blast.cgi) tool [17] . The following Blast settings were used: expect threshold: 1000, Match/ Mismatch Scores: 1.-1, Gap Costs: Existence: 2 Extension: 1. The blast output was subsequently used to create a taxonomic ",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "unique_T1",
+      "span": {
+        "begin": 228,
+        "end": 232
+      },
+      "obj": "chemical"
+    }
+  ] 
+}
