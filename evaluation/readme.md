@@ -26,7 +26,7 @@ Column 10: date of evaluation (YYYYMMDD)
 
 
 
-"gold_papers.tar.gz" contains all papers in cord19 json input format (10 papers). 
+"gold_papers.tar.gz" contains all 10 gold standard papers in cord19 json input format but without author names or body text (title and abstract only). Abstracts are combined to one paragraph (but may be in several sections in the corresponding CORD-19 file).
 
 "Gold_std_Pubannotation_1.json" and "Gold_std_Pubannotation_2.json" are annotated corpus  in Pubannotation format with Pubmed sourceid all 10 corpus in one json file, one with indentation and the other not.	
 
