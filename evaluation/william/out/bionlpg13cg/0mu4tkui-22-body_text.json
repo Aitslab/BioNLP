@@ -1,0 +1,106 @@
+{ 
+  "cord_uid": "0mu4tkui",
+  "sourcedb": "PMC",
+  "sourceid": "PMC3817278",
+  "divid": "22",
+  "text": "EAR values ranged from 0 to 3019 (Table 3 ). In respiratory samples, almost all EAR were derived from viruses. In patients 3-13, 98-100% of all EAR sequences were of viral origin. Also in fecal samples, virus reads represent the majority of the EAR. In patient 14, 30% of the EAR were derived from norovirus and 50% from adenovirus. In patient 15, all 3019 enriched reads were derived from norovirus. In patient 16 none of the 42 EAR were derived from an enterovirus, and also in patient 18 no enterovirus reads were detected in the EAR as expected since no enterovirus reads were present in the captured reads. Sapovirus sequences were detected in the EAR of patient 17 and 18, 21% and 65% respectively. In patient 19, 62% of the EAR were derived from a hepatitis B virus. The plant virus and the enterobacteriophage were not detected in the EAR of patient 15 and 19.",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "bionlpg13cg_T1",
+      "span": {
+        "begin": 114,
+        "end": 127
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T2",
+      "span": {
+        "begin": 253,
+        "end": 260
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T3",
+      "span": {
+        "begin": 298,
+        "end": 307
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T4",
+      "span": {
+        "begin": 321,
+        "end": 331
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T5",
+      "span": {
+        "begin": 336,
+        "end": 343
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T6",
+      "span": {
+        "begin": 390,
+        "end": 399
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T7",
+      "span": {
+        "begin": 404,
+        "end": 411
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T8",
+      "span": {
+        "begin": 480,
+        "end": 487
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T9",
+      "span": {
+        "begin": 660,
+        "end": 667
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T10",
+      "span": {
+        "begin": 708,
+        "end": 715
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T11",
+      "span": {
+        "begin": 755,
+        "end": 772
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T12",
+      "span": {
+        "begin": 850,
+        "end": 857
+      },
+      "obj": "species"
+    }
+  ] 
+}

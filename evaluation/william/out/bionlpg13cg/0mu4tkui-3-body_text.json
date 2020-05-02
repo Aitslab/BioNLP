@@ -1,0 +1,50 @@
+{ 
+  "cord_uid": "0mu4tkui",
+  "sourcedb": "PMC",
+  "sourceid": "PMC3817278",
+  "divid": "3",
+  "text": "Discovery of new viruses in the last decade has been boosted by large improvements in sequencing technology. These methods form the basis for improved virus discovery processes capable of generating 10e5-10e7 sequence reads directly from a clinical sample. A virus discovery method to amplify RNA and DNA virus sequences directly in patient material (VIDISCA-454) without prior knowledge of the viral genome sequence has been developed [5] . The resulting DNA library is then subjected to Roche-454 next generation sequencing and this method has been successfully used to identify human coronavirus NL63 [6] , a novel HIV-1 subtype [7] , and 2 novel parvoviruses in bats [8] .",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "bionlpg13cg_T1",
+      "span": {
+        "begin": 333,
+        "end": 349
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T2",
+      "span": {
+        "begin": 581,
+        "end": 607
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T3",
+      "span": {
+        "begin": 650,
+        "end": 662
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T4",
+      "span": {
+        "begin": 666,
+        "end": 674
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T5",
+      "span": {
+        "begin": 199,
+        "end": 223
+      },
+      "obj": "chemical"
+    }
+  ] 
+}

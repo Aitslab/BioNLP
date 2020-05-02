@@ -1,0 +1,90 @@
+{ 
+  "cord_uid": "0mu4tkui",
+  "sourcedb": "PMC",
+  "sourceid": "PMC3817278",
+  "divid": "18",
+  "text": "For all respiratory samples the enrichment index was above 1.0, indicating that in every sample tested the number of viral reads increased after capture. The human coronaviruses OC43, NL63 and 229E were detected with an enrichment index of 169, 343 and 23 respectively. In a second NL63 case (patient 6), the virus was enriched 20-fold. The para-influenza viruses 1, 2 and 4 infections were detected with an enrichment index of 1.5, 54 and 19 respectively. The enrichment index for the metapneumovirus was 7.2, while it was 1.6 for the respiratory syncytial virus. Human rhinovirus infection was observed in two different patients and the enrichment index was 1.9 and 3.1 respectively. Influenza B virus was detected with an enrichment index of 3.3 and influenza A virus with an enrichment index of 25.",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "bionlpg13cg_T1",
+      "span": {
+        "begin": 158,
+        "end": 182
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T2",
+      "span": {
+        "begin": 184,
+        "end": 188
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T3",
+      "span": {
+        "begin": 193,
+        "end": 197
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T4",
+      "span": {
+        "begin": 293,
+        "end": 300
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T5",
+      "span": {
+        "begin": 486,
+        "end": 501
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T6",
+      "span": {
+        "begin": 548,
+        "end": 563
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T7",
+      "span": {
+        "begin": 565,
+        "end": 570
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T8",
+      "span": {
+        "begin": 622,
+        "end": 630
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T9",
+      "span": {
+        "begin": 686,
+        "end": 703
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T10",
+      "span": {
+        "begin": 753,
+        "end": 770
+      },
+      "obj": "species"
+    }
+  ] 
+}

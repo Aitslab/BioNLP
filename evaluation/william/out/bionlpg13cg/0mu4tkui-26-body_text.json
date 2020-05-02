@@ -1,0 +1,18 @@
+{ 
+  "cord_uid": "0mu4tkui",
+  "sourcedb": "PMC",
+  "sourceid": "PMC3817278",
+  "divid": "26",
+  "text": "Antibody response to a virus infection can vary, depending on the virus, but also age and immune state of patients. Also, antibodies subclasses can differ; some viruses elicit a strong IgG response, while others induce a response dominated by IgA. In our antibody capture experiment, a combination of protein A and G coupled beads was used. Both proteins strongly bind to IgGs, but not or less efficient to IgA. It has been shown that serum antibodies, for instance against PIV-1 are not neutralizing efficiently, and that especially secretory IgA plays an important role in preventing re-infection [26, 27] . To address that point, protein L coupled beads, which are able to capture IgA, were tested. However, no difference was observed in the amount of PIV-1 or enterovirus capture (data not shown).",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "bionlpg13cg_T1",
+      "span": {
+        "begin": 106,
+        "end": 114
+      },
+      "obj": "species"
+    }
+  ] 
+}
