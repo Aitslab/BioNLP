@@ -35,6 +35,6 @@ Compare to output fle:
 
 "Updated_gold_standard.json" and	"Updated_gold_standard_2.json" 	are annotated corpus  in Pubannotation format with PMC sourceid all 10 corpus in one json file, one with indentation and the other not.	
 
-gold
+gold_standard_corpus.tar.gz contains all 10 annotated papers each contains title and abstract in one file.
 
 
