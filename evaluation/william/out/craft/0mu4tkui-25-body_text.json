@@ -1,0 +1,50 @@
+{ 
+  "cord_uid": "0mu4tkui",
+  "sourcedb": "PMC",
+  "sourceid": "PMC3817278",
+  "divid": "25",
+  "text": "Also enteroviruses were poorly captured. A possible explanation might be that the bacteria or bacteriophage background in fecal samples is high which makes it more difficult to enrich a virus with a relatively low load. Nonetheless, we were able to reduce the amount of reads originating from bacteriophages and plant viruses (enrichment index of 0.01 and 0.08), indicating that this method can efficiently reduce the background in fecal samples. Furthermore, it could be that the immune response to enteroviruses is poor, especially in immunocompromised patients, which is the case in our study patients with diarrhoea. These patients were HIV-1 positive with relatively low CD4 counts (0.18 and 0.05610E9 cells/L in the two patients with enterovirus infection). On the other hand, it has been published that HIV-1 infected patients are not hampered in their immune response to enteroviruses, and chronic shedding is as rare as in the normal population [25] .",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "craft_T1",
+      "span": {
+        "begin": 82,
+        "end": 90
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T2",
+      "span": {
+        "begin": 186,
+        "end": 191
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T3",
+      "span": {
+        "begin": 740,
+        "end": 751
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T4",
+      "span": {
+        "begin": 810,
+        "end": 824
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T5",
+      "span": {
+        "begin": 312,
+        "end": 325
+      },
+      "obj": "chemical"
+    }
+  ] 
+}

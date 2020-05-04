@@ -1,0 +1,42 @@
+{ 
+  "cord_uid": "0brhn8oc",
+  "sourcedb": "PMC",
+  "sourceid": "PMC1149493",
+  "divid": "4",
+  "text": "The removal of introns from pre-messenger RNA (pre-mRNA) is fundamentally important for eukaryotic life. Most introns are removed by a ribonucleoprotein complex called the spliceosome. A subset of introns are self-cleaving, catalyzing their own removal from pre-mRNA without the aid of proteins [14] . One such class of introns are the group I self-splicing introns, with the most well-studied example being from the ciliate Tetrahymena. The structure of this ribozyme is made up of three helical domains, with many tertiary contacts between the domains [15] . The only portion of the RNA that spans all three helical domains is a pseudoknot belt that wraps around the molecule, base-pairing with all three helices [15] . The pseudoknot establishes the catalytic core of the group I self-splicing introns.",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "unique_T1",
+      "span": {
+        "begin": 88,
+        "end": 98
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T2",
+      "span": {
+        "begin": 417,
+        "end": 436
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T3",
+      "span": {
+        "begin": 286,
+        "end": 294
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "unique_T4",
+      "span": {
+        "begin": 669,
+        "end": 677
+      },
+      "obj": "chemical"
+    }
+  ] 
+}

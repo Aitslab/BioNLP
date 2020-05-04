@@ -1,0 +1,26 @@
+{ 
+  "cord_uid": "0mu4tkui",
+  "sourcedb": "PMC",
+  "sourceid": "PMC3817278",
+  "divid": "9",
+  "text": "Respiratory and fecal samples were centrifuged (10,000 g) and 150 ml of the supernatant was mixed with 50ml Dynabeads protein A and G (1:1, Invitrogen). After 20 minutes incubation, 10 ml of autologous convalescent serum of the patient was added to the mixture (Table 1) . After a 20 minutes incubation with continuous shaking at room temperature, samples were washed six times with PBS using a magnetic particle concentrator. Universal transport medium with TURBO TM DNase (2U/ml, Ambion) was added to the antibody-antigen complex and samples were incubated at 37uC for 30 minutes. The complexes were lysed with Boom-lysis buffer L6 and the lysate was used as input for Boom extraction [14] , followed by VIDISCA-454 sequencing as described below.",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "bionlpg13cg_T1",
+      "span": {
+        "begin": 202,
+        "end": 220
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T2",
+      "span": {
+        "begin": 228,
+        "end": 235
+      },
+      "obj": "species"
+    }
+  ] 
+}

@@ -1,0 +1,18 @@
+{ 
+  "cord_uid": "0mu4tkui",
+  "sourcedb": "PMC",
+  "sourceid": "PMC3817278",
+  "divid": "23",
+  "text": "A new method is described that facilitates virus identification by enriching viral material with convalescent autologous patient antibody capture followed by deep sequencing. For all samples tested here, an increase in percentage of viral reads was detected when compared to the input sample. In 9 out of the 21 viruses the amount of viral reads after capture increase 10-fold or more. By using the Xcompare script, enriched reads in the antibody captured sample could be determined in an identity independent manner. In 11 out of the 13 patients, between 98% and 100% of the enriched analysis reads were of mammalian viral origin. In fecal samples between 21% and 100% viral reads were detected in the EAR in 4 out of 6 cases. Surprisingly, in two patients with enterovirus infection, no viral reads were detected in the EAR.",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "bc5cdr_T1",
+      "span": {
+        "begin": 763,
+        "end": 784
+      },
+      "obj": "disease"
+    }
+  ] 
+}

@@ -1,0 +1,9 @@
+{ 
+  "cord_uid": "0mu4tkui",
+  "sourcedb": "PMC",
+  "sourceid": "PMC3817278",
+  "divid": "21",
+  "text": "The enrichment index shows that viral reads appear more frequently in the antibody-captured material compared to the input. This increase can also be used to identify viruses without the necessity of having sequence similarity to known viruses that can be probed by Blast to search for identity. Since restriction enzyme digestion is part of the protocol, identical fragments of the same size will be generated from identical viruses and this means that the number of these identical fragments should increase if the relative load of the virus increases. Xcompare was used to calculate the frequency distribution between the input and the captured reads (see Materials and Methods). Reads present in higher quantity in the captured samples compared to the input samples were selected. Reads originated from archaea, bacteria or eukaryota were excluded and the remaining reads, (Enriched Analysis Reads, EAR), were further investigated.",
+  "project": "cdlai_CORD-19",
+  "denotations": []
+}

@@ -1,0 +1,42 @@
+{ 
+  "cord_uid": "0mu4tkui",
+  "sourcedb": "PMC",
+  "sourceid": "PMC3817278",
+  "divid": "5",
+  "text": "Another limitation of the current techniques is that detection of reads derived from a known virus does not necessarily indicate that this virus is a pathogen. Recently, many new viruses have been identified in human samples without clear association with disease, necessitating further detailed investigations to determine the pathogenicity of the virus [10] [11] [12] [13] .",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "craft_T1",
+      "span": {
+        "begin": 139,
+        "end": 144
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T2",
+      "span": {
+        "begin": 179,
+        "end": 186
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T3",
+      "span": {
+        "begin": 211,
+        "end": 216
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T4",
+      "span": {
+        "begin": 349,
+        "end": 354
+      },
+      "obj": "species"
+    }
+  ] 
+}

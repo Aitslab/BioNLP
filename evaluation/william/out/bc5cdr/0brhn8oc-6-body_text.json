@@ -1,0 +1,34 @@
+{ 
+  "cord_uid": "0brhn8oc",
+  "sourcedb": "PMC",
+  "sourceid": "PMC1149493",
+  "divid": "6",
+  "text": "Chromosomes possess protective ends known as telomeres to protect themselves from degradation due to successive rounds of DNA synthesis. Telomerase, the ribonucleoprotein complex responsible for the maintenance of the telomere ends [19] , is upregulated in most cancers [20] and might play a role in aging [21] . Human telomerase is made up of a 451-nucleotide RNA, a reverse transcriptase, and other proteins [22] . At the 5′ end of the RNA is a highly conserved pseudoknot, required for activity, which lies at the core of telomerase. The structure of the human telomerase pseudoknot reveals a classic H-type pseudoknot fold with a slight bend between the stems ( Figure 2C ) [5] . A triple-helix structure fl anks the junction of the helices and extends into each stem. Mutations within the telomerase pseudoknot have been directly linked to the diseases autosomal dyskeratosis congenita [21] and aplastic anemia [23] .",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "bc5cdr_T1",
+      "span": {
+        "begin": 262,
+        "end": 271
+      },
+      "obj": "disease"
+    },
+    {
+      "id": "bc5cdr_T2",
+      "span": {
+        "begin": 849,
+        "end": 890
+      },
+      "obj": "disease"
+    },
+    {
+      "id": "bc5cdr_T3",
+      "span": {
+        "begin": 900,
+        "end": 915
+      },
+      "obj": "disease"
+    }
+  ] 
+}

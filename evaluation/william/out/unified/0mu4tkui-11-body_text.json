@@ -1,0 +1,138 @@
+{ 
+  "cord_uid": "0mu4tkui",
+  "sourcedb": "PMC",
+  "sourceid": "PMC3817278",
+  "divid": "11",
+  "text": "VIDISCA and Roche Titanium-454 sequencing VIDISCA-454 was performed as previously described [5] . In short, samples were centrifuged for 10 minutes at 10,000 g and the supernatant was treated with DNase. Subsequently, nucleic acids were extracted by the Boom extraction method [14] . rRNAblocking oligonucleotides were added to prevent amplification of ribosomal RNA and a reverse transcription reaction with Superscript II (Invitrogen) was performed using non-ribosomal random hexamers [15] . Subsequently, second strand DNA synthesis was performed with 5 U of Klenow fragment (Westburg). Double-stranded DNA was purified by phenol/chloroform extraction and ethanol precipitation and digested with Mse I restriction enzyme (New England Biolabs). Adaptors with different Multiplex Identifier sequences (MIDs) were ligated to the digested fragments of the different samples. Next, a PCR with adaptorbinding primers was performed. After purification (Agencourt AMPure XP PCR, Beckman Coulter), the purified DNA was quantified with the Quant-it dsDNA HS Qubit kit (Invitrogen) and diluted to 10 7 ng/ml. Samples were pooled and Kapa PCR (Kapa Biosystems) was performed to determine the quantity of amplifiable DNA in each pool. Subsequently, the Bioanalyser (hsDNA chip, Agencourt) was used to determine the average nucleotide length of the libraries and the pools were diluted until 10 6 copies/ ml to be used for a titration (DNA:beads ratio of 0.5:1, 1:1, 2:1 and 4:1) in an emulsion PCR according to the suppliers' protocol (LIB-A SV emPCR kit). Sequencing was done on a 2 region GS FLX Titanium PicoTiterPlate (70675) with GS FLX Titanium XLR 70 Sequencing kit (Roche).",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "bionlpg13cg_T1",
+      "span": {
+        "begin": 277,
+        "end": 313
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bionlpg13cg_T2",
+      "span": {
+        "begin": 659,
+        "end": 666
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T3",
+      "span": {
+        "begin": 226,
+        "end": 231
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T4",
+      "span": {
+        "begin": 284,
+        "end": 313
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T5",
+      "span": {
+        "begin": 353,
+        "end": 366
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T6",
+      "span": {
+        "begin": 659,
+        "end": 666
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T7",
+      "span": {
+        "begin": 1641,
+        "end": 1644
+      },
+      "obj": "disease"
+    },
+    {
+      "id": "bc5cdr_T8",
+      "span": {
+        "begin": 0,
+        "end": 7
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T9",
+      "span": {
+        "begin": 42,
+        "end": 53
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T10",
+      "span": {
+        "begin": 218,
+        "end": 231
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T11",
+      "span": {
+        "begin": 409,
+        "end": 423
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T12",
+      "span": {
+        "begin": 659,
+        "end": 666
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T13",
+      "span": {
+        "begin": 1313,
+        "end": 1323
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T14",
+      "span": {
+        "begin": 1584,
+        "end": 1587
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T15",
+      "span": {
+        "begin": 1597,
+        "end": 1611
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T16",
+      "span": {
+        "begin": 1628,
+        "end": 1631
+      },
+      "obj": "chemical"
+    }
+  ] 
+}

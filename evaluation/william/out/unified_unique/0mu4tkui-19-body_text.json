@@ -1,0 +1,170 @@
+{ 
+  "cord_uid": "0mu4tkui",
+  "sourcedb": "PMC",
+  "sourceid": "PMC3817278",
+  "divid": "19",
+  "text": "Fecal samples were analyzed by the same process. Norovirus infection was observed in two patients and enriched 20-fold and 11-fold. Adenovirus was also detected in a patient with norovirus infection and no enrichment for adenovirus was scored (0.9). Enterovirus reads were detected with an enrichment factor of 5.2 in one case but enterovirus reads were not enriched (enrichment factor of 0.0) in a second case. Viral reads derived from sapovirus were detected in samples from two patients with an enrichment factor of 4.9 and 1.4 respectively. Hepatitis B viral reads were detected in patient 19 with an enrichment factor of 53. As controls, a plant virus (cucumber mosaic virus) and an enterobacteriophage were tested. These viruses had an enrichment index of 0.08 and 0.01 respectively, indicating that there presence was reduced in the captured material.",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "unique_T1",
+      "span": {
+        "begin": 89,
+        "end": 97
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T2",
+      "span": {
+        "begin": 132,
+        "end": 142
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T3",
+      "span": {
+        "begin": 166,
+        "end": 173
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T4",
+      "span": {
+        "begin": 221,
+        "end": 231
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T5",
+      "span": {
+        "begin": 437,
+        "end": 446
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T6",
+      "span": {
+        "begin": 481,
+        "end": 489
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T7",
+      "span": {
+        "begin": 545,
+        "end": 556
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T8",
+      "span": {
+        "begin": 586,
+        "end": 593
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T9",
+      "span": {
+        "begin": 658,
+        "end": 679
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T10",
+      "span": {
+        "begin": 179,
+        "end": 188
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T11",
+      "span": {
+        "begin": 250,
+        "end": 261
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T12",
+      "span": {
+        "begin": 331,
+        "end": 342
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T13",
+      "span": {
+        "begin": 412,
+        "end": 417
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T14",
+      "span": {
+        "begin": 557,
+        "end": 562
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T15",
+      "span": {
+        "begin": 645,
+        "end": 656
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T16",
+      "span": {
+        "begin": 674,
+        "end": 679
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T17",
+      "span": {
+        "begin": 727,
+        "end": 734
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T18",
+      "span": {
+        "begin": 49,
+        "end": 68
+      },
+      "obj": "disease"
+    },
+    {
+      "id": "unique_T19",
+      "span": {
+        "begin": 179,
+        "end": 198
+      },
+      "obj": "disease"
+    },
+    {
+      "id": "unique_T20",
+      "span": {
+        "begin": 545,
+        "end": 556
+      },
+      "obj": "disease"
+    }
+  ] 
+}

@@ -1,0 +1,242 @@
+{ 
+  "cord_uid": "0mu4tkui",
+  "sourcedb": "PMC",
+  "sourceid": "PMC3817278",
+  "divid": "1",
+  "text": "Discovery of new viruses has been boosted by novel deep sequencing technologies. Currently, many viruses can be identified by sequencing without knowledge of the pathogenicity of the virus. However, attributing the presence of a virus in patient material to a disease in the patient can be a challenge. One approach to meet this challenge is identification of viral sequences based on enrichment by autologous patient antibody capture. This method facilitates identification of viruses that have provoked an immune response within the patient and may increase the sensitivity of the current virus discovery techniques. To demonstrate the utility of this method, virus discovery deep sequencing (VIDISCA-454) was performed on clinical samples from 19 patients: 13 with a known respiratory viral infection and 6 with a known gastrointestinal viral infection. Patient sera was collected from one to several months after the acute infection phase. Input and antibody capture material was sequenced and enrichment was assessed. In 18 of the 19 patients, viral reads from immunogenic viruses were enriched by antibody capture (ranging between 1.5x to 343x in respiratory material, and 1.4x to 53x in stool). Enriched reads were also determined in an identity independent manner by using a novel algorithm Xcompare. In 16 of the 19 patients, 21% to 100% of the enriched reads were derived from infecting viruses. In conclusion, the technique provides a novel approach to specifically identify immunogenic viral sequences among the bulk of sequences which are usually encountered during virus discovery metagenomics.",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "unique_T1",
+      "span": {
+        "begin": 238,
+        "end": 245
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T2",
+      "span": {
+        "begin": 275,
+        "end": 282
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T3",
+      "span": {
+        "begin": 410,
+        "end": 417
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T4",
+      "span": {
+        "begin": 535,
+        "end": 542
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T5",
+      "span": {
+        "begin": 750,
+        "end": 758
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T6",
+      "span": {
+        "begin": 857,
+        "end": 864
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T7",
+      "span": {
+        "begin": 1039,
+        "end": 1047
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T8",
+      "span": {
+        "begin": 1325,
+        "end": 1333
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T9",
+      "span": {
+        "begin": 17,
+        "end": 24
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T10",
+      "span": {
+        "begin": 97,
+        "end": 104
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T11",
+      "span": {
+        "begin": 183,
+        "end": 188
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T12",
+      "span": {
+        "begin": 229,
+        "end": 234
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T13",
+      "span": {
+        "begin": 360,
+        "end": 375
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T14",
+      "span": {
+        "begin": 478,
+        "end": 485
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T15",
+      "span": {
+        "begin": 591,
+        "end": 596
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T16",
+      "span": {
+        "begin": 662,
+        "end": 667
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T17",
+      "span": {
+        "begin": 788,
+        "end": 793
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T18",
+      "span": {
+        "begin": 840,
+        "end": 845
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T19",
+      "span": {
+        "begin": 1049,
+        "end": 1054
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T20",
+      "span": {
+        "begin": 1078,
+        "end": 1085
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T21",
+      "span": {
+        "begin": 1397,
+        "end": 1404
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T22",
+      "span": {
+        "begin": 1498,
+        "end": 1513
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T23",
+      "span": {
+        "begin": 1579,
+        "end": 1584
+      },
+      "obj": "species"
+    },
+    {
+      "id": "unique_T24",
+      "span": {
+        "begin": 776,
+        "end": 803
+      },
+      "obj": "disease"
+    },
+    {
+      "id": "unique_T25",
+      "span": {
+        "begin": 823,
+        "end": 855
+      },
+      "obj": "disease"
+    },
+    {
+      "id": "unique_T26",
+      "span": {
+        "begin": 921,
+        "end": 936
+      },
+      "obj": "disease"
+    },
+    {
+      "id": "unique_T27",
+      "span": {
+        "begin": 1244,
+        "end": 1252
+      },
+      "obj": "disease"
+    },
+    {
+      "id": "unique_T28",
+      "span": {
+        "begin": 695,
+        "end": 706
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "unique_T29",
+      "span": {
+        "begin": 1145,
+        "end": 1149
+      },
+      "obj": "chemical"
+    }
+  ] 
+}

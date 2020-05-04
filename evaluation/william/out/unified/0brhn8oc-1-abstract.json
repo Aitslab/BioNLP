@@ -1,0 +1,362 @@
+{ 
+  "cord_uid": "0brhn8oc",
+  "sourcedb": "PMC",
+  "sourceid": "PMC1149493",
+  "divid": "1",
+  "text": "PLoS Biology | www.plosbiology.org 0956 R NA molecules fulfi ll a diverse set of biological functions within cells, from the transfer of genetic information from DNA to protein, to enzymatic catalysis. Refl ecting this range of roles, simple linear strings of RNA-made up of uracil, guanine, cytosine, and adenine-form a variety of complex three-dimensional structures. Just as proteins form distinct structural motifs such as zinc fi ngers and beta barrels, certain structures are also commonly adopted by RNA molecules. Among the most prevalent RNA structures is a motif known as the pseudoknot. First recognized in the turnip yellow mosaic virus [1], a pseudoknot is an RNA structure that is minimally composed of two helical segments connected by single-stranded regions or loops ( Figure 1 ). Although several distinct folding topologies of pseudoknots exist, the best characterized is the H type. In the H-type fold, the bases in the loop of a hairpin form intramolecular pairs with bases outside of the stem ( Figure 1A and 1B). This causes the formation of a second stem and loop, resulting in a pseudoknot with two stems and two loops ( Figure 1C ). The two stems are able to stack on top of each other to form a quasi-continuous helix with one continuous and one discontinuous strand. The singlestranded loop regions often interact with the adjacent stems (loop 1-stem 2 or loop 2-stem 1) to form hydrogen bonds and to participate in the overall structure of the molecule. Hence, this relatively simple fold can yield very complex and stable RNA structures. Due to variation of the lengths of the loops and stems, as well as the types of interactions between them, pseudoknots represent a structurally diverse group. It is fi tting that they play a variety of diverse roles in biology. These roles include forming the catalytic core of various ribozymes [2,3], self-splicing introns [4], and telomerase [5] . Additionally, pseudoknots play critical roles in altering gene expression by inducing ribosomal frameshifting in many viruses [6-9].Catalytically Active Pseudoknotsis generally more severe than a hepatitis B virus infection alone [10] . HDV has a circular genome that is replicated by the host RNA polymerase II through a double-rolling-circle mechanism. This mechanism produces long strands of RNA that must be processed into unit lengths for viral replication. The processing of the viral RNA is achieved by the selfcleaving HDV ribozyme encoded in the RNA [11] . The HDV ribozyme folds into a double-pseudoknot conformation and self-cleaves, producing single-genome-length HDV RNAs. The HDV ribozyme is the fastest-known naturally occurring self-cleaving ribozyme, with a cleavage rate greater than one per second, and is active in vitro in the absence of any proteins [12] . The HDV ribozyme consists of fi ve helical segments that form two coaxial stacks of two (stems P2 and P3) and three (stems P1, P1.1, and P4) helices each ( Figure 2A ) [3, 13] . Two pseudoknots are formed, each with one helix from each coaxial stack (stems P1 and P2, and stems P3 and P1.1). These two pseudoknots stack on top of each other, forming a nested double-pseudoknot conformation [13] .The removal of introns from pre-messenger RNA (pre-mRNA) is fundamentally important for eukaryotic life. Most introns are removed by a ribonucleoprotein complex called the spliceosome. A subset of introns are self-cleaving, catalyzing their own removal from pre-mRNA without the aid of proteins [14] . One such class of introns are the group IPrimerJune 2005 | Volume 3 | Issue 6 | e213Primers provide a concise introduction into an important aspect of biology highlighted by a current PLoS Biology research article.",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "bionlpg13cg_T1",
+      "span": {
+        "begin": 622,
+        "end": 652
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T2",
+      "span": {
+        "begin": 32,
+        "end": 49
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T3",
+      "span": {
+        "begin": 512,
+        "end": 515
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T4",
+      "span": {
+        "begin": 719,
+        "end": 722
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T5",
+      "span": {
+        "begin": 275,
+        "end": 281
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bionlpg13cg_T6",
+      "span": {
+        "begin": 283,
+        "end": 290
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bionlpg13cg_T7",
+      "span": {
+        "begin": 292,
+        "end": 300
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bionlpg13cg_T8",
+      "span": {
+        "begin": 427,
+        "end": 440
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bionlpg13cg_T9",
+      "span": {
+        "begin": 1407,
+        "end": 1421
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bionlpg13cg_T10",
+      "span": {
+        "begin": 1893,
+        "end": 1896
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bionlpg13cg_T11",
+      "span": {
+        "begin": 2045,
+        "end": 2050
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bionlpg13cg_T12",
+      "span": {
+        "begin": 395,
+        "end": 399
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bionlpg13cg_T13",
+      "span": {
+        "begin": 546,
+        "end": 559
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bionlpg13cg_T14",
+      "span": {
+        "begin": 708,
+        "end": 712
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bionlpg13cg_T15",
+      "span": {
+        "begin": 883,
+        "end": 890
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bionlpg13cg_T16",
+      "span": {
+        "begin": 1105,
+        "end": 1109
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T17",
+      "span": {
+        "begin": 643,
+        "end": 648
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T18",
+      "span": {
+        "begin": 2037,
+        "end": 2044
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T19",
+      "span": {
+        "begin": 44,
+        "end": 49
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T20",
+      "span": {
+        "begin": 280,
+        "end": 285
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T21",
+      "span": {
+        "begin": 321,
+        "end": 330
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T22",
+      "span": {
+        "begin": 88,
+        "end": 98
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T23",
+      "span": {
+        "begin": 45,
+        "end": 54
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T24",
+      "span": {
+        "begin": 169,
+        "end": 176
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T25",
+      "span": {
+        "begin": 275,
+        "end": 281
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T26",
+      "span": {
+        "begin": 283,
+        "end": 290
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T27",
+      "span": {
+        "begin": 292,
+        "end": 300
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T28",
+      "span": {
+        "begin": 378,
+        "end": 386
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T29",
+      "span": {
+        "begin": 427,
+        "end": 431
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T30",
+      "span": {
+        "begin": 586,
+        "end": 596
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T31",
+      "span": {
+        "begin": 1104,
+        "end": 1114
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T32",
+      "span": {
+        "begin": 1407,
+        "end": 1415
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T33",
+      "span": {
+        "begin": 1473,
+        "end": 1481
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T34",
+      "span": {
+        "begin": 699,
+        "end": 707
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T35",
+      "span": {
+        "begin": 286,
+        "end": 294
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T36",
+      "span": {
+        "begin": 32,
+        "end": 43
+      },
+      "obj": "disease"
+    },
+    {
+      "id": "bc5cdr_T37",
+      "span": {
+        "begin": 42,
+        "end": 44
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T38",
+      "span": {
+        "begin": 275,
+        "end": 281
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T39",
+      "span": {
+        "begin": 283,
+        "end": 290
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T40",
+      "span": {
+        "begin": 292,
+        "end": 300
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T41",
+      "span": {
+        "begin": 306,
+        "end": 318
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T42",
+      "span": {
+        "begin": 427,
+        "end": 431
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T43",
+      "span": {
+        "begin": 1407,
+        "end": 1415
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "bc5cdr_T44",
+      "span": {
+        "begin": 158,
+        "end": 179
+      },
+      "obj": "chemical"
+    }
+  ] 
+}

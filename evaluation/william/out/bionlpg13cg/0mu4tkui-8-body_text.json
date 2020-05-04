@@ -1,0 +1,18 @@
+{ 
+  "cord_uid": "0mu4tkui",
+  "sourcedb": "PMC",
+  "sourceid": "PMC3817278",
+  "divid": "8",
+  "text": "Fecal samples were selected from a sample bank from 196 HIV-1-infected patients with and without diarrhea, aged above 18 who visited the out-patients clinic at the Academic Medical Center in the years 1994-1995. Fecal samples were suspended in broth (1:3 dilution, Oxoid nutrient broth no.2, pH 7.5). Collection of fecal material was performed in accordance with the ethical principles set out in the declaration of Helsinki and written informed consent has been obtained prior to data collection. The study was approved by the Amsterdam Medical Center institutional medical ethics committee.",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "bionlpg13cg_T1",
+      "span": {
+        "begin": 71,
+        "end": 79
+      },
+      "obj": "species"
+    }
+  ] 
+}

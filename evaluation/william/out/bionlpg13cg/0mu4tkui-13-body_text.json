@@ -1,0 +1,9 @@
+{ 
+  "cord_uid": "0mu4tkui",
+  "sourcedb": "PMC",
+  "sourceid": "PMC3817278",
+  "divid": "13",
+  "text": "The percentage of viral sequences was calculated by dividing the number of virus derived reads in the sample by the total numbers of reads in the same sample. The enrichment index was calculated by dividing the percentage of viral sequences in the captured sample by the percentage viral sequences in the input sample. A value above 1 indicates antibody capture of the virus, which suggests a immunogenic course of infection.",
+  "project": "cdlai_CORD-19",
+  "denotations": []
+}

@@ -1,0 +1,66 @@
+{ 
+  "cord_uid": "0mu4tkui",
+  "sourcedb": "PMC",
+  "sourceid": "PMC3817278",
+  "divid": "24",
+  "text": "Of note are patient 1 and 2. For both patients viral reads were increased after capture (table 2), but the EAR contained no PIV-1 or PIV-2 sequences (table 3) . This was caused by the comparison used to determine the EAR; reads which are present in the input are included in the analysis (see material and methods). Apparently the low number of viral reads in the captured material were from a different part of the viral genome than the few reads of the viral reads in the input. Therefore, it has to be kept in mind that using this approach during data analysis might diminish the chance to identify viruses which are hardly present in the input material when identification is only based on the detection of enriched sequences. On the other hand, inclusion of the reads which are only present in one of the two libraries might lead to wrong interpretations by the presence of experimental artefacts due to PCR errors and/or chimeric PCR products.",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "bionlpg13cg_T1",
+      "span": {
+        "begin": 12,
+        "end": 21
+      },
+      "obj": "species"
+    },
+    {
+      "id": "bionlpg13cg_T2",
+      "span": {
+        "begin": 38,
+        "end": 46
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T3",
+      "span": {
+        "begin": 47,
+        "end": 52
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T4",
+      "span": {
+        "begin": 345,
+        "end": 350
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T5",
+      "span": {
+        "begin": 416,
+        "end": 428
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T6",
+      "span": {
+        "begin": 455,
+        "end": 460
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T7",
+      "span": {
+        "begin": 602,
+        "end": 609
+      },
+      "obj": "species"
+    }
+  ] 
+}

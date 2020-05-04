@@ -1,0 +1,162 @@
+{ 
+  "cord_uid": "0mu4tkui",
+  "sourcedb": "PMC",
+  "sourceid": "PMC3817278",
+  "divid": "16",
+  "text": "Serum collected a few weeks to a few months after respiratory or gastrointestinal infection generally contains a substantial amount of pathogen-specific immunoglobulin type G (IgGs) with a proportion of these antibodies binding to virus surface exposed epitopes [22] [23] [24] . These IgGs can be bound to magnetic beads and used to capture a target virus and to separate it from non-viral material (e.g. ribosomes) or non-immunogenic viruses (e.g. plant viruses in stool). After deep sequencing, comparison of reads in the captured material to reads in the input material should reveal virus-specific reads via capture by the antibodies. We tested this strategy in 13 respiratory samples, diagnosed as containing one of the following viruses: human parainfluenza virus 1, 2 and 4, human rhinovirus, human metapneumovirus virus, influenza virus A and B, human respiratory syncytial virus and human coronavirus 229E, OC43 and NL63. We also tested 6 fecal samples containing adenovirus, norovirus, enterovirus and sapovirus. Autologous convalescent sera collected one to a few months after infection was available for all samples (see table 1 ). Plant viruses and enterobacteriophages -viruses which are frequently present in feces -were used as negative control. These viruses are not known to elicit an immune response and are not expected to be captured by the antibody-bound beads.",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "craft_T1",
+      "span": {
+        "begin": 231,
+        "end": 244
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T2",
+      "span": {
+        "begin": 350,
+        "end": 355
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T3",
+      "span": {
+        "begin": 435,
+        "end": 442
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T4",
+      "span": {
+        "begin": 735,
+        "end": 742
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T5",
+      "span": {
+        "begin": 744,
+        "end": 769
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T6",
+      "span": {
+        "begin": 782,
+        "end": 798
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T7",
+      "span": {
+        "begin": 800,
+        "end": 827
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T8",
+      "span": {
+        "begin": 839,
+        "end": 844
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T9",
+      "span": {
+        "begin": 854,
+        "end": 859
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T10",
+      "span": {
+        "begin": 882,
+        "end": 887
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T11",
+      "span": {
+        "begin": 892,
+        "end": 909
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T12",
+      "span": {
+        "begin": 973,
+        "end": 983
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T13",
+      "span": {
+        "begin": 985,
+        "end": 994
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T14",
+      "span": {
+        "begin": 996,
+        "end": 1007
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T15",
+      "span": {
+        "begin": 1012,
+        "end": 1021
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T16",
+      "span": {
+        "begin": 1224,
+        "end": 1229
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T17",
+      "span": {
+        "begin": 1268,
+        "end": 1275
+      },
+      "obj": "species"
+    },
+    {
+      "id": "craft_T18",
+      "span": {
+        "begin": 449,
+        "end": 462
+      },
+      "obj": "chemical"
+    },
+    {
+      "id": "craft_T19",
+      "span": {
+        "begin": 1144,
+        "end": 1157
+      },
+      "obj": "chemical"
+    }
+  ] 
+}
