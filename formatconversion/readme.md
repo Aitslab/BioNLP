@@ -1,6 +1,33 @@
 files related to converting between different corpus formats
 
 
+# Conversion tools by our group
+## without annotations (input format)
+
+CORD-19 json to BioBERT input format
+
+https://github.com/AnttonLA/BINP37/tree/master/dataset_generation
+
+## with annotations (output format)
+
+BioC xml to BioC json and vice versa
+
+BioBERT output format to PubAnnotation format
+
+https://github.com/AnttonLA/BINP37/tree/master/output_generation
+
+# Conversion tools by others
+## BioC convert
+
+http://sourceforge.net/projects/bioc/files/BioCconvert-0.1.tar.gz/download
+
+Comment: so far we have not been able to get this to work
+
+## Brat2BioC
+
+https://bitbucket.org/nicta_biomed/brat2bioc
+
+
 # Format documentation and example files
 
 Comparison of Pubtator, BioC and PubAnnotation formats
@@ -53,27 +80,6 @@ https://github.com/chanzuckerberg/MedMentions
 
 https://universaldependencies.org/format.html
 
-
-# Conversion tools by our group
-
-CORD-19 json to BioBERT input format
-
-https://github.com/AnttonLA/BINP37/tree/master/dataset_generation
-
-BioBERT output format to PubAnnotation format
-
-https://github.com/AnttonLA/BINP37/tree/master/output_generation
-
-# Conversion tools by others
-## BioC convert
-
-http://sourceforge.net/projects/bioc/files/BioCconvert-0.1.tar.gz/download
-
-Comment: so far we have not been able to get this to work
-
-## Brat2BioC
-
-https://bitbucket.org/nicta_biomed/brat2bioc
 
 
 
