@@ -35,6 +35,10 @@ converts many formats including CoNLL and Pubannotation
 
 https://github.com/dkpro/dkpro-core
 
+## Inception
+
+https://github.com/inception-project
+
 ## Standoff2conll
 
 converts brat standoff format to CoNLL format
