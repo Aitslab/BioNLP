@@ -29,6 +29,12 @@ Comment: so far we have not been able to get this to work
 
 https://bitbucket.org/nicta_biomed/brat2bioc
 
+## DKPro-core
+
+converts many formats including CoNLL and Pubannotation
+
+https://github.com/dkpro/dkpro-core
+
 ## Standoff2conll
 
 converts brat standoff format to CoNLL format
