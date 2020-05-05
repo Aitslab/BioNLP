@@ -29,6 +29,11 @@ Comment: so far we have not been able to get this to work
 
 https://bitbucket.org/nicta_biomed/brat2bioc
 
+## Standoff2conll
+
+converts brat standoff format to CoNLL format
+
+https://github.com/spyysalo/standoff2conll
 
 # Format documentation and example files
 
