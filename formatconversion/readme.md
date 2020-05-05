@@ -12,6 +12,8 @@ https://github.com/AnttonLA/BINP37/tree/master/dataset_generation
 
 BioC xml to BioC json and vice versa
 
+https://github.com/Aitslab/BioNLP/blob/master/formatconversion/BioCxml-BioCjson.ipynb
+
 BioBERT output format to PubAnnotation format
 
 https://github.com/AnttonLA/BINP37/tree/master/output_generation
