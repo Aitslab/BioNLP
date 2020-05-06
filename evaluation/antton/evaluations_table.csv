@@ -1,0 +1,7 @@
+Corpus,Tagger,Name of output file/folder,Annotated Classes,Precision,Recall,Total Precision,Total Recall,Runtime (seconds),Date (YYYYMMDD)
+biobert_bc5cdr_chem,NER_biobert-BC5CDRChem_Antton_1,NER_result_conll.txt,Named Entity,93.64%,93.76%,93.64%,93.76%,766.957,20200430
+gold_standard,NER_biobert-BC5CDRChem_Antton_1,,Named Entity,0.00%,0.00%,0.00%,0.00%,45.9471,20200501
+biobert_JNLPBA,NER_biobert-JNLPBA_Antton_1,NER_result_conll.txt,Named Entity,70.81%,83.03%,70.81%,83.03%,78.7231,20200430
+gold_sandard,NER_biobert-JNLPBA_Antton_1,,Named Entity,0.00%,0.00%,0.00%,0.00%,0.00%,20200501
+biobert_NCBI_disease,NER_biobert-NCBIdisease_Antton_1,NER_result_conll.txt,Named Entity,86.58%,89.38%,86.58%,89.38%,182.4588,20200430
+gold_standard,NER_biobert-NCBIdisease_Antton_1,NER_NCBIDisease_gold_standard/,Named Entity,5.08%,7.14%,5.08%,7.14%,43.3281,20200501
