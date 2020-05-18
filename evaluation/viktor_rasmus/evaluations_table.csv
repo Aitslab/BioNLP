@@ -1,0 +1,21 @@
+Corpus,Tagger,Name of output file/folder,Annotated Classes,f1 score,recall,precision,specificity,Runtime (seconds),Colab GPU RAM (GB),Date (YYYYMMDD)
+GAD/1,RE_BioBERT_GAD_1,RE_output_1,Relation,82.75%,87.90%,78.16%,72.73%,383,15.64,20200514
+GAD/2,RE_BioBERT_GAD_2,RE_output_2,Relation,82.75%,88.21%,77.92%,72.33%,380,15.64,20200514
+GAD/3,RE_BioBERT_GAD_3,RE_output_3,Relation,81.75%,83.21%,80.34%,77.47%,391,15.64,20200514
+GAD/4,RE_BioBERT_GAD_4,RE_output_4,Relation,84.30%,88.21%,80.72%,76.68%,380,15.64,20200514
+GAD/5,RE_BioBERT_GAD_5,RE_output_5,Relation,77.68%,78.93%,76.47%,73.12%,380,15.64,20200514
+GAD/6,RE_BioBERT_GAD_6,RE_output_6,Relation,79.37%,81.07%,77.74%,74.31%,382,15.64,20200514
+GAD/7,RE_BioBERT_GAD_7,RE_output_7,Relation,75.27%,73.93%,76.67%,75.10%,386,15.64,20200514
+GAD/8,RE_BioBERT_GAD_8,RE_output_8,Relation,82.43%,87.14%,78.21%,73.12%,381,15.64,20200514
+GAD/9,RE_BioBERT_GAD_9,RE_output_9,Relation,80.47%,85.36%,76.11%,70.36%,389,15.64,20200514
+GAD/10,RE_BioBERT_GAD_10,RE_output_10,Relation,76.45%,80.00%,73.20%,67.46%,379,15.64,20200514
+euadr/1,RE_BioBERT_euadr_1,RE_output_EUADR_1,Relation,81.97%,92.59%,73.53%,10.00%,120,11.32,20200518
+euadr/2,RE_BioBERT_euadr_2,RE_output_EUADR_2,Relation,74.51%,70.37%,79.17%,50.00%,118,11.32,20200518
+euadr/3,RE_BioBERT_euadr_3,RE_output_EUADR_3,Relation,84.21%,92.31%,77.42%,30.00%,121,11.32,20200518
+euadr/4,RE_BioBERT_euadr_4,RE_output_EUADR_4,Relation,83.33%,96.15%,73.53%,0.00%,123,11.32,20200518
+euadr/5,RE_BioBERT_euadr_5,RE_output_EUADR_5,Relation,81.82%,69.23%,100.00%,100.00%,120,11.32,20200518
+euadr/6,RE_BioBERT_euadr_6,RE_output_EUADR_6,Relation,80.00%,84.52%,75.86%,22.22%,117,11.32,20200518
+euadr/7,RE_BioBERT_euadr_7,RE_output_EUADR_7,Relation,72.34%,65.38%,80.95%,55.56%,120,11.32,20200518
+euadr/8,RE_BioBERT_euadr_8,RE_output_EUADR_8,Relation,71.70%,73.08%,70.37%,11.11%,120,11.32,20200518
+euadr/9,RE_BioBERT_euadr_9,RE_output_EUADR_9,Relation,79.31%,88.46%,71.88%,0.00%,124,11.32,20200518
+euadr/10,RE_BioBERT_euadr_10,RE_output_EUADR_10,Relation,89.66%,100.00%,81.35%,33.33%,118,11.32,20200518
