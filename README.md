@@ -179,6 +179,9 @@ fastText
 
 https://fasttext.cc/
 
+BioWordVec and BioSentVec
+
+https://github.com/ncbi-nlp/BioSentVec
 
 sciBERT
 
@@ -187,6 +190,10 @@ https://github.com/allenai/scibert
 word2vec applied to corpus of 10,876,004 English abstracts of biomedical articles from PubMed
 
 http://participants-area.bioasq.org/general_information/Task8a/
+
+Another set of word2vec embeddings (from Pubmed and PMC)
+
+https://bio.nlplab.org/
 
 ## Dictionaries & lexical databases
 Open English Dictionary
