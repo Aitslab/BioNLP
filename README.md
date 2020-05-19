@@ -130,6 +130,11 @@ for co-reference resolution
 https://github.com/facebookresearch/SpanBERT
 
 
+## Metrics
+
+https://arxiv.org/abs/1911.03347
+
+
 ## Annotation tools and formats
 Comparison of different annotators
 
