@@ -2,6 +2,9 @@ Corpus,Tagger,Name of output file/folder,Annotated Classes,Precision,Recall,Tota
 biobert_bc5cdr_chem,NER_biobert-BC5CDRChem_Antton_1,NER_result_conll.txt,Chemical,93.64%,93.76%,93.64%,93.76%,766.957,20200430
 gold_standard,NER_biobert-BC5CDRChem_Antton_1,,Chemical,0.00%,0.00%,0.00%,0.00%,45.9471,20200501
 biobert_JNLPBA,NER_biobert-JNLPBA_Antton_1,NER_result_conll.txt,Protein,70.81%,83.03%,70.81%,83.03%,78.7231,20200430
-gold_sandard,NER_biobert-JNLPBA_Antton_1,,Protein,0.00%,0.00%,0.00%,0.00%,0.00%,20200501
+gold_sandard,NER_biobert-JNLPBA_Antton_1,gold_JNLPBA_results_pubanot/,Protein,17%,18%,17%,18%,,20200520
+biobert_bc2gm,NER_biobert-JNLPBA_Antton_1,,Protein,51.01%,65.71%,51.01%,65.71%,889.2406,20200519
 biobert_NCBI_disease,NER_biobert-NCBIdisease_Antton_1,NER_result_conll.txt,Disease,86.58%,89.38%,86.58%,89.38%,182.4588,20200430
 gold_standard,NER_biobert-NCBIdisease_Antton_1,NER_NCBIDisease_gold_standard/,Disease,5.08%,7.14%,5.08%,7.14%,43.3281,20200501
+biobert_bc5cdr_disease,NER_biobert-NCBIdisease_Antton_1,,Disease,68.94%,67.59%,68.94%,67.59%,812.1249,20200518
+gold_standard,NER_biobert-NCBIdisease_Antton_1,gold_NCBId_results_pubanot/,Disease,31%,35%,31%,35%,,20200520
