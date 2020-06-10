@@ -1,0 +1,10 @@
+Corpus,Tagger,Output_folder,Annotated_classes,Embedding,Precsion,Recall,F1-score,Run-time(hour)
+biobert_bc5cdr_chem,NER_by_Flair_BC5CDR-chem,BC5CDR-chem,chemical,Pubmed_Elmo,0.828,0.7821,0.8044,18
+biobert_bc5cdr_chem,NER_by_Flair_BC5CDR-chem,BC5CDR-chem,chemical,Glove,0.9073,0.9087,0.908,--
+gold_standard,NER_by_Flair_BC5CDR-chem,BC5CDR-chem,chemical,Pubmed_Elmo,--,--,--,--
+biobert_JNLPBA,NER_by_Flair_JNLPBA,JNLPBA,Protein,Pubmed_Elmo,0.7907,0.8769,0.8316,70
+biobert_JNLPBA,NER_by_Flair_JNLPBA,JNLPBA,Protein,Glove,0.8187,0.9138,0.8636,--
+gold_standard,NER_by_Flair_JNLPBA,JNLPBA,Protein,Pubmed_Elmo,0.145,0.89,0.25,
+biobert_NCBI_disease,NER_by_Flair_NCBI,NCBI-disease,Disease,Pubmed_Elmo,0.837,0.8129,0.8248,55
+biobert_NCBI_disease,NER_by_Flair_NCBI,NCBI-disease,Disease,Glove,0.882,0.8945,0.8882,--
+gold_standard,NER_by_Flair_NCBI,NCBI-disease,Disease,Pubmed_Elmo,0.271,0.55,0.36,--
