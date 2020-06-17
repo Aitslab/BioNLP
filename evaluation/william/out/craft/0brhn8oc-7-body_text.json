@@ -2,8 +2,7 @@
   "cord_uid": "0brhn8oc",
   "sourcedb": "PMC",
   "sourceid": "PMC1149493",
-  "divid": "7",
-  "text": "Not all pseudoknots with biological functions are catalytically active. In fact, one of the most common functions of pseudoknots is to induce ribosomes to slip into alternative reading frames, otherwise known as frameshifting. Ribosomes typically translate mRNA without shifting the translational reading frame [24] . However, a number of organisms have evolved mechanisms to cause site-specifi c or programmed frameshifting of the ribosome in either the +1 or −1 direction [25] . Programmed −1 ribosomal frameshifting is typically found in viruses and is required for the replication and proliferation of all retroviruses. Therefore, the pseudoknot structures involved in frameshifting are attractive targets for the development of antiviral drugs. The frameshift event is induced by two RNA elements within the mRNA: (i) a heptanucleotide slippery sequence X XXY YYZ (spaced triplets represent preframeshift codons) and (ii) a downstream RNA structure, typically a pseudoknot [26] . The mechanism behind how these elements promote −1 frameshifting is not fully understood. The current model posits that the ribosome encounters the downstream pseudoknot while the slippery sequence is being decoded by the ribosome. The pseudoknot structure likely causes the ribosome to pause, which is necessary but not suffi cient for frameshifting to occur [27] . While paused on the slippery sequence, the ribosome slips back one nucleotide and subsequently continues translation in the −1 reading frame.",
+   "text": "Not all pseudoknots with biological functions are catalytically active. In fact, one of the most common functions of pseudoknots is to induce ribosomes to slip into alternative reading frames, otherwise known as frameshifting. Ribosomes typically translate mRNA without shifting the translational reading frame [24] . However, a number of organisms have evolved mechanisms to cause site-specifi c or programmed frameshifting of the ribosome in either the +1 or −1 direction [25] . Programmed −1 ribosomal frameshifting is typically found in viruses and is required for the replication and proliferation of all retroviruses. Therefore, the pseudoknot structures involved in frameshifting are attractive targets for the development of antiviral drugs. The frameshift event is induced by two RNA elements within the mRNA: (i) a heptanucleotide slippery sequence X XXY YYZ (spaced triplets represent preframeshift codons) and (ii) a downstream RNA structure, typically a pseudoknot [26] . The mechanism behind how these elements promote −1 frameshifting is not fully understood. The current model posits that the ribosome encounters the downstream pseudoknot while the slippery sequence is being decoded by the ribosome. The pseudoknot structure likely causes the ribosome to pause, which is necessary but not suffi cient for frameshifting to occur [27] . While paused on the slippery sequence, the ribosome slips back one nucleotide and subsequently continues translation in the −1 reading frame.",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
@@ -12,7 +11,7 @@
         "begin": 339,
         "end": 348
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T2",
@@ -20,7 +19,7 @@
         "begin": 541,
         "end": 548
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T3",
@@ -28,7 +27,7 @@
         "begin": 610,
         "end": 622
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T4",
@@ -36,7 +35,7 @@
         "begin": 257,
         "end": 261
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
       "id": "craft_T5",
@@ -44,7 +43,7 @@
         "begin": 639,
         "end": 649
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
       "id": "craft_T6",
@@ -52,7 +51,7 @@
         "begin": 813,
         "end": 817
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
       "id": "craft_T7",
@@ -60,7 +59,7 @@
         "begin": 1419,
         "end": 1429
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     }
   ] 
 }

@@ -2,8 +2,7 @@
   "cord_uid": "0brhn8oc",
   "sourcedb": "PMC",
   "sourceid": "PMC1149493",
-  "divid": "11",
-  "text": "The severe acute respiratory syndrome coronavirus (SARS-CoV) genome contains two large genes, ORF 1a and ORF 1b, separated by a programmed −1 frameshift element required for ORF 1b expression [30] . Recent work has suggested that the SARS-CoV frameshift-inducing pseudoknot may be unique because it contains a third stem-loop [31, 32] . In this issue of PLoS Biology, bioinformatic, phylogenetic, and structural evidence is reported indicating that the SARS-CoV pseudoknot is indeed a three-stemmed RNA pseudoknot (see Figure 1D ) [33] . Dinman and co-workers report the potential for the formation of this three-stemmed pseudoknot in all coronaviruses in the GenBank database. NMR experiments confi rmed the proposed three-stemmed pseudoknot structure in SARS-CoV. Although the atomic-resolution structure has not yet been determined, this study identifi es a new secondary structure capable of promoting frameshifting that is structurally distinct from previously described pseudoknots (see Figure 1D ).",
+   "text": "The severe acute respiratory syndrome coronavirus (SARS-CoV) genome contains two large genes, ORF 1a and ORF 1b, separated by a programmed −1 frameshift element required for ORF 1b expression [30] . Recent work has suggested that the SARS-CoV frameshift-inducing pseudoknot may be unique because it contains a third stem-loop [31, 32] . In this issue of PLoS Biology, bioinformatic, phylogenetic, and structural evidence is reported indicating that the SARS-CoV pseudoknot is indeed a three-stemmed RNA pseudoknot (see Figure 1D ) [33] . Dinman and co-workers report the potential for the formation of this three-stemmed pseudoknot in all coronaviruses in the GenBank database. NMR experiments confi rmed the proposed three-stemmed pseudoknot structure in SARS-CoV. Although the atomic-resolution structure has not yet been determined, this study identifi es a new secondary structure capable of promoting frameshifting that is structurally distinct from previously described pseudoknots (see Figure 1D ).",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
@@ -12,7 +11,7 @@
         "begin": 639,
         "end": 652
       },
-      "obj": "species"
+      "obj": "SPECIES"
     }
   ] 
 }

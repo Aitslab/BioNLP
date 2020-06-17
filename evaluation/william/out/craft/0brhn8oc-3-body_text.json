@@ -2,81 +2,88 @@
   "cord_uid": "0brhn8oc",
   "sourcedb": "PMC",
   "sourceid": "PMC1149493",
-  "divid": "3",
-  "text": "Hepatitis delta virus (HDV) is a satellite virus of hepatitis B virus. Infection of humans by both HDV and hepatitis B virus is generally more severe than a hepatitis B virus infection alone [10] . HDV has a circular genome that is replicated by the host RNA polymerase II through a double-rolling-circle mechanism. This mechanism produces long strands of RNA that must be processed into unit lengths for viral replication. The processing of the viral RNA is achieved by the selfcleaving HDV ribozyme encoded in the RNA [11] . The HDV ribozyme folds into a double-pseudoknot conformation and self-cleaves, producing single-genome-length HDV RNAs. The HDV ribozyme is the fastest-known naturally occurring self-cleaving ribozyme, with a cleavage rate greater than one per second, and is active in vitro in the absence of any proteins [12] . The HDV ribozyme consists of fi ve helical segments that form two coaxial stacks of two (stems P2 and P3) and three (stems P1, P1.1, and P4) helices each ( Figure 2A ) [3, 13] . Two pseudoknots are formed, each with one helix from each coaxial stack (stems P1 and P2, and stems P3 and P1.1). These two pseudoknots stack on top of each other, forming a nested double-pseudoknot conformation [13] .",
+   "text": "Hepatitis delta virus (HDV) is a satellite virus of hepatitis B virus. Infection of humans by both HDV and hepatitis B virus is generally more severe than a hepatitis B virus infection alone [10] . HDV has a circular genome that is replicated by the host RNA polymerase II through a double-rolling-circle mechanism. This mechanism produces long strands of RNA that must be processed into unit lengths for viral replication. The processing of the viral RNA is achieved by the selfcleaving HDV ribozyme encoded in the RNA [11] . The HDV ribozyme folds into a double-pseudoknot conformation and self-cleaves, producing single-genome-length HDV RNAs. The HDV ribozyme is the fastest-known naturally occurring self-cleaving ribozyme, with a cleavage rate greater than one per second, and is active in vitro in the absence of any proteins [12] . The HDV ribozyme consists of fi ve helical segments that form two coaxial stacks of two (stems P2 and P3) and three (stems P1, P1.1, and P4) helices each ( Figure 2A ) [3, 13] . Two pseudoknots are formed, each with one helix from each coaxial stack (stems P1 and P2, and stems P3 and P1.1). These two pseudoknots stack on top of each other, forming a nested double-pseudoknot conformation [13] .",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
       "id": "craft_T1",
       "span": {
-        "begin": 16,
-        "end": 21
+        "begin": 250,
+        "end": 272
       },
-      "obj": "species"
+      "obj": "PROTEIN"
     },
     {
       "id": "craft_T2",
       "span": {
-        "begin": 43,
-        "end": 48
+        "begin": 16,
+        "end": 21
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T3",
       "span": {
-        "begin": 64,
-        "end": 69
+        "begin": 43,
+        "end": 48
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T4",
       "span": {
-        "begin": 84,
-        "end": 90
+        "begin": 64,
+        "end": 69
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T5",
       "span": {
-        "begin": 119,
-        "end": 124
+        "begin": 84,
+        "end": 90
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T6",
       "span": {
-        "begin": 169,
-        "end": 174
+        "begin": 119,
+        "end": 124
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T7",
       "span": {
-        "begin": 405,
-        "end": 410
+        "begin": 169,
+        "end": 174
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T8",
       "span": {
-        "begin": 446,
-        "end": 455
+        "begin": 405,
+        "end": 410
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T9",
       "span": {
+        "begin": 446,
+        "end": 455
+      },
+      "obj": "SPECIES"
+    },
+    {
+      "id": "craft_T10",
+      "span": {
         "begin": 824,
         "end": 832
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     }
   ] 
 }

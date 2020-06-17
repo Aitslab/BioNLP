@@ -2,8 +2,7 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "18",
-  "text": "For all respiratory samples the enrichment index was above 1.0, indicating that in every sample tested the number of viral reads increased after capture. The human coronaviruses OC43, NL63 and 229E were detected with an enrichment index of 169, 343 and 23 respectively. In a second NL63 case (patient 6), the virus was enriched 20-fold. The para-influenza viruses 1, 2 and 4 infections were detected with an enrichment index of 1.5, 54 and 19 respectively. The enrichment index for the metapneumovirus was 7.2, while it was 1.6 for the respiratory syncytial virus. Human rhinovirus infection was observed in two different patients and the enrichment index was 1.9 and 3.1 respectively. Influenza B virus was detected with an enrichment index of 3.3 and influenza A virus with an enrichment index of 25.",
+   "text": "For all respiratory samples the enrichment index was above 1.0, indicating that in every sample tested the number of viral reads increased after capture. The human coronaviruses OC43, NL63 and 229E were detected with an enrichment index of 169, 343 and 23 respectively. In a second NL63 case (patient 6), the virus was enriched 20-fold. The para-influenza viruses 1, 2 and 4 infections were detected with an enrichment index of 1.5, 54 and 19 respectively. The enrichment index for the metapneumovirus was 7.2, while it was 1.6 for the respiratory syncytial virus. Human rhinovirus infection was observed in two different patients and the enrichment index was 1.9 and 3.1 respectively. Influenza B virus was detected with an enrichment index of 3.3 and influenza A virus with an enrichment index of 25.",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
@@ -12,7 +11,7 @@
         "begin": 117,
         "end": 122
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T2",
@@ -20,7 +19,7 @@
         "begin": 158,
         "end": 177
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T3",
@@ -28,7 +27,7 @@
         "begin": 193,
         "end": 197
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T4",
@@ -36,7 +35,7 @@
         "begin": 309,
         "end": 314
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T5",
@@ -44,7 +43,7 @@
         "begin": 356,
         "end": 363
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T6",
@@ -52,7 +51,7 @@
         "begin": 486,
         "end": 501
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T7",
@@ -60,7 +59,7 @@
         "begin": 558,
         "end": 563
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T8",
@@ -68,7 +67,7 @@
         "begin": 565,
         "end": 581
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T9",
@@ -76,7 +75,7 @@
         "begin": 698,
         "end": 703
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T10",
@@ -84,7 +83,7 @@
         "begin": 765,
         "end": 770
       },
-      "obj": "species"
+      "obj": "SPECIES"
     }
   ] 
 }
