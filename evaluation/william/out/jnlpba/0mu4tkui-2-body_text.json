@@ -1,0 +1,25 @@
+{ 
+  "cord_uid": "0mu4tkui",
+  "sourcedb": "PMC",
+  "sourceid": "PMC3817278",
+   "text": "Virus infections are a continuous threat to the human population; e.g. HIV, hepatitis viruses, and influenza viruses constitute a large proportion of morbidity and mortality each year. Apart from infection with well-described viruses, outbreaks with previously undescribed viruses occur regularly (e.g. SARS-CoV, MERS-CoV) [1] [2] [3] [4] . Furthermore, respiratory tract infections and diarrhoea in young children or immunocompromised persons often test negative for known viruses, and could very well be caused by yet unknown pathogens.",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "jnlpba_T1",
+      "span": {
+        "begin": 303,
+        "end": 311
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T2",
+      "span": {
+        "begin": 313,
+        "end": 321
+      },
+      "obj": "PROTEIN"
+    }
+  ] 
+}

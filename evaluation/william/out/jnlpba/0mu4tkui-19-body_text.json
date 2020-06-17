@@ -1,0 +1,8 @@
+{ 
+  "cord_uid": "0mu4tkui",
+  "sourcedb": "PMC",
+  "sourceid": "PMC3817278",
+   "text": "Fecal samples were analyzed by the same process. Norovirus infection was observed in two patients and enriched 20-fold and 11-fold. Adenovirus was also detected in a patient with norovirus infection and no enrichment for adenovirus was scored (0.9). Enterovirus reads were detected with an enrichment factor of 5.2 in one case but enterovirus reads were not enriched (enrichment factor of 0.0) in a second case. Viral reads derived from sapovirus were detected in samples from two patients with an enrichment factor of 4.9 and 1.4 respectively. Hepatitis B viral reads were detected in patient 19 with an enrichment factor of 53. As controls, a plant virus (cucumber mosaic virus) and an enterobacteriophage were tested. These viruses had an enrichment index of 0.08 and 0.01 respectively, indicating that there presence was reduced in the captured material.",
+  "project": "cdlai_CORD-19",
+  "denotations": []
+}

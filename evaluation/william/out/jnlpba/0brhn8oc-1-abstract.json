@@ -1,0 +1,113 @@
+{ 
+  "cord_uid": "0brhn8oc",
+  "sourcedb": "PMC",
+  "sourceid": "PMC1149493",
+   "text": "PLoS Biology | www.plosbiology.org 0956 R NA molecules fulfi ll a diverse set of biological functions within cells, from the transfer of genetic information from DNA to protein, to enzymatic catalysis. Refl ecting this range of roles, simple linear strings of RNA-made up of uracil, guanine, cytosine, and adenine-form a variety of complex three-dimensional structures. Just as proteins form distinct structural motifs such as zinc fi ngers and beta barrels, certain structures are also commonly adopted by RNA molecules. Among the most prevalent RNA structures is a motif known as the pseudoknot. First recognized in the turnip yellow mosaic virus [1], a pseudoknot is an RNA structure that is minimally composed of two helical segments connected by single-stranded regions or loops ( Figure 1 ). Although several distinct folding topologies of pseudoknots exist, the best characterized is the H type. In the H-type fold, the bases in the loop of a hairpin form intramolecular pairs with bases outside of the stem ( Figure 1A and 1B). This causes the formation of a second stem and loop, resulting in a pseudoknot with two stems and two loops ( Figure 1C ). The two stems are able to stack on top of each other to form a quasi-continuous helix with one continuous and one discontinuous strand. The singlestranded loop regions often interact with the adjacent stems (loop 1-stem 2 or loop 2-stem 1) to form hydrogen bonds and to participate in the overall structure of the molecule. Hence, this relatively simple fold can yield very complex and stable RNA structures. Due to variation of the lengths of the loops and stems, as well as the types of interactions between them, pseudoknots represent a structurally diverse group. It is fi tting that they play a variety of diverse roles in biology. These roles include forming the catalytic core of various ribozymes [2,3], self-splicing introns [4], and telomerase [5] . Additionally, pseudoknots play critical roles in altering gene expression by inducing ribosomal frameshifting in many viruses [6-9].Catalytically Active Pseudoknotsis generally more severe than a hepatitis B virus infection alone [10] . HDV has a circular genome that is replicated by the host RNA polymerase II through a double-rolling-circle mechanism. This mechanism produces long strands of RNA that must be processed into unit lengths for viral replication. The processing of the viral RNA is achieved by the selfcleaving HDV ribozyme encoded in the RNA [11] . The HDV ribozyme folds into a double-pseudoknot conformation and self-cleaves, producing single-genome-length HDV RNAs. The HDV ribozyme is the fastest-known naturally occurring self-cleaving ribozyme, with a cleavage rate greater than one per second, and is active in vitro in the absence of any proteins [12] . The HDV ribozyme consists of fi ve helical segments that form two coaxial stacks of two (stems P2 and P3) and three (stems P1, P1.1, and P4) helices each ( Figure 2A ) [3, 13] . Two pseudoknots are formed, each with one helix from each coaxial stack (stems P1 and P2, and stems P3 and P1.1). These two pseudoknots stack on top of each other, forming a nested double-pseudoknot conformation [13] .The removal of introns from pre-messenger RNA (pre-mRNA) is fundamentally important for eukaryotic life. Most introns are removed by a ribonucleoprotein complex called the spliceosome. A subset of introns are self-cleaving, catalyzing their own removal from pre-mRNA without the aid of proteins [14] . One such class of introns are the group IPrimerJune 2005 | Volume 3 | Issue 6 | e213Primers provide a concise introduction into an important aspect of biology highlighted by a current PLoS Biology research article.",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "jnlpba_T1",
+      "span": {
+        "begin": 202,
+        "end": 206
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T2",
+      "span": {
+        "begin": 507,
+        "end": 520
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T3",
+      "span": {
+        "begin": 721,
+        "end": 737
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T4",
+      "span": {
+        "begin": 751,
+        "end": 774
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T5",
+      "span": {
+        "begin": 1222,
+        "end": 1244
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T6",
+      "span": {
+        "begin": 1902,
+        "end": 1916
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T7",
+      "span": {
+        "begin": 125,
+        "end": 147
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T8",
+      "span": {
+        "begin": 350,
+        "end": 375
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T9",
+      "span": {
+        "begin": 406,
+        "end": 418
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T10",
+      "span": {
+        "begin": 526,
+        "end": 538
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T11",
+      "span": {
+        "begin": 580,
+        "end": 602
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T12",
+      "span": {
+        "begin": 719,
+        "end": 731
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T13",
+      "span": {
+        "begin": 135,
+        "end": 160
+      },
+      "obj": "PROTEIN"
+    }
+  ] 
+}

@@ -1,0 +1,89 @@
+{ 
+  "cord_uid": "0mu4tkui",
+  "sourcedb": "PMC",
+  "sourceid": "PMC3817278",
+   "text": "Antibody response to a virus infection can vary, depending on the virus, but also age and immune state of patients. Also, antibodies subclasses can differ; some viruses elicit a strong IgG response, while others induce a response dominated by IgA. In our antibody capture experiment, a combination of protein A and G coupled beads was used. Both proteins strongly bind to IgGs, but not or less efficient to IgA. It has been shown that serum antibodies, for instance against PIV-1 are not neutralizing efficiently, and that especially secretory IgA plays an important role in preventing re-infection [26, 27] . To address that point, protein L coupled beads, which are able to capture IgA, were tested. However, no difference was observed in the amount of PIV-1 or enterovirus capture (data not shown).",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "jnlpba_T1",
+      "span": {
+        "begin": 122,
+        "end": 143
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T2",
+      "span": {
+        "begin": 185,
+        "end": 188
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T3",
+      "span": {
+        "begin": 243,
+        "end": 247
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T4",
+      "span": {
+        "begin": 301,
+        "end": 310
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T5",
+      "span": {
+        "begin": 372,
+        "end": 376
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T6",
+      "span": {
+        "begin": 407,
+        "end": 411
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T7",
+      "span": {
+        "begin": 435,
+        "end": 451
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T8",
+      "span": {
+        "begin": 534,
+        "end": 547
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T9",
+      "span": {
+        "begin": 633,
+        "end": 642
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T10",
+      "span": {
+        "begin": 684,
+        "end": 687
+      },
+      "obj": "PROTEIN"
+    }
+  ] 
+}

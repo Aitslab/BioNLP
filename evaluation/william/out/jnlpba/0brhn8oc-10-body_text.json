@@ -1,0 +1,17 @@
+{ 
+  "cord_uid": "0brhn8oc",
+  "sourcedb": "PMC",
+  "sourceid": "PMC1149493",
+   "text": "The frameshift-inducing pseudoknot from simian retrovirus 1 contains a number of unique features ( Figure 2F ) [8] . Although predicted to resemble that of MMTV, with an unpaired adenine between the helices, the structure revealed the formation of a uracil-adenine pair at the junction, allowing the two stems to stack directly on top of each other ( Figure 2F ) [8] . The simian retrovirus 1 pseudoknot forms an extensive loop 2-stem 1 triplex, which contains a ribose zipper motif in addition to base-base and base-sugar interactions [8] .",
+  "project": "cdlai_CORD-19",
+  "denotations": [
+    {
+      "id": "jnlpba_T1",
+      "span": {
+        "begin": 463,
+        "end": 482
+      },
+      "obj": "PROTEIN"
+    }
+  ] 
+}
