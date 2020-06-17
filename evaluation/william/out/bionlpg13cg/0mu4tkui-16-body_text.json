@@ -2,113 +2,144 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "16",
-  "text": "Serum collected a few weeks to a few months after respiratory or gastrointestinal infection generally contains a substantial amount of pathogen-specific immunoglobulin type G (IgGs) with a proportion of these antibodies binding to virus surface exposed epitopes [22] [23] [24] . These IgGs can be bound to magnetic beads and used to capture a target virus and to separate it from non-viral material (e.g. ribosomes) or non-immunogenic viruses (e.g. plant viruses in stool). After deep sequencing, comparison of reads in the captured material to reads in the input material should reveal virus-specific reads via capture by the antibodies. We tested this strategy in 13 respiratory samples, diagnosed as containing one of the following viruses: human parainfluenza virus 1, 2 and 4, human rhinovirus, human metapneumovirus virus, influenza virus A and B, human respiratory syncytial virus and human coronavirus 229E, OC43 and NL63. We also tested 6 fecal samples containing adenovirus, norovirus, enterovirus and sapovirus. Autologous convalescent sera collected one to a few months after infection was available for all samples (see table 1 ). Plant viruses and enterobacteriophages -viruses which are frequently present in feces -were used as negative control. These viruses are not known to elicit an immune response and are not expected to be captured by the antibody-bound beads.",
+   "text": "Serum collected a few weeks to a few months after respiratory or gastrointestinal infection generally contains a substantial amount of pathogen-specific immunoglobulin type G (IgGs) with a proportion of these antibodies binding to virus surface exposed epitopes [22] [23] [24] . These IgGs can be bound to magnetic beads and used to capture a target virus and to separate it from non-viral material (e.g. ribosomes) or non-immunogenic viruses (e.g. plant viruses in stool). After deep sequencing, comparison of reads in the captured material to reads in the input material should reveal virus-specific reads via capture by the antibodies. We tested this strategy in 13 respiratory samples, diagnosed as containing one of the following viruses: human parainfluenza virus 1, 2 and 4, human rhinovirus, human metapneumovirus virus, influenza virus A and B, human respiratory syncytial virus and human coronavirus 229E, OC43 and NL63. We also tested 6 fecal samples containing adenovirus, norovirus, enterovirus and sapovirus. Autologous convalescent sera collected one to a few months after infection was available for all samples (see table 1 ). Plant viruses and enterobacteriophages -viruses which are frequently present in feces -were used as negative control. These viruses are not known to elicit an immune response and are not expected to be captured by the antibody-bound beads.",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
       "id": "bionlpg13cg_T1",
       "span": {
-        "begin": 380,
-        "end": 398
+        "begin": 135,
+        "end": 174
       },
-      "obj": "species"
+      "obj": "PROTEIN"
     },
     {
       "id": "bionlpg13cg_T2",
       "span": {
-        "begin": 466,
-        "end": 471
+        "begin": 176,
+        "end": 180
       },
-      "obj": "species"
+      "obj": "PROTEIN"
     },
     {
       "id": "bionlpg13cg_T3",
       "span": {
-        "begin": 744,
-        "end": 771
+        "begin": 285,
+        "end": 289
       },
-      "obj": "species"
+      "obj": "PROTEIN"
     },
     {
       "id": "bionlpg13cg_T4",
       "span": {
-        "begin": 782,
-        "end": 798
+        "begin": 851,
+        "end": 852
       },
-      "obj": "species"
+      "obj": "PROTEIN"
     },
     {
       "id": "bionlpg13cg_T5",
       "span": {
-        "begin": 800,
-        "end": 827
+        "begin": 380,
+        "end": 398
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T6",
       "span": {
-        "begin": 829,
-        "end": 846
+        "begin": 466,
+        "end": 471
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T7",
       "span": {
-        "begin": 854,
-        "end": 859
+        "begin": 744,
+        "end": 771
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T8",
       "span": {
-        "begin": 872,
-        "end": 887
+        "begin": 782,
+        "end": 798
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T9",
       "span": {
-        "begin": 892,
-        "end": 914
+        "begin": 800,
+        "end": 827
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T10",
       "span": {
-        "begin": 916,
-        "end": 920
+        "begin": 829,
+        "end": 846
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T11",
       "span": {
-        "begin": 925,
-        "end": 929
+        "begin": 854,
+        "end": 859
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T12",
       "span": {
-        "begin": 973,
-        "end": 983
+        "begin": 872,
+        "end": 887
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T13",
       "span": {
+        "begin": 892,
+        "end": 914
+      },
+      "obj": "SPECIES"
+    },
+    {
+      "id": "bionlpg13cg_T14",
+      "span": {
+        "begin": 916,
+        "end": 920
+      },
+      "obj": "SPECIES"
+    },
+    {
+      "id": "bionlpg13cg_T15",
+      "span": {
+        "begin": 925,
+        "end": 929
+      },
+      "obj": "SPECIES"
+    },
+    {
+      "id": "bionlpg13cg_T16",
+      "span": {
+        "begin": 973,
+        "end": 983
+      },
+      "obj": "SPECIES"
+    },
+    {
+      "id": "bionlpg13cg_T17",
+      "span": {
         "begin": 1034,
         "end": 1051
       },
-      "obj": "species"
+      "obj": "SPECIES"
     }
   ] 
 }

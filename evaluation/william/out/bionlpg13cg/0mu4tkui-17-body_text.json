@@ -2,8 +2,7 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "17",
-  "text": "Of the 13 respiratory samples and the 6 fecal samples, a total of 110,752 reads were obtained from the input material and 93,779 reads were obtained from the antibody captured material with a median read length of 159 nucleotides. For each patient the enrichment index was determined by calculating the ratio between the percentage of viral reads in the captured sample versus the input sample (Table 2) .",
+   "text": "Of the 13 respiratory samples and the 6 fecal samples, a total of 110,752 reads were obtained from the input material and 93,779 reads were obtained from the antibody captured material with a median read length of 159 nucleotides. For each patient the enrichment index was determined by calculating the ratio between the percentage of viral reads in the captured sample versus the input sample (Table 2) .",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
@@ -12,7 +11,7 @@
         "begin": 240,
         "end": 247
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T2",
@@ -20,7 +19,7 @@
         "begin": 122,
         "end": 128
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     }
   ] 
 }
