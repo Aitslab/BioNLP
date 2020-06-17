@@ -2,8 +2,7 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "10",
-  "text": "Real time PCR for ribosomal RNA was performed as described [5] using primer set 5/6 and the rRNA28S_3674 probe. The platinum quantitative PCR Supermix-UDG system (Invitrogen) was used.",
+   "text": "Real time PCR for ribosomal RNA was performed as described [5] using primer set 5/6 and the rRNA28S_3674 probe. The platinum quantitative PCR Supermix-UDG system (Invitrogen) was used.",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
@@ -12,7 +11,7 @@
         "begin": 142,
         "end": 154
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     }
   ] 
 }

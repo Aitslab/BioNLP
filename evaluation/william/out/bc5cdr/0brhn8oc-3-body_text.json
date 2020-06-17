@@ -2,8 +2,7 @@
   "cord_uid": "0brhn8oc",
   "sourcedb": "PMC",
   "sourceid": "PMC1149493",
-  "divid": "3",
-  "text": "Hepatitis delta virus (HDV) is a satellite virus of hepatitis B virus. Infection of humans by both HDV and hepatitis B virus is generally more severe than a hepatitis B virus infection alone [10] . HDV has a circular genome that is replicated by the host RNA polymerase II through a double-rolling-circle mechanism. This mechanism produces long strands of RNA that must be processed into unit lengths for viral replication. The processing of the viral RNA is achieved by the selfcleaving HDV ribozyme encoded in the RNA [11] . The HDV ribozyme folds into a double-pseudoknot conformation and self-cleaves, producing single-genome-length HDV RNAs. The HDV ribozyme is the fastest-known naturally occurring self-cleaving ribozyme, with a cleavage rate greater than one per second, and is active in vitro in the absence of any proteins [12] . The HDV ribozyme consists of fi ve helical segments that form two coaxial stacks of two (stems P2 and P3) and three (stems P1, P1.1, and P4) helices each ( Figure 2A ) [3, 13] . Two pseudoknots are formed, each with one helix from each coaxial stack (stems P1 and P2, and stems P3 and P1.1). These two pseudoknots stack on top of each other, forming a nested double-pseudoknot conformation [13] .",
+   "text": "Hepatitis delta virus (HDV) is a satellite virus of hepatitis B virus. Infection of humans by both HDV and hepatitis B virus is generally more severe than a hepatitis B virus infection alone [10] . HDV has a circular genome that is replicated by the host RNA polymerase II through a double-rolling-circle mechanism. This mechanism produces long strands of RNA that must be processed into unit lengths for viral replication. The processing of the viral RNA is achieved by the selfcleaving HDV ribozyme encoded in the RNA [11] . The HDV ribozyme folds into a double-pseudoknot conformation and self-cleaves, producing single-genome-length HDV RNAs. The HDV ribozyme is the fastest-known naturally occurring self-cleaving ribozyme, with a cleavage rate greater than one per second, and is active in vitro in the absence of any proteins [12] . The HDV ribozyme consists of fi ve helical segments that form two coaxial stacks of two (stems P2 and P3) and three (stems P1, P1.1, and P4) helices each ( Figure 2A ) [3, 13] . Two pseudoknots are formed, each with one helix from each coaxial stack (stems P1 and P2, and stems P3 and P1.1). These two pseudoknots stack on top of each other, forming a nested double-pseudoknot conformation [13] .",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
@@ -12,7 +11,7 @@
         "begin": 0,
         "end": 21
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
       "id": "bc5cdr_T2",
@@ -20,7 +19,7 @@
         "begin": 52,
         "end": 63
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
       "id": "bc5cdr_T3",
@@ -28,7 +27,7 @@
         "begin": 107,
         "end": 118
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
       "id": "bc5cdr_T4",
@@ -36,7 +35,7 @@
         "begin": 157,
         "end": 168
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
       "id": "bc5cdr_T5",
@@ -44,7 +43,7 @@
         "begin": 283,
         "end": 304
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     }
   ] 
 }

@@ -2,8 +2,7 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "20",
-  "text": "Consistent with capture working as anticipated, reads derived from human ribosomal RNA showed a consistent reduction in the antibody captured fractions with an average decrease of 1,000 fold (a median decrease of 9.6 Ct values, Figure 1 ). Greater than 90% of the reads showing decreased levels were of ribosomal RNA origin in 11 of the 13 patients. In the two other cases the amount of ribosomal RNA was low in the input material, but commensal bacterial reads were massively present and for these patients a strong decrease (.70%) was observed in the number of bacterial reads (data not shown).",
+   "text": "Consistent with capture working as anticipated, reads derived from human ribosomal RNA showed a consistent reduction in the antibody captured fractions with an average decrease of 1,000 fold (a median decrease of 9.6 Ct values, Figure 1 ). Greater than 90% of the reads showing decreased levels were of ribosomal RNA origin in 11 of the 13 patients. In the two other cases the amount of ribosomal RNA was low in the input material, but commensal bacterial reads were massively present and for these patients a strong decrease (.70%) was observed in the number of bacterial reads (data not shown).",
   "project": "cdlai_CORD-19",
   "denotations": []
 }

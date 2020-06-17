@@ -2,8 +2,7 @@
   "cord_uid": "0brhn8oc",
   "sourcedb": "PMC",
   "sourceid": "PMC1149493",
-  "divid": "8",
-  "text": "The nuclear magnetic resonance (NMR) structure of the mouse mammary tumor virus (MMTV) frameshift-inducing pseudoknot was the fi rst structure of a frameshift-inducing pseudoknot ( Figure 2D ) [6] . The MMTV pseudoknot forms a compact structure of two guanine/cytosine-rich A-form helices. The MMTV pseudoknot has a bend of approximately 60º between the two helices, caused by an unpaired adenine that intercalates between the helices and may act as a hinge. Subsequent structural and functional studies of several variants of the MMTV pseudoknot reveal that the intercalated nucleotide and the resulting bend between stems 1 and 2 are required for effi cient frameshifting [28] .",
+   "text": "The nuclear magnetic resonance (NMR) structure of the mouse mammary tumor virus (MMTV) frameshift-inducing pseudoknot was the fi rst structure of a frameshift-inducing pseudoknot ( Figure 2D ) [6] . The MMTV pseudoknot forms a compact structure of two guanine/cytosine-rich A-form helices. The MMTV pseudoknot has a bend of approximately 60º between the two helices, caused by an unpaired adenine that intercalates between the helices and may act as a hinge. Subsequent structural and functional studies of several variants of the MMTV pseudoknot reveal that the intercalated nucleotide and the resulting bend between stems 1 and 2 are required for effi cient frameshifting [28] .",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
@@ -12,7 +11,7 @@
         "begin": 68,
         "end": 73
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
       "id": "bc5cdr_T2",
@@ -20,7 +19,7 @@
         "begin": 389,
         "end": 396
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
       "id": "bc5cdr_T3",
@@ -28,7 +27,7 @@
         "begin": 576,
         "end": 586
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     }
   ] 
 }

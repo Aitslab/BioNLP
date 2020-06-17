@@ -2,8 +2,7 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "6",
-  "text": "To facilitate the detection of immunogenic viruses and to reduce the detection of non disease-related viruses (bacteriophages and plant viruses) and host cellular RNA, a technique was developed that uses convalescent serum of the patient to concentrate viruses that have elicited and immune response prior to sequencing. Comparing the sequences derived from input and antibody captured material identifies immunogenic agents and can provide an important first step in identifying a disease-related virus.",
+   "text": "To facilitate the detection of immunogenic viruses and to reduce the detection of non disease-related viruses (bacteriophages and plant viruses) and host cellular RNA, a technique was developed that uses convalescent serum of the patient to concentrate viruses that have elicited and immune response prior to sequencing. Comparing the sequences derived from input and antibody captured material identifies immunogenic agents and can provide an important first step in identifying a disease-related virus.",
   "project": "cdlai_CORD-19",
   "denotations": []
 }

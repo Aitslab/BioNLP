@@ -2,8 +2,7 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "16",
-  "text": "Serum collected a few weeks to a few months after respiratory or gastrointestinal infection generally contains a substantial amount of pathogen-specific immunoglobulin type G (IgGs) with a proportion of these antibodies binding to virus surface exposed epitopes [22] [23] [24] . These IgGs can be bound to magnetic beads and used to capture a target virus and to separate it from non-viral material (e.g. ribosomes) or non-immunogenic viruses (e.g. plant viruses in stool). After deep sequencing, comparison of reads in the captured material to reads in the input material should reveal virus-specific reads via capture by the antibodies. We tested this strategy in 13 respiratory samples, diagnosed as containing one of the following viruses: human parainfluenza virus 1, 2 and 4, human rhinovirus, human metapneumovirus virus, influenza virus A and B, human respiratory syncytial virus and human coronavirus 229E, OC43 and NL63. We also tested 6 fecal samples containing adenovirus, norovirus, enterovirus and sapovirus. Autologous convalescent sera collected one to a few months after infection was available for all samples (see table 1 ). Plant viruses and enterobacteriophages -viruses which are frequently present in feces -were used as negative control. These viruses are not known to elicit an immune response and are not expected to be captured by the antibody-bound beads.",
+   "text": "Serum collected a few weeks to a few months after respiratory or gastrointestinal infection generally contains a substantial amount of pathogen-specific immunoglobulin type G (IgGs) with a proportion of these antibodies binding to virus surface exposed epitopes [22] [23] [24] . These IgGs can be bound to magnetic beads and used to capture a target virus and to separate it from non-viral material (e.g. ribosomes) or non-immunogenic viruses (e.g. plant viruses in stool). After deep sequencing, comparison of reads in the captured material to reads in the input material should reveal virus-specific reads via capture by the antibodies. We tested this strategy in 13 respiratory samples, diagnosed as containing one of the following viruses: human parainfluenza virus 1, 2 and 4, human rhinovirus, human metapneumovirus virus, influenza virus A and B, human respiratory syncytial virus and human coronavirus 229E, OC43 and NL63. We also tested 6 fecal samples containing adenovirus, norovirus, enterovirus and sapovirus. Autologous convalescent sera collected one to a few months after infection was available for all samples (see table 1 ). Plant viruses and enterobacteriophages -viruses which are frequently present in feces -were used as negative control. These viruses are not known to elicit an immune response and are not expected to be captured by the antibody-bound beads.",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
@@ -12,7 +11,7 @@
         "begin": 50,
         "end": 91
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
       "id": "bc5cdr_T2",
@@ -20,7 +19,7 @@
         "begin": 860,
         "end": 887
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
       "id": "bc5cdr_T3",
@@ -28,7 +27,7 @@
         "begin": 898,
         "end": 914
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
       "id": "bc5cdr_T4",
@@ -36,7 +35,7 @@
         "begin": 996,
         "end": 1007
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
       "id": "bc5cdr_T5",
@@ -44,7 +43,7 @@
         "begin": 1088,
         "end": 1097
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     }
   ] 
 }

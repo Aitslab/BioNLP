@@ -2,8 +2,7 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "2",
-  "text": "Virus infections are a continuous threat to the human population; e.g. HIV, hepatitis viruses, and influenza viruses constitute a large proportion of morbidity and mortality each year. Apart from infection with well-described viruses, outbreaks with previously undescribed viruses occur regularly (e.g. SARS-CoV, MERS-CoV) [1] [2] [3] [4] . Furthermore, respiratory tract infections and diarrhoea in young children or immunocompromised persons often test negative for known viruses, and could very well be caused by yet unknown pathogens.",
+   "text": "Virus infections are a continuous threat to the human population; e.g. HIV, hepatitis viruses, and influenza viruses constitute a large proportion of morbidity and mortality each year. Apart from infection with well-described viruses, outbreaks with previously undescribed viruses occur regularly (e.g. SARS-CoV, MERS-CoV) [1] [2] [3] [4] . Furthermore, respiratory tract infections and diarrhoea in young children or immunocompromised persons often test negative for known viruses, and could very well be caused by yet unknown pathogens.",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
@@ -12,7 +11,7 @@
         "begin": 0,
         "end": 16
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
       "id": "bc5cdr_T2",
@@ -20,7 +19,7 @@
         "begin": 71,
         "end": 93
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
       "id": "bc5cdr_T3",
@@ -28,7 +27,7 @@
         "begin": 196,
         "end": 205
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
       "id": "bc5cdr_T4",
@@ -36,7 +35,7 @@
         "begin": 354,
         "end": 382
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
       "id": "bc5cdr_T5",
@@ -44,7 +43,7 @@
         "begin": 387,
         "end": 396
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     }
   ] 
 }

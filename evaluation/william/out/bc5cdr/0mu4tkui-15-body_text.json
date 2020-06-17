@@ -2,8 +2,7 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "15",
-  "text": "The second BLAST analysis yields the percentage of sequence space occupied by each fragment in the original sample (number of reads comprising a fragment, divided by the total number of reads in the input sample library) and the enriched sample (number of sequences in the enriched sample matching to a specific fragment, divided by the total number of reads in the enriched sample library). The ratio between these percentages is calculated and all fragments with a ratio higher than 1.0 were extracted and further analyzed.",
+   "text": "The second BLAST analysis yields the percentage of sequence space occupied by each fragment in the original sample (number of reads comprising a fragment, divided by the total number of reads in the input sample library) and the enriched sample (number of sequences in the enriched sample matching to a specific fragment, divided by the total number of reads in the enriched sample library). The ratio between these percentages is calculated and all fragments with a ratio higher than 1.0 were extracted and further analyzed.",
   "project": "cdlai_CORD-19",
   "denotations": []
 }
