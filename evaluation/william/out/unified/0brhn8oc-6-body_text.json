@@ -2,89 +2,184 @@
   "cord_uid": "0brhn8oc",
   "sourcedb": "PMC",
   "sourceid": "PMC1149493",
-  "divid": "6",
-  "text": "Chromosomes possess protective ends known as telomeres to protect themselves from degradation due to successive rounds of DNA synthesis. Telomerase, the ribonucleoprotein complex responsible for the maintenance of the telomere ends [19] , is upregulated in most cancers [20] and might play a role in aging [21] . Human telomerase is made up of a 451-nucleotide RNA, a reverse transcriptase, and other proteins [22] . At the 5′ end of the RNA is a highly conserved pseudoknot, required for activity, which lies at the core of telomerase. The structure of the human telomerase pseudoknot reveals a classic H-type pseudoknot fold with a slight bend between the stems ( Figure 2C ) [5] . A triple-helix structure fl anks the junction of the helices and extends into each stem. Mutations within the telomerase pseudoknot have been directly linked to the diseases autosomal dyskeratosis congenita [21] and aplastic anemia [23] .",
+   "text": "Chromosomes possess protective ends known as telomeres to protect themselves from degradation due to successive rounds of DNA synthesis. Telomerase, the ribonucleoprotein complex responsible for the maintenance of the telomere ends [19] , is upregulated in most cancers [20] and might play a role in aging [21] . Human telomerase is made up of a 451-nucleotide RNA, a reverse transcriptase, and other proteins [22] . At the 5′ end of the RNA is a highly conserved pseudoknot, required for activity, which lies at the core of telomerase. The structure of the human telomerase pseudoknot reveals a classic H-type pseudoknot fold with a slight bend between the stems ( Figure 2C ) [5] . A triple-helix structure fl anks the junction of the helices and extends into each stem. Mutations within the telomerase pseudoknot have been directly linked to the diseases autosomal dyskeratosis congenita [21] and aplastic anemia [23] .",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
       "id": "bionlpg13cg_T1",
       "span": {
-        "begin": 313,
-        "end": 329
+        "begin": 137,
+        "end": 147
       },
-      "obj": "species"
+      "obj": "PROTEIN"
     },
     {
       "id": "bionlpg13cg_T2",
       "span": {
-        "begin": 558,
-        "end": 574
+        "begin": 424,
+        "end": 426
       },
-      "obj": "species"
+      "obj": "PROTEIN"
     },
     {
       "id": "bionlpg13cg_T3",
       "span": {
-        "begin": 306,
-        "end": 312
+        "begin": 525,
+        "end": 535
       },
-      "obj": "chemical"
+      "obj": "PROTEIN"
     },
     {
       "id": "bionlpg13cg_T4",
       "span": {
-        "begin": 346,
-        "end": 360
+        "begin": 794,
+        "end": 804
       },
-      "obj": "chemical"
+      "obj": "PROTEIN"
     },
     {
       "id": "bionlpg13cg_T5",
       "span": {
+        "begin": 313,
+        "end": 329
+      },
+      "obj": "SPECIES"
+    },
+    {
+      "id": "bionlpg13cg_T6",
+      "span": {
+        "begin": 558,
+        "end": 574
+      },
+      "obj": "SPECIES"
+    },
+    {
+      "id": "bionlpg13cg_T7",
+      "span": {
+        "begin": 306,
+        "end": 312
+      },
+      "obj": "CHEMICAL"
+    },
+    {
+      "id": "bionlpg13cg_T8",
+      "span": {
+        "begin": 346,
+        "end": 360
+      },
+      "obj": "CHEMICAL"
+    },
+    {
+      "id": "bionlpg13cg_T9",
+      "span": {
         "begin": 891,
         "end": 895
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "craft_T6",
+      "id": "bionlpg13cg_T10",
+      "span": {
+        "begin": 262,
+        "end": 269
+      },
+      "obj": "DISEASE"
+    },
+    {
+      "id": "craft_T11",
+      "span": {
+        "begin": 558,
+        "end": 585
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "craft_T12",
+      "span": {
+        "begin": 794,
+        "end": 815
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "craft_T13",
       "span": {
         "begin": 313,
         "end": 329
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "craft_T7",
+      "id": "craft_T14",
       "span": {
         "begin": 401,
         "end": 409
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "bc5cdr_T8",
+      "id": "bc5cdr_T15",
       "span": {
         "begin": 262,
         "end": 271
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
-      "id": "bc5cdr_T9",
+      "id": "bc5cdr_T16",
       "span": {
         "begin": 849,
         "end": 890
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
-      "id": "bc5cdr_T10",
+      "id": "bc5cdr_T17",
       "span": {
         "begin": 900,
         "end": 915
       },
-      "obj": "disease"
+      "obj": "DISEASE"
+    },
+    {
+      "id": "jnlpba_T18",
+      "span": {
+        "begin": 137,
+        "end": 147
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T19",
+      "span": {
+        "begin": 153,
+        "end": 178
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T20",
+      "span": {
+        "begin": 313,
+        "end": 329
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T21",
+      "span": {
+        "begin": 368,
+        "end": 389
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T22",
+      "span": {
+        "begin": 525,
+        "end": 535
+      },
+      "obj": "PROTEIN"
     }
   ] 
 }

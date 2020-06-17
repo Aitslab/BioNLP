@@ -2,8 +2,7 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "6",
-  "text": "To facilitate the detection of immunogenic viruses and to reduce the detection of non disease-related viruses (bacteriophages and plant viruses) and host cellular RNA, a technique was developed that uses convalescent serum of the patient to concentrate viruses that have elicited and immune response prior to sequencing. Comparing the sequences derived from input and antibody captured material identifies immunogenic agents and can provide an important first step in identifying a disease-related virus.",
+   "text": "To facilitate the detection of immunogenic viruses and to reduce the detection of non disease-related viruses (bacteriophages and plant viruses) and host cellular RNA, a technique was developed that uses convalescent serum of the patient to concentrate viruses that have elicited and immune response prior to sequencing. Comparing the sequences derived from input and antibody captured material identifies immunogenic agents and can provide an important first step in identifying a disease-related virus.",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
@@ -12,7 +11,7 @@
         "begin": 230,
         "end": 237
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T2",
@@ -20,7 +19,7 @@
         "begin": 241,
         "end": 252
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T3",
@@ -28,7 +27,7 @@
         "begin": 43,
         "end": 50
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T4",
@@ -36,7 +35,7 @@
         "begin": 102,
         "end": 109
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T5",
@@ -44,7 +43,7 @@
         "begin": 253,
         "end": 260
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T6",
@@ -52,7 +51,7 @@
         "begin": 498,
         "end": 503
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T7",
@@ -60,7 +59,7 @@
         "begin": 130,
         "end": 143
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     }
   ] 
 }

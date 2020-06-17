@@ -2,49 +2,96 @@
   "cord_uid": "0brhn8oc",
   "sourcedb": "PMC",
   "sourceid": "PMC1149493",
-  "divid": "5",
-  "text": "Naturally occurring ribozymes appear to perform mainly hydrolysis and transesterifi cation reactions [16] ; however, in vitro selection has yielded RNAs capable of performing a wide variety of enzymatic reactions [17] . Recently the structure of an RNA capable of catalyzing carbon-carbon bond formation by the Diels-Alder reaction was solved ( Figure 2B ) [18] . The RNA adopts a λ-shaped fold of its three helices in which stems 2 and 3 stack coaxially, with stem 1 abutting the active site, forming a pocket precisely complementary to the reaction product. The 5′ end of the RNA bridges helical stems 3 and 1, generating a complex nested pseudoknot topology. Although conformationally distinct from the HDV ribozyme [3] , it is worthwhile to note that they are two of the fastest-known ribozymes, and both utilize a nested pseudoknot architecture [18] .",
+   "text": "Naturally occurring ribozymes appear to perform mainly hydrolysis and transesterifi cation reactions [16] ; however, in vitro selection has yielded RNAs capable of performing a wide variety of enzymatic reactions [17] . Recently the structure of an RNA capable of catalyzing carbon-carbon bond formation by the Diels-Alder reaction was solved ( Figure 2B ) [18] . The RNA adopts a λ-shaped fold of its three helices in which stems 2 and 3 stack coaxially, with stem 1 abutting the active site, forming a pocket precisely complementary to the reaction product. The 5′ end of the RNA bridges helical stems 3 and 1, generating a complex nested pseudoknot topology. Although conformationally distinct from the HDV ribozyme [3] , it is worthwhile to note that they are two of the fastest-known ribozymes, and both utilize a nested pseudoknot architecture [18] .",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
       "id": "bionlpg13cg_T1",
       "span": {
-        "begin": 706,
-        "end": 709
+        "begin": 564,
+        "end": 566
       },
-      "obj": "species"
+      "obj": "PROTEIN"
     },
     {
       "id": "bionlpg13cg_T2",
       "span": {
-        "begin": 719,
-        "end": 722
+        "begin": 706,
+        "end": 709
       },
-      "obj": "chemical"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T3",
       "span": {
+        "begin": 719,
+        "end": 722
+      },
+      "obj": "CHEMICAL"
+    },
+    {
+      "id": "bionlpg13cg_T4",
+      "span": {
         "begin": 775,
         "end": 788
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "craft_T4",
+      "id": "craft_T5",
+      "span": {
+        "begin": 461,
+        "end": 492
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "craft_T6",
       "span": {
         "begin": 84,
         "end": 90
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "bc5cdr_T5",
+      "id": "bc5cdr_T7",
       "span": {
         "begin": 381,
         "end": 389
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
+    },
+    {
+      "id": "jnlpba_T8",
+      "span": {
+        "begin": 381,
+        "end": 389
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T9",
+      "span": {
+        "begin": 542,
+        "end": 558
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T10",
+      "span": {
+        "begin": 706,
+        "end": 718
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T11",
+      "span": {
+        "begin": 775,
+        "end": 798
+      },
+      "obj": "PROTEIN"
     }
   ] 
 }

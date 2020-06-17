@@ -2,8 +2,7 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "4",
-  "text": "One limitation of the current technique is that a substantial amount of non-viral RNA and DNA derived from the host or from other agents in the sample can dominate the resulting sequences. Especially in respiratory samples, ribosomal RNA is massively present, over 80% of all sequence reads derived from a clinical sample originate from this material [9] . Sequence reads from fecal samples can be dominated by bacterial or dietary components. A method for focusing sequencing on immunogenic viruses was sought.",
+   "text": "One limitation of the current technique is that a substantial amount of non-viral RNA and DNA derived from the host or from other agents in the sample can dominate the resulting sequences. Especially in respiratory samples, ribosomal RNA is massively present, over 80% of all sequence reads derived from a clinical sample originate from this material [9] . Sequence reads from fecal samples can be dominated by bacterial or dietary components. A method for focusing sequencing on immunogenic viruses was sought.",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
@@ -12,7 +11,7 @@
         "begin": 411,
         "end": 420
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T2",
@@ -20,7 +19,7 @@
         "begin": 492,
         "end": 499
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T3",
@@ -28,7 +27,7 @@
         "begin": 224,
         "end": 237
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     }
   ] 
 }

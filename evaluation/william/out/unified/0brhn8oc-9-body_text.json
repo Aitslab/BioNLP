@@ -2,193 +2,208 @@
   "cord_uid": "0brhn8oc",
   "sourcedb": "PMC",
   "sourceid": "PMC1149493",
-  "divid": "9",
-  "text": "In beet western yellow virus, pea enation mosaic virus, and other luteoviruses, an RNA pseudoknot also stimulates a −1 frameshift between the P1 and P2 genes [29] . These structures, solved by X-ray crystallography and NMR, respectively, revealed compact H-type pseudoknots with extensive loop-stem interactions ( Figure 2E) [7, 9] . Like that of MMTV, frameshiftinducing pseudoknots in both the beet western yellow virus and pea enation mosaic virus have an unpaired nucleotide at the junction of the stems; however, this nucleotide is displaced from the helix, not intercalated as in MMTV.",
+   "text": "In beet western yellow virus, pea enation mosaic virus, and other luteoviruses, an RNA pseudoknot also stimulates a −1 frameshift between the P1 and P2 genes [29] . These structures, solved by X-ray crystallography and NMR, respectively, revealed compact H-type pseudoknots with extensive loop-stem interactions ( Figure 2E) [7, 9] . Like that of MMTV, frameshiftinducing pseudoknots in both the beet western yellow virus and pea enation mosaic virus have an unpaired nucleotide at the junction of the stems; however, this nucleotide is displaced from the helix, not intercalated as in MMTV.",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
       "id": "bionlpg13cg_T1",
       "span": {
-        "begin": 30,
-        "end": 54
+        "begin": 149,
+        "end": 151
       },
-      "obj": "species"
+      "obj": "PROTEIN"
     },
     {
       "id": "bionlpg13cg_T2",
       "span": {
-        "begin": 66,
-        "end": 78
+        "begin": 289,
+        "end": 298
       },
-      "obj": "species"
+      "obj": "PROTEIN"
     },
     {
       "id": "bionlpg13cg_T3",
       "span": {
-        "begin": 142,
-        "end": 144
+        "begin": 30,
+        "end": 54
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T4",
       "span": {
-        "begin": 347,
-        "end": 351
+        "begin": 66,
+        "end": 78
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T5",
       "span": {
-        "begin": 396,
-        "end": 400
+        "begin": 142,
+        "end": 144
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T6",
       "span": {
-        "begin": 426,
-        "end": 450
+        "begin": 347,
+        "end": 351
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T7",
       "span": {
-        "begin": 586,
-        "end": 590
+        "begin": 396,
+        "end": 400
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T8",
       "span": {
-        "begin": 158,
-        "end": 162
+        "begin": 426,
+        "end": 450
       },
-      "obj": "chemical"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T9",
       "span": {
-        "begin": 219,
-        "end": 222
+        "begin": 586,
+        "end": 590
       },
-      "obj": "chemical"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T10",
       "span": {
-        "begin": 468,
-        "end": 478
+        "begin": 158,
+        "end": 162
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
       "id": "bionlpg13cg_T11",
       "span": {
-        "begin": 523,
-        "end": 533
+        "begin": 219,
+        "end": 222
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "craft_T12",
-      "span": {
-        "begin": 23,
-        "end": 28
-      },
-      "obj": "species"
-    },
-    {
-      "id": "craft_T13",
-      "span": {
-        "begin": 30,
-        "end": 33
-      },
-      "obj": "species"
-    },
-    {
-      "id": "craft_T14",
-      "span": {
-        "begin": 49,
-        "end": 54
-      },
-      "obj": "species"
-    },
-    {
-      "id": "craft_T15",
-      "span": {
-        "begin": 347,
-        "end": 351
-      },
-      "obj": "species"
-    },
-    {
-      "id": "craft_T16",
-      "span": {
-        "begin": 416,
-        "end": 421
-      },
-      "obj": "species"
-    },
-    {
-      "id": "craft_T17",
-      "span": {
-        "begin": 426,
-        "end": 429
-      },
-      "obj": "species"
-    },
-    {
-      "id": "craft_T18",
-      "span": {
-        "begin": 445,
-        "end": 450
-      },
-      "obj": "species"
-    },
-    {
-      "id": "craft_T19",
-      "span": {
-        "begin": 586,
-        "end": 590
-      },
-      "obj": "species"
-    },
-    {
-      "id": "craft_T20",
+      "id": "bionlpg13cg_T12",
       "span": {
         "begin": 468,
         "end": 478
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
+    },
+    {
+      "id": "bionlpg13cg_T13",
+      "span": {
+        "begin": 523,
+        "end": 533
+      },
+      "obj": "CHEMICAL"
+    },
+    {
+      "id": "craft_T14",
+      "span": {
+        "begin": 23,
+        "end": 28
+      },
+      "obj": "SPECIES"
+    },
+    {
+      "id": "craft_T15",
+      "span": {
+        "begin": 30,
+        "end": 33
+      },
+      "obj": "SPECIES"
+    },
+    {
+      "id": "craft_T16",
+      "span": {
+        "begin": 49,
+        "end": 54
+      },
+      "obj": "SPECIES"
+    },
+    {
+      "id": "craft_T17",
+      "span": {
+        "begin": 347,
+        "end": 351
+      },
+      "obj": "SPECIES"
+    },
+    {
+      "id": "craft_T18",
+      "span": {
+        "begin": 416,
+        "end": 421
+      },
+      "obj": "SPECIES"
+    },
+    {
+      "id": "craft_T19",
+      "span": {
+        "begin": 426,
+        "end": 429
+      },
+      "obj": "SPECIES"
+    },
+    {
+      "id": "craft_T20",
+      "span": {
+        "begin": 445,
+        "end": 450
+      },
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T21",
       "span": {
+        "begin": 586,
+        "end": 590
+      },
+      "obj": "SPECIES"
+    },
+    {
+      "id": "craft_T22",
+      "span": {
+        "begin": 468,
+        "end": 478
+      },
+      "obj": "CHEMICAL"
+    },
+    {
+      "id": "craft_T23",
+      "span": {
         "begin": 523,
         "end": 533
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "bc5cdr_T22",
+      "id": "bc5cdr_T24",
       "span": {
         "begin": 459,
         "end": 478
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "bc5cdr_T23",
+      "id": "bc5cdr_T25",
       "span": {
         "begin": 523,
         "end": 533
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     }
   ] 
 }

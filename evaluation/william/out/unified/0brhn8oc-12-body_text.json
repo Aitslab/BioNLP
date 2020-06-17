@@ -2,8 +2,7 @@
   "cord_uid": "0brhn8oc",
   "sourcedb": "PMC",
   "sourceid": "PMC1149493",
-  "divid": "12",
-  "text": "RNA pseudoknots have been identifi ed in nearly every organism and comprise functional domains within ribozymes, self-splicing introns, ribonucleoprotein complexes, viral genomes, and many other biological systems. It is clear that the pseudoknot topology can result in many different, complex structures. The pseudoknot, therefore, represents an important piece of RNA architecture, as it provides a means for a single RNA strand to fold upon itself to produce a globular structure capable of performing important biological functions.",
+   "text": "RNA pseudoknots have been identifi ed in nearly every organism and comprise functional domains within ribozymes, self-splicing introns, ribonucleoprotein complexes, viral genomes, and many other biological systems. It is clear that the pseudoknot topology can result in many different, complex structures. The pseudoknot, therefore, represents an important piece of RNA architecture, as it provides a means for a single RNA strand to fold upon itself to produce a globular structure capable of performing important biological functions.",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
@@ -12,7 +11,7 @@
         "begin": 54,
         "end": 62
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T2",
@@ -20,7 +19,15 @@
         "begin": 165,
         "end": 178
       },
-      "obj": "species"
+      "obj": "SPECIES"
+    },
+    {
+      "id": "jnlpba_T3",
+      "span": {
+        "begin": 136,
+        "end": 163
+      },
+      "obj": "PROTEIN"
     }
   ] 
 }

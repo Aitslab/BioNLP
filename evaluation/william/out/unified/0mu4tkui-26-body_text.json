@@ -2,89 +2,200 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "26",
-  "text": "Antibody response to a virus infection can vary, depending on the virus, but also age and immune state of patients. Also, antibodies subclasses can differ; some viruses elicit a strong IgG response, while others induce a response dominated by IgA. In our antibody capture experiment, a combination of protein A and G coupled beads was used. Both proteins strongly bind to IgGs, but not or less efficient to IgA. It has been shown that serum antibodies, for instance against PIV-1 are not neutralizing efficiently, and that especially secretory IgA plays an important role in preventing re-infection [26, 27] . To address that point, protein L coupled beads, which are able to capture IgA, were tested. However, no difference was observed in the amount of PIV-1 or enterovirus capture (data not shown).",
+   "text": "Antibody response to a virus infection can vary, depending on the virus, but also age and immune state of patients. Also, antibodies subclasses can differ; some viruses elicit a strong IgG response, while others induce a response dominated by IgA. In our antibody capture experiment, a combination of protein A and G coupled beads was used. Both proteins strongly bind to IgGs, but not or less efficient to IgA. It has been shown that serum antibodies, for instance against PIV-1 are not neutralizing efficiently, and that especially secretory IgA plays an important role in preventing re-infection [26, 27] . To address that point, protein L coupled beads, which are able to capture IgA, were tested. However, no difference was observed in the amount of PIV-1 or enterovirus capture (data not shown).",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
       "id": "bionlpg13cg_T1",
       "span": {
+        "begin": 372,
+        "end": 376
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "bionlpg13cg_T2",
+      "span": {
+        "begin": 407,
+        "end": 411
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "bionlpg13cg_T3",
+      "span": {
+        "begin": 544,
+        "end": 547
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "bionlpg13cg_T4",
+      "span": {
+        "begin": 684,
+        "end": 687
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "bionlpg13cg_T5",
+      "span": {
         "begin": 106,
         "end": 114
       },
-      "obj": "species"
-    },
-    {
-      "id": "craft_T2",
-      "span": {
-        "begin": 23,
-        "end": 28
-      },
-      "obj": "species"
-    },
-    {
-      "id": "craft_T3",
-      "span": {
-        "begin": 66,
-        "end": 71
-      },
-      "obj": "species"
-    },
-    {
-      "id": "craft_T4",
-      "span": {
-        "begin": 161,
-        "end": 168
-      },
-      "obj": "species"
-    },
-    {
-      "id": "craft_T5",
-      "span": {
-        "begin": 764,
-        "end": 775
-      },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T6",
       "span": {
-        "begin": 301,
-        "end": 308
+        "begin": 23,
+        "end": 28
       },
-      "obj": "chemical"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T7",
       "span": {
-        "begin": 346,
-        "end": 354
+        "begin": 66,
+        "end": 71
       },
-      "obj": "chemical"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T8",
       "span": {
-        "begin": 633,
-        "end": 640
+        "begin": 161,
+        "end": 168
       },
-      "obj": "chemical"
+      "obj": "SPECIES"
     },
     {
-      "id": "bc5cdr_T9",
-      "span": {
-        "begin": 23,
-        "end": 38
-      },
-      "obj": "disease"
-    },
-    {
-      "id": "bc5cdr_T10",
+      "id": "craft_T9",
       "span": {
         "begin": 764,
         "end": 775
       },
-      "obj": "disease"
+      "obj": "SPECIES"
+    },
+    {
+      "id": "craft_T10",
+      "span": {
+        "begin": 301,
+        "end": 308
+      },
+      "obj": "CHEMICAL"
+    },
+    {
+      "id": "craft_T11",
+      "span": {
+        "begin": 346,
+        "end": 354
+      },
+      "obj": "CHEMICAL"
+    },
+    {
+      "id": "craft_T12",
+      "span": {
+        "begin": 633,
+        "end": 640
+      },
+      "obj": "CHEMICAL"
+    },
+    {
+      "id": "bc5cdr_T13",
+      "span": {
+        "begin": 23,
+        "end": 38
+      },
+      "obj": "DISEASE"
+    },
+    {
+      "id": "bc5cdr_T14",
+      "span": {
+        "begin": 764,
+        "end": 775
+      },
+      "obj": "DISEASE"
+    },
+    {
+      "id": "jnlpba_T15",
+      "span": {
+        "begin": 122,
+        "end": 143
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T16",
+      "span": {
+        "begin": 185,
+        "end": 188
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T17",
+      "span": {
+        "begin": 243,
+        "end": 247
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T18",
+      "span": {
+        "begin": 301,
+        "end": 310
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T19",
+      "span": {
+        "begin": 372,
+        "end": 376
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T20",
+      "span": {
+        "begin": 407,
+        "end": 411
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T21",
+      "span": {
+        "begin": 435,
+        "end": 451
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T22",
+      "span": {
+        "begin": 534,
+        "end": 547
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T23",
+      "span": {
+        "begin": 633,
+        "end": 642
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T24",
+      "span": {
+        "begin": 684,
+        "end": 687
+      },
+      "obj": "PROTEIN"
     }
   ] 
 }

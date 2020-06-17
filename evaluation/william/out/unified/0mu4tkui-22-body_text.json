@@ -2,8 +2,7 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "22",
-  "text": "EAR values ranged from 0 to 3019 (Table 3 ). In respiratory samples, almost all EAR were derived from viruses. In patients 3-13, 98-100% of all EAR sequences were of viral origin. Also in fecal samples, virus reads represent the majority of the EAR. In patient 14, 30% of the EAR were derived from norovirus and 50% from adenovirus. In patient 15, all 3019 enriched reads were derived from norovirus. In patient 16 none of the 42 EAR were derived from an enterovirus, and also in patient 18 no enterovirus reads were detected in the EAR as expected since no enterovirus reads were present in the captured reads. Sapovirus sequences were detected in the EAR of patient 17 and 18, 21% and 65% respectively. In patient 19, 62% of the EAR were derived from a hepatitis B virus. The plant virus and the enterobacteriophage were not detected in the EAR of patient 15 and 19.",
+   "text": "EAR values ranged from 0 to 3019 (Table 3 ). In respiratory samples, almost all EAR were derived from viruses. In patients 3-13, 98-100% of all EAR sequences were of viral origin. Also in fecal samples, virus reads represent the majority of the EAR. In patient 14, 30% of the EAR were derived from norovirus and 50% from adenovirus. In patient 15, all 3019 enriched reads were derived from norovirus. In patient 16 none of the 42 EAR were derived from an enterovirus, and also in patient 18 no enterovirus reads were detected in the EAR as expected since no enterovirus reads were present in the captured reads. Sapovirus sequences were detected in the EAR of patient 17 and 18, 21% and 65% respectively. In patient 19, 62% of the EAR were derived from a hepatitis B virus. The plant virus and the enterobacteriophage were not detected in the EAR of patient 15 and 19.",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
@@ -12,7 +11,7 @@
         "begin": 114,
         "end": 127
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T2",
@@ -20,7 +19,7 @@
         "begin": 253,
         "end": 260
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T3",
@@ -28,7 +27,7 @@
         "begin": 298,
         "end": 307
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T4",
@@ -36,7 +35,7 @@
         "begin": 321,
         "end": 331
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T5",
@@ -44,7 +43,7 @@
         "begin": 336,
         "end": 343
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T6",
@@ -52,7 +51,7 @@
         "begin": 390,
         "end": 399
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T7",
@@ -60,7 +59,7 @@
         "begin": 404,
         "end": 411
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T8",
@@ -68,7 +67,7 @@
         "begin": 480,
         "end": 487
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T9",
@@ -76,7 +75,7 @@
         "begin": 660,
         "end": 667
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T10",
@@ -84,7 +83,7 @@
         "begin": 708,
         "end": 715
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T11",
@@ -92,7 +91,7 @@
         "begin": 755,
         "end": 772
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T12",
@@ -100,127 +99,207 @@
         "begin": 850,
         "end": 857
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "craft_T13",
+      "id": "bionlpg13cg_T13",
       "span": {
-        "begin": 102,
-        "end": 109
+        "begin": 188,
+        "end": 201
       },
-      "obj": "species"
+      "obj": "DISEASE"
     },
     {
       "id": "craft_T14",
       "span": {
-        "begin": 166,
-        "end": 171
+        "begin": 0,
+        "end": 3
       },
-      "obj": "species"
+      "obj": "PROTEIN"
     },
     {
       "id": "craft_T15",
       "span": {
-        "begin": 203,
-        "end": 208
+        "begin": 80,
+        "end": 83
       },
-      "obj": "species"
+      "obj": "PROTEIN"
     },
     {
       "id": "craft_T16",
       "span": {
-        "begin": 298,
-        "end": 307
+        "begin": 144,
+        "end": 157
       },
-      "obj": "species"
+      "obj": "PROTEIN"
     },
     {
       "id": "craft_T17",
       "span": {
-        "begin": 321,
-        "end": 331
+        "begin": 245,
+        "end": 248
       },
-      "obj": "species"
+      "obj": "PROTEIN"
     },
     {
       "id": "craft_T18",
       "span": {
-        "begin": 390,
-        "end": 399
+        "begin": 276,
+        "end": 279
       },
-      "obj": "species"
+      "obj": "PROTEIN"
     },
     {
       "id": "craft_T19",
       "span": {
-        "begin": 455,
-        "end": 466
+        "begin": 430,
+        "end": 433
       },
-      "obj": "species"
+      "obj": "PROTEIN"
     },
     {
       "id": "craft_T20",
       "span": {
-        "begin": 494,
-        "end": 505
+        "begin": 533,
+        "end": 536
       },
-      "obj": "species"
+      "obj": "PROTEIN"
     },
     {
       "id": "craft_T21",
       "span": {
-        "begin": 558,
-        "end": 569
+        "begin": 653,
+        "end": 656
       },
-      "obj": "species"
+      "obj": "PROTEIN"
     },
     {
       "id": "craft_T22",
       "span": {
-        "begin": 767,
-        "end": 772
+        "begin": 731,
+        "end": 734
       },
-      "obj": "species"
+      "obj": "PROTEIN"
     },
     {
       "id": "craft_T23",
       "span": {
-        "begin": 778,
-        "end": 789
+        "begin": 102,
+        "end": 109
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "bc5cdr_T24",
+      "id": "craft_T24",
+      "span": {
+        "begin": 166,
+        "end": 171
+      },
+      "obj": "SPECIES"
+    },
+    {
+      "id": "craft_T25",
+      "span": {
+        "begin": 203,
+        "end": 208
+      },
+      "obj": "SPECIES"
+    },
+    {
+      "id": "craft_T26",
+      "span": {
+        "begin": 298,
+        "end": 307
+      },
+      "obj": "SPECIES"
+    },
+    {
+      "id": "craft_T27",
+      "span": {
+        "begin": 321,
+        "end": 331
+      },
+      "obj": "SPECIES"
+    },
+    {
+      "id": "craft_T28",
+      "span": {
+        "begin": 390,
+        "end": 399
+      },
+      "obj": "SPECIES"
+    },
+    {
+      "id": "craft_T29",
       "span": {
         "begin": 455,
         "end": 466
       },
-      "obj": "disease"
+      "obj": "SPECIES"
     },
     {
-      "id": "bc5cdr_T25",
+      "id": "craft_T30",
       "span": {
         "begin": 494,
         "end": 505
       },
-      "obj": "disease"
+      "obj": "SPECIES"
     },
     {
-      "id": "bc5cdr_T26",
+      "id": "craft_T31",
       "span": {
         "begin": 558,
         "end": 569
       },
-      "obj": "disease"
+      "obj": "SPECIES"
     },
     {
-      "id": "bc5cdr_T27",
+      "id": "craft_T32",
+      "span": {
+        "begin": 767,
+        "end": 772
+      },
+      "obj": "SPECIES"
+    },
+    {
+      "id": "craft_T33",
+      "span": {
+        "begin": 778,
+        "end": 789
+      },
+      "obj": "SPECIES"
+    },
+    {
+      "id": "bc5cdr_T34",
+      "span": {
+        "begin": 455,
+        "end": 466
+      },
+      "obj": "DISEASE"
+    },
+    {
+      "id": "bc5cdr_T35",
+      "span": {
+        "begin": 494,
+        "end": 505
+      },
+      "obj": "DISEASE"
+    },
+    {
+      "id": "bc5cdr_T36",
+      "span": {
+        "begin": 558,
+        "end": 569
+      },
+      "obj": "DISEASE"
+    },
+    {
+      "id": "bc5cdr_T37",
       "span": {
         "begin": 755,
         "end": 766
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     }
   ] 
 }

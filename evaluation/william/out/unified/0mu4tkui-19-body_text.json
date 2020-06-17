@@ -2,8 +2,7 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "19",
-  "text": "Fecal samples were analyzed by the same process. Norovirus infection was observed in two patients and enriched 20-fold and 11-fold. Adenovirus was also detected in a patient with norovirus infection and no enrichment for adenovirus was scored (0.9). Enterovirus reads were detected with an enrichment factor of 5.2 in one case but enterovirus reads were not enriched (enrichment factor of 0.0) in a second case. Viral reads derived from sapovirus were detected in samples from two patients with an enrichment factor of 4.9 and 1.4 respectively. Hepatitis B viral reads were detected in patient 19 with an enrichment factor of 53. As controls, a plant virus (cucumber mosaic virus) and an enterobacteriophage were tested. These viruses had an enrichment index of 0.08 and 0.01 respectively, indicating that there presence was reduced in the captured material.",
+   "text": "Fecal samples were analyzed by the same process. Norovirus infection was observed in two patients and enriched 20-fold and 11-fold. Adenovirus was also detected in a patient with norovirus infection and no enrichment for adenovirus was scored (0.9). Enterovirus reads were detected with an enrichment factor of 5.2 in one case but enterovirus reads were not enriched (enrichment factor of 0.0) in a second case. Viral reads derived from sapovirus were detected in samples from two patients with an enrichment factor of 4.9 and 1.4 respectively. Hepatitis B viral reads were detected in patient 19 with an enrichment factor of 53. As controls, a plant virus (cucumber mosaic virus) and an enterobacteriophage were tested. These viruses had an enrichment index of 0.08 and 0.01 respectively, indicating that there presence was reduced in the captured material.",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
@@ -12,7 +11,7 @@
         "begin": 89,
         "end": 97
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T2",
@@ -20,7 +19,7 @@
         "begin": 132,
         "end": 142
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T3",
@@ -28,7 +27,7 @@
         "begin": 166,
         "end": 173
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T4",
@@ -36,7 +35,7 @@
         "begin": 221,
         "end": 231
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T5",
@@ -44,7 +43,7 @@
         "begin": 437,
         "end": 446
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T6",
@@ -52,7 +51,7 @@
         "begin": 481,
         "end": 489
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T7",
@@ -60,7 +59,7 @@
         "begin": 545,
         "end": 556
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T8",
@@ -68,7 +67,7 @@
         "begin": 586,
         "end": 593
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T9",
@@ -76,7 +75,7 @@
         "begin": 658,
         "end": 679
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T10",
@@ -84,7 +83,7 @@
         "begin": 132,
         "end": 142
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T11",
@@ -92,7 +91,7 @@
         "begin": 179,
         "end": 188
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T12",
@@ -100,7 +99,7 @@
         "begin": 221,
         "end": 231
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T13",
@@ -108,7 +107,7 @@
         "begin": 250,
         "end": 261
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T14",
@@ -116,7 +115,7 @@
         "begin": 331,
         "end": 342
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T15",
@@ -124,7 +123,7 @@
         "begin": 412,
         "end": 417
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T16",
@@ -132,7 +131,7 @@
         "begin": 437,
         "end": 446
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T17",
@@ -140,7 +139,7 @@
         "begin": 557,
         "end": 562
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T18",
@@ -148,7 +147,7 @@
         "begin": 645,
         "end": 656
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T19",
@@ -156,7 +155,7 @@
         "begin": 674,
         "end": 679
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T20",
@@ -164,7 +163,7 @@
         "begin": 727,
         "end": 734
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bc5cdr_T21",
@@ -172,7 +171,7 @@
         "begin": 49,
         "end": 68
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
       "id": "bc5cdr_T22",
@@ -180,7 +179,7 @@
         "begin": 179,
         "end": 198
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
       "id": "bc5cdr_T23",
@@ -188,7 +187,7 @@
         "begin": 545,
         "end": 556
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     }
   ] 
 }

@@ -2,8 +2,7 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "0",
-  "text": "Autologous Antibody Capture to Enrich Immunogenic Viruses for Viral Discovery",
+   "text": "Autologous Antibody Capture to Enrich Immunogenic Viruses for Viral Discovery",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
@@ -12,7 +11,7 @@
         "begin": 50,
         "end": 57
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T2",
@@ -20,7 +19,7 @@
         "begin": 62,
         "end": 67
       },
-      "obj": "species"
+      "obj": "SPECIES"
     }
   ] 
 }

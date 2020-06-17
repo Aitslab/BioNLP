@@ -2,8 +2,7 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "2",
-  "text": "Virus infections are a continuous threat to the human population; e.g. HIV, hepatitis viruses, and influenza viruses constitute a large proportion of morbidity and mortality each year. Apart from infection with well-described viruses, outbreaks with previously undescribed viruses occur regularly (e.g. SARS-CoV, MERS-CoV) [1] [2] [3] [4] . Furthermore, respiratory tract infections and diarrhoea in young children or immunocompromised persons often test negative for known viruses, and could very well be caused by yet unknown pathogens.",
+   "text": "Virus infections are a continuous threat to the human population; e.g. HIV, hepatitis viruses, and influenza viruses constitute a large proportion of morbidity and mortality each year. Apart from infection with well-described viruses, outbreaks with previously undescribed viruses occur regularly (e.g. SARS-CoV, MERS-CoV) [1] [2] [3] [4] . Furthermore, respiratory tract infections and diarrhoea in young children or immunocompromised persons often test negative for known viruses, and could very well be caused by yet unknown pathogens.",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
@@ -12,7 +11,7 @@
         "begin": 48,
         "end": 53
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T2",
@@ -20,7 +19,7 @@
         "begin": 71,
         "end": 74
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T3",
@@ -28,7 +27,7 @@
         "begin": 76,
         "end": 93
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bionlpg13cg_T4",
@@ -36,7 +35,7 @@
         "begin": 406,
         "end": 414
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T5",
@@ -44,7 +43,7 @@
         "begin": 0,
         "end": 5
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T6",
@@ -52,7 +51,7 @@
         "begin": 48,
         "end": 53
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T7",
@@ -60,7 +59,7 @@
         "begin": 71,
         "end": 74
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T8",
@@ -68,7 +67,7 @@
         "begin": 86,
         "end": 93
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T9",
@@ -76,7 +75,7 @@
         "begin": 109,
         "end": 116
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T10",
@@ -84,7 +83,7 @@
         "begin": 226,
         "end": 233
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T11",
@@ -92,7 +91,7 @@
         "begin": 235,
         "end": 244
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "craft_T12",
@@ -100,7 +99,7 @@
         "begin": 273,
         "end": 280
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
       "id": "bc5cdr_T13",
@@ -108,7 +107,7 @@
         "begin": 0,
         "end": 16
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
       "id": "bc5cdr_T14",
@@ -116,7 +115,7 @@
         "begin": 71,
         "end": 93
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
       "id": "bc5cdr_T15",
@@ -124,7 +123,7 @@
         "begin": 196,
         "end": 205
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
       "id": "bc5cdr_T16",
@@ -132,7 +131,7 @@
         "begin": 354,
         "end": 382
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
       "id": "bc5cdr_T17",
@@ -140,7 +139,23 @@
         "begin": 387,
         "end": 396
       },
-      "obj": "disease"
+      "obj": "DISEASE"
+    },
+    {
+      "id": "jnlpba_T18",
+      "span": {
+        "begin": 303,
+        "end": 311
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T19",
+      "span": {
+        "begin": 313,
+        "end": 321
+      },
+      "obj": "PROTEIN"
     }
   ] 
 }
