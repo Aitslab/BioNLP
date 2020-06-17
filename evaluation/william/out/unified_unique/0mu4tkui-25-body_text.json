@@ -2,145 +2,144 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "25",
-  "text": "Also enteroviruses were poorly captured. A possible explanation might be that the bacteria or bacteriophage background in fecal samples is high which makes it more difficult to enrich a virus with a relatively low load. Nonetheless, we were able to reduce the amount of reads originating from bacteriophages and plant viruses (enrichment index of 0.01 and 0.08), indicating that this method can efficiently reduce the background in fecal samples. Furthermore, it could be that the immune response to enteroviruses is poor, especially in immunocompromised patients, which is the case in our study patients with diarrhoea. These patients were HIV-1 positive with relatively low CD4 counts (0.18 and 0.05610E9 cells/L in the two patients with enterovirus infection). On the other hand, it has been published that HIV-1 infected patients are not hampered in their immune response to enteroviruses, and chronic shedding is as rare as in the normal population [25] .",
+   "text": "Also enteroviruses were poorly captured. A possible explanation might be that the bacteria or bacteriophage background in fecal samples is high which makes it more difficult to enrich a virus with a relatively low load. Nonetheless, we were able to reduce the amount of reads originating from bacteriophages and plant viruses (enrichment index of 0.01 and 0.08), indicating that this method can efficiently reduce the background in fecal samples. Furthermore, it could be that the immune response to enteroviruses is poor, especially in immunocompromised patients, which is the case in our study patients with diarrhoea. These patients were HIV-1 positive with relatively low CD4 counts (0.18 and 0.05610E9 cells/L in the two patients with enterovirus infection). On the other hand, it has been published that HIV-1 infected patients are not hampered in their immune response to enteroviruses, and chronic shedding is as rare as in the normal population [25] .",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
-      "id": "unique_T1",
+      "id": "bionlpg13cg_T1",
+      "span": {
+        "begin": 676,
+        "end": 679
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "bionlpg13cg_T2",
       "span": {
         "begin": 5,
         "end": 18
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T2",
+      "id": "bionlpg13cg_T3",
       "span": {
         "begin": 500,
         "end": 513
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T3",
+      "id": "bionlpg13cg_T4",
       "span": {
         "begin": 555,
         "end": 563
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T4",
+      "id": "bionlpg13cg_T5",
       "span": {
         "begin": 596,
         "end": 604
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T5",
+      "id": "bionlpg13cg_T6",
       "span": {
         "begin": 627,
         "end": 635
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T6",
+      "id": "bionlpg13cg_T7",
       "span": {
         "begin": 641,
         "end": 646
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T7",
+      "id": "bionlpg13cg_T8",
       "span": {
         "begin": 726,
         "end": 734
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T8",
-      "span": {
-        "begin": 810,
-        "end": 815
-      },
-      "obj": "species"
-    },
-    {
-      "id": "unique_T9",
+      "id": "bionlpg13cg_T9",
       "span": {
         "begin": 825,
         "end": 833
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T10",
+      "id": "bionlpg13cg_T10",
+      "span": {
+        "begin": 432,
+        "end": 445
+      },
+      "obj": "DISEASE"
+    },
+    {
+      "id": "craft_T11",
       "span": {
         "begin": 82,
         "end": 90
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T11",
+      "id": "craft_T12",
       "span": {
         "begin": 186,
         "end": 191
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T12",
-      "span": {
-        "begin": 740,
-        "end": 751
-      },
-      "obj": "species"
-    },
-    {
-      "id": "unique_T13",
+      "id": "craft_T13",
       "span": {
         "begin": 810,
         "end": 824
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T14",
+      "id": "craft_T14",
       "span": {
         "begin": 312,
         "end": 325
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "unique_T15",
+      "id": "bc5cdr_T15",
       "span": {
         "begin": 537,
         "end": 554
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
-      "id": "unique_T16",
+      "id": "bc5cdr_T16",
       "span": {
         "begin": 610,
         "end": 619
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
-      "id": "unique_T17",
+      "id": "bc5cdr_T17",
       "span": {
         "begin": 740,
         "end": 761
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     }
   ] 
 }

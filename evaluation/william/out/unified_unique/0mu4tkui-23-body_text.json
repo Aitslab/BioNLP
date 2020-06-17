@@ -2,121 +2,128 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "23",
-  "text": "A new method is described that facilitates virus identification by enriching viral material with convalescent autologous patient antibody capture followed by deep sequencing. For all samples tested here, an increase in percentage of viral reads was detected when compared to the input sample. In 9 out of the 21 viruses the amount of viral reads after capture increase 10-fold or more. By using the Xcompare script, enriched reads in the antibody captured sample could be determined in an identity independent manner. In 11 out of the 13 patients, between 98% and 100% of the enriched analysis reads were of mammalian viral origin. In fecal samples between 21% and 100% viral reads were detected in the EAR in 4 out of 6 cases. Surprisingly, in two patients with enterovirus infection, no viral reads were detected in the EAR.",
+   "text": "A new method is described that facilitates virus identification by enriching viral material with convalescent autologous patient antibody capture followed by deep sequencing. For all samples tested here, an increase in percentage of viral reads was detected when compared to the input sample. In 9 out of the 21 viruses the amount of viral reads after capture increase 10-fold or more. By using the Xcompare script, enriched reads in the antibody captured sample could be determined in an identity independent manner. In 11 out of the 13 patients, between 98% and 100% of the enriched analysis reads were of mammalian viral origin. In fecal samples between 21% and 100% viral reads were detected in the EAR in 4 out of 6 cases. Surprisingly, in two patients with enterovirus infection, no viral reads were detected in the EAR.",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
-      "id": "unique_T1",
+      "id": "bionlpg13cg_T1",
       "span": {
         "begin": 97,
         "end": 109
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T2",
+      "id": "bionlpg13cg_T2",
       "span": {
         "begin": 121,
         "end": 128
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T3",
+      "id": "bionlpg13cg_T3",
       "span": {
         "begin": 538,
         "end": 546
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T4",
+      "id": "bionlpg13cg_T4",
       "span": {
         "begin": 749,
         "end": 757
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T5",
+      "id": "craft_T5",
+      "span": {
+        "begin": 703,
+        "end": 706
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "craft_T6",
+      "span": {
+        "begin": 822,
+        "end": 825
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "craft_T7",
       "span": {
         "begin": 43,
         "end": 48
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T6",
+      "id": "craft_T8",
       "span": {
         "begin": 77,
         "end": 82
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T7",
+      "id": "craft_T9",
       "span": {
         "begin": 233,
         "end": 238
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T8",
+      "id": "craft_T10",
       "span": {
         "begin": 312,
         "end": 319
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T9",
+      "id": "craft_T11",
       "span": {
         "begin": 334,
         "end": 339
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T10",
+      "id": "craft_T12",
       "span": {
         "begin": 608,
         "end": 623
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T11",
+      "id": "craft_T13",
       "span": {
         "begin": 670,
         "end": 675
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T12",
-      "span": {
-        "begin": 763,
-        "end": 774
-      },
-      "obj": "species"
-    },
-    {
-      "id": "unique_T13",
+      "id": "craft_T14",
       "span": {
         "begin": 789,
         "end": 794
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T14",
+      "id": "bc5cdr_T15",
       "span": {
         "begin": 763,
         "end": 784
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     }
   ] 
 }

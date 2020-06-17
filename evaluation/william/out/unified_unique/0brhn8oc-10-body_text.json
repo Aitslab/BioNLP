@@ -2,81 +2,80 @@
   "cord_uid": "0brhn8oc",
   "sourcedb": "PMC",
   "sourceid": "PMC1149493",
-  "divid": "10",
-  "text": "The frameshift-inducing pseudoknot from simian retrovirus 1 contains a number of unique features ( Figure 2F ) [8] . Although predicted to resemble that of MMTV, with an unpaired adenine between the helices, the structure revealed the formation of a uracil-adenine pair at the junction, allowing the two stems to stack directly on top of each other ( Figure 2F ) [8] . The simian retrovirus 1 pseudoknot forms an extensive loop 2-stem 1 triplex, which contains a ribose zipper motif in addition to base-base and base-sugar interactions [8] .",
+   "text": "The frameshift-inducing pseudoknot from simian retrovirus 1 contains a number of unique features ( Figure 2F ) [8] . Although predicted to resemble that of MMTV, with an unpaired adenine between the helices, the structure revealed the formation of a uracil-adenine pair at the junction, allowing the two stems to stack directly on top of each other ( Figure 2F ) [8] . The simian retrovirus 1 pseudoknot forms an extensive loop 2-stem 1 triplex, which contains a ribose zipper motif in addition to base-base and base-sugar interactions [8] .",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
-      "id": "unique_T1",
+      "id": "bionlpg13cg_T1",
+      "span": {
+        "begin": 428,
+        "end": 444
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "bionlpg13cg_T2",
+      "span": {
+        "begin": 498,
+        "end": 507
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "bionlpg13cg_T3",
       "span": {
         "begin": 40,
         "end": 59
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T2",
-      "span": {
-        "begin": 156,
-        "end": 160
-      },
-      "obj": "species"
-    },
-    {
-      "id": "unique_T3",
-      "span": {
-        "begin": 373,
-        "end": 392
-      },
-      "obj": "species"
-    },
-    {
-      "id": "unique_T4",
+      "id": "bionlpg13cg_T4",
       "span": {
         "begin": 179,
         "end": 186
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "unique_T5",
+      "id": "bionlpg13cg_T5",
       "span": {
         "begin": 250,
         "end": 264
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "unique_T6",
+      "id": "bionlpg13cg_T6",
       "span": {
         "begin": 536,
         "end": 539
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "unique_T7",
+      "id": "craft_T7",
       "span": {
-        "begin": 40,
-        "end": 57
+        "begin": 156,
+        "end": 160
       },
-      "obj": "species"
+      "obj": "PROTEIN"
     },
     {
-      "id": "unique_T8",
+      "id": "craft_T8",
       "span": {
         "begin": 373,
         "end": 403
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T9",
+      "id": "jnlpba_T9",
       "span": {
         "begin": 463,
-        "end": 469
+        "end": 482
       },
-      "obj": "chemical"
+      "obj": "PROTEIN"
     }
   ] 
 }

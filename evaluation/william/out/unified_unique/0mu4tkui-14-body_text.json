@@ -2,33 +2,48 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "14",
-  "text": "To identify sequences which are enriched by antibody capture, input and enriched sequences were compared using a Python algorithm xcompare (source available on request). The algorithm is comprised of the following steps: the identification of identical or nearly-identical sequences within the input subset was performed by creating a custom BLAST database [19] comprising all the reads derived from the input sample and subsequently performing a BLAST search within this database towards its own sequences. Via this method a list of closely related sequences could be created which were extracted and aligned via MUSCLE 3.8.31 [20, 21] (maximum number of iterations: 1; diagonal optimization enabled) and both consensus sequences and unique sequences were joined into a unique fragment library. In turn, this unique fragment library was converted into a second custom BLAST database, against which the reads obtained from the enriched sample were compared. For the BLAST comparison the following settings were used: E-value threshold 3E-60 for within the input sample library and 3E-25 for between the enriched and input samples library; word size: 11; match/mismatch scores 1/-2; gap existence/ extension penalty: 5/2.",
+   "text": "To identify sequences which are enriched by antibody capture, input and enriched sequences were compared using a Python algorithm xcompare (source available on request). The algorithm is comprised of the following steps: the identification of identical or nearly-identical sequences within the input subset was performed by creating a custom BLAST database [19] comprising all the reads derived from the input sample and subsequently performing a BLAST search within this database towards its own sequences. Via this method a list of closely related sequences could be created which were extracted and aligned via MUSCLE 3.8.31 [20, 21] (maximum number of iterations: 1; diagonal optimization enabled) and both consensus sequences and unique sequences were joined into a unique fragment library. In turn, this unique fragment library was converted into a second custom BLAST database, against which the reads obtained from the enriched sample were compared. For the BLAST comparison the following settings were used: E-value threshold 3E-60 for within the input sample library and 3E-25 for between the enriched and input samples library; word size: 11; match/mismatch scores 1/-2; gap existence/ extension penalty: 5/2.",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
-      "id": "unique_T1",
+      "id": "bionlpg13cg_T1",
+      "span": {
+        "begin": 1154,
+        "end": 1168
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "bionlpg13cg_T2",
+      "span": {
+        "begin": 1176,
+        "end": 1180
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "bionlpg13cg_T3",
       "span": {
         "begin": 1035,
         "end": 1040
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "unique_T2",
-      "span": {
-        "begin": 1081,
-        "end": 1086
-      },
-      "obj": "chemical"
-    },
-    {
-      "id": "unique_T3",
+      "id": "bionlpg13cg_T4",
       "span": {
         "begin": 1216,
         "end": 1219
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
+    },
+    {
+      "id": "craft_T5",
+      "span": {
+        "begin": 1081,
+        "end": 1086
+      },
+      "obj": "PROTEIN"
     }
   ] 
 }

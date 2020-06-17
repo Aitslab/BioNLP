@@ -2,65 +2,96 @@
   "cord_uid": "0brhn8oc",
   "sourcedb": "PMC",
   "sourceid": "PMC1149493",
-  "divid": "11",
-  "text": "The severe acute respiratory syndrome coronavirus (SARS-CoV) genome contains two large genes, ORF 1a and ORF 1b, separated by a programmed −1 frameshift element required for ORF 1b expression [30] . Recent work has suggested that the SARS-CoV frameshift-inducing pseudoknot may be unique because it contains a third stem-loop [31, 32] . In this issue of PLoS Biology, bioinformatic, phylogenetic, and structural evidence is reported indicating that the SARS-CoV pseudoknot is indeed a three-stemmed RNA pseudoknot (see Figure 1D ) [33] . Dinman and co-workers report the potential for the formation of this three-stemmed pseudoknot in all coronaviruses in the GenBank database. NMR experiments confi rmed the proposed three-stemmed pseudoknot structure in SARS-CoV. Although the atomic-resolution structure has not yet been determined, this study identifi es a new secondary structure capable of promoting frameshifting that is structurally distinct from previously described pseudoknots (see Figure 1D ).",
+   "text": "The severe acute respiratory syndrome coronavirus (SARS-CoV) genome contains two large genes, ORF 1a and ORF 1b, separated by a programmed −1 frameshift element required for ORF 1b expression [30] . Recent work has suggested that the SARS-CoV frameshift-inducing pseudoknot may be unique because it contains a third stem-loop [31, 32] . In this issue of PLoS Biology, bioinformatic, phylogenetic, and structural evidence is reported indicating that the SARS-CoV pseudoknot is indeed a three-stemmed RNA pseudoknot (see Figure 1D ) [33] . Dinman and co-workers report the potential for the formation of this three-stemmed pseudoknot in all coronaviruses in the GenBank database. NMR experiments confi rmed the proposed three-stemmed pseudoknot structure in SARS-CoV. Although the atomic-resolution structure has not yet been determined, this study identifi es a new secondary structure capable of promoting frameshifting that is structurally distinct from previously described pseudoknots (see Figure 1D ).",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
-      "id": "unique_T1",
+      "id": "bionlpg13cg_T1",
+      "span": {
+        "begin": 94,
+        "end": 100
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "bionlpg13cg_T2",
+      "span": {
+        "begin": 105,
+        "end": 111
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "bionlpg13cg_T3",
+      "span": {
+        "begin": 174,
+        "end": 180
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "bionlpg13cg_T4",
+      "span": {
+        "begin": 756,
+        "end": 765
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "bionlpg13cg_T5",
       "span": {
         "begin": 234,
         "end": 242
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T2",
+      "id": "bionlpg13cg_T6",
       "span": {
         "begin": 453,
         "end": 461
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T3",
-      "span": {
-        "begin": 639,
-        "end": 652
-      },
-      "obj": "species"
-    },
-    {
-      "id": "unique_T4",
+      "id": "bionlpg13cg_T7",
       "span": {
         "begin": 660,
         "end": 676
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T5",
+      "id": "bionlpg13cg_T8",
       "span": {
         "begin": 326,
         "end": 334
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "unique_T6",
+      "id": "bc5cdr_T9",
       "span": {
         "begin": 17,
         "end": 49
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
-      "id": "unique_T7",
+      "id": "bc5cdr_T10",
       "span": {
         "begin": 538,
         "end": 544
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
+    },
+    {
+      "id": "jnlpba_T11",
+      "span": {
+        "begin": 639,
+        "end": 652
+      },
+      "obj": "PROTEIN"
     }
   ] 
 }

@@ -2,129 +2,112 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "2",
-  "text": "Virus infections are a continuous threat to the human population; e.g. HIV, hepatitis viruses, and influenza viruses constitute a large proportion of morbidity and mortality each year. Apart from infection with well-described viruses, outbreaks with previously undescribed viruses occur regularly (e.g. SARS-CoV, MERS-CoV) [1] [2] [3] [4] . Furthermore, respiratory tract infections and diarrhoea in young children or immunocompromised persons often test negative for known viruses, and could very well be caused by yet unknown pathogens.",
+   "text": "Virus infections are a continuous threat to the human population; e.g. HIV, hepatitis viruses, and influenza viruses constitute a large proportion of morbidity and mortality each year. Apart from infection with well-described viruses, outbreaks with previously undescribed viruses occur regularly (e.g. SARS-CoV, MERS-CoV) [1] [2] [3] [4] . Furthermore, respiratory tract infections and diarrhoea in young children or immunocompromised persons often test negative for known viruses, and could very well be caused by yet unknown pathogens.",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
-      "id": "unique_T1",
+      "id": "bionlpg13cg_T1",
       "span": {
         "begin": 48,
         "end": 53
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T2",
-      "span": {
-        "begin": 71,
-        "end": 74
-      },
-      "obj": "species"
-    },
-    {
-      "id": "unique_T3",
-      "span": {
-        "begin": 76,
-        "end": 93
-      },
-      "obj": "species"
-    },
-    {
-      "id": "unique_T4",
+      "id": "bionlpg13cg_T2",
       "span": {
         "begin": 406,
         "end": 414
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T5",
-      "span": {
-        "begin": 0,
-        "end": 5
-      },
-      "obj": "species"
-    },
-    {
-      "id": "unique_T6",
-      "span": {
-        "begin": 86,
-        "end": 93
-      },
-      "obj": "species"
-    },
-    {
-      "id": "unique_T7",
+      "id": "craft_T3",
       "span": {
         "begin": 109,
         "end": 116
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T8",
+      "id": "craft_T4",
       "span": {
         "begin": 226,
         "end": 233
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T9",
+      "id": "craft_T5",
       "span": {
         "begin": 235,
         "end": 244
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T10",
+      "id": "craft_T6",
       "span": {
         "begin": 273,
         "end": 280
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T11",
+      "id": "bc5cdr_T7",
       "span": {
         "begin": 0,
         "end": 16
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
-      "id": "unique_T12",
+      "id": "bc5cdr_T8",
       "span": {
         "begin": 71,
         "end": 93
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
-      "id": "unique_T13",
+      "id": "bc5cdr_T9",
       "span": {
         "begin": 196,
         "end": 205
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
-      "id": "unique_T14",
+      "id": "bc5cdr_T10",
       "span": {
         "begin": 354,
         "end": 382
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
-      "id": "unique_T15",
+      "id": "bc5cdr_T11",
       "span": {
         "begin": 387,
         "end": 396
       },
-      "obj": "disease"
+      "obj": "DISEASE"
+    },
+    {
+      "id": "jnlpba_T12",
+      "span": {
+        "begin": 303,
+        "end": 311
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T13",
+      "span": {
+        "begin": 313,
+        "end": 321
+      },
+      "obj": "PROTEIN"
     }
   ] 
 }

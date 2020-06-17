@@ -2,153 +2,152 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "27",
-  "text": "To date many new viruses have been identified [10] [11] [12] [13] , yet for a substantial number the link with disease remains to be established. Especially in stool samples, which contain many unknown viruses, it is important to determine whether novel viruses are pathogenic. A pathogenic virus elicits an immune response in the host, whereas bacteriophages and plant viruses, which are also massively present in stool, do not. The restriction that the agent has to be recognized by the patients' antibodies adds an important selectivity tool to virus discovery when one wants to focus on pathogenic viruses. In summary, a new selective approach for virus discovery is presented that enables detection of viruses that have recently elicited an immune response resulting in antibody production. The method appears to be an effective tool for reducing host DNA/ RNA and bystander virus sequences and provides a selection for viruses that are able to elicit an antibody response, thus agents that are possibly pathogenic for the host. Moreover, the possibility of comparing reads obtained after antibody capture with reads obtained from the input samples is useful for identifying sequences not yet labelled in Genbank. Further analysis of those sequences (e.g. via genome walking) will allow the identification and characterization of viruses which are highly divergent from the currently known virus families.",
+   "text": "To date many new viruses have been identified [10] [11] [12] [13] , yet for a substantial number the link with disease remains to be established. Especially in stool samples, which contain many unknown viruses, it is important to determine whether novel viruses are pathogenic. A pathogenic virus elicits an immune response in the host, whereas bacteriophages and plant viruses, which are also massively present in stool, do not. The restriction that the agent has to be recognized by the patients' antibodies adds an important selectivity tool to virus discovery when one wants to focus on pathogenic viruses. In summary, a new selective approach for virus discovery is presented that enables detection of viruses that have recently elicited an immune response resulting in antibody production. The method appears to be an effective tool for reducing host DNA/ RNA and bystander virus sequences and provides a selection for viruses that are able to elicit an antibody response, thus agents that are possibly pathogenic for the host. Moreover, the possibility of comparing reads obtained after antibody capture with reads obtained from the input samples is useful for identifying sequences not yet labelled in Genbank. Further analysis of those sequences (e.g. via genome walking) will allow the identification and characterization of viruses which are highly divergent from the currently known virus families.",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
-      "id": "unique_T1",
+      "id": "bionlpg13cg_T1",
       "span": {
         "begin": 160,
         "end": 173
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T2",
+      "id": "bionlpg13cg_T2",
       "span": {
         "begin": 415,
         "end": 420
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T3",
-      "span": {
-        "begin": 489,
-        "end": 497
-      },
-      "obj": "species"
-    },
-    {
-      "id": "unique_T4",
+      "id": "bionlpg13cg_T3",
       "span": {
         "begin": 1210,
         "end": 1217
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T5",
+      "id": "bionlpg13cg_T4",
       "span": {
         "begin": 46,
         "end": 65
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "unique_T6",
+      "id": "craft_T5",
       "span": {
         "begin": 17,
         "end": 24
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T7",
+      "id": "craft_T6",
       "span": {
         "begin": 202,
         "end": 209
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T8",
+      "id": "craft_T7",
       "span": {
         "begin": 254,
         "end": 261
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T9",
+      "id": "craft_T8",
       "span": {
         "begin": 291,
         "end": 296
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T10",
+      "id": "craft_T9",
       "span": {
         "begin": 345,
         "end": 359
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T11",
+      "id": "craft_T10",
       "span": {
         "begin": 548,
         "end": 553
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T12",
+      "id": "craft_T11",
       "span": {
         "begin": 602,
         "end": 609
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T13",
+      "id": "craft_T12",
       "span": {
         "begin": 652,
         "end": 657
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T14",
+      "id": "craft_T13",
       "span": {
         "begin": 707,
         "end": 714
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T15",
+      "id": "craft_T14",
       "span": {
         "begin": 880,
         "end": 895
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T16",
+      "id": "craft_T15",
       "span": {
         "begin": 925,
         "end": 932
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T17",
+      "id": "craft_T16",
       "span": {
         "begin": 1335,
         "end": 1342
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T18",
+      "id": "craft_T17",
       "span": {
         "begin": 364,
         "end": 377
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
+    },
+    {
+      "id": "jnlpba_T18",
+      "span": {
+        "begin": 489,
+        "end": 509
+      },
+      "obj": "PROTEIN"
     }
   ] 
 }

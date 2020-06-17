@@ -2,81 +2,128 @@
   "cord_uid": "0brhn8oc",
   "sourcedb": "PMC",
   "sourceid": "PMC1149493",
-  "divid": "6",
-  "text": "Chromosomes possess protective ends known as telomeres to protect themselves from degradation due to successive rounds of DNA synthesis. Telomerase, the ribonucleoprotein complex responsible for the maintenance of the telomere ends [19] , is upregulated in most cancers [20] and might play a role in aging [21] . Human telomerase is made up of a 451-nucleotide RNA, a reverse transcriptase, and other proteins [22] . At the 5′ end of the RNA is a highly conserved pseudoknot, required for activity, which lies at the core of telomerase. The structure of the human telomerase pseudoknot reveals a classic H-type pseudoknot fold with a slight bend between the stems ( Figure 2C ) [5] . A triple-helix structure fl anks the junction of the helices and extends into each stem. Mutations within the telomerase pseudoknot have been directly linked to the diseases autosomal dyskeratosis congenita [21] and aplastic anemia [23] .",
+   "text": "Chromosomes possess protective ends known as telomeres to protect themselves from degradation due to successive rounds of DNA synthesis. Telomerase, the ribonucleoprotein complex responsible for the maintenance of the telomere ends [19] , is upregulated in most cancers [20] and might play a role in aging [21] . Human telomerase is made up of a 451-nucleotide RNA, a reverse transcriptase, and other proteins [22] . At the 5′ end of the RNA is a highly conserved pseudoknot, required for activity, which lies at the core of telomerase. The structure of the human telomerase pseudoknot reveals a classic H-type pseudoknot fold with a slight bend between the stems ( Figure 2C ) [5] . A triple-helix structure fl anks the junction of the helices and extends into each stem. Mutations within the telomerase pseudoknot have been directly linked to the diseases autosomal dyskeratosis congenita [21] and aplastic anemia [23] .",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
-      "id": "unique_T1",
+      "id": "bionlpg13cg_T1",
       "span": {
-        "begin": 313,
-        "end": 329
+        "begin": 137,
+        "end": 147
       },
-      "obj": "species"
+      "obj": "PROTEIN"
     },
     {
-      "id": "unique_T2",
+      "id": "bionlpg13cg_T2",
       "span": {
-        "begin": 558,
-        "end": 574
+        "begin": 424,
+        "end": 426
       },
-      "obj": "species"
+      "obj": "PROTEIN"
     },
     {
-      "id": "unique_T3",
+      "id": "bionlpg13cg_T3",
+      "span": {
+        "begin": 525,
+        "end": 535
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "bionlpg13cg_T4",
       "span": {
         "begin": 306,
         "end": 312
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "unique_T4",
+      "id": "bionlpg13cg_T5",
       "span": {
         "begin": 346,
         "end": 360
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "unique_T5",
+      "id": "bionlpg13cg_T6",
       "span": {
         "begin": 891,
         "end": 895
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "unique_T6",
+      "id": "craft_T7",
+      "span": {
+        "begin": 558,
+        "end": 585
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "craft_T8",
+      "span": {
+        "begin": 794,
+        "end": 815
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "craft_T9",
       "span": {
         "begin": 401,
         "end": 409
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "unique_T7",
+      "id": "bc5cdr_T10",
       "span": {
         "begin": 262,
         "end": 271
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
-      "id": "unique_T8",
+      "id": "bc5cdr_T11",
       "span": {
         "begin": 849,
         "end": 890
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
-      "id": "unique_T9",
+      "id": "bc5cdr_T12",
       "span": {
         "begin": 900,
         "end": 915
       },
-      "obj": "disease"
+      "obj": "DISEASE"
+    },
+    {
+      "id": "jnlpba_T13",
+      "span": {
+        "begin": 153,
+        "end": 178
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T14",
+      "span": {
+        "begin": 313,
+        "end": 329
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T15",
+      "span": {
+        "begin": 368,
+        "end": 389
+      },
+      "obj": "PROTEIN"
     }
   ] 
 }

@@ -2,73 +2,64 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "20",
-  "text": "Consistent with capture working as anticipated, reads derived from human ribosomal RNA showed a consistent reduction in the antibody captured fractions with an average decrease of 1,000 fold (a median decrease of 9.6 Ct values, Figure 1 ). Greater than 90% of the reads showing decreased levels were of ribosomal RNA origin in 11 of the 13 patients. In the two other cases the amount of ribosomal RNA was low in the input material, but commensal bacterial reads were massively present and for these patients a strong decrease (.70%) was observed in the number of bacterial reads (data not shown).",
+   "text": "Consistent with capture working as anticipated, reads derived from human ribosomal RNA showed a consistent reduction in the antibody captured fractions with an average decrease of 1,000 fold (a median decrease of 9.6 Ct values, Figure 1 ). Greater than 90% of the reads showing decreased levels were of ribosomal RNA origin in 11 of the 13 patients. In the two other cases the amount of ribosomal RNA was low in the input material, but commensal bacterial reads were massively present and for these patients a strong decrease (.70%) was observed in the number of bacterial reads (data not shown).",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
-      "id": "unique_T1",
-      "span": {
-        "begin": 67,
-        "end": 72
-      },
-      "obj": "species"
-    },
-    {
-      "id": "unique_T2",
+      "id": "bionlpg13cg_T1",
       "span": {
         "begin": 340,
         "end": 348
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T3",
+      "id": "bionlpg13cg_T2",
       "span": {
         "begin": 499,
         "end": 507
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T4",
+      "id": "craft_T3",
       "span": {
         "begin": 67,
         "end": 86
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T5",
+      "id": "craft_T4",
       "span": {
         "begin": 436,
         "end": 455
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T6",
+      "id": "craft_T5",
       "span": {
         "begin": 563,
         "end": 578
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T7",
+      "id": "craft_T6",
       "span": {
         "begin": 303,
         "end": 316
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "unique_T8",
+      "id": "craft_T7",
       "span": {
         "begin": 387,
         "end": 400
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     }
   ] 
 }

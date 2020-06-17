@@ -2,89 +2,120 @@
   "cord_uid": "0brhn8oc",
   "sourcedb": "PMC",
   "sourceid": "PMC1149493",
-  "divid": "7",
-  "text": "Not all pseudoknots with biological functions are catalytically active. In fact, one of the most common functions of pseudoknots is to induce ribosomes to slip into alternative reading frames, otherwise known as frameshifting. Ribosomes typically translate mRNA without shifting the translational reading frame [24] . However, a number of organisms have evolved mechanisms to cause site-specifi c or programmed frameshifting of the ribosome in either the +1 or −1 direction [25] . Programmed −1 ribosomal frameshifting is typically found in viruses and is required for the replication and proliferation of all retroviruses. Therefore, the pseudoknot structures involved in frameshifting are attractive targets for the development of antiviral drugs. The frameshift event is induced by two RNA elements within the mRNA: (i) a heptanucleotide slippery sequence X XXY YYZ (spaced triplets represent preframeshift codons) and (ii) a downstream RNA structure, typically a pseudoknot [26] . The mechanism behind how these elements promote −1 frameshifting is not fully understood. The current model posits that the ribosome encounters the downstream pseudoknot while the slippery sequence is being decoded by the ribosome. The pseudoknot structure likely causes the ribosome to pause, which is necessary but not suffi cient for frameshifting to occur [27] . While paused on the slippery sequence, the ribosome slips back one nucleotide and subsequently continues translation in the −1 reading frame.",
+   "text": "Not all pseudoknots with biological functions are catalytically active. In fact, one of the most common functions of pseudoknots is to induce ribosomes to slip into alternative reading frames, otherwise known as frameshifting. Ribosomes typically translate mRNA without shifting the translational reading frame [24] . However, a number of organisms have evolved mechanisms to cause site-specifi c or programmed frameshifting of the ribosome in either the +1 or −1 direction [25] . Programmed −1 ribosomal frameshifting is typically found in viruses and is required for the replication and proliferation of all retroviruses. Therefore, the pseudoknot structures involved in frameshifting are attractive targets for the development of antiviral drugs. The frameshift event is induced by two RNA elements within the mRNA: (i) a heptanucleotide slippery sequence X XXY YYZ (spaced triplets represent preframeshift codons) and (ii) a downstream RNA structure, typically a pseudoknot [26] . The mechanism behind how these elements promote −1 frameshifting is not fully understood. The current model posits that the ribosome encounters the downstream pseudoknot while the slippery sequence is being decoded by the ribosome. The pseudoknot structure likely causes the ribosome to pause, which is necessary but not suffi cient for frameshifting to occur [27] . While paused on the slippery sequence, the ribosome slips back one nucleotide and subsequently continues translation in the −1 reading frame.",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
-      "id": "unique_T1",
+      "id": "bionlpg13cg_T1",
+      "span": {
+        "begin": 859,
+        "end": 868
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "bionlpg13cg_T2",
+      "span": {
+        "begin": 1033,
+        "end": 1035
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "bionlpg13cg_T3",
       "span": {
         "begin": 610,
         "end": 622
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T2",
+      "id": "bionlpg13cg_T4",
       "span": {
         "begin": 896,
         "end": 909
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "unique_T3",
+      "id": "bionlpg13cg_T5",
       "span": {
         "begin": 1345,
         "end": 1349
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "unique_T4",
+      "id": "bionlpg13cg_T6",
       "span": {
         "begin": 1419,
         "end": 1429
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "unique_T5",
+      "id": "craft_T7",
       "span": {
         "begin": 339,
         "end": 348
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T6",
+      "id": "craft_T8",
       "span": {
         "begin": 541,
         "end": 548
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T7",
+      "id": "craft_T9",
       "span": {
         "begin": 257,
         "end": 261
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "unique_T8",
+      "id": "craft_T10",
       "span": {
         "begin": 639,
         "end": 649
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "unique_T9",
+      "id": "craft_T11",
       "span": {
         "begin": 813,
         "end": 817
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     },
     {
-      "id": "unique_T10",
+      "id": "jnlpba_T12",
       "span": {
         "begin": 382,
-        "end": 394
+        "end": 396
       },
-      "obj": "chemical"
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T13",
+      "span": {
+        "begin": 461,
+        "end": 463
+      },
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "jnlpba_T14",
+      "span": {
+        "begin": 492,
+        "end": 494
+      },
+      "obj": "PROTEIN"
     }
   ] 
 }

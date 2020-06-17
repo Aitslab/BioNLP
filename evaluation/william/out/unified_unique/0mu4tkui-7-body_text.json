@@ -2,33 +2,40 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "7",
-  "text": "Respiratory samples were collected during the GRACE study. Flocked nasopharyngeal swabs (Copan) were collected in universal transport medium (UTM). In addition, a single nasopharyngeal specimen was obtained at the Academic Medical Center from a patient with an upper respiratory tract infection.",
+   "text": "Respiratory samples were collected during the GRACE study. Flocked nasopharyngeal swabs (Copan) were collected in universal transport medium (UTM). In addition, a single nasopharyngeal specimen was obtained at the Academic Medical Center from a patient with an upper respiratory tract infection.",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
-      "id": "unique_T1",
+      "id": "bionlpg13cg_T1",
       "span": {
         "begin": 245,
         "end": 252
       },
-      "obj": "species"
+      "obj": "SPECIES"
     },
     {
-      "id": "unique_T2",
+      "id": "bionlpg13cg_T2",
+      "span": {
+        "begin": 67,
+        "end": 87
+      },
+      "obj": "DISEASE"
+    },
+    {
+      "id": "bc5cdr_T3",
       "span": {
         "begin": 267,
         "end": 294
       },
-      "obj": "disease"
+      "obj": "DISEASE"
     },
     {
-      "id": "unique_T3",
+      "id": "bc5cdr_T4",
       "span": {
         "begin": 142,
         "end": 145
       },
-      "obj": "chemical"
+      "obj": "CHEMICAL"
     }
   ] 
 }

@@ -2,33 +2,48 @@
   "cord_uid": "0mu4tkui",
   "sourcedb": "PMC",
   "sourceid": "PMC3817278",
-  "divid": "10",
-  "text": "Real time PCR for ribosomal RNA was performed as described [5] using primer set 5/6 and the rRNA28S_3674 probe. The platinum quantitative PCR Supermix-UDG system (Invitrogen) was used.",
+   "text": "Real time PCR for ribosomal RNA was performed as described [5] using primer set 5/6 and the rRNA28S_3674 probe. The platinum quantitative PCR Supermix-UDG system (Invitrogen) was used.",
   "project": "cdlai_CORD-19",
   "denotations": [
     {
-      "id": "unique_T1",
+      "id": "bionlpg13cg_T1",
       "span": {
-        "begin": 116,
-        "end": 124
+        "begin": 92,
+        "end": 104
       },
-      "obj": "chemical"
+      "obj": "PROTEIN"
     },
     {
-      "id": "unique_T2",
-      "span": {
-        "begin": 18,
-        "end": 31
-      },
-      "obj": "chemical"
-    },
-    {
-      "id": "unique_T3",
+      "id": "bionlpg13cg_T2",
       "span": {
         "begin": 142,
         "end": 154
       },
-      "obj": "chemical"
+      "obj": "PROTEIN"
+    },
+    {
+      "id": "bionlpg13cg_T3",
+      "span": {
+        "begin": 116,
+        "end": 124
+      },
+      "obj": "CHEMICAL"
+    },
+    {
+      "id": "bionlpg13cg_T4",
+      "span": {
+        "begin": 80,
+        "end": 83
+      },
+      "obj": "DISEASE"
+    },
+    {
+      "id": "craft_T5",
+      "span": {
+        "begin": 18,
+        "end": 31
+      },
+      "obj": "CHEMICAL"
     }
   ] 
 }
