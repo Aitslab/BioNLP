@@ -433,6 +433,8 @@ Links to download several corpora
 
 https://github.com/dterg/biomedical_corpora
 
+https://github.com/BaderLab/Biomedical-Corpora
+
 http://compbio.ucdenver.edu/ccp/corpora/obtaining.shtml
 
 https://github.com/bionlp-hzau/BioNLP-Corpus
