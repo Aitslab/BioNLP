@@ -1,0 +1,18 @@
+{
+   "cord_uid": "PMC7094943",
+   "sourcedb": "PMC",
+   "sourceid": "PMC7094943",
+   "divid": 0,
+   "text": "A new coronavirus associated with human respiratory disease in China. ",
+   "project": "cdlai_CORD-19", 
+   "denotations": [
+       {
+           "id": "Virus_SARS-CoV-2", 
+           "span": {
+              "begin":2,
+              "end": 17
+           }, 
+           "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7094943/"
+       }
+   ]
+}

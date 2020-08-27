@@ -1,0 +1,26 @@
+{
+   "cord_uid": "PMC7077245",
+   "sourcedb": "CZI",
+   "sourceid": "PMC7077245",
+   "divid": 1,
+   "text": "The emergence of a novel coronavirus (2019-nCoV) has awakened the echoes of SARS-CoV from nearly two decades ago. Yet, with technological advances and important lessons gained from previous outbreaks, perhaps the world is better equipped to deal with the most recent emergent group 2B coronavirus. ",
+   "project": "cdlai_CORD-19", 
+   "denotations": [
+       {
+           "id": "Virus_SARS-CoV-2", 
+           "span": {
+              "begin":19,
+              "end": 36
+           }, 
+           "obj": "https://doi.org/10.3390/v12020135"
+       },
+       {
+           "id": "Virus_SARS-CoV-2", 
+           "span": {
+              "begin":38,
+              "end": 47
+           }, 
+           "obj": "https://doi.org/10.3390/v12020135"
+       }
+   ]
+}

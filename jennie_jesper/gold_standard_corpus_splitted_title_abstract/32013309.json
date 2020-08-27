@@ -1,0 +1,152 @@
+{
+    "cord_uid": "32013309",
+    "sourcedb": "PubMed",
+    "sourceid": "32013309",
+    "text": "Coronavirus, which can cause respiratory syndrome, to date has affected over seventeen thousand individuals, especially in China. Coronavirus is interspecies and can also be transmitted from man to man, with an incubation ranging from 1 to 14 days. Human coronavirus infections can induce not only mild to severe respiratory diseases, but also inflammation, high fever, cough, acute respiratory tract infection and dysfunction of internal organs that may lead to death. Coronavirus infection (regardless of the various types of corona virus) is primarily attacked by immune cells including mast cells (MCs), which are located in the submucosa of the respiratory tract and in the nasal cavity and represent a barrier of protection against microorganisms. Virus activate MCs which release early inflammatory chemical compounds including histamine and protease; while late activation provokes the generation of pro-inflammatory IL-1 family members including IL-1 and IL-33. Here, we propose for the first time that inflammation by coronavirus may be inhibited by anti-inflammatory cytokines belonging to the IL-1 family members. ",
+    "denotations": [
+        {
+            "id": "Virus_SARS-CoV-2",
+            "span": {
+                "begin": 0,
+                "end": 11
+            },
+            "obj": "https://doi.org/10.23812/20-editorial-kritas"
+        },
+        {
+            "id": "Disease_other",
+            "span": {
+                "begin": 29,
+                "end": 49
+            },
+            "obj": "https://doi.org/10.23812/20-editorial-kritas"
+        },
+        {
+            "id": "Virus_family",
+            "span": {
+                "begin": 130,
+                "end": 141
+            },
+            "obj": "https://doi.org/10.23812/20-editorial-kritas"
+        },
+        {
+            "id": "Disease_other",
+            "span": {
+                "begin": 249,
+                "end": 277
+            },
+            "obj": "https://doi.org/10.23812/20-editorial-kritas"
+        },
+        {
+            "id": "Disease_other",
+            "span": {
+                "begin": 313,
+                "end": 333
+            },
+            "obj": "https://doi.org/10.23812/20-editorial-kritas"
+        },
+        {
+            "id": "Symptom_COVID-19",
+            "span": {
+                "begin": 344,
+                "end": 356
+            },
+            "obj": "https://doi.org/10.23812/20-editorial-kritas"
+        },
+        {
+            "id": "Symptom_COVID-19",
+            "span": {
+                "begin": 363,
+                "end": 368
+            },
+            "obj": "https://doi.org/10.23812/20-editorial-kritas"
+        },
+        {
+            "id": "Symptom_COVID-19",
+            "span": {
+                "begin": 370,
+                "end": 375
+            },
+            "obj": "https://doi.org/10.23812/20-editorial-kritas"
+        },
+        {
+            "id": "Disease_other",
+            "span": {
+                "begin": 383,
+                "end": 410
+            },
+            "obj": "https://doi.org/10.23812/20-editorial-kritas"
+        },
+        {
+            "id": "Symptom_COVID-19",
+            "span": {
+                "begin": 415,
+                "end": 445
+            },
+            "obj": "https://doi.org/10.23812/20-editorial-kritas"
+        },
+        {
+            "id": "Symptom_COVID-19",
+            "span": {
+                "begin": 463,
+                "end": 468
+            },
+            "obj": "https://doi.org/10.23812/20-editorial-kritas"
+        },
+        {
+            "id": "Disease_other",
+            "span": {
+                "begin": 470,
+                "end": 491
+            },
+            "obj": "https://doi.org/10.23812/20-editorial-kritas"
+        },
+        {
+            "id": "Virus_family",
+            "span": {
+                "begin": 528,
+                "end": 540
+            },
+            "obj": "https://doi.org/10.23812/20-editorial-kritas"
+        },
+        {
+            "id": "Virus_family",
+            "span": {
+                "begin": 754,
+                "end": 759
+            },
+            "obj": "https://doi.org/10.23812/20-editorial-kritas"
+        },
+        {
+            "id": "Symptom_COVID-19",
+            "span": {
+                "begin": 1012,
+                "end": 1024
+            },
+            "obj": "https://doi.org/10.23812/20-editorial-kritas"
+        },
+        {
+            "id": "Protein",
+            "span": {
+                "begin": 955,
+                "end": 959
+            },
+            "obj": "https://doi.org/10.23812/20-editorial-kritas"
+        },
+        {
+            "id": "Protein",
+            "span": {
+                "begin": 964,
+                "end": 969
+            },
+            "obj": "https://doi.org/10.23812/20-editorial-kritas"
+        },
+        {
+            "id": "Virus_family",
+            "span": {
+                "begin": 1028,
+                "end": 1039
+            },
+            "obj": "https://doi.org/10.23812/20-editorial-kritas"
+        }
+    ]
+}

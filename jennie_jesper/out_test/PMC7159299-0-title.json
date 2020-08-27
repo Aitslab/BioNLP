@@ -1,0 +1,18 @@
+{
+   "cord_uid": "PMC7159299",
+   "sourcedb": "PMC",
+   "sourceid": "PMC7159299",
+   "divid": 0,
+   "text": "Clinical features of patients infected with 2019 novel coronavirus in Wuhan, China. ",
+   "project": "cdlai_CORD-19", 
+   "denotations": [
+       {
+           "id": "Virus_SARS-CoV-2", 
+           "span": {
+              "begin":44,
+              "end": 66
+           }, 
+           "obj": "n/a"
+       }
+   ]
+}

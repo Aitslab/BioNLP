@@ -1,0 +1,66 @@
+{
+   "cord_uid": "PMC7110798",
+   "sourcedb": "PMC",
+   "sourceid": "PMC7110798",
+   "divid": 1,
+   "text": "BACKGROUNDS: An ongoing outbreak of a novel coronavirus (2019-nCoV) pneumonia hit a major city in China, Wuhan, December 2019 and subsequently reached other provinces/regions of China and other countries. We present estimates of the basic reproduction number, R0, of 2019-nCoV in the early phase of the outbreak. METHODS: Accounting for the impact of the variations in disease reporting rate, we modelled the epidemic curve of 2019-nCoV cases time series, in mainland China from January 10 to January 24, 2020, through the exponential growth. With the estimated intrinsic growth rate (γ), we estimated R0 by using the serial intervals (SI) of two other well-known coronavirus diseases, MERS and SARS, as approximations for the true unknown SI. FINDINGS: The early outbreak data largely follows the exponential growth. We estimated that the mean R0 ranges from 2.24 (95%CI: 1.96-2.55) to 3.58 (95%CI: 2.89-4.39) associated with 8-fold to 2-fold increase in the reporting rate. We demonstrated that changes in reporting rate substantially affect estimates of R0. CONCLUSION: The mean estimate of R0 for the 2019-nCoV ranges from 2.24 to 3.58, and is significantly larger than 1. Our findings indicate the potential of 2019-nCoV to cause outbreaks. ",
+   "project": "cdlai_CORD-19", 
+   "denotations": [
+       {
+           "id": "Symptom_COVID-19", 
+           "span": {
+              "begin":68,
+              "end": 77
+           }, 
+           "obj": "n/a"
+       },
+       {
+           "id": "Virus_SARS-CoV-2", 
+           "span": {
+              "begin":38,
+              "end": 55
+           }, 
+           "obj": "n/a"
+       },
+       {
+           "id": "Virus_SARS-CoV-2", 
+           "span": {
+              "begin":57,
+              "end": 66
+           }, 
+           "obj": "n/a"
+       },
+       {
+           "id": "Virus_SARS-CoV-2", 
+           "span": {
+              "begin":267,
+              "end": 276
+           }, 
+           "obj": "n/a"
+       },
+       {
+           "id": "Virus_SARS-CoV-2", 
+           "span": {
+              "begin":427,
+              "end": 436
+           }, 
+           "obj": "n/a"
+       },
+       {
+           "id": "Virus_SARS-CoV-2", 
+           "span": {
+              "begin":1105,
+              "end": 1114
+           }, 
+           "obj": "n/a"
+       },
+       {
+           "id": "Virus_SARS-CoV-2", 
+           "span": {
+              "begin":1216,
+              "end": 1225
+           }, 
+           "obj": "n/a"
+       }
+   ]
+}

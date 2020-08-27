@@ -1,0 +1,18 @@
+{
+   "cord_uid": "PMC7077245",
+   "sourcedb": "CZI",
+   "sourceid": "PMC7077245",
+   "divid": 0,
+   "text": "Return of the Coronavirus: 2019-nCoV. ",
+   "project": "cdlai_CORD-19", 
+   "denotations": [
+       {
+           "id": "Virus_SARS-CoV-2", 
+           "span": {
+              "begin":27,
+              "end": 36
+           }, 
+           "obj": "https://doi.org/10.3390/v12020135"
+       }
+   ]
+}

@@ -1,0 +1,24 @@
+{
+    "cord_uid": "32013309",
+    "sourcedb": "PubMed",
+    "sourceid": "32013309",
+    "text": "Mast cells contribute to coronavirus-induced inflammation: new anti-inflammatory strategy. ",
+    "denotations": [
+        {
+            "id": "Virus_family",
+            "span": {
+                "begin": 25,
+                "end": 36
+            },
+            "obj": "https://doi.org/10.23812/20-editorial-kritas"
+        },
+        {
+            "id": "Symptom_COVID-19",
+            "span": {
+                "begin": 45,
+                "end": 57
+            },
+            "obj": "https://doi.org/10.23812/20-editorial-kritas"
+        }
+    ]
+}

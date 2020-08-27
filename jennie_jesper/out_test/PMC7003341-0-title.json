@@ -1,0 +1,34 @@
+{
+   "cord_uid": "PMC7003341",
+   "sourcedb": "PMC",
+   "sourceid": "PMC7003341",
+   "divid": 0,
+   "text": "A rapid advice guideline for the diagnosis and treatment of 2019 novel coronavirus (2019-nCoV) infected pneumonia (standard version). ",
+   "project": "cdlai_CORD-19", 
+   "denotations": [
+       {
+           "id": "Symptom_COVID-19", 
+           "span": {
+              "begin":104,
+              "end": 113
+           }, 
+           "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7003341/"
+       },
+       {
+           "id": "Virus_SARS-CoV-2", 
+           "span": {
+              "begin":60,
+              "end": 82
+           }, 
+           "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7003341/"
+       },
+       {
+           "id": "Virus_SARS-CoV-2", 
+           "span": {
+              "begin":84,
+              "end": 93
+           }, 
+           "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7003341/"
+       }
+   ]
+}

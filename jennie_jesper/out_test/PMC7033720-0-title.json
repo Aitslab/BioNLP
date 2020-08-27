@@ -1,0 +1,18 @@
+{
+   "cord_uid": "PMC7033720",
+   "sourcedb": "PMC",
+   "sourceid": "PMC7033720",
+   "divid": 0,
+   "text": "RNA based mNGS approach identifies a novel human coronavirus from two individual pneumonia cases in 2019 Wuhan outbreak. ",
+   "project": "cdlai_CORD-19", 
+   "denotations": [
+       {
+           "id": "Symptom_COVID-19", 
+           "span": {
+              "begin":81,
+              "end": 90
+           }, 
+           "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7033720/"
+       }
+   ]
+}

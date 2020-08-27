@@ -1,0 +1,152 @@
+{
+    "cord_uid": "PMC7054940",
+    "sourcedb": "PMC",
+    "sourceid": "PMC7054940",
+    "text": "Coronaviruses are the well-known cause of severe respiratory, enteric and systemic infections in a wide range of hosts including man, mammals, fish, and avian. The scientific interest on coronaviruses increased after the emergence of Severe Acute Respiratory Syndrome coronavirus (SARS-CoV) outbreaks in 2002-2003 followed by Middle East Respiratory Syndrome CoV (MERS-CoV). This decade's first CoV, named 2019-nCoV, emerged from Wuhan, China, and declared as 'Public Health Emergency of International Concern' on January 30th, 2020 by the World Health Organization (WHO). As on February 4, 2020, 425 deaths reported in China only and one death outside China (Philippines). In a short span of time, the virus spread has been noted in 24 countries. The zoonotic transmission (animal-to-human) is suspected as the route of disease origin. The genetic analyses predict bats as the most probable source of 2019-nCoV though further investigations needed to confirm the origin of the novel virus. The ongoing nCoV outbreak highlights the hidden wild animal reservoir of the deadly viruses and possible threat of spillover zoonoses as well. The successful virus isolation attempts have made doors open for developing better diagnostics and effective vaccines helping in combating the spread of the virus to newer areas. ",
+    "denotations": [
+        {
+            "id": "Virus_family",
+            "span": {
+                "begin": 0,
+                "end": 13
+            },
+            "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7054940/"
+        },
+        {
+            "id": "Disease_other",
+            "span": {
+                "begin": 49,
+                "end": 60
+            },
+            "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7054940/"
+        },
+        {
+            "id": "Disease_other",
+            "span": {
+                "begin": 62,
+                "end": 69
+            },
+            "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7054940/"
+        },
+        {
+            "id": "Disease_other",
+            "span": {
+                "begin": 74,
+                "end": 93
+            },
+            "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7054940/"
+        },
+        {
+            "id": "Virus_family",
+            "span": {
+                "begin": 187,
+                "end": 200
+            },
+            "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7054940/"
+        },
+        {
+            "id": "Virus_other",
+            "span": {
+                "begin": 234,
+                "end": 279
+            },
+            "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7054940/"
+        },
+        {
+            "id": "Virus_other",
+            "span": {
+                "begin": 281,
+                "end": 289
+            },
+            "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7054940/"
+        },
+        {
+            "id": "Virus_other",
+            "span": {
+                "begin": 326,
+                "end": 362
+            },
+            "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7054940/"
+        },
+        {
+            "id": "Virus_other",
+            "span": {
+                "begin": 364,
+                "end": 372
+            },
+            "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7054940/"
+        },
+        {
+            "id": "Virus_SARS-CoV-2",
+            "span": {
+                "begin": 375,
+                "end": 398
+            },
+            "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7054940/"
+        },
+        {
+            "id": "Virus_SARS-CoV-2",
+            "span": {
+                "begin": 406,
+                "end": 415
+            },
+            "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7054940/"
+        },
+        {
+            "id": "Virus_SARS-CoV",
+            "span": {
+                "begin": 902,
+                "end": 911
+            },
+            "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7054940/"
+        },
+        {
+            "id": "Virus_SARS-CoV-2",
+            "span": {
+                "begin": 1003,
+                "end": 1007
+            },
+            "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7054940/"
+        },
+        {
+            "id": "Virus_SARS-CoV-2",
+            "span": {
+                "begin": 978,
+                "end": 989
+            },
+            "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7054940/"
+        },
+        {
+            "id": "Virus_family",
+            "span": {
+                "begin": 1075,
+                "end": 1082
+            },
+            "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7054940/"
+        },
+        {
+            "id": "Virus_SARS-CoV-2",
+            "span": {
+                "begin": 1149,
+                "end": 1154
+            },
+            "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7054940/"
+        },
+        {
+            "id": "Virus_SARS-CoV-2",
+            "span": {
+                "begin": 1291,
+                "end": 1296
+            },
+            "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7054940/"
+        },
+        {
+            "id": "Virus_SARS-CoV",
+            "span": {
+                "begin": 703,
+                "end": 708
+            },
+            "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7054940/"
+        }
+    ]
+}

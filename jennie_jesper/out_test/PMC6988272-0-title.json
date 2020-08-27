@@ -1,0 +1,18 @@
+{
+   "cord_uid": "PMC6988272",
+   "sourcedb": "PMC",
+   "sourceid": "PMC6988272",
+   "divid": 0,
+   "text": "Real-time tentative assessment of the epidemiological characteristics of novel coronavirus infections in Wuhan, China, as at 22 January 2020. ",
+   "project": "cdlai_CORD-19", 
+   "denotations": [
+       {
+           "id": "Disease_COVID-19", 
+           "span": {
+              "begin":73,
+              "end": 101
+           }, 
+           "obj": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6988272/"
+       }
+   ]
+}

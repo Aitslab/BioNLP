@@ -1,0 +1,74 @@
+{
+   "cord_uid": "31996494",
+   "sourcedb": "PMC",
+   "sourceid": "PMC31996494",
+   "divid": 1,
+   "text": "As of January 22, 2020, a total of 571 cases of the 2019-new coronavirus (2019-nCoV) have been reported in 25 provinces (districts and cities) in China. At present, there is no vaccine or antiviral treatment for human and animal coronavirus, so that identifying the drug treatment options as soon as possible is critical for the response to the 2019-nCoV outbreak. Three general methods, which include existing broad-spectrum antiviral drugs using standard assays, screening of a chemical library containing many existing compounds or databases, and the redevelopment of new specific drugs based on the genome and biophysical understanding of individual coronaviruses, are used to discover the potential antiviral treatment of human pathogen coronavirus. Lopinavir /Ritonavir, Nucleoside analogues, Neuraminidase inhibitors, Remdesivir, peptide (EK1), arbidol, RNA synthesis inhibitors (such as TDF, 3TC), anti-inflammatory drugs (such as hormones and other molecules), Chinese traditional medicine, such ShuFengJieDu Capsules and Lianhuaqingwen Capsule, could be the drug treatment options for 2019-nCoV. However, the efficacy and safety of these drugs for 2019- nCoV still need to be further confirmed by clinical experiments. ",
+   "project": "cdlai_CORD-19", 
+   "denotations": [
+       {
+           "id": "Virus_SARS-CoV-2", 
+           "span": {
+              "begin":52,
+              "end": 72
+           }, 
+           "obj": "n/a"
+       },
+       {
+           "id": "Virus_SARS-CoV-2", 
+           "span": {
+              "begin":74,
+              "end": 83
+           }, 
+           "obj": "n/a"
+       },
+       {
+           "id": "Virus_SARS-CoV-2", 
+           "span": {
+              "begin":345,
+              "end": 354
+           }, 
+           "obj": "n/a"
+       },
+       {
+           "id": "Virus_SARS-CoV-2", 
+           "span": {
+              "begin":1095,
+              "end": 1104
+           }, 
+           "obj": "n/a"
+       },
+       {
+           "id": "Virus_SARS-CoV-2", 
+           "span": {
+              "begin":1158,
+              "end": 1168
+           }, 
+           "obj": "n/a"
+       },
+       {
+           "id": "chemical_antiviral", 
+           "span": {
+              "begin":755,
+              "end": 764
+           }, 
+           "obj": "n/a"
+       },
+       {
+           "id": "chemical_antiviral", 
+           "span": {
+              "begin":766,
+              "end": 775
+           }, 
+           "obj": "n/a"
+       },
+       {
+           "id": "chemical_antiviral", 
+           "span": {
+              "begin":825,
+              "end": 835
+           }, 
+           "obj": "n/a"
+       }
+   ]
+}
