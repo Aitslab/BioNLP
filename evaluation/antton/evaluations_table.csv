@@ -1,4 +1,4 @@
-Corpus,Tagger,Name of output file/folder,Annotated Classes,Precision,Recall,Total Precision,Total Recall,Runtime (seconds),Date (YYYYMMDD)
+Evaluation corpus,Tagger,Name of output file/folder,Annotated Classes,Precision,Recall,Total Precision,Total Recall,Runtime (seconds),Date (YYYYMMDD)
 biobert_bc5cdr_chem,NER_biobert-BC5CDRChem_Antton_1,NER_result_conll.txt,Chemical,93.64%,93.76%,93.64%,93.76%,766.957,20200430
 biobert_JNLPBA,NER_biobert-JNLPBA_Antton_1,NER_result_conll.txt,Protein,70.81%,83.03%,70.81%,83.03%,78.7231,20200430
 biobert_bc2gm,NER_biobert-JNLPBA_Antton_1,,Protein,51.01%,65.71%,51.01%,65.71%,889.2406,20200519
