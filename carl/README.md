@@ -1,6 +1,6 @@
 
-# VTT HT20, T5 prject for medical program 
-- [VTT HT20, T5 prject for medical program](#vtt-ht20-t5-prject-for-medical-program)
+# VTT HT20, T5 project student project as part of the medical program at LU
+- [VTT HT20, T5 project student project as part of the medical program at LU](#vtt-ht20-t5-project-student-project-as-part-of-the-medical-program-at-lu)
   - [Summary](#summary)
   - [Project outline](#project-outline)
 

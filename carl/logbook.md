@@ -1,14 +1,21 @@
-- [before](#before)
-- [15/12/20](#151220)
-- [16-12-20](#16-12-20)
+# logbook
+This is the logbook
 
-# before
-* NLP crash course
-* Setup of code environment
+- [logbook](#logbook)
+  - [before](#before)
+  - [15/12/20](#151220)
+  - [16/12/20](#161220)
+  - [18/01/21](#180121)
+  - [Day template](#day-template)
+
+## before
+
+- NLP crash course
+- Setup of code environment
 * Learning 
-  * git
-  * SpacePy
-  * misc (SSH, jupyter...)
+  - git
+  - SpacePy
+  - misc (SSH, jupyter...)
 * Testing the annotation software INCEpTION for usage, import and export capabilities and usage of external recommenders. [Se INCEpTION_usage_guide](/carl/INCEpTION/INCEpTION_project_guide.md) for results. 
 
 **Issues:** 
@@ -20,7 +27,7 @@ The ones working and not seem consitent on reload and also viewing after some ti
 Answers online present no solution
 Next: Vill check some more about useage of github and otherwise ask Sonja at meeting tomorrow. 
   
-# 15/12/20
+## 15/12/20
 
 **Aim:** 
 
@@ -57,7 +64,8 @@ wsl -- key --> SSH
 ***Issues:*** 
 
 * LU VPN seems unstable, breaks about every 30 machine
-* SSH passphrase has to be entered at all new request 
+* SSH passphrase has to be entered at all new request
+* gitignore pattern didn't work properly
 
 **Next step:**
 * Meeting with Johanna and Sonja tomorrow
@@ -66,6 +74,7 @@ wsl -- key --> SSH
   * Look into timeline 
   * backups
 * Test other client for vpn stability 
+* Fix gitignore to ignore foo* files 
 * Setup SSH agent autentiator in windows to give SSH key to wsl --> hopefully only enter passphrase only once
 ```mermaid
 graph TD
@@ -85,4 +94,113 @@ end
 ```
 * Ask Sonja if markdown logbook works as well. Otherwise it can be converted to jupyter later **look into how to keep the formatting in such a case**
 * Setup report so that it can easily be done in parallell - word in vscode?
-# 16-12-20
+## 16/12/20
+
+```mermaid
+graph TD
+subgraph windows
+wSSH[Windows SSH client];
+wsl[wsl] --> IDE[Opt. IDE vscode]
+end
+
+
+IDE --> vpn[LU vpn] --> SSH{SSH} --> m2[Titan machine];
+wSSH -- key --> SSH
+wSSH -- key --> wsl
+
+subgraph Titan
+m2
+end
+```
+
+
+
+```mermaid
+graph TD
+CORPUS --> spacy --> t[tar bort alla meningar utan matching] --> bert[träna bert och se om dne kan känna igen utanför spacylistan]
+```
+
+```mermaid
+graph TD
+1[build dictionary]
+2[get texts]
+3[annotate texts with dictionary in spacy phrasematcher]
+4[take out sentences with annotations]
+5[train BERT model]
+6[predict with BERT model on non-annotated text]
+
+
+1 --> 2 --> 3 --> 4 --> 5 --> 6
+```
+
+
+1[build dictionary]
+2[get texts]
+3[annotate texts with dictionary in spacy phrasematcher]
+4[take out sentences with annotations]
+5[train BERT model]
+6[predict with BERT model on non-annotated text]
+
+
+build dictionary
+	get texts
+	annotate texts with dictionary in spacy phrasematcher
+	take out sentences with annotations
+	train BERT model
+	predict with BERT model on non-annotated text
+
+
+  build dictionary
+	get texts
+	annotate texts with dictionary in spacy phrasematcher (alternative: annotate texts manually)
+	take out sentences with annotations
+	train BERT model (alternative: train spacy model)
+	evaluate BERT model on manually annotated text
+	predict with BERT model on non-annotated text (alternative: predict with spacy model)
+
+
+  TExter nu om tillräckligt många så kan jag gå direkt till steg 5
+
+  6 behöver alltid manuell
+
+
+## 18/01/21
+
+**Aim:**
+
+Möte med Johanna och Sonja för vidare planering efter jul och tentauppehåll.
+
+**Result:**
+
+- Johanna har möte på fredag för att se om hon manuellt kan ta ut 100 texter som hon kan annotera och som kan användas som facit för att testa den tränade modellen.
+- Vi kommer inte att få tillgång till en större textsamling trots att etisk tillstånd finns eftersom regionen inväntar legalt beslut som kommmer att komma tidigast i mars.
+
+***Extra***
+
+- Martin kommer att kämpa för att kunna publicera dessa texter avindentifierade med rapport av projektet.
+  
+***Issues:***
+
+**Next steps:**
+
+- Exportera mockup-corpus från Johannas texter så att hon kolla fact-checka NER för symptom.
+  - *Sonja* återkommer med format. Antagligen CoNLL 20XX.
+- Skriv ner protokoll för metod
+  - Formatera så att det går att uppdatera löpande och går att använda direkt till rapporten sen
+
+**More Steps:**
+
+- [Set up INCEpTION server to run with MySQL](https://inception-project.github.io/releases/0.17.4/docs/admin-guide.html#sect_home_folder). This is the recommended way to run a project except for testing.
+  - It makes following options avaliable:
+    - Backup (internal)
+    - Enabeling API
+    - External editing from others
+  - >I might use docker for this - will however still require that I run my computer as a server. But could be useful to show things inside inception. 
+  
+## Day template
+
+**Aim:**
+**Result:**
+***Extras***
+***Issues:***
+**Next step:**

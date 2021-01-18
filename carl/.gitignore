@@ -1,2 +1,2 @@
-#ignore all foo files setup just for testing syntactic feautres.
-/foo*
+#Just for testing coding related features 
+*ignore_*
