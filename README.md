@@ -136,6 +136,11 @@ https://arxiv.org/abs/1911.03347
 
 
 ## Annotation tools and formats
+NER IOB2 format (CoNLL2002)
+
+https://www.clips.uantwerpen.be/conll2002/ner/
+
+
 Comparison of different annotators
 
 http://knot.fit.vutbr.cz/annotations/comparison.html
