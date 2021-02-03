@@ -3,10 +3,12 @@
 ## Backups
 
 ## INCEpTION Setup
+<details>
+<summary>How do I dropdown?</summary>
+</details>
 
-```
 ## Environment Variables 
-$ export DBUSER=<USER_NAME>
+> $ export DBUSER=<USER_NAME>
 $ export DBPASSWORD=<PASSWORD>
 $ export INCEPTION_HOME=/srv/inception
 $ export INCEPTION_PORT=8080
