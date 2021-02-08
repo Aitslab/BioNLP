@@ -1,0 +1,211 @@
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+
+  _____    __  ___   __     __________  ___    __ 
+  \_   \/\ \ \/ __\ /__\ __/__   \_   \/___\/\ \ \
+   / /\/  \/ / /   /_\| '_ \ / /\// /\//  //  \/ /
+/\/ /_/ /\  / /___//__| |_) / //\/ /_/ \_// /\  / 
+\____/\_\ \/\____/\__/| .__/\/ \____/\___/\_\ \/  
+                      |_|                         
+0.17.4 (2021-01-13 23:39:05, build 2bb5cd9e078e9dca5ef29d40d8381c44ee9b1431)
+
+2021-02-08 11:33:28 INFO [SYSTEM] InceptionApplicationContextInitializer - Authentication: database
+2021-02-08 11:33:28 INFO [SYSTEM] INCEpTION - Starting INCEpTION on c3e863ff9eec with PID 8 (/opt/inception/inception-app-standalone.jar started by root in /opt/inception)
+2021-02-08 11:33:28 INFO [SYSTEM] INCEpTION - The following profiles are active: auto-mode-builtin
+Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+2021-02-08 11:33:36 WARN [SYSTEM] DriverDataSource - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-02-08 11:34:00 INFO [SYSTEM] CasStorageServiceImpl - CAS backups disabled
+2021-02-08 11:34:01 INFO [SYSTEM] DocumentServiceImpl - Document repository path: /export/repository
+2021-02-08 11:34:02 INFO [SYSTEM] DatabaseInfoService - Database dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-08 11:34:02 INFO [SYSTEM] DatabaseInfoService - Database driver: com.mysql.jdbc.Driver
+2021-02-08 11:34:02 INFO [SYSTEM] DatabaseInfoService - Database URL: jdbc:mysql://mysqlserver:3306/inception?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+2021-02-08 11:34:02 INFO [SYSTEM] DatabaseInfoService - Database username: inception
+2021-02-08 11:34:03 WARN [SYSTEM] AbstractPluginManager - No '/export/plugins' root
+2021-02-08 11:34:05 INFO [SYSTEM] IndexSchedulerImpl - Started Search Indexing Thread
+2021-02-08 11:34:05 INFO [SYSTEM] SearchServiceImpl - Index keep-open time: PT10M
+2021-02-08 11:34:05 INFO [SYSTEM] KnowledgeBaseServiceImpl - Knowledge base repository path: /export/repository/kb
+2021-02-08 11:34:05 WARN [SYSTEM] FileUtils - File [stopwords-en.txt] is missing - Using entity linking support without stopwords will have a negative impact on the suggestion ranking.
+2021-02-08 11:34:06 INFO [SYSTEM] FixAttachFeature330 - Migration [FixAttachFeature330] took 55ms
+2021-02-08 11:34:06 INFO [SYSTEM] FixCoreferenceFeatures - Migration [FixCoreferenceFeatures] took 27ms
+2021-02-08 11:34:06 INFO [SYSTEM] EventLoggingListener - Found event logging adapter: d.t.u.i.e.l.ExternalSearchQueryEventAdapter
+2021-02-08 11:34:06 INFO [SYSTEM] EventLoggingListener - Found event logging adapter: d.t.u.i.l.a.BeforeDocumentRemovedEventAdapter
+2021-02-08 11:34:06 INFO [SYSTEM] EventLoggingListener - Found event logging adapter: d.t.u.i.l.a.DocumentStateChangedEventAdapter
+2021-02-08 11:34:06 INFO [SYSTEM] EventLoggingListener - Found event logging adapter: d.t.u.i.l.a.SpanCreatedEventAdapter
+2021-02-08 11:34:06 INFO [SYSTEM] EventLoggingListener - Found event logging adapter: d.t.u.i.l.a.RelationEventAdapter
+2021-02-08 11:34:06 INFO [SYSTEM] EventLoggingListener - Found event logging adapter: d.t.u.i.l.a.BeforeProjectRemovedEventAdapter
+2021-02-08 11:34:06 INFO [SYSTEM] EventLoggingListener - Found event logging adapter: d.t.u.i.l.a.AfterProjectCreatedEventAdapter
+2021-02-08 11:34:06 INFO [SYSTEM] EventLoggingListener - Found event logging adapter: d.t.u.i.l.a.LayerConfigurationChangedEventAdapter
+2021-02-08 11:34:06 INFO [SYSTEM] EventLoggingListener - Found event logging adapter: d.t.u.i.l.a.AnnotationStateChangedEventAdapter
+2021-02-08 11:34:06 INFO [SYSTEM] EventLoggingListener - Found event logging adapter: d.t.u.i.l.a.SpanDeletedEventAdapter
+2021-02-08 11:34:06 INFO [SYSTEM] EventLoggingListener - Found event logging adapter: d.t.u.i.l.a.DocumentOpenedEventAdapter
+2021-02-08 11:34:06 INFO [SYSTEM] EventLoggingListener - Found event logging adapter: d.t.u.i.l.a.ProjectStateChangedEventAdapter
+2021-02-08 11:34:06 INFO [SYSTEM] EventLoggingListener - Found event logging adapter: d.t.u.i.l.a.ProjectImportEventAdapter
+2021-02-08 11:34:06 INFO [SYSTEM] EventLoggingListener - Found event logging adapter: d.t.u.i.l.a.AfterCasWrittenEventAdapter
+2021-02-08 11:34:06 INFO [SYSTEM] EventLoggingListener - Found event logging adapter: d.t.u.i.l.a.FeatureValueUpdatedEventAdapter
+2021-02-08 11:34:06 INFO [SYSTEM] EventLoggingListener - Found event logging adapter: d.t.u.i.l.a.AfterDocumentCreatedEventAdapter
+2021-02-08 11:34:06 INFO [SYSTEM] EventLoggingListener - Found event logging adapter: d.t.u.i.r.l.RecommendationAcceptedEventAdapter
+2021-02-08 11:34:06 INFO [SYSTEM] EventLoggingListener - Found event logging adapter: d.t.u.i.r.l.RecommendationRejectedEventAdapter
+2021-02-08 11:34:06 INFO [SYSTEM] EventLoggingListener - Found event logging adapter: d.t.u.i.r.l.RecommenderDeletedEventAdapter
+2021-02-08 11:34:06 INFO [SYSTEM] EventLoggingListener - Found event logging adapter: d.t.u.i.r.l.RecommenderEvaluationResultEventAdapter
+2021-02-08 11:34:06 INFO [SYSTEM] EventLoggingListener - Found event logging adapter: d.t.u.i.a.l.l.ActiveLearningRecommendationEventAdapter
+2021-02-08 11:34:06 INFO [SYSTEM] EventLoggingListener - Found event logging adapter: d.t.u.i.a.l.l.ActiveLearningSuggestionOfferedAdapter
+2021-02-08 11:34:06 INFO [SYSTEM] EventLoggingListener - Found event logging adapter: d.t.u.i.s.l.SearchQueryEventAdapter
+2021-02-08 11:34:06 INFO [SYSTEM] AggreementMeasureSupportRegistryImpl - Found agreement measure support: d.t.u.c.w.a.m.f.FleissKappaAgreementMeasureSupport
+2021-02-08 11:34:06 INFO [SYSTEM] AggreementMeasureSupportRegistryImpl - Found agreement measure support: d.t.u.c.w.a.m.k.KrippendorffAlphaUnitizingAgreementMeasureSupport
+2021-02-08 11:34:06 INFO [SYSTEM] AggreementMeasureSupportRegistryImpl - Found agreement measure support: d.t.u.c.w.a.m.c.CohenKappaAgreementMeasureSupport
+2021-02-08 11:34:06 INFO [SYSTEM] AggreementMeasureSupportRegistryImpl - Found agreement measure support: d.t.u.c.w.a.m.k.KrippendorffAlphaAgreementMeasureSupport
+2021-02-08 11:34:06 INFO [SYSTEM] MenuItemRegistryImpl - Found menu item: d.t.u.i.a.u.e.SearchPageMenuItem
+2021-02-08 11:34:06 INFO [SYSTEM] MenuItemRegistryImpl - Found menu item: d.t.u.i.a.m.AnnotationPageMenuItem
+2021-02-08 11:34:06 INFO [SYSTEM] MenuItemRegistryImpl - Found menu item: d.t.u.i.a.m.CurationPageMenuItem
+2021-02-08 11:34:06 INFO [SYSTEM] MenuItemRegistryImpl - Found menu item: d.t.u.i.u.k.KnowledgeBasePageMenuItem
+2021-02-08 11:34:06 INFO [SYSTEM] MenuItemRegistryImpl - Found menu item: d.t.u.i.a.m.AgreementPageMenuItem
+2021-02-08 11:34:06 INFO [SYSTEM] MenuItemRegistryImpl - Found menu item: d.t.u.i.w.d.m.WorkloadPageMenuItem
+2021-02-08 11:34:06 INFO [SYSTEM] MenuItemRegistryImpl - Found menu item: d.t.u.i.w.m.m.MonitoringPageMenuItem
+2021-02-08 11:34:06 INFO [SYSTEM] MenuItemRegistryImpl - Found menu item: d.t.u.i.r.e.EvaluationSimulationPageMenuItem
+2021-02-08 11:34:06 INFO [SYSTEM] MenuItemRegistryImpl - Found menu item: d.t.u.c.w.u.p.ProjectPageMenuItem
+2021-02-08 11:34:06 INFO [SYSTEM] MenuItemRegistryImpl - Found menu item: d.t.u.i.a.m.ProjectSettingsPageMenuItem
+2021-02-08 11:34:06 INFO [SYSTEM] MenuItemRegistryImpl - Found menu item: d.t.u.c.w.u.c.u.ManageUsersPageMenuItem
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectSettingsPanelRegistryImpl - Found project setting panel: d.t.u.c.w.u.p.d.DocumentsProjectSettingsPanelFactory
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectSettingsPanelRegistryImpl - Found project setting panel: d.t.u.c.w.u.p.u.UsersProjectSettingsPanelFactory
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectSettingsPanelRegistryImpl - Found project setting panel: d.t.u.c.w.u.p.l.LayersProjectSettingsPanelFactory
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectSettingsPanelRegistryImpl - Found project setting panel: d.t.u.i.w.s.ProjectWorkloadSettingsPanelFactory
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectSettingsPanelRegistryImpl - Found project setting panel: d.t.u.i.u.k.p.KnowledgeBaseProjectSettingsPanelFactory
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectSettingsPanelRegistryImpl - Found project setting panel: d.t.u.i.r.p.RecommenderProjectSettingsPanelFactory
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectSettingsPanelRegistryImpl - Found project setting panel: d.t.u.c.w.u.t.TagsetsProjectSettingsPanelFactory
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectSettingsPanelRegistryImpl - Found project setting panel: d.t.u.i.a.u.e.p.DocumentRepositoryProjectSettingsPanelFactory
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectSettingsPanelRegistryImpl - Found project setting panel: d.t.u.c.w.u.p.c.CasDoctorProjectSettingsPanelFactory
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectSettingsPanelRegistryImpl - Found project setting panel: d.t.u.c.w.u.p.g.GuidelinesProjectSettingsPanelFactory
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectSettingsPanelRegistryImpl - Found project setting panel: d.t.u.c.w.u.p.c.ConstraintsProjectSettingsPanelFactory
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectSettingsPanelRegistryImpl - Found project setting panel: d.t.u.c.w.u.p.e.ExportProjectSettingsPanelFactory
+2021-02-08 11:34:06 INFO [SYSTEM] FooterItemRegistryImpl - Found footer item: d.t.u.c.w.t.u.TelemetryFooterItem
+2021-02-08 11:34:06 INFO [SYSTEM] FooterItemRegistryImpl - Found footer item: d.t.u.c.w.u.c.f.WarningsFooterItem
+2021-02-08 11:34:06 INFO [SYSTEM] FooterItemRegistryImpl - Found footer item: d.t.u.i.u.c.f.TutorialFooterItem
+2021-02-08 11:34:06 INFO [SYSTEM] FooterItemRegistryImpl - Found footer item: d.t.u.c.w.u.c.f.VersionFooterItem
+2021-02-08 11:34:06 INFO [SYSTEM] GlobalInterceptorsRegistryImpl - Found global interceptor: d.t.u.c.w.t.u.TelemetrySettingsInterceptor
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.i.f.LifFormatSupport (lif, read/write)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.i.f.NifFormatSupport (nif, read/write)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.i.f.PerseusFormatSupport (perseus_2.1, read only)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.i.f.ImsCwbFormatSupport (imscwb, read only)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.i.f.TeiFormatSupport (dkpro-core-tei, read/write)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.i.f.UimaInlineXmlTeiFormatSupport (dkpro-core-uima-inline-xml, write only)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.c.w.t.WebAnnoTsv3FormatSupport (ctsv3, read/write)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.c.w.t.WebAnnoTsv1FormatSupport (tsv, read only)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.c.w.t.WebAnnoTsv2FormatSupport (ctsv, read only)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.c.w.j.JsonFormatSupport (json, write only)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.c.w.t.TcfFormatSupport (tcf, read/write)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.c.w.c.Conll2002FormatSupport (conll2000, read/write)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.c.w.c.Conll2009FormatSupport (conll2009, read/write)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.c.w.c.Conll2006FormatSupport (conll2006, read/write)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.c.w.c.Conll2012FormatSupport (conll2012, read/write)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.c.w.c.Conll2000FormatSupport (conll2002, read/write)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.c.w.c.ConllCoreNlpFormatSupport (conllcorenlp, read/write)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.c.w.c.ConllUFormatSupport (conllu, read/write)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.c.w.c.Conll2003FormatSupport (conll2003, read/write)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.c.w.x.XmiXml11FormatSupport (xmi-xml1.1, read/write)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.c.w.x.BinaryCasFormatSupport (bin, read/write)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.c.w.x.XmiFormatSupport (xmi, read/write)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.c.w.t.LineOrientedTextFormatSupport (textlines, read only)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.c.w.t.TextFormatSupport (text, read/write)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.i.e.p.f.PubAnnotationSectionsFormatSupport (pubannotation-sections, read only)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.i.h.HtmlFormatSupport (htmldoc, read only)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.i.h.LegacyHtmlFormatSupport (html, read only)
+2021-02-08 11:34:06 INFO [SYSTEM] ImportExportServiceImpl - Found format: d.t.u.i.p.PdfFormatSupport (pdf, read only)
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectExportServiceImpl - Found project exporter: d.t.u.i.l.e.LoggedEventExporter
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectExportServiceImpl - Found project exporter: d.t.u.c.w.a.d.e.e.ProjectLogExporter
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectExportServiceImpl - Found project exporter: d.t.u.c.w.a.d.e.e.LayerExporter
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectExportServiceImpl - Found project exporter: d.t.u.c.w.a.d.e.e.TagSetExporter
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectExportServiceImpl - Found project exporter: d.t.u.c.w.a.d.e.e.SourceDocumentExporter
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectExportServiceImpl - Found project exporter: d.t.u.c.w.a.d.e.e.ProjectMetaInfExporter
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectExportServiceImpl - Found project exporter: d.t.u.c.w.a.d.e.e.ProjectSettingsExporter
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectExportServiceImpl - Found project exporter: d.t.u.c.w.a.d.e.e.PermissionsExporter
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectExportServiceImpl - Found project exporter: d.t.u.c.w.a.d.e.e.GuildelinesExporter
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectExportServiceImpl - Found project exporter: d.t.u.c.w.a.d.e.e.AnnotationDocumentExporter
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectExportServiceImpl - Found project exporter: d.t.u.c.w.a.d.e.e.CuratedDocumentsExporter
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectExportServiceImpl - Found project exporter: d.t.u.c.w.c.e.ConstraintsExporter
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectExportServiceImpl - Found project exporter: d.t.u.i.r.e.RecommenderExporter
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectExportServiceImpl - Found project exporter: d.t.u.i.e.e.DocumentRepositoryExporter
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectExportServiceImpl - Found project exporter: d.t.u.i.k.e.KnowledgeBaseExporter
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectExportServiceImpl - Found project exporter: d.t.u.i.r.i.s.e.GazeteerExporter
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectServiceImpl - Found project initializer: d.t.u.c.w.p.i.NamedEntityLayerInitializer
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectServiceImpl - Found project initializer: d.t.u.c.w.p.i.SemPredArgLayerInitializer
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectServiceImpl - Found project initializer: d.t.u.c.w.p.i.PartOfSpeechLayerInitializer
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectServiceImpl - Found project initializer: d.t.u.c.w.p.i.DependencyLayerInitializer
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectServiceImpl - Found project initializer: d.t.u.c.w.p.i.MorphologicalFeaturesLayerInitializer
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectServiceImpl - Found project initializer: d.t.u.c.w.p.i.TokenLayerInitializer
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectServiceImpl - Found project initializer: d.t.u.c.w.p.i.CoreferenceLayerInitializer
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectServiceImpl - Found project initializer: d.t.u.c.w.p.i.LemmaLayerInitializer
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectServiceImpl - Found project initializer: d.t.u.c.w.p.i.OrthographyLayerInitializer
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectServiceImpl - Found project initializer: d.t.u.c.w.p.i.DefaultTagSetsInitializer
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectServiceImpl - Found project initializer: d.t.u.c.w.p.i.SurfaceFormLayerInitializer
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectServiceImpl - Found project initializer: d.t.u.c.w.p.i.ChunkLayerInitializer
+2021-02-08 11:34:06 INFO [SYSTEM] ProjectServiceImpl - Found project initializer: d.t.u.i.u.k.i.NamedEntityIdentifierFeatureInitializer
+2021-02-08 11:34:06 INFO [SYSTEM] TelemetryServiceImpl - Found telemetry support: MatomoTelemetry
+2021-02-08 11:34:06 INFO [SYSTEM] AnnotationEditorExtensionRegistryImpl - Found annotation editor extension: d.t.u.i.c.CurationEditorExtension
+2021-02-08 11:34:06 INFO [SYSTEM] AnnotationEditorExtensionRegistryImpl - Found annotation editor extension: d.t.u.i.r.RecommendationEditorExtension
+2021-02-08 11:34:06 INFO [SYSTEM] FeatureSupportRegistryImpl - Found FeatureSupportRegistryImpl extension: d.t.u.i.i.f.ImageFeatureSupport
+2021-02-08 11:34:06 INFO [SYSTEM] FeatureSupportRegistryImpl - Found FeatureSupportRegistryImpl extension: d.t.u.c.w.a.a.f.StringFeatureSupport
+2021-02-08 11:34:06 INFO [SYSTEM] FeatureSupportRegistryImpl - Found FeatureSupportRegistryImpl extension: d.t.u.c.w.a.a.f.NumberFeatureSupport
+2021-02-08 11:34:06 INFO [SYSTEM] FeatureSupportRegistryImpl - Found FeatureSupportRegistryImpl extension: d.t.u.c.w.a.a.f.SlotFeatureSupport
+2021-02-08 11:34:06 INFO [SYSTEM] FeatureSupportRegistryImpl - Found FeatureSupportRegistryImpl extension: d.t.u.c.w.a.a.f.BooleanFeatureSupport
+2021-02-08 11:34:06 INFO [SYSTEM] FeatureSupportRegistryImpl - Found FeatureSupportRegistryImpl extension: d.t.u.i.u.k.f.ConceptFeatureSupport
+2021-02-08 11:34:06 INFO [SYSTEM] AnnotationEditorRegistryImpl - Found annotation editor: d.t.u.c.w.b.a.BratSentenceOrientedAnnotationEditorFactory
+2021-02-08 11:34:06 INFO [SYSTEM] AnnotationEditorRegistryImpl - Found annotation editor: d.t.u.c.w.b.a.BratLineOrientedAnnotationEditorFactory
+2021-02-08 11:34:06 INFO [SYSTEM] AnnotationEditorRegistryImpl - Found annotation editor: d.t.u.i.h.HtmlAnnotationEditorFactory
+2021-02-08 11:34:06 INFO [SYSTEM] AnnotationEditorRegistryImpl - Found annotation editor: d.t.u.i.p.PdfAnnotationEditorFactory
+2021-02-08 11:34:06 INFO [SYSTEM] LayerBehaviorRegistryImpl - Found layer behavior: d.t.u.c.w.a.a.a.SpanAnchoringModeBehavior
+2021-02-08 11:34:06 INFO [SYSTEM] LayerBehaviorRegistryImpl - Found layer behavior: d.t.u.c.w.a.a.a.RelationAttachmentBehavior
+2021-02-08 11:34:06 INFO [SYSTEM] LayerBehaviorRegistryImpl - Found layer behavior: d.t.u.c.w.a.a.a.SpanOverlapBehavior
+2021-02-08 11:34:06 INFO [SYSTEM] LayerBehaviorRegistryImpl - Found layer behavior: d.t.u.c.w.a.a.a.RelationCrossSentenceBehavior
+2021-02-08 11:34:06 INFO [SYSTEM] LayerBehaviorRegistryImpl - Found layer behavior: d.t.u.c.w.a.a.a.RelationOverlapBehavior
+2021-02-08 11:34:06 INFO [SYSTEM] LayerBehaviorRegistryImpl - Found layer behavior: d.t.u.c.w.a.a.a.SpanCrossSentenceBehavior
+2021-02-08 11:34:06 INFO [SYSTEM] LayerSupportRegistryImpl - Found layer support: d.t.u.c.w.a.a.l.SpanLayerSupport
+2021-02-08 11:34:06 INFO [SYSTEM] LayerSupportRegistryImpl - Found layer support: d.t.u.c.w.a.a.l.RelationLayerSupport
+2021-02-08 11:34:06 INFO [SYSTEM] LayerSupportRegistryImpl - Found layer support: d.t.u.c.w.a.a.l.ChainLayerSupport
+2021-02-08 11:34:06 INFO [SYSTEM] LayerSupportRegistryImpl - Found layer support: d.t.u.i.u.c.d.l.DocumentMetadataLayerSupport
+2021-02-08 11:34:06 INFO [SYSTEM] ActionBarExtensionPointImpl - Found ActionBarExtensionPointImpl extension: d.t.u.c.w.a.a.a.d.DefaultDocumentNavigatorActionBarExtension
+2021-02-08 11:34:06 INFO [SYSTEM] ActionBarExtensionPointImpl - Found ActionBarExtensionPointImpl extension: d.t.u.c.w.u.c.a.CurationDocumentNavigatorActionBarExtension
+2021-02-08 11:34:06 INFO [SYSTEM] ActionBarExtensionPointImpl - Found ActionBarExtensionPointImpl extension: d.t.u.c.w.a.a.p.PagingActionBarExtension
+2021-02-08 11:34:06 INFO [SYSTEM] ActionBarExtensionPointImpl - Found ActionBarExtensionPointImpl extension: d.t.u.c.w.a.a.g.GuidelinesActionBarExtension
+2021-02-08 11:34:06 INFO [SYSTEM] ActionBarExtensionPointImpl - Found ActionBarExtensionPointImpl extension: d.t.u.c.w.a.a.a.s.ScriptDirectionActionBarExtension
+2021-02-08 11:34:06 INFO [SYSTEM] ActionBarExtensionPointImpl - Found ActionBarExtensionPointImpl extension: d.t.u.c.w.u.c.a.CurationWorkflowActionBarExtension
+2021-02-08 11:34:06 INFO [SYSTEM] ActionBarExtensionPointImpl - Found ActionBarExtensionPointImpl extension: d.t.u.c.w.u.a.DefaultWorkflowActionBarExtension
+2021-02-08 11:34:06 INFO [SYSTEM] ActionBarExtensionPointImpl - Found ActionBarExtensionPointImpl extension: d.t.u.c.w.a.a.p.UserPreferencesActionBarExtension
+2021-02-08 11:34:06 INFO [SYSTEM] ActionBarExtensionPointImpl - Found ActionBarExtensionPointImpl extension: d.t.u.i.w.d.a.DynamicWorkflowDocumentNavigationActionBarExtension
+2021-02-08 11:34:06 INFO [SYSTEM] ActionBarExtensionPointImpl - Found ActionBarExtensionPointImpl extension: d.t.u.i.w.d.a.DynamicWorkflowActionBarExtension
+2021-02-08 11:34:07 INFO [SYSTEM] AnnotationSidebarRegistryImpl - Found annotation sidebar extension: d.t.u.i.a.l.s.ActiveLearningSidebarFactory
+2021-02-08 11:34:07 INFO [SYSTEM] AnnotationSidebarRegistryImpl - Found annotation sidebar extension: d.t.u.c.w.u.a.s.d.DocumentInfoSidebarFactory
+2021-02-08 11:34:07 INFO [SYSTEM] AnnotationSidebarRegistryImpl - Found annotation sidebar extension: d.t.u.i.u.c.d.s.DocumentMetadataSidebarFactory
+2021-02-08 11:34:07 INFO [SYSTEM] AnnotationSidebarRegistryImpl - Found annotation sidebar extension: d.t.u.i.a.u.e.s.ExternalSearchAnnotationSidebarFactory
+2021-02-08 11:34:07 INFO [SYSTEM] AnnotationSidebarRegistryImpl - Found annotation sidebar extension: d.t.u.i.i.s.ImageSidebarFactory
+2021-02-08 11:34:07 INFO [SYSTEM] AnnotationSidebarRegistryImpl - Found annotation sidebar extension: d.t.u.i.r.s.RecommendationSidebarFactory
+2021-02-08 11:34:07 INFO [SYSTEM] AnnotationSidebarRegistryImpl - Found annotation sidebar extension: d.t.u.i.a.u.s.s.SearchAnnotationSidebarFactory
+2021-02-08 11:34:07 INFO [SYSTEM] RecommenderFactoryRegistryImpl - Found recommendation engine: d.t.u.i.r.i.o.p.OpenNlpPosRecommenderFactory
+2021-02-08 11:34:07 INFO [SYSTEM] RecommenderFactoryRegistryImpl - Found recommendation engine: d.t.u.i.r.i.o.d.OpenNlpDoccatRecommenderFactory
+2021-02-08 11:34:07 INFO [SYSTEM] RecommenderFactoryRegistryImpl - Found recommendation engine: d.t.u.i.r.i.o.n.OpenNlpNerRecommenderFactory
+2021-02-08 11:34:07 INFO [SYSTEM] RecommenderFactoryRegistryImpl - Found recommendation engine: d.t.u.i.r.i.e.ExternalRecommenderFactory
+2021-02-08 11:34:07 INFO [SYSTEM] RecommenderFactoryRegistryImpl - Found recommendation engine: d.t.u.i.c.r.NamedEntityLinkerFactory
+2021-02-08 11:34:07 INFO [SYSTEM] RecommenderFactoryRegistryImpl - Found recommendation engine: d.t.u.i.r.i.l.LappsGridRecommenderFactory
+2021-02-08 11:34:07 INFO [SYSTEM] RecommenderFactoryRegistryImpl - Found recommendation engine: d.t.u.i.r.i.s.n.StringMatchingNerClassificationToolFactory
+2021-02-08 11:34:07 INFO [SYSTEM] RecommenderFactoryRegistryImpl - Found recommendation engine: d.t.u.i.r.i.s.p.StringMatchingPosClassificationToolFactory
+2021-02-08 11:34:07 INFO [SYSTEM] RecommenderFactoryRegistryImpl - Found recommendation engine: d.t.u.i.r.i.s.StringMatchingRecommenderFactory
+2021-02-08 11:34:07 INFO [SYSTEM] RecommenderFactoryRegistryImpl - Found recommendation engine: d.t.u.i.r.i.w.WeblichtRecommenderFactoryImpl
+2021-02-08 11:34:07 INFO [SYSTEM] ExternalSearchProviderRegistryImpl - Found external search provider: d.t.u.i.e.e.ElasticSearchProviderFactory
+2021-02-08 11:34:07 INFO [SYSTEM] ExternalSearchProviderRegistryImpl - Found external search provider: d.t.u.i.e.p.PubAnnotationProviderFactory
+2021-02-08 11:34:07 INFO [SYSTEM] PhysicalIndexRegistryImpl - Found index extension: d.t.u.i.s.i.m.MtasDocumentIndexFactory
+2021-02-08 11:34:07 INFO [SYSTEM] FeatureIndexingSupportRegistryImpl - Found indexing support: d.t.u.i.s.PrimitiveUimaIndexingSupport
+2021-02-08 11:34:07 INFO [SYSTEM] FeatureIndexingSupportRegistryImpl - Found indexing support: d.t.u.i.u.k.s.ConceptFeatureIndexingSupport
+2021-02-08 11:34:07 INFO [SYSTEM] ConceptLinkingServiceImpl - Found entity ranking feature generator: d.t.u.i.c.f.LevenshteinFeatureGenerator
+2021-02-08 11:34:07 INFO [SYSTEM] ConceptLinkingServiceImpl - Found entity ranking feature generator: d.t.u.i.c.f.WikidataIdRankFeatureGenerator
+2021-02-08 11:34:07 INFO [SYSTEM] StatementColoringRegistryImpl - Found value type support: d.t.u.i.u.k.s.c.DefaultColoringStrategyImpl
+2021-02-08 11:34:07 INFO [SYSTEM] StatementColoringRegistryImpl - Found value type support: d.t.u.i.u.k.s.c.DescriptionColoringStrategyImpl
+2021-02-08 11:34:07 INFO [SYSTEM] StatementColoringRegistryImpl - Found value type support: d.t.u.i.u.k.s.c.LabelColoringStrategyImpl
+2021-02-08 11:34:07 INFO [SYSTEM] StatementColoringRegistryImpl - Found value type support: d.t.u.i.u.k.s.c.SubclassOfColoringStrategyImpl
+2021-02-08 11:34:07 INFO [SYSTEM] StatementColoringRegistryImpl - Found value type support: d.t.u.i.u.k.s.c.TypeColoringStrategyImpl
+2021-02-08 11:34:07 INFO [SYSTEM] ValueTypeSupportRegistryImpl - Found value type support: d.t.u.i.u.k.v.BooleanLiteralValueSupport
+2021-02-08 11:34:07 INFO [SYSTEM] ValueTypeSupportRegistryImpl - Found value type support: d.t.u.i.u.k.v.NumericLiteralValueSupport
+2021-02-08 11:34:07 INFO [SYSTEM] ValueTypeSupportRegistryImpl - Found value type support: d.t.u.i.u.k.v.StringLiteralValueSupport
+2021-02-08 11:34:07 INFO [SYSTEM] ValueTypeSupportRegistryImpl - Found value type support: d.t.u.i.u.k.v.IriValueSupport
+2021-02-08 11:34:07 INFO [SYSTEM] WorkloadManagerExtensionPointImpl - Found WorkloadManagerExtensionPointImpl extension: d.t.u.i.w.m.MatrixWorkloadExtension
+2021-02-08 11:34:07 INFO [SYSTEM] INCEpTION - Started INCEpTION in 39.399 seconds (JVM running for 41.913)
+2021-02-08 11:34:07 INFO [SYSTEM] StandaloneShutdownDialog - Console: not available
+2021-02-08 11:34:07 INFO [SYSTEM] StandaloneShutdownDialog - Headless: yes
+2021-02-08 11:34:07 INFO [SYSTEM] StandaloneShutdownDialog - Running in server environment or from command line: disabling interactive shutdown dialog.

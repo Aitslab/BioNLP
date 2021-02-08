@@ -1,0 +1,13 @@
+body {
+    margin: 2em auto;
+    max-width: 600px;
+  }
+  
+  form div {
+      margin-bottom: 0.5em;
+  }
+  form div label, form div input {
+      display: block;
+      margin-bottom: 0.3em;
+  }
+  

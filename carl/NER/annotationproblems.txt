@@ -1,0 +1,9 @@
+Ej känt EKG: Sinusrym med kammarfrekvens 98, inga urakuta ischemiska tecken.
+Här så är det svårt hur vi gör med negationen. Eftersom den syftar på EKG, men Sinusrym med kammarfrekvens 98 är ett symptom som taggas medan EKG inte är så kommer negationen kanske att gå mot fel
+Tagit sina mediciner som vanligt; Ej kontakt med någon annan som varit sjuk; EJ 
+Är relevant och info vi kan få direkt på akut men är inte ett symptom
+Ingen smärta vid miktion buksmärta eller ÖHN symptom
+
+Two classes enough
+NEG 
+SYM 
