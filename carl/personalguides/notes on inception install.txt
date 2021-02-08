@@ -1,0 +1,2 @@
+notes on inception install
+C:\Users\callebalik\Code\nlpcovid\srv\inception\
