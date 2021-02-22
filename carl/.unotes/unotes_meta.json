@@ -1,0 +1,41 @@
+{
+  "name": "",
+  "isOrdered": true,
+  "folders": {
+    "dictionaries": {
+      "name": "dictionaries",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "INCEpTION": {
+      "name": "INCEpTION",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "NER": {
+      "name": "NER",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "personalguides": {
+      "name": "personalguides",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "testcorpus": {
+      "name": "testcorpus",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    }
+  },
+  "files": {
+    "logbook": 0,
+    "annotation_guidelines": 1,
+    "README": 2
+  }
+}
