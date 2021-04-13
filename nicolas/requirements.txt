@@ -1,0 +1,6 @@
+numpy
+Cython>=0.25
+setuptools
+wheel
+cymem
+neuralcoref
