@@ -22,4 +22,4 @@
 ### 19/4: 
 
 * We got the environment to work and trained the SciBert on the Chemprot corpus using Google Colab
-* Watch "Lecture 7 – Relation Extraction | Stanford CS224U: Natural Language Understanding | Spring 2019" (https://www.youtube.com/watch?v=pO3Jsr31s_Q)
+* Watched "Lecture 7 – Relation Extraction | Stanford CS224U: Natural Language Understanding | Spring 2019" (https://www.youtube.com/watch?v=pO3Jsr31s_Q)
