@@ -1,14 +1,29 @@
-# Project documentation and settings for INCEpTION
+# Natural Language Processing for CovidQ project
+This project was created as part of the CovidQ project with the purpose of providing proof of concept and strategy development. The main purpouse is developing extraction of symptoms and findings from clinical charts.
 
-This directory contains documentation and configurations for the usage of INCEpTION in the projects context.
+The goal is to collect variables in a structured way to allow for their use in the diagnostic prediction model. The intention is to use this model at first triage in the ED, hence, the variables need to be easy to collect and are mainly related to patient history.
 
-## INCEpTION source repo
-[INCEpTION-project GitHub](https://inception-project.github.io/)
-## INCEpTION version
+## This repository contains:
 
-0.17.2
+### Annotationstrategy
 
-## Project guidelines
+### DictionariesNatural Language Processing for CovidQ project
 
-* [INCEpTION_project_guide:](INCEpTION_project_guide) Documentation on sercurity, backup and continuity plan and best practices.
+### onlineform
+
+### INCEpTION
+
+Documentation and configuration for the usage of the annotation software INCEpTION with the purpouse of NER-annotation of clinical charts
+
+* [INCEpTION_project_guide:](INCEpTION_project_guide) Documentation on security, backup and continuity plan and best practices.
+
 * [INCEpTION_workflow_structure:](INCEpTION_workflow_structure) Defined workflow and steps for project continuity and clear comparison and testing.
+
+* [INCEpTION-project Source Repo](https://inception-project.github.io/)
+
+* Main version of INCEpTION used: 0.17.2
+
+### Testcorpus
+
+Fabricated charts of typical patients that receive care in the emergency room for testing and development of NLP algorithms.
+

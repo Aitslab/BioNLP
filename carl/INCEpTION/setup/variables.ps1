@@ -4,11 +4,14 @@
 # [System.Environment]::SetEnvironmentVariable('msqrootp','mysqlnlp','Process')
 # [System.Environment]::SetEnvironmentVariable('INCEPTION_HOME','X:\Code\BioNLP\carl\INCEpTION\srv\inception','Process')
 
-$env:INCEPTION_DBUSER='inception'
-$env:INCEPTION_DBPASSWORD='nlpcovid'
-$env:INCEPTION_PORT=8080
-$env:msqrootp='mysqlnlp'
-$env:INCEPTION_HOME='X:\Code\BioNLP\carl\INCEpTION\srv\inception'
+# $env:msqrootp='mysqlnlp'
+
+
+
+$env:DBUSER='inception'
+$env:DBPASSWORD='nlpcovid'
+$env:INCEPTION_PORT=31415
+$env:INCEPTION_HOME='/srv/inception'
 
 #Print
 $env:INCEPTION_DBUSER
