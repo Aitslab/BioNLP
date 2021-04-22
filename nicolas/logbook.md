@@ -8,3 +8,10 @@
 ## 13/04
 - Installed neuralcoref and pytorch
 - Downloaded CRAFT corpora
+
+## 22/04
+- Setting up paper draft on overleaf.
+- Checking how to train a new model with neuralcoref
+    - https://medium.com/huggingface/how-to-train-a-neural-coreference-model-neuralcoref-2-7bb30c1abdfe
+    - https://github.com/huggingface/neuralcoref/blob/master/neuralcoref/train/training.md
+- Checking how to use craft with the format requirements for neuralcoref
