@@ -4,7 +4,7 @@
 
 This project was created as part of the CovidQ project with the purpose of providing proof of concept and strategy development. The main purpouse is developing extraction of symptoms and findings from Swedish clinical charts using a BioBERT model.
 
-The goal is to collect variables in a structured way to allow for their use in the diagnostic prediction model. The intention is to use this model at first triage in the ED, hence, the variables need to be easy to collect and are mainly related to patient history.
+The goal is to train a BioBERT model to extract symptoms and findings from freetext in patient records.
 
 *The project is done as part of semester five of the medical program at the University of Lund*
 
