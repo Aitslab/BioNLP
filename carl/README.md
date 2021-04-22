@@ -10,6 +10,10 @@ The goal is to train a BioBERT model to extract symptoms and findings from freet
 
 ## This repository contains:
 
+### data/testcorpus
+
+Fabricated charts of typical patients that receive care in the emergency room for testing and development of NLP algorithms.
+
 ### Annotationstrategy
 
 ### DictionariesNatural Language Processing for CovidQ project
