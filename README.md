@@ -514,6 +514,10 @@ to evaluate sentence classification
 
 https://github.com/Franck-Dernoncourt/pubmed-rct
 
+TACRED: a general NER and RE corpus
+
+https://nlp.stanford.edu/projects/tacred/
+
 ## Biomedical text sources
 Cinahl
 
