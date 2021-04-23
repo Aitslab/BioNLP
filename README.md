@@ -474,6 +474,10 @@ CRAFT
 
 https://github.com/UCDenver-ccp/CRAFT
 
+DDI: Drug-drug interactions
+
+https://github.com/isegura/DDICorpus
+
 GeneTag  
 
 20K Medline sentences; also available in BioC format and updated version GeneTag-05  
