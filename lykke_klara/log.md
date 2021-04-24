@@ -23,3 +23,7 @@
 
 * We got the environment to work and trained the SciBert on the Chemprot corpus using Google Colab
 * Watched "Lecture 7 – Relation Extraction | Stanford CS224U: Natural Language Understanding | Spring 2019" (https://www.youtube.com/watch?v=pO3Jsr31s_Q)
+
+### 24/4:
+* Read the description of the Chemprot corpus
+* Started writing a script to evaluate the SciBERT model
