@@ -27,3 +27,8 @@
 ### 24/4:
 * Read the description of the Chemprot corpus
 * Started writing a script to evaluate the SciBERT model
+
+### 26/4
+* Wrote script to predict the relational class of the Chemprot corups using SciBERT
+* Wrote script to calculate the accuracy 
+* TODO 25/4: calculate F1-score, add to report push to git
