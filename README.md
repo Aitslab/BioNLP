@@ -512,6 +512,12 @@ https://portal.dbmi.hms.harvard.edu/projects/n2c2-nlp/
 NCBI disease
 https://www.sciencedirect.com/science/article/pii/S1532046413001974?via%3Dihub
 
+NLM-Chem
+
+for chemical NER
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7994842/
+
 PubMed 200k RCT dataset
 
 to evaluate sentence classification
