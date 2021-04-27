@@ -1,10 +1,17 @@
 import torch
+import json
 
 from transformers import BertTokenizer
 from transformers import BertForSequenceClassification, AdamW, BertConfig
+from sklearn.metrics import confusion_matrix
 
-# running in google colab, bert-finetune directory contains the model files
-output_dir = 'bert-finetune'
+input_dir = '/content/drive/MyDrive/EDAN70/bert-finetuned'
+train_file = open("/content/drive/MyDrive/EDAN70/datasets/train.txt", "r")
+dev_file = open("/content/drive/MyDrive/EDAN70/datasets/dev.txt", "r")
+
+train_list = train_file.read().split("\n")
+dev_list = dev_file.read().split("\n")
+
 if torch.cuda.is_available():
 
     device = torch.device("cuda")
@@ -16,13 +23,29 @@ else:
     print("\n\nNo GPU(s) available, switching to CPU.")
     device = torch.device("cpu")
 
-# 404 Client Error: Not Found for url: https://huggingface.co/bert-finetune/resolve/main/config.json
-model = BertForSequenceClassification.from_pretrained(output_dir)
-tokenizer = BertTokenizer.from_pretrained(output_dir)
+# to load the model later:
+model = BertForSequenceClassification.from_pretrained(input_dir, local_files_only=True, cache_dir=None)
+tokenizer = BertTokenizer.from_pretrained(input_dir)
 model.to(device)
 
-model.eval()
+classes = ["NOT", "PART-OF", "INTERACTOR", "REGULATOR-POSITIVE", "REGULATOR-NEGATIVE", "OTHER"]
 
-print("model evaluated", model)
+predictions = []
+correct_predictions = 0
 
-# add prediction on the chemprot training and dev sets
+for seq in train_list:
+  #print(train_list.index(seq), "\n")
+  text = json.loads(seq)["text"]
+  actual_class = json.loads(seq)["custom_label"]
+  input_ids = torch.tensor(tokenizer.encode(text)).unsqueeze(0).to(device)
+  outputs = model(input_ids)
+  pred_class = classes[torch.softmax(outputs.logits, dim=1).argmax()]
+
+  if (pred_class == actual_class):
+    correct_predictions += 1
+  
+  predictions.append(pred_class)
+
+# # predict on the chemprot training and dev sets
+print("Accuracy: ", correct_predictions / len(train_list))
+# #print("Accuracy: ", correct_predictions / len(dev_list)) # Accuracy:  0.5174825174825175
