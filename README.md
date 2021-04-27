@@ -95,6 +95,12 @@ https://drive.google.com/open?id=1xCVL5lMF021BuqzX3L6A2RhbRqJYXY8a
 
 Clark, S., & Curran, J. R. (2007). Wide-coverage efficient statistical parsing with CCG and log-linear models. Computational Linguistics, 33(4), 493-552.
 
+### pdf parsing
+
+https://aegis4048.github.io/parse-pdf-files-while-retaining-structure-with-tabula-py
+
+https://github.com/kermitt2/grobid
+
 ## Negation and uncertainty detection
 
 negBio
