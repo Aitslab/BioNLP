@@ -42,4 +42,8 @@
 
 ![image](https://user-images.githubusercontent.com/21019121/116400197-0e7b8180-a82a-11eb-83d3-755737162880.png)
 
+Confusion matrices for the 1st model:
+
+![image](https://user-images.githubusercontent.com/21019121/116403398-ccecd580-a82d-11eb-959a-bf722340ad87.png)
+
 * TODO 1/5: calculate the recall, f-score and precision for the models. Plot graphs for these metrics for the dev and train sets, create table with the statistics of the size of your dataset, write in the report
