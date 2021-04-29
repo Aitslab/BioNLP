@@ -12,15 +12,15 @@ In the project we are using the UCDenver [CRAFT corpus](https://github.com/UCDen
 
 ## Installation of SpanBERT for coreference resolution.
 
-Reference: Jonathan K. Kummerfeld's Notebook. 
+**Reference:** Jonathan K. Kummerfeld's Notebook. 
 
-1. Install the coref tool from mandarjoshi90.
+**1. Install the coref tool from mandarjoshi90.**
 ```
 ! git clone https://github.com/mandarjoshi90/coref.git
 %cd coref
 ```
 
-2. Dependency Fix.
+**2. Dependency Fix.**
 ```
 ! sed 's/MarkupSafe==1.0/MarkupSafe==1.1.1/; s/scikit-learn==0.19.1/scikit-learn==0.21/; s/scipy==1.0.0/scipy==1.6.2/' < requirements.txt > tmp
 ! mv tmp requirements.txt
@@ -30,7 +30,7 @@ Reference: Jonathan K. Kummerfeld's Notebook.
 ! chmod u+x setup_all.sh 
 ```
 
-3. Install Tensorflow 
+**3. Install Tensorflow**
 ```
 % tensorflow_version 2.x
 ! pip uninstall -y tensorflow
