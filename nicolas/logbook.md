@@ -19,3 +19,4 @@
 ## 29/04
 - Fixing compile error and updating report.
 - Installing Clojure Boot and checking how to convert the CRAFT corpus to CoNLL with it.
+- Converting CRAFT corpus into CoNLL format and separating each file into its group by their ids.
