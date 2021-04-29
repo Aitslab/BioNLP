@@ -15,3 +15,7 @@
     - https://medium.com/huggingface/how-to-train-a-neural-coreference-model-neuralcoref-2-7bb30c1abdfe
     - https://github.com/huggingface/neuralcoref/blob/master/neuralcoref/train/training.md
 - Checking how to use craft with the format requirements for neuralcoref
+
+## 29/04
+- Fixing compile error and updating report.
+- Installing Clojure Boot and checking how to convert the CRAFT corpus to CoNLL with it.
