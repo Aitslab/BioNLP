@@ -6,6 +6,10 @@
 https://www.overleaf.com/read/xfdmhbzwshty
 
 
+## Data:
+In the project we are using the UCDenver [CRAFT corpus](https://github.com/UCDenver-ccp/craft-shared-tasks).
+
+
 ## Installation of SpanBERT for coreference resolution.
 
 Reference: Jonathan K. Kummerfeld's Notebook. 
