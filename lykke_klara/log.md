@@ -31,4 +31,19 @@
 ### 26/4
 * Wrote script to predict the relational class of the Chemprot corups using SciBERT
 * Wrote script to calculate the accuracy 
-* TODO 25/4: calculate F1-score, add to report push to git
+
+### 27/4
+* Meeting with Sonja
+* We modified the make_datasets to keep the original splits from the extract_relations to prevent overlapping between the dev and training sets 
+* Added code to save the models from each epoch in the bert_finetune 
+* Started looking at how to calculate the recall, f-score and precision for the models. However, we got the warning: 
+
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1272: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior. _warn_prf(average, modifier, msg_start, len(result)) {'OTHER', 'REGULATOR-POSITIVE', 'NOT', 'PART-OF'} Precision: [0.47938931 0. 0. 0. 0.76012793 0. ] Recall: [0.93037037 0. 0. 0. 0.54761905 0. ] F1-score: [0.63274559 0. 0. 0. 0.63660714 0. ]
+
+![image](https://user-images.githubusercontent.com/21019121/116400197-0e7b8180-a82a-11eb-83d3-755737162880.png)
+
+Confusion matrices for the 1st model:
+
+![image](https://user-images.githubusercontent.com/21019121/116403398-ccecd580-a82d-11eb-959a-bf722340ad87.png)
+
+* TODO 1/5: calculate the recall, f-score and precision for the models. Plot graphs for these metrics for the dev and train sets, create table with the statistics of the size of your dataset, write in the report
