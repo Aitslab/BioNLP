@@ -62,4 +62,5 @@ Confusion matrices for the 1st model:
 * Run the script to get the plots
 * Fix script to plot the training metrics
 * Fill in the statistics table
+* Figure out which confusion matrix maps to which class and put it in the report
 * Write corpus & tools section in report
