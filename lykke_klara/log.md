@@ -64,3 +64,6 @@ Confusion matrices for the 1st model:
 * Fill in the statistics table
 * Figure out which confusion matrix maps to which class and put it in the report
 * Write corpus & tools section in report
+
+### 2/5
+* Wrote the section about code and code changes
