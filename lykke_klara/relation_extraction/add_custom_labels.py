@@ -1,13 +1,13 @@
 import json
+import os
 
 from collections import defaultdict
 from typing import DefaultDict, List
 
 directory = "/content/drive/MyDrive/nlp_2021_alexander_petter/utils/chemprot/processed/"
-directory_out = "/content/drive/MyDrive/nlp_2021_alexander_petter/utils/chemprot/custom_label_datsets/"
+directory_out = "/content/drive/MyDrive/nlp_2021_alexander_petter/utils/chemprot/custom_label_datasets/"
 
 def make_data_dict(filename):
-
     entry_set: DefaultDict[str, list()] = defaultdict(lambda: list())
 
     with open(directory + filename, "r", encoding='utf8') as f:
@@ -15,20 +15,19 @@ def make_data_dict(filename):
 
         for line in data_list:
             entry = json.loads(line)
-            entry_set[entry["label"]].append(entry)
+
+            if entry["label"] != "UNDEFINED":
+              entry_set[entry["label"]].append(entry)
 
     return entry_set
 
 def map_chemprot_labels_to_custom_labels(cpl_set):
     '''
     Maps ChemProt relation-labels to Custom relation-labels
-
     cid   Custom class                  cpr     ChemProt
     -------------------------------------------------------------------------------------
     0   NOT                             10      NOT
-
     1   PART-OF                         1       PART-OF
-
     2   INTERACTOR                      2       REGULATOR
                                         2       DIRECT-REGULATOR
                                         2       INDIRECT-REGULATOR
@@ -36,20 +35,17 @@ def map_chemprot_labels_to_custom_labels(cpl_set):
                                         7       MODULATOR
                                         8       CO-FACTOR
                                         9       SUBSTRATE
-
     3   REGULATOR-POSITIVE              3       UPREGULATOR
                                         3       ACTIVATOR
                                         3       INDIRECT-UPREGULATOR
                                         5       AGONIST-ACTIVATOR
                                         7       MODULATOR-ACTIVATOR
-
     4   REGULATOR-NEGATIVE              4       DOWNREGULATOR
                                         4       INHIBITOR
                                         4       INDIRECT-DOWNREGULATOR
                                         6       ANTAGONIST
                                         7       MODULATOR-INHIBITOR
                                         5       AGONIST-INHIBITOR
-
     5   OTHER                                   all labels not included above
     '''
 

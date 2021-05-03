@@ -6,15 +6,21 @@
 https://www.overleaf.com/read/xfdmhbzwshty
 
 
+## Data
+In the project we are using the UCDenver [CRAFT corpus](https://github.com/UCDenver-ccp/craft-shared-tasks).
+
+
 ## Installation of SpanBERT for coreference resolution.
 
-1. First install the coref folder from mandarjoshi.
+**Reference:** Jonathan K. Kummerfeld's Notebook. 
+
+**1. Install the coref tool from mandarjoshi90.**
 ```
 ! git clone https://github.com/mandarjoshi90/coref.git
 %cd coref
 ```
 
-2. Temporary hack to fix dependencies. 
+**2. Dependency Fix.**
 ```
 ! sed 's/MarkupSafe==1.0/MarkupSafe==1.1.1/; s/scikit-learn==0.19.1/scikit-learn==0.21/; s/scipy==1.0.0/scipy==1.6.2/' < requirements.txt > tmp
 ! mv tmp requirements.txt
@@ -23,7 +29,8 @@ https://www.overleaf.com/read/xfdmhbzwshty
 ! mv tmp setup_all.sh 
 ! chmod u+x setup_all.sh 
 ```
-3. Install Tensorflow 
+
+**3. Install Tensorflow**
 ```
 % tensorflow_version 2.x
 ! pip uninstall -y tensorflow

@@ -47,3 +47,34 @@ Confusion matrices for the 1st model:
 ![image](https://user-images.githubusercontent.com/21019121/116403398-ccecd580-a82d-11eb-959a-bf722340ad87.png)
 
 * TODO 1/5: calculate the recall, f-score and precision for the models. Plot graphs for these metrics for the dev and train sets, create table with the statistics of the size of your dataset, write in the report
+
+### 1/5
+* Removed "OTHER" label from the data (and bert_finetune.py)
+* Added code to retreive all metrics from the models and put it in the report (we will change the screenshots to tables later)
+
+* We still get the error:
+
+![image](https://user-images.githubusercontent.com/21019121/116787160-e77bb480-aaa2-11eb-90f3-123b7ab9eee9.png)
+
+* Wrote code to plot the f1-score, precision and recall. We could not save them since our time on Google Colab ran out.
+
+* TODO 3/5: 
+* Run the script to get the plots
+* Fix script to plot the training metrics
+* Fill in the statistics table
+* Figure out which confusion matrix maps to which class and put it in the report
+* Write corpus & tools section in report
+
+### 2/5
+* Wrote the section about code and code changes
+
+### 3/5
+* generated plots for f1-score, precision and recall for the models for dev and train
+* generated plot for avg. training loss, avg. validation loss and avg. training accuracy for the training set
+* created the statistics table (will fill in the values tomorrow)
+* started writing on the corpus section in the report
+
+TODO 4/5:
+* modify add_custom_labels to count statistics and fill in values in table
+* Figure out which confusion matrix maps to which class and put it in the report
+* Write corpus & tools section in report
