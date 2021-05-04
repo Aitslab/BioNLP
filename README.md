@@ -522,7 +522,7 @@ NLM-Chem
 
 for chemical NER
 
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7994842/
+https://www.nature.com/articles/s41597-021-00875-1
 
 PubMed 200k RCT dataset
 
