@@ -8,6 +8,7 @@ import json
 import random
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 
 import os
 
@@ -223,9 +224,10 @@ np.random.seed(seed_val)
 torch.manual_seed(seed_val)
 torch.cuda.manual_seed_all(seed_val)
 
-training_statistics = []
-
 total_t0 = time.time()
+
+# Metrics: training loss, training accuracy, validation loss and validation accuracy.
+model_metrics = {"average training loss": [], "average validation loss": [], "average training accuracy": []}
 
 for epoch_i in range(0, epochs):
     torch.cuda.empty_cache()
@@ -348,6 +350,8 @@ for epoch_i in range(0, epochs):
 
         total_eval_accuracy += flat_accuracy(logits, label_ids)
 
+        total_eval_loss += loss.item()
+
     # Report final accuracy for this validation run
     avg_val_accuracy = total_eval_accuracy / len(dev_dataloader)
     print("     Accuracy: {0:.2f}".format(avg_val_accuracy))
@@ -360,18 +364,9 @@ for epoch_i in range(0, epochs):
     print("     Validation Loss: {0:.2f}".format(avg_val_loss))
     print("     Validation took: {:}".format(validation_time))
 
-    # Record statistics for this epoch
-    training_statistics.append(
-        {
-            'epoch': epoch_i +1,
-            'Training Loss': avg_train_loss,
-            'Valid. Loss': avg_val_loss,
-            'Valid. Accur.': avg_val_accuracy,
-            'Training Time': training_time,
-            'Validation Time': validation_time
-        }
-    )
-
+    model_metrics['average training loss'].append(avg_train_loss)
+    model_metrics['average validation loss'].append(avg_val_loss)
+    model_metrics['average training accuracy'].append(avg_val_accuracy)
 
     print("")
     print("Training complete!")
@@ -379,7 +374,7 @@ for epoch_i in range(0, epochs):
     print("Total training took {:} (h:mm:ss)".format(format_time(time.time()-total_t0)))
 
 
-    output_dir = './bert-finetuned-{}/'.format(epoch_i)
+    output_dir = '/content/drive/MyDrive/EDAN70/bert-finetuned-{}/'.format(epoch_i)
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
@@ -389,7 +384,21 @@ for epoch_i in range(0, epochs):
     model_to_save.save_pretrained(output_dir)
     tokenizer.save_pretrained(output_dir)
 
-# to load the model later:
-#model = BertForSequenceClassification.from_pretrained(output_dir)
-#tokenizer = BertTokenizer.from_pretrained(output_dir)
-#model.to(device)
+def plot_metrics(train_metrics):
+  x = [1, 2, 3, 4]
+
+  plt.xticks(range(1,5))
+
+  plt.plot(x, train_metrics['average training loss'], color="blue")
+  plt.plot(x, train_metrics['average validation loss'], color="red")
+  plt.plot(x, train_metrics['average training accuracy'], color="green")
+  plt.plot(x, [0.6547545059042884, 0.8354568054692355, 0.8856432566811684, 0.9019577377252952], color="cyan")
+
+  plt.legend(['avg. training loss', 'avg. validation loss', 'avg. training accuracy', 'avg. validation accuracy'], loc ='upper right')
+
+  plt.xlabel('epoch')
+
+  plt.show()
+
+print(model_metrics)
+plot_metrics(model_metrics)

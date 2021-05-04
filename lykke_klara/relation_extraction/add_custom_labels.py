@@ -116,6 +116,9 @@ def map_chemprot_labels_to_custom_labels(cpl_set):
 def write_files(entry_set, filename):
   result_set = list()
 
+  splits = { "train": 0.8, "dev" = 0.1, "test" = 0.1 }
+  
+  statistics: DefaultDict[str, defaultdict()] = defaultdict(lambda: defaultdict(int))
   master_set: DefaultDict[str, list()] = defaultdict(lambda: list())
 
   for custom_label in entry_set:
@@ -125,10 +128,45 @@ def write_files(entry_set, filename):
       label_list = master_set[custom_label]
       result_set += label_list
 
+      length = len(label_list)
+
+      e_train = int(length*r_train)
+      e_dev = int(length*(r_train+r_dev))
+
+      dataset = os.path.splitext()
+
+      # statistics[dataset][custom_label]   = e_train
+      # statistics[dataset]["total"]       += e_train
+
+      # statistics["dev"][custom_label]     = e_dev - e_train
+      # statistics["dev"]["total"]         += e_dev - e_train
+
+      # statistics["test"][custom_label]    = length - e_dev
+      # statistics["test"]["total"]        += length - e_dev
+
   with open(directory_out + filename, "w", encoding='utf8') as out_file: #, \
       
-      for entry in result_set:
+      for entry in result_set[:-1]:
           out_file.write(json.dumps(entry, ensure_ascii=False) + "\n")
+      
+      out_file.write(json.dumps(result_set[-1], ensure_ascii=False))
+  
+  # with open(directory_out + "statistics.txt", "w", encoding='utf8') as stats:
+
+  #     for set in statistics:
+  #         stats.write(set + "_set\n" + "-"*50 + "\n")
+  #         stats.write("label" + " "*25 + "count" + "\t" + "%\n")
+  #         stats.write("- "*25 + "\n")
+  #         stats.write("total" + " "*25 + str(statistics[set]["total"]) + "\t" +
+  #                     str(round(100*statistics[set]["total"]/statistics[set]["total"], 2)) + "\n")
+
+  #         for custom_label in statistics[set]:
+  #             if custom_label == "total":
+  #                 continue
+
+  #             stats.write(custom_label + " "*(30-len(custom_label)) + str(statistics[set][custom_label]) + "\t" +
+  #                         str(round(100*statistics[set][custom_label]/statistics[set]["total"], 2)) + "\n")
+  #         stats.write("-"*50 + "\n\n")
 
 io_files = [("chemprot_training_processed.txt", "train.txt"), ("chemprot_development_processed.txt", "dev.txt"), ("chemprot_test_processed.txt", "test.txt")]
 
