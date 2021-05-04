@@ -64,3 +64,17 @@ Confusion matrices for the 1st model:
 * Fill in the statistics table
 * Figure out which confusion matrix maps to which class and put it in the report
 * Write corpus & tools section in report
+
+### 2/5
+* Wrote the section about code and code changes
+
+### 3/5
+* generated plots for f1-score, precision and recall for the models for dev and train
+* generated plot for avg. training loss, avg. validation loss and avg. training accuracy for the training set
+* created the statistics table (will fill in the values tomorrow)
+* started writing on the corpus section in the report
+
+TODO 4/5:
+* modify add_custom_labels to count statistics and fill in values in table
+* Figure out which confusion matrix maps to which class and put it in the report
+* Write corpus & tools section in report
