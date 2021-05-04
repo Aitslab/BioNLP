@@ -78,3 +78,8 @@ TODO 4/5:
 * modify add_custom_labels to count statistics and fill in values in table
 * Figure out which confusion matrix maps to which class and put it in the report
 * Write corpus & tools section in report
+
+### 4/5:
+* edited the metrics plots
+* generated statistics for our custom label datasets
+* figured out which confusion matrix maps to which class
