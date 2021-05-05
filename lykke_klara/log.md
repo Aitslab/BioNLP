@@ -83,3 +83,8 @@ TODO 4/5:
 * edited the metrics plots
 * generated statistics for our custom label datasets
 * figured out which confusion matrix maps to which class
+
+
+### 5/5
+* Meeting: decided to try to oversample the data for the classes NOT and PART-OF
+* started refactoring the code: created a new eval.py file which should take in the corpora and a model and then return all the metrics. Our goal is to also create a seperate plot file and another one that outputs the confusion matrices
