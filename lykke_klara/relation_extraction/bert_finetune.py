@@ -374,7 +374,7 @@ for epoch_i in range(0, epochs):
     print("Total training took {:} (h:mm:ss)".format(format_time(time.time()-total_t0)))
 
 
-    output_dir = '/content/drive/MyDrive/EDAN70/bert-finetuned-{}/'.format(epoch_i)
+    output_dir = '/content/drive/MyDrive/nlp_2021_alexander_petter/utils/chemprot/models/bert-finetuned-{}/'.format(epoch_i)
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
@@ -384,21 +384,23 @@ for epoch_i in range(0, epochs):
     model_to_save.save_pretrained(output_dir)
     tokenizer.save_pretrained(output_dir)
 
-def plot_metrics(train_metrics):
+def plot_metrics(model_metrics):
   x = [1, 2, 3, 4]
 
   plt.xticks(range(1,5))
 
-  plt.plot(x, train_metrics['average training loss'], color="blue")
-  plt.plot(x, train_metrics['average validation loss'], color="red")
-  plt.plot(x, train_metrics['average training accuracy'], color="green")
-  plt.plot(x, [0.6547545059042884, 0.8354568054692355, 0.8856432566811684, 0.9019577377252952], color="cyan")
+  plt.plot(x, model_metrics['average training loss'], color="blue")
+  plt.plot(x, model_metrics['average validation loss'], color="red")
+  plt.plot(x, model_metrics['average training accuracy'], color="green")
+  plt.plot(x, [0.6547545059042884, 0.8354568054692355, 0.8856432566811684, 0.9019577377252952], color="orange") # accuracies returned by the metrics.py script
 
-  plt.legend(['avg. training loss', 'avg. validation loss', 'avg. training accuracy', 'avg. validation accuracy'], loc ='upper right')
+  plt.legend(['avg. training loss', 'avg. validation loss', 'avg. training accuracy', 'avg. validation accuracy'], loc="upper center", bbox_to_anchor=(0.5, 1.23),
+          fancybox=True, ncol=2)
 
   plt.xlabel('epoch')
 
+  plt.savefig('/content/drive/MyDrive/training_validation.png')
+
   plt.show()
 
-print(model_metrics)
 plot_metrics(model_metrics)

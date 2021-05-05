@@ -16,7 +16,7 @@ def get_avg_metrics(filename):
   avg_metrics = {"f1-score": [], "recall": [], "precision": [], "accuracy": []}
 
   for i in range(4):
-    input_dir = '/content/drive/MyDrive/EDAN70/bert-finetuned-{}'.format(i)
+    input_dir = '/content/drive/MyDrive/nlp_2021_alexander_petter/utils/chemprot/models/bert-finetuned-{}'.format(i)
     data_file = open("/content/drive/MyDrive/nlp_2021_alexander_petter/utils/chemprot/custom_label_datasets/" + filename, "r")
     data_list = data_file.read().split("\n")
 
@@ -41,11 +41,8 @@ def get_avg_metrics(filename):
     true_classes = []
 
     correct_predictions = 0
-    # row_counter = 0
 
     for seq in data_list:
-      # row_counter += 1
-      # print(row_counter, "\n")
       text = json.loads(seq)["text"]
       true_class = json.loads(seq)["custom_label"]
       input_ids = torch.tensor(tokenizer.encode(text)).unsqueeze(0).to(device)
@@ -58,15 +55,13 @@ def get_avg_metrics(filename):
       predictions.append(pred_class)
       true_classes.append(true_class)
 
-    # print("Accuracy: ", correct_predictions / len(data_list))
-    #print("Accuracy: ", correct_predictions / len(dev_list)) # Accuracy:  0.5174825174825175
-
     precision, recall, fscore, _ = score(true_classes, predictions, average='macro')
 
     print(set(true_classes) - set(predictions))
 
     # confusion matrix
-    # print(cm(true_classes, predictions))
+    print(cm(true_classes, predictions, labels=["INTERACTOR", "NOT", "PART-OF", "REGULATOR-NEGATIVE", "REGULATOR-POSITIVE"]))
+    
     avg_metrics["f1-score"].append(fscore)
     avg_metrics["recall"].append(recall)
     avg_metrics["precision"].append(precision)
@@ -77,26 +72,27 @@ def get_avg_metrics(filename):
 def plot_metrics(train_metrics, dev_metrics):
   x = [1, 2, 3, 4]
 
-  for metric in train_metrics[:-1]:
+  for metric in train_metrics:
     plt.xticks(range(1,5))
   
     plt.plot(x, train_metrics[metric], color="blue")
     plt.plot(x, dev_metrics[metric], color="red")
 
-    plt.legend(["train", "dev"], loc ="lower right")
+    plt.legend(["train", "dev"], loc="upper center", bbox_to_anchor=(0.5, 1.15),
+          fancybox=True, ncol=2)
 
     plt.xlabel('epoch')
     plt.ylabel(metric)
 
+    plt.savefig('/content/drive/MyDrive/{}.png'.format(metric))
     plt.show()
 
 train_metrics = get_avg_metrics("train.txt")
-# dev_metrics = get_avg_metrics("dev.txt")
+dev_metrics = get_avg_metrics("dev.txt")
 
+# test data
 # dev_metrics = {'f1-score': [0.26785459023697816, 0.4121827289387582, 0.4570745103451218, 0.460782566931896], 'recall': [0.3085636200716846, 0.39810885339799, 0.45981603842253743, 0.4625136730319368], 'precision': [0.3895275120053049, 0.526763678261067, 0.5538414932259105, 0.5690672606323701]}
 # train_metrics = {'f1-score': [0.34213049819971386, 0.5148686389376852, 0.7456628140139789, 0.8044440741699892], 'recall': [0.35979176459905166, 0.5195185341513443, 0.7077231129465356, 0.7853720379281487], 'precision': [0.4373553268494502, 0.6461595272243997, 0.833670095521948, 0.8427057260871047]}
 
-# plot_metrics(train_metrics, dev_metrics)
-
-print(train_metrics["accuracy"])
+plot_metrics(train_metrics, dev_metrics)
 
