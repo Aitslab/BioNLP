@@ -88,3 +88,6 @@ TODO 4/5:
 ### 5/5
 * Meeting: decided to try to oversample the data for the classes NOT and PART-OF
 * started refactoring the code: created a new eval.py file which should take in the corpora and a model and then return all the metrics. Our goal is to also create a seperate plot file and another one that outputs the confusion matrices
+
+### 6/5
+* continuing refactorization, although our precision for "NOT" class in model 2 all of a sudden got a value of 1. We need to look into that. 
