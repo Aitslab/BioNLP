@@ -90,4 +90,8 @@ TODO 4/5:
 * started refactoring the code: created a new eval.py file which should take in the corpora and a model and then return all the metrics. Our goal is to also create a seperate plot file and another one that outputs the confusion matrices
 
 ### 6/5
-* continuing refactorization, although our precision for "NOT" class in model 2 all of a sudden got a value of 1. We need to look into that. 
+* continuing refactorization, although our precision for "NOT" class in model 2 all of a sudden got a value of 1. We need to look into that.
+
+### 8/5
+* Tried to debug the unexpected behaviour in our metrics. No luck :)
+* Generated all metrics for 5 epochs from the old code. However, sometimes we get extra graphs in our plots which don't correspond to any of our data. 
