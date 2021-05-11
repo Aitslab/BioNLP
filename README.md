@@ -115,6 +115,8 @@ https://spacy.io/universe/project/negspacy
 
 
 ## Co-reference resolution and abbreviation resolution
+NeuralCoref
+
 https://github.com/huggingface/neuralcoref
 
 Ab3P 
@@ -134,6 +136,14 @@ SpanBERT
 for co-reference resolution
 
 https://github.com/facebookresearch/SpanBERT
+
+AllenNLP for coref resolution
+
+https://code.likeagirl.io/obtaining-allennlp-coreference-resolution-readable-clusters-in-python-37cd964d6ca0
+
+Blog post about coref resolution
+
+https://towardsdatascience.com/most-popular-coreference-resolution-frameworks-574ba8a8cc2d
 
 
 ## Metrics

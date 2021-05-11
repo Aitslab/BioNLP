@@ -90,4 +90,18 @@ TODO 4/5:
 * started refactoring the code: created a new eval.py file which should take in the corpora and a model and then return all the metrics. Our goal is to also create a seperate plot file and another one that outputs the confusion matrices
 
 ### 6/5
-* continuing refactorization, although our precision for "NOT" class in model 2 all of a sudden got a value of 1. We need to look into that. 
+* continuing refactorization, although our precision for "NOT" class in model 2 all of a sudden got a value of 1. We need to look into that.
+
+### 8/5
+* Tried to debug the unexpected behaviour in our metrics. No luck :)
+* Generated all metrics for 5 epochs from the old code. However, sometimes we get extra graphs in our plots which don't correspond to any of our data. 
+
+### 10/5
+* Our refactored code seems to work without any changes, it's unclear why it generated weird results before. We created two new files, eval and plot, from our old script metrics. They are now availabe on git. 
+* We generated new plots and metrics for the 5 ecpohs, they are under the section "Appendix" at the moment, but will replace our old results shortely. 
+
+TODO 11/5:
+* write manual on how to run our program
+* add code comments
+* add the new data to the report
+* start to look at oversampling
