@@ -20,3 +20,16 @@
 - Fixing compile error and updating report.
 - Installing Clojure Boot and checking how to convert the CRAFT corpus to CoNLL with it.
 - Converting CRAFT corpus into CoNLL format and separating each file into its group by their ids.
+
+## 05/05
+- Solving problems with neuralcoref, installed from source.
+- Problems parsing conll files, checking options on how to handle and adapt CRAFT to fit the expected format.
+- Checking and comparing the CRAFT files with the instructions and with Ontonotes.
+
+## 09/05
+- Start adapting the conllparser.py file to handle .conll files instead of .*_conll.
+
+## 10/05
+- Adapted conllparser.py to handle the CRAFT corpus in .conll format.
+- Realizing there's problems with tags spanning multiple utterances, and adapting the code to ignore those tags.
+- Creating environment for training in Google Colab.
