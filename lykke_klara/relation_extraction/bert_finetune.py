@@ -41,21 +41,20 @@ else:
 
 
 def read_data(file_path):
-    with open(file_path, "r", encoding="utf-8") as f:
-        input = f.readlines()
+  with open(file_path, "r", encoding="utf-8") as f:
+      input = f.readlines()
 
-        sentences   = []
-        labels      = []
+      sentences   = []
+      labels      = []
 
-        for line in input:
-            entry = json.loads(line)
+      for line in input:
+          entry = json.loads(line)
 
-            if not entry["custom_label"] in exclude_label:
-                sentences.append(entry["text"])
-                labels.append(int(entry["cid"]))
+          if not entry["custom_label"] in exclude_label:
+              sentences.append(entry["text"])
+              labels.append(int(entry["cid"]))
 
-        return sentences, labels
-
+      return sentences, labels
 
 train_sentences, train_labels   = read_data(data_dir + "train.txt")
 dev_sentences, dev_labels       = read_data(data_dir + "dev.txt")
@@ -135,7 +134,6 @@ print("\nEncoding done. Running example:")
 print("Original:\t", train_sentences[1])
 print("Token IDs:\t", train_input_ids[1])
 
-
 print("\n\nDatasets:")
 print(str(len(train_sentences)) + " training samples")
 print(str(len(dev_sentences)) + " development samples")
@@ -193,7 +191,7 @@ optimizer = AdamW(model.parameters(),
                   )
 
 # Starts overfitting after 2 epochs
-epochs = 4
+epochs = 5
 # [number of batches] x [number of epochs]. Note that it is not the same as the number of training samples
 total_steps = len(train_dataloader) * epochs
 
@@ -364,15 +362,14 @@ for epoch_i in range(0, epochs):
     print("     Validation Loss: {0:.2f}".format(avg_val_loss))
     print("     Validation took: {:}".format(validation_time))
 
+    # Save the metrics
     model_metrics['average training loss'].append(avg_train_loss)
     model_metrics['average validation loss'].append(avg_val_loss)
     model_metrics['average training accuracy'].append(avg_val_accuracy)
 
     print("")
     print("Training complete!")
-
     print("Total training took {:} (h:mm:ss)".format(format_time(time.time()-total_t0)))
-
 
     output_dir = '/content/drive/MyDrive/nlp_2021_alexander_petter/utils/chemprot/models/bert-finetuned-{}/'.format(epoch_i)
     if not os.path.exists(output_dir):
@@ -384,23 +381,6 @@ for epoch_i in range(0, epochs):
     model_to_save.save_pretrained(output_dir)
     tokenizer.save_pretrained(output_dir)
 
-def plot_metrics(model_metrics):
-  x = [1, 2, 3, 4]
-
-  plt.xticks(range(1,5))
-
-  plt.plot(x, model_metrics['average training loss'], color="blue")
-  plt.plot(x, model_metrics['average validation loss'], color="red")
-  plt.plot(x, model_metrics['average training accuracy'], color="green")
-  plt.plot(x, [0.6547545059042884, 0.8354568054692355, 0.8856432566811684, 0.9019577377252952], color="orange") # accuracies returned by the metrics.py script
-
-  plt.legend(['avg. training loss', 'avg. validation loss', 'avg. training accuracy', 'avg. validation accuracy'], loc="upper center", bbox_to_anchor=(0.5, 1.23),
-          fancybox=True, ncol=2)
-
-  plt.xlabel('epoch')
-
-  plt.savefig('/content/drive/MyDrive/training_validation.png')
-
-  plt.show()
-
-plot_metrics(model_metrics)
+# Write metrics to result file
+with open("drive/MyDrive/nlp_2021_alexander_petter/utils/chemprot/output_metrics.txt", 'w') as outfile:
+    json.dump(model_metrics, outfile)
