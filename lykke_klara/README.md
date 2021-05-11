@@ -5,7 +5,7 @@
 * [`plot.py`](relation_extraction/plot.py) plots the metrics
 
 
-## Requirements and setup
+## Setup
 
 First you need to follow the [`setup`](https://github.com/Aitslab/nlp_2021_alexander_petter#setup-using-conda-anaconda--miniconda) guide using Conda. Thereafter follow [`step 1`](https://github.com/Aitslab/nlp_2021_alexander_petter/tree/master/utils/chemprot#step-1-reformatting-the-chemprot-corpus) to process your data.
 
