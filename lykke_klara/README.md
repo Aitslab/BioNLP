@@ -18,7 +18,7 @@ python add_custom_labels.py <processed_dir> <output_dir>
 ```
 `processed_dir` is the directory with the proccessed corpus from the setup. 
 
-#### 2. Train the models:
+#### 2. Train and save the models:
 
 ```shell
 python bert_finetune.py <model_dir> <output_metrics_dir>
