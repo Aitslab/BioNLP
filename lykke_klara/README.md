@@ -39,3 +39,4 @@ Appends metrics to `output_metrics_file`.
 ```shell
 python plot.py <output_metrics_file> <output_plot_dir>
 ```
+Saves plots in `output_plot_dir`.
