@@ -105,3 +105,8 @@ TODO 11/5:
 * add code comments
 * add the new data to the report
 * start to look at oversampling
+
+### 11/5
+* Wrote a README with instructions on how to run our scripts
+* Cleaned up our code and added some comments
+* Started writing code to oversample data before training
