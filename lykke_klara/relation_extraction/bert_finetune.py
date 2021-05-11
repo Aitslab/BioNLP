@@ -1,31 +1,22 @@
 import torch
-
-import gc
-
 import re
 import json
-
 import random
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-
 import os
-
 import time
 import datetime
+import sys
 
 from transformers import BertTokenizer
 from transformers import BertForSequenceClassification, AdamW, BertConfig
 from transformers import get_linear_schedule_with_warmup
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler, SequentialSampler
 
-import os
 os.environ['TF_FORCE_GPU_ALLOW_GROWTH'] = 'true'
-
 data_dir = "drive/MyDrive/nlp_2021_alexander_petter/utils/chemprot/custom_label_datasets/"
 exclude_label = {"OTHER"}
-
 torch.cuda.empty_cache()
 
 if torch.cuda.is_available():
@@ -370,8 +361,7 @@ for epoch_i in range(0, epochs):
     print("")
     print("Training complete!")
     print("Total training took {:} (h:mm:ss)".format(format_time(time.time()-total_t0)))
-
-    output_dir = '/content/drive/MyDrive/nlp_2021_alexander_petter/utils/chemprot/models/bert-finetuned-{}/'.format(epoch_i)
+    output_dir = sys.argv[1] + 'bert-finetuned-{}/'.format(epoch_i)
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
@@ -382,5 +372,5 @@ for epoch_i in range(0, epochs):
     tokenizer.save_pretrained(output_dir)
 
 # Write metrics to result file
-with open("drive/MyDrive/nlp_2021_alexander_petter/utils/chemprot/output_metrics.txt", 'w') as outfile:
+with open(sys.argv[2] + 'output_metrics.txt', 'w') as outfile:
     json.dump(model_metrics, outfile)
