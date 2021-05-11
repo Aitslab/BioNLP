@@ -30,7 +30,7 @@ Outputs the trained models to `model_dir` and the training and validation metric
 ```shell
 python eval.py <model_dir> <corpus>*
 ```
-Appends metrics to `output_metrics_file`.
+Appends f1-score, precision and recall to `output_metrics_file`.
 
 <sub> \* one or more <sub>
 
