@@ -27,10 +27,10 @@ Outputs the trained models to `model_dir` and the training and validation metric
 
 #### 3. Evaluate a model:
 
-Pass a model from your `model_dir` together with at lest one corpus file
+Pass a model from your `model_dir` together with one corpus file
 
 ```shell
-python eval.py <model> <output_metrics_file> <corpus>
+python eval.py <model> <corpus> <output_metrics_file> 
 ```
 Appends f1-score, precision and recall to `output_metrics_file`.
 
