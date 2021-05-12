@@ -110,3 +110,9 @@ TODO 11/5:
 * Wrote a README with instructions on how to run our scripts
 * Cleaned up our code and added some comments
 * Started writing code to oversample data before training
+
+### 12/5
+* Finished the code for oversampling the train.txt file
+* Trained all the models on the oversampled data and evaluated
+* Saved the results in the report
+* Attended a meeting with the other groups
