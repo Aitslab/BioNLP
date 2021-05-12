@@ -7,14 +7,15 @@ def plot_loss_acc(data, indices, output_dir):
   x = list(indices)
   plt.xticks(indices)
 
-  plt.plot(x, data['average training loss'], color="blue")
-  plt.plot(x, data['average validation loss'], color="red")
+  plt.plot(x, data['average training loss'],     color="blue")
+  plt.plot(x, data['average validation loss'],   color="red")
   plt.plot(x, data['average training accuracy'], color="green")
-  plt.plot(x, data['train.txt']['accuracy'], color="orange") # accuracies returned by the eval.py script
+  plt.plot(x, data['train.txt']['accuracy'],     color="orange") # accuracies returned by the eval.py script
 
-  plt.legend(['avg. training loss', 'avg. validation loss', 'avg. training accuracy', 
-    'avg. validation accuracy'], loc="upper center", bbox_to_anchor=(0.5, 1.23),
-          fancybox=True, ncol=2)
+  plt.legend(['avg. training loss', 'avg. validation loss', 
+              'avg. training accuracy', 'avg. validation accuracy'], 
+              loc="upper center", bbox_to_anchor=(0.5, 1.23),
+              fancybox=True, ncol=2)
 
   plt.xlabel('epoch')
   plt.tight_layout()

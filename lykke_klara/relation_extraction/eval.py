@@ -10,7 +10,7 @@ from sklearn.metrics import classification_report
 
 # Predict classes and calculate metrics
 def evaluate(input_dir, corpus, metrics):
-  classes = ["NOT", "PART-OF", "INTERACTOR", "REGULATOR-POSITIVE", "REGULATOR-NEGATIVE"] #["INTERACTOR", "NOT", "PART-OF", "REGULATOR-NEGATIVE", "REGULATOR-POSITIVE"]
+  classes = ["NOT", "PART-OF", "INTERACTOR", "REGULATOR-POSITIVE", "REGULATOR-NEGATIVE"]
   predictions = []
   true_classes = []
   correct_predictions = 0
@@ -60,18 +60,19 @@ def predict_class(seq, classes, input_dir, device):
 # Appends the metrics to the result file
 if __name__ == "__main__":
   model = sys.argv[1]
+  corpus = sys.argv[2]
+  output_file = sys.argv[3]
 
-  for filepath in sys.argv[2:]:
-    with open("drive/MyDrive/nlp_2021_alexander_petter/utils/chemprot/output_metrics.txt") as infile:
-      data = infile.read()
+  with open(output_file) as infile:
+    data = infile.read()
 
-    metrics = json.loads(data)
-    filename = filepath.split("/")[-1]
+  metrics = json.loads(data)
+  filename = corpus.split("/")[-1]
 
-    if filename in metrics.keys():
-      metrics[filename] = evaluate(model, filepath, metrics[filename])
-    else:
-      metrics[filename] = evaluate(model, filepath, {"f1-score": [], "recall": [], "precision": [], "accuracy": []})
-    
-    with open("drive/MyDrive/nlp_2021_alexander_petter/utils/chemprot/output_metrics.txt", "w") as outfile:
-      json.dump(metrics, outfile)
+  if filename in metrics.keys():
+    metrics[filename] = evaluate(model, corpus, metrics[filename])
+  else:
+    metrics[filename] = evaluate(model, corpus, {"f1-score": [], "recall": [], "precision": [], "accuracy": []})
+  
+  with open(output_file, "w") as outfile:
+    json.dump(metrics, outfile)

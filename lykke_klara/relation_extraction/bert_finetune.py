@@ -8,14 +8,24 @@ import os
 import time
 import datetime
 import sys
+import argparse
 
 from transformers import BertTokenizer
 from transformers import BertForSequenceClassification, AdamW, BertConfig
 from transformers import get_linear_schedule_with_warmup
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler, SequentialSampler
+from imblearn.over_sampling import RandomOverSampler
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--oversample", action="store_true")
+parser.add_argument('files', nargs='*')
+args = parser.parse_args()
+
+oversample = args.oversample
+files = args.files
 
 os.environ['TF_FORCE_GPU_ALLOW_GROWTH'] = 'true'
-data_dir = "drive/MyDrive/nlp_2021_alexander_petter/utils/chemprot/custom_label_datasets/"
+data_dir = files[1]
 exclude_label = {"OTHER"}
 torch.cuda.empty_cache()
 
@@ -30,8 +40,15 @@ else:
     print("\n\nNo GPU(s) available, switching to CPU.")
     device = torch.device("cpu")
 
+# Oversample parameters
+os_params = {"NOT":                  {"cid": 0, "support": 241, "factor": 5},
+             "PART-OF":              {"cid": 1, "support": 308, "factor": 3},
+             "INTERACTOR":           {"cid": 2, "support": 2583,"factor": 3},
+             "REGULATOR-POSITIVE":   {"cid": 3, "support": 799, "factor": 3},
+             "REGULATOR-NEGATIVE":   {"cid": 4, "support": 2505,"factor": 3}
+            }
 
-def read_data(file_path):
+def read_data(file_path, oversample=False):
   with open(file_path, "r", encoding="utf-8") as f:
       input = f.readlines()
 
@@ -45,9 +62,26 @@ def read_data(file_path):
               sentences.append(entry["text"])
               labels.append(int(entry["cid"]))
 
+      # Oversampling
+      if oversample:
+        not_params     = os_params["NOT"]
+        part_of_params = os_params["PART-OF"]
+        reg_pos_params = os_params["REGULATOR-POSITIVE"]
+
+        # Define oversampling strategy
+        os_strategy = {not_params["cid"]    : not_params["support"]     * not_params["factor"], 
+                       part_of_params["cid"]: part_of_params["support"] * part_of_params["factor"], 
+                       reg_pos_params["cid"]: reg_pos_params["support"] * reg_pos_params["factor"]
+                      }
+
+        oversample = RandomOverSampler(sampling_strategy=os_strategy)
+        sentences_over, labels_over = oversample.fit_resample(np.array([sentences]).T, labels)
+
+        return sentences_over.flatten(), labels_over
+
       return sentences, labels
 
-train_sentences, train_labels   = read_data(data_dir + "train.txt")
+train_sentences, train_labels   = read_data(data_dir + "train.txt", oversample)
 dev_sentences, dev_labels       = read_data(data_dir + "dev.txt")
 test_sentences, test_labels     = read_data(data_dir + "test.txt")
 
@@ -59,7 +93,7 @@ print('\nLoading BERT-tokenizer')
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', do_lower_case=True)
 print('\nBERT-tokenizer loaded. Running example:\n')
 
-print("Original: ", train_sentences[0])
+print("Original: ",  train_sentences[0])
 print("Tokenized: ", tokenizer.tokenize(train_sentences[0]))
 print("Token IDs: ", tokenizer.convert_tokens_to_ids(tokenizer.tokenize(train_sentences[0])))
 
@@ -361,16 +395,16 @@ for epoch_i in range(0, epochs):
     print("")
     print("Training complete!")
     print("Total training took {:} (h:mm:ss)".format(format_time(time.time()-total_t0)))
-    output_dir = sys.argv[1] + 'bert-finetuned-{}/'.format(epoch_i)
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
+    model_dir = files[0] + 'bert-finetuned-{}/'.format(epoch_i)
+    if not os.path.exists(model_dir):
+        os.makedirs(model_dir)
 
-    print("Saving model to %s" % output_dir)
+    print("Saving model to %s" % model_dir)
 
     model_to_save = model.module if hasattr(model, 'module') else model
-    model_to_save.save_pretrained(output_dir)
-    tokenizer.save_pretrained(output_dir)
+    model_to_save.save_pretrained(model_dir)
+    tokenizer.save_pretrained(model_dir)
 
 # Write metrics to result file
-with open(sys.argv[2] + 'output_metrics.txt', 'w') as outfile:
+with open(files[2] + 'output_metrics.txt', 'w') as outfile:
     json.dump(model_metrics, outfile)
