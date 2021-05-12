@@ -21,7 +21,7 @@ python add_custom_labels.py <processed_dir> <output_dir>
 #### 2. Train and save the models:
 
 ```shell
-python bert_finetune.py <model_dir> <output_metrics_dir>
+python bert_finetune.py <model_dir> <processed_dir> <output_metrics_dir>
 ```
 Outputs the trained models to `model_dir` and the training and validation metrics to `output_metrics_file` in the `output_metrics_dir`.
 
@@ -30,7 +30,7 @@ Outputs the trained models to `model_dir` and the training and validation metric
 Pass a model from your `model_dir` together with at lest one corpus file
 
 ```shell
-python eval.py <model> <corpus>
+python eval.py <model> <output_metrics_file> <corpus>
 ```
 Appends f1-score, precision and recall to `output_metrics_file`.
 
