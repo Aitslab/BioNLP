@@ -170,3 +170,5 @@ contractile vacuoles
 
 
 see also https://en.wikipedia.org/wiki/Category:Organelles
+https://bioportal.bioontology.org/ontologies/SAO
+GO cellular component
