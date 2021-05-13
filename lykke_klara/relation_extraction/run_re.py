@@ -6,59 +6,54 @@ import csv
 from transformers import BertTokenizer
 from transformers import BertForSequenceClassification, AdamW, BertConfig
 
-# Predict classes
-def predict(model_dir, articles):
+# Write predictions to file
+def predict_all(articles):
+  global model, tokenizer, device
 
-  # Load model
-  model = BertForSequenceClassification.from_pretrained(model_dir, local_files_only=True, cache_dir=None)
+  model     = BertForSequenceClassification.from_pretrained(model_dir, local_files_only=True, cache_dir=None)
   tokenizer = BertTokenizer.from_pretrained(model_dir)
-  device = torch.device("cuda")
+  device    = torch.device("cuda")
   model.to(device)
 
-  classes     = ["NOT", "PART-OF", "INTERACTOR", "REGULATOR-POSITIVE", "REGULATOR-NEGATIVE"]
-  predictions = []
+  with open(file_path, "w") as tsv_file:
+    writer = csv.writer(tsv_file, delimiter='\t', lineterminator='\n')
 
-  for article in articles.values():
-    sentences = article["sentences"]
+    for article in articles.values():
+      sentences = article["sentences"]
 
-    for sentence in sentences:
-      text     = sentence["text"]
-      entities = sentence["entities"]
+      for sentence in sentences:
 
-      # Only predict if two entities
-      if len(entities) == 2:
-        input_ids  = torch.tensor(tokenizer.encode(text)).unsqueeze(0).to(device)
-        outputs    = model(input_ids)
-        pred_class = classes[torch.softmax(outputs.logits, dim=1).argmax()]
+        # Only predict if two entities
+        if sentence["entitycount"] == 2:
+          tagged   = sentence["tagged"]
+          text     = sentence["text"]
+          entities = sentence["entities"]
+          pred_rel = predict_relation(tagged)
 
-        predictions.append({"entities": entities, "relation": pred_class, "text": text})
- 
-  return predictions
+          writer.writerow([entities[0], pred_rel, entities[1], text])
 
 
-def read_corpus(corpus):
+# Predict classes
+def predict_relation(text):
+  classes    = ["NOT", "PART-OF", "INTERACTOR", "REGULATOR-POSITIVE", "REGULATOR-NEGATIVE"]
+  input_ids  = torch.tensor(tokenizer.encode(text)).unsqueeze(0).to(device)
+  outputs    = model(input_ids)
+  pred_rel   = classes[torch.softmax(outputs.logits, dim=1).argmax()]
+  return pred_rel
 
-  with open(corpus, "r", encoding="utf-8") as f:
+
+def read_corpus(corpus_path):
+
+  with open(corpus_path, "r", encoding="utf-8") as f:
     articles = json.loads(f.read())
   
   return articles
 
-
-def write_predictions(predictions, file_path):
-
- with open(file_path, "w") as tsv_file:
-    writer = csv.writer(tsv_file, delimiter='\t', lineterminator='\n')
-
-    for prediction in predictions:
-      entities = prediction["entities"]
-      writer.writerow([entities[0], prediction["relation"], entities[1], prediction["text"]])
-
     
 if __name__ == "__main__":
-  model     = sys.argv[1]
-  corpus    = sys.argv[2]
-  file_path = sys.argv[3]
+  model_dir   = sys.argv[1]
+  corpus_path = sys.argv[2]
+  file_path   = sys.argv[3]
 
-  articles    = read_corpus(corpus)
-  predictions = predict(model, articles)
-  write_predictions(predictions, file_path)
+  articles = read_corpus(corpus_path)
+  predict_all(articles)
