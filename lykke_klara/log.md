@@ -116,3 +116,6 @@ TODO 11/5:
 * Trained all the models on the oversampled data and evaluated
 * Saved the results in the report
 * Attended a meeting with the other groups
+
+### 13/5 (Lykke)
+* Created the run_re script which takes as input the output from NER and outputs a tsv file with the entities, relation and sentence
