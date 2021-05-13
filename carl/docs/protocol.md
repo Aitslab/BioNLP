@@ -6,6 +6,9 @@ Author: Carl Ollvik Aasa
 Supervisors: Sonja Aits, sonja.aits@med.lu.se; Johanna Berg, johanna@tech.se
 
 ## Background
+BERT AND/OR Dictionary (we don't know which is best for medical journals, union or intersection
+
+
 
 En enorm mängd data för symtombilder och olika medicinska tillstånd och processer finns i medicinsk dokumentation, men är skriven som fritext i journaler. Deep learning modeller av neurala nätverk för NLP (Natural language processing) har använts för allt från digitala assistenter, automatisk summering, chatbots och text-generering. En sådan modell tränad för medicinsk språk skulle ha potential att kunna hantera och strukturera den data som finns i journaltexter med specifika mål.
 
