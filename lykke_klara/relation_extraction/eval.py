@@ -52,9 +52,6 @@ def evaluate(input_dir, corpus, metrics):
 
   return metrics
 
-def predict_class(seq, classes, input_dir, device):
-
-  return pred_class, true_class
 
 # Pass a model and one or more corpuses 
 # Appends the metrics to the result file
