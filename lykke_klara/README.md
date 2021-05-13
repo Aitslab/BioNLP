@@ -3,6 +3,7 @@
 * [`bert_finetune.py`](relation_extraction/bert_finetune.py) trains the models and saves them
 * [`eval.py`](relation_extraction/eval.py) saves evaluation metrics in result file
 * [`plot.py`](relation_extraction/plot.py) plots the metrics
+* [`run_re.py`](relation_extraction/run_re.py) predicts relation and outputs the result in a tsv file
 
 
 ## Setup
@@ -40,3 +41,12 @@ Appends f1-score, precision and recall to `output_metrics_file`.
 python plot.py <output_metrics_file> <output_plot_dir>
 ```
 Saves plots in `output_plot_dir`.
+
+#### 5. Predict relations and save result:
+
+Pass a model from your `model_dir` together with one corpus file (.json format from NER)
+
+```shell
+python run_re.py <model> <corpus> <output_file> 
+```
+outputs the predictions in the `output_file` (.tsv format)
