@@ -1,0 +1,172 @@
+#List of organelles and organelle-like structures
+
+mitochondrium
+mitochondrion
+mitochondria
+Golgi apparatus
+Golgi complex
+Golgi complexes
+Golgi body
+Golgi bodies
+Golgi
+nucleus
+nuclei
+lysosome
+lysosomes
+ribosome
+ribosomes
+ribosome (80S)
+ribosomes (80S)
+spliceosome
+spliceosomes
+vault
+vaults
+vault cytoplasmic ribonucleoprotein
+vault cytoplasmic ribonucleoproteins
+plastid
+plastids
+flagellum
+flagella
+cytoplasm
+cytoplasms
+chloroplast
+chloroplasts
+endoplasmic reticulum
+rough endoplasmic reticulum
+smooth endoplasmic reticulum
+endoplasmatic reticulum
+rough endoplasmatic reticulum
+smooth endoplasmatic reticulum
+central vacuole
+central vacuoles
+vacuole
+vacuoles
+tonoplast
+tonoplasts
+contractile vacuole
+contractile vacuoles
+food vacuole
+food vacuoles
+digestive vacuole
+digestive vacuoles
+plasma membrane
+plasma membranes
+cell membrane
+cell membranes
+cell wall
+cell walls
+acrosome
+acrosomes
+autophagosome
+autophagosomes
+autolysosome
+autolysosomes
+centriole
+centrioles
+cilium
+cilia
+cnidocyst
+cnidocysts
+cnida
+cnidae
+nematocyst
+nematocysts
+eyespot apparatus
+glycosome
+glycosomes
+glyoxysome
+glyoxysomes
+hydrogenosome
+hydrogenosomes
+melanosome
+melanosomes
+mitosome
+mitosomes
+myofibril
+myofibrils
+nucleolus
+nucleoli
+ocelloid
+parenthesome
+parenthesomes
+peroxisome
+peroxisomes
+porosome
+porosomes
+proteasome
+proteasomes
+endosome
+endosomes
+endolysosome
+endolysosomes
+phagosome
+phagosomes
+stress granule
+stress granules
+lipid droplet
+lipid droplets
+lysosome-like organelle
+lysosome-like organelles
+TIGER domain
+TIGER domains
+vesicle
+vesicles
+clathrin-coated pit
+clathrin-coated pits
+clathrin-coated vesicle
+clathrin-coated vesicles
+acidic vesicle
+acidic vesicles
+secretory vesicle
+secretory vesicles
+synaptic vesicle
+synaptic vesicles
+microvesicle
+microvesicles
+exosome
+exosomes
+ectosome
+ectosomes
+oncosome
+oncosomes
+axon
+axons
+dendrite
+dendrites
+synapse
+synapses
+presynaptic terminal
+presynaptic terminals
+pinosome
+pinosomes
+caveola
+cavelolae
+lipid raft
+lipid rafts
+macropinosome
+macropinosomes
+endomembrane system
+endomembrane systems
+phagocytic organelle
+phagocytic organelles
+filopodium
+filopodia
+nuclear membrane
+neclear membranes
+centrosome
+centrosomes
+omegasome
+omegasomes
+chromosome
+chromosomes
+mitoribosome
+mitoribosomes
+plastoribosome
+plastoribosomes
+contractile vacuole
+contractile vacuoles
+
+
+
+
+see also https://en.wikipedia.org/wiki/Category:Organelles
