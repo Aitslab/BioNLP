@@ -33,3 +33,17 @@
 - Adapted conllparser.py to handle the CRAFT corpus in .conll format.
 - Realizing there's problems with tags spanning multiple utterances, and adapting the code to ignore those tags.
 - Creating environment for training in Google Colab.
+
+## 11/05
+- Checking and modificating conllparser.py to handle the corpus while consuimng less RAM.
+- Parsing dev and test sets, running into problems with a single file from the train set.
+
+## 12/05
+- Deciding to remove 16870721.conll from the training set to avoid errors given when parsing the file.
+- Trying to parse on a subset of the training set given that the memory was unsufficient.
+
+## 13/05
+- Keep trying to parse the training set in smaller subsets.
+# 14/05
+- Parsing the training set in two different halves given that Google Colab doesn't have enough memory to parse the whole set at once
+- Checking if it's possible to conactenate the resulting files together.

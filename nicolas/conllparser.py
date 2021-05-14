@@ -366,7 +366,7 @@ class ConllDoc(Document):
         return lookup
 
     def add_conll_utterance(
-        self, parsed, tokens, corefs, speaker_id, use_gold_mentions, debug=False
+        self, parsed, tokens, corefs, speaker_id, use_gold_mentions, debug=True
     ):
         conll_lookup = self.get_conll_spacy_lookup(tokens, parsed)
         self.conll_tokens.append(tokens)
@@ -390,8 +390,8 @@ class ConllDoc(Document):
             self.speakers[speaker_id] = Speaker(speaker_id, speaker_name)
         if use_gold_mentions:
             for coref in corefs:
-                # print("coref['label']", coref['label'])
-                # print("coref text",parsed[coref['start']:coref['end']+1])
+                #print("coref['label']", coref['label'])
+                #print("coref text",parsed[coref['start']:coref['end']+1])
                 mention = Mention(
                     parsed[coref["start"] : coref["end"] + 1],
                     len(self.mentions),
@@ -596,7 +596,7 @@ class ConllCorpus(object):
         self,
         n_jobs=4,
         embed_path=PACKAGE_DIRECTORY + "/weights/",
-        gold_mentions=False,
+        gold_mentions=True,
         blacklist=False,
     ):
         self.n_jobs = n_jobs
@@ -714,7 +714,7 @@ class ConllCorpus(object):
                     if debug:
                         print(out_str)
 
-    def read_corpus(self, data_path, model=None, debug=True):
+    def read_corpus(self, data_path, model=None, debug=False):
         print("🌋 Reading files")
         for dirpath, _, filenames in os.walk(data_path):
             print("In", dirpath, os.path.abspath(dirpath))
@@ -939,7 +939,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--gold_mentions",
         type=int,
-        default=0,
+        default=1,
         help="Use gold mentions (1) or not (0, default)",
     )
     parser.add_argument(
