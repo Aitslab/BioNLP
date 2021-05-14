@@ -8,9 +8,9 @@
 
 ## Setup
 
-First you need to follow the [`setup`](https://github.com/Aitslab/nlp_2021_alexander_petter#setup-using-conda-anaconda--miniconda) guide using Conda. Thereafter follow [`step 1: extracting relations`](https://github.com/Aitslab/nlp_2021_alexander_petter/tree/master/utils/chemprot#extracting-relations) to process your data. Do not continue to the `Building dataset` step as we don't want to change the data split.
+First you need to follow the [`setup`](https://github.com/Aitslab/nlp_2021_alexander_petter#setup-using-conda-anaconda--miniconda) guide using Conda. Thereafter follow [`step 1: extracting relations`](https://github.com/Aitslab/nlp_2021_alexander_petter/tree/master/utils/chemprot#extracting-relations) to process your data. Do not continue to the `Building dataset` step as we don't want to change the data splits.
 
-## How to run the program
+## How to train and evaluate SciBERT on Chemprot corpus
 
 #### 1. Add custom labels:
 
@@ -42,11 +42,19 @@ python plot.py <output_metrics_file> <output_plot_dir>
 ```
 Saves plots in `output_plot_dir`.
 
-#### 5. Predict relations and save result:
+## How to use your trained models to predict on output from NER
 
-Pass a model from your `model_dir` together with one corpus file (.json format from NER)
+### Setup
+Continue to follow the [`setup`](https://github.com/Aitslab/nlp_2021_alexander_petter#setup-using-conda-anaconda--miniconda) guide and run the pipeline with the downloader, sentencer and NER. 
+
+#### 1. Add entity markers
+The output from NER needs to be tagged. To do that, run [`add_ner_tag.py`](https://github.com/Aitslab/nlp_2021_alexander_petter/blob/master/under_development/add_ner_tags.py) and pass the output file from NER (`text-ner.json`) and path to output file (`text-nertags.json`) as arguments. The script needs the [`util.py`](https://github.com/Aitslab/nlp_2021_alexander_petter/blob/master/scripts/util.py) script as well.
+
+#### 2. Predict relations and save result
+
+Pass a model from your `model_dir` together with the `text-nertags.json` file and path to output file (.tsv format)
 
 ```shell
-python run_re.py <model> <corpus> <output_file> 
+python run_re.py <model> <text-nertags> <output_file> 
 ```
-outputs the predictions in the `output_file` (.tsv format)
+outputs the predictions in the `output_file` on the format: `entity1 relation entity2 sentence`
