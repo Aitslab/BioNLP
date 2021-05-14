@@ -105,3 +105,17 @@ TODO 11/5:
 * add code comments
 * add the new data to the report
 * start to look at oversampling
+
+### 11/5
+* Wrote a README with instructions on how to run our scripts
+* Cleaned up our code and added some comments
+* Started writing code to oversample data before training
+
+### 12/5
+* Finished the code for oversampling the train.txt file
+* Trained all the models on the oversampled data and evaluated
+* Saved the results in the report
+* Attended a meeting with the other groups
+
+### 13/5 (Lykke)
+* Created the run_re script which takes as input the output from NER and outputs a tsv file with the entities, relation and sentence

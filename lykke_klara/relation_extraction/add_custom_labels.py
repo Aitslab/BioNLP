@@ -1,16 +1,14 @@
 import json
 import os
+import sys
 
 from collections import defaultdict, OrderedDict
 from typing import DefaultDict, List
 
-directory = "/content/drive/MyDrive/nlp_2021_alexander_petter/utils/chemprot/processed/"
-directory_out = "/content/drive/MyDrive/nlp_2021_alexander_petter/utils/chemprot/custom_label_datasets/"
+def make_data_dict(filename, in_dir):
+    entry_set : DefaultDict[str, list()] = defaultdict(lambda: list())
 
-def make_data_dict(filename):
-    entry_set: DefaultDict[str, list()] = defaultdict(lambda: list())
-
-    with open(directory + filename, "r", encoding='utf8') as f:
+    with open(in_dir + filename, "r", encoding='utf8') as f:
         data_list = f.readlines()
 
         for line in data_list:
@@ -18,8 +16,8 @@ def make_data_dict(filename):
 
             if entry["label"] != "UNDEFINED":
               entry_set[entry["label"]].append(entry)
-
-    return entry_set
+ 
+    return entry_set 
 
 def map_chemprot_labels_to_custom_labels(cpl_set):
     '''
@@ -113,7 +111,7 @@ def map_chemprot_labels_to_custom_labels(cpl_set):
 
     return cl_set
 
-def write_files(entry_set, filename):
+def write_files(entry_set, filename, out_dir):
   result_set = list()
   
   statistics: DefaultDict[str, defaultdict()] = defaultdict(lambda: defaultdict(int))
@@ -127,20 +125,19 @@ def write_files(entry_set, filename):
       result_set += label_list
 
       length = len(label_list)
-
       dataset = os.path.splitext(filename)[0]
 
       statistics[dataset][custom_label]   = length
       statistics[dataset]["total"]       += length
 
-  with open(directory_out + filename, "w", encoding='utf8') as out_file: #, \
+  with open(out_dir + filename, "w", encoding='utf8') as out_file:
       
       for entry in result_set[:-1]:
           out_file.write(json.dumps(entry, ensure_ascii=False) + "\n")
       
       out_file.write(json.dumps(result_set[-1], ensure_ascii=False))
   
-  with open(directory_out + "statistics.txt", "a", encoding='utf8') as stats:
+  with open(out_dir + "statistics.txt", "a", encoding='utf8') as stats:
 
       for set in sorted(statistics):
         stats.write(set + "_set\n" + "-"*50 + "\n")
@@ -157,9 +154,17 @@ def write_files(entry_set, filename):
                         str(round(100*statistics[set][custom_label]/statistics[set]["total"], 2)) + "\n")
         stats.write("-"*50 + "\n\n")
 
-io_files = [("chemprot_training_processed.txt", "train.txt"), ("chemprot_development_processed.txt", "dev.txt"), ("chemprot_test_processed.txt", "test.txt")]
 
-for i, o in io_files:
-  entry_set = make_data_dict(i)
-  custom_entry_set = map_chemprot_labels_to_custom_labels(entry_set)
-  write_files(custom_entry_set, o)
+# Pass directory with processed files and output directory
+if __name__ == "__main__":
+  in_dir = sys.argv[1]
+  out_dir = sys.argv[2]    
+
+  io_files = [("chemprot_training_processed.txt", "train.txt"), 
+  ("chemprot_development_processed.txt", "dev.txt"), ("chemprot_test_processed.txt", "test.txt")]
+
+  for in_file, out_file in io_files:
+    entry_set = make_data_dict(in_file, in_dir)
+    custom_entry_set = map_chemprot_labels_to_custom_labels(entry_set)
+    write_files(custom_entry_set, out_file, out_dir)
+

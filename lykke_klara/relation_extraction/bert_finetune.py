@@ -1,31 +1,32 @@
 import torch
-
-import gc
-
 import re
 import json
-
 import random
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-
 import os
-
 import time
 import datetime
+import sys
+import argparse
 
 from transformers import BertTokenizer
 from transformers import BertForSequenceClassification, AdamW, BertConfig
 from transformers import get_linear_schedule_with_warmup
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler, SequentialSampler
+from imblearn.over_sampling import RandomOverSampler
 
-import os
+parser = argparse.ArgumentParser()
+parser.add_argument("--oversample", action="store_true")
+parser.add_argument('files', nargs='*')
+args = parser.parse_args()
+
+oversample = args.oversample
+files = args.files
+
 os.environ['TF_FORCE_GPU_ALLOW_GROWTH'] = 'true'
-
-data_dir = "drive/MyDrive/nlp_2021_alexander_petter/utils/chemprot/custom_label_datasets/"
+data_dir = files[1]
 exclude_label = {"OTHER"}
-
 torch.cuda.empty_cache()
 
 if torch.cuda.is_available():
@@ -39,25 +40,48 @@ else:
     print("\n\nNo GPU(s) available, switching to CPU.")
     device = torch.device("cpu")
 
+# Oversample parameters
+os_params = {"NOT":                  {"cid": 0, "support": 241, "factor": 5},
+             "PART-OF":              {"cid": 1, "support": 308, "factor": 3},
+             "INTERACTOR":           {"cid": 2, "support": 2583,"factor": 3},
+             "REGULATOR-POSITIVE":   {"cid": 3, "support": 799, "factor": 3},
+             "REGULATOR-NEGATIVE":   {"cid": 4, "support": 2505,"factor": 3}
+            }
 
-def read_data(file_path):
-    with open(file_path, "r", encoding="utf-8") as f:
-        input = f.readlines()
+def read_data(file_path, oversample=False):
+  with open(file_path, "r", encoding="utf-8") as f:
+      input = f.readlines()
 
-        sentences   = []
-        labels      = []
+      sentences   = []
+      labels      = []
 
-        for line in input:
-            entry = json.loads(line)
+      for line in input:
+          entry = json.loads(line)
 
-            if not entry["custom_label"] in exclude_label:
-                sentences.append(entry["text"])
-                labels.append(int(entry["cid"]))
+          if not entry["custom_label"] in exclude_label:
+              sentences.append(entry["text"])
+              labels.append(int(entry["cid"]))
 
-        return sentences, labels
+      # Oversampling
+      if oversample:
+        not_params     = os_params["NOT"]
+        part_of_params = os_params["PART-OF"]
+        reg_pos_params = os_params["REGULATOR-POSITIVE"]
 
+        # Define oversampling strategy
+        os_strategy = {not_params["cid"]    : not_params["support"]     * not_params["factor"], 
+                       part_of_params["cid"]: part_of_params["support"] * part_of_params["factor"], 
+                       reg_pos_params["cid"]: reg_pos_params["support"] * reg_pos_params["factor"]
+                      }
 
-train_sentences, train_labels   = read_data(data_dir + "train.txt")
+        oversample = RandomOverSampler(sampling_strategy=os_strategy)
+        sentences_over, labels_over = oversample.fit_resample(np.array([sentences]).T, labels)
+
+        return sentences_over.flatten(), labels_over
+
+      return sentences, labels
+
+train_sentences, train_labels   = read_data(data_dir + "train.txt", oversample)
 dev_sentences, dev_labels       = read_data(data_dir + "dev.txt")
 test_sentences, test_labels     = read_data(data_dir + "test.txt")
 
@@ -69,7 +93,7 @@ print('\nLoading BERT-tokenizer')
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', do_lower_case=True)
 print('\nBERT-tokenizer loaded. Running example:\n')
 
-print("Original: ", train_sentences[0])
+print("Original: ",  train_sentences[0])
 print("Tokenized: ", tokenizer.tokenize(train_sentences[0]))
 print("Token IDs: ", tokenizer.convert_tokens_to_ids(tokenizer.tokenize(train_sentences[0])))
 
@@ -135,7 +159,6 @@ print("\nEncoding done. Running example:")
 print("Original:\t", train_sentences[1])
 print("Token IDs:\t", train_input_ids[1])
 
-
 print("\n\nDatasets:")
 print(str(len(train_sentences)) + " training samples")
 print(str(len(dev_sentences)) + " development samples")
@@ -193,7 +216,7 @@ optimizer = AdamW(model.parameters(),
                   )
 
 # Starts overfitting after 2 epochs
-epochs = 4
+epochs = 5
 # [number of batches] x [number of epochs]. Note that it is not the same as the number of training samples
 total_steps = len(train_dataloader) * epochs
 
@@ -364,43 +387,24 @@ for epoch_i in range(0, epochs):
     print("     Validation Loss: {0:.2f}".format(avg_val_loss))
     print("     Validation took: {:}".format(validation_time))
 
+    # Save the metrics
     model_metrics['average training loss'].append(avg_train_loss)
     model_metrics['average validation loss'].append(avg_val_loss)
     model_metrics['average training accuracy'].append(avg_val_accuracy)
 
     print("")
     print("Training complete!")
-
     print("Total training took {:} (h:mm:ss)".format(format_time(time.time()-total_t0)))
+    model_dir = files[0] + 'bert-finetuned-{}/'.format(epoch_i)
+    if not os.path.exists(model_dir):
+        os.makedirs(model_dir)
 
-
-    output_dir = '/content/drive/MyDrive/nlp_2021_alexander_petter/utils/chemprot/models/bert-finetuned-{}/'.format(epoch_i)
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
-
-    print("Saving model to %s" % output_dir)
+    print("Saving model to %s" % model_dir)
 
     model_to_save = model.module if hasattr(model, 'module') else model
-    model_to_save.save_pretrained(output_dir)
-    tokenizer.save_pretrained(output_dir)
+    model_to_save.save_pretrained(model_dir)
+    tokenizer.save_pretrained(model_dir)
 
-def plot_metrics(model_metrics):
-  x = [1, 2, 3, 4]
-
-  plt.xticks(range(1,5))
-
-  plt.plot(x, model_metrics['average training loss'], color="blue")
-  plt.plot(x, model_metrics['average validation loss'], color="red")
-  plt.plot(x, model_metrics['average training accuracy'], color="green")
-  plt.plot(x, [0.6547545059042884, 0.8354568054692355, 0.8856432566811684, 0.9019577377252952], color="orange") # accuracies returned by the metrics.py script
-
-  plt.legend(['avg. training loss', 'avg. validation loss', 'avg. training accuracy', 'avg. validation accuracy'], loc="upper center", bbox_to_anchor=(0.5, 1.23),
-          fancybox=True, ncol=2)
-
-  plt.xlabel('epoch')
-
-  plt.savefig('/content/drive/MyDrive/training_validation.png')
-
-  plt.show()
-
-plot_metrics(model_metrics)
+# Write metrics to result file
+with open(files[2] + 'output_metrics.txt', 'w') as outfile:
+    json.dump(model_metrics, outfile)

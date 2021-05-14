@@ -1,27 +1,29 @@
 import sys
 import json
-
 import matplotlib.pyplot as plt
-import numpy as np
 
-def plot_loss_acc(data, indices):  
+# Plot the training and validation metrics
+def plot_loss_acc(data, indices, output_dir):  
   x = list(indices)
   plt.xticks(indices)
 
-  plt.plot(x, data['average training loss'], color="blue")
-  plt.plot(x, data['average validation loss'], color="red")
+  plt.plot(x, data['average training loss'],     color="blue")
+  plt.plot(x, data['average validation loss'],   color="red")
   plt.plot(x, data['average training accuracy'], color="green")
-  plt.plot(x, data['train.txt']['accuracy'], color="orange") # accuracies returned by the metrics.py script
+  plt.plot(x, data['train.txt']['accuracy'],     color="orange") # accuracies returned by the eval.py script
 
-  plt.legend(['avg. training loss', 'avg. validation loss', 'avg. training accuracy', 'avg. validation accuracy'], loc="upper center", bbox_to_anchor=(0.5, 1.23),
-          fancybox=True, ncol=2)
+  plt.legend(['avg. training loss', 'avg. validation loss', 
+              'avg. training accuracy', 'avg. validation accuracy'], 
+              loc="upper center", bbox_to_anchor=(0.5, 1.23),
+              fancybox=True, ncol=2)
 
   plt.xlabel('epoch')
   plt.tight_layout()
-  plt.savefig('/content/drive/MyDrive/training_validation.png')
+  plt.savefig(output_dir + '/training_validation.png')
   plt.show()
 
-def plot_metrics(train_data, dev_data, indices):
+# Plot the metrics (f1-score, recall and precision) for the models
+def plot_metrics(train_data, dev_data, indices, output_dir):
   x = list(indices)
 
   for metric in train_data:
@@ -35,7 +37,7 @@ def plot_metrics(train_data, dev_data, indices):
 
     plt.xlabel('epoch')
     plt.ylabel(metric)
-    plt.savefig('/content/drive/MyDrive/{}.png'.format(metric))
+    plt.savefig(output_dir + '/{}.png'.format(metric))
     plt.show()
 
 def read_data(filename):
@@ -45,10 +47,11 @@ def read_data(filename):
   
     return data
 
-
+# Pass the result file and output dir for the plots
 if __name__ == "__main__":
-  filename = sys.argv[1]
+  filename   = sys.argv[1]
+  output_dir = sys.argv[2]
   data = read_data(filename)
-  indices = range(1, len(data['average training loss']) + 1)
-  plot_loss_acc(data, indices)
-  plot_metrics(data['train.txt'], data['dev.txt'], indices)
+  indices = range(1, len(data['average training loss']) + 1) 
+  plot_loss_acc(data, indices, output_dir)
+  plot_metrics(data['train.txt'], data['dev.txt'], indices, output_dir)
