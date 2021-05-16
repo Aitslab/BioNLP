@@ -3,7 +3,7 @@
 * [`bert_finetune.py`](relation_extraction/bert_finetune.py) trains the models and saves them
 * [`eval.py`](relation_extraction/eval.py) saves evaluation metrics in result file
 * [`plot.py`](relation_extraction/plot.py) plots the metrics
-* [`run_re.py`](relation_extraction/run_re.py) predicts relation and outputs the result in a tsv file (integrated in the pipeline described in )
+* [`run_re.py`](relation_extraction/run_re.py) predicts relation and outputs the result in a tsv file (integrated in the [`main.py`](https://github.com/Aitslab/nlp_2021_alexander_petter/blob/master/main.py))
 
 
 ## Setup
