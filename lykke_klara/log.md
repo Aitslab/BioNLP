@@ -119,3 +119,8 @@ TODO 11/5:
 
 ### 13/5 (Lykke)
 * Created the run_re script which takes as input the output from NER and outputs a tsv file with the entities, relation and sentence
+
+### 16/5 (Lykke)
+* integrated the code from run_re to the main.py in the pipeline. moved the code to a separate script in the script directory
+* updated README to fit the changes
+* updated code changes in report
