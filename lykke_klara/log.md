@@ -124,3 +124,8 @@ TODO 11/5:
 * integrated the code from run_re to the main.py in the pipeline. moved the code to a separate script in the script directory
 * updated README to fit the changes
 * updated code changes in report
+
+### 17/5
+* added code to the re.py script to output a file with statistics for the relations
+* started looking at the visualization in cytoscape
+* started working on the presentation
