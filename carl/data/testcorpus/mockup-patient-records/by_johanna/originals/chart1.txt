@@ -1,0 +1,21 @@
+Kontaktorsak: Dyspné
+Tidigare sjukdomar: Insulin och tablettbehandlad DM2. Tablettbehandlad hypertoni. Höga blodfetter.
+Socialt: Ensamboende, hemtjänst * 1.
+Aktuellt: Insjuknat för tre dagar sedan med andnöd vid gång. Tillkomst av hosta under gårdagen. Ej noterat feber, men ej eller mätt tempen. Idag nedsatt AT, svårt att gå. Tagit sina mediciner som vanligt. Sökt VC som hänvisat hit pga destruering. Inte haft några utslag. Ej kontakt med någon annan som varit sjuk. Ej varit ute och rest. Ingen smärta vid miktion, buksmärta eller ÖNH symptom. Idag sämre, kan ej mobilisera sig i hemmet. Inkommer på remiss. Inga kräkningar eller GI symptom.
+Status: 
+AT: Gott, opåverkad i vila, ingen samtalsdyspné.
+Cor: Normofrekvent regelbunden rytm, inga hörbara bi eller blåsljud.
+Pulm: I stort vesikulära antingsljud bilat, dämpat basalt höger. Inget förlängt expirium.
+Buk: Överallt muk och oöm. Ingen lokal peritonit.
+Lokalstatus: Underben smala och gracila, inga pittingödem.
+BT: 117/80
+Sat: 92% på 2l O2
+AF: 28
+Temp: 38.8
+Lab: Blodgas utan respiratorisk acidos, Ph 7,4, CRP 118, diskret förhöjt BE. Normalt laktat
+Tobak: Ej känt
+EKG: Sinusrym med kammarfrekvens 98, inga urakuta ischemiska tecken.
+
+Bedömning: I första hand misstanke om penumoni eller COVID-19, inlägges infektionsavdelning. Provtages SARS-CoV2 insättes cefotaxim. Genomodlas. Nya prover imorgon, CRP, LPK. Röntgen puls från avdelningen. Syrgaskrävande, 2l. Ej septisk.
+
+Diagnos: Pneumoni, ospecificerad

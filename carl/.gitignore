@@ -1,2 +1,1 @@
-#ignore all foo files setup just for testing syntactic feautres.
-/foo*
+\srv*
