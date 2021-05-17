@@ -46,4 +46,4 @@ Saves plots in `output_plot_dir`.
 
 Continue to follow the [`setup`](https://github.com/Aitslab/nlp_2021_alexander_petter#setup-using-conda-anaconda--miniconda) guide and run the pipeline with the downloader, sentencer, NER and add_tags.
 
-To the config of `re`, add path to the directory of your pre-trained SciBERT model e.g. `models/scibert/bert-finetuned-0/`. The output of `re` is a tab separated file with output on the format: `entity1 relation entity2 sentence`.
+To the `re` in [`config`](https://github.com/Aitslab/nlp_2021_alexander_petter/blob/master/config.jsonof) , add the path to the directory of your pre-trained SciBERT model e.g. `models/scibert/<model>/`. The output of `re` is a tab separated file with output on the format: `entity1 relation entity2 sentence`.
