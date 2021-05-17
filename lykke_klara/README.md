@@ -52,6 +52,6 @@ To the `re` in [`config`](https://github.com/Aitslab/nlp_2021_alexander_petter/b
 * the path to the predictions file
 * the path to the statistics file
 
-The output fron `re` is:
+The output from `re` is:
 * predictions file which is a tab separated file with output on the format: `entity1 relation entity2 sentence`
 * statistics  file which is a tab separated file with output sorted by frequency on the format: `entity1 entity2 relation frequency` 
