@@ -34,7 +34,9 @@ Preliminary project is planned to be presented in early june of 2021 as for a "p
 
 #### Charts 
 
-Fabricated charts of typical patients that receive care in the emergency room for testing and development of NLP algorithms.
+### Swedish bioNLP 
+**Aim**: Create a small test sample to determine the feasibility of NLP and data extraction. Test and devlop annotation strategies and application using the software INCEpTION.
+### OpenChartSE
 
 These include charts created by Johanna Berg; Carl Ollvik Aasa; Anton Werin. 
 
@@ -52,6 +54,16 @@ Developed guidelines for entity symptom annotation in clinical texts. This is de
 
 Many problems arising with annotation only show as one annotates; we can se a linguistic problem or logical ambiguity but they are hard to draw actively to mind. Therefore a wiki of interesting problems, sentences and situations are keeps.  These are used to inform the guidelines. 
 
+### testcorpus
+
+*Will be moved to openchartSE*
+
+Fabricated charts of typical patients that receive care in the emergency room for testing and development of NLP algorithms.
+### Annotationstrategy
+
+Developed guidlines for entity symptom annotation in clinical texts
+
+Devloped on the base of 
 ### INCEpTION
 
 Documentation and configuration for the usage of the annotation software INCEpTION with the purpouse of NER-annotation of clinical texts
