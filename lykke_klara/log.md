@@ -129,3 +129,8 @@ TODO 11/5:
 * added code to the re.py script to output a file with statistics for the relations
 * started looking at the visualization in cytoscape
 * started working on the presentation
+
+### 18/5
+* Used Sonja's script to create artificial train and dev corpora
+* Trained new models using the artificial train corpus
+* Attempted to evaluate the models using the artificial train, the artificial dev and the original dev corpus. Ran into major issues with Google Colab, we are currently unable to save our evaluation metrics :(
