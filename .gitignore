@@ -1,0 +1,5 @@
+\srv*
+.vscode
+*.unotes
+.venv
+carl/web_record_collection_app/*

@@ -1,10 +1,17 @@
-# Project documentation and settings for INCEpTION
-This directory contains documentation and configurations for the usage of INCEpTION in the projects context.
-## INCEpTION version
-0.17.2
-## Project guidelines
-* [INCEpTION_project_guide:](INCEpTION_project_guide)
-Documentation on sercurity, backup and continuity plan and best practices.
+# INCEpTION
+
+Version of INCEpTION used: 0.17.2.
+
+[INCEpTION-project Source Repo](https://inception-project.github.io/)
+
+---
+
+This repository contains files and configuration for the usage of the annotation software INCEpTION with the purpouse of NER-annotation of clinical charts.
+
+For documentation and guides for usage se docs:
+
+* [INCEpTION_project_guide:](docs/INCEpTION_project_guide.md) Documentation on security, backup and continuity plan and best practices.
+
 * [INCEpTION_workflow_structure:](INCEpTION_workflow_structure) Defined workflow and steps for project continuity and clear comparison and testing.
 
-## 
+

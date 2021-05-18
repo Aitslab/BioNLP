@@ -1,0 +1,28 @@
+feber SYM
+hosta SYM
+andningspåverkan SYM
+andnöd SYM
+halsont SYM
+huvudvärk SYM
+muskelvärk SYM
+ledvärk SYM
+andningssvårigheter SYM
+lunginflammation SYM
+snuva SYM
+trötthet SYM
+ont i bröstkorgen SYM
+ont i brösten SYM
+ont i bröstet SYM
+svårt att andas SYM
+hes SYM
+tappar rösten SYM
+tappat rösten SYM
+förkylningssymptom SYM
+diffusa symptom SYM
+små symptom SYM
+öronvärk SYM
+hostat SYM
+hostar SYM
+hostade SYM
+sämre luktsinne och smaksinne SYM
+smak och luktbortfall SYM

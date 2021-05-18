@@ -4,6 +4,7 @@
 * [`eval.py`](relation_extraction/eval.py) saves evaluation metrics in result file
 * [`plot.py`](relation_extraction/plot.py) plots the metrics
 * [`run_re.py`](relation_extraction/run_re.py) predicts relation and outputs the result in a tsv file (integrated in the [`main.py`](https://github.com/Aitslab/nlp_2021_alexander_petter/blob/master/main.py))
+* [`build_corpus.py`](https://github.com/Aitslab/BioNLP/blob/master/lykke_klara/artificial_corpus/build_corpus.py) creates artificial training set, original code written by Sonja. 
 
 
 ## Setup
@@ -55,3 +56,13 @@ To the `re` in [`config`](https://github.com/Aitslab/nlp_2021_alexander_petter/b
 The output from `re` is:
 * predictions file which is a tab separated file with output on the format: `entity1 relation entity2 sentence`
 * statistics  file which is a tab separated file with output sorted by frequency on the format: `entity1 entity2 relation frequency` 
+
+
+## Create artificial corpus
+The datafiles used as input can be found [`here`](https://drive.google.com/file/d/1g35nQGnJ7Ay1802xScgfyk4OVzciifoS/view?usp=sharing). Run the script:
+
+```shell
+python build_corpus.py
+```
+
+switch out the input for different entities and relations as you like. The output is a training data set in text format, where each sentence is tagged with custom_label and cid. The file is a combination of all the sentences from each input file.
