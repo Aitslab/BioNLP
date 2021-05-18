@@ -64,5 +64,3 @@ Documentation and configuration for the usage of the annotation software INCEpTI
 ## Manuscript
 
 Documentation for bachelor thesis of Carl Ollvik Aasa
-
-### 
