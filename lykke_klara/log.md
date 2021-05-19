@@ -134,3 +134,14 @@ TODO 11/5:
 * Used Sonja's script to create artificial train and dev corpora
 * Trained new models using the artificial train corpus
 * Attempted to evaluate the models using the artificial train, the artificial dev and the original dev corpus. Ran into major issues with Google Colab, we are currently unable to save our evaluation metrics :(
+
+### 19/5
+* Evaluated the artifical corpus models
+* Created plots & tables for the artificial corpus models and reformatted our old tables
+* Meeting: decided to train the best artificial model 1 epoch on the chemprot train corpus
+* Trained the best artificial model 1 epoch on the chemprot train corpus
+* Filled in our tables with data
+
+TODO:
+* Finish the presentation keynote and send to Sonja for feedback
+* Work on the report
