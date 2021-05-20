@@ -145,3 +145,6 @@ TODO 11/5:
 TODO:
 * Finish the presentation keynote and send to Sonja for feedback
 * Work on the report
+
+### 20/5
+* Worked on presentation and report
