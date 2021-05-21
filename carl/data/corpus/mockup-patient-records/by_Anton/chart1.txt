@@ -1,0 +1,29 @@
+Kontaktorsak: Opioidintoxikation
+
+Tidigare sjukdom: Blandberoende med regelbundet intag av opioider och bensodiazepiner, sporadiskt amfetamin som följs via beroendemottagning. Sjukvårdskrävande överdos 2017, blandintox med Alprazolam och Heroin. Vårdad enligt LVM i anslutning till detta. 
+
+Socialt: Försörjningsstöd via socialtjänsten, erhåller även boende via SOC. 
+
+Aktuellt: Ambulans tillkallades till busshållplats där patienten anträffades kall och medvetandesänkt med nål i armvecket. Långsam andning. Kördes som prio 1 larm till akuten.
+
+Status: 
+
+A: Långsam rosslande andning men utan luftvägshinder. Förbättras efter näskantarell
+
+B: POX 85%, cyanotisk, AF 5, inga yttre avvikelser på bröstkorgen.Erhåller 10L O2/min via oxymask.
+
+C: Puls 50, BT 105/50. Regelbunden rytm utan blåsljud. Hänger Ringer Acetat 1L
+
+D: RLS 8, små pupiller 
+
+E: Temp 32 °C, färskt stickmärke höger armveck, flertalet ärrbildningar ses på armarma bilateralt, troligtvis gamla stickmärken. Inga yttre trauman
+
+Lab: pH 7.1, Laktat 3.5, O2 5.0, CO2 7.8. 
+
+EKG: Sinusbradykardi utan ST-höjningar.
+
+Bedömning: Opioidöverdos, kan ej utesluta att andra droger bidrar till symptombilden
+
+Åtgärd: Erhåller Naloxon IV 0.4 mg, upprepas 2 minuter senare pga bristande effekt. Därefter verkar patienten återfå adekvat spontanandning och stiger till RLS 3. Fortsatt övervakning av saturation och medvetandegrad via avdelning. Vid återigen sänkt spontanandning eller medvetandesänkning skall ytterligare 0.4mg erhållas. Urinsticka skickas för droganalys.
+
+Diagnos: F11.0 Opioider, akut intoxikation
