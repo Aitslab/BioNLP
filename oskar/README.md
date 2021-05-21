@@ -51,10 +51,11 @@ In the cluster i used python version 3.6.8 in a conda enviorment.
 %cd coref
 ```
 
-**3. Install missbehaving packets**
+**3. Install missbehaving & missing packets**
 ```
 pip install psycopg2-binary
 pip install h5py
+pip install nltk
 ```
 **4. Run requirments.txt**
 ```
