@@ -45,12 +45,18 @@ In the project we are using the UCDenver [CRAFT corpus](https://github.com/UCDen
 
 In the cluster i used python version 3.6.8 in a conda enviorment.
 
-**2. Install missbehaving packets**
+**2. Install the coref tool from mandarjoshi90.**
+```
+! git clone https://github.com/mandarjoshi90/coref.git
+%cd coref
+```
+
+**3. Install missbehaving packets**
 ```
 pip install psycopg2-binary
 pip install h5py
 ```
-**3. Run requirments.txt**
+**4. Run requirments.txt**
 ```
 pip install --no-cache-dir --no-build-isolation some_module -r requirements.txt --log install-log.txt -q
 ```
