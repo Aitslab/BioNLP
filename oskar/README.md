@@ -59,5 +59,5 @@ pip install nltk
 ```
 **4. Run requirments.txt**
 ```
-pip install --no-cache-dir --no-build-isolation some_module -r requirements.txt --log install-log.txt -q
+pip install --no-cache-dir --no-build-isolation -r requirements.txt --log install-log.txt -q
 ```
