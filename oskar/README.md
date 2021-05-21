@@ -56,12 +56,16 @@ In the cluster i used python version 3.6.8 in a conda enviorment.
 pip install psycopg2-binary
 pip install h5py
 pip install nltk
+```
 
+**4. CUDA & cuDNN**
+```
 # For the cluster to work: if your running localy you can dowload these yourself.
 conda install cudatoolkit=10.0.130
 conda install cudnn=7.6.0
 ```
-**4. Run requirments.txt**
+
+**5. Run requirments.txt**
 ```
 pip install --no-cache-dir --no-build-isolation -r requirements.txt --log install-log.txt -q
 ```
