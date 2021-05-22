@@ -1,1 +1,5 @@
 \srv*
+*/nlp_models/*
+__pycache__
+*.vscode
+*.unotes

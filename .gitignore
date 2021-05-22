@@ -1,5 +1,4 @@
-\srv*
-.vscode
+*.vscode
 *.unotes
 .venv
-carl/web_record_collection_app/*
+.git-old
