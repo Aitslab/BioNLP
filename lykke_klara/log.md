@@ -148,3 +148,6 @@ TODO:
 
 ### 20/5
 * Worked on presentation and report
+
+### 22/5
+* Worked on the presentation
