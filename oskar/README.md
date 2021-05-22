@@ -10,7 +10,7 @@ https://www.overleaf.com/read/xfdmhbzwshty
 In the project we are using the UCDenver [CRAFT corpus](https://github.com/UCDenver-ccp/craft-shared-tasks).
 
 
-## Installation of SpanBERT for coreference resolution.
+## Installation of SpanBERT for coreference resolution on colab.
 
 **Reference:** Jonathan K. Kummerfeld's Notebook. 
 
@@ -36,4 +36,36 @@ In the project we are using the UCDenver [CRAFT corpus](https://github.com/UCDen
 ! pip uninstall -y tensorflow
 ! pip install -r requirements.txt --log install-log.txt -q
 ! ./setup_all.sh
+```
+
+
+## Installation of SpanBERT for coreference resolution on Centos7 Cluster 
+
+**1. Python Version**
+
+In the cluster i used python version 3.6.8 in a conda enviorment.
+
+**2. Install the coref tool from mandarjoshi90.**
+```
+! git clone https://github.com/mandarjoshi90/coref.git
+%cd coref
+```
+
+**3. Install missbehaving & missing packets**
+```
+pip install psycopg2-binary
+pip install h5py
+pip install nltk
+```
+
+**4. CUDA & cuDNN**
+```
+# For the cluster to work: if your running localy you can dowload these yourself.
+conda install cudatoolkit=10.0.130
+conda install cudnn=7.6.0
+```
+
+**5. Run requirments.txt**
+```
+pip install --no-cache-dir --no-build-isolation -r requirements.txt --log install-log.txt -q
 ```

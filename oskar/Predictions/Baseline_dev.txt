@@ -1,0 +1,31 @@
+Official result for muc
+version: 8.01 /cephyr/NOBACKUP/groups/snic2021-23-312/Oskar/coref/conll-2012/scorer/v8.01/lib/CorScorer.pm
+
+====== TOTALS =======
+Identification of Mentions: Recall: (10399 / 35390) 29.38%	Precision: (10399 / 14258) 72.93%	F1: 41.89%
+--------------------------------------------------------------------------
+Coreference: Recall: (7567 / 32240) 23.47%	Precision: (7567 / 13375) 56.57%	F1: 33.17%
+--------------------------------------------------------------------------
+
+Official result for bcub
+version: 8.01 /cephyr/NOBACKUP/groups/snic2021-23-312/Oskar/coref/conll-2012/scorer/v8.01/lib/CorScorer.pm
+
+====== TOTALS =======
+Identification of Mentions: Recall: (10399 / 35390) 29.38%	Precision: (10399 / 14258) 72.93%	F1: 41.89%
+--------------------------------------------------------------------------
+Coreference: Recall: (2835.09467478983 / 35390) 8.01%	Precision: (2756.79323299393 / 14258) 19.33%	F1: 11.32%
+--------------------------------------------------------------------------
+
+Official result for ceafe
+version: 8.01 /cephyr/NOBACKUP/groups/snic2021-23-312/Oskar/coref/conll-2012/scorer/v8.01/lib/CorScorer.pm
+
+====== TOTALS =======
+Identification of Mentions: Recall: (10399 / 35390) 29.38%	Precision: (10399 / 14258) 72.93%	F1: 41.89%
+--------------------------------------------------------------------------
+Coreference: Recall: (276.787649230821 / 3150) 8.78%	Precision: (276.787649230821 / 883) 31.34%	F1: 13.72%
+--------------------------------------------------------------------------
+
+Average F1 (conll): 19.40%
+Average F1 (py): 25.88% on 7 docs
+Average precision (py): 55.24%
+Average recall (py): 17.01%
