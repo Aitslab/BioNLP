@@ -4,7 +4,7 @@ This project was created as part of the CovidQ project with the purpose of provi
 
 CovidQ aims to develop of a clinical decision tool to determine potential/not potential cases of COVID-19 at the emergency department triage. It's a collaboration between Region Skåne, Halland, KI and Lund University.
 
-This subproject is done as my thesis for the fifth semester of the medical program at the University of Lund. 
+This subproject is done as my thesis for the fifth semester of the medical program at the University of Lund.
 
 *Aim* : Create a testcorpus to determine the feasibility of NLP and data extraction from Swedish clinical texts. Test and develop annotation strategies and application using the software INCEpTION. Research  possibilities of extending tools for Swedish NLP and using these to pre-annotate clinical texts to reduce the annotation bottleneck.
 
@@ -14,13 +14,13 @@ This subproject is done as my thesis for the fifth semester of the medical progr
 
 ### Swedish bioNLP
 
-Latest version of the protocol can be found here [source](https://github.com/Aitslab/BioNLP/blob/master/carl/docs/protocol.md). 
+Latest version of the protocol can be found here [source](https://github.com/Aitslab/BioNLP/blob/master/carl/docs/protocol.md).
 
 ### Subproject - OpenChartSE
 
 Spawned as an idea during project development to create free text data that can be shared and used for future NLP work in Sweden, work to create fake medical charts from the ED is ongoing and found here: [OpenChartSE](https://github.com/tracits/OpenChartSE)
 
-A website for input of medical records is under development. It's developed with flask. 
+A website for input of medical records is under development. It's developed with flask.
 
 ## Timeline
 
@@ -32,15 +32,15 @@ Preliminary project is planned to be presented in early june of 2021 as for a "p
 
 *Will be moved to openchartSE*
 
-#### Charts 
+#### Charts
 
-### Swedish bioNLP 
+### Swedish bioNLP
 **Aim**: Create a small test sample to determine the feasibility of NLP and data extraction. Test and devlop annotation strategies and application using the software INCEpTION.
 ### OpenChartSE
 
-These include charts created by Johanna Berg; Carl Ollvik Aasa; Anton Werin. 
+These include charts created by Johanna Berg; Carl Ollvik Aasa; Anton Werin.
 
-#### Sentences 
+#### Sentences
 
 Simple medical sentences describing symptoms. Written by Anton Werin; Carl Ollvik Aasa. Used for corpus generation by Sonja Aits. Grouped by if they are negating.
 
@@ -50,9 +50,9 @@ All documentation for the project.
 
 ### Annotation strategy
 
-Developed guidelines for entity symptom annotation in clinical texts. This is developed along the project. 
+Developed guidelines for entity symptom annotation in clinical texts. This is developed along the project.
 
-Many problems arising with annotation only show as one annotates; we can se a linguistic problem or logical ambiguity but they are hard to draw actively to mind. Therefore a wiki of interesting problems, sentences and situations are keeps.  These are used to inform the guidelines. 
+Many problems arising with annotation only show as one annotates; we can se a linguistic problem or logical ambiguity but they are hard to draw actively to mind. Therefore a wiki of interesting problems, sentences and situations are keeps.  These are used to inform the guidelines.
 
 ### testcorpus
 
@@ -63,7 +63,7 @@ Fabricated charts of typical patients that receive care in the emergency room fo
 
 Developed guidlines for entity symptom annotation in clinical texts
 
-Devloped on the base of 
+Devloped on the base of
 ### INCEpTION
 
 Documentation and configuration for the usage of the annotation software INCEpTION with the purpouse of NER-annotation of clinical texts
