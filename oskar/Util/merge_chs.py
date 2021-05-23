@@ -8,7 +8,7 @@ oskarjonszon
 
 import os
 
-output = "./data/test.english.v4_gold_conll"
+output = "./data/dev.english.v4_gold_conll"
 input = "../CRAFT-conll/dev"
 N = 100
 
@@ -19,15 +19,15 @@ def chunks(lst, n):
 # Clears the current file from data.
 open(output, 'w').close()
 
-for file in [f for f in os.listdir(input) if f.endswith('.conll')]:
-  
-  with open(input + "/" + file) as f_in:
+for file in [f for f in os.listdir(input) if f.endswith('.conll')][0:1]:
 
+  with open(input + "/" + file) as f_in:
+    
     first_line = f_in.readline()
 
-    paragraphs = [line for line in f_in.read().split('\n\n') if line]
+    paragraphs = [line.split('\n') for line in f_in.read().split('\n\n') if line]
 
-    chs = chunks(paragraphs, N)
+    chs = chunks(paragraphs, 100)
 
     with open(output, "a") as f_out:
       
@@ -36,5 +36,11 @@ for file in [f for f in os.listdir(input) if f.endswith('.conll')]:
         f_out.write(first_line[0:-2] + str(idx) + "\n")
         
         for paragraph in ch:
-          f_out.write(paragraph + "\n\n")
+          for line in paragraph:
+            parts = line.split()
+            parts[1] = idx
+            f_out.write(' '.join([str(p) for p in parts[0:2]]) + ' ' + '\t'.join([str(p) for p in parts[2:]]) + "\n")
+          f_out.write('\n')
+        f_out.write('\n')
+
 
