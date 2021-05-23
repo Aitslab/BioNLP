@@ -1,12 +1,15 @@
-# Written by oskarjonszon.
-#   Takes a folder as input and combines all the conll files into one file specified as output.
-#   To compile the output file to jsonlines for eval/prediction/training use the minimize.py script 
-#   from mandarjoshi's coref repository. 
+"""
+oskarjonszon
+
+  Takes a folder as input and combines all the conll files into one file specified as output.
+  To compile the output file to jsonlines for eval/prediction/training use the minimize.py script 
+  from mandarjoshi's coref repository. 
+"""
 
 import os
 
-output = "./data/test.english.v4_gold_conll"
-input = "../CRAFT-conll/test"
+output = "./data/dev.english.v4_gold_conll"
+input = "../CRAFT-conll/dev"
 
 # Clears the current file from data.
 open(output, 'w').close()
