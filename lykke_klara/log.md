@@ -151,3 +151,6 @@ TODO:
 
 ### 22/5
 * Worked on the presentation
+
+### 25/5
+* continued working on the presentation
