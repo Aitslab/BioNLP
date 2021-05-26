@@ -4,12 +4,16 @@ oskarjonszon
   Takes a folder as input and combines all the conll files into one file specified as output.
   To compile the output file to jsonlines for eval/prediction/training use the minimize.py script 
   from mandarjoshi's coref repository. 
+
+  The script splits the CoNLL arcitles into parts with the same ID. The split condition is N.
 """
 
 import os
 
 output = "./data/dev.english.v4_gold_conll"
 input = "../CRAFT-conll/dev"
+
+# Number of sentences to split on.
 N = 100
 
 def chunks(lst, n):
@@ -19,7 +23,7 @@ def chunks(lst, n):
 # Clears the current file from data.
 open(output, 'w').close()
 
-for file in [f for f in os.listdir(input) if f.endswith('.conll')][0:1]:
+for file in [f for f in os.listdir(input) if f.endswith('.conll')]:
 
   with open(input + "/" + file) as f_in:
     
@@ -27,7 +31,7 @@ for file in [f for f in os.listdir(input) if f.endswith('.conll')][0:1]:
 
     paragraphs = [line.split('\n') for line in f_in.read().split('\n\n') if line]
 
-    chs = chunks(paragraphs, 100)
+    chs = chunks(paragraphs, N)
 
     with open(output, "a") as f_out:
       
