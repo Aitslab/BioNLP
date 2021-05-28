@@ -200,6 +200,10 @@ converts between BioC and PubAnnotation format
 
 http://bioc.sourceforge.net/
 
+spacy annotator
+
+https://github.com/ieriii/spacy-annotator
+
 ## Pretrained models, word vectors, embeddings
 fastText
 
