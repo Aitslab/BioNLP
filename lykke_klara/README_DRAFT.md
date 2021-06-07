@@ -28,6 +28,8 @@ artifical_building_blocks:
 
 ### Step 1: Setup
 
+This setup is tested on Google Colabratory  using GPU on both MacOS Catalina and Windows 10.
+
 First you need to follow the [`setup`](https://github.com/Aitslab/nlp_2021_alexander_petter#setup-using-conda-anaconda--miniconda) guide using Conda. Thereafter follow [`step 1: extracting relations`](https://github.com/Aitslab/nlp_2021_alexander_petter/tree/master/utils/chemprot#extracting-relations) to process your data. Do not continue to the `Building dataset` step as we don't want to change the data splits.
 
 ### Step 2: Run the pipeline
