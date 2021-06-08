@@ -1,0 +1,1 @@
+{"average training loss": [1.257941360815917], "average validation loss": [1.294412985444069], "average training accuracy": [0.44838169642857145], "train.txt": {"f1-score": [0.23850775824064635], "recall": [0.2721208454171796], "precision": [0.21747313186598705], "accuracy": [0.5394655065257924]}}
