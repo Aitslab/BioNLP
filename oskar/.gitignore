@@ -6,3 +6,5 @@
 
 # Jupyter / Conda
 .ipynb_checkpoints
+
+/Model

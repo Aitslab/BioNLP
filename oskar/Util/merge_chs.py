@@ -14,7 +14,7 @@ output = "./data/dev.english.v4_gold_conll"
 input = "../CRAFT-conll/dev"
 
 # Number of sentences to split on.
-N = 100
+N = 200
 
 def chunks(lst, n):
     for i in range(0, len(lst), n):
