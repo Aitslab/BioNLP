@@ -33,7 +33,7 @@ def run(train_path, dev_path, model_path, output_path, oversample, epochs):
       device = torch.device("cpu")
 
   # Oversample parameters
-  os_params = {"NOT":                  {"cid": 0, "support": 241, "factor": 5},
+  os_params = {"NOT":                 {"cid": 0, "support": 241, "factor": 5},
               "PART-OF":              {"cid": 1, "support": 308, "factor": 3},
               "INTERACTOR":           {"cid": 2, "support": 2583,"factor": 3},
               "REGULATOR-POSITIVE":   {"cid": 3, "support": 799, "factor": 3},
