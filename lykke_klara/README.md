@@ -16,6 +16,9 @@
   - [`statistics`](https://github.com/Aitslab/BioNLP/blob/master/lykke_klara/corpora/statistics.txt) which specifies the distribution of the classes in the ChemProt training and development sets
   - Artificial corpus [`training`](https://github.com/Aitslab/BioNLP/blob/master/lykke_klara/corpora/artificial_train.txt) and [`development`](https://github.com/Aitslab/BioNLP/blob/master/lykke_klara/corpora/artificial_dev.txt) set
 
+## artificial building blocks
+The files used to build the artificial corpus can be found [`here`](https://drive.google.com/drive/folders/1REtDAAx6rfL2JkO0FLCg3xIQOT9xJCkS). The protein entities were extracted from the [`Uniprot database`](https://www.uniprot.org/) by previous students and the cell line names in the start phrases were taken from the [`cell line ontology`](http://www.obofoundry.org/ontology/clo.html) by our  biomedically trained supervisor Sonja Aits. Aits then compiled start phrases and replaced different verbs, adjectives, adverbs and nouns with synonyms.
+
 ## Models
 Since the models are too big to upload on git, the best model from each configuration can be found:
   - [`baseline model`](https://drive.google.com/drive/folders/1_jNQFYvr4TrU4mEZenR6IlKv3qsTBSPy?usp=sharing)
@@ -23,8 +26,6 @@ Since the models are too big to upload on git, the best model from each configur
   - [`artificial model`](https://drive.google.com/drive/folders/1u8bAsUDlGkY6GOtKzxJn7Sf8LXRl9vs7?usp=sharing)
   - [`artifical model trained one epoch on ChemProt corpus`](https://drive.google.com/drive/folders/1zshZodHcMGN2URyv4T4T8KPCL1D08NPt?usp=sharing)
 
-artifical_building_blocks:
-* Create artificial corpus (link to drive)
 
 ## Visualisation of the pipeline
 
