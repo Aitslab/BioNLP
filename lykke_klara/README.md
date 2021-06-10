@@ -13,7 +13,6 @@
 
 * corpora: 
   - ChemProt training and development set
-  - Ovesampled ChemPot training and development set
   - Artificial corpus training and development set
 
 * models: 
