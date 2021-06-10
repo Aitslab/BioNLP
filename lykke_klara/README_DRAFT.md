@@ -1,14 +1,15 @@
 ## File structure
 
 * root:
-  - config configuration parameters to the pipeline
-  - main runs the pipeline
+  - config.py configuration parameters to the pipeline
+  - main.py runs the pipeline
 
 * scripts: 
-  - [`add_custom_labels.py`](relation_extraction/add_custom_labels.py) replaces labels in datafiles with custom labels
-  - [`bert_finetune.py`](relation_extraction/bert_finetune.py) trains the models and saves them
-  - [`eval.py`](relation_extraction/eval.py) saves evaluation metrics in result file
-  - [`plot.py`](relation_extraction/plot.py) plots the metrics
+  - [`add_custom_labels.py`](https://github.com/Aitslab/BioNLP/blob/master/lykke_klara/scripts/add_custom_labels.py) replaces labels in datafiles with custom labels
+  - [`build_art_corpus.py`](rhttps://github.com/Aitslab/BioNLP/blob/master/lykke_klara/scripts/build_art_corpus.py) creates an artificial corpus
+  - [`bert_finetune.py`](https://github.com/Aitslab/BioNLP/blob/master/lykke_klara/scripts/bert_finetune.py) trains the models and saves them
+  - [`evaluation.py`](https://github.com/Aitslab/BioNLP/blob/master/lykke_klara/scripts/evaluation.py) saves evaluation metrics in result file
+  - [`plot.py`](https://github.com/Aitslab/BioNLP/blob/master/lykke_klara/scripts/plot.py) plots the metrics
 
 * corpora: 
   - ChemProt training and development set
@@ -27,8 +28,6 @@ artifical_building_blocks:
 ## Visualisation of the pipeline
 
 <img width="1098" alt="method" src="https://user-images.githubusercontent.com/46992305/121548522-5d156180-ca0d-11eb-8302-8eba64b548e9.png">
-
-
 
 ## How to run 
 
