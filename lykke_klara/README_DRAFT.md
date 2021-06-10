@@ -1,8 +1,8 @@
 ## File structure
 
 * root:
-  - main
-  - config 
+  - config configuration parameters to the pipeline
+  - main runs the pipeline
 
 * scripts: 
   - [`add_custom_labels.py`](relation_extraction/add_custom_labels.py) replaces labels in datafiles with custom labels
@@ -23,6 +23,12 @@
 
 artifical_building_blocks:
 * Create artificial corpus (link to drive)
+
+## Visualisation of the pipeline
+
+<img width="1098" alt="method" src="https://user-images.githubusercontent.com/46992305/121548522-5d156180-ca0d-11eb-8302-8eba64b548e9.png">
+
+
 
 ## How to run 
 
@@ -62,8 +68,6 @@ change the `model_path` to the diectory of your models. `metrics_path` is the sa
 
 ### Step 5: Plot
 
-## Run_re (petter_alexander)
+## Run the NLP pipline
 
-
-
-
+The relation extraction step written by us is integrated into a [`NLP pipeline`](https://github.com/Aitslab/nlp_2021_alexander_petter) written by previous students. The implementation of the relation extration can be found [`here`](https://github.com/Aitslab/nlp_2021_alexander_petter/blob/master/scripts/re.py).
