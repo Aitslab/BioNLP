@@ -6,7 +6,7 @@
 
 * scripts: 
   - [`add_custom_labels.py`](https://github.com/Aitslab/BioNLP/blob/master/lykke_klara/scripts/add_custom_labels.py) replaces labels in datafiles with custom labels
-  - [`build_art_corpus.py`](rhttps://github.com/Aitslab/BioNLP/blob/master/lykke_klara/scripts/build_art_corpus.py) creates an artificial corpus
+  - [`build_art_corpus.py`](https://github.com/Aitslab/BioNLP/blob/master/lykke_klara/scripts/build_art_corpus.py) creates an artificial corpus
   - [`bert_finetune.py`](https://github.com/Aitslab/BioNLP/blob/master/lykke_klara/scripts/bert_finetune.py) trains the models and saves them
   - [`evaluation.py`](https://github.com/Aitslab/BioNLP/blob/master/lykke_klara/scripts/evaluation.py) saves evaluation metrics in result file
   - [`plot.py`](https://github.com/Aitslab/BioNLP/blob/master/lykke_klara/scripts/plot.py) plots the metrics
