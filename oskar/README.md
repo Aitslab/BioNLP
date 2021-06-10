@@ -72,3 +72,8 @@ Use the modified version in this repository.
 ```
 pip install --no-cache-dir --no-build-isolation -r requirements.txt --log install-log.txt -q
 ```
+
+**6. Run Setup **
+```
+./setup_all
+```
