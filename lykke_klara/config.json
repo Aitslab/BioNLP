@@ -1,16 +1,16 @@
 {
   "ignore": {
     "add_custom_labels": true,
-    "build_corpus": true,
+    "build_art_corpus": true,
     "bert_finetune": true,
-    "eval": true,
-    "plot": false
+    "evaluation": false,
+    "plot": true
   },
   "add_custom_labels": {
     "input_path": "/content/drive/MyDrive/edan70/processed/",
     "output_path": "/content/drive/MyDrive/edan70/corpora/"
   },
-  "build_corpus": {
+  "build_art_corpus": {
     "input_path":"/content/drive/MyDrive/edan70/artificial_corpus/",
     "train_path": "/content/drive/MyDrive/edan70/corpora/artificial_train.txt",
     "dev_path": "/content/drive/MyDrive/edan70/corpora/artificial_dev.txt",
@@ -18,19 +18,23 @@
     "dev_class_size": 100
   },
   "bert_finetune": {
+    "train_path": "/content/drive/MyDrive/edan70/corpora/artificial_train.txt",
+    "dev_path": "/content/drive/MyDrive/edan70/corpora/artificial_dev.txt",
+    "model_path": "/content/drive/MyDrive/edan70/artificial_models/",
+    "metrics_path": "/content/drive/MyDrive/edan70/output_dir/artificial_metrics.txt",
+    "oversample": false,
+    "epochs": 5
+  },
+  "evaluation": {
     "train_path": "/content/drive/MyDrive/edan70/corpora/chemprot_train.txt",
     "dev_path": "/content/drive/MyDrive/edan70/corpora/chemprot_dev.txt",
     "model_path": "/content/drive/MyDrive/edan70/baseline_models/",
-    "output_path": "/content/drive/MyDrive/edan70/output_dir/metrics.txt",
-    "oversample": false
-  },
-  "eval": {
-    "input_path": "/content/drive/MyDrive/edan70/corpora/train.txt",
-    "model_path": "/content/drive/MyDrive/edan70/baseline_models/bert-finetuned-0/",
-    "output_path": "/content/drive/MyDrive/edan70/output_dir/metrics.txt"
+    "metrics_path": "/content/drive/MyDrive/edan70/output_dir/metrics.txt"
   },
   "plot": {
+    "train_path": "/content/drive/MyDrive/edan70/corpora/chemprot_train.txt",
+    "dev_path": "/content/drive/MyDrive/edan70/corpora/chemprot_dev.txt",
     "input_path": "/content/drive/MyDrive/edan70/output_dir/metrics.txt",
-    "output_path": "/content/drive/MyDrive/edan70/output_dir/"
+    "metrics_path": "/content/drive/MyDrive/edan70/output_dir/"
   }
 }
