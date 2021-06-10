@@ -75,5 +75,5 @@ pip install --no-cache-dir --no-build-isolation -r requirements.txt --log instal
 
 **6. Run Setup **
 ```
-./setup_all
+./setup_all.sh
 ```
