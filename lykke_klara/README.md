@@ -1,8 +1,8 @@
 ## File structure
 
 * root:
-  - config.py configuration parameters to the pipeline
-  - main.py runs the pipeline
+  - [`config.py`](https://github.com/Aitslab/BioNLP/blob/master/lykke_klara/config.json) configuration parameters to the pipeline
+  - [`main.py`](https://github.com/Aitslab/BioNLP/blob/master/lykke_klara/main.py) runs the pipeline
 
 * scripts: 
   - [`add_custom_labels.py`](https://github.com/Aitslab/BioNLP/blob/master/lykke_klara/scripts/add_custom_labels.py) replaces labels in datafiles with custom labels
@@ -12,8 +12,9 @@
   - [`plot.py`](https://github.com/Aitslab/BioNLP/blob/master/lykke_klara/scripts/plot.py) plots the metrics
 
 * corpora: 
-  - ChemProt training and development set
-  - Artificial corpus training and development set
+  - ChemProt [`training`](https://github.com/Aitslab/BioNLP/blob/master/lykke_klara/corpora/chemprot_train.txt) and [`development`](https://github.com/Aitslab/BioNLP/blob/master/lykke_klara/corpora/chemprot_dev.txt) set
+  - [`statistics`](https://github.com/Aitslab/BioNLP/blob/master/lykke_klara/corpora/statistics.txt) which specifies the distribution of the classes in the ChemProt training and development sets
+  - Artificial corpus [`training`](https://github.com/Aitslab/BioNLP/blob/master/lykke_klara/corpora/artificial_train.txt) and [`development`](https://github.com/Aitslab/BioNLP/blob/master/lykke_klara/corpora/artificial_dev.txt) set
 
 ## Models
 Since the models are too big to upload on git, the best model from each configuration can be found:
