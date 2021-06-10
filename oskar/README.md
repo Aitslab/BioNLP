@@ -67,6 +67,8 @@ conda install cudnn=7.6.0
 ```
 
 **5. Run requirments.txt**
+Use the modified version in this repository.
+
 ```
 pip install --no-cache-dir --no-build-isolation -r requirements.txt --log install-log.txt -q
 ```
