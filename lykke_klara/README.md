@@ -59,7 +59,8 @@ choose the amount of sentences for each class for both the training and developm
 
 `bert_finetune`:
 
-choose whether or not you want to `oversample` and state the classes and their respective factors on line `36`.
+choose whether or not you want to `oversample` and state the classes and their respective factors on line `36`
+the script outputs training loss, validation loss and training accuracy to the file specified in `metrics_path`
 
 ### Step 4: Evaluate
 
@@ -68,6 +69,8 @@ choose whether or not you want to `oversample` and state the classes and their r
 change the `model_path` to the diectory of your models. `metrics_path` is the same as the `metrics_path` from step 3. 
 
 ### Step 5: Plot
+
+saves the plots in the specified output directory
 
 ## Run the NLP pipline
 
