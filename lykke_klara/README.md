@@ -20,7 +20,7 @@ Since the models are too big to upload on git, the best model from each configur
   - [`best baseline model`](https://drive.google.com/drive/folders/1_jNQFYvr4TrU4mEZenR6IlKv3qsTBSPy?usp=sharing)
   - [`best oversampled model`](https://drive.google.com/drive/folders/1RA080Eoy1Q7gYiqutxYQtZf-cDKLTCEw?usp=sharing)
   - [`best artificial model`](https://drive.google.com/drive/folders/1u8bAsUDlGkY6GOtKzxJn7Sf8LXRl9vs7?usp=sharing)
-  - [`best artifical model trained one epoch on ChemProt corpus`]
+  - [`best artifical model trained one epoch on ChemProt corpus`](https://drive.google.com/drive/folders/1zshZodHcMGN2URyv4T4T8KPCL1D08NPt?usp=sharing)
 
 artifical_building_blocks:
 * Create artificial corpus (link to drive)
