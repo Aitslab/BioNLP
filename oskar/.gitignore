@@ -1,10 +1,9 @@
-# Oskar's Gitignore
-
 # Mac-Related.
 .DS_Store
-
 
 # Jupyter / Conda
 .ipynb_checkpoints
 
+
+# Special
 /Model
