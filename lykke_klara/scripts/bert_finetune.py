@@ -16,7 +16,7 @@ from transformers import get_linear_schedule_with_warmup
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler, SequentialSampler
 from imblearn.over_sampling import RandomOverSampler
 
-def run(train_path, dev_path, model_path, output_path, oversample):
+def run(train_path, dev_path, model_path, output_path, oversample, epochs):
   os.environ['TF_FORCE_GPU_ALLOW_GROWTH'] = 'true'
   exclude_label = {"OTHER"}
   torch.cuda.empty_cache()
@@ -197,8 +197,6 @@ def run(train_path, dev_path, model_path, output_path, oversample):
                     eps = 1e-8 # epsilon parameter is a very small number to prevent any division by zero in the implementation
                     )
 
-  # Starts overfitting after 2 epochs
-  epochs = 1
   # [number of batches] x [number of epochs]. Note that it is not the same as the number of training samples
   total_steps = len(train_dataloader) * epochs
 

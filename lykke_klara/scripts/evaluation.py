@@ -1,6 +1,7 @@
 import sys
 import torch
 import json
+import os
 
 from transformers import BertTokenizer
 from transformers import BertForSequenceClassification, AdamW, BertConfig
@@ -53,21 +54,22 @@ def evaluate(input_dir, input_path, metrics):
   return metrics
 
 
-# Pass a model and a corpus
+# Pass a directory with models and a corpus
 # Appends the metrics to the result file
 def run(input_path, model_path, output_path):
+  for model in os.listdir(model_path):
 
-  with open(output_path) as infile:
-    data = infile.read()
+    with open(output_path) as infile:
+      data = infile.read()
 
-  metrics = json.loads(data)
-  print(input_path)
-  filename = input_path.split("/")[-1]
+    metrics = json.loads(data)
+    print(input_path)
+    filename = input_path.split("/")[-1]
 
-  if filename in metrics.keys():
-    metrics[filename] = evaluate(model_path, input_path, metrics[filename])
-  else:
-    metrics[filename] = evaluate(model_path, input_path, {"f1-score": [], "recall": [], "precision": [], "accuracy": []})
-  
-  with open(output_path, "w") as outfile:
-    json.dump(metrics, outfile)
+    if filename in metrics.keys():
+      metrics[filename] = evaluate(model_path + model, input_path, metrics[filename])
+    else:
+      metrics[filename] = evaluate(model_path + model, input_path, {"f1-score": [], "recall": [], "precision": [], "accuracy": []})
+    
+    with open(output_path, "w") as outfile:
+      json.dump(metrics, outfile)

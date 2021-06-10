@@ -3,14 +3,14 @@ import json
 import matplotlib.pyplot as plt
 
 # Plot the training and validation metrics
-def plot_loss_acc(data, indices, output_dir):  
+def plot_loss_acc(data, indices, output_dir, train_key):  
   x = list(indices)
   plt.xticks(indices)
 
   plt.plot(x, data['average training loss'],     color="blue")
   plt.plot(x, data['average validation loss'],   color="red")
   plt.plot(x, data['average training accuracy'], color="green")
-  plt.plot(x, data['train.txt']['accuracy'],     color="orange") # accuracies returned by the eval.py script
+  plt.plot(x, data[train_key]['accuracy'],     color="orange") # accuracies returned by the eval.py script
 
   plt.legend(['avg. training loss', 'avg. validation loss', 
               'avg. training accuracy', 'avg. validation accuracy'], 
@@ -22,7 +22,7 @@ def plot_loss_acc(data, indices, output_dir):
   plt.savefig(output_dir + '/training_validation.png')
   plt.show()
 
-# Plot the metrics (f1-score, recall and precision) for the models
+# Plot the metrics (f1-score, recall and precision)
 def plot_metrics(train_data, dev_data, indices, output_dir):
   x = list(indices)
 
@@ -47,9 +47,13 @@ def read_data(filename):
   
     return data
 
-# Pass the result file and output dir for the plots
-def run(input_path, output_path):
+# Pass the file path for train and dev sets, 
+# result file and output dir for the plots
+def run(train_path, dev_path, input_path, output_path):
   data = read_data(input_path)
+  train_key = train_path.split("/")[-1]
+  dev_key = dev_path.split("/")[-1]
+
   indices = range(1, len(data['average training loss']) + 1) 
-  plot_loss_acc(data, indices, output_path)
-  plot_metrics(data['train.txt'], data['dev.txt'], indices, output_path)
+  plot_loss_acc(data, indices, output_path, train_key)
+  plot_metrics(data[train_key], data[dev_key], indices, output_path)
