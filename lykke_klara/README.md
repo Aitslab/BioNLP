@@ -71,4 +71,4 @@ change the `model_path` to the diectory of your models. `metrics_path` is the sa
 
 ## Run the NLP pipline
 
-The relation extraction step written by us is integrated into a [`NLP pipeline`](https://github.com/Aitslab/nlp_2021_alexander_petter) written by previous students. The implementation of the relation extration can be found [`here`](https://github.com/Aitslab/nlp_2021_alexander_petter/blob/master/scripts/re.py).
+The relation extraction step written by us is integrated into a [`NLP pipeline`](https://github.com/Aitslab/nlp_2021_alexander_petter) written by previous students. The implementation of the relation extraction can be found [`here`](https://github.com/Aitslab/nlp_2021_alexander_petter/blob/master/scripts/re.py).
