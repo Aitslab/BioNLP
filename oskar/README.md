@@ -8,7 +8,18 @@ https://www.overleaf.com/read/xfdmhbzwshty
 In the project we are using the UCDenver [CRAFT corpus](https://github.com/UCDenver-ccp/craft-shared-tasks).
 
 
+## Background
+
+Reading:
+[BERT for Coreference Resolution: Baselines and Analysis](https://arxiv.org/abs/1908.09091) \
+[SpanBERT: Improving Pre-training by Representing and Predicting Spans](https://arxiv.org/abs/1907.10529)
+
+The tool used in the project.
+[BERT and SpanBERT for Coreference Resolution](https://github.com/mandarjoshi90/coref)
+
 ## Installation of SpanBERT for coreference resolution on colab.
+
+Note: There is an existing notebook in this repository.
 
 **Reference:** Jonathan K. Kummerfeld's Notebook. 
 
