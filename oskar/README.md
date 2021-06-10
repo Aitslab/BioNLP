@@ -41,9 +41,10 @@ In the project we are using the UCDenver [CRAFT corpus](https://github.com/UCDen
 
 ## Installation of SpanBERT for coreference resolution on Centos7 Cluster 
 
-**1. Python Version**
+**1.Versions**
 
-In the cluster i used python version 3.6.8 in a conda enviorment.
+Python 3.6.8
+Anaconda3 2020.11
 
 **2. Install the coref tool from mandarjoshi90.**
 ```
