@@ -18,6 +18,9 @@ BioBERT output format to PubAnnotation format
 
 https://github.com/AnttonLA/BINP37/tree/master/output_generation
 
+## additional converters
+https://github.com/Aitslab/BioNLP/tree/master/antton/formatting
+
 # Conversion tools by others
 ## BioC convert
 
