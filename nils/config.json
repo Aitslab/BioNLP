@@ -1,14 +1,14 @@
 {
   "ignore": {
-    "add_custom_labels": true,
+    "add_custom_labels": false,
     "build_art_corpus": true,
     "bert_finetune": true,
-    "evaluation": false,
+    "evaluation": true,
     "plot": true
   },
   "add_custom_labels": {
-    "input_path": "/content/drive/MyDrive/edan70/processed/",
-    "output_path": "/content/drive/MyDrive/edan70/corpora/"
+    "input_path": "/data/processed/",
+    "output_path": "/corpora/"
   },
   "build_art_corpus": {
     "input_path":"/content/drive/MyDrive/edan70/artificial_corpus/",
