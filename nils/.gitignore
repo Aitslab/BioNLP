@@ -1,1 +1,4 @@
 scripts/__pycache__
+models/
+metrics/
+output_dir/

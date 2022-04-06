@@ -16,7 +16,7 @@ def evaluate(input_dir, input_path, metrics):
   true_classes = []
   correct_predictions = 0
 
-  data_file = open(input_path, "r")
+  data_file = open(input_path, "r", encoding='utf-8')
   data_list = data_file.read().split("\n")
   device = torch.device("cuda")
 

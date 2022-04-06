@@ -1,10 +1,10 @@
 {
   "ignore": {
-    "add_custom_labels": false,
+    "add_custom_labels": true,
     "build_art_corpus": true,
     "bert_finetune": true,
-    "evaluation": true,
-    "plot": true
+    "evaluation": false,
+    "plot": false
   },
   "add_custom_labels": {
     "input_path": "data/processed/",
@@ -18,23 +18,23 @@
     "dev_class_size": 100
   },
   "bert_finetune": {
-    "train_path": "/content/drive/MyDrive/edan70/corpora/artificial_train.txt",
-    "dev_path": "/content/drive/MyDrive/edan70/corpora/artificial_dev.txt",
-    "model_path": "/content/drive/MyDrive/edan70/artificial_models/",
-    "metrics_path": "/content/drive/MyDrive/edan70/output_dir/artificial_metrics.txt",
+    "train_path": "corpora/chemprot_train.txt",
+    "dev_path": "corpora/chemprot_dev.txt",
+    "model_path": "models/baseline_models/",
+    "metrics_path": "metrics/baseline_model_metrics.txt",
     "oversample": false,
     "epochs": 5
   },
   "evaluation": {
-    "train_path": "/content/drive/MyDrive/edan70/corpora/chemprot_train.txt",
-    "dev_path": "/content/drive/MyDrive/edan70/corpora/chemprot_dev.txt",
-    "model_path": "/content/drive/MyDrive/edan70/baseline_models/",
-    "metrics_path": "/content/drive/MyDrive/edan70/output_dir/metrics.txt"
+    "train_path": "corpora/chemprot_train.txt",
+    "dev_path": "corpora/chemprot_dev.txt",
+    "model_path": "models/baseline_models/",
+    "metrics_path": "metrics/baseline_model_metrics.txt"
   },
   "plot": {
-    "train_path": "/content/drive/MyDrive/edan70/corpora/chemprot_train.txt",
-    "dev_path": "/content/drive/MyDrive/edan70/corpora/chemprot_dev.txt",
-    "input_path": "/content/drive/MyDrive/edan70/output_dir/metrics.txt",
-    "metrics_path": "/content/drive/MyDrive/edan70/output_dir/"
+    "train_path": "corpora/chemprot_train.txt",
+    "dev_path": "corpora/chemprot_dev.txt",
+    "input_path": "metrics/baseline_model_metrics.txt",
+    "metrics_path": "output_dir/"
   }
 }
