@@ -158,7 +158,9 @@ def write_files(entry_set, filename, out_dir):
 # Pass directory with processed files and output directory
 def run(input_path, output_path):
   io_files = [("chemprot_training_processed.txt", "chemprot_train.txt"), 
-  ("chemprot_development_processed.txt", "chemprot_dev.txt")]
+             ("chemprot_development_processed.txt", "chemprot_dev.txt"),
+             ("chemprot_sample_processed.txt", "chemprot_sample.txt"),
+             ("chemprot_test_processed.txt", "chemprot_test.txt")]
 
   for in_file, out_file in io_files:
     entry_set = make_data_dict(in_file, input_path)

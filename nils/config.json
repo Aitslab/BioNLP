@@ -7,8 +7,8 @@
     "plot": true
   },
   "add_custom_labels": {
-    "input_path": "/data/processed/",
-    "output_path": "/corpora/"
+    "input_path": "data/processed/",
+    "output_path": "corpora/"
   },
   "build_art_corpus": {
     "input_path":"/content/drive/MyDrive/edan70/artificial_corpus/",
