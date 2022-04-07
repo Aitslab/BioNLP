@@ -1,4 +1,6 @@
 import json
+import os
+from time import time
 
 from scripts import add_custom_labels
 from scripts import build_art_corpus
@@ -68,12 +70,18 @@ def run_plot(plot_config: dict, ignore: bool):
 
   print("Running plot script.")
 
+  if not os.path.exists(plot_config["output_path"]):
+        os.makedirs(plot_config["output_path"])
+
   plot.run(plot_config["train_path"], plot_config["dev_path"], plot_config["metrics_path"], plot_config["output_path"]) 
 
   print("Finished running plot script.")
 
 
 if __name__ == "__main__":
+    start = time()
+    timestamps = []
+
     print("Please see config.json for configuration!")
 
     with open("config.json", "r") as f:
@@ -85,17 +93,29 @@ if __name__ == "__main__":
 
     ignore = config["ignore"]
 
+    timestamps.append(time()-start)
+    
     run_build_art_corpus(config["build_art_corpus"], ignore=ignore["build_art_corpus"])
     print()
+    timestamps.append(time()-start-timestamps[-1])
 
     run_add_custom_labels(config["add_custom_labels"], ignore=ignore["add_custom_labels"])
     print()
+    timestamps.append(time()-start-timestamps[-1])
 
     run_bert_finetune(config["bert_finetune"], ignore=ignore["bert_finetune"])
     print()
+    timestamps.append(time()-start-timestamps[-1])
 
     run_eval(config["evaluation"], ignore=ignore["evaluation"])
     print()
+    timestamps.append(time()-start-timestamps[-1])
 
     run_plot(config["plot"], ignore=ignore["plot"])
     print()
+    timestamps.append(time()-start-timestamps[-1])
+
+    print(f"{' DONE ':=^50}\n")
+    print(f"{'Part:':<12}   {'conf':>10}   {'build_art':>10}   {'build_art':>10}   {'finetune':>10}   {'eval':>10}   {'plot':>10}")
+    print(f"{'Time taken:':<12} {timestamps[0]:>10.2f} s {timestamps[1]:>10.2f} s {timestamps[2]:>10.2f} s {timestamps[3]:>10.2f} s {timestamps[4]:>10.2f} s {timestamps[5]:>10.2f} s")
+    print(f"\nTotal: {time()-start:>16.2f} s")

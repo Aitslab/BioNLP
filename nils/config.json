@@ -2,7 +2,7 @@
   "ignore": {
     "add_custom_labels": true,
     "build_art_corpus": true,
-    "bert_finetune": true,
+    "bert_finetune": false,
     "evaluation": false,
     "plot": false
   },
@@ -20,21 +20,21 @@
   "bert_finetune": {
     "train_path": "corpora/chemprot_train.txt",
     "dev_path": "corpora/chemprot_dev.txt",
-    "model_path": "models/baseline_models/",
-    "metrics_path": "metrics/baseline_model_metrics.txt",
-    "oversample": false,
+    "model_path": "models/oversampled_models/scibert-tokenizer-v2/models/",
+    "metrics_path": "models/oversampled_models/scibert-tokenizer-v2/metrics.txt",
+    "oversample": true,
     "epochs": 5
   },
   "evaluation": {
     "train_path": "corpora/chemprot_train.txt",
     "dev_path": "corpora/chemprot_dev.txt",
-    "model_path": "models/baseline_models/",
-    "metrics_path": "metrics/baseline_model_metrics.txt"
+    "model_path": "models/oversampled_models/scibert-tokenizer-v2/models/",
+    "metrics_path": "models/oversampled_models/scibert-tokenizer-v2/metrics.txt"
   },
   "plot": {
     "train_path": "corpora/chemprot_train.txt",
     "dev_path": "corpora/chemprot_dev.txt",
-    "input_path": "metrics/baseline_model_metrics.txt",
-    "metrics_path": "output_dir/"
+    "metrics_path": "models/oversampled_models/scibert-tokenizer-v2/metrics.txt",
+    "output_path": "models/oversampled_models/scibert-tokenizer-v2/plots/"
   }
 }

@@ -80,7 +80,8 @@ def run(train_path, dev_path, model_path, output_path, oversample, epochs):
   assert len(dev_sentences)       == len(dev_labels)
 
   print('\nLoading BERT-tokenizer')
-  tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', do_lower_case=True)
+#   tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', do_lower_case=True)
+  tokenizer = BertTokenizer.from_pretrained('allenai/scibert_scivocab_uncased', do_lower_case=True) #
   print('\nBERT-tokenizer loaded. Running example:\n')
 
   print("Original: ",  train_sentences[0])
@@ -230,7 +231,7 @@ def run(train_path, dev_path, model_path, output_path, oversample, epochs):
   total_t0 = time.time()
 
   # Metrics: training loss, training accuracy, validation loss and validation accuracy.
-  model_metrics = {"average training loss": [], "average validation loss": [], "average training accuracy": []}
+  model_metrics = {"average training loss": [], "average validation loss": [], "average validation accuracy": []}
 
   for epoch_i in range(0, epochs):
       torch.cuda.empty_cache()
@@ -370,7 +371,7 @@ def run(train_path, dev_path, model_path, output_path, oversample, epochs):
       # Save the metrics
       model_metrics['average training loss'].append(avg_train_loss)
       model_metrics['average validation loss'].append(avg_val_loss)
-      model_metrics['average training accuracy'].append(avg_val_accuracy)
+      model_metrics['average validation accuracy'].append(avg_val_accuracy)
 
       print("")
       print("Training complete!")

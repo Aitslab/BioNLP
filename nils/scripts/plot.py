@@ -9,8 +9,8 @@ def plot_loss_acc(data, indices, output_dir, train_key):
 
   plt.plot(x, data['average training loss'],     color="blue")
   plt.plot(x, data['average validation loss'],   color="red")
-  plt.plot(x, data['average training accuracy'], color="green")
-  plt.plot(x, data[train_key]['accuracy'],     color="orange") # accuracies returned by the eval.py script
+  plt.plot(x, data[train_key]['accuracy'],     color="green") # accuracies returned by the eval.py script
+  plt.plot(x, data['average validation accuracy'], color="orange")
 
   plt.legend(['avg. training loss', 'avg. validation loss', 
               'avg. training accuracy', 'avg. validation accuracy'], 
@@ -20,7 +20,7 @@ def plot_loss_acc(data, indices, output_dir, train_key):
   plt.xlabel('epoch')
   plt.tight_layout()
   plt.savefig(output_dir + '/training_validation.png')
-  plt.show()
+  plt.close()
 
 # Plot the metrics (f1-score, recall and precision)
 def plot_metrics(train_data, dev_data, indices, output_dir):
@@ -38,7 +38,7 @@ def plot_metrics(train_data, dev_data, indices, output_dir):
     plt.xlabel('epoch')
     plt.ylabel(metric)
     plt.savefig(output_dir + '/{}.png'.format(metric))
-    plt.show()
+    plt.close()
 
 def read_data(filename):
   print("File: ", filename)
