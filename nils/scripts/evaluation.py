@@ -5,7 +5,8 @@ import os
 
 from transformers import BertTokenizer
 from transformers import BertForSequenceClassification, AdamW, BertConfig
-from sklearn.metrics import multilabel_confusion_matrix as cm
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import multilabel_confusion_matrix
 from sklearn.metrics import precision_recall_fscore_support as score
 from sklearn.metrics import classification_report
 
@@ -40,16 +41,31 @@ def evaluate(input_dir, input_path, metrics):
     predictions.append(pred_class)
     true_classes.append(true_class)
 
-  precision, recall, fscore, _ = score(true_classes, predictions, average='macro')
+  # precision, recallmacro, fscore, _ = score(true_classes, predictions, average='macro')
+  precision_macro, recall_macro, fscore_macro, _ = score(true_classes, predictions, average='macro')
+  precision_micro, recall_micro, fscore_micro, _ = score(true_classes, predictions, average='micro')
+  precision_weighted, recall_weighted, fscore_weighted, _ = score(true_classes, predictions, average='weighted')
   
   # Print the classification report and confusion matrices
   print(classification_report(true_classes, predictions))
-  print(cm(true_classes, predictions, labels=["INTERACTOR", "NOT", "PART-OF", "REGULATOR-NEGATIVE", "REGULATOR-POSITIVE"]))
+  print(multilabel_confusion_matrix(true_classes, predictions, labels=["INTERACTOR", "NOT", "PART-OF", "REGULATOR-NEGATIVE", "REGULATOR-POSITIVE"]))
+  print(confusion_matrix(true_classes, predictions))
 
-  metrics["f1-score"].append(fscore)
-  metrics["recall"].append(recall)
-  metrics["precision"].append(precision)
+
+  metrics["f1-score"]["macro"].append(fscore_macro)
+  metrics["recall"]["macro"].append(recall_macro)
+  metrics["precision"]["macro"].append(precision_macro)
+  metrics["f1-score"]["micro"].append(fscore_micro)
+  metrics["recall"]["micro"].append(recall_micro)
+  metrics["precision"]["micro"].append(precision_micro)
+  metrics["f1-score"]["weighted"].append(fscore_weighted)
+  metrics["recall"]["weighted"].append(recall_weighted)
+  metrics["precision"]["weighted"].append(precision_weighted)
+  # metrics["f1-score"].append(fscore)
+  # metrics["recall"].append(recall)
+  # metrics["precision"].append(precision)
   metrics["accuracy"].append(correct_predictions / len(data_list))
+  metrics["confusion matrices"].append(confusion_matrix(true_classes, predictions).tolist())
 
   return metrics
 
@@ -69,7 +85,13 @@ def run(input_path, model_path, output_path):
     if filename in metrics.keys():
       metrics[filename] = evaluate(model_path + model, input_path, metrics[filename])
     else:
-      metrics[filename] = evaluate(model_path + model, input_path, {"f1-score": [], "recall": [], "precision": [], "accuracy": []})
-    
+      # metrics[filename] = evaluate(model_path + model, input_path, {"f1-score": [], "recall": [], "precision": [], "accuracy": []})
+      metrics[filename] = evaluate(model_path + model, input_path, 
+                                  {"f1-score": {"macro" : [], "micro" : [], "weighted" : []}, 
+                                  "recall": {"macro" : [], "micro" : [], "weighted" : []}, 
+                                  "precision": {"macro" : [], "micro" : [], "weighted" : []}, 
+                                  "accuracy": [], 
+                                  "confusion matrices": []})
+
     with open(output_path, "w") as outfile:
-      json.dump(metrics, outfile)
+      json.dump(metrics, outfile, indent=4)
