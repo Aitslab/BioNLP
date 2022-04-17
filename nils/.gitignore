@@ -1,4 +1,4 @@
 scripts/__pycache__
 models/
-metrics/
-output_dir/
+data/artificial-building-blocks
+data/artificial-custom-labeled
