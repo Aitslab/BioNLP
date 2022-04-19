@@ -1,9 +1,9 @@
 {
   "ignore": {
     "add_custom_labels": true,
-    "build_art_corpus": false,
+    "build_art_corpus": true,
     "bert_finetune": true,
-    "evaluation": true,
+    "evaluation": false,
     "plot": true
   },
   "add_custom_labels": {
@@ -18,23 +18,23 @@
     "dev_class_size": 100
   },
   "bert_finetune": {
-    "train_path": "corpora/chemprot_train.txt",
-    "dev_path": "corpora/chemprot_dev.txt",
-    "model_path": "models/baseline_models/TEMP/models/",
-    "metrics_path": "models/baseline_models/TEMP/metrics.txt",
+    "train_path": "corpora/artificial_train.txt",
+    "dev_path": "corpora/artificial_dev.txt",
+    "model_path": "models/artificial/v1/models/",
+    "metrics_path": "models/artificial/v1/metrics.txt",
     "oversample": false,
-    "epochs": 40
+    "epochs": 5
   },
   "evaluation": {
-    "train_path": "corpora/chemprot_train.txt",
-    "dev_path": "corpora/chemprot_dev.txt",
-    "model_path": "models/baseline_models/TEMP/models/",
-    "metrics_path": "models/baseline_models/TEMP/metrics.txt"
+    "train_path": "corpora/artificial_train.txt",
+    "dev_path": "corpora/artificial_dev.txt",
+    "model_path": "models/baseline/larger/models/",
+    "metrics_path": "models/baseline/larger/metrics.txt"
   },
   "plot": {
-    "train_path": "corpora/chemprot_train.txt",
-    "dev_path": "corpora/chemprot_dev.txt",
-    "metrics_path": "models/baseline_models/TEMP/metrics.txt",
-    "output_path": "models/baseline_models/TEMP/plots/"
+    "train_path": "corpora/artificial_train.txt",
+    "dev_path": "corpora/artificial_dev.txt",
+    "metrics_path": "models/artificial/v1/metrics.txt",
+    "output_path": "models/artificial/v1/plots/"
   }
 }
