@@ -4,6 +4,7 @@ from time import time
 
 from scripts import add_custom_labels
 from scripts import build_art_corpus
+from scripts import build_mixed_corpus
 from scripts import bert_finetune
 from scripts import evaluation
 from scripts import plot
@@ -30,7 +31,17 @@ def run_build_art_corpus(build_art_corpus_config: dict, ignore: bool):
   build_art_corpus.run(build_art_corpus_config["input_path"], build_art_corpus_config["train_path"], build_art_corpus_config["train_class_size"])
   build_art_corpus.run(build_art_corpus_config["input_path"], build_art_corpus_config["dev_path"], build_art_corpus_config["dev_class_size"])
 
-  print("Finished running build corpus script.")
+  print("Finished running build art corpus script.")
+
+def run_build_mixed_corpus(build_mixed_corpus_config: dict, ignore: bool):
+  if ignore:
+    print("Ignoring script: build mixed corpus.")
+    return
+
+  print("Running build mixed corpus script.")
+
+  build_mixed_corpus.run(**build_mixed_corpus_config)
+  print("Finished running build mixed corpus script.")
 
 # bert finetune
 def run_bert_finetune(bert_finetune_config: dict, ignore: bool):
@@ -99,6 +110,10 @@ if __name__ == "__main__":
     print()
     timestamps.append(time()-start-sum(timestamps))
 
+    run_build_mixed_corpus(config["build_mixed_corpus"], ignore=ignore["build_mixed_corpus"])
+    print()
+    timestamps.append(time()-start-sum(timestamps))
+
     run_add_custom_labels(config["add_custom_labels"], ignore=ignore["add_custom_labels"])
     print()
     timestamps.append(time()-start-sum(timestamps))
@@ -116,6 +131,6 @@ if __name__ == "__main__":
     timestamps.append(time()-start-sum(timestamps))
 
     print(f"{' DONE ':=^50}\n")
-    print(f"{'Part:':<12}   {'conf':>10}   {'build_art':>10}   {'add_label':>10}   {'finetune':>10}   {'eval':>10}   {'plot':>10}")
-    print(f"{'Time taken:':<12} {timestamps[0]:>10.2f} s {timestamps[1]:>10.2f} s {timestamps[2]:>10.2f} s {timestamps[3]:>10.2f} s {timestamps[4]:>10.2f} s {timestamps[5]:>10.2f} s")
+    print(f"{'Part:':<12}   {'conf':>10}   {'build_art':>10}   {'build_mix':>10}   {'add_label':>10}   {'finetune':>10}   {'eval':>10}   {'plot':>10}")
+    print(f"{'Time taken:':<12} {timestamps[0]:>10.2f} s {timestamps[1]:>10.2f} s {timestamps[2]:>10.2f} s {timestamps[3]:>10.2f} s {timestamps[4]:>10.2f} s {timestamps[5]:>10.2f} s {timestamps[6]:>10.2f} s")
     print(f"\nTotal: {time()-start:>16.2f} s")
