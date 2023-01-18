@@ -150,6 +150,18 @@ https://towardsdatascience.com/most-popular-coreference-resolution-frameworks-57
 
 https://arxiv.org/abs/1911.03347
 
+https://www.davidsbatista.net/blog/2018/05/09/Named_Entity_Evaluation/
+
+https://towardsdatascience.com/a-pathbreaking-evaluation-technique-for-named-entity-recognition-ner-93da4406930c
+
+https://github.com/neulab/InterpretEval
+
+https://arxiv.org/pdf/2011.06854.pdf
+
+https://nlpers.blogspot.com/2006/08/doing-named-entity-recognition-dont.html
+
+https://github.com/chakki-works/seqeval
+
 
 ## Annotation tools and formats
 NER IOB2 format (CoNLL2002)
