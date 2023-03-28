@@ -35,9 +35,9 @@ def run(train_path, dev_path, model_path, output_path, oversample, epochs):
   # Oversample parameters
   os_params = {"NOT":                 {"cid": 0, "support": 241, "factor": 5},
               "PART-OF":              {"cid": 1, "support": 308, "factor": 3},
-              "INTERACTOR":           {"cid": 2, "support": 2583,"factor": 3},
+              "INTERACTOR":           {"cid": 2, "support": 2583,"factor": 1},
               "REGULATOR-POSITIVE":   {"cid": 3, "support": 799, "factor": 3},
-              "REGULATOR-NEGATIVE":   {"cid": 4, "support": 2505,"factor": 3}
+              "REGULATOR-NEGATIVE":   {"cid": 4, "support": 2505,"factor": 1}
               }
 
   def read_data(file_path, oversample=False):
