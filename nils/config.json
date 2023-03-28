@@ -3,7 +3,7 @@
     "add_custom_labels": true,
     "build_art_corpus": true,
     "build_mixed_corpus": true,
-    "bert_finetune": true,
+    "bert_finetune": false,
     "evaluation": false,
     "plot": true
   },
@@ -22,21 +22,21 @@
     "train_path": "corpora/chemprot_train.txt",
     "artificial_path":"data/artificial-custom-labeled/chemical-protein/",
     "artificial_ratio": 0.1,
-    "output_path": "corpora/mixed_train_25.txt"
+    "output_path": "corpora/mixed_train_10.txt"
   },
   "bert_finetune": {
-    "train_path": "corpora/mixed_train_25.txt",
+    "train_path": "corpora/chemprot_train.txt",
     "dev_path": "corpora/chemprot_dev.txt",
-    "model_path": "models/mixed/25v4/models/",
-    "metrics_path": "models/mixed/25v4/metrics.txt",
-    "oversample": false,
-    "epochs": 100
+    "model_path": "models/oversampled/10/models/",
+    "metrics_path": "models/oversampled/10/metrics.txt",
+    "oversample": true,
+    "epochs": 10
   },
   "evaluation": {
-    "train_path": "corpora/mixed_train_25.txt",
+    "train_path": "corpora/chemprot_train.txt",
     "dev_path": "corpora/chemprot_dev.txt",
-    "model_path": "models/mixed/25v3/models/",
-    "metrics_path": "models/mixed/25v3/metrics.txt"
+    "model_path": "models/oversampled/10/models/",
+    "metrics_path": "models/oversampled/10/metrics.txt"
   },
   "plot": {
     "train_path": "corpora/artificial_pp_train.txt",
