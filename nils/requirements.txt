@@ -1,2 +1,33 @@
 imblearn # For oversampling
 # XlsxWriter # For writing to excel file
+
+
+# analysis.py
+pandas
+matplotlib
+seaborn
+scikit-learn
+#numpy # already comes from NER
+
+# downloader.py
+git+git://github.com/titipata/pubmed_parser.git
+requests~=2.24
+
+# ner.py
+tensorflow==1.15.0
+onnx==1.7.0
+onnxruntime==1.4.0
+protobuf>=3.12.3
+numpy>=1.19
+
+# export_scibert.py
+transformers
+torch==1.8.1
+tqdm
+#numpy # already comes from NER
+
+# metrics.py
+conlleval==0.2
+
+#chemprot preprocessing
+nltk
