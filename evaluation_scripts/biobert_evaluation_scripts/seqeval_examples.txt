@@ -1,0 +1,57 @@
+this file illustrates the consequences of different errors on seqeval metrics, which are used in the BioBERT evaluation script
+
+
+# evaluation with one entity class, one partial match (I to O)
+y_true = [['O', 'B', 'I', 'B']]
+y_pred = [['O', 'B', 'O', 'B']]
+Precision: 0.5
+Recall: 0.5
+F1: 0.5
+=> partial match is counted as one FP and one FN
+
+
+# evaluation with one entity class, one partial match wrongly predicted as additional entity (I to B)
+y_true = [['O', 'B', 'I', 'B']]
+y_pred = [['O', 'B', 'B', 'B']]
+Precision: 0.3333333333333333
+Recall: 0.5
+F1: 0.4
+=> partial match is counted as one FP and one FN and the B is counted as one more FP
+
+
+# evaluation with one entity class, one single token entity missed (B to O)
+y_true = [['O', 'B', 'I', 'B']]
+y_pred = [['O', 'B', 'I', 'O']]
+seqeval metrics
+Precision: 1.0
+Recall: 0.5
+F1: 0.6666666666666666
+=> miss is counted as one FN
+
+
+# evaluation with one entity class, one two-token entity missed (B-I to O-O)
+y_true = [['O', 'B', 'I', 'B']]
+y_pred = [['O', 'O', 'O', 'B']]
+Precision: 1.0
+Recall: 0.5
+F1: 0.6666666666666666
+=> miss is counted as one FN even if it has two tokens
+
+
+# evaluation with one entity class, extra entity predicted
+y_true = [['O', 'B', 'I', 'B']]
+y_pred = [['B', 'B', 'I', 'B']]
+Precision: 0.6666666666666666
+Recall: 1.0
+F1: 0.8
+=> extra entity is counted as FP
+
+
+# evaluation with one entity class, entity extended
+y_true = [['B', 'I', 'O', 'B']]
+y_pred = [['B', 'I', 'I', 'B']]
+Precision: 0.5
+Recall: 0.5
+F1: 0.5
+=> extended entity is counted as FP and FN
+
