@@ -1,0 +1,5 @@
+Reading stdin...
+After a single oral dose of 4 mg/kg indomethacin (IDM) to sodium and volume depleted rats plasma renin activity (PRA) and systolic blood pressure fell significantly within four hours, suggesting hypotension.
+List all chemicals and diseases in the following text: After a single oral dose of 4 mg / kg indomethacin (IDM) to sodium and volume depleted rats plasma renin activity (PRA) and systolic blood pressure fell significantly within four hours, suggesting hypotension.
+
+PRA and blood pressure returned to normal within 24 hours after IDM was removed from the rats. (ABSTRACT TRUNCATED AT 250 WORDS) The results of this study suggest that the hypotensive effect of IDM in volume depleted rats may be due to inhibition of the renin-angiotensin system.
