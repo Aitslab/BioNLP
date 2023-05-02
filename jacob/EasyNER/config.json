@@ -1,0 +1,70 @@
+{
+  "ignore": {
+    "cord_loader": true,
+    "downloader": true,
+    "text_loader":false,
+    "splitter": false,
+    "ner": false,
+    "analysis": false,
+    "merger": true,
+	  "nel":true,
+    "metrics":true,
+    "add_tags":true
+  },
+  "downloader": {
+    "input_path": "data/Lund-Autophagy-1.txt",
+    "output_path": "data/Lund-Autophagy-1.json",
+    "batch_size": 100 
+  },
+  "cord_loader": {
+    "input_path": "data/path-to-cord/metadata.csv",
+    "output_path": "data/path-to-cord/metadata.json",
+	"subset":false,
+	"subset_file": ""
+  },
+    "text_loader": {
+    "input_path": "data/in/pubtator_439781.txt",
+    "output_path": "data/out/pubtator_439781.json",
+	"title":"",
+	"id": "freetext"
+  },
+  "splitter": {
+    "input_path": "data/out/pubtator_439781.json",
+	  "output_folder": "data/sentencer/free-form/",
+    "output_file_prefix": "ff",
+    "tokenizer": "spacy",
+    "model_name": "en_core_web_sm",
+	"batch_size": 100
+  },
+  "ner": {
+    "input_path": "data/sentencer/free-form/",
+    "output_path": "data/out/",
+	  "output_file_prefix": "ff",
+    "model_type": "biobert_finetuned",
+    "model_folder": "aitslab",
+    "model_name": "biobert_huner_species_v1",
+    "vocab_path": "",
+    "store_tokens":"no",
+    "labels": "",
+    "clear_old_results": true,
+    "article_limit": [-1,90000],
+	  "entity_type": "species",
+	  "multiprocessing":true
+  },
+  "analysis": {
+    "input_path": "data/sentencer/free-form/",
+    "output_path": "data/out/analysis"
+  },
+  "merger": {
+	"paths": ["path/to/model-1/", "path/to/model-2/", "path/to/model-3/"],
+	"entities": ["model-1_entity", "model-2_entity","model-3_entity"],
+	"output_path": "results/merged_sample.json"
+  },
+  "nel":{
+	"input_path": "results/text-ner-Lund-Autophagy-1_species/",
+	"output_path": "results/text-nel_Lund_Autophagy-1_species.json"
+  },
+  "add_tags":{
+
+  }
+}

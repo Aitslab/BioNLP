@@ -1,0 +1,19 @@
+{
+  "freetext": {
+    "title": "",
+    "sentences": [
+      {
+        "text": "After a single oral dose of 4 mg/kg indomethacin (IDM) to sodium and volume depleted rats plasma renin activity (PRA) and systolic blood pressure fell significantly within four hours, suggesting hypotension.",
+        "entities": [
+          "rats"
+        ],
+        "entity_spans": [
+          [
+            85,
+            89
+          ]
+        ]
+      }
+    ]
+  }
+}
