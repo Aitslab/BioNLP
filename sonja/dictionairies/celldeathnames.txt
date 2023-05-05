@@ -1,70 +1,95 @@
-apoptosis
-lysosome-dependent cell death
-Exposure of Phosphatidylserine
-necroptosis
-Lower cell number
-Parthanatos
-Neuronal death
-MOMP
-lysosome leakage
-lysosomal dysfunction
-Ferroptosis
-Cell death
-Apoptosis
-Reduced viability
-caspase activation
-Lower viability
-lysosomal function
-Reduced cell survival
-Anoikis
-Apoptotic
-Reduced cell number
-lysosome-mediated apoptosis
-Necrotic
-lysosomal membrane
-Cytochrome c release
-Cell demise
-Neuron death
-NETosis
-mitochondria-mediated apoptosis
-autophagy
-Cellular demise
-Mitochondrial outer membrane permeabilization, MOMP
-necrosis
-DNA laddering
-Cornification
-Necrosis
-Lysosome related terms: lysosome
-Cell killing
-Autolysis
-Lysosomal membrane permeabilization, LMP
-lysosomal leakage
-LMP\ndisrupt lysosome function
-lysosomal permeabilization
-Toxic
-Pyroptosis
-mitochondrial disruption
-Decreased cell survival
-Reduced cell count
-Decrease in cell survival
-macroautophagy
-Cellular killing
-cytochrome c release
-lysosomal membrane permeabilization
+programmed cell death
 cell death
-Decrease in viability
-Necroptosis
-Lower cell survival
-reduced viability
-PARP cleavage
-lysosome disruption
-lysosomal enzyme
-Phosphatidylserine exposure
-Cellular death
-lysosomal cell death
+cell demise
+cell killing
+cellular death
+cellular demise
+cellular killing
 cytotoxicity
-Oncosis
-Release of cytochrome c
-Lower cell count
+apoptosis
+necrosis
+necroptosis
+cornification
+parthanatos
+neuronal death
+neuron death
+ferroptosis
+anoikis
+pyroptosis
+oncosis
+mitotic catastrophe
+autophagic cell death
+NETosis
+autolysis
+lysosomal cell death
+lysosome-dependent cell death
+lysosome-mediated cell death
+lysosome-dependent apoptosis
+lysosome-mediated apoptosis
+mitochondria-dependent apoptosis
+mitochondria-mediated apoptosis
+MOMP
 mitochondrial outer membrane permeabilization
-lysosomal disruption
+mitochondrial membrane permeabilization
+cytochrome c release
+release of cytochrome c
+leakage of cytochrome c
+DNA laddering
+phosphatidylserine exposure
+exposure of Phosphatidylserine
+PARP cleavage
+cathepsin d release
+cathepsin b release
+cathepsin l release
+cathepsin release
+release of cathepsin d
+release of cathepsin b
+release of cathepsin l
+release of cathepsin
+release of cathepsins
+cathepsin d leakage
+cathepsin b leakage
+cathepsin l leakage
+cathepsin leakage
+leakage of cathepsin d
+leakage of cathepsin b
+leakage of cathepsin l
+leakage of cathepsin
+leakage of cathepsins
+LMP
+Lysosomal membrane permeabilization
+Lysosomal membrane permeabilisation
+lysosomal membrane ruputure
+lysosomal membrane leakage
+lysosomal permeabilization
+lysosomal permeabilisation
+lysosomal ruputure
+lysosomal leakage
+lysosome permeabilization
+lysosome permeabilisation
+lysosome rupture
+lysosome leakage
+decrease in viability
+reduction in viability
+loss of viability
+decreased viability
+reduced viability
+lower viability
+decrease in cell number
+reduction in cell number
+loss of cell number
+decreased cell number
+reduced cell number
+lower cell number
+decrease in cell count
+reduction in cell count
+loss of cell count
+decreased cell count
+reduced cell count
+lower cell count
+decrease in cell survival
+reduction in cell survival
+loss of cell survival
+decreased cell survival
+reduced cell survival
+lower cell survival
