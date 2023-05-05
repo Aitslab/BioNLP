@@ -1,0 +1,72 @@
+Fri May  5 19:49:43 2023       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 470.161.03   Driver Version: 470.161.03   CUDA Version: 11.4     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A100-SXM...  On   | 00000000:87:00.0 Off |                    0 |
+| N/A   39C    P0    52W / 400W |      0MiB / 40536MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+***************************************************
+You have loaded an anaconda module
+***************************************************
+
+JUST LOADING THIS MODULE DOES *NOT* CHANGE THE PYTHON VERSION, NOR ENABLES ANY
+EXTRA PYTHON MODULES.
+
+This module makes available the 'conda' command, with which users can create
+named anaconda environments and then activate them.
+
+To create and use a customized environment use 'conda create ...' and
+then 'conda activate ...' (see example below).
+
+---------------------------------------------------------------------------------------------------
+NOTE: NSC strongly advices against placing 'conda activate' (with or without
+arguments)
+      in your shell initialization files, (e.g. '.bashrc' or '.bash_profile')
+since this
+      severly alters the environment for running software in ways that cause
+unpredictable
+      issues that can be difficult to diagnose.
+---------------------------------------------------------------------------------------------------
+
+Example usage:
+
+  * Setting up a customized Anaconda environment and run a Python program in
+it:
+
+    conda create -n myenv python=3.8 scipy=1.5.2
+    conda activate myenv
+    python my_scipy_python_program.py
+
+  * To run the python program in the same environment when logging in the next
+time:
+
+    conda activate myenv
+    python my_scipy_python_program.py
+
+More details on Anaconda environment management here:
+
+
+https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
+
+
+
+/proj/berzelius-2021-21/users/jacob/conda_envs/nilsre/lib/python3.7/site-packages/transformers/tokenization_utils_base.py:2360: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  FutureWarning,
+Some weights of the model checkpoint at allenai/scibert_scivocab_uncased were not used when initializing BertForSequenceClassification: ['cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.decoder.bias', 'cls.seq_relationship.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at allenai/scibert_scivocab_uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.

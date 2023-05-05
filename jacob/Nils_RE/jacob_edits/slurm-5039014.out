@@ -1,0 +1,66 @@
+Thu May  4 23:59:45 2023       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 470.161.03   Driver Version: 470.161.03   CUDA Version: 11.4     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A100-SXM...  On   | 00000000:90:00.0 Off |                    0 |
+| N/A   27C    P0    50W / 400W |      0MiB / 40536MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+***************************************************
+You have loaded an anaconda module
+***************************************************
+
+JUST LOADING THIS MODULE DOES *NOT* CHANGE THE PYTHON VERSION, NOR ENABLES ANY
+EXTRA PYTHON MODULES.
+
+This module makes available the 'conda' command, with which users can create
+named anaconda environments and then activate them.
+
+To create and use a customized environment use 'conda create ...' and
+then 'conda activate ...' (see example below).
+
+---------------------------------------------------------------------------------------------------
+NOTE: NSC strongly advices against placing 'conda activate' (with or without
+arguments)
+      in your shell initialization files, (e.g. '.bashrc' or '.bash_profile')
+since this
+      severly alters the environment for running software in ways that cause
+unpredictable
+      issues that can be difficult to diagnose.
+---------------------------------------------------------------------------------------------------
+
+Example usage:
+
+  * Setting up a customized Anaconda environment and run a Python program in
+it:
+
+    conda create -n myenv python=3.8 scipy=1.5.2
+    conda activate myenv
+    python my_scipy_python_program.py
+
+  * To run the python program in the same environment when logging in the next
+time:
+
+    conda activate myenv
+    python my_scipy_python_program.py
+
+More details on Anaconda environment management here:
+
+
+https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
+
+
+
+/cm/local/apps/slurm/var/spool/job5039014/slurm_script: line 19: jacob_edits/2023_05_05_bert_finetune_chemprot.txt: No such file or directory

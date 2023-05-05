@@ -1,0 +1,576 @@
+Please see config.json for configuration!
+Loaded config:
+{
+  "ignore": {
+    "add_custom_labels": true,
+    "build_art_corpus": true,
+    "build_mixed_corpus": true,
+    "bert_finetune": false,
+    "evaluation": false,
+    "plot": true
+  },
+  "add_custom_labels": {
+    "input_path": "data/processed/",
+    "output_path": "corpora/"
+  },
+  "build_art_corpus": {
+    "input_path": "data/artificial-building-blocks/",
+    "train_path": "corpora/artificial_pp_train.txt",
+    "dev_path": "corpora/artificial_pp_dev.txt",
+    "train_class_size": 1000,
+    "dev_class_size": 500
+  },
+  "build_mixed_corpus": {
+    "train_path": "corpora/chemprot_train.txt",
+    "artificial_path": "data/artificial-custom-labeled/chemical-protein/",
+    "artificial_ratio": 0.1,
+    "output_path": "corpora/mixed_train_10.txt"
+  },
+  "bert_finetune": {
+    "train_path": "corpora/chemprot_train.txt",
+    "dev_path": "corpora/chemprot_dev.txt",
+    "model_path": "models/chemprot-oversampled-10/",
+    "metrics_path": "models/chemprot-oversampled-10/metrics.txt",
+    "oversample": true,
+    "epochs": 10
+  },
+  "evaluation": {
+    "train_path": "corpora/chemprot_train.txt",
+    "dev_path": "corpora/chemprot_dev.txt",
+    "model_path": "models/chemprot-oversampled-10/",
+    "metrics_path": "models/chemprot-oversampled-10/metrics.txt"
+  },
+  "plot": {
+    "train_path": "corpora/artificial_pp_train.txt",
+    "dev_path": "corpora/artificial_pp_dev.txt",
+    "metrics_path": "models/artificial/pp/metrics.txt",
+    "output_path": "models/artificial/pp/plots/"
+  }
+}
+
+Ignoring script: build art corpus.
+
+Ignoring script: build mixed corpus.
+
+Ignoring script: add custom labels.
+
+Running BERT finetune script.
+
+
+No GPU(s) available, switching to CPU.
+
+Loading BERT-tokenizer
+
+BERT-tokenizer loaded. Running example:
+
+Original:  Agents that have only begun to undergo clinical evaluation include << CI-1033 >>, an irreversible pan-[[ erbB ]] tyrosine kinase inhibitor, and PKI166 and GW572016, both examples of dual kinase inhibitors (inhibiting epidermal growth factor receptor and Her2).
+Tokenized:  ['agents', 'that', 'have', 'only', 'begun', 'to', 'undergo', 'clinical', 'evaluation', 'include', '<', '<', 'ci', '-', '103', '##3', '>', '>', ',', 'an', 'irreversible', 'pan', '-', '[', '[', 'erbb', ']', ']', 'tyrosine', 'kinase', 'inhibitor', ',', 'and', 'pk', '##i', '##166', 'and', 'gw', '##57', '##201', '##6', ',', 'both', 'examples', 'of', 'dual', 'kinase', 'inhibitors', '(', 'inhibiting', 'epidermal', 'growth', 'factor', 'receptor', 'and', 'her', '##2', ')', '.']
+Token IDs:  [3027, 198, 360, 617, 19007, 147, 7883, 1329, 2166, 2212, 962, 962, 2313, 579, 10664, 30138, 1374, 1374, 422, 130, 17253, 3103, 579, 260, 260, 23867, 1901, 1901, 9925, 4655, 4773, 422, 137, 5689, 30109, 25313, 137, 14636, 5020, 4967, 30142, 422, 655, 3676, 131, 4793, 4655, 5241, 145, 12170, 14094, 1503, 1491, 2629, 137, 1750, 30132, 546, 205]
+
+
+
+Longest sequence: 320 tokens
+Sequences over 128: 190
+Sequences under 128: 9424
+
+Encoding datasets...
+
+Encoding done. Running example:
+Original:	 Agents that have only begun to undergo clinical evaluation include << CI-1033 >>, an irreversible pan-erbB [[ tyrosine kinase ]] inhibitor, and PKI166 and GW572016, both examples of dual kinase inhibitors (inhibiting epidermal growth factor receptor and Her2).
+Token IDs:	 tensor([  102,  3027,   198,   360,   617, 19007,   147,  7883,  1329,  2166,
+         2212,   962,   962,  2313,   579, 10664, 30138,  1374,  1374,   422,
+          130, 17253,  3103,   579, 23867,   260,   260,  9925,  4655,  1901,
+         1901,  4773,   422,   137,  5689, 30109, 25313,   137, 14636,  5020,
+         4967, 30142,   422,   655,  3676,   131,  4793,  4655,  5241,   145,
+        12170, 14094,  1503,  1491,  2629,   137,  1750, 30132,   546,   205,
+          103,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0])
+
+
+Datasets:
+9614 training samples
+3556 development samples
+BERT model has 201 different named parameters.
+
+==== Embedding Layer ====
+
+bert.embeddings.word_embeddings.weight                  (31090, 768)
+bert.embeddings.position_embeddings.weight                (512, 768)
+bert.embeddings.token_type_embeddings.weight                (2, 768)
+bert.embeddings.LayerNorm.weight                              (768,)
+bert.embeddings.LayerNorm.bias                                (768,)
+
+==== First Transformer ====
+
+bert.encoder.layer.0.attention.self.query.weight          (768, 768)
+bert.encoder.layer.0.attention.self.query.bias                (768,)
+bert.encoder.layer.0.attention.self.key.weight            (768, 768)
+bert.encoder.layer.0.attention.self.key.bias                  (768,)
+bert.encoder.layer.0.attention.self.value.weight          (768, 768)
+bert.encoder.layer.0.attention.self.value.bias                (768,)
+bert.encoder.layer.0.attention.output.dense.weight        (768, 768)
+bert.encoder.layer.0.attention.output.dense.bias              (768,)
+bert.encoder.layer.0.attention.output.LayerNorm.weight        (768,)
+bert.encoder.layer.0.attention.output.LayerNorm.bias          (768,)
+bert.encoder.layer.0.intermediate.dense.weight           (3072, 768)
+bert.encoder.layer.0.intermediate.dense.bias                 (3072,)
+bert.encoder.layer.0.output.dense.weight                 (768, 3072)
+bert.encoder.layer.0.output.dense.bias                        (768,)
+bert.encoder.layer.0.output.LayerNorm.weight                  (768,)
+bert.encoder.layer.0.output.LayerNorm.bias                    (768,)
+
+==== Output Layer ====
+
+bert.pooler.dense.weight                                  (768, 768)
+bert.pooler.dense.bias                                        (768,)
+classifier.weight                                           (5, 768)
+classifier.bias                                                 (5,)
+
+======== Epoch 1 / 10 ========
+ Batch    10 of   301.     Elapsed: 0:00:58
+ Batch    20 of   301.     Elapsed: 0:01:55
+ Batch    30 of   301.     Elapsed: 0:02:52
+ Batch    40 of   301.     Elapsed: 0:03:48
+ Batch    50 of   301.     Elapsed: 0:04:45
+ Batch    60 of   301.     Elapsed: 0:05:43
+ Batch    70 of   301.     Elapsed: 0:06:40
+ Batch    80 of   301.     Elapsed: 0:07:38
+ Batch    90 of   301.     Elapsed: 0:08:36
+ Batch   100 of   301.     Elapsed: 0:09:34
+ Batch   110 of   301.     Elapsed: 0:10:31
+ Batch   120 of   301.     Elapsed: 0:11:28
+ Batch   130 of   301.     Elapsed: 0:12:25
+ Batch   140 of   301.     Elapsed: 0:13:22
+ Batch   150 of   301.     Elapsed: 0:14:18
+ Batch   160 of   301.     Elapsed: 0:15:14
+ Batch   170 of   301.     Elapsed: 0:16:10
+ Batch   180 of   301.     Elapsed: 0:17:06
+ Batch   190 of   301.     Elapsed: 0:18:02
+ Batch   200 of   301.     Elapsed: 0:18:58
+ Batch   210 of   301.     Elapsed: 0:19:55
+ Batch   220 of   301.     Elapsed: 0:20:51
+ Batch   230 of   301.     Elapsed: 0:21:48
+ Batch   240 of   301.     Elapsed: 0:22:44
+ Batch   250 of   301.     Elapsed: 0:23:41
+ Batch   260 of   301.     Elapsed: 0:24:39
+ Batch   270 of   301.     Elapsed: 0:25:37
+ Batch   280 of   301.     Elapsed: 0:26:35
+ Batch   290 of   301.     Elapsed: 0:27:33
+ Batch   300 of   301.     Elapsed: 0:28:30
+
+     Average training loss: 0.56
+     Training epoch took: 0:28:34
+
+Running validation
+     Accuracy: 0.85
+     Validation Loss: 0.51
+     Validation took: 0:01:52
+
+Training complete!
+Total training took 0:30:25 (h:mm:ss)
+Saving model to models/chemprot-oversampled-10/bert-finetuned-0/
+
+======== Epoch 2 / 10 ========
+ Batch    10 of   301.     Elapsed: 0:00:56
+ Batch    20 of   301.     Elapsed: 0:01:52
+ Batch    30 of   301.     Elapsed: 0:02:48
+ Batch    40 of   301.     Elapsed: 0:03:46
+ Batch    50 of   301.     Elapsed: 0:04:44
+ Batch    60 of   301.     Elapsed: 0:05:42
+ Batch    70 of   301.     Elapsed: 0:06:40
+ Batch    80 of   301.     Elapsed: 0:07:37
+ Batch    90 of   301.     Elapsed: 0:08:35
+ Batch   100 of   301.     Elapsed: 0:09:32
+ Batch   110 of   301.     Elapsed: 0:10:29
+ Batch   120 of   301.     Elapsed: 0:11:26
+ Batch   130 of   301.     Elapsed: 0:12:22
+ Batch   140 of   301.     Elapsed: 0:13:18
+ Batch   150 of   301.     Elapsed: 0:14:16
+ Batch   160 of   301.     Elapsed: 0:15:13
+ Batch   170 of   301.     Elapsed: 0:16:10
+ Batch   180 of   301.     Elapsed: 0:17:08
+ Batch   190 of   301.     Elapsed: 0:18:05
+ Batch   200 of   301.     Elapsed: 0:19:01
+ Batch   210 of   301.     Elapsed: 0:19:56
+ Batch   220 of   301.     Elapsed: 0:20:53
+ Batch   230 of   301.     Elapsed: 0:21:49
+ Batch   240 of   301.     Elapsed: 0:22:45
+ Batch   250 of   301.     Elapsed: 0:23:41
+ Batch   260 of   301.     Elapsed: 0:24:37
+ Batch   270 of   301.     Elapsed: 0:25:33
+ Batch   280 of   301.     Elapsed: 0:26:29
+ Batch   290 of   301.     Elapsed: 0:27:25
+ Batch   300 of   301.     Elapsed: 0:28:21
+
+     Average training loss: 0.18
+     Training epoch took: 0:28:24
+
+Running validation
+     Accuracy: 0.85
+     Validation Loss: 0.58
+     Validation took: 0:01:46
+
+Training complete!
+Total training took 1:00:36 (h:mm:ss)
+Saving model to models/chemprot-oversampled-10/bert-finetuned-1/
+
+======== Epoch 3 / 10 ========
+ Batch    10 of   301.     Elapsed: 0:00:56
+ Batch    20 of   301.     Elapsed: 0:01:52
+ Batch    30 of   301.     Elapsed: 0:02:48
+ Batch    40 of   301.     Elapsed: 0:03:45
+ Batch    50 of   301.     Elapsed: 0:04:46
+ Batch    60 of   301.     Elapsed: 0:05:49
+ Batch    70 of   301.     Elapsed: 0:06:50
+ Batch    80 of   301.     Elapsed: 0:07:48
+ Batch    90 of   301.     Elapsed: 0:08:44
+ Batch   100 of   301.     Elapsed: 0:09:40
+ Batch   110 of   301.     Elapsed: 0:10:36
+ Batch   120 of   301.     Elapsed: 0:11:32
+ Batch   130 of   301.     Elapsed: 0:12:28
+ Batch   140 of   301.     Elapsed: 0:13:24
+ Batch   150 of   301.     Elapsed: 0:14:21
+ Batch   160 of   301.     Elapsed: 0:15:17
+ Batch   170 of   301.     Elapsed: 0:16:13
+ Batch   180 of   301.     Elapsed: 0:17:09
+ Batch   190 of   301.     Elapsed: 0:18:06
+ Batch   200 of   301.     Elapsed: 0:19:02
+ Batch   210 of   301.     Elapsed: 0:20:00
+ Batch   220 of   301.     Elapsed: 0:20:59
+ Batch   230 of   301.     Elapsed: 0:21:58
+ Batch   240 of   301.     Elapsed: 0:22:57
+ Batch   250 of   301.     Elapsed: 0:23:56
+ Batch   260 of   301.     Elapsed: 0:24:55
+ Batch   270 of   301.     Elapsed: 0:25:52
+ Batch   280 of   301.     Elapsed: 0:26:52
+ Batch   290 of   301.     Elapsed: 0:27:51
+ Batch   300 of   301.     Elapsed: 0:28:48
+
+     Average training loss: 0.11
+     Training epoch took: 0:28:51
+
+Running validation
+     Accuracy: 0.87
+     Validation Loss: 0.61
+     Validation took: 0:01:45
+
+Training complete!
+Total training took 1:31:12 (h:mm:ss)
+Saving model to models/chemprot-oversampled-10/bert-finetuned-2/
+
+======== Epoch 4 / 10 ========
+ Batch    10 of   301.     Elapsed: 0:00:56
+ Batch    20 of   301.     Elapsed: 0:01:52
+ Batch    30 of   301.     Elapsed: 0:02:47
+ Batch    40 of   301.     Elapsed: 0:03:43
+ Batch    50 of   301.     Elapsed: 0:04:39
+ Batch    60 of   301.     Elapsed: 0:05:35
+ Batch    70 of   301.     Elapsed: 0:06:31
+ Batch    80 of   301.     Elapsed: 0:07:28
+ Batch    90 of   301.     Elapsed: 0:08:25
+ Batch   100 of   301.     Elapsed: 0:09:20
+ Batch   110 of   301.     Elapsed: 0:10:16
+ Batch   120 of   301.     Elapsed: 0:11:12
+ Batch   130 of   301.     Elapsed: 0:12:08
+ Batch   140 of   301.     Elapsed: 0:13:04
+ Batch   150 of   301.     Elapsed: 0:14:00
+ Batch   160 of   301.     Elapsed: 0:14:56
+ Batch   170 of   301.     Elapsed: 0:15:52
+ Batch   180 of   301.     Elapsed: 0:16:48
+ Batch   190 of   301.     Elapsed: 0:17:44
+ Batch   200 of   301.     Elapsed: 0:18:40
+ Batch   210 of   301.     Elapsed: 0:19:36
+ Batch   220 of   301.     Elapsed: 0:20:31
+ Batch   230 of   301.     Elapsed: 0:21:27
+ Batch   240 of   301.     Elapsed: 0:22:22
+ Batch   250 of   301.     Elapsed: 0:23:18
+ Batch   260 of   301.     Elapsed: 0:24:13
+ Batch   270 of   301.     Elapsed: 0:25:09
+ Batch   280 of   301.     Elapsed: 0:26:04
+ Batch   290 of   301.     Elapsed: 0:27:00
+ Batch   300 of   301.     Elapsed: 0:27:55
+
+     Average training loss: 0.07
+     Training epoch took: 0:27:58
+
+Running validation
+     Accuracy: 0.87
+     Validation Loss: 0.61
+     Validation took: 0:01:42
+
+Training complete!
+Total training took 2:00:53 (h:mm:ss)
+Saving model to models/chemprot-oversampled-10/bert-finetuned-3/
+
+======== Epoch 5 / 10 ========
+ Batch    10 of   301.     Elapsed: 0:00:56
+ Batch    20 of   301.     Elapsed: 0:01:51
+ Batch    30 of   301.     Elapsed: 0:02:47
+ Batch    40 of   301.     Elapsed: 0:03:42
+ Batch    50 of   301.     Elapsed: 0:04:38
+ Batch    60 of   301.     Elapsed: 0:05:33
+ Batch    70 of   301.     Elapsed: 0:06:29
+ Batch    80 of   301.     Elapsed: 0:07:25
+ Batch    90 of   301.     Elapsed: 0:08:20
+ Batch   100 of   301.     Elapsed: 0:09:16
+ Batch   110 of   301.     Elapsed: 0:10:12
+ Batch   120 of   301.     Elapsed: 0:11:07
+ Batch   130 of   301.     Elapsed: 0:12:03
+ Batch   140 of   301.     Elapsed: 0:12:59
+ Batch   150 of   301.     Elapsed: 0:13:54
+ Batch   160 of   301.     Elapsed: 0:14:50
+ Batch   170 of   301.     Elapsed: 0:15:46
+ Batch   180 of   301.     Elapsed: 0:16:42
+ Batch   190 of   301.     Elapsed: 0:17:37
+ Batch   200 of   301.     Elapsed: 0:18:33
+ Batch   210 of   301.     Elapsed: 0:19:29
+ Batch   220 of   301.     Elapsed: 0:20:24
+ Batch   230 of   301.     Elapsed: 0:21:20
+ Batch   240 of   301.     Elapsed: 0:22:16
+ Batch   250 of   301.     Elapsed: 0:23:11
+ Batch   260 of   301.     Elapsed: 0:24:07
+ Batch   270 of   301.     Elapsed: 0:25:02
+ Batch   280 of   301.     Elapsed: 0:25:58
+ Batch   290 of   301.     Elapsed: 0:26:53
+ Batch   300 of   301.     Elapsed: 0:27:49
+
+     Average training loss: 0.04
+     Training epoch took: 0:27:52
+
+Running validation
+     Accuracy: 0.87
+     Validation Loss: 0.70
+     Validation took: 0:01:43
+
+Training complete!
+Total training took 2:30:28 (h:mm:ss)
+Saving model to models/chemprot-oversampled-10/bert-finetuned-4/
+
+======== Epoch 6 / 10 ========
+ Batch    10 of   301.     Elapsed: 0:00:56
+ Batch    20 of   301.     Elapsed: 0:01:52
+ Batch    30 of   301.     Elapsed: 0:02:48
+ Batch    40 of   301.     Elapsed: 0:03:44
+ Batch    50 of   301.     Elapsed: 0:04:40
+ Batch    60 of   301.     Elapsed: 0:05:36
+ Batch    70 of   301.     Elapsed: 0:06:31
+ Batch    80 of   301.     Elapsed: 0:07:27
+ Batch    90 of   301.     Elapsed: 0:08:23
+ Batch   100 of   301.     Elapsed: 0:09:19
+ Batch   110 of   301.     Elapsed: 0:10:15
+ Batch   120 of   301.     Elapsed: 0:11:11
+ Batch   130 of   301.     Elapsed: 0:12:07
+ Batch   140 of   301.     Elapsed: 0:13:02
+ Batch   150 of   301.     Elapsed: 0:13:58
+ Batch   160 of   301.     Elapsed: 0:14:54
+ Batch   170 of   301.     Elapsed: 0:15:50
+ Batch   180 of   301.     Elapsed: 0:16:46
+ Batch   190 of   301.     Elapsed: 0:17:42
+ Batch   200 of   301.     Elapsed: 0:18:38
+ Batch   210 of   301.     Elapsed: 0:19:33
+ Batch   220 of   301.     Elapsed: 0:20:29
+ Batch   230 of   301.     Elapsed: 0:21:25
+ Batch   240 of   301.     Elapsed: 0:22:21
+ Batch   250 of   301.     Elapsed: 0:23:17
+ Batch   260 of   301.     Elapsed: 0:24:13
+ Batch   270 of   301.     Elapsed: 0:25:09
+ Batch   280 of   301.     Elapsed: 0:26:05
+ Batch   290 of   301.     Elapsed: 0:27:01
+ Batch   300 of   301.     Elapsed: 0:27:57
+
+     Average training loss: 0.03
+     Training epoch took: 0:27:59
+
+Running validation
+     Accuracy: 0.86
+     Validation Loss: 0.75
+     Validation took: 0:01:46
+
+Training complete!
+Total training took 3:00:21 (h:mm:ss)
+Saving model to models/chemprot-oversampled-10/bert-finetuned-5/
+
+======== Epoch 7 / 10 ========
+ Batch    10 of   301.     Elapsed: 0:00:56
+ Batch    20 of   301.     Elapsed: 0:01:51
+ Batch    30 of   301.     Elapsed: 0:02:47
+ Batch    40 of   301.     Elapsed: 0:03:42
+ Batch    50 of   301.     Elapsed: 0:04:38
+ Batch    60 of   301.     Elapsed: 0:05:34
+ Batch    70 of   301.     Elapsed: 0:06:29
+ Batch    80 of   301.     Elapsed: 0:07:25
+ Batch    90 of   301.     Elapsed: 0:08:21
+ Batch   100 of   301.     Elapsed: 0:09:16
+ Batch   110 of   301.     Elapsed: 0:10:12
+ Batch   120 of   301.     Elapsed: 0:11:08
+ Batch   130 of   301.     Elapsed: 0:12:03
+ Batch   140 of   301.     Elapsed: 0:12:59
+ Batch   150 of   301.     Elapsed: 0:13:55
+ Batch   160 of   301.     Elapsed: 0:14:50
+ Batch   170 of   301.     Elapsed: 0:15:46
+ Batch   180 of   301.     Elapsed: 0:16:42
+ Batch   190 of   301.     Elapsed: 0:17:37
+ Batch   200 of   301.     Elapsed: 0:18:33
+ Batch   210 of   301.     Elapsed: 0:19:29
+ Batch   220 of   301.     Elapsed: 0:20:24
+ Batch   230 of   301.     Elapsed: 0:21:20
+ Batch   240 of   301.     Elapsed: 0:22:16
+ Batch   250 of   301.     Elapsed: 0:23:11
+ Batch   260 of   301.     Elapsed: 0:24:07
+ Batch   270 of   301.     Elapsed: 0:25:03
+ Batch   280 of   301.     Elapsed: 0:25:58
+ Batch   290 of   301.     Elapsed: 0:26:54
+ Batch   300 of   301.     Elapsed: 0:27:50
+
+     Average training loss: 0.02
+     Training epoch took: 0:27:52
+
+Running validation
+     Accuracy: 0.86
+     Validation Loss: 0.82
+     Validation took: 0:01:45
+
+Training complete!
+Total training took 3:30:03 (h:mm:ss)
+Saving model to models/chemprot-oversampled-10/bert-finetuned-6/
+
+======== Epoch 8 / 10 ========
+ Batch    10 of   301.     Elapsed: 0:00:56
+ Batch    20 of   301.     Elapsed: 0:01:52
+ Batch    30 of   301.     Elapsed: 0:02:48
+ Batch    40 of   301.     Elapsed: 0:03:44
+ Batch    50 of   301.     Elapsed: 0:04:39
+ Batch    60 of   301.     Elapsed: 0:05:35
+ Batch    70 of   301.     Elapsed: 0:06:31
+ Batch    80 of   301.     Elapsed: 0:07:27
+ Batch    90 of   301.     Elapsed: 0:08:23
+ Batch   100 of   301.     Elapsed: 0:09:19
+ Batch   110 of   301.     Elapsed: 0:10:15
+ Batch   120 of   301.     Elapsed: 0:11:11
+ Batch   130 of   301.     Elapsed: 0:12:06
+ Batch   140 of   301.     Elapsed: 0:13:02
+ Batch   150 of   301.     Elapsed: 0:13:58
+ Batch   160 of   301.     Elapsed: 0:14:54
+ Batch   170 of   301.     Elapsed: 0:15:50
+ Batch   180 of   301.     Elapsed: 0:16:45
+ Batch   190 of   301.     Elapsed: 0:17:41
+ Batch   200 of   301.     Elapsed: 0:18:37
+ Batch   210 of   301.     Elapsed: 0:19:33
+ Batch   220 of   301.     Elapsed: 0:20:29
+ Batch   230 of   301.     Elapsed: 0:21:25
+ Batch   240 of   301.     Elapsed: 0:22:21
+ Batch   250 of   301.     Elapsed: 0:23:16
+ Batch   260 of   301.     Elapsed: 0:24:12
+ Batch   270 of   301.     Elapsed: 0:25:08
+ Batch   280 of   301.     Elapsed: 0:26:04
+ Batch   290 of   301.     Elapsed: 0:27:00
+ Batch   300 of   301.     Elapsed: 0:27:56
+
+     Average training loss: 0.02
+     Training epoch took: 0:27:59
+
+Running validation
+     Accuracy: 0.86
+     Validation Loss: 0.85
+     Validation took: 0:01:45
+
+Training complete!
+Total training took 3:59:49 (h:mm:ss)
+Saving model to models/chemprot-oversampled-10/bert-finetuned-7/
+
+======== Epoch 9 / 10 ========
+ Batch    10 of   301.     Elapsed: 0:00:56
+ Batch    20 of   301.     Elapsed: 0:01:52
+ Batch    30 of   301.     Elapsed: 0:02:47
+ Batch    40 of   301.     Elapsed: 0:03:43
+ Batch    50 of   301.     Elapsed: 0:04:39
+ Batch    60 of   301.     Elapsed: 0:05:35
+ Batch    70 of   301.     Elapsed: 0:06:30
+ Batch    80 of   301.     Elapsed: 0:07:26
+ Batch    90 of   301.     Elapsed: 0:08:22
+ Batch   100 of   301.     Elapsed: 0:09:17
+ Batch   110 of   301.     Elapsed: 0:10:13
+ Batch   120 of   301.     Elapsed: 0:11:09
+ Batch   130 of   301.     Elapsed: 0:12:04
+ Batch   140 of   301.     Elapsed: 0:13:00
+ Batch   150 of   301.     Elapsed: 0:13:56
+ Batch   160 of   301.     Elapsed: 0:14:51
+ Batch   170 of   301.     Elapsed: 0:15:47
+ Batch   180 of   301.     Elapsed: 0:16:43
+ Batch   190 of   301.     Elapsed: 0:17:38
+ Batch   200 of   301.     Elapsed: 0:18:34
+ Batch   210 of   301.     Elapsed: 0:19:30
+ Batch   220 of   301.     Elapsed: 0:20:26
+ Batch   230 of   301.     Elapsed: 0:21:21
+ Batch   240 of   301.     Elapsed: 0:22:17
+ Batch   250 of   301.     Elapsed: 0:23:13
+ Batch   260 of   301.     Elapsed: 0:24:08
+ Batch   270 of   301.     Elapsed: 0:25:04
+ Batch   280 of   301.     Elapsed: 0:26:00
+ Batch   290 of   301.     Elapsed: 0:26:55
+ Batch   300 of   301.     Elapsed: 0:27:51
+
+     Average training loss: 0.01
+     Training epoch took: 0:27:54
+
+Running validation
+     Accuracy: 0.86
+     Validation Loss: 0.87
+     Validation took: 0:01:44
+
+Training complete!
+Total training took 4:29:32 (h:mm:ss)
+Saving model to models/chemprot-oversampled-10/bert-finetuned-8/
+
+======== Epoch 10 / 10 ========
+ Batch    10 of   301.     Elapsed: 0:00:56
+ Batch    20 of   301.     Elapsed: 0:01:51
+ Batch    30 of   301.     Elapsed: 0:02:47
+ Batch    40 of   301.     Elapsed: 0:03:43
+ Batch    50 of   301.     Elapsed: 0:04:38
+ Batch    60 of   301.     Elapsed: 0:05:34
+ Batch    70 of   301.     Elapsed: 0:06:30
+ Batch    80 of   301.     Elapsed: 0:07:25
+ Batch    90 of   301.     Elapsed: 0:08:21
+ Batch   100 of   301.     Elapsed: 0:09:17
+ Batch   110 of   301.     Elapsed: 0:10:12
+ Batch   120 of   301.     Elapsed: 0:11:08
+ Batch   130 of   301.     Elapsed: 0:12:04
+ Batch   140 of   301.     Elapsed: 0:13:00
+ Batch   150 of   301.     Elapsed: 0:13:55
+ Batch   160 of   301.     Elapsed: 0:14:51
+ Batch   170 of   301.     Elapsed: 0:15:47
+ Batch   180 of   301.     Elapsed: 0:16:42
+ Batch   190 of   301.     Elapsed: 0:17:38
+ Batch   200 of   301.     Elapsed: 0:18:34
+ Batch   210 of   301.     Elapsed: 0:19:29
+ Batch   220 of   301.     Elapsed: 0:20:25
+ Batch   230 of   301.     Elapsed: 0:21:21
+ Batch   240 of   301.     Elapsed: 0:22:16
+ Batch   250 of   301.     Elapsed: 0:23:12
+ Batch   260 of   301.     Elapsed: 0:24:08
+ Batch   270 of   301.     Elapsed: 0:25:04
+ Batch   280 of   301.     Elapsed: 0:25:59
+ Batch   290 of   301.     Elapsed: 0:26:55
+ Batch   300 of   301.     Elapsed: 0:27:51
+
+     Average training loss: 0.01
+     Training epoch took: 0:27:53
+
+Running validation
+     Accuracy: 0.87
+     Validation Loss: 0.87
+     Validation took: 0:01:44
+
+Training complete!
+Total training took 4:59:13 (h:mm:ss)
+Saving model to models/chemprot-oversampled-10/bert-finetuned-9/
+Finished running BERT finetune script.
+
+Running eval script.
+corpora/chemprot_train.txt

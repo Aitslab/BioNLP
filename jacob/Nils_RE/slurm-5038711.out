@@ -1,0 +1,100 @@
+Thu May  4 20:49:21 2023       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 470.161.03   Driver Version: 470.161.03   CUDA Version: 11.4     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A100-SXM...  On   | 00000000:90:00.0 Off |                    0 |
+| N/A   30C    P0    52W / 400W |      0MiB / 40536MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+***************************************************
+You have loaded an anaconda module
+***************************************************
+
+JUST LOADING THIS MODULE DOES *NOT* CHANGE THE PYTHON VERSION, NOR ENABLES ANY
+EXTRA PYTHON MODULES.
+
+This module makes available the 'conda' command, with which users can create
+named anaconda environments and then activate them.
+
+To create and use a customized environment use 'conda create ...' and
+then 'conda activate ...' (see example below).
+
+---------------------------------------------------------------------------------------------------
+NOTE: NSC strongly advices against placing 'conda activate' (with or without
+arguments)
+      in your shell initialization files, (e.g. '.bashrc' or '.bash_profile')
+since this
+      severly alters the environment for running software in ways that cause
+unpredictable
+      issues that can be difficult to diagnose.
+---------------------------------------------------------------------------------------------------
+
+Example usage:
+
+  * Setting up a customized Anaconda environment and run a Python program in
+it:
+
+    conda create -n myenv python=3.8 scipy=1.5.2
+    conda activate myenv
+    python my_scipy_python_program.py
+
+  * To run the python program in the same environment when logging in the next
+time:
+
+    conda activate myenv
+    python my_scipy_python_program.py
+
+More details on Anaconda environment management here:
+
+
+https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
+
+
+
+/proj/berzelius-2021-21/users/jacob/conda_envs/nilsre/lib/python3.7/site-packages/transformers/tokenization_utils_base.py:2360: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  FutureWarning,
+Some weights of the model checkpoint at allenai/scibert_scivocab_uncased were not used when initializing BertForSequenceClassification: ['cls.seq_relationship.bias', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.bias', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.weight']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at allenai/scibert_scivocab_uncased and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/proj/berzelius-2021-21/users/jacob/conda_envs/nilsre/lib/python3.7/site-packages/transformers/optimization.py:395: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  FutureWarning,
+Traceback (most recent call last):
+  File "main.py", line 125, in <module>
+    run_eval(config["evaluation"], ignore=ignore["evaluation"])
+  File "main.py", line 71, in run_eval
+    evaluation.run(eval_config["train_path"], eval_config["model_path"], eval_config["metrics_path"]) 
+  File "/proj/berzelius-2021-21/users/jacob/BioNLP/nils/scripts/evaluation.py", line 94, in run
+    "confusion matrices": []})
+  File "/proj/berzelius-2021-21/users/jacob/BioNLP/nils/scripts/evaluation.py", line 27, in evaluate
+    model_path.to(device)
+  File "/proj/berzelius-2021-21/users/jacob/conda_envs/nilsre/lib/python3.7/site-packages/transformers/modeling_utils.py", line 1896, in to
+    return super().to(*args, **kwargs)
+  File "/proj/berzelius-2021-21/users/jacob/conda_envs/nilsre/lib/python3.7/site-packages/torch/nn/modules/module.py", line 673, in to
+    return self._apply(convert)
+  File "/proj/berzelius-2021-21/users/jacob/conda_envs/nilsre/lib/python3.7/site-packages/torch/nn/modules/module.py", line 387, in _apply
+    module._apply(fn)
+  File "/proj/berzelius-2021-21/users/jacob/conda_envs/nilsre/lib/python3.7/site-packages/torch/nn/modules/module.py", line 387, in _apply
+    module._apply(fn)
+  File "/proj/berzelius-2021-21/users/jacob/conda_envs/nilsre/lib/python3.7/site-packages/torch/nn/modules/module.py", line 387, in _apply
+    module._apply(fn)
+  File "/proj/berzelius-2021-21/users/jacob/conda_envs/nilsre/lib/python3.7/site-packages/torch/nn/modules/module.py", line 409, in _apply
+    param_applied = fn(param)
+  File "/proj/berzelius-2021-21/users/jacob/conda_envs/nilsre/lib/python3.7/site-packages/torch/nn/modules/module.py", line 671, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+  File "/proj/berzelius-2021-21/users/jacob/conda_envs/nilsre/lib/python3.7/site-packages/torch/cuda/__init__.py", line 164, in _lazy_init
+    raise AssertionError("Torch not compiled with CUDA enabled")
+AssertionError: Torch not compiled with CUDA enabled

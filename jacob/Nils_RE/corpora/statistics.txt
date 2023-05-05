@@ -1,0 +1,70 @@
+chemprot_train_set
+--------------------------------------------------
+label                         count	%
+- - - - - - - - - - - - - - - - - - - - - - - - - 
+total                         6436	100.0
+REGULATOR-NEGATIVE            2505	38.92
+INTERACTOR                    2583	40.13
+PART-OF                       308	4.79
+NOT                           241	3.74
+REGULATOR-POSITIVE            799	12.41
+--------------------------------------------------
+
+chemprot_dev_set
+--------------------------------------------------
+label                         count	%
+- - - - - - - - - - - - - - - - - - - - - - - - - 
+total                         3556	100.0
+INTERACTOR                    1350	37.96
+REGULATOR-NEGATIVE            1302	36.61
+NOT                           175	4.92
+REGULATOR-POSITIVE            576	16.2
+PART-OF                       153	4.3
+--------------------------------------------------
+
+chemprot_sample_set
+--------------------------------------------------
+label                         count	%
+- - - - - - - - - - - - - - - - - - - - - - - - - 
+total                         339	100.0
+INTERACTOR                    142	41.89
+REGULATOR-POSITIVE            78	23.01
+REGULATOR-NEGATIVE            103	30.38
+NOT                           15	4.42
+PART-OF                       1	0.29
+--------------------------------------------------
+
+chemprot_test_set
+--------------------------------------------------
+label                         count	%
+- - - - - - - - - - - - - - - - - - - - - - - - - 
+total                         5744	100.0
+INTERACTOR                    2599	45.25
+REGULATOR-POSITIVE            686	11.94
+REGULATOR-NEGATIVE            1977	34.42
+PART-OF                       215	3.74
+NOT                           267	4.65
+--------------------------------------------------
+
+drugprot_train_set
+--------------------------------------------------
+label                         count	%
+- - - - - - - - - - - - - - - - - - - - - - - - - 
+total                         17274	100.0
+INTERACTOR                    5852	33.88
+REGULATOR-NEGATIVE            7702	44.59
+REGULATOR-POSITIVE            2835	16.41
+PART-OF                       885	5.12
+--------------------------------------------------
+
+drugprot_dev_set
+--------------------------------------------------
+label                         count	%
+- - - - - - - - - - - - - - - - - - - - - - - - - 
+total                         3761	100.0
+REGULATOR-POSITIVE            558	14.84
+REGULATOR-NEGATIVE            1702	45.25
+INTERACTOR                    1244	33.08
+PART-OF                       257	6.83
+--------------------------------------------------
+
