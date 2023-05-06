@@ -1,4 +1,7 @@
-# this function extracts all words in the inputfile that end on a specific substring to the outputfile (in lowercase)
+# author: Sonja Aits
+    
+# this function extracts all words in the inputfile that end on a specific substring to the outputfile
+# the matches are listed in lowercase and alphabetically sorted
 
 def extract_endmatches(inputfile, substring, outputfile):
 
@@ -25,11 +28,11 @@ def extract_endmatches(inputfile, substring, outputfile):
     # remove duplicates by converting to a set
     matches_set = set(matches_lowercase)
 
-    # Print the results to screen and file
+    # Print the results to screen and file in alphabetic order
     print('Words ending with '+substring+':')
-    for x in matches_set:
+    for x in sorted(matches_set):
         print(x)
 
     with open(outputfile, 'w') as f:
-        for y in matches_set:
+        for y in sorted(matches_set):
            f.write(y+'\n')
