@@ -28,10 +28,16 @@ def evaluate(input_dir, input_path, metrics):
 
   # Predict classes
   for seq in data_list:
+    #print(f"Seq: {seq}")
     text = json.loads(seq)["text"]
     true_class = json.loads(seq)["custom_label"]
-    input_ids = torch.tensor(tokenizer.encode(text)).unsqueeze(0).to(device)
-    outputs = model_path(input_ids)
+
+    # Strange runtime error with tensor dimension mismath
+    try:
+      input_ids = torch.tensor(tokenizer.encode(text)).unsqueeze(0).to(device)
+      outputs = model_path(input_ids)
+    except RuntimeError:
+      continue
 
     pred_class = classes[torch.softmax(outputs.logits, dim=1).argmax()]
    

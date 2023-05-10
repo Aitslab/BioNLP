@@ -7,10 +7,10 @@ def plot_loss_acc(data, indices, output_dir, train_key):
   x = list(indices)
   plt.xticks(indices)
 
-  plt.plot(x, data['average training loss'][:8],     color="blue")
-  plt.plot(x, data['average validation loss'][:8],   color="red")
-  plt.plot(x, data[train_key]['accuracy'][:8],     color="green") # accuracies returned by the eval.py script
-  plt.plot(x, data['average validation accuracy'][:8], color="orange")
+  plt.plot(x, data['average training loss'],     color="blue")
+  plt.plot(x, data['average validation loss'],   color="red")
+  plt.plot(x, data[train_key]['accuracy'],     color="green") # accuracies returned by the eval.py script
+  plt.plot(x, data['average validation accuracy'], color="orange")
 
   plt.legend(['avg. training loss', 'avg. validation loss', 
               'avg. training accuracy', 'avg. validation accuracy'], 
@@ -26,10 +26,8 @@ def plot_loss_acc(data, indices, output_dir, train_key):
 def plot_metrics(train_data, dev_data, indices, output_dir):
   x = list(indices)
 
-  #print(f"train data: {train_data}")
-
+  print(f"Metrics: {train_data}")
   for metric in train_data:
-    #print(f"Metric: {metric}")
     plt.xticks(indices)
   
     plt.plot(x, train_data[metric], color="blue")
@@ -58,5 +56,5 @@ def run(train_path, dev_path, input_path, output_path):
   dev_key = dev_path.split("/")[-1]
 
   indices = range(1, len(data['average training loss']) + 1) 
-  plot_loss_acc(data, indices[:8], output_path, train_key)
-  plot_metrics(data[train_key], data[dev_key], indices[:8], output_path)
+  plot_loss_acc(data, indices, output_path, train_key)
+  plot_metrics(data[train_key], data[dev_key], indices, output_path)

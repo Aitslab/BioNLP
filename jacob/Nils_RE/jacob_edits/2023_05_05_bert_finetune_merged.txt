@@ -1,0 +1,1025 @@
+Please see config.json for configuration!
+Loaded config:
+{
+  "ignore": {
+    "add_custom_labels": true,
+    "build_art_corpus": true,
+    "build_mixed_corpus": true,
+    "bert_finetune": false,
+    "evaluation": true,
+    "plot": true
+  },
+  "add_custom_labels": {
+    "input_path": "data/processed/",
+    "output_path": "corpora/"
+  },
+  "build_art_corpus": {
+    "input_path": "data/artificial-building-blocks/",
+    "train_path": "corpora/artificial_pp_train.txt",
+    "dev_path": "corpora/artificial_pp_dev.txt",
+    "train_class_size": 1000,
+    "dev_class_size": 500
+  },
+  "build_mixed_corpus": {
+    "train_path": "corpora/chemprot_train.txt",
+    "artificial_path": "data/artificial-custom-labeled/chemical-protein/",
+    "artificial_ratio": 0.1,
+    "output_path": "corpora/mixed_train_10.txt"
+  },
+  "bert_finetune": {
+    "train_path": "corpora/merged_train.txt",
+    "dev_path": "corpora/merged_dev.txt",
+    "model_path": "models/merged-10/",
+    "metrics_path": "models/merged-10/metrics.txt",
+    "oversample": false,
+    "epochs": 10
+  },
+  "evaluation": {
+    "train_path": "corpora/chemprot_train.txt",
+    "dev_path": "corpora/chemprot_dev.txt",
+    "model_path": "models/chemprot-oversampled-10/",
+    "metrics_path": "models/chemprot-oversampled-10/metrics.txt"
+  },
+  "plot": {
+    "train_path": "corpora/chemprot_train.txt",
+    "dev_path": "corpora/chemprot_dev.txt",
+    "metrics_path": "models/chemprot-oversampled-10/metrics.txt",
+    "output_path": "jacob_edits/figs"
+  }
+}
+
+Ignoring script: build art corpus.
+
+Ignoring script: build mixed corpus.
+
+Ignoring script: add custom labels.
+
+Running BERT finetune script.
+
+
+Found 1 available GPU(s).
+Using GPU: NVIDIA A100-SXM4-40GB
+
+Loading BERT-tokenizer
+
+BERT-tokenizer loaded. Running example:
+
+Original:  Agents that have only begun to undergo clinical evaluation include << CI-1033 >>, an irreversible pan-[[ erbB ]] tyrosine kinase inhibitor, and PKI166 and GW572016, both examples of dual kinase inhibitors (inhibiting epidermal growth factor receptor and Her2).
+Tokenized:  ['agents', 'that', 'have', 'only', 'begun', 'to', 'undergo', 'clinical', 'evaluation', 'include', '<', '<', 'ci', '-', '103', '##3', '>', '>', ',', 'an', 'irreversible', 'pan', '-', '[', '[', 'erbb', ']', ']', 'tyrosine', 'kinase', 'inhibitor', ',', 'and', 'pk', '##i', '##166', 'and', 'gw', '##57', '##201', '##6', ',', 'both', 'examples', 'of', 'dual', 'kinase', 'inhibitors', '(', 'inhibiting', 'epidermal', 'growth', 'factor', 'receptor', 'and', 'her', '##2', ')', '.']
+Token IDs:  [3027, 198, 360, 617, 19007, 147, 7883, 1329, 2166, 2212, 962, 962, 2313, 579, 10664, 30138, 1374, 1374, 422, 130, 17253, 3103, 579, 260, 260, 23867, 1901, 1901, 9925, 4655, 4773, 422, 137, 5689, 30109, 25313, 137, 14636, 5020, 4967, 30142, 422, 655, 3676, 131, 4793, 4655, 5241, 145, 12170, 14094, 1503, 1491, 2629, 137, 1750, 30132, 546, 205]
+
+
+
+Longest sequence: 591 tokens
+Sequences over 128: 648
+Sequences under 128: 23062
+
+Encoding datasets...
+
+Encoding done. Running example:
+Original:	 Agents that have only begun to undergo clinical evaluation include << CI-1033 >>, an irreversible pan-erbB [[ tyrosine kinase ]] inhibitor, and PKI166 and GW572016, both examples of dual kinase inhibitors (inhibiting epidermal growth factor receptor and Her2).
+Token IDs:	 tensor([  102,  3027,   198,   360,   617, 19007,   147,  7883,  1329,  2166,
+         2212,   962,   962,  2313,   579, 10664, 30138,  1374,  1374,   422,
+          130, 17253,  3103,   579, 23867,   260,   260,  9925,  4655,  1901,
+         1901,  4773,   422,   137,  5689, 30109, 25313,   137, 14636,  5020,
+         4967, 30142,   422,   655,  3676,   131,  4793,  4655,  5241,   145,
+        12170, 14094,  1503,  1491,  2629,   137,  1750, 30132,   546,   205,
+          103,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0])
+
+
+Datasets:
+23710 training samples
+7317 development samples
+BERT model has 201 different named parameters.
+
+==== Embedding Layer ====
+
+bert.embeddings.word_embeddings.weight                  (31090, 768)
+bert.embeddings.position_embeddings.weight                (512, 768)
+bert.embeddings.token_type_embeddings.weight                (2, 768)
+bert.embeddings.LayerNorm.weight                              (768,)
+bert.embeddings.LayerNorm.bias                                (768,)
+
+==== First Transformer ====
+
+bert.encoder.layer.0.attention.self.query.weight          (768, 768)
+bert.encoder.layer.0.attention.self.query.bias                (768,)
+bert.encoder.layer.0.attention.self.key.weight            (768, 768)
+bert.encoder.layer.0.attention.self.key.bias                  (768,)
+bert.encoder.layer.0.attention.self.value.weight          (768, 768)
+bert.encoder.layer.0.attention.self.value.bias                (768,)
+bert.encoder.layer.0.attention.output.dense.weight        (768, 768)
+bert.encoder.layer.0.attention.output.dense.bias              (768,)
+bert.encoder.layer.0.attention.output.LayerNorm.weight        (768,)
+bert.encoder.layer.0.attention.output.LayerNorm.bias          (768,)
+bert.encoder.layer.0.intermediate.dense.weight           (3072, 768)
+bert.encoder.layer.0.intermediate.dense.bias                 (3072,)
+bert.encoder.layer.0.output.dense.weight                 (768, 3072)
+bert.encoder.layer.0.output.dense.bias                        (768,)
+bert.encoder.layer.0.output.LayerNorm.weight                  (768,)
+bert.encoder.layer.0.output.LayerNorm.bias                    (768,)
+
+==== Output Layer ====
+
+bert.pooler.dense.weight                                  (768, 768)
+bert.pooler.dense.bias                                        (768,)
+classifier.weight                                           (5, 768)
+classifier.bias                                                 (5,)
+
+======== Epoch 1 / 10 ========
+ Batch    10 of   741.     Elapsed: 0:00:02
+ Batch    20 of   741.     Elapsed: 0:00:02
+ Batch    30 of   741.     Elapsed: 0:00:03
+ Batch    40 of   741.     Elapsed: 0:00:04
+ Batch    50 of   741.     Elapsed: 0:00:04
+ Batch    60 of   741.     Elapsed: 0:00:05
+ Batch    70 of   741.     Elapsed: 0:00:06
+ Batch    80 of   741.     Elapsed: 0:00:06
+ Batch    90 of   741.     Elapsed: 0:00:07
+ Batch   100 of   741.     Elapsed: 0:00:08
+ Batch   110 of   741.     Elapsed: 0:00:08
+ Batch   120 of   741.     Elapsed: 0:00:09
+ Batch   130 of   741.     Elapsed: 0:00:10
+ Batch   140 of   741.     Elapsed: 0:00:11
+ Batch   150 of   741.     Elapsed: 0:00:11
+ Batch   160 of   741.     Elapsed: 0:00:12
+ Batch   170 of   741.     Elapsed: 0:00:13
+ Batch   180 of   741.     Elapsed: 0:00:13
+ Batch   190 of   741.     Elapsed: 0:00:14
+ Batch   200 of   741.     Elapsed: 0:00:15
+ Batch   210 of   741.     Elapsed: 0:00:15
+ Batch   220 of   741.     Elapsed: 0:00:16
+ Batch   230 of   741.     Elapsed: 0:00:17
+ Batch   240 of   741.     Elapsed: 0:00:17
+ Batch   250 of   741.     Elapsed: 0:00:18
+ Batch   260 of   741.     Elapsed: 0:00:19
+ Batch   270 of   741.     Elapsed: 0:00:20
+ Batch   280 of   741.     Elapsed: 0:00:20
+ Batch   290 of   741.     Elapsed: 0:00:21
+ Batch   300 of   741.     Elapsed: 0:00:22
+ Batch   310 of   741.     Elapsed: 0:00:22
+ Batch   320 of   741.     Elapsed: 0:00:23
+ Batch   330 of   741.     Elapsed: 0:00:24
+ Batch   340 of   741.     Elapsed: 0:00:24
+ Batch   350 of   741.     Elapsed: 0:00:25
+ Batch   360 of   741.     Elapsed: 0:00:26
+ Batch   370 of   741.     Elapsed: 0:00:26
+ Batch   380 of   741.     Elapsed: 0:00:27
+ Batch   390 of   741.     Elapsed: 0:00:28
+ Batch   400 of   741.     Elapsed: 0:00:29
+ Batch   410 of   741.     Elapsed: 0:00:29
+ Batch   420 of   741.     Elapsed: 0:00:30
+ Batch   430 of   741.     Elapsed: 0:00:31
+ Batch   440 of   741.     Elapsed: 0:00:31
+ Batch   450 of   741.     Elapsed: 0:00:32
+ Batch   460 of   741.     Elapsed: 0:00:33
+ Batch   470 of   741.     Elapsed: 0:00:33
+ Batch   480 of   741.     Elapsed: 0:00:34
+ Batch   490 of   741.     Elapsed: 0:00:35
+ Batch   500 of   741.     Elapsed: 0:00:35
+ Batch   510 of   741.     Elapsed: 0:00:36
+ Batch   520 of   741.     Elapsed: 0:00:37
+ Batch   530 of   741.     Elapsed: 0:00:37
+ Batch   540 of   741.     Elapsed: 0:00:38
+ Batch   550 of   741.     Elapsed: 0:00:39
+ Batch   560 of   741.     Elapsed: 0:00:40
+ Batch   570 of   741.     Elapsed: 0:00:40
+ Batch   580 of   741.     Elapsed: 0:00:41
+ Batch   590 of   741.     Elapsed: 0:00:42
+ Batch   600 of   741.     Elapsed: 0:00:42
+ Batch   610 of   741.     Elapsed: 0:00:43
+ Batch   620 of   741.     Elapsed: 0:00:44
+ Batch   630 of   741.     Elapsed: 0:00:44
+ Batch   640 of   741.     Elapsed: 0:00:45
+ Batch   650 of   741.     Elapsed: 0:00:46
+ Batch   660 of   741.     Elapsed: 0:00:46
+ Batch   670 of   741.     Elapsed: 0:00:47
+ Batch   680 of   741.     Elapsed: 0:00:48
+ Batch   690 of   741.     Elapsed: 0:00:49
+ Batch   700 of   741.     Elapsed: 0:00:49
+ Batch   710 of   741.     Elapsed: 0:00:50
+ Batch   720 of   741.     Elapsed: 0:00:51
+ Batch   730 of   741.     Elapsed: 0:00:51
+ Batch   740 of   741.     Elapsed: 0:00:52
+
+     Average training loss: 0.39
+     Training epoch took: 0:00:52
+
+Running validation
+     Accuracy: 0.91
+     Validation Loss: 0.28
+     Validation took: 0:00:03
+
+Training complete!
+Total training took 0:00:56 (h:mm:ss)
+Saving model to models/merged-10/bert-finetuned-0/
+
+======== Epoch 2 / 10 ========
+ Batch    10 of   741.     Elapsed: 0:00:01
+ Batch    20 of   741.     Elapsed: 0:00:01
+ Batch    30 of   741.     Elapsed: 0:00:02
+ Batch    40 of   741.     Elapsed: 0:00:03
+ Batch    50 of   741.     Elapsed: 0:00:04
+ Batch    60 of   741.     Elapsed: 0:00:04
+ Batch    70 of   741.     Elapsed: 0:00:05
+ Batch    80 of   741.     Elapsed: 0:00:06
+ Batch    90 of   741.     Elapsed: 0:00:06
+ Batch   100 of   741.     Elapsed: 0:00:07
+ Batch   110 of   741.     Elapsed: 0:00:08
+ Batch   120 of   741.     Elapsed: 0:00:08
+ Batch   130 of   741.     Elapsed: 0:00:09
+ Batch   140 of   741.     Elapsed: 0:00:10
+ Batch   150 of   741.     Elapsed: 0:00:10
+ Batch   160 of   741.     Elapsed: 0:00:11
+ Batch   170 of   741.     Elapsed: 0:00:12
+ Batch   180 of   741.     Elapsed: 0:00:13
+ Batch   190 of   741.     Elapsed: 0:00:13
+ Batch   200 of   741.     Elapsed: 0:00:14
+ Batch   210 of   741.     Elapsed: 0:00:15
+ Batch   220 of   741.     Elapsed: 0:00:15
+ Batch   230 of   741.     Elapsed: 0:00:16
+ Batch   240 of   741.     Elapsed: 0:00:17
+ Batch   250 of   741.     Elapsed: 0:00:17
+ Batch   260 of   741.     Elapsed: 0:00:18
+ Batch   270 of   741.     Elapsed: 0:00:19
+ Batch   280 of   741.     Elapsed: 0:00:19
+ Batch   290 of   741.     Elapsed: 0:00:20
+ Batch   300 of   741.     Elapsed: 0:00:21
+ Batch   310 of   741.     Elapsed: 0:00:21
+ Batch   320 of   741.     Elapsed: 0:00:22
+ Batch   330 of   741.     Elapsed: 0:00:23
+ Batch   340 of   741.     Elapsed: 0:00:24
+ Batch   350 of   741.     Elapsed: 0:00:24
+ Batch   360 of   741.     Elapsed: 0:00:25
+ Batch   370 of   741.     Elapsed: 0:00:26
+ Batch   380 of   741.     Elapsed: 0:00:26
+ Batch   390 of   741.     Elapsed: 0:00:27
+ Batch   400 of   741.     Elapsed: 0:00:28
+ Batch   410 of   741.     Elapsed: 0:00:28
+ Batch   420 of   741.     Elapsed: 0:00:29
+ Batch   430 of   741.     Elapsed: 0:00:30
+ Batch   440 of   741.     Elapsed: 0:00:30
+ Batch   450 of   741.     Elapsed: 0:00:31
+ Batch   460 of   741.     Elapsed: 0:00:32
+ Batch   470 of   741.     Elapsed: 0:00:32
+ Batch   480 of   741.     Elapsed: 0:00:33
+ Batch   490 of   741.     Elapsed: 0:00:34
+ Batch   500 of   741.     Elapsed: 0:00:35
+ Batch   510 of   741.     Elapsed: 0:00:35
+ Batch   520 of   741.     Elapsed: 0:00:36
+ Batch   530 of   741.     Elapsed: 0:00:37
+ Batch   540 of   741.     Elapsed: 0:00:37
+ Batch   550 of   741.     Elapsed: 0:00:38
+ Batch   560 of   741.     Elapsed: 0:00:39
+ Batch   570 of   741.     Elapsed: 0:00:39
+ Batch   580 of   741.     Elapsed: 0:00:40
+ Batch   590 of   741.     Elapsed: 0:00:41
+ Batch   600 of   741.     Elapsed: 0:00:41
+ Batch   610 of   741.     Elapsed: 0:00:42
+ Batch   620 of   741.     Elapsed: 0:00:43
+ Batch   630 of   741.     Elapsed: 0:00:44
+ Batch   640 of   741.     Elapsed: 0:00:44
+ Batch   650 of   741.     Elapsed: 0:00:45
+ Batch   660 of   741.     Elapsed: 0:00:46
+ Batch   670 of   741.     Elapsed: 0:00:46
+ Batch   680 of   741.     Elapsed: 0:00:47
+ Batch   690 of   741.     Elapsed: 0:00:48
+ Batch   700 of   741.     Elapsed: 0:00:48
+ Batch   710 of   741.     Elapsed: 0:00:49
+ Batch   720 of   741.     Elapsed: 0:00:50
+ Batch   730 of   741.     Elapsed: 0:00:50
+ Batch   740 of   741.     Elapsed: 0:00:51
+
+     Average training loss: 0.16
+     Training epoch took: 0:00:51
+
+Running validation
+     Accuracy: 0.92
+     Validation Loss: 0.30
+     Validation took: 0:00:03
+
+Training complete!
+Total training took 0:01:51 (h:mm:ss)
+Saving model to models/merged-10/bert-finetuned-1/
+
+======== Epoch 3 / 10 ========
+ Batch    10 of   741.     Elapsed: 0:00:01
+ Batch    20 of   741.     Elapsed: 0:00:02
+ Batch    30 of   741.     Elapsed: 0:00:02
+ Batch    40 of   741.     Elapsed: 0:00:03
+ Batch    50 of   741.     Elapsed: 0:00:04
+ Batch    60 of   741.     Elapsed: 0:00:04
+ Batch    70 of   741.     Elapsed: 0:00:05
+ Batch    80 of   741.     Elapsed: 0:00:06
+ Batch    90 of   741.     Elapsed: 0:00:06
+ Batch   100 of   741.     Elapsed: 0:00:07
+ Batch   110 of   741.     Elapsed: 0:00:08
+ Batch   120 of   741.     Elapsed: 0:00:08
+ Batch   130 of   741.     Elapsed: 0:00:09
+ Batch   140 of   741.     Elapsed: 0:00:10
+ Batch   150 of   741.     Elapsed: 0:00:10
+ Batch   160 of   741.     Elapsed: 0:00:11
+ Batch   170 of   741.     Elapsed: 0:00:12
+ Batch   180 of   741.     Elapsed: 0:00:13
+ Batch   190 of   741.     Elapsed: 0:00:13
+ Batch   200 of   741.     Elapsed: 0:00:14
+ Batch   210 of   741.     Elapsed: 0:00:15
+ Batch   220 of   741.     Elapsed: 0:00:15
+ Batch   230 of   741.     Elapsed: 0:00:16
+ Batch   240 of   741.     Elapsed: 0:00:17
+ Batch   250 of   741.     Elapsed: 0:00:17
+ Batch   260 of   741.     Elapsed: 0:00:18
+ Batch   270 of   741.     Elapsed: 0:00:19
+ Batch   280 of   741.     Elapsed: 0:00:19
+ Batch   290 of   741.     Elapsed: 0:00:20
+ Batch   300 of   741.     Elapsed: 0:00:21
+ Batch   310 of   741.     Elapsed: 0:00:22
+ Batch   320 of   741.     Elapsed: 0:00:22
+ Batch   330 of   741.     Elapsed: 0:00:23
+ Batch   340 of   741.     Elapsed: 0:00:24
+ Batch   350 of   741.     Elapsed: 0:00:24
+ Batch   360 of   741.     Elapsed: 0:00:25
+ Batch   370 of   741.     Elapsed: 0:00:26
+ Batch   380 of   741.     Elapsed: 0:00:26
+ Batch   390 of   741.     Elapsed: 0:00:27
+ Batch   400 of   741.     Elapsed: 0:00:28
+ Batch   410 of   741.     Elapsed: 0:00:28
+ Batch   420 of   741.     Elapsed: 0:00:29
+ Batch   430 of   741.     Elapsed: 0:00:30
+ Batch   440 of   741.     Elapsed: 0:00:30
+ Batch   450 of   741.     Elapsed: 0:00:31
+ Batch   460 of   741.     Elapsed: 0:00:32
+ Batch   470 of   741.     Elapsed: 0:00:32
+ Batch   480 of   741.     Elapsed: 0:00:33
+ Batch   490 of   741.     Elapsed: 0:00:34
+ Batch   500 of   741.     Elapsed: 0:00:35
+ Batch   510 of   741.     Elapsed: 0:00:35
+ Batch   520 of   741.     Elapsed: 0:00:36
+ Batch   530 of   741.     Elapsed: 0:00:37
+ Batch   540 of   741.     Elapsed: 0:00:37
+ Batch   550 of   741.     Elapsed: 0:00:38
+ Batch   560 of   741.     Elapsed: 0:00:39
+ Batch   570 of   741.     Elapsed: 0:00:39
+ Batch   580 of   741.     Elapsed: 0:00:40
+ Batch   590 of   741.     Elapsed: 0:00:41
+ Batch   600 of   741.     Elapsed: 0:00:41
+ Batch   610 of   741.     Elapsed: 0:00:42
+ Batch   620 of   741.     Elapsed: 0:00:43
+ Batch   630 of   741.     Elapsed: 0:00:43
+ Batch   640 of   741.     Elapsed: 0:00:44
+ Batch   650 of   741.     Elapsed: 0:00:45
+ Batch   660 of   741.     Elapsed: 0:00:46
+ Batch   670 of   741.     Elapsed: 0:00:46
+ Batch   680 of   741.     Elapsed: 0:00:47
+ Batch   690 of   741.     Elapsed: 0:00:48
+ Batch   700 of   741.     Elapsed: 0:00:48
+ Batch   710 of   741.     Elapsed: 0:00:49
+ Batch   720 of   741.     Elapsed: 0:00:50
+ Batch   730 of   741.     Elapsed: 0:00:50
+ Batch   740 of   741.     Elapsed: 0:00:51
+
+     Average training loss: 0.09
+     Training epoch took: 0:00:51
+
+Running validation
+     Accuracy: 0.93
+     Validation Loss: 0.34
+     Validation took: 0:00:04
+
+Training complete!
+Total training took 0:02:46 (h:mm:ss)
+Saving model to models/merged-10/bert-finetuned-2/
+
+======== Epoch 4 / 10 ========
+ Batch    10 of   741.     Elapsed: 0:00:01
+ Batch    20 of   741.     Elapsed: 0:00:01
+ Batch    30 of   741.     Elapsed: 0:00:02
+ Batch    40 of   741.     Elapsed: 0:00:03
+ Batch    50 of   741.     Elapsed: 0:00:04
+ Batch    60 of   741.     Elapsed: 0:00:04
+ Batch    70 of   741.     Elapsed: 0:00:05
+ Batch    80 of   741.     Elapsed: 0:00:06
+ Batch    90 of   741.     Elapsed: 0:00:06
+ Batch   100 of   741.     Elapsed: 0:00:07
+ Batch   110 of   741.     Elapsed: 0:00:08
+ Batch   120 of   741.     Elapsed: 0:00:08
+ Batch   130 of   741.     Elapsed: 0:00:09
+ Batch   140 of   741.     Elapsed: 0:00:10
+ Batch   150 of   741.     Elapsed: 0:00:10
+ Batch   160 of   741.     Elapsed: 0:00:11
+ Batch   170 of   741.     Elapsed: 0:00:12
+ Batch   180 of   741.     Elapsed: 0:00:12
+ Batch   190 of   741.     Elapsed: 0:00:13
+ Batch   200 of   741.     Elapsed: 0:00:14
+ Batch   210 of   741.     Elapsed: 0:00:14
+ Batch   220 of   741.     Elapsed: 0:00:15
+ Batch   230 of   741.     Elapsed: 0:00:16
+ Batch   240 of   741.     Elapsed: 0:00:16
+ Batch   250 of   741.     Elapsed: 0:00:17
+ Batch   260 of   741.     Elapsed: 0:00:18
+ Batch   270 of   741.     Elapsed: 0:00:19
+ Batch   280 of   741.     Elapsed: 0:00:19
+ Batch   290 of   741.     Elapsed: 0:00:20
+ Batch   300 of   741.     Elapsed: 0:00:21
+ Batch   310 of   741.     Elapsed: 0:00:21
+ Batch   320 of   741.     Elapsed: 0:00:22
+ Batch   330 of   741.     Elapsed: 0:00:23
+ Batch   340 of   741.     Elapsed: 0:00:23
+ Batch   350 of   741.     Elapsed: 0:00:24
+ Batch   360 of   741.     Elapsed: 0:00:25
+ Batch   370 of   741.     Elapsed: 0:00:25
+ Batch   380 of   741.     Elapsed: 0:00:26
+ Batch   390 of   741.     Elapsed: 0:00:27
+ Batch   400 of   741.     Elapsed: 0:00:27
+ Batch   410 of   741.     Elapsed: 0:00:28
+ Batch   420 of   741.     Elapsed: 0:00:29
+ Batch   430 of   741.     Elapsed: 0:00:29
+ Batch   440 of   741.     Elapsed: 0:00:30
+ Batch   450 of   741.     Elapsed: 0:00:31
+ Batch   460 of   741.     Elapsed: 0:00:32
+ Batch   470 of   741.     Elapsed: 0:00:32
+ Batch   480 of   741.     Elapsed: 0:00:33
+ Batch   490 of   741.     Elapsed: 0:00:34
+ Batch   500 of   741.     Elapsed: 0:00:34
+ Batch   510 of   741.     Elapsed: 0:00:35
+ Batch   520 of   741.     Elapsed: 0:00:36
+ Batch   530 of   741.     Elapsed: 0:00:36
+ Batch   540 of   741.     Elapsed: 0:00:37
+ Batch   550 of   741.     Elapsed: 0:00:38
+ Batch   560 of   741.     Elapsed: 0:00:38
+ Batch   570 of   741.     Elapsed: 0:00:39
+ Batch   580 of   741.     Elapsed: 0:00:40
+ Batch   590 of   741.     Elapsed: 0:00:40
+ Batch   600 of   741.     Elapsed: 0:00:41
+ Batch   610 of   741.     Elapsed: 0:00:42
+ Batch   620 of   741.     Elapsed: 0:00:42
+ Batch   630 of   741.     Elapsed: 0:00:43
+ Batch   640 of   741.     Elapsed: 0:00:44
+ Batch   650 of   741.     Elapsed: 0:00:44
+ Batch   660 of   741.     Elapsed: 0:00:45
+ Batch   670 of   741.     Elapsed: 0:00:46
+ Batch   680 of   741.     Elapsed: 0:00:47
+ Batch   690 of   741.     Elapsed: 0:00:47
+ Batch   700 of   741.     Elapsed: 0:00:48
+ Batch   710 of   741.     Elapsed: 0:00:49
+ Batch   720 of   741.     Elapsed: 0:00:49
+ Batch   730 of   741.     Elapsed: 0:00:50
+ Batch   740 of   741.     Elapsed: 0:00:51
+
+     Average training loss: 0.06
+     Training epoch took: 0:00:51
+
+Running validation
+     Accuracy: 0.93
+     Validation Loss: 0.33
+     Validation took: 0:00:03
+
+Training complete!
+Total training took 0:03:42 (h:mm:ss)
+Saving model to models/merged-10/bert-finetuned-3/
+
+======== Epoch 5 / 10 ========
+ Batch    10 of   741.     Elapsed: 0:00:01
+ Batch    20 of   741.     Elapsed: 0:00:02
+ Batch    30 of   741.     Elapsed: 0:00:02
+ Batch    40 of   741.     Elapsed: 0:00:03
+ Batch    50 of   741.     Elapsed: 0:00:04
+ Batch    60 of   741.     Elapsed: 0:00:04
+ Batch    70 of   741.     Elapsed: 0:00:05
+ Batch    80 of   741.     Elapsed: 0:00:06
+ Batch    90 of   741.     Elapsed: 0:00:06
+ Batch   100 of   741.     Elapsed: 0:00:07
+ Batch   110 of   741.     Elapsed: 0:00:08
+ Batch   120 of   741.     Elapsed: 0:00:08
+ Batch   130 of   741.     Elapsed: 0:00:09
+ Batch   140 of   741.     Elapsed: 0:00:10
+ Batch   150 of   741.     Elapsed: 0:00:10
+ Batch   160 of   741.     Elapsed: 0:00:11
+ Batch   170 of   741.     Elapsed: 0:00:12
+ Batch   180 of   741.     Elapsed: 0:00:12
+ Batch   190 of   741.     Elapsed: 0:00:13
+ Batch   200 of   741.     Elapsed: 0:00:14
+ Batch   210 of   741.     Elapsed: 0:00:14
+ Batch   220 of   741.     Elapsed: 0:00:15
+ Batch   230 of   741.     Elapsed: 0:00:16
+ Batch   240 of   741.     Elapsed: 0:00:17
+ Batch   250 of   741.     Elapsed: 0:00:17
+ Batch   260 of   741.     Elapsed: 0:00:18
+ Batch   270 of   741.     Elapsed: 0:00:19
+ Batch   280 of   741.     Elapsed: 0:00:19
+ Batch   290 of   741.     Elapsed: 0:00:20
+ Batch   300 of   741.     Elapsed: 0:00:21
+ Batch   310 of   741.     Elapsed: 0:00:21
+ Batch   320 of   741.     Elapsed: 0:00:22
+ Batch   330 of   741.     Elapsed: 0:00:23
+ Batch   340 of   741.     Elapsed: 0:00:23
+ Batch   350 of   741.     Elapsed: 0:00:24
+ Batch   360 of   741.     Elapsed: 0:00:25
+ Batch   370 of   741.     Elapsed: 0:00:25
+ Batch   380 of   741.     Elapsed: 0:00:26
+ Batch   390 of   741.     Elapsed: 0:00:27
+ Batch   400 of   741.     Elapsed: 0:00:27
+ Batch   410 of   741.     Elapsed: 0:00:28
+ Batch   420 of   741.     Elapsed: 0:00:29
+ Batch   430 of   741.     Elapsed: 0:00:29
+ Batch   440 of   741.     Elapsed: 0:00:30
+ Batch   450 of   741.     Elapsed: 0:00:31
+ Batch   460 of   741.     Elapsed: 0:00:31
+ Batch   470 of   741.     Elapsed: 0:00:32
+ Batch   480 of   741.     Elapsed: 0:00:33
+ Batch   490 of   741.     Elapsed: 0:00:33
+ Batch   500 of   741.     Elapsed: 0:00:34
+ Batch   510 of   741.     Elapsed: 0:00:35
+ Batch   520 of   741.     Elapsed: 0:00:36
+ Batch   530 of   741.     Elapsed: 0:00:36
+ Batch   540 of   741.     Elapsed: 0:00:37
+ Batch   550 of   741.     Elapsed: 0:00:38
+ Batch   560 of   741.     Elapsed: 0:00:38
+ Batch   570 of   741.     Elapsed: 0:00:39
+ Batch   580 of   741.     Elapsed: 0:00:40
+ Batch   590 of   741.     Elapsed: 0:00:40
+ Batch   600 of   741.     Elapsed: 0:00:41
+ Batch   610 of   741.     Elapsed: 0:00:42
+ Batch   620 of   741.     Elapsed: 0:00:42
+ Batch   630 of   741.     Elapsed: 0:00:43
+ Batch   640 of   741.     Elapsed: 0:00:44
+ Batch   650 of   741.     Elapsed: 0:00:44
+ Batch   660 of   741.     Elapsed: 0:00:45
+ Batch   670 of   741.     Elapsed: 0:00:46
+ Batch   680 of   741.     Elapsed: 0:00:46
+ Batch   690 of   741.     Elapsed: 0:00:47
+ Batch   700 of   741.     Elapsed: 0:00:48
+ Batch   710 of   741.     Elapsed: 0:00:48
+ Batch   720 of   741.     Elapsed: 0:00:49
+ Batch   730 of   741.     Elapsed: 0:00:50
+ Batch   740 of   741.     Elapsed: 0:00:50
+
+     Average training loss: 0.04
+     Training epoch took: 0:00:51
+
+Running validation
+     Accuracy: 0.93
+     Validation Loss: 0.35
+     Validation took: 0:00:03
+
+Training complete!
+Total training took 0:04:36 (h:mm:ss)
+Saving model to models/merged-10/bert-finetuned-4/
+
+======== Epoch 6 / 10 ========
+ Batch    10 of   741.     Elapsed: 0:00:01
+ Batch    20 of   741.     Elapsed: 0:00:01
+ Batch    30 of   741.     Elapsed: 0:00:02
+ Batch    40 of   741.     Elapsed: 0:00:03
+ Batch    50 of   741.     Elapsed: 0:00:03
+ Batch    60 of   741.     Elapsed: 0:00:04
+ Batch    70 of   741.     Elapsed: 0:00:05
+ Batch    80 of   741.     Elapsed: 0:00:06
+ Batch    90 of   741.     Elapsed: 0:00:06
+ Batch   100 of   741.     Elapsed: 0:00:07
+ Batch   110 of   741.     Elapsed: 0:00:08
+ Batch   120 of   741.     Elapsed: 0:00:08
+ Batch   130 of   741.     Elapsed: 0:00:09
+ Batch   140 of   741.     Elapsed: 0:00:10
+ Batch   150 of   741.     Elapsed: 0:00:10
+ Batch   160 of   741.     Elapsed: 0:00:11
+ Batch   170 of   741.     Elapsed: 0:00:12
+ Batch   180 of   741.     Elapsed: 0:00:12
+ Batch   190 of   741.     Elapsed: 0:00:13
+ Batch   200 of   741.     Elapsed: 0:00:14
+ Batch   210 of   741.     Elapsed: 0:00:14
+ Batch   220 of   741.     Elapsed: 0:00:15
+ Batch   230 of   741.     Elapsed: 0:00:16
+ Batch   240 of   741.     Elapsed: 0:00:16
+ Batch   250 of   741.     Elapsed: 0:00:17
+ Batch   260 of   741.     Elapsed: 0:00:18
+ Batch   270 of   741.     Elapsed: 0:00:18
+ Batch   280 of   741.     Elapsed: 0:00:19
+ Batch   290 of   741.     Elapsed: 0:00:20
+ Batch   300 of   741.     Elapsed: 0:00:20
+ Batch   310 of   741.     Elapsed: 0:00:21
+ Batch   320 of   741.     Elapsed: 0:00:22
+ Batch   330 of   741.     Elapsed: 0:00:22
+ Batch   340 of   741.     Elapsed: 0:00:23
+ Batch   350 of   741.     Elapsed: 0:00:24
+ Batch   360 of   741.     Elapsed: 0:00:25
+ Batch   370 of   741.     Elapsed: 0:00:25
+ Batch   380 of   741.     Elapsed: 0:00:26
+ Batch   390 of   741.     Elapsed: 0:00:27
+ Batch   400 of   741.     Elapsed: 0:00:27
+ Batch   410 of   741.     Elapsed: 0:00:28
+ Batch   420 of   741.     Elapsed: 0:00:29
+ Batch   430 of   741.     Elapsed: 0:00:29
+ Batch   440 of   741.     Elapsed: 0:00:30
+ Batch   450 of   741.     Elapsed: 0:00:31
+ Batch   460 of   741.     Elapsed: 0:00:31
+ Batch   470 of   741.     Elapsed: 0:00:32
+ Batch   480 of   741.     Elapsed: 0:00:33
+ Batch   490 of   741.     Elapsed: 0:00:33
+ Batch   500 of   741.     Elapsed: 0:00:34
+ Batch   510 of   741.     Elapsed: 0:00:35
+ Batch   520 of   741.     Elapsed: 0:00:35
+ Batch   530 of   741.     Elapsed: 0:00:36
+ Batch   540 of   741.     Elapsed: 0:00:37
+ Batch   550 of   741.     Elapsed: 0:00:37
+ Batch   560 of   741.     Elapsed: 0:00:38
+ Batch   570 of   741.     Elapsed: 0:00:39
+ Batch   580 of   741.     Elapsed: 0:00:39
+ Batch   590 of   741.     Elapsed: 0:00:40
+ Batch   600 of   741.     Elapsed: 0:00:41
+ Batch   610 of   741.     Elapsed: 0:00:41
+ Batch   620 of   741.     Elapsed: 0:00:42
+ Batch   630 of   741.     Elapsed: 0:00:43
+ Batch   640 of   741.     Elapsed: 0:00:43
+ Batch   650 of   741.     Elapsed: 0:00:44
+ Batch   660 of   741.     Elapsed: 0:00:45
+ Batch   670 of   741.     Elapsed: 0:00:46
+ Batch   680 of   741.     Elapsed: 0:00:46
+ Batch   690 of   741.     Elapsed: 0:00:47
+ Batch   700 of   741.     Elapsed: 0:00:48
+ Batch   710 of   741.     Elapsed: 0:00:48
+ Batch   720 of   741.     Elapsed: 0:00:49
+ Batch   730 of   741.     Elapsed: 0:00:50
+ Batch   740 of   741.     Elapsed: 0:00:50
+
+     Average training loss: 0.03
+     Training epoch took: 0:00:50
+
+Running validation
+     Accuracy: 0.93
+     Validation Loss: 0.41
+     Validation took: 0:00:03
+
+Training complete!
+Total training took 0:05:31 (h:mm:ss)
+Saving model to models/merged-10/bert-finetuned-5/
+
+======== Epoch 7 / 10 ========
+ Batch    10 of   741.     Elapsed: 0:00:01
+ Batch    20 of   741.     Elapsed: 0:00:02
+ Batch    30 of   741.     Elapsed: 0:00:02
+ Batch    40 of   741.     Elapsed: 0:00:03
+ Batch    50 of   741.     Elapsed: 0:00:04
+ Batch    60 of   741.     Elapsed: 0:00:04
+ Batch    70 of   741.     Elapsed: 0:00:05
+ Batch    80 of   741.     Elapsed: 0:00:06
+ Batch    90 of   741.     Elapsed: 0:00:06
+ Batch   100 of   741.     Elapsed: 0:00:07
+ Batch   110 of   741.     Elapsed: 0:00:08
+ Batch   120 of   741.     Elapsed: 0:00:08
+ Batch   130 of   741.     Elapsed: 0:00:09
+ Batch   140 of   741.     Elapsed: 0:00:10
+ Batch   150 of   741.     Elapsed: 0:00:10
+ Batch   160 of   741.     Elapsed: 0:00:11
+ Batch   170 of   741.     Elapsed: 0:00:12
+ Batch   180 of   741.     Elapsed: 0:00:12
+ Batch   190 of   741.     Elapsed: 0:00:13
+ Batch   200 of   741.     Elapsed: 0:00:14
+ Batch   210 of   741.     Elapsed: 0:00:14
+ Batch   220 of   741.     Elapsed: 0:00:15
+ Batch   230 of   741.     Elapsed: 0:00:16
+ Batch   240 of   741.     Elapsed: 0:00:16
+ Batch   250 of   741.     Elapsed: 0:00:17
+ Batch   260 of   741.     Elapsed: 0:00:18
+ Batch   270 of   741.     Elapsed: 0:00:18
+ Batch   280 of   741.     Elapsed: 0:00:19
+ Batch   290 of   741.     Elapsed: 0:00:20
+ Batch   300 of   741.     Elapsed: 0:00:20
+ Batch   310 of   741.     Elapsed: 0:00:21
+ Batch   320 of   741.     Elapsed: 0:00:22
+ Batch   330 of   741.     Elapsed: 0:00:23
+ Batch   340 of   741.     Elapsed: 0:00:23
+ Batch   350 of   741.     Elapsed: 0:00:24
+ Batch   360 of   741.     Elapsed: 0:00:25
+ Batch   370 of   741.     Elapsed: 0:00:25
+ Batch   380 of   741.     Elapsed: 0:00:26
+ Batch   390 of   741.     Elapsed: 0:00:27
+ Batch   400 of   741.     Elapsed: 0:00:27
+ Batch   410 of   741.     Elapsed: 0:00:28
+ Batch   420 of   741.     Elapsed: 0:00:29
+ Batch   430 of   741.     Elapsed: 0:00:29
+ Batch   440 of   741.     Elapsed: 0:00:30
+ Batch   450 of   741.     Elapsed: 0:00:31
+ Batch   460 of   741.     Elapsed: 0:00:31
+ Batch   470 of   741.     Elapsed: 0:00:32
+ Batch   480 of   741.     Elapsed: 0:00:33
+ Batch   490 of   741.     Elapsed: 0:00:33
+ Batch   500 of   741.     Elapsed: 0:00:34
+ Batch   510 of   741.     Elapsed: 0:00:35
+ Batch   520 of   741.     Elapsed: 0:00:35
+ Batch   530 of   741.     Elapsed: 0:00:36
+ Batch   540 of   741.     Elapsed: 0:00:37
+ Batch   550 of   741.     Elapsed: 0:00:37
+ Batch   560 of   741.     Elapsed: 0:00:38
+ Batch   570 of   741.     Elapsed: 0:00:39
+ Batch   580 of   741.     Elapsed: 0:00:39
+ Batch   590 of   741.     Elapsed: 0:00:40
+ Batch   600 of   741.     Elapsed: 0:00:41
+ Batch   610 of   741.     Elapsed: 0:00:41
+ Batch   620 of   741.     Elapsed: 0:00:42
+ Batch   630 of   741.     Elapsed: 0:00:43
+ Batch   640 of   741.     Elapsed: 0:00:44
+ Batch   650 of   741.     Elapsed: 0:00:44
+ Batch   660 of   741.     Elapsed: 0:00:45
+ Batch   670 of   741.     Elapsed: 0:00:46
+ Batch   680 of   741.     Elapsed: 0:00:46
+ Batch   690 of   741.     Elapsed: 0:00:47
+ Batch   700 of   741.     Elapsed: 0:00:48
+ Batch   710 of   741.     Elapsed: 0:00:48
+ Batch   720 of   741.     Elapsed: 0:00:49
+ Batch   730 of   741.     Elapsed: 0:00:50
+ Batch   740 of   741.     Elapsed: 0:00:50
+
+     Average training loss: 0.03
+     Training epoch took: 0:00:50
+
+Running validation
+     Accuracy: 0.94
+     Validation Loss: 0.41
+     Validation took: 0:00:03
+
+Training complete!
+Total training took 0:06:25 (h:mm:ss)
+Saving model to models/merged-10/bert-finetuned-6/
+
+======== Epoch 8 / 10 ========
+ Batch    10 of   741.     Elapsed: 0:00:01
+ Batch    20 of   741.     Elapsed: 0:00:02
+ Batch    30 of   741.     Elapsed: 0:00:02
+ Batch    40 of   741.     Elapsed: 0:00:03
+ Batch    50 of   741.     Elapsed: 0:00:04
+ Batch    60 of   741.     Elapsed: 0:00:04
+ Batch    70 of   741.     Elapsed: 0:00:05
+ Batch    80 of   741.     Elapsed: 0:00:06
+ Batch    90 of   741.     Elapsed: 0:00:06
+ Batch   100 of   741.     Elapsed: 0:00:07
+ Batch   110 of   741.     Elapsed: 0:00:08
+ Batch   120 of   741.     Elapsed: 0:00:08
+ Batch   130 of   741.     Elapsed: 0:00:09
+ Batch   140 of   741.     Elapsed: 0:00:10
+ Batch   150 of   741.     Elapsed: 0:00:10
+ Batch   160 of   741.     Elapsed: 0:00:11
+ Batch   170 of   741.     Elapsed: 0:00:12
+ Batch   180 of   741.     Elapsed: 0:00:12
+ Batch   190 of   741.     Elapsed: 0:00:13
+ Batch   200 of   741.     Elapsed: 0:00:14
+ Batch   210 of   741.     Elapsed: 0:00:14
+ Batch   220 of   741.     Elapsed: 0:00:15
+ Batch   230 of   741.     Elapsed: 0:00:16
+ Batch   240 of   741.     Elapsed: 0:00:16
+ Batch   250 of   741.     Elapsed: 0:00:17
+ Batch   260 of   741.     Elapsed: 0:00:18
+ Batch   270 of   741.     Elapsed: 0:00:18
+ Batch   280 of   741.     Elapsed: 0:00:19
+ Batch   290 of   741.     Elapsed: 0:00:20
+ Batch   300 of   741.     Elapsed: 0:00:21
+ Batch   310 of   741.     Elapsed: 0:00:21
+ Batch   320 of   741.     Elapsed: 0:00:22
+ Batch   330 of   741.     Elapsed: 0:00:23
+ Batch   340 of   741.     Elapsed: 0:00:23
+ Batch   350 of   741.     Elapsed: 0:00:24
+ Batch   360 of   741.     Elapsed: 0:00:25
+ Batch   370 of   741.     Elapsed: 0:00:25
+ Batch   380 of   741.     Elapsed: 0:00:26
+ Batch   390 of   741.     Elapsed: 0:00:27
+ Batch   400 of   741.     Elapsed: 0:00:27
+ Batch   410 of   741.     Elapsed: 0:00:28
+ Batch   420 of   741.     Elapsed: 0:00:29
+ Batch   430 of   741.     Elapsed: 0:00:29
+ Batch   440 of   741.     Elapsed: 0:00:30
+ Batch   450 of   741.     Elapsed: 0:00:31
+ Batch   460 of   741.     Elapsed: 0:00:31
+ Batch   470 of   741.     Elapsed: 0:00:32
+ Batch   480 of   741.     Elapsed: 0:00:33
+ Batch   490 of   741.     Elapsed: 0:00:33
+ Batch   500 of   741.     Elapsed: 0:00:34
+ Batch   510 of   741.     Elapsed: 0:00:35
+ Batch   520 of   741.     Elapsed: 0:00:35
+ Batch   530 of   741.     Elapsed: 0:00:36
+ Batch   540 of   741.     Elapsed: 0:00:37
+ Batch   550 of   741.     Elapsed: 0:00:37
+ Batch   560 of   741.     Elapsed: 0:00:38
+ Batch   570 of   741.     Elapsed: 0:00:39
+ Batch   580 of   741.     Elapsed: 0:00:39
+ Batch   590 of   741.     Elapsed: 0:00:40
+ Batch   600 of   741.     Elapsed: 0:00:41
+ Batch   610 of   741.     Elapsed: 0:00:41
+ Batch   620 of   741.     Elapsed: 0:00:42
+ Batch   630 of   741.     Elapsed: 0:00:43
+ Batch   640 of   741.     Elapsed: 0:00:44
+ Batch   650 of   741.     Elapsed: 0:00:44
+ Batch   660 of   741.     Elapsed: 0:00:45
+ Batch   670 of   741.     Elapsed: 0:00:46
+ Batch   680 of   741.     Elapsed: 0:00:46
+ Batch   690 of   741.     Elapsed: 0:00:47
+ Batch   700 of   741.     Elapsed: 0:00:48
+ Batch   710 of   741.     Elapsed: 0:00:48
+ Batch   720 of   741.     Elapsed: 0:00:49
+ Batch   730 of   741.     Elapsed: 0:00:50
+ Batch   740 of   741.     Elapsed: 0:00:50
+
+     Average training loss: 0.02
+     Training epoch took: 0:00:50
+
+Running validation
+     Accuracy: 0.94
+     Validation Loss: 0.43
+     Validation took: 0:00:03
+
+Training complete!
+Total training took 0:07:20 (h:mm:ss)
+Saving model to models/merged-10/bert-finetuned-7/
+
+======== Epoch 9 / 10 ========
+ Batch    10 of   741.     Elapsed: 0:00:01
+ Batch    20 of   741.     Elapsed: 0:00:01
+ Batch    30 of   741.     Elapsed: 0:00:02
+ Batch    40 of   741.     Elapsed: 0:00:03
+ Batch    50 of   741.     Elapsed: 0:00:04
+ Batch    60 of   741.     Elapsed: 0:00:04
+ Batch    70 of   741.     Elapsed: 0:00:05
+ Batch    80 of   741.     Elapsed: 0:00:06
+ Batch    90 of   741.     Elapsed: 0:00:06
+ Batch   100 of   741.     Elapsed: 0:00:07
+ Batch   110 of   741.     Elapsed: 0:00:08
+ Batch   120 of   741.     Elapsed: 0:00:08
+ Batch   130 of   741.     Elapsed: 0:00:09
+ Batch   140 of   741.     Elapsed: 0:00:10
+ Batch   150 of   741.     Elapsed: 0:00:10
+ Batch   160 of   741.     Elapsed: 0:00:11
+ Batch   170 of   741.     Elapsed: 0:00:12
+ Batch   180 of   741.     Elapsed: 0:00:12
+ Batch   190 of   741.     Elapsed: 0:00:13
+ Batch   200 of   741.     Elapsed: 0:00:14
+ Batch   210 of   741.     Elapsed: 0:00:14
+ Batch   220 of   741.     Elapsed: 0:00:15
+ Batch   230 of   741.     Elapsed: 0:00:16
+ Batch   240 of   741.     Elapsed: 0:00:16
+ Batch   250 of   741.     Elapsed: 0:00:17
+ Batch   260 of   741.     Elapsed: 0:00:18
+ Batch   270 of   741.     Elapsed: 0:00:18
+ Batch   280 of   741.     Elapsed: 0:00:19
+ Batch   290 of   741.     Elapsed: 0:00:20
+ Batch   300 of   741.     Elapsed: 0:00:20
+ Batch   310 of   741.     Elapsed: 0:00:21
+ Batch   320 of   741.     Elapsed: 0:00:22
+ Batch   330 of   741.     Elapsed: 0:00:22
+ Batch   340 of   741.     Elapsed: 0:00:23
+ Batch   350 of   741.     Elapsed: 0:00:24
+ Batch   360 of   741.     Elapsed: 0:00:24
+ Batch   370 of   741.     Elapsed: 0:00:25
+ Batch   380 of   741.     Elapsed: 0:00:26
+ Batch   390 of   741.     Elapsed: 0:00:26
+ Batch   400 of   741.     Elapsed: 0:00:27
+ Batch   410 of   741.     Elapsed: 0:00:28
+ Batch   420 of   741.     Elapsed: 0:00:28
+ Batch   430 of   741.     Elapsed: 0:00:29
+ Batch   440 of   741.     Elapsed: 0:00:30
+ Batch   450 of   741.     Elapsed: 0:00:30
+ Batch   460 of   741.     Elapsed: 0:00:31
+ Batch   470 of   741.     Elapsed: 0:00:32
+ Batch   480 of   741.     Elapsed: 0:00:33
+ Batch   490 of   741.     Elapsed: 0:00:33
+ Batch   500 of   741.     Elapsed: 0:00:34
+ Batch   510 of   741.     Elapsed: 0:00:35
+ Batch   520 of   741.     Elapsed: 0:00:35
+ Batch   530 of   741.     Elapsed: 0:00:36
+ Batch   540 of   741.     Elapsed: 0:00:37
+ Batch   550 of   741.     Elapsed: 0:00:37
+ Batch   560 of   741.     Elapsed: 0:00:38
+ Batch   570 of   741.     Elapsed: 0:00:39
+ Batch   580 of   741.     Elapsed: 0:00:39
+ Batch   590 of   741.     Elapsed: 0:00:40
+ Batch   600 of   741.     Elapsed: 0:00:41
+ Batch   610 of   741.     Elapsed: 0:00:41
+ Batch   620 of   741.     Elapsed: 0:00:42
+ Batch   630 of   741.     Elapsed: 0:00:43
+ Batch   640 of   741.     Elapsed: 0:00:43
+ Batch   650 of   741.     Elapsed: 0:00:44
+ Batch   660 of   741.     Elapsed: 0:00:45
+ Batch   670 of   741.     Elapsed: 0:00:45
+ Batch   680 of   741.     Elapsed: 0:00:46
+ Batch   690 of   741.     Elapsed: 0:00:47
+ Batch   700 of   741.     Elapsed: 0:00:47
+ Batch   710 of   741.     Elapsed: 0:00:48
+ Batch   720 of   741.     Elapsed: 0:00:49
+ Batch   730 of   741.     Elapsed: 0:00:49
+ Batch   740 of   741.     Elapsed: 0:00:50
+
+     Average training loss: 0.02
+     Training epoch took: 0:00:50
+
+Running validation
+     Accuracy: 0.94
+     Validation Loss: 0.46
+     Validation took: 0:00:03
+
+Training complete!
+Total training took 0:08:14 (h:mm:ss)
+Saving model to models/merged-10/bert-finetuned-8/
+
+======== Epoch 10 / 10 ========
+ Batch    10 of   741.     Elapsed: 0:00:01
+ Batch    20 of   741.     Elapsed: 0:00:01
+ Batch    30 of   741.     Elapsed: 0:00:02
+ Batch    40 of   741.     Elapsed: 0:00:03
+ Batch    50 of   741.     Elapsed: 0:00:03
+ Batch    60 of   741.     Elapsed: 0:00:04
+ Batch    70 of   741.     Elapsed: 0:00:05
+ Batch    80 of   741.     Elapsed: 0:00:05
+ Batch    90 of   741.     Elapsed: 0:00:06
+ Batch   100 of   741.     Elapsed: 0:00:07
+ Batch   110 of   741.     Elapsed: 0:00:08
+ Batch   120 of   741.     Elapsed: 0:00:08
+ Batch   130 of   741.     Elapsed: 0:00:09
+ Batch   140 of   741.     Elapsed: 0:00:10
+ Batch   150 of   741.     Elapsed: 0:00:10
+ Batch   160 of   741.     Elapsed: 0:00:11
+ Batch   170 of   741.     Elapsed: 0:00:12
+ Batch   180 of   741.     Elapsed: 0:00:12
+ Batch   190 of   741.     Elapsed: 0:00:13
+ Batch   200 of   741.     Elapsed: 0:00:14
+ Batch   210 of   741.     Elapsed: 0:00:14
+ Batch   220 of   741.     Elapsed: 0:00:15
+ Batch   230 of   741.     Elapsed: 0:00:16
+ Batch   240 of   741.     Elapsed: 0:00:16
+ Batch   250 of   741.     Elapsed: 0:00:17
+ Batch   260 of   741.     Elapsed: 0:00:18
+ Batch   270 of   741.     Elapsed: 0:00:18
+ Batch   280 of   741.     Elapsed: 0:00:19
+ Batch   290 of   741.     Elapsed: 0:00:20
+ Batch   300 of   741.     Elapsed: 0:00:20
+ Batch   310 of   741.     Elapsed: 0:00:21
+ Batch   320 of   741.     Elapsed: 0:00:22
+ Batch   330 of   741.     Elapsed: 0:00:22
+ Batch   340 of   741.     Elapsed: 0:00:23
+ Batch   350 of   741.     Elapsed: 0:00:24
+ Batch   360 of   741.     Elapsed: 0:00:24
+ Batch   370 of   741.     Elapsed: 0:00:25
+ Batch   380 of   741.     Elapsed: 0:00:26
+ Batch   390 of   741.     Elapsed: 0:00:26
+ Batch   400 of   741.     Elapsed: 0:00:27
+ Batch   410 of   741.     Elapsed: 0:00:28
+ Batch   420 of   741.     Elapsed: 0:00:28
+ Batch   430 of   741.     Elapsed: 0:00:29
+ Batch   440 of   741.     Elapsed: 0:00:30
+ Batch   450 of   741.     Elapsed: 0:00:30
+ Batch   460 of   741.     Elapsed: 0:00:31
+ Batch   470 of   741.     Elapsed: 0:00:32
+ Batch   480 of   741.     Elapsed: 0:00:32
+ Batch   490 of   741.     Elapsed: 0:00:33
+ Batch   500 of   741.     Elapsed: 0:00:34
+ Batch   510 of   741.     Elapsed: 0:00:35
+ Batch   520 of   741.     Elapsed: 0:00:35
+ Batch   530 of   741.     Elapsed: 0:00:36
+ Batch   540 of   741.     Elapsed: 0:00:37
+ Batch   550 of   741.     Elapsed: 0:00:37
+ Batch   560 of   741.     Elapsed: 0:00:38
+ Batch   570 of   741.     Elapsed: 0:00:39
+ Batch   580 of   741.     Elapsed: 0:00:39
+ Batch   590 of   741.     Elapsed: 0:00:40
+ Batch   600 of   741.     Elapsed: 0:00:41
+ Batch   610 of   741.     Elapsed: 0:00:41
+ Batch   620 of   741.     Elapsed: 0:00:42
+ Batch   630 of   741.     Elapsed: 0:00:43
+ Batch   640 of   741.     Elapsed: 0:00:43
+ Batch   650 of   741.     Elapsed: 0:00:44
+ Batch   660 of   741.     Elapsed: 0:00:45
+ Batch   670 of   741.     Elapsed: 0:00:45
+ Batch   680 of   741.     Elapsed: 0:00:46
+ Batch   690 of   741.     Elapsed: 0:00:47
+ Batch   700 of   741.     Elapsed: 0:00:47
+ Batch   710 of   741.     Elapsed: 0:00:48
+ Batch   720 of   741.     Elapsed: 0:00:49
+ Batch   730 of   741.     Elapsed: 0:00:49
+ Batch   740 of   741.     Elapsed: 0:00:50
+
+     Average training loss: 0.02
+     Training epoch took: 0:00:50
+
+Running validation
+     Accuracy: 0.94
+     Validation Loss: 0.46
+     Validation took: 0:00:03
+
+Training complete!
+Total training took 0:09:08 (h:mm:ss)
+Saving model to models/merged-10/bert-finetuned-9/
+Finished running BERT finetune script.
+
+Ignoring script: eval.
+
+Ignoring script: plot.
+
+====================== DONE ======================
+
+Part:                conf    build_art    build_mix    add_label     finetune         eval         plot
+Time taken:        0.00 s       0.00 s       0.00 s       0.00 s     609.17 s       0.00 s       0.00 s
+
+Total:           609.17 s

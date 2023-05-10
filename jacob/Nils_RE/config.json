@@ -3,9 +3,9 @@
     "add_custom_labels": true,
     "build_art_corpus": true,
     "build_mixed_corpus": true,
-    "bert_finetune": false,
+    "bert_finetune": true,
     "evaluation": true,
-    "plot": true
+    "plot": false
   },
   "add_custom_labels": {
     "input_path": "data/processed/",
@@ -33,15 +33,15 @@
     "epochs": 10
   },
   "evaluation": {
-    "train_path": "corpora/chemprot_train.txt",
-    "dev_path": "corpora/chemprot_dev.txt",
-    "model_path": "models/chemprot-oversampled-10/",
-    "metrics_path": "models/chemprot-oversampled-10/metrics.txt"
+    "train_path": "corpora/merged_train.txt",
+    "dev_path": "corpora/merged_dev.txt",
+    "model_path": "models/merged-10/",
+    "metrics_path": "metrics/merged-metrics-eval2.txt"
   },
   "plot": {
-    "train_path": "corpora/chemprot_train.txt",
-    "dev_path": "corpora/chemprot_dev.txt",
-    "metrics_path": "models/chemprot-oversampled-10/metrics.txt",
-    "output_path": "jacob_edits/figs"
+    "train_path": "corpora/merged_train.txt",
+    "dev_path": "corpora/merged_dev.txt",
+    "metrics_path": "metrics/merged-metrics-eval2.txt",
+    "output_path": "jacob_edits/merged-figs"
   }
 }
