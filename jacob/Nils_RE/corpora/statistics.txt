@@ -65,6 +65,6 @@ total                         3761	100.0
 REGULATOR-POSITIVE            558	14.84
 REGULATOR-NEGATIVE            1702	45.25
 INTERACTOR                    1244	33.08
-PART-OF                       257	6.83
+PART-OF                       410   5.60
 --------------------------------------------------
 

@@ -4,8 +4,9 @@
     "build_art_corpus": true,
     "build_mixed_corpus": true,
     "bert_finetune": true,
-    "evaluation": true,
-    "plot": false
+    "roberta_finetune": true,
+    "evaluation": false,
+    "plot": true
   },
   "add_custom_labels": {
     "input_path": "data/processed/",
@@ -27,16 +28,23 @@
   "bert_finetune": {
     "train_path": "corpora/merged_train.txt",
     "dev_path": "corpora/merged_dev.txt",
-    "model_path": "models/merged-10/",
-    "metrics_path": "models/merged-10/metrics.txt",
-    "oversample": false,
+    "model_path": "models/merged-os-10/",
+    "metrics_path": "metrics/merged-metrics-os.txt",
+    "oversample": true,
+    "epochs": 10
+  },
+  "roberta_finetune": {
+    "train_path": "corpora/merged_train.txt",
+    "dev_path": "corpora/merged_dev.txt",
+    "model_path": "models/merged-roberta-10/",
+    "metrics_path": "models/merged-roberta-10/metrics.txt",
     "epochs": 10
   },
   "evaluation": {
     "train_path": "corpora/merged_train.txt",
     "dev_path": "corpora/merged_dev.txt",
-    "model_path": "models/merged-10/",
-    "metrics_path": "metrics/merged-metrics-eval2.txt"
+    "model_path": "models/merged-os-10/",
+    "metrics_path": "metrics/merged-metrics-os-eval.txt"
   },
   "plot": {
     "train_path": "corpora/merged_train.txt",

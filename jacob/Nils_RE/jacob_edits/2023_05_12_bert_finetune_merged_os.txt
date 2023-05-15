@@ -1,0 +1,1434 @@
+Please see config.json for configuration!
+Loaded config:
+{
+  "ignore": {
+    "add_custom_labels": true,
+    "build_art_corpus": true,
+    "build_mixed_corpus": true,
+    "bert_finetune": false,
+    "roberta_finetune": true,
+    "evaluation": true,
+    "plot": true
+  },
+  "add_custom_labels": {
+    "input_path": "data/processed/",
+    "output_path": "corpora/"
+  },
+  "build_art_corpus": {
+    "input_path": "data/artificial-building-blocks/",
+    "train_path": "corpora/artificial_pp_train.txt",
+    "dev_path": "corpora/artificial_pp_dev.txt",
+    "train_class_size": 1000,
+    "dev_class_size": 500
+  },
+  "build_mixed_corpus": {
+    "train_path": "corpora/chemprot_train.txt",
+    "artificial_path": "data/artificial-custom-labeled/chemical-protein/",
+    "artificial_ratio": 0.1,
+    "output_path": "corpora/mixed_train_10.txt"
+  },
+  "bert_finetune": {
+    "train_path": "corpora/merged_train.txt",
+    "dev_path": "corpora/merged_dev.txt",
+    "model_path": "models/merged-os-10/",
+    "metrics_path": "metrics/merged-metrics-os.txt",
+    "oversample": true,
+    "epochs": 10
+  },
+  "roberta_finetune": {
+    "train_path": "corpora/merged_train.txt",
+    "dev_path": "corpora/merged_dev.txt",
+    "model_path": "models/merged-roberta-10/",
+    "metrics_path": "models/merged-roberta-10/metrics.txt",
+    "epochs": 10
+  },
+  "evaluation": {
+    "train_path": "corpora/merged_train.txt",
+    "dev_path": "corpora/merged_dev.txt",
+    "model_path": "models/merged-10/",
+    "metrics_path": "metrics/merged-metrics-eval2.txt"
+  },
+  "plot": {
+    "train_path": "corpora/merged_train.txt",
+    "dev_path": "corpora/merged_dev.txt",
+    "metrics_path": "metrics/merged-metrics-eval2.txt",
+    "output_path": "jacob_edits/merged-figs"
+  }
+}
+
+Ignoring script: build art corpus.
+
+Ignoring script: build mixed corpus.
+
+Ignoring script: add custom labels.
+
+Running BERT finetune script.
+
+
+Found 4 available GPU(s).
+Using GPU: Tesla T4
+Performing oversampling strategy...
+
+Loading BERT-tokenizer
+
+BERT-tokenizer loaded. Running example:
+
+Original:  Agents that have only begun to undergo clinical evaluation include << CI-1033 >>, an irreversible pan-[[ erbB ]] tyrosine kinase inhibitor, and PKI166 and GW572016, both examples of dual kinase inhibitors (inhibiting epidermal growth factor receptor and Her2).
+Tokenized:  ['agents', 'that', 'have', 'only', 'begun', 'to', 'undergo', 'clinical', 'evaluation', 'include', '<', '<', 'ci', '-', '103', '##3', '>', '>', ',', 'an', 'irreversible', 'pan', '-', '[', '[', 'erbb', ']', ']', 'tyrosine', 'kinase', 'inhibitor', ',', 'and', 'pk', '##i', '##166', 'and', 'gw', '##57', '##201', '##6', ',', 'both', 'examples', 'of', 'dual', 'kinase', 'inhibitors', '(', 'inhibiting', 'epidermal', 'growth', 'factor', 'receptor', 'and', 'her', '##2', ')', '.']
+Token IDs:  [3027, 198, 360, 617, 19007, 147, 7883, 1329, 2166, 2212, 962, 962, 2313, 579, 10664, 30138, 1374, 1374, 422, 130, 17253, 3103, 579, 260, 260, 23867, 1901, 1901, 9925, 4655, 4773, 422, 137, 5689, 30109, 25313, 137, 14636, 5020, 4967, 30142, 422, 655, 3676, 131, 4793, 4655, 5241, 145, 12170, 14094, 1503, 1491, 2629, 137, 1750, 30132, 546, 205]
+
+
+
+Longest sequence: 591 tokens
+Sequences over 128: 883
+Sequences under 128: 35843
+
+Encoding datasets...
+
+Encoding done. Running example:
+Original:	 Agents that have only begun to undergo clinical evaluation include << CI-1033 >>, an irreversible pan-erbB [[ tyrosine kinase ]] inhibitor, and PKI166 and GW572016, both examples of dual kinase inhibitors (inhibiting epidermal growth factor receptor and Her2).
+Token IDs:	 tensor([  102,  3027,   198,   360,   617, 19007,   147,  7883,  1329,  2166,
+         2212,   962,   962,  2313,   579, 10664, 30138,  1374,  1374,   422,
+          130, 17253,  3103,   579, 23867,   260,   260,  9925,  4655,  1901,
+         1901,  4773,   422,   137,  5689, 30109, 25313,   137, 14636,  5020,
+         4967, 30142,   422,   655,  3676,   131,  4793,  4655,  5241,   145,
+        12170, 14094,  1503,  1491,  2629,   137,  1750, 30132,   546,   205,
+          103,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0])
+
+
+Datasets:
+36726 training samples
+7317 development samples
+BERT model has 201 different named parameters.
+
+==== Embedding Layer ====
+
+bert.embeddings.word_embeddings.weight                  (31090, 768)
+bert.embeddings.position_embeddings.weight                (512, 768)
+bert.embeddings.token_type_embeddings.weight                (2, 768)
+bert.embeddings.LayerNorm.weight                              (768,)
+bert.embeddings.LayerNorm.bias                                (768,)
+
+==== First Transformer ====
+
+bert.encoder.layer.0.attention.self.query.weight          (768, 768)
+bert.encoder.layer.0.attention.self.query.bias                (768,)
+bert.encoder.layer.0.attention.self.key.weight            (768, 768)
+bert.encoder.layer.0.attention.self.key.bias                  (768,)
+bert.encoder.layer.0.attention.self.value.weight          (768, 768)
+bert.encoder.layer.0.attention.self.value.bias                (768,)
+bert.encoder.layer.0.attention.output.dense.weight        (768, 768)
+bert.encoder.layer.0.attention.output.dense.bias              (768,)
+bert.encoder.layer.0.attention.output.LayerNorm.weight        (768,)
+bert.encoder.layer.0.attention.output.LayerNorm.bias          (768,)
+bert.encoder.layer.0.intermediate.dense.weight           (3072, 768)
+bert.encoder.layer.0.intermediate.dense.bias                 (3072,)
+bert.encoder.layer.0.output.dense.weight                 (768, 3072)
+bert.encoder.layer.0.output.dense.bias                        (768,)
+bert.encoder.layer.0.output.LayerNorm.weight                  (768,)
+bert.encoder.layer.0.output.LayerNorm.bias                    (768,)
+
+==== Output Layer ====
+
+bert.pooler.dense.weight                                  (768, 768)
+bert.pooler.dense.bias                                        (768,)
+classifier.weight                                           (5, 768)
+classifier.bias                                                 (5,)
+
+======== Epoch 1 / 10 ========
+ Batch    10 of 1,148.     Elapsed: 0:00:06
+ Batch    20 of 1,148.     Elapsed: 0:00:12
+ Batch    30 of 1,148.     Elapsed: 0:00:19
+ Batch    40 of 1,148.     Elapsed: 0:00:25
+ Batch    50 of 1,148.     Elapsed: 0:00:31
+ Batch    60 of 1,148.     Elapsed: 0:00:37
+ Batch    70 of 1,148.     Elapsed: 0:00:44
+ Batch    80 of 1,148.     Elapsed: 0:00:50
+ Batch    90 of 1,148.     Elapsed: 0:00:57
+ Batch   100 of 1,148.     Elapsed: 0:01:03
+ Batch   110 of 1,148.     Elapsed: 0:01:10
+ Batch   120 of 1,148.     Elapsed: 0:01:16
+ Batch   130 of 1,148.     Elapsed: 0:01:23
+ Batch   140 of 1,148.     Elapsed: 0:01:29
+ Batch   150 of 1,148.     Elapsed: 0:01:36
+ Batch   160 of 1,148.     Elapsed: 0:01:42
+ Batch   170 of 1,148.     Elapsed: 0:01:49
+ Batch   180 of 1,148.     Elapsed: 0:01:55
+ Batch   190 of 1,148.     Elapsed: 0:02:02
+ Batch   200 of 1,148.     Elapsed: 0:02:08
+ Batch   210 of 1,148.     Elapsed: 0:02:15
+ Batch   220 of 1,148.     Elapsed: 0:02:22
+ Batch   230 of 1,148.     Elapsed: 0:02:28
+ Batch   240 of 1,148.     Elapsed: 0:02:35
+ Batch   250 of 1,148.     Elapsed: 0:02:41
+ Batch   260 of 1,148.     Elapsed: 0:02:48
+ Batch   270 of 1,148.     Elapsed: 0:02:55
+ Batch   280 of 1,148.     Elapsed: 0:03:01
+ Batch   290 of 1,148.     Elapsed: 0:03:08
+ Batch   300 of 1,148.     Elapsed: 0:03:14
+ Batch   310 of 1,148.     Elapsed: 0:03:21
+ Batch   320 of 1,148.     Elapsed: 0:03:28
+ Batch   330 of 1,148.     Elapsed: 0:03:34
+ Batch   340 of 1,148.     Elapsed: 0:03:41
+ Batch   350 of 1,148.     Elapsed: 0:03:48
+ Batch   360 of 1,148.     Elapsed: 0:03:54
+ Batch   370 of 1,148.     Elapsed: 0:04:01
+ Batch   380 of 1,148.     Elapsed: 0:04:07
+ Batch   390 of 1,148.     Elapsed: 0:04:14
+ Batch   400 of 1,148.     Elapsed: 0:04:21
+ Batch   410 of 1,148.     Elapsed: 0:04:27
+ Batch   420 of 1,148.     Elapsed: 0:04:34
+ Batch   430 of 1,148.     Elapsed: 0:04:40
+ Batch   440 of 1,148.     Elapsed: 0:04:47
+ Batch   450 of 1,148.     Elapsed: 0:04:54
+ Batch   460 of 1,148.     Elapsed: 0:05:00
+ Batch   470 of 1,148.     Elapsed: 0:05:07
+ Batch   480 of 1,148.     Elapsed: 0:05:13
+ Batch   490 of 1,148.     Elapsed: 0:05:20
+ Batch   500 of 1,148.     Elapsed: 0:05:27
+ Batch   510 of 1,148.     Elapsed: 0:05:33
+ Batch   520 of 1,148.     Elapsed: 0:05:40
+ Batch   530 of 1,148.     Elapsed: 0:05:46
+ Batch   540 of 1,148.     Elapsed: 0:05:53
+ Batch   550 of 1,148.     Elapsed: 0:06:00
+ Batch   560 of 1,148.     Elapsed: 0:06:06
+ Batch   570 of 1,148.     Elapsed: 0:06:13
+ Batch   580 of 1,148.     Elapsed: 0:06:19
+ Batch   590 of 1,148.     Elapsed: 0:06:26
+ Batch   600 of 1,148.     Elapsed: 0:06:33
+ Batch   610 of 1,148.     Elapsed: 0:06:39
+ Batch   620 of 1,148.     Elapsed: 0:06:46
+ Batch   630 of 1,148.     Elapsed: 0:06:52
+ Batch   640 of 1,148.     Elapsed: 0:06:59
+ Batch   650 of 1,148.     Elapsed: 0:07:05
+ Batch   660 of 1,148.     Elapsed: 0:07:12
+ Batch   670 of 1,148.     Elapsed: 0:07:19
+ Batch   680 of 1,148.     Elapsed: 0:07:25
+ Batch   690 of 1,148.     Elapsed: 0:07:32
+ Batch   700 of 1,148.     Elapsed: 0:07:38
+ Batch   710 of 1,148.     Elapsed: 0:07:45
+ Batch   720 of 1,148.     Elapsed: 0:07:52
+ Batch   730 of 1,148.     Elapsed: 0:07:58
+ Batch   740 of 1,148.     Elapsed: 0:08:05
+ Batch   750 of 1,148.     Elapsed: 0:08:11
+ Batch   760 of 1,148.     Elapsed: 0:08:18
+ Batch   770 of 1,148.     Elapsed: 0:08:24
+ Batch   780 of 1,148.     Elapsed: 0:08:31
+ Batch   790 of 1,148.     Elapsed: 0:08:38
+ Batch   800 of 1,148.     Elapsed: 0:08:44
+ Batch   810 of 1,148.     Elapsed: 0:08:51
+ Batch   820 of 1,148.     Elapsed: 0:08:57
+ Batch   830 of 1,148.     Elapsed: 0:09:04
+ Batch   840 of 1,148.     Elapsed: 0:09:10
+ Batch   850 of 1,148.     Elapsed: 0:09:17
+ Batch   860 of 1,148.     Elapsed: 0:09:24
+ Batch   870 of 1,148.     Elapsed: 0:09:30
+ Batch   880 of 1,148.     Elapsed: 0:09:37
+ Batch   890 of 1,148.     Elapsed: 0:09:43
+ Batch   900 of 1,148.     Elapsed: 0:09:50
+ Batch   910 of 1,148.     Elapsed: 0:09:56
+ Batch   920 of 1,148.     Elapsed: 0:10:03
+ Batch   930 of 1,148.     Elapsed: 0:10:10
+ Batch   940 of 1,148.     Elapsed: 0:10:16
+ Batch   950 of 1,148.     Elapsed: 0:10:23
+ Batch   960 of 1,148.     Elapsed: 0:10:29
+ Batch   970 of 1,148.     Elapsed: 0:10:36
+ Batch   980 of 1,148.     Elapsed: 0:10:42
+ Batch   990 of 1,148.     Elapsed: 0:10:49
+ Batch 1,000 of 1,148.     Elapsed: 0:10:56
+ Batch 1,010 of 1,148.     Elapsed: 0:11:02
+ Batch 1,020 of 1,148.     Elapsed: 0:11:09
+ Batch 1,030 of 1,148.     Elapsed: 0:11:15
+ Batch 1,040 of 1,148.     Elapsed: 0:11:22
+ Batch 1,050 of 1,148.     Elapsed: 0:11:28
+ Batch 1,060 of 1,148.     Elapsed: 0:11:35
+ Batch 1,070 of 1,148.     Elapsed: 0:11:41
+ Batch 1,080 of 1,148.     Elapsed: 0:11:48
+ Batch 1,090 of 1,148.     Elapsed: 0:11:55
+ Batch 1,100 of 1,148.     Elapsed: 0:12:01
+ Batch 1,110 of 1,148.     Elapsed: 0:12:08
+ Batch 1,120 of 1,148.     Elapsed: 0:12:14
+ Batch 1,130 of 1,148.     Elapsed: 0:12:21
+ Batch 1,140 of 1,148.     Elapsed: 0:12:27
+
+     Average training loss: 0.29
+     Training epoch took: 0:12:33
+
+Running validation
+     Accuracy: 0.92
+     Validation Loss: 0.32
+     Validation took: 0:00:55
+
+Training complete!
+Total training took 0:13:28 (h:mm:ss)
+Saving model to models/merged-os-10/bert-finetuned-0/
+
+======== Epoch 2 / 10 ========
+ Batch    10 of 1,148.     Elapsed: 0:00:07
+ Batch    20 of 1,148.     Elapsed: 0:00:13
+ Batch    30 of 1,148.     Elapsed: 0:00:20
+ Batch    40 of 1,148.     Elapsed: 0:00:26
+ Batch    50 of 1,148.     Elapsed: 0:00:33
+ Batch    60 of 1,148.     Elapsed: 0:00:39
+ Batch    70 of 1,148.     Elapsed: 0:00:46
+ Batch    80 of 1,148.     Elapsed: 0:00:52
+ Batch    90 of 1,148.     Elapsed: 0:00:59
+ Batch   100 of 1,148.     Elapsed: 0:01:06
+ Batch   110 of 1,148.     Elapsed: 0:01:12
+ Batch   120 of 1,148.     Elapsed: 0:01:19
+ Batch   130 of 1,148.     Elapsed: 0:01:25
+ Batch   140 of 1,148.     Elapsed: 0:01:32
+ Batch   150 of 1,148.     Elapsed: 0:01:38
+ Batch   160 of 1,148.     Elapsed: 0:01:45
+ Batch   170 of 1,148.     Elapsed: 0:01:51
+ Batch   180 of 1,148.     Elapsed: 0:01:58
+ Batch   190 of 1,148.     Elapsed: 0:02:05
+ Batch   200 of 1,148.     Elapsed: 0:02:11
+ Batch   210 of 1,148.     Elapsed: 0:02:18
+ Batch   220 of 1,148.     Elapsed: 0:02:24
+ Batch   230 of 1,148.     Elapsed: 0:02:31
+ Batch   240 of 1,148.     Elapsed: 0:02:37
+ Batch   250 of 1,148.     Elapsed: 0:02:44
+ Batch   260 of 1,148.     Elapsed: 0:02:50
+ Batch   270 of 1,148.     Elapsed: 0:02:57
+ Batch   280 of 1,148.     Elapsed: 0:03:04
+ Batch   290 of 1,148.     Elapsed: 0:03:10
+ Batch   300 of 1,148.     Elapsed: 0:03:17
+ Batch   310 of 1,148.     Elapsed: 0:03:23
+ Batch   320 of 1,148.     Elapsed: 0:03:30
+ Batch   330 of 1,148.     Elapsed: 0:03:36
+ Batch   340 of 1,148.     Elapsed: 0:03:43
+ Batch   350 of 1,148.     Elapsed: 0:03:49
+ Batch   360 of 1,148.     Elapsed: 0:03:56
+ Batch   370 of 1,148.     Elapsed: 0:04:03
+ Batch   380 of 1,148.     Elapsed: 0:04:09
+ Batch   390 of 1,148.     Elapsed: 0:04:16
+ Batch   400 of 1,148.     Elapsed: 0:04:22
+ Batch   410 of 1,148.     Elapsed: 0:04:29
+ Batch   420 of 1,148.     Elapsed: 0:04:35
+ Batch   430 of 1,148.     Elapsed: 0:04:42
+ Batch   440 of 1,148.     Elapsed: 0:04:48
+ Batch   450 of 1,148.     Elapsed: 0:04:55
+ Batch   460 of 1,148.     Elapsed: 0:05:02
+ Batch   470 of 1,148.     Elapsed: 0:05:08
+ Batch   480 of 1,148.     Elapsed: 0:05:15
+ Batch   490 of 1,148.     Elapsed: 0:05:21
+ Batch   500 of 1,148.     Elapsed: 0:05:28
+ Batch   510 of 1,148.     Elapsed: 0:05:34
+ Batch   520 of 1,148.     Elapsed: 0:05:41
+ Batch   530 of 1,148.     Elapsed: 0:05:47
+ Batch   540 of 1,148.     Elapsed: 0:05:54
+ Batch   550 of 1,148.     Elapsed: 0:06:01
+ Batch   560 of 1,148.     Elapsed: 0:06:07
+ Batch   570 of 1,148.     Elapsed: 0:06:14
+ Batch   580 of 1,148.     Elapsed: 0:06:20
+ Batch   590 of 1,148.     Elapsed: 0:06:27
+ Batch   600 of 1,148.     Elapsed: 0:06:33
+ Batch   610 of 1,148.     Elapsed: 0:06:40
+ Batch   620 of 1,148.     Elapsed: 0:06:46
+ Batch   630 of 1,148.     Elapsed: 0:06:53
+ Batch   640 of 1,148.     Elapsed: 0:06:59
+ Batch   650 of 1,148.     Elapsed: 0:07:06
+ Batch   660 of 1,148.     Elapsed: 0:07:13
+ Batch   670 of 1,148.     Elapsed: 0:07:19
+ Batch   680 of 1,148.     Elapsed: 0:07:26
+ Batch   690 of 1,148.     Elapsed: 0:07:32
+ Batch   700 of 1,148.     Elapsed: 0:07:39
+ Batch   710 of 1,148.     Elapsed: 0:07:45
+ Batch   720 of 1,148.     Elapsed: 0:07:52
+ Batch   730 of 1,148.     Elapsed: 0:07:59
+ Batch   740 of 1,148.     Elapsed: 0:08:05
+ Batch   750 of 1,148.     Elapsed: 0:08:12
+ Batch   760 of 1,148.     Elapsed: 0:08:18
+ Batch   770 of 1,148.     Elapsed: 0:08:25
+ Batch   780 of 1,148.     Elapsed: 0:08:31
+ Batch   790 of 1,148.     Elapsed: 0:08:38
+ Batch   800 of 1,148.     Elapsed: 0:08:44
+ Batch   810 of 1,148.     Elapsed: 0:08:51
+ Batch   820 of 1,148.     Elapsed: 0:08:58
+ Batch   830 of 1,148.     Elapsed: 0:09:04
+ Batch   840 of 1,148.     Elapsed: 0:09:11
+ Batch   850 of 1,148.     Elapsed: 0:09:17
+ Batch   860 of 1,148.     Elapsed: 0:09:24
+ Batch   870 of 1,148.     Elapsed: 0:09:30
+ Batch   880 of 1,148.     Elapsed: 0:09:37
+ Batch   890 of 1,148.     Elapsed: 0:09:43
+ Batch   900 of 1,148.     Elapsed: 0:09:50
+ Batch   910 of 1,148.     Elapsed: 0:09:57
+ Batch   920 of 1,148.     Elapsed: 0:10:03
+ Batch   930 of 1,148.     Elapsed: 0:10:10
+ Batch   940 of 1,148.     Elapsed: 0:10:16
+ Batch   950 of 1,148.     Elapsed: 0:10:23
+ Batch   960 of 1,148.     Elapsed: 0:10:29
+ Batch   970 of 1,148.     Elapsed: 0:10:36
+ Batch   980 of 1,148.     Elapsed: 0:10:42
+ Batch   990 of 1,148.     Elapsed: 0:10:49
+ Batch 1,000 of 1,148.     Elapsed: 0:10:56
+ Batch 1,010 of 1,148.     Elapsed: 0:11:02
+ Batch 1,020 of 1,148.     Elapsed: 0:11:09
+ Batch 1,030 of 1,148.     Elapsed: 0:11:15
+ Batch 1,040 of 1,148.     Elapsed: 0:11:22
+ Batch 1,050 of 1,148.     Elapsed: 0:11:28
+ Batch 1,060 of 1,148.     Elapsed: 0:11:35
+ Batch 1,070 of 1,148.     Elapsed: 0:11:41
+ Batch 1,080 of 1,148.     Elapsed: 0:11:48
+ Batch 1,090 of 1,148.     Elapsed: 0:11:54
+ Batch 1,100 of 1,148.     Elapsed: 0:12:01
+ Batch 1,110 of 1,148.     Elapsed: 0:12:08
+ Batch 1,120 of 1,148.     Elapsed: 0:12:14
+ Batch 1,130 of 1,148.     Elapsed: 0:12:21
+ Batch 1,140 of 1,148.     Elapsed: 0:12:27
+
+     Average training loss: 0.10
+     Training epoch took: 0:12:32
+
+Running validation
+     Accuracy: 0.93
+     Validation Loss: 0.34
+     Validation took: 0:00:55
+
+Training complete!
+Total training took 0:26:57 (h:mm:ss)
+Saving model to models/merged-os-10/bert-finetuned-1/
+
+======== Epoch 3 / 10 ========
+ Batch    10 of 1,148.     Elapsed: 0:00:07
+ Batch    20 of 1,148.     Elapsed: 0:00:13
+ Batch    30 of 1,148.     Elapsed: 0:00:20
+ Batch    40 of 1,148.     Elapsed: 0:00:26
+ Batch    50 of 1,148.     Elapsed: 0:00:33
+ Batch    60 of 1,148.     Elapsed: 0:00:39
+ Batch    70 of 1,148.     Elapsed: 0:00:46
+ Batch    80 of 1,148.     Elapsed: 0:00:52
+ Batch    90 of 1,148.     Elapsed: 0:00:59
+ Batch   100 of 1,148.     Elapsed: 0:01:05
+ Batch   110 of 1,148.     Elapsed: 0:01:12
+ Batch   120 of 1,148.     Elapsed: 0:01:18
+ Batch   130 of 1,148.     Elapsed: 0:01:25
+ Batch   140 of 1,148.     Elapsed: 0:01:32
+ Batch   150 of 1,148.     Elapsed: 0:01:38
+ Batch   160 of 1,148.     Elapsed: 0:01:45
+ Batch   170 of 1,148.     Elapsed: 0:01:51
+ Batch   180 of 1,148.     Elapsed: 0:01:58
+ Batch   190 of 1,148.     Elapsed: 0:02:04
+ Batch   200 of 1,148.     Elapsed: 0:02:11
+ Batch   210 of 1,148.     Elapsed: 0:02:17
+ Batch   220 of 1,148.     Elapsed: 0:02:24
+ Batch   230 of 1,148.     Elapsed: 0:02:30
+ Batch   240 of 1,148.     Elapsed: 0:02:37
+ Batch   250 of 1,148.     Elapsed: 0:02:44
+ Batch   260 of 1,148.     Elapsed: 0:02:50
+ Batch   270 of 1,148.     Elapsed: 0:02:57
+ Batch   280 of 1,148.     Elapsed: 0:03:03
+ Batch   290 of 1,148.     Elapsed: 0:03:10
+ Batch   300 of 1,148.     Elapsed: 0:03:16
+ Batch   310 of 1,148.     Elapsed: 0:03:23
+ Batch   320 of 1,148.     Elapsed: 0:03:29
+ Batch   330 of 1,148.     Elapsed: 0:03:36
+ Batch   340 of 1,148.     Elapsed: 0:03:42
+ Batch   350 of 1,148.     Elapsed: 0:03:49
+ Batch   360 of 1,148.     Elapsed: 0:03:56
+ Batch   370 of 1,148.     Elapsed: 0:04:02
+ Batch   380 of 1,148.     Elapsed: 0:04:09
+ Batch   390 of 1,148.     Elapsed: 0:04:15
+ Batch   400 of 1,148.     Elapsed: 0:04:22
+ Batch   410 of 1,148.     Elapsed: 0:04:28
+ Batch   420 of 1,148.     Elapsed: 0:04:35
+ Batch   430 of 1,148.     Elapsed: 0:04:41
+ Batch   440 of 1,148.     Elapsed: 0:04:48
+ Batch   450 of 1,148.     Elapsed: 0:04:54
+ Batch   460 of 1,148.     Elapsed: 0:05:01
+ Batch   470 of 1,148.     Elapsed: 0:05:07
+ Batch   480 of 1,148.     Elapsed: 0:05:14
+ Batch   490 of 1,148.     Elapsed: 0:05:21
+ Batch   500 of 1,148.     Elapsed: 0:05:27
+ Batch   510 of 1,148.     Elapsed: 0:05:34
+ Batch   520 of 1,148.     Elapsed: 0:05:40
+ Batch   530 of 1,148.     Elapsed: 0:05:47
+ Batch   540 of 1,148.     Elapsed: 0:05:53
+ Batch   550 of 1,148.     Elapsed: 0:06:00
+ Batch   560 of 1,148.     Elapsed: 0:06:06
+ Batch   570 of 1,148.     Elapsed: 0:06:13
+ Batch   580 of 1,148.     Elapsed: 0:06:19
+ Batch   590 of 1,148.     Elapsed: 0:06:26
+ Batch   600 of 1,148.     Elapsed: 0:06:33
+ Batch   610 of 1,148.     Elapsed: 0:06:39
+ Batch   620 of 1,148.     Elapsed: 0:06:46
+ Batch   630 of 1,148.     Elapsed: 0:06:52
+ Batch   640 of 1,148.     Elapsed: 0:06:59
+ Batch   650 of 1,148.     Elapsed: 0:07:05
+ Batch   660 of 1,148.     Elapsed: 0:07:12
+ Batch   670 of 1,148.     Elapsed: 0:07:18
+ Batch   680 of 1,148.     Elapsed: 0:07:25
+ Batch   690 of 1,148.     Elapsed: 0:07:31
+ Batch   700 of 1,148.     Elapsed: 0:07:38
+ Batch   710 of 1,148.     Elapsed: 0:07:44
+ Batch   720 of 1,148.     Elapsed: 0:07:51
+ Batch   730 of 1,148.     Elapsed: 0:07:57
+ Batch   740 of 1,148.     Elapsed: 0:08:04
+ Batch   750 of 1,148.     Elapsed: 0:08:11
+ Batch   760 of 1,148.     Elapsed: 0:08:17
+ Batch   770 of 1,148.     Elapsed: 0:08:24
+ Batch   780 of 1,148.     Elapsed: 0:08:30
+ Batch   790 of 1,148.     Elapsed: 0:08:37
+ Batch   800 of 1,148.     Elapsed: 0:08:43
+ Batch   810 of 1,148.     Elapsed: 0:08:50
+ Batch   820 of 1,148.     Elapsed: 0:08:56
+ Batch   830 of 1,148.     Elapsed: 0:09:03
+ Batch   840 of 1,148.     Elapsed: 0:09:09
+ Batch   850 of 1,148.     Elapsed: 0:09:16
+ Batch   860 of 1,148.     Elapsed: 0:09:22
+ Batch   870 of 1,148.     Elapsed: 0:09:29
+ Batch   880 of 1,148.     Elapsed: 0:09:35
+ Batch   890 of 1,148.     Elapsed: 0:09:42
+ Batch   900 of 1,148.     Elapsed: 0:09:49
+ Batch   910 of 1,148.     Elapsed: 0:09:55
+ Batch   920 of 1,148.     Elapsed: 0:10:02
+ Batch   930 of 1,148.     Elapsed: 0:10:08
+ Batch   940 of 1,148.     Elapsed: 0:10:15
+ Batch   950 of 1,148.     Elapsed: 0:10:21
+ Batch   960 of 1,148.     Elapsed: 0:10:28
+ Batch   970 of 1,148.     Elapsed: 0:10:34
+ Batch   980 of 1,148.     Elapsed: 0:10:41
+ Batch   990 of 1,148.     Elapsed: 0:10:47
+ Batch 1,000 of 1,148.     Elapsed: 0:10:54
+ Batch 1,010 of 1,148.     Elapsed: 0:11:01
+ Batch 1,020 of 1,148.     Elapsed: 0:11:07
+ Batch 1,030 of 1,148.     Elapsed: 0:11:14
+ Batch 1,040 of 1,148.     Elapsed: 0:11:20
+ Batch 1,050 of 1,148.     Elapsed: 0:11:27
+ Batch 1,060 of 1,148.     Elapsed: 0:11:33
+ Batch 1,070 of 1,148.     Elapsed: 0:11:40
+ Batch 1,080 of 1,148.     Elapsed: 0:11:46
+ Batch 1,090 of 1,148.     Elapsed: 0:11:53
+ Batch 1,100 of 1,148.     Elapsed: 0:11:59
+ Batch 1,110 of 1,148.     Elapsed: 0:12:06
+ Batch 1,120 of 1,148.     Elapsed: 0:12:12
+ Batch 1,130 of 1,148.     Elapsed: 0:12:19
+ Batch 1,140 of 1,148.     Elapsed: 0:12:26
+
+     Average training loss: 0.06
+     Training epoch took: 0:12:31
+
+Running validation
+     Accuracy: 0.93
+     Validation Loss: 0.39
+     Validation took: 0:00:55
+
+Training complete!
+Total training took 0:40:24 (h:mm:ss)
+Saving model to models/merged-os-10/bert-finetuned-2/
+
+======== Epoch 4 / 10 ========
+ Batch    10 of 1,148.     Elapsed: 0:00:06
+ Batch    20 of 1,148.     Elapsed: 0:00:13
+ Batch    30 of 1,148.     Elapsed: 0:00:19
+ Batch    40 of 1,148.     Elapsed: 0:00:26
+ Batch    50 of 1,148.     Elapsed: 0:00:32
+ Batch    60 of 1,148.     Elapsed: 0:00:39
+ Batch    70 of 1,148.     Elapsed: 0:00:46
+ Batch    80 of 1,148.     Elapsed: 0:00:52
+ Batch    90 of 1,148.     Elapsed: 0:00:59
+ Batch   100 of 1,148.     Elapsed: 0:01:05
+ Batch   110 of 1,148.     Elapsed: 0:01:12
+ Batch   120 of 1,148.     Elapsed: 0:01:18
+ Batch   130 of 1,148.     Elapsed: 0:01:25
+ Batch   140 of 1,148.     Elapsed: 0:01:31
+ Batch   150 of 1,148.     Elapsed: 0:01:38
+ Batch   160 of 1,148.     Elapsed: 0:01:44
+ Batch   170 of 1,148.     Elapsed: 0:01:51
+ Batch   180 of 1,148.     Elapsed: 0:01:57
+ Batch   190 of 1,148.     Elapsed: 0:02:04
+ Batch   200 of 1,148.     Elapsed: 0:02:10
+ Batch   210 of 1,148.     Elapsed: 0:02:17
+ Batch   220 of 1,148.     Elapsed: 0:02:23
+ Batch   230 of 1,148.     Elapsed: 0:02:30
+ Batch   240 of 1,148.     Elapsed: 0:02:36
+ Batch   250 of 1,148.     Elapsed: 0:02:43
+ Batch   260 of 1,148.     Elapsed: 0:02:50
+ Batch   270 of 1,148.     Elapsed: 0:02:56
+ Batch   280 of 1,148.     Elapsed: 0:03:03
+ Batch   290 of 1,148.     Elapsed: 0:03:09
+ Batch   300 of 1,148.     Elapsed: 0:03:16
+ Batch   310 of 1,148.     Elapsed: 0:03:22
+ Batch   320 of 1,148.     Elapsed: 0:03:29
+ Batch   330 of 1,148.     Elapsed: 0:03:35
+ Batch   340 of 1,148.     Elapsed: 0:03:42
+ Batch   350 of 1,148.     Elapsed: 0:03:48
+ Batch   360 of 1,148.     Elapsed: 0:03:55
+ Batch   370 of 1,148.     Elapsed: 0:04:01
+ Batch   380 of 1,148.     Elapsed: 0:04:08
+ Batch   390 of 1,148.     Elapsed: 0:04:14
+ Batch   400 of 1,148.     Elapsed: 0:04:21
+ Batch   410 of 1,148.     Elapsed: 0:04:27
+ Batch   420 of 1,148.     Elapsed: 0:04:34
+ Batch   430 of 1,148.     Elapsed: 0:04:40
+ Batch   440 of 1,148.     Elapsed: 0:04:47
+ Batch   450 of 1,148.     Elapsed: 0:04:54
+ Batch   460 of 1,148.     Elapsed: 0:05:00
+ Batch   470 of 1,148.     Elapsed: 0:05:07
+ Batch   480 of 1,148.     Elapsed: 0:05:13
+ Batch   490 of 1,148.     Elapsed: 0:05:20
+ Batch   500 of 1,148.     Elapsed: 0:05:26
+ Batch   510 of 1,148.     Elapsed: 0:05:33
+ Batch   520 of 1,148.     Elapsed: 0:05:39
+ Batch   530 of 1,148.     Elapsed: 0:05:46
+ Batch   540 of 1,148.     Elapsed: 0:05:52
+ Batch   550 of 1,148.     Elapsed: 0:05:59
+ Batch   560 of 1,148.     Elapsed: 0:06:06
+ Batch   570 of 1,148.     Elapsed: 0:06:12
+ Batch   580 of 1,148.     Elapsed: 0:06:19
+ Batch   590 of 1,148.     Elapsed: 0:06:25
+ Batch   600 of 1,148.     Elapsed: 0:06:32
+ Batch   610 of 1,148.     Elapsed: 0:06:38
+ Batch   620 of 1,148.     Elapsed: 0:06:45
+ Batch   630 of 1,148.     Elapsed: 0:06:51
+ Batch   640 of 1,148.     Elapsed: 0:06:58
+ Batch   650 of 1,148.     Elapsed: 0:07:04
+ Batch   660 of 1,148.     Elapsed: 0:07:11
+ Batch   670 of 1,148.     Elapsed: 0:07:17
+ Batch   680 of 1,148.     Elapsed: 0:07:24
+ Batch   690 of 1,148.     Elapsed: 0:07:30
+ Batch   700 of 1,148.     Elapsed: 0:07:37
+ Batch   710 of 1,148.     Elapsed: 0:07:43
+ Batch   720 of 1,148.     Elapsed: 0:07:50
+ Batch   730 of 1,148.     Elapsed: 0:07:56
+ Batch   740 of 1,148.     Elapsed: 0:08:03
+ Batch   750 of 1,148.     Elapsed: 0:08:10
+ Batch   760 of 1,148.     Elapsed: 0:08:16
+ Batch   770 of 1,148.     Elapsed: 0:08:23
+ Batch   780 of 1,148.     Elapsed: 0:08:29
+ Batch   790 of 1,148.     Elapsed: 0:08:36
+ Batch   800 of 1,148.     Elapsed: 0:08:42
+ Batch   810 of 1,148.     Elapsed: 0:08:49
+ Batch   820 of 1,148.     Elapsed: 0:08:55
+ Batch   830 of 1,148.     Elapsed: 0:09:02
+ Batch   840 of 1,148.     Elapsed: 0:09:08
+ Batch   850 of 1,148.     Elapsed: 0:09:15
+ Batch   860 of 1,148.     Elapsed: 0:09:21
+ Batch   870 of 1,148.     Elapsed: 0:09:28
+ Batch   880 of 1,148.     Elapsed: 0:09:34
+ Batch   890 of 1,148.     Elapsed: 0:09:41
+ Batch   900 of 1,148.     Elapsed: 0:09:47
+ Batch   910 of 1,148.     Elapsed: 0:09:54
+ Batch   920 of 1,148.     Elapsed: 0:10:00
+ Batch   930 of 1,148.     Elapsed: 0:10:07
+ Batch   940 of 1,148.     Elapsed: 0:10:13
+ Batch   950 of 1,148.     Elapsed: 0:10:20
+ Batch   960 of 1,148.     Elapsed: 0:10:27
+ Batch   970 of 1,148.     Elapsed: 0:10:33
+ Batch   980 of 1,148.     Elapsed: 0:10:40
+ Batch   990 of 1,148.     Elapsed: 0:10:46
+ Batch 1,000 of 1,148.     Elapsed: 0:10:53
+ Batch 1,010 of 1,148.     Elapsed: 0:10:59
+ Batch 1,020 of 1,148.     Elapsed: 0:11:06
+ Batch 1,030 of 1,148.     Elapsed: 0:11:12
+ Batch 1,040 of 1,148.     Elapsed: 0:11:19
+ Batch 1,050 of 1,148.     Elapsed: 0:11:25
+ Batch 1,060 of 1,148.     Elapsed: 0:11:32
+ Batch 1,070 of 1,148.     Elapsed: 0:11:38
+ Batch 1,080 of 1,148.     Elapsed: 0:11:45
+ Batch 1,090 of 1,148.     Elapsed: 0:11:51
+ Batch 1,100 of 1,148.     Elapsed: 0:11:58
+ Batch 1,110 of 1,148.     Elapsed: 0:12:04
+ Batch 1,120 of 1,148.     Elapsed: 0:12:11
+ Batch 1,130 of 1,148.     Elapsed: 0:12:17
+ Batch 1,140 of 1,148.     Elapsed: 0:12:24
+
+     Average training loss: 0.04
+     Training epoch took: 0:12:29
+
+Running validation
+     Accuracy: 0.93
+     Validation Loss: 0.37
+     Validation took: 0:00:55
+
+Training complete!
+Total training took 0:53:49 (h:mm:ss)
+Saving model to models/merged-os-10/bert-finetuned-3/
+
+======== Epoch 5 / 10 ========
+ Batch    10 of 1,148.     Elapsed: 0:00:06
+ Batch    20 of 1,148.     Elapsed: 0:00:13
+ Batch    30 of 1,148.     Elapsed: 0:00:20
+ Batch    40 of 1,148.     Elapsed: 0:00:26
+ Batch    50 of 1,148.     Elapsed: 0:00:33
+ Batch    60 of 1,148.     Elapsed: 0:00:39
+ Batch    70 of 1,148.     Elapsed: 0:00:46
+ Batch    80 of 1,148.     Elapsed: 0:00:52
+ Batch    90 of 1,148.     Elapsed: 0:00:59
+ Batch   100 of 1,148.     Elapsed: 0:01:05
+ Batch   110 of 1,148.     Elapsed: 0:01:12
+ Batch   120 of 1,148.     Elapsed: 0:01:18
+ Batch   130 of 1,148.     Elapsed: 0:01:25
+ Batch   140 of 1,148.     Elapsed: 0:01:31
+ Batch   150 of 1,148.     Elapsed: 0:01:38
+ Batch   160 of 1,148.     Elapsed: 0:01:44
+ Batch   170 of 1,148.     Elapsed: 0:01:51
+ Batch   180 of 1,148.     Elapsed: 0:01:57
+ Batch   190 of 1,148.     Elapsed: 0:02:04
+ Batch   200 of 1,148.     Elapsed: 0:02:10
+ Batch   210 of 1,148.     Elapsed: 0:02:17
+ Batch   220 of 1,148.     Elapsed: 0:02:23
+ Batch   230 of 1,148.     Elapsed: 0:02:30
+ Batch   240 of 1,148.     Elapsed: 0:02:36
+ Batch   250 of 1,148.     Elapsed: 0:02:43
+ Batch   260 of 1,148.     Elapsed: 0:02:49
+ Batch   270 of 1,148.     Elapsed: 0:02:56
+ Batch   280 of 1,148.     Elapsed: 0:03:02
+ Batch   290 of 1,148.     Elapsed: 0:03:09
+ Batch   300 of 1,148.     Elapsed: 0:03:15
+ Batch   310 of 1,148.     Elapsed: 0:03:22
+ Batch   320 of 1,148.     Elapsed: 0:03:29
+ Batch   330 of 1,148.     Elapsed: 0:03:35
+ Batch   340 of 1,148.     Elapsed: 0:03:42
+ Batch   350 of 1,148.     Elapsed: 0:03:48
+ Batch   360 of 1,148.     Elapsed: 0:03:55
+ Batch   370 of 1,148.     Elapsed: 0:04:01
+ Batch   380 of 1,148.     Elapsed: 0:04:08
+ Batch   390 of 1,148.     Elapsed: 0:04:14
+ Batch   400 of 1,148.     Elapsed: 0:04:21
+ Batch   410 of 1,148.     Elapsed: 0:04:27
+ Batch   420 of 1,148.     Elapsed: 0:04:34
+ Batch   430 of 1,148.     Elapsed: 0:04:40
+ Batch   440 of 1,148.     Elapsed: 0:04:47
+ Batch   450 of 1,148.     Elapsed: 0:04:53
+ Batch   460 of 1,148.     Elapsed: 0:05:00
+ Batch   470 of 1,148.     Elapsed: 0:05:06
+ Batch   480 of 1,148.     Elapsed: 0:05:13
+ Batch   490 of 1,148.     Elapsed: 0:05:19
+ Batch   500 of 1,148.     Elapsed: 0:05:26
+ Batch   510 of 1,148.     Elapsed: 0:05:33
+ Batch   520 of 1,148.     Elapsed: 0:05:39
+ Batch   530 of 1,148.     Elapsed: 0:05:46
+ Batch   540 of 1,148.     Elapsed: 0:05:52
+ Batch   550 of 1,148.     Elapsed: 0:05:59
+ Batch   560 of 1,148.     Elapsed: 0:06:05
+ Batch   570 of 1,148.     Elapsed: 0:06:12
+ Batch   580 of 1,148.     Elapsed: 0:06:18
+ Batch   590 of 1,148.     Elapsed: 0:06:25
+ Batch   600 of 1,148.     Elapsed: 0:06:31
+ Batch   610 of 1,148.     Elapsed: 0:06:38
+ Batch   620 of 1,148.     Elapsed: 0:06:44
+ Batch   630 of 1,148.     Elapsed: 0:06:51
+ Batch   640 of 1,148.     Elapsed: 0:06:57
+ Batch   650 of 1,148.     Elapsed: 0:07:04
+ Batch   660 of 1,148.     Elapsed: 0:07:10
+ Batch   670 of 1,148.     Elapsed: 0:07:17
+ Batch   680 of 1,148.     Elapsed: 0:07:23
+ Batch   690 of 1,148.     Elapsed: 0:07:30
+ Batch   700 of 1,148.     Elapsed: 0:07:36
+ Batch   710 of 1,148.     Elapsed: 0:07:43
+ Batch   720 of 1,148.     Elapsed: 0:07:49
+ Batch   730 of 1,148.     Elapsed: 0:07:56
+ Batch   740 of 1,148.     Elapsed: 0:08:02
+ Batch   750 of 1,148.     Elapsed: 0:08:09
+ Batch   760 of 1,148.     Elapsed: 0:08:16
+ Batch   770 of 1,148.     Elapsed: 0:08:22
+ Batch   780 of 1,148.     Elapsed: 0:08:29
+ Batch   790 of 1,148.     Elapsed: 0:08:35
+ Batch   800 of 1,148.     Elapsed: 0:08:42
+ Batch   810 of 1,148.     Elapsed: 0:08:48
+ Batch   820 of 1,148.     Elapsed: 0:08:55
+ Batch   830 of 1,148.     Elapsed: 0:09:01
+ Batch   840 of 1,148.     Elapsed: 0:09:08
+ Batch   850 of 1,148.     Elapsed: 0:09:14
+ Batch   860 of 1,148.     Elapsed: 0:09:21
+ Batch   870 of 1,148.     Elapsed: 0:09:27
+ Batch   880 of 1,148.     Elapsed: 0:09:34
+ Batch   890 of 1,148.     Elapsed: 0:09:40
+ Batch   900 of 1,148.     Elapsed: 0:09:47
+ Batch   910 of 1,148.     Elapsed: 0:09:53
+ Batch   920 of 1,148.     Elapsed: 0:10:00
+ Batch   930 of 1,148.     Elapsed: 0:10:06
+ Batch   940 of 1,148.     Elapsed: 0:10:13
+ Batch   950 of 1,148.     Elapsed: 0:10:19
+ Batch   960 of 1,148.     Elapsed: 0:10:26
+ Batch   970 of 1,148.     Elapsed: 0:10:32
+ Batch   980 of 1,148.     Elapsed: 0:10:39
+ Batch   990 of 1,148.     Elapsed: 0:10:45
+ Batch 1,000 of 1,148.     Elapsed: 0:10:52
+ Batch 1,010 of 1,148.     Elapsed: 0:10:58
+ Batch 1,020 of 1,148.     Elapsed: 0:11:05
+ Batch 1,030 of 1,148.     Elapsed: 0:11:11
+ Batch 1,040 of 1,148.     Elapsed: 0:11:18
+ Batch 1,050 of 1,148.     Elapsed: 0:11:24
+ Batch 1,060 of 1,148.     Elapsed: 0:11:31
+ Batch 1,070 of 1,148.     Elapsed: 0:11:37
+ Batch 1,080 of 1,148.     Elapsed: 0:11:44
+ Batch 1,090 of 1,148.     Elapsed: 0:11:51
+ Batch 1,100 of 1,148.     Elapsed: 0:11:57
+ Batch 1,110 of 1,148.     Elapsed: 0:12:04
+ Batch 1,120 of 1,148.     Elapsed: 0:12:10
+ Batch 1,130 of 1,148.     Elapsed: 0:12:17
+ Batch 1,140 of 1,148.     Elapsed: 0:12:23
+
+     Average training loss: 0.03
+     Training epoch took: 0:12:28
+
+Running validation
+     Accuracy: 0.93
+     Validation Loss: 0.42
+     Validation took: 0:00:55
+
+Training complete!
+Total training took 1:07:14 (h:mm:ss)
+Saving model to models/merged-os-10/bert-finetuned-4/
+
+======== Epoch 6 / 10 ========
+ Batch    10 of 1,148.     Elapsed: 0:00:07
+ Batch    20 of 1,148.     Elapsed: 0:00:13
+ Batch    30 of 1,148.     Elapsed: 0:00:20
+ Batch    40 of 1,148.     Elapsed: 0:00:26
+ Batch    50 of 1,148.     Elapsed: 0:00:33
+ Batch    60 of 1,148.     Elapsed: 0:00:39
+ Batch    70 of 1,148.     Elapsed: 0:00:46
+ Batch    80 of 1,148.     Elapsed: 0:00:52
+ Batch    90 of 1,148.     Elapsed: 0:00:59
+ Batch   100 of 1,148.     Elapsed: 0:01:05
+ Batch   110 of 1,148.     Elapsed: 0:01:12
+ Batch   120 of 1,148.     Elapsed: 0:01:18
+ Batch   130 of 1,148.     Elapsed: 0:01:25
+ Batch   140 of 1,148.     Elapsed: 0:01:31
+ Batch   150 of 1,148.     Elapsed: 0:01:38
+ Batch   160 of 1,148.     Elapsed: 0:01:44
+ Batch   170 of 1,148.     Elapsed: 0:01:51
+ Batch   180 of 1,148.     Elapsed: 0:01:57
+ Batch   190 of 1,148.     Elapsed: 0:02:04
+ Batch   200 of 1,148.     Elapsed: 0:02:10
+ Batch   210 of 1,148.     Elapsed: 0:02:17
+ Batch   220 of 1,148.     Elapsed: 0:02:23
+ Batch   230 of 1,148.     Elapsed: 0:02:30
+ Batch   240 of 1,148.     Elapsed: 0:02:36
+ Batch   250 of 1,148.     Elapsed: 0:02:43
+ Batch   260 of 1,148.     Elapsed: 0:02:49
+ Batch   270 of 1,148.     Elapsed: 0:02:56
+ Batch   280 of 1,148.     Elapsed: 0:03:02
+ Batch   290 of 1,148.     Elapsed: 0:03:09
+ Batch   300 of 1,148.     Elapsed: 0:03:15
+ Batch   310 of 1,148.     Elapsed: 0:03:22
+ Batch   320 of 1,148.     Elapsed: 0:03:28
+ Batch   330 of 1,148.     Elapsed: 0:03:35
+ Batch   340 of 1,148.     Elapsed: 0:03:41
+ Batch   350 of 1,148.     Elapsed: 0:03:48
+ Batch   360 of 1,148.     Elapsed: 0:03:54
+ Batch   370 of 1,148.     Elapsed: 0:04:01
+ Batch   380 of 1,148.     Elapsed: 0:04:07
+ Batch   390 of 1,148.     Elapsed: 0:04:14
+ Batch   400 of 1,148.     Elapsed: 0:04:20
+ Batch   410 of 1,148.     Elapsed: 0:04:27
+ Batch   420 of 1,148.     Elapsed: 0:04:33
+ Batch   430 of 1,148.     Elapsed: 0:04:40
+ Batch   440 of 1,148.     Elapsed: 0:04:46
+ Batch   450 of 1,148.     Elapsed: 0:04:53
+ Batch   460 of 1,148.     Elapsed: 0:04:59
+ Batch   470 of 1,148.     Elapsed: 0:05:06
+ Batch   480 of 1,148.     Elapsed: 0:05:12
+ Batch   490 of 1,148.     Elapsed: 0:05:19
+ Batch   500 of 1,148.     Elapsed: 0:05:25
+ Batch   510 of 1,148.     Elapsed: 0:05:32
+ Batch   520 of 1,148.     Elapsed: 0:05:38
+ Batch   530 of 1,148.     Elapsed: 0:05:45
+ Batch   540 of 1,148.     Elapsed: 0:05:51
+ Batch   550 of 1,148.     Elapsed: 0:05:58
+ Batch   560 of 1,148.     Elapsed: 0:06:04
+ Batch   570 of 1,148.     Elapsed: 0:06:11
+ Batch   580 of 1,148.     Elapsed: 0:06:18
+ Batch   590 of 1,148.     Elapsed: 0:06:24
+ Batch   600 of 1,148.     Elapsed: 0:06:31
+ Batch   610 of 1,148.     Elapsed: 0:06:37
+ Batch   620 of 1,148.     Elapsed: 0:06:44
+ Batch   630 of 1,148.     Elapsed: 0:06:50
+ Batch   640 of 1,148.     Elapsed: 0:06:57
+ Batch   650 of 1,148.     Elapsed: 0:07:03
+ Batch   660 of 1,148.     Elapsed: 0:07:10
+ Batch   670 of 1,148.     Elapsed: 0:07:16
+ Batch   680 of 1,148.     Elapsed: 0:07:23
+ Batch   690 of 1,148.     Elapsed: 0:07:29
+ Batch   700 of 1,148.     Elapsed: 0:07:36
+ Batch   710 of 1,148.     Elapsed: 0:07:42
+ Batch   720 of 1,148.     Elapsed: 0:07:49
+ Batch   730 of 1,148.     Elapsed: 0:07:55
+ Batch   740 of 1,148.     Elapsed: 0:08:02
+ Batch   750 of 1,148.     Elapsed: 0:08:08
+ Batch   760 of 1,148.     Elapsed: 0:08:15
+ Batch   770 of 1,148.     Elapsed: 0:08:21
+ Batch   780 of 1,148.     Elapsed: 0:08:28
+ Batch   790 of 1,148.     Elapsed: 0:08:34
+ Batch   800 of 1,148.     Elapsed: 0:08:41
+ Batch   810 of 1,148.     Elapsed: 0:08:47
+ Batch   820 of 1,148.     Elapsed: 0:08:54
+ Batch   830 of 1,148.     Elapsed: 0:09:00
+ Batch   840 of 1,148.     Elapsed: 0:09:07
+ Batch   850 of 1,148.     Elapsed: 0:09:13
+ Batch   860 of 1,148.     Elapsed: 0:09:20
+ Batch   870 of 1,148.     Elapsed: 0:09:26
+ Batch   880 of 1,148.     Elapsed: 0:09:33
+ Batch   890 of 1,148.     Elapsed: 0:09:39
+ Batch   900 of 1,148.     Elapsed: 0:09:46
+ Batch   910 of 1,148.     Elapsed: 0:09:52
+ Batch   920 of 1,148.     Elapsed: 0:09:59
+ Batch   930 of 1,148.     Elapsed: 0:10:05
+ Batch   940 of 1,148.     Elapsed: 0:10:12
+ Batch   950 of 1,148.     Elapsed: 0:10:18
+ Batch   960 of 1,148.     Elapsed: 0:10:25
+ Batch   970 of 1,148.     Elapsed: 0:10:31
+ Batch   980 of 1,148.     Elapsed: 0:10:38
+ Batch   990 of 1,148.     Elapsed: 0:10:44
+ Batch 1,000 of 1,148.     Elapsed: 0:10:51
+ Batch 1,010 of 1,148.     Elapsed: 0:10:57
+ Batch 1,020 of 1,148.     Elapsed: 0:11:04
+ Batch 1,030 of 1,148.     Elapsed: 0:11:10
+ Batch 1,040 of 1,148.     Elapsed: 0:11:17
+ Batch 1,050 of 1,148.     Elapsed: 0:11:23
+ Batch 1,060 of 1,148.     Elapsed: 0:11:30
+ Batch 1,070 of 1,148.     Elapsed: 0:11:36
+ Batch 1,080 of 1,148.     Elapsed: 0:11:43
+ Batch 1,090 of 1,148.     Elapsed: 0:11:49
+ Batch 1,100 of 1,148.     Elapsed: 0:11:56
+ Batch 1,110 of 1,148.     Elapsed: 0:12:02
+ Batch 1,120 of 1,148.     Elapsed: 0:12:09
+ Batch 1,130 of 1,148.     Elapsed: 0:12:15
+ Batch 1,140 of 1,148.     Elapsed: 0:12:22
+
+     Average training loss: 0.02
+     Training epoch took: 0:12:27
+
+Running validation
+     Accuracy: 0.93
+     Validation Loss: 0.45
+     Validation took: 0:00:55
+
+Training complete!
+Total training took 1:20:37 (h:mm:ss)
+Saving model to models/merged-os-10/bert-finetuned-5/
+
+======== Epoch 7 / 10 ========
+ Batch    10 of 1,148.     Elapsed: 0:00:07
+ Batch    20 of 1,148.     Elapsed: 0:00:13
+ Batch    30 of 1,148.     Elapsed: 0:00:20
+ Batch    40 of 1,148.     Elapsed: 0:00:26
+ Batch    50 of 1,148.     Elapsed: 0:00:33
+ Batch    60 of 1,148.     Elapsed: 0:00:39
+ Batch    70 of 1,148.     Elapsed: 0:00:46
+ Batch    80 of 1,148.     Elapsed: 0:00:52
+ Batch    90 of 1,148.     Elapsed: 0:00:59
+ Batch   100 of 1,148.     Elapsed: 0:01:05
+ Batch   110 of 1,148.     Elapsed: 0:01:12
+ Batch   120 of 1,148.     Elapsed: 0:01:18
+ Batch   130 of 1,148.     Elapsed: 0:01:25
+ Batch   140 of 1,148.     Elapsed: 0:01:31
+ Batch   150 of 1,148.     Elapsed: 0:01:38
+ Batch   160 of 1,148.     Elapsed: 0:01:44
+ Batch   170 of 1,148.     Elapsed: 0:01:51
+ Batch   180 of 1,148.     Elapsed: 0:01:57
+ Batch   190 of 1,148.     Elapsed: 0:02:04
+ Batch   200 of 1,148.     Elapsed: 0:02:10
+ Batch   210 of 1,148.     Elapsed: 0:02:17
+ Batch   220 of 1,148.     Elapsed: 0:02:23
+ Batch   230 of 1,148.     Elapsed: 0:02:30
+ Batch   240 of 1,148.     Elapsed: 0:02:36
+ Batch   250 of 1,148.     Elapsed: 0:02:43
+ Batch   260 of 1,148.     Elapsed: 0:02:49
+ Batch   270 of 1,148.     Elapsed: 0:02:56
+ Batch   280 of 1,148.     Elapsed: 0:03:02
+ Batch   290 of 1,148.     Elapsed: 0:03:09
+ Batch   300 of 1,148.     Elapsed: 0:03:15
+ Batch   310 of 1,148.     Elapsed: 0:03:22
+ Batch   320 of 1,148.     Elapsed: 0:03:28
+ Batch   330 of 1,148.     Elapsed: 0:03:35
+ Batch   340 of 1,148.     Elapsed: 0:03:41
+ Batch   350 of 1,148.     Elapsed: 0:03:48
+ Batch   360 of 1,148.     Elapsed: 0:03:54
+ Batch   370 of 1,148.     Elapsed: 0:04:01
+ Batch   380 of 1,148.     Elapsed: 0:04:07
+ Batch   390 of 1,148.     Elapsed: 0:04:14
+ Batch   400 of 1,148.     Elapsed: 0:04:20
+ Batch   410 of 1,148.     Elapsed: 0:04:27
+ Batch   420 of 1,148.     Elapsed: 0:04:33
+ Batch   430 of 1,148.     Elapsed: 0:04:40
+ Batch   440 of 1,148.     Elapsed: 0:04:46
+ Batch   450 of 1,148.     Elapsed: 0:04:53
+ Batch   460 of 1,148.     Elapsed: 0:04:59
+ Batch   470 of 1,148.     Elapsed: 0:05:06
+ Batch   480 of 1,148.     Elapsed: 0:05:12
+ Batch   490 of 1,148.     Elapsed: 0:05:19
+ Batch   500 of 1,148.     Elapsed: 0:05:25
+ Batch   510 of 1,148.     Elapsed: 0:05:32
+ Batch   520 of 1,148.     Elapsed: 0:05:38
+ Batch   530 of 1,148.     Elapsed: 0:05:45
+ Batch   540 of 1,148.     Elapsed: 0:05:51
+ Batch   550 of 1,148.     Elapsed: 0:05:58
+ Batch   560 of 1,148.     Elapsed: 0:06:05
+ Batch   570 of 1,148.     Elapsed: 0:06:11
+ Batch   580 of 1,148.     Elapsed: 0:06:18
+ Batch   590 of 1,148.     Elapsed: 0:06:24
+ Batch   600 of 1,148.     Elapsed: 0:06:31
+ Batch   610 of 1,148.     Elapsed: 0:06:37
+ Batch   620 of 1,148.     Elapsed: 0:06:44
+ Batch   630 of 1,148.     Elapsed: 0:06:50
+ Batch   640 of 1,148.     Elapsed: 0:06:57
+ Batch   650 of 1,148.     Elapsed: 0:07:03
+ Batch   660 of 1,148.     Elapsed: 0:07:10
+ Batch   670 of 1,148.     Elapsed: 0:07:16
+ Batch   680 of 1,148.     Elapsed: 0:07:23
+ Batch   690 of 1,148.     Elapsed: 0:07:29
+ Batch   700 of 1,148.     Elapsed: 0:07:36
+ Batch   710 of 1,148.     Elapsed: 0:07:42
+ Batch   720 of 1,148.     Elapsed: 0:07:49
+ Batch   730 of 1,148.     Elapsed: 0:07:55
+ Batch   740 of 1,148.     Elapsed: 0:08:02
+ Batch   750 of 1,148.     Elapsed: 0:08:08
+ Batch   760 of 1,148.     Elapsed: 0:08:15
+ Batch   770 of 1,148.     Elapsed: 0:08:21
+ Batch   780 of 1,148.     Elapsed: 0:08:28
+ Batch   790 of 1,148.     Elapsed: 0:08:34
+ Batch   800 of 1,148.     Elapsed: 0:08:41
+ Batch   810 of 1,148.     Elapsed: 0:08:47
+ Batch   820 of 1,148.     Elapsed: 0:08:54
+ Batch   830 of 1,148.     Elapsed: 0:09:00
+ Batch   840 of 1,148.     Elapsed: 0:09:07
+ Batch   850 of 1,148.     Elapsed: 0:09:13
+ Batch   860 of 1,148.     Elapsed: 0:09:20
+ Batch   870 of 1,148.     Elapsed: 0:09:26
+ Batch   880 of 1,148.     Elapsed: 0:09:33
+ Batch   890 of 1,148.     Elapsed: 0:09:39
+ Batch   900 of 1,148.     Elapsed: 0:09:46
+ Batch   910 of 1,148.     Elapsed: 0:09:52
+ Batch   920 of 1,148.     Elapsed: 0:09:59
+ Batch   930 of 1,148.     Elapsed: 0:10:05
+ Batch   940 of 1,148.     Elapsed: 0:10:12
+ Batch   950 of 1,148.     Elapsed: 0:10:18
+ Batch   960 of 1,148.     Elapsed: 0:10:25
+ Batch   970 of 1,148.     Elapsed: 0:10:31
+ Batch   980 of 1,148.     Elapsed: 0:10:38
+ Batch   990 of 1,148.     Elapsed: 0:10:44
+ Batch 1,000 of 1,148.     Elapsed: 0:10:51
+ Batch 1,010 of 1,148.     Elapsed: 0:10:58
+ Batch 1,020 of 1,148.     Elapsed: 0:11:04
+ Batch 1,030 of 1,148.     Elapsed: 0:11:11
+ Batch 1,040 of 1,148.     Elapsed: 0:11:17
+ Batch 1,050 of 1,148.     Elapsed: 0:11:24
+ Batch 1,060 of 1,148.     Elapsed: 0:11:30
+ Batch 1,070 of 1,148.     Elapsed: 0:11:37
+ Batch 1,080 of 1,148.     Elapsed: 0:11:43
+ Batch 1,090 of 1,148.     Elapsed: 0:11:50
+ Batch 1,100 of 1,148.     Elapsed: 0:11:56
+ Batch 1,110 of 1,148.     Elapsed: 0:12:03
+ Batch 1,120 of 1,148.     Elapsed: 0:12:09
+ Batch 1,130 of 1,148.     Elapsed: 0:12:16
+ Batch 1,140 of 1,148.     Elapsed: 0:12:22
+
+     Average training loss: 0.02
+     Training epoch took: 0:12:27
+
+Running validation
+     Accuracy: 0.94
+     Validation Loss: 0.46
+     Validation took: 0:00:55
+
+Training complete!
+Total training took 1:34:01 (h:mm:ss)
+Saving model to models/merged-os-10/bert-finetuned-6/
+
+======== Epoch 8 / 10 ========
+ Batch    10 of 1,148.     Elapsed: 0:00:07
+ Batch    20 of 1,148.     Elapsed: 0:00:13
+ Batch    30 of 1,148.     Elapsed: 0:00:20
+ Batch    40 of 1,148.     Elapsed: 0:00:26
+ Batch    50 of 1,148.     Elapsed: 0:00:33
+ Batch    60 of 1,148.     Elapsed: 0:00:39
+ Batch    70 of 1,148.     Elapsed: 0:00:46
+ Batch    80 of 1,148.     Elapsed: 0:00:52
+ Batch    90 of 1,148.     Elapsed: 0:00:59
+ Batch   100 of 1,148.     Elapsed: 0:01:05
+ Batch   110 of 1,148.     Elapsed: 0:01:12
+ Batch   120 of 1,148.     Elapsed: 0:01:18
+ Batch   130 of 1,148.     Elapsed: 0:01:25
+ Batch   140 of 1,148.     Elapsed: 0:01:31
+ Batch   150 of 1,148.     Elapsed: 0:01:38
+ Batch   160 of 1,148.     Elapsed: 0:01:45
+ Batch   170 of 1,148.     Elapsed: 0:01:51
+ Batch   180 of 1,148.     Elapsed: 0:01:58
+ Batch   190 of 1,148.     Elapsed: 0:02:04
+ Batch   200 of 1,148.     Elapsed: 0:02:11
+ Batch   210 of 1,148.     Elapsed: 0:02:17
+ Batch   220 of 1,148.     Elapsed: 0:02:24
+ Batch   230 of 1,148.     Elapsed: 0:02:30
+ Batch   240 of 1,148.     Elapsed: 0:02:37
+ Batch   250 of 1,148.     Elapsed: 0:02:43
+ Batch   260 of 1,148.     Elapsed: 0:02:50
+ Batch   270 of 1,148.     Elapsed: 0:02:56
+ Batch   280 of 1,148.     Elapsed: 0:03:03
+ Batch   290 of 1,148.     Elapsed: 0:03:09
+ Batch   300 of 1,148.     Elapsed: 0:03:16
+ Batch   310 of 1,148.     Elapsed: 0:03:22
+ Batch   320 of 1,148.     Elapsed: 0:03:29
+ Batch   330 of 1,148.     Elapsed: 0:03:35
+ Batch   340 of 1,148.     Elapsed: 0:03:42
+ Batch   350 of 1,148.     Elapsed: 0:03:48
+ Batch   360 of 1,148.     Elapsed: 0:03:55
+ Batch   370 of 1,148.     Elapsed: 0:04:01
+ Batch   380 of 1,148.     Elapsed: 0:04:08
+ Batch   390 of 1,148.     Elapsed: 0:04:14
+ Batch   400 of 1,148.     Elapsed: 0:04:21
+ Batch   410 of 1,148.     Elapsed: 0:04:27
+ Batch   420 of 1,148.     Elapsed: 0:04:34
+ Batch   430 of 1,148.     Elapsed: 0:04:40
+ Batch   440 of 1,148.     Elapsed: 0:04:47
+ Batch   450 of 1,148.     Elapsed: 0:04:53
+ Batch   460 of 1,148.     Elapsed: 0:05:00
+ Batch   470 of 1,148.     Elapsed: 0:05:06
+ Batch   480 of 1,148.     Elapsed: 0:05:13
+ Batch   490 of 1,148.     Elapsed: 0:05:19
+ Batch   500 of 1,148.     Elapsed: 0:05:26
+ Batch   510 of 1,148.     Elapsed: 0:05:32
+ Batch   520 of 1,148.     Elapsed: 0:05:39
+ Batch   530 of 1,148.     Elapsed: 0:05:45
+ Batch   540 of 1,148.     Elapsed: 0:05:52
+ Batch   550 of 1,148.     Elapsed: 0:05:58
+ Batch   560 of 1,148.     Elapsed: 0:06:05
+ Batch   570 of 1,148.     Elapsed: 0:06:11
+ Batch   580 of 1,148.     Elapsed: 0:06:18
+ Batch   590 of 1,148.     Elapsed: 0:06:24
+ Batch   600 of 1,148.     Elapsed: 0:06:31
+ Batch   610 of 1,148.     Elapsed: 0:06:38
+ Batch   620 of 1,148.     Elapsed: 0:06:44
+ Batch   630 of 1,148.     Elapsed: 0:06:51
+ Batch   640 of 1,148.     Elapsed: 0:06:57
+ Batch   650 of 1,148.     Elapsed: 0:07:04
+ Batch   660 of 1,148.     Elapsed: 0:07:10
+ Batch   670 of 1,148.     Elapsed: 0:07:17
+ Batch   680 of 1,148.     Elapsed: 0:07:23
+ Batch   690 of 1,148.     Elapsed: 0:07:30
+ Batch   700 of 1,148.     Elapsed: 0:07:36
+ Batch   710 of 1,148.     Elapsed: 0:07:43
+ Batch   720 of 1,148.     Elapsed: 0:07:49
+ Batch   730 of 1,148.     Elapsed: 0:07:56
+ Batch   740 of 1,148.     Elapsed: 0:08:02
+ Batch   750 of 1,148.     Elapsed: 0:08:09
+ Batch   760 of 1,148.     Elapsed: 0:08:15
+ Batch   770 of 1,148.     Elapsed: 0:08:22
+ Batch   780 of 1,148.     Elapsed: 0:08:28
+ Batch   790 of 1,148.     Elapsed: 0:08:35
+ Batch   800 of 1,148.     Elapsed: 0:08:41
+ Batch   810 of 1,148.     Elapsed: 0:08:48
+ Batch   820 of 1,148.     Elapsed: 0:08:54
+ Batch   830 of 1,148.     Elapsed: 0:09:01
+ Batch   840 of 1,148.     Elapsed: 0:09:07
+ Batch   850 of 1,148.     Elapsed: 0:09:14
+ Batch   860 of 1,148.     Elapsed: 0:09:20
+ Batch   870 of 1,148.     Elapsed: 0:09:26
+ Batch   880 of 1,148.     Elapsed: 0:09:33
+ Batch   890 of 1,148.     Elapsed: 0:09:39
+ Batch   900 of 1,148.     Elapsed: 0:09:46
+ Batch   910 of 1,148.     Elapsed: 0:09:52
+ Batch   920 of 1,148.     Elapsed: 0:09:59
+ Batch   930 of 1,148.     Elapsed: 0:10:05
+ Batch   940 of 1,148.     Elapsed: 0:10:12
+ Batch   950 of 1,148.     Elapsed: 0:10:18
+ Batch   960 of 1,148.     Elapsed: 0:10:25
+ Batch   970 of 1,148.     Elapsed: 0:10:31
+ Batch   980 of 1,148.     Elapsed: 0:10:38
+ Batch   990 of 1,148.     Elapsed: 0:10:44
+ Batch 1,000 of 1,148.     Elapsed: 0:10:50
+ Batch 1,010 of 1,148.     Elapsed: 0:10:57
+ Batch 1,020 of 1,148.     Elapsed: 0:11:03
+ Batch 1,030 of 1,148.     Elapsed: 0:11:10
+ Batch 1,040 of 1,148.     Elapsed: 0:11:16
+ Batch 1,050 of 1,148.     Elapsed: 0:11:23
+ Batch 1,060 of 1,148.     Elapsed: 0:11:29
+ Batch 1,070 of 1,148.     Elapsed: 0:11:36
+ Batch 1,080 of 1,148.     Elapsed: 0:11:42
+ Batch 1,090 of 1,148.     Elapsed: 0:11:48
+ Batch 1,100 of 1,148.     Elapsed: 0:11:55
+ Batch 1,110 of 1,148.     Elapsed: 0:12:01
+ Batch 1,120 of 1,148.     Elapsed: 0:12:08
+ Batch 1,130 of 1,148.     Elapsed: 0:12:14
+ Batch 1,140 of 1,148.     Elapsed: 0:12:21
+
+     Average training loss: 0.01
+     Training epoch took: 0:12:26
+
+Running validation
+     Accuracy: 0.94
+     Validation Loss: 0.47
+     Validation took: 0:00:55
+
+Training complete!
+Total training took 1:47:23 (h:mm:ss)
+Saving model to models/merged-os-10/bert-finetuned-7/
+
+======== Epoch 9 / 10 ========
+ Batch    10 of 1,148.     Elapsed: 0:00:07
+ Batch    20 of 1,148.     Elapsed: 0:00:13
+ Batch    30 of 1,148.     Elapsed: 0:00:19
+ Batch    40 of 1,148.     Elapsed: 0:00:26
+ Batch    50 of 1,148.     Elapsed: 0:00:32
+ Batch    60 of 1,148.     Elapsed: 0:00:39
+ Batch    70 of 1,148.     Elapsed: 0:00:45
+ Batch    80 of 1,148.     Elapsed: 0:00:52
+ Batch    90 of 1,148.     Elapsed: 0:00:58
+ Batch   100 of 1,148.     Elapsed: 0:01:05
+ Batch   110 of 1,148.     Elapsed: 0:01:11
+ Batch   120 of 1,148.     Elapsed: 0:01:17
+ Batch   130 of 1,148.     Elapsed: 0:01:24
+ Batch   140 of 1,148.     Elapsed: 0:01:30
+ Batch   150 of 1,148.     Elapsed: 0:01:37
+ Batch   160 of 1,148.     Elapsed: 0:01:43
+ Batch   170 of 1,148.     Elapsed: 0:01:50
+ Batch   180 of 1,148.     Elapsed: 0:01:56
+ Batch   190 of 1,148.     Elapsed: 0:02:03
+ Batch   200 of 1,148.     Elapsed: 0:02:09
+ Batch   210 of 1,148.     Elapsed: 0:02:16
+ Batch   220 of 1,148.     Elapsed: 0:02:22
+ Batch   230 of 1,148.     Elapsed: 0:02:28
+ Batch   240 of 1,148.     Elapsed: 0:02:35
+ Batch   250 of 1,148.     Elapsed: 0:02:41
+ Batch   260 of 1,148.     Elapsed: 0:02:48
+ Batch   270 of 1,148.     Elapsed: 0:02:54
+ Batch   280 of 1,148.     Elapsed: 0:03:01
+ Batch   290 of 1,148.     Elapsed: 0:03:07
+ Batch   300 of 1,148.     Elapsed: 0:03:14
+ Batch   310 of 1,148.     Elapsed: 0:03:20
+ Batch   320 of 1,148.     Elapsed: 0:03:26
+ Batch   330 of 1,148.     Elapsed: 0:03:33
+ Batch   340 of 1,148.     Elapsed: 0:03:39
+ Batch   350 of 1,148.     Elapsed: 0:03:46
+ Batch   360 of 1,148.     Elapsed: 0:03:52
+ Batch   370 of 1,148.     Elapsed: 0:03:59
+ Batch   380 of 1,148.     Elapsed: 0:04:05
+ Batch   390 of 1,148.     Elapsed: 0:04:12
+ Batch   400 of 1,148.     Elapsed: 0:04:18
+ Batch   410 of 1,148.     Elapsed: 0:04:25
+ Batch   420 of 1,148.     Elapsed: 0:04:31
+ Batch   430 of 1,148.     Elapsed: 0:04:38
+ Batch   440 of 1,148.     Elapsed: 0:04:44
+ Batch   450 of 1,148.     Elapsed: 0:04:50
+ Batch   460 of 1,148.     Elapsed: 0:04:57
+ Batch   470 of 1,148.     Elapsed: 0:05:03
+ Batch   480 of 1,148.     Elapsed: 0:05:10
+ Batch   490 of 1,148.     Elapsed: 0:05:16
+ Batch   500 of 1,148.     Elapsed: 0:05:23
+ Batch   510 of 1,148.     Elapsed: 0:05:29
+ Batch   520 of 1,148.     Elapsed: 0:05:36
+ Batch   530 of 1,148.     Elapsed: 0:05:42
+ Batch   540 of 1,148.     Elapsed: 0:05:48
+ Batch   550 of 1,148.     Elapsed: 0:05:55
+ Batch   560 of 1,148.     Elapsed: 0:06:01
+ Batch   570 of 1,148.     Elapsed: 0:06:08
+ Batch   580 of 1,148.     Elapsed: 0:06:14
+ Batch   590 of 1,148.     Elapsed: 0:06:21
+ Batch   600 of 1,148.     Elapsed: 0:06:27
+ Batch   610 of 1,148.     Elapsed: 0:06:34
+ Batch   620 of 1,148.     Elapsed: 0:06:40
+ Batch   630 of 1,148.     Elapsed: 0:06:47
+ Batch   640 of 1,148.     Elapsed: 0:06:53
+ Batch   650 of 1,148.     Elapsed: 0:06:59
+ Batch   660 of 1,148.     Elapsed: 0:07:06
+ Batch   670 of 1,148.     Elapsed: 0:07:12
+ Batch   680 of 1,148.     Elapsed: 0:07:19
+ Batch   690 of 1,148.     Elapsed: 0:07:25
+ Batch   700 of 1,148.     Elapsed: 0:07:32
+ Batch   710 of 1,148.     Elapsed: 0:07:38
+ Batch   720 of 1,148.     Elapsed: 0:07:45
+ Batch   730 of 1,148.     Elapsed: 0:07:51
+ Batch   740 of 1,148.     Elapsed: 0:07:58
+ Batch   750 of 1,148.     Elapsed: 0:08:04
+ Batch   760 of 1,148.     Elapsed: 0:08:11
+ Batch   770 of 1,148.     Elapsed: 0:08:17
+ Batch   780 of 1,148.     Elapsed: 0:08:23
+ Batch   790 of 1,148.     Elapsed: 0:08:30
+ Batch   800 of 1,148.     Elapsed: 0:08:36
+ Batch   810 of 1,148.     Elapsed: 0:08:43
+ Batch   820 of 1,148.     Elapsed: 0:08:49
+ Batch   830 of 1,148.     Elapsed: 0:08:56
+ Batch   840 of 1,148.     Elapsed: 0:09:02
+ Batch   850 of 1,148.     Elapsed: 0:09:09
+ Batch   860 of 1,148.     Elapsed: 0:09:15
+ Batch   870 of 1,148.     Elapsed: 0:09:22
+ Batch   880 of 1,148.     Elapsed: 0:09:28
+ Batch   890 of 1,148.     Elapsed: 0:09:34
+ Batch   900 of 1,148.     Elapsed: 0:09:41
+ Batch   910 of 1,148.     Elapsed: 0:09:47
+ Batch   920 of 1,148.     Elapsed: 0:09:54
+ Batch   930 of 1,148.     Elapsed: 0:10:00
+ Batch   940 of 1,148.     Elapsed: 0:10:07
+ Batch   950 of 1,148.     Elapsed: 0:10:13
+ Batch   960 of 1,148.     Elapsed: 0:10:20
+ Batch   970 of 1,148.     Elapsed: 0:10:26
+ Batch   980 of 1,148.     Elapsed: 0:10:33
+ Batch   990 of 1,148.     Elapsed: 0:10:39
+ Batch 1,000 of 1,148.     Elapsed: 0:10:46
+ Batch 1,010 of 1,148.     Elapsed: 0:10:52
+ Batch 1,020 of 1,148.     Elapsed: 0:10:59
+ Batch 1,030 of 1,148.     Elapsed: 0:11:05
+ Batch 1,040 of 1,148.     Elapsed: 0:11:12
+ Batch 1,050 of 1,148.     Elapsed: 0:11:18
+ Batch 1,060 of 1,148.     Elapsed: 0:11:25
+ Batch 1,070 of 1,148.     Elapsed: 0:11:31
+ Batch 1,080 of 1,148.     Elapsed: 0:11:38
+ Batch 1,090 of 1,148.     Elapsed: 0:11:45
+ Batch 1,100 of 1,148.     Elapsed: 0:11:51
+ Batch 1,110 of 1,148.     Elapsed: 0:11:58
+ Batch 1,120 of 1,148.     Elapsed: 0:12:04
+ Batch 1,130 of 1,148.     Elapsed: 0:12:11
+ Batch 1,140 of 1,148.     Elapsed: 0:12:17
+
+     Average training loss: 0.01
+     Training epoch took: 0:12:22
+
+Running validation
+     Accuracy: 0.94
+     Validation Loss: 0.47
+     Validation took: 0:00:55
+
+Training complete!
+Total training took 2:00:42 (h:mm:ss)
+Saving model to models/merged-os-10/bert-finetuned-8/
+
+======== Epoch 10 / 10 ========
+ Batch    10 of 1,148.     Elapsed: 0:00:07
+ Batch    20 of 1,148.     Elapsed: 0:00:13
+ Batch    30 of 1,148.     Elapsed: 0:00:20
+ Batch    40 of 1,148.     Elapsed: 0:00:26
+ Batch    50 of 1,148.     Elapsed: 0:00:33
+ Batch    60 of 1,148.     Elapsed: 0:00:39
+ Batch    70 of 1,148.     Elapsed: 0:00:46
+ Batch    80 of 1,148.     Elapsed: 0:00:52
+ Batch    90 of 1,148.     Elapsed: 0:00:59
+ Batch   100 of 1,148.     Elapsed: 0:01:05
+ Batch   110 of 1,148.     Elapsed: 0:01:12
+ Batch   120 of 1,148.     Elapsed: 0:01:18
+ Batch   130 of 1,148.     Elapsed: 0:01:25
+ Batch   140 of 1,148.     Elapsed: 0:01:31
+ Batch   150 of 1,148.     Elapsed: 0:01:38
+ Batch   160 of 1,148.     Elapsed: 0:01:44
+ Batch   170 of 1,148.     Elapsed: 0:01:51
+ Batch   180 of 1,148.     Elapsed: 0:01:57
+ Batch   190 of 1,148.     Elapsed: 0:02:04
+ Batch   200 of 1,148.     Elapsed: 0:02:10
+ Batch   210 of 1,148.     Elapsed: 0:02:17
+ Batch   220 of 1,148.     Elapsed: 0:02:23
+ Batch   230 of 1,148.     Elapsed: 0:02:30
+ Batch   240 of 1,148.     Elapsed: 0:02:36
+ Batch   250 of 1,148.     Elapsed: 0:02:43
+ Batch   260 of 1,148.     Elapsed: 0:02:49
+ Batch   270 of 1,148.     Elapsed: 0:02:56
+ Batch   280 of 1,148.     Elapsed: 0:03:02
+ Batch   290 of 1,148.     Elapsed: 0:03:09
+ Batch   300 of 1,148.     Elapsed: 0:03:15
+ Batch   310 of 1,148.     Elapsed: 0:03:22
+ Batch   320 of 1,148.     Elapsed: 0:03:28
+ Batch   330 of 1,148.     Elapsed: 0:03:35
+ Batch   340 of 1,148.     Elapsed: 0:03:41
+ Batch   350 of 1,148.     Elapsed: 0:03:48
+ Batch   360 of 1,148.     Elapsed: 0:03:54
+ Batch   370 of 1,148.     Elapsed: 0:04:01
+ Batch   380 of 1,148.     Elapsed: 0:04:07
+ Batch   390 of 1,148.     Elapsed: 0:04:14
+ Batch   400 of 1,148.     Elapsed: 0:04:20
+ Batch   410 of 1,148.     Elapsed: 0:04:27
+ Batch   420 of 1,148.     Elapsed: 0:04:33
+ Batch   430 of 1,148.     Elapsed: 0:04:40
+ Batch   440 of 1,148.     Elapsed: 0:04:46
+ Batch   450 of 1,148.     Elapsed: 0:04:53
+ Batch   460 of 1,148.     Elapsed: 0:04:59
+ Batch   470 of 1,148.     Elapsed: 0:05:06
+ Batch   480 of 1,148.     Elapsed: 0:05:12
+ Batch   490 of 1,148.     Elapsed: 0:05:19
+ Batch   500 of 1,148.     Elapsed: 0:05:26
+ Batch   510 of 1,148.     Elapsed: 0:05:32
+ Batch   520 of 1,148.     Elapsed: 0:05:39
+ Batch   530 of 1,148.     Elapsed: 0:05:45
+ Batch   540 of 1,148.     Elapsed: 0:05:52
+ Batch   550 of 1,148.     Elapsed: 0:05:58
+ Batch   560 of 1,148.     Elapsed: 0:06:05
+ Batch   570 of 1,148.     Elapsed: 0:06:11
+ Batch   580 of 1,148.     Elapsed: 0:06:18
+ Batch   590 of 1,148.     Elapsed: 0:06:24
+ Batch   600 of 1,148.     Elapsed: 0:06:31
+ Batch   610 of 1,148.     Elapsed: 0:06:37
+ Batch   620 of 1,148.     Elapsed: 0:06:44
+ Batch   630 of 1,148.     Elapsed: 0:06:50
+ Batch   640 of 1,148.     Elapsed: 0:06:57
+ Batch   650 of 1,148.     Elapsed: 0:07:03
+ Batch   660 of 1,148.     Elapsed: 0:07:10
+ Batch   670 of 1,148.     Elapsed: 0:07:16
+ Batch   680 of 1,148.     Elapsed: 0:07:23
+ Batch   690 of 1,148.     Elapsed: 0:07:29
+ Batch   700 of 1,148.     Elapsed: 0:07:36
+ Batch   710 of 1,148.     Elapsed: 0:07:42
+ Batch   720 of 1,148.     Elapsed: 0:07:49
+ Batch   730 of 1,148.     Elapsed: 0:07:55
+ Batch   740 of 1,148.     Elapsed: 0:08:02
+ Batch   750 of 1,148.     Elapsed: 0:08:08
+ Batch   760 of 1,148.     Elapsed: 0:08:15
+ Batch   770 of 1,148.     Elapsed: 0:08:21
+ Batch   780 of 1,148.     Elapsed: 0:08:28
+ Batch   790 of 1,148.     Elapsed: 0:08:34
+ Batch   800 of 1,148.     Elapsed: 0:08:41
+ Batch   810 of 1,148.     Elapsed: 0:08:47
+ Batch   820 of 1,148.     Elapsed: 0:08:54
+ Batch   830 of 1,148.     Elapsed: 0:09:00
+ Batch   840 of 1,148.     Elapsed: 0:09:07
+ Batch   850 of 1,148.     Elapsed: 0:09:13
+ Batch   860 of 1,148.     Elapsed: 0:09:20
+ Batch   870 of 1,148.     Elapsed: 0:09:27
+ Batch   880 of 1,148.     Elapsed: 0:09:33
+ Batch   890 of 1,148.     Elapsed: 0:09:40
+ Batch   900 of 1,148.     Elapsed: 0:09:46
+ Batch   910 of 1,148.     Elapsed: 0:09:53
+ Batch   920 of 1,148.     Elapsed: 0:09:59
+ Batch   930 of 1,148.     Elapsed: 0:10:06
+ Batch   940 of 1,148.     Elapsed: 0:10:12
+ Batch   950 of 1,148.     Elapsed: 0:10:19
+ Batch   960 of 1,148.     Elapsed: 0:10:25
+ Batch   970 of 1,148.     Elapsed: 0:10:32
+ Batch   980 of 1,148.     Elapsed: 0:10:39
+ Batch   990 of 1,148.     Elapsed: 0:10:45
+ Batch 1,000 of 1,148.     Elapsed: 0:10:52
+ Batch 1,010 of 1,148.     Elapsed: 0:10:58
+ Batch 1,020 of 1,148.     Elapsed: 0:11:05
+ Batch 1,030 of 1,148.     Elapsed: 0:11:11
+ Batch 1,040 of 1,148.     Elapsed: 0:11:18
+ Batch 1,050 of 1,148.     Elapsed: 0:11:24
+ Batch 1,060 of 1,148.     Elapsed: 0:11:31
+ Batch 1,070 of 1,148.     Elapsed: 0:11:37
+ Batch 1,080 of 1,148.     Elapsed: 0:11:44
+ Batch 1,090 of 1,148.     Elapsed: 0:11:50
+ Batch 1,100 of 1,148.     Elapsed: 0:11:57
+ Batch 1,110 of 1,148.     Elapsed: 0:12:03
+ Batch 1,120 of 1,148.     Elapsed: 0:12:10
+ Batch 1,130 of 1,148.     Elapsed: 0:12:17
+ Batch 1,140 of 1,148.     Elapsed: 0:12:23
+
+     Average training loss: 0.01
+     Training epoch took: 0:12:28
+
+Running validation
+     Accuracy: 0.94
+     Validation Loss: 0.48
+     Validation took: 0:00:55
+
+Training complete!
+Total training took 2:14:06 (h:mm:ss)
+Saving model to models/merged-os-10/bert-finetuned-9/
+Finished running BERT finetune script.
+
+Ignoring script: eval.
+
+Ignoring script: plot.
+
+====================== DONE ======================
+
+Part:                conf    build_art    build_mix    add_label     finetune         eval         plot
+Time taken:        0.00 s       0.00 s       0.00 s       0.00 s    8123.68 s       0.00 s       0.00 s
+
+Total:          8123.68 s

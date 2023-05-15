@@ -2,6 +2,8 @@ import sys
 import torch
 import json
 import os
+#import shutil
+from tqdm import tqdm
 
 from transformers import BertTokenizer
 from transformers import BertForSequenceClassification, AdamW, BertConfig
@@ -27,7 +29,7 @@ def evaluate(input_dir, input_path, metrics):
   model_path.to(device)
 
   # Predict classes
-  for seq in data_list:
+  for seq in tqdm(data_list):
     #print(f"Seq: {seq}")
     text = json.loads(seq)["text"]
     true_class = json.loads(seq)["custom_label"]
@@ -57,7 +59,6 @@ def evaluate(input_dir, input_path, metrics):
   print(multilabel_confusion_matrix(true_classes, predictions, labels=["INTERACTOR", "NOT", "PART-OF", "REGULATOR-NEGATIVE", "REGULATOR-POSITIVE"]))
   print(confusion_matrix(true_classes, predictions))
 
-
   metrics["f1-score"]["macro"].append(fscore_macro)
   metrics["recall"]["macro"].append(recall_macro)
   metrics["precision"]["macro"].append(precision_macro)
@@ -79,13 +80,17 @@ def evaluate(input_dir, input_path, metrics):
 # Pass a directory with models and a corpus
 # Appends the metrics to the result file
 def run(input_path, model_path, output_path):
-  for model in os.listdir(model_path):
+  # # Initially copy train metrics to output path
+  # shutil.copyfile(train_metrics, output_path) 
+  
+  print(f"Dataset: {input_path}")
+  for model in sorted(os.listdir(model_path)):
+    print(f"Evaluating model {model}...")
 
     with open(output_path) as infile:
       data = infile.read()
 
     metrics = json.loads(data)
-    print(input_path)
     filename = input_path.split("/")[-1]
 
     if filename in metrics.keys():

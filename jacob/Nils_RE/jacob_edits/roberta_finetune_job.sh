@@ -16,7 +16,7 @@ nvidia-smi
 ml Anaconda3
 conda init bash
 #./$(basename $0) && exit      # Restart bash
-conda activate /mimer/NOBACKUP/groups/snic2022-22-707/jacob/conda_envs/nilsre_orig
+conda activate /mimer/NOBACKUP/groups/snic2022-22-707/jacob/conda_envs/roberta
 
 # Call pipeline script
-python main.py > jacob_edits/2023_05_11_bert_finetune_merged_os.txt
+python main.py > jacob_edits/2023_05_10_roberta_finetune_merged.txt

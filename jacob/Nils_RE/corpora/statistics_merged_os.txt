@@ -1,0 +1,32 @@
+OS Strategy:
+os_params = {"NOT":                 {"cid": 0, "support": 241, "factor": 10},
+            "PART-OF":              {"cid": 1, "support": 1193, "factor": 4},
+            "INTERACTOR":           {"cid": 2, "support": 8435,"factor": 1},
+            "REGULATOR-POSITIVE":   {"cid": 3, "support": 3634, "factor": 3},
+            "REGULATOR-NEGATIVE":   {"cid": 4, "support": 10207,"factor": 1}
+            }
+(or try 10,6,1,2,1)
+
+merged_train_set_os
+--------------------------------------------------
+label                         count	%
+- - - - - - - - - - - - - - - - - - - - - - - - - 
+total                         40305	100.0
+REGULATOR-NEGATIVE            10207	25.32
+INTERACTOR                    8435	20.93
+REGULATOR-POSITIVE            10902	27.05
+PART-OF                       8351	20.72
+NOT                           2410	5.98        (not in DrugProt)
+--------------------------------------------------
+
+merged_dev_set - UNCHANGED
+--------------------------------------------------
+label                         count	%
+- - - - - - - - - - - - - - - - - - - - - - - - - 
+total                         7317	100.0
+REGULATOR-NEGATIVE            3004	41.06
+INTERACTOR                    2594	35.45
+REGULATOR-POSITIVE            1134	15.50
+PART-OF                       410	5.60
+NOT                           175	2.39        (not in DrugProt)
+--------------------------------------------------

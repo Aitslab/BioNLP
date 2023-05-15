@@ -1,0 +1,60 @@
+This job can be monitored from: https://scruffy.c3se.chalmers.se/d/alvis-job/alvis-job?var-jobid=1042519&from=1683743423000
+Wed May 10 20:30:23 2023       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 525.85.12    Driver Version: 525.85.12    CUDA Version: 12.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla T4            On   | 00000000:30:00.0 Off |                    0 |
+| N/A   23C    P8    10W /  70W |      2MiB / 15360MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+no change     /apps/Common/software/Anaconda3/2022.05/condabin/conda
+no change     /apps/Common/software/Anaconda3/2022.05/bin/conda
+no change     /apps/Common/software/Anaconda3/2022.05/bin/conda-env
+no change     /apps/Common/software/Anaconda3/2022.05/bin/activate
+no change     /apps/Common/software/Anaconda3/2022.05/bin/deactivate
+no change     /apps/Common/software/Anaconda3/2022.05/etc/profile.d/conda.sh
+no change     /apps/Common/software/Anaconda3/2022.05/etc/fish/conf.d/conda.fish
+no change     /apps/Common/software/Anaconda3/2022.05/shell/condabin/Conda.psm1
+no change     /apps/Common/software/Anaconda3/2022.05/shell/condabin/conda-hook.ps1
+no change     /apps/Common/software/Anaconda3/2022.05/lib/python3.9/site-packages/xontrib/conda.xsh
+no change     /apps/Common/software/Anaconda3/2022.05/etc/profile.d/conda.csh
+no change     /cephyr/users/jacobkr/Alvis/.bashrc
+No action taken.
+/tmp/slurmd/job1042519/slurm_script: line 18: slurm_script: command not found
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+Traceback (most recent call last):
+  File "/mimer/NOBACKUP/groups/snic2022-22-707/jacob/nils_re/main.py", line 8, in <module>
+    from scripts import bert_finetune
+  File "/mimer/NOBACKUP/groups/snic2022-22-707/jacob/nils_re/scripts/bert_finetune.py", line 1, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'

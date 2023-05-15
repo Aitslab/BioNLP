@@ -1,3 +1,4 @@
+# roberta_finetune.py
 import torch
 import re
 import json
@@ -10,13 +11,12 @@ import datetime
 import sys
 import argparse
 
-from transformers import BertTokenizer
-from transformers import BertForSequenceClassification, AdamW, BertConfig
+from transformers import RobertaTokenizer, RobertaConfig, AutoModelWithHeads, AdamW
 from transformers import get_linear_schedule_with_warmup
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler, SequentialSampler
 from imblearn.over_sampling import RandomOverSampler
 
-def run(train_path, dev_path, model_path, output_path, oversample, epochs):
+def run(train_path, dev_path, model_path, output_path, epochs):
   os.environ['TF_FORCE_GPU_ALLOW_GROWTH'] = 'true'
   exclude_label = {"OTHER"}
   torch.cuda.empty_cache()
@@ -33,12 +33,11 @@ def run(train_path, dev_path, model_path, output_path, oversample, epochs):
       device = torch.device("cpu")
 
   # Oversample parameters
-  # ** MODIFIED FOR COMBINED CORPUS (could be loaded in, but for simplicity, hard-code for now)
-  os_params = {"NOT":                 {"cid": 0, "support": 241, "factor": 10},
-              "PART-OF":              {"cid": 1, "support": 1193, "factor": 4},
-              "INTERACTOR":           {"cid": 2, "support": 8435,"factor": 1},
-              "REGULATOR-POSITIVE":   {"cid": 3, "support": 3634, "factor": 3},
-              "REGULATOR-NEGATIVE":   {"cid": 4, "support": 10207,"factor": 1}
+  os_params = {"NOT":                 {"cid": 0, "support": 241, "factor": 5},
+              "PART-OF":              {"cid": 1, "support": 308, "factor": 3},
+              "INTERACTOR":           {"cid": 2, "support": 2583,"factor": 1},
+              "REGULATOR-POSITIVE":   {"cid": 3, "support": 799, "factor": 3},
+              "REGULATOR-NEGATIVE":   {"cid": 4, "support": 2505,"factor": 1}
               }
 
   def read_data(file_path, oversample=False):
@@ -57,8 +56,6 @@ def run(train_path, dev_path, model_path, output_path, oversample, epochs):
 
         # Oversampling
         if oversample:
-          print("Performing oversampling strategy...")
-
           not_params     = os_params["NOT"]
           part_of_params = os_params["PART-OF"]
           reg_pos_params = os_params["REGULATOR-POSITIVE"]
@@ -76,16 +73,15 @@ def run(train_path, dev_path, model_path, output_path, oversample, epochs):
 
         return sentences, labels
 
-  train_sentences, train_labels   = read_data(train_path, oversample)
+  train_sentences, train_labels   = read_data(train_path, oversample=False)
   dev_sentences, dev_labels       = read_data(dev_path)
 
   assert len(train_sentences)     == len(train_labels)
   assert len(dev_sentences)       == len(dev_labels)
 
-  print('\nLoading BERT-tokenizer')
-#   tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', do_lower_case=True)
-  tokenizer = BertTokenizer.from_pretrained('allenai/scibert_scivocab_uncased', do_lower_case=True) #
-  print('\nBERT-tokenizer loaded. Running example:\n')
+  print('\nLoading Roberta-tokenizer')
+  tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
+  print('\nRoberta-tokenizer loaded. Running example:\n')
 
   print("Original: ",  train_sentences[0])
   print("Tokenized: ", tokenizer.tokenize(train_sentences[0]))
@@ -172,17 +168,12 @@ def run(train_path, dev_path, model_path, output_path, oversample, epochs):
                                   batch_size = batch_size
                                   )
 
-  # Will raise warnings since we initialize new weights
-  model = BertForSequenceClassification.from_pretrained("allenai/scibert_scivocab_uncased",
-                                                        num_labels = 5,
-                                                        output_attentions = False,
-                                                        output_hidden_states = False
-                                                        )
+  model = AutoModelWithHeads.from_pretrained("roberta-base")
   model.to(device)
 
   params = list(model.named_parameters())
 
-  print('BERT model has {:} different named parameters.\n'.format(len(params)))
+  print('Roberta model has {:} different named parameters.\n'.format(len(params)))
   print('==== Embedding Layer ====\n')
   for param in params[0:5]:
       print("{:<55} {:>12}".format(param[0], str(tuple(param[1].size()))))
@@ -281,9 +272,9 @@ def run(train_path, dev_path, model_path, output_path, oversample, epochs):
                               attention_mask=batch_attention_mask,
                               labels=batch_labels
                               )
-          #print(f"Outputs: {outputs}")
-          loss, logits = outputs['loss'], outputs['logits']
-          #loss, logits = outputs
+          #print(f"Output keys: {list(outputs.keys())}")
+          #loss, logits = outputs['loss'], outputs['logits']
+          loss, logits = outputs
 
           total_train_loss += loss.item()
 

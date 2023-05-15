@@ -1,0 +1,23 @@
+merged_train_set
+--------------------------------------------------
+label                         count	%
+- - - - - - - - - - - - - - - - - - - - - - - - - 
+total                         23710	100.0
+REGULATOR-NEGATIVE            10207	43.04
+INTERACTOR                    8435	35.58
+REGULATOR-POSITIVE            3634	15.33
+PART-OF                       1193	5.03
+NOT                           241	1.02        (not in DrugProt)
+--------------------------------------------------
+
+merged_dev_set
+--------------------------------------------------
+label                         count	%
+- - - - - - - - - - - - - - - - - - - - - - - - - 
+total                         7317	100.0
+REGULATOR-NEGATIVE            3004	41.06
+INTERACTOR                    2594	35.45
+REGULATOR-POSITIVE            1134	15.50
+PART-OF                       410	5.60
+NOT                           175	2.39        (not in DrugProt)
+--------------------------------------------------

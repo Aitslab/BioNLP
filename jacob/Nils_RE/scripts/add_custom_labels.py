@@ -168,4 +168,3 @@ def run(input_path, output_path):
     custom_entry_set = map_chemprot_labels_to_custom_labels(entry_set)
     #print(f"Custom entry set: \n{dict(custom_entry_set)}")
     write_files(custom_entry_set, out_file, output_path)
-

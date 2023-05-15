@@ -6,6 +6,7 @@ from scripts import add_custom_labels
 from scripts import build_art_corpus
 from scripts import build_mixed_corpus
 from scripts import bert_finetune
+#from scripts import roberta_finetune
 from scripts import evaluation
 from scripts import plot
 
@@ -59,6 +60,23 @@ def run_bert_finetune(bert_finetune_config: dict, ignore: bool):
    ) 
 
   print("Finished running BERT finetune script.")
+
+# roberta finetune
+def run_roberta_finetune(roberta_finetune_config: dict, ignore: bool):
+  if ignore:
+    print("Ignoring script: Roberta finetune.")
+    return
+
+  print("Running Roberta finetune script.")
+
+  roberta_finetune.run(roberta_finetune_config["train_path"],
+   roberta_finetune_config["dev_path"], roberta_finetune_config["model_path"],
+   roberta_finetune_config["metrics_path"], 
+   roberta_finetune_config["epochs"]
+   ) 
+
+  print("Finished running roberta finetune script.")
+
 
 # evaluation
 def run_eval(eval_config: dict, ignore: bool):
@@ -121,6 +139,11 @@ if __name__ == "__main__":
     run_bert_finetune(config["bert_finetune"], ignore=ignore["bert_finetune"])
     print()
     timestamps.append(time()-start-sum(timestamps))
+
+    # NEW: Added by Jacob
+    # run_roberta_finetune(config["roberta_finetune"], ignore=ignore["roberta_finetune"])
+    # print()
+    # timestamps.append(time()-start-sum(timestamps))
 
     run_eval(config["evaluation"], ignore=ignore["evaluation"])
     print()
