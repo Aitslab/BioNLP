@@ -1,0 +1,14 @@
+Namespace(no_progress_bar=False, log_interval=100, log_format=None, log_file=None, aim_repo=None, aim_run_hash=None, tensorboard_logdir=None, wandb_project=None, azureml_logging=False, seed=1, cpu=False, tpu=False, bf16=False, memory_efficient_bf16=False, fp16=False, memory_efficient_fp16=False, fp16_no_flatten_grads=False, fp16_init_scale=128, fp16_scale_window=None, fp16_scale_tolerance=0.0, on_cpu_convert_precision=False, min_loss_scale=0.0001, threshold_loss_scale=None, amp=False, amp_batch_retries=2, amp_init_scale=128, amp_scale_window=None, user_dir=None, empty_cache_freq=0, all_gather_list_size=16384, model_parallel_size=1, quantization_config_path=None, profile=False, reset_logging=False, suppress_crashes=False, use_plasma_view=False, plasma_path='/tmp/plasma', criterion='cross_entropy', tokenizer=None, bpe=None, optimizer=None, lr_scheduler='fixed', scoring='bleu', task='translation', source_lang='x', target_lang='y', trainpref='../../data/BC5CDR/raw/relis_train.tok.bpe', validpref='../../data/BC5CDR/raw/relis_valid.tok.bpe', testpref='../../data/BC5CDR/raw/relis_test.tok.bpe', align_suffix=None, destdir='../../data/BC5CDR/relis-bin', thresholdtgt=0, thresholdsrc=0, tgtdict=None, srcdict='../../data/BC5CDR/raw/dict.txt', nwordstgt=-1, nwordssrc=-1, alignfile=None, dataset_impl='mmap', joined_dictionary=True, only_source=False, padding_factor=8, workers=8, dict_only=False)
+[x] Dictionary: 42384 types
+[x] ../../data/BC5CDR/raw/relis_train.tok.bpe.x: 500 sents, 127539 tokens, 0.0% replaced (by <unk>)
+[x] Dictionary: 42384 types
+[x] ../../data/BC5CDR/raw/relis_valid.tok.bpe.x: 500 sents, 126727 tokens, 0.0% replaced (by <unk>)
+[x] Dictionary: 42384 types
+[x] ../../data/BC5CDR/raw/relis_test.tok.bpe.x: 500 sents, 134570 tokens, 0.0% replaced (by <unk>)
+[y] Dictionary: 42384 types
+[y] ../../data/BC5CDR/raw/relis_train.tok.bpe.y: 500 sents, 11478 tokens, 0.0% replaced (by <unk>)
+[y] Dictionary: 42384 types
+[y] ../../data/BC5CDR/raw/relis_valid.tok.bpe.y: 500 sents, 10803 tokens, 0.0% replaced (by <unk>)
+[y] Dictionary: 42384 types
+[y] ../../data/BC5CDR/raw/relis_test.tok.bpe.y: 500 sents, 11218 tokens, 0.0% replaced (by <unk>)
+Wrote preprocessed data to ../../data/BC5CDR/relis-bin
