@@ -33,4 +33,4 @@ prompt = f"List all chemicals and diseases in the following text: {free_form_tex
 src_tokens = m.encode(prompt)
 generate = m.generate([src_tokens], beam=5)[0]
 output = m.decode(generate[0]["tokens"])
-print(output, file=sys.stdout)
+print("\n" + output, file=sys.stdout)
