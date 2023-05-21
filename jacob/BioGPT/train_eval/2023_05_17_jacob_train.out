@@ -1,0 +1,749 @@
+Wed May 17 18:08:24 2023       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 470.161.03   Driver Version: 470.161.03   CUDA Version: 11.4     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A100-SXM...  On   | 00000000:07:00.0 Off |                    0 |
+| N/A   26C    P0    51W / 400W |      0MiB / 40536MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+***************************************************
+You have loaded an anaconda module
+***************************************************
+
+JUST LOADING THIS MODULE DOES *NOT* CHANGE THE PYTHON VERSION, NOR ENABLES ANY
+EXTRA PYTHON MODULES.
+
+This module makes available the 'conda' command, with which users can create
+named anaconda environments and then activate them.
+
+To create and use a customized environment use 'conda create ...' and
+then 'conda activate ...' (see example below).
+
+---------------------------------------------------------------------------------------------------
+NOTE: NSC strongly advices against placing 'conda activate' (with or without
+arguments)
+      in your shell initialization files, (e.g. '.bashrc' or '.bash_profile')
+since this
+      severly alters the environment for running software in ways that cause
+unpredictable
+      issues that can be difficult to diagnose.
+---------------------------------------------------------------------------------------------------
+
+Example usage:
+
+  * Setting up a customized Anaconda environment and run a Python program in
+it:
+
+    conda create -n myenv python=3.8 scipy=1.5.2
+    conda activate myenv
+    python my_scipy_python_program.py
+
+  * To run the python program in the same environment when logging in the next
+time:
+
+    conda activate myenv
+    python my_scipy_python_program.py
+
+More details on Anaconda environment management here:
+
+
+https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
+
+
+
+../../mosesdecoder
+500 samples in ../../data/BC5CDR/raw/train.json has been processed with 0 samples has no relations extracted.
+500 samples in ../../data/BC5CDR/raw/valid.json has been processed with 0 samples has no relations extracted.
+500 samples in ../../data/BC5CDR/raw/test.json has been processed with 0 samples has no relations extracted.
+Preprocessing train
+Tokenizer Version 1.1
+Language: en
+Number of threads: 8
+Tokenizer Version 1.1
+Language: en
+Number of threads: 8
+Loading codes from ../../data/BC5CDR/raw/bpecodes ...
+Read 40000 codes from the codes file.
+Loading vocabulary from ../../data/BC5CDR/raw/relis_train.tok.x ...
+Read 111669 words (10611 unique) from text file.
+Applying BPE to ../../data/BC5CDR/raw/relis_train.tok.x ...
+Modified 111669 words from text file.
+Loading codes from ../../data/BC5CDR/raw/bpecodes ...
+Read 40000 codes from the codes file.
+Loading vocabulary from ../../data/BC5CDR/raw/relis_train.tok.y ...
+Read 9982 words (1218 unique) from text file.
+Applying BPE to ../../data/BC5CDR/raw/relis_train.tok.y ...
+Modified 9982 words from text file.
+Preprocessing valid
+Tokenizer Version 1.1
+Language: en
+Number of threads: 8
+Tokenizer Version 1.1
+Language: en
+Number of threads: 8
+Loading codes from ../../data/BC5CDR/raw/bpecodes ...
+Read 40000 codes from the codes file.
+Loading vocabulary from ../../data/BC5CDR/raw/relis_valid.tok.x ...
+Read 110758 words (10466 unique) from text file.
+Applying BPE to ../../data/BC5CDR/raw/relis_valid.tok.x ...
+Modified 110758 words from text file.
+Loading codes from ../../data/BC5CDR/raw/bpecodes ...
+Read 40000 codes from the codes file.
+Loading vocabulary from ../../data/BC5CDR/raw/relis_valid.tok.y ...
+Read 9399 words (1102 unique) from text file.
+Applying BPE to ../../data/BC5CDR/raw/relis_valid.tok.y ...
+Modified 9399 words from text file.
+Preprocessing test
+Tokenizer Version 1.1
+Language: en
+Number of threads: 8
+Tokenizer Version 1.1
+Language: en
+Number of threads: 8
+Loading codes from ../../data/BC5CDR/raw/bpecodes ...
+Read 40000 codes from the codes file.
+Loading vocabulary from ../../data/BC5CDR/raw/relis_test.tok.x ...
+Read 117143 words (10961 unique) from text file.
+Applying BPE to ../../data/BC5CDR/raw/relis_test.tok.x ...
+Modified 117143 words from text file.
+Loading codes from ../../data/BC5CDR/raw/bpecodes ...
+Read 40000 codes from the codes file.
+Loading vocabulary from ../../data/BC5CDR/raw/relis_test.tok.y ...
+Read 9772 words (1081 unique) from text file.
+Applying BPE to ../../data/BC5CDR/raw/relis_test.tok.y ...
+Modified 9772 words from text file.
+2023-05-17 18:08:32 | INFO | fairseq.tasks.text_to_speech | Please install tensorboardX: pip install tensorboardX
+2023-05-17 18:08:33 | INFO | fairseq_cli.preprocess | Namespace(no_progress_bar=False, log_interval=100, log_format=None, log_file=None, aim_repo=None, aim_run_hash=None, tensorboard_logdir=None, wandb_project=None, azureml_logging=False, seed=1, cpu=False, tpu=False, bf16=False, memory_efficient_bf16=False, fp16=False, memory_efficient_fp16=False, fp16_no_flatten_grads=False, fp16_init_scale=128, fp16_scale_window=None, fp16_scale_tolerance=0.0, on_cpu_convert_precision=False, min_loss_scale=0.0001, threshold_loss_scale=None, amp=False, amp_batch_retries=2, amp_init_scale=128, amp_scale_window=None, user_dir=None, empty_cache_freq=0, all_gather_list_size=16384, model_parallel_size=1, quantization_config_path=None, profile=False, reset_logging=False, suppress_crashes=False, use_plasma_view=False, plasma_path='/tmp/plasma', criterion='cross_entropy', tokenizer=None, bpe=None, optimizer=None, lr_scheduler='fixed', scoring='bleu', task='translation', source_lang='x', target_lang='y', trainpref='../../data/BC5CDR/raw/relis_train.tok.bpe', validpref='../../data/BC5CDR/raw/relis_valid.tok.bpe', testpref='../../data/BC5CDR/raw/relis_test.tok.bpe', align_suffix=None, destdir='../../data/BC5CDR/relis-bin', thresholdtgt=0, thresholdsrc=0, tgtdict=None, srcdict='../../data/BC5CDR/raw/dict.txt', nwordstgt=-1, nwordssrc=-1, alignfile=None, dataset_impl='mmap', joined_dictionary=True, only_source=False, padding_factor=8, workers=8, dict_only=False)
+2023-05-17 18:08:33 | INFO | fairseq_cli.preprocess | [x] Dictionary: 42384 types
+2023-05-17 18:08:33 | INFO | fairseq_cli.preprocess | [x] ../../data/BC5CDR/raw/relis_train.tok.bpe.x: 500 sents, 127539 tokens, 0.0% replaced (by <unk>)
+2023-05-17 18:08:33 | INFO | fairseq_cli.preprocess | [x] Dictionary: 42384 types
+2023-05-17 18:08:33 | INFO | fairseq_cli.preprocess | [x] ../../data/BC5CDR/raw/relis_valid.tok.bpe.x: 500 sents, 126727 tokens, 0.0% replaced (by <unk>)
+2023-05-17 18:08:33 | INFO | fairseq_cli.preprocess | [x] Dictionary: 42384 types
+2023-05-17 18:08:34 | INFO | fairseq_cli.preprocess | [x] ../../data/BC5CDR/raw/relis_test.tok.bpe.x: 500 sents, 134570 tokens, 0.0% replaced (by <unk>)
+2023-05-17 18:08:34 | INFO | fairseq_cli.preprocess | [y] Dictionary: 42384 types
+2023-05-17 18:08:34 | INFO | fairseq_cli.preprocess | [y] ../../data/BC5CDR/raw/relis_train.tok.bpe.y: 500 sents, 11478 tokens, 0.0% replaced (by <unk>)
+2023-05-17 18:08:34 | INFO | fairseq_cli.preprocess | [y] Dictionary: 42384 types
+2023-05-17 18:08:34 | INFO | fairseq_cli.preprocess | [y] ../../data/BC5CDR/raw/relis_valid.tok.bpe.y: 500 sents, 10803 tokens, 0.0% replaced (by <unk>)
+2023-05-17 18:08:34 | INFO | fairseq_cli.preprocess | [y] Dictionary: 42384 types
+2023-05-17 18:08:34 | INFO | fairseq_cli.preprocess | [y] ../../data/BC5CDR/raw/relis_test.tok.bpe.y: 500 sents, 11218 tokens, 0.0% replaced (by <unk>)
+2023-05-17 18:08:34 | INFO | fairseq_cli.preprocess | Wrote preprocessed data to ../../data/BC5CDR/relis-bin
+START TRAINING...
+2023-05-17 18:08:36 | INFO | fairseq.tasks.text_to_speech | Please install tensorboardX: pip install tensorboardX
+2023-05-17 18:08:38 | INFO | fairseq_cli.train | {'_name': None, 'common': {'_name': None, 'no_progress_bar': False, 'log_interval': 100, 'log_format': None, 'log_file': None, 'aim_repo': None, 'aim_run_hash': None, 'tensorboard_logdir': None, 'wandb_project': None, 'azureml_logging': False, 'seed': 1, 'cpu': False, 'tpu': False, 'bf16': False, 'memory_efficient_bf16': False, 'fp16': False, 'memory_efficient_fp16': False, 'fp16_no_flatten_grads': False, 'fp16_init_scale': 128, 'fp16_scale_window': None, 'fp16_scale_tolerance': 0.0, 'on_cpu_convert_precision': False, 'min_loss_scale': 0.0001, 'threshold_loss_scale': None, 'amp': False, 'amp_batch_retries': 2, 'amp_init_scale': 128, 'amp_scale_window': None, 'user_dir': '../../src', 'empty_cache_freq': 0, 'all_gather_list_size': 16384, 'model_parallel_size': 1, 'quantization_config_path': None, 'profile': False, 'reset_logging': False, 'suppress_crashes': False, 'use_plasma_view': False, 'plasma_path': '/tmp/plasma'}, 'common_eval': {'_name': None, 'path': None, 'post_process': None, 'quiet': False, 'model_overrides': '{}', 'results_path': None}, 'distributed_training': {'_name': None, 'distributed_world_size': 1, 'distributed_num_procs': 1, 'distributed_rank': 0, 'distributed_backend': 'nccl', 'distributed_init_method': None, 'distributed_port': -1, 'device_id': 0, 'distributed_no_spawn': False, 'ddp_backend': 'pytorch_ddp', 'ddp_comm_hook': 'none', 'bucket_cap_mb': 25, 'fix_batches_to_gpus': False, 'find_unused_parameters': False, 'gradient_as_bucket_view': False, 'fast_stat_sync': False, 'heartbeat_timeout': -1, 'broadcast_buffers': False, 'slowmo_momentum': None, 'slowmo_base_algorithm': 'localsgd', 'localsgd_frequency': 3, 'nprocs_per_node': 1, 'pipeline_model_parallel': False, 'pipeline_balance': None, 'pipeline_devices': None, 'pipeline_chunks': 0, 'pipeline_encoder_balance': None, 'pipeline_encoder_devices': None, 'pipeline_decoder_balance': None, 'pipeline_decoder_devices': None, 'pipeline_checkpoint': 'never', 'zero_sharding': 'none', 'fp16': False, 'memory_efficient_fp16': False, 'tpu': False, 'no_reshard_after_forward': False, 'fp32_reduce_scatter': False, 'cpu_offload': False, 'use_sharded_state': False, 'not_fsdp_flatten_parameters': False}, 'dataset': {'_name': None, 'num_workers': 1, 'skip_invalid_size_inputs_valid_test': True, 'max_tokens': 1024, 'batch_size': None, 'required_batch_size_multiple': 8, 'required_seq_len_multiple': 1, 'dataset_impl': None, 'data_buffer_size': 10, 'train_subset': 'train', 'valid_subset': 'valid', 'combine_valid_subsets': None, 'ignore_unused_valid_subsets': False, 'validate_interval': 1, 'validate_interval_updates': 0, 'validate_after_updates': 0, 'fixed_validation_seed': None, 'disable_validation': False, 'max_tokens_valid': 1024, 'batch_size_valid': None, 'max_valid_steps': None, 'curriculum': 0, 'gen_subset': 'test', 'num_shards': 1, 'shard_id': 0, 'grouped_shuffling': False, 'update_epoch_batch_itr': False, 'update_ordered_indices_seed': False}, 'optimization': {'_name': None, 'max_epoch': 50, 'max_update': 0, 'stop_time_hours': 0.0, 'clip_norm': 0.0, 'sentence_avg': False, 'update_freq': [32], 'lr': [2e-05], 'stop_min_lr': -1.0, 'use_bmuf': False, 'skip_remainder_batch': False}, 'checkpoint': {'_name': None, 'save_dir': '../../checkpoints/RE-BC5CDR-BioGPT-v3', 'restore_file': 'checkpoint_last.pt', 'continue_once': None, 'finetune_from_model': '../../checkpoints/Pre-trained-BioGPT/checkpoint.pt', 'reset_dataloader': False, 'reset_lr_scheduler': False, 'reset_meters': False, 'reset_optimizer': False, 'optimizer_overrides': '{}', 'save_interval': 1, 'save_interval_updates': 0, 'keep_interval_updates': -1, 'keep_interval_updates_pattern': -1, 'keep_last_epochs': 5, 'keep_best_checkpoints': -1, 'no_save': False, 'no_epoch_checkpoints': False, 'no_last_checkpoints': False, 'no_save_optimizer_state': False, 'best_checkpoint_metric': 'loss', 'maximize_best_checkpoint_metric': False, 'patience': -1, 'checkpoint_suffix': '', 'checkpoint_shard_count': 1, 'load_checkpoint_on_all_dp_ranks': False, 'write_checkpoints_asynchronously': False, 'model_parallel_size': 1}, 'bmuf': {'_name': None, 'block_lr': 1.0, 'block_momentum': 0.875, 'global_sync_iter': 50, 'warmup_iterations': 500, 'use_nbm': False, 'average_sync': False, 'distributed_world_size': 1}, 'generation': {'_name': None, 'beam': 5, 'nbest': 1, 'max_len_a': 0.0, 'max_len_b': 200, 'min_len': 1, 'match_source_len': False, 'unnormalized': False, 'no_early_stop': False, 'no_beamable_mm': False, 'lenpen': 1.0, 'unkpen': 0.0, 'replace_unk': None, 'sacrebleu': False, 'score_reference': False, 'prefix_size': 0, 'no_repeat_ngram_size': 0, 'sampling': False, 'sampling_topk': -1, 'sampling_topp': -1.0, 'constraints': None, 'temperature': 1.0, 'diverse_beam_groups': -1, 'diverse_beam_strength': 0.5, 'diversity_rate': -1.0, 'print_alignment': None, 'print_step': False, 'lm_path': None, 'lm_weight': 0.0, 'iter_decode_eos_penalty': 0.0, 'iter_decode_max_iter': 10, 'iter_decode_force_max_iter': False, 'iter_decode_with_beam': 1, 'iter_decode_with_external_reranker': False, 'retain_iter_history': False, 'retain_dropout': False, 'retain_dropout_modules': None, 'decoding_format': None, 'no_seed_provided': False, 'eos_token': None}, 'eval_lm': {'_name': None, 'output_word_probs': False, 'output_word_stats': False, 'context_window': 0, 'softmax_batch': 9223372036854775807}, 'interactive': {'_name': None, 'buffer_size': 0, 'input': '-'}, 'model': {'_name': 'transformer_lm_prompt_biogpt', 'activation_fn': gelu, 'dropout': 0.2, 'attention_dropout': 0.1, 'activation_dropout': 0.0, 'relu_dropout': 0.0, 'decoder_embed_dim': 1024, 'decoder_output_dim': 1024, 'decoder_input_dim': 1024, 'decoder_ffn_embed_dim': 4096, 'decoder_layers': 24, 'decoder_attention_heads': 16, 'decoder_normalize_before': True, 'no_decoder_final_norm': False, 'adaptive_softmax_cutoff': None, 'adaptive_softmax_dropout': 0.0, 'adaptive_softmax_factor': 4.0, 'no_token_positional_embeddings': False, 'share_decoder_input_output_embed': True, 'character_embeddings': False, 'character_filters': '[(1, 64), (2, 128), (3, 192), (4, 256), (5, 256), (6, 256), (7, 256)]', 'character_embedding_dim': 4, 'char_embedder_highway_layers': 2, 'adaptive_input': False, 'adaptive_input_factor': 4.0, 'adaptive_input_cutoff': None, 'tie_adaptive_weights': False, 'tie_adaptive_proj': False, 'decoder_learned_pos': True, 'layernorm_embedding': False, 'no_scale_embedding': False, 'checkpoint_activations': False, 'offload_activations': False, 'decoder_layerdrop': 0.0, 'decoder_layers_to_keep': None, 'quant_noise_pq': 0.0, 'quant_noise_pq_block_size': 8, 'quant_noise_scalar': 0.0, 'min_params_to_wrap': 100000000, 'base_layers': 0, 'base_sublayers': 1, 'base_shuffle': 0, 'scale_fc': False, 'scale_attn': False, 'scale_heads': False, 'scale_resids': False, 'decoder_xformers_att_config': None, 'add_bos_token': False, 'tokens_per_sample': 1024, 'max_target_positions': 1024, 'tpu': False}, 'task': {'_name': 'language_modeling_prompt', 'data': '../../data/BC5CDR/relis-bin', 'sample_break_mode': none, 'tokens_per_sample': 1024, 'output_dictionary_size': -1, 'self_target': False, 'future_target': False, 'past_target': False, 'add_bos_token': False, 'max_target_positions': 1024, 'shorten_method': none, 'shorten_data_split_list': '', 'pad_to_fixed_length': False, 'pad_to_fixed_bsz': False, 'seed': 1, 'batch_size': None, 'batch_size_valid': None, 'dataset_impl': None, 'data_buffer_size': 10, 'tpu': False, 'use_plasma_view': False, 'plasma_path': '/tmp/plasma', 'source_lang': None, 'target_lang': None, 'max_source_positions': 640, 'manual_prompt': None, 'learned_prompt': 9, 'learned_prompt_pattern': 'learned', 'prefix': False, 'sep_token': '<seqsep>'}, 'criterion': {'_name': 'cross_entropy', 'sentence_avg': False}, 'optimizer': {'_name': 'adam', 'adam_betas': '(0.9, 0.99)', 'adam_eps': 1e-08, 'weight_decay': 0.01, 'use_old_adam': False, 'fp16_adam_stats': False, 'tpu': False, 'lr': [2e-05]}, 'lr_scheduler': {'_name': 'inverse_sqrt', 'warmup_updates': 100, 'warmup_init_lr': 5e-06, 'lr': [2e-05]}, 'scoring': {'_name': 'bleu', 'pad': 1, 'eos': 2, 'unk': 3}, 'bpe': None, 'tokenizer': None, 'ema': {'_name': None, 'store_ema': False, 'ema_decay': 0.9999, 'ema_start_update': 0, 'ema_seed_model': None, 'ema_update_freq': 1, 'ema_fp32': False}}
+2023-05-17 18:08:38 | INFO | src.language_modeling_prompt | dictionary: 42384 types
+2023-05-17 18:08:41 | INFO | fairseq_cli.train | TransformerLanguageModelPrompt(
+  (decoder): TransformerDecoder(
+    (dropout_module): FairseqDropout()
+    (embed_tokens): Embedding(42393, 1024, padding_idx=1)
+    (embed_positions): LearnedPositionalEmbedding(1026, 1024, padding_idx=1)
+    (layers): ModuleList(
+      (0-23): 24 x TransformerDecoderLayerBase(
+        (dropout_module): FairseqDropout()
+        (self_attn): MultiheadAttention(
+          (dropout_module): FairseqDropout()
+          (k_proj): Linear(in_features=1024, out_features=1024, bias=True)
+          (v_proj): Linear(in_features=1024, out_features=1024, bias=True)
+          (q_proj): Linear(in_features=1024, out_features=1024, bias=True)
+          (out_proj): Linear(in_features=1024, out_features=1024, bias=True)
+        )
+        (activation_dropout_module): FairseqDropout()
+        (self_attn_layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (final_layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+      )
+    )
+    (layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+    (output_projection): Linear(in_features=1024, out_features=42393, bias=False)
+  )
+)
+2023-05-17 18:08:41 | INFO | fairseq_cli.train | task: LanguageModelingPromptTask
+2023-05-17 18:08:41 | INFO | fairseq_cli.train | model: TransformerLanguageModelPrompt
+2023-05-17 18:08:41 | INFO | fairseq_cli.train | criterion: CrossEntropyCriterion
+2023-05-17 18:08:41 | INFO | fairseq_cli.train | num. shared model params: 346,772,480 (num. trained: 346,772,480)
+2023-05-17 18:08:41 | INFO | fairseq_cli.train | num. expert model params: 0 (num. trained: 0)
+2023-05-17 18:08:41 | INFO | fairseq.data.data_utils | loaded 500 examples from: ../../data/BC5CDR/relis-bin/valid.x-y.x
+2023-05-17 18:08:41 | INFO | fairseq.data.data_utils | loaded 500 examples from: ../../data/BC5CDR/relis-bin/valid.x-y.y
+2023-05-17 18:08:43 | INFO | fairseq.trainer | detected shared parameter: decoder.embed_tokens.weight <- decoder.output_projection.weight
+2023-05-17 18:08:43 | INFO | fairseq.utils | ***********************CUDA enviroments for all 1 workers***********************
+2023-05-17 18:08:43 | INFO | fairseq.utils | rank   0: capabilities =  8.0  ; total memory = 39.586 GB ; name = NVIDIA A100-SXM4-40GB                   
+2023-05-17 18:08:43 | INFO | fairseq.utils | ***********************CUDA enviroments for all 1 workers***********************
+2023-05-17 18:08:43 | INFO | fairseq_cli.train | training on 1 devices (GPUs/TPUs)
+2023-05-17 18:08:43 | INFO | fairseq_cli.train | max tokens per device = 1024 and max sentences per device = None
+2023-05-17 18:08:43 | INFO | fairseq.checkpoint_utils | loading pretrained model from ../../checkpoints/Pre-trained-BioGPT/checkpoint.pt: optimizer, lr scheduler, meters, dataloader will be reset
+2023-05-17 18:08:43 | INFO | fairseq.trainer | Preparing to load checkpoint ../../checkpoints/Pre-trained-BioGPT/checkpoint.pt
+2023-05-17 18:08:47 | INFO | fairseq.trainer | NOTE: your device may support faster training with --fp16 or --amp
+2023-05-17 18:08:47 | INFO | fairseq.trainer | Loaded checkpoint ../../checkpoints/Pre-trained-BioGPT/checkpoint.pt (epoch 51 @ 0 updates)
+2023-05-17 18:08:47 | INFO | fairseq.trainer | loading train data for epoch 1
+2023-05-17 18:08:47 | INFO | fairseq.data.data_utils | loaded 500 examples from: ../../data/BC5CDR/relis-bin/train.x-y.x
+2023-05-17 18:08:47 | INFO | fairseq.data.data_utils | loaded 500 examples from: ../../data/BC5CDR/relis-bin/train.x-y.y
+2023-05-17 18:08:47 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:08:47 | INFO | fairseq.trainer | begin training epoch 1
+2023-05-17 18:08:47 | INFO | fairseq_cli.train | Start iterating over samples
+/proj/berzelius-2021-21/users/jacob/conda_envs/biogpt/lib/python3.10/site-packages/torch/nn/functional.py:4999: UserWarning: Support for mismatched key_padding_mask and attn_mask is deprecated. Use same type for both instead.
+  warnings.warn(
+/proj/berzelius-2021-21/users/jacob/conda_envs/biogpt/lib/python3.10/site-packages/fairseq/utils.py:374: UserWarning: amp_C fused kernels unavailable, disabling multi_tensor_l2norm; you may get better performance by installing NVIDIA's apex library
+  warnings.warn(
+2023-05-17 18:09:17 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:09:25 | INFO | valid | epoch 001 | valid on 'valid' subset | loss 4.154 | ppl 17.81 | wps 16134.9 | wpb 857.5 | bsz 3 | num_updates 6
+2023-05-17 18:09:25 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 1 @ 6 updates
+2023-05-17 18:09:25 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint1.pt
+2023-05-17 18:09:30 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint1.pt
+2023-05-17 18:09:46 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint1.pt (epoch 1 @ 6 updates, score 4.154) (writing took 20.977969905987266 seconds)
+2023-05-17 18:09:46 | INFO | fairseq_cli.train | end of epoch 1 (average epoch stats below)
+2023-05-17 18:09:46 | INFO | train | epoch 001 | loss 4.688 | ppl 25.78 | wps 2305.5 | ups 0.1 | wpb 23829.8 | bsz 83.3 | num_updates 6 | lr 5.9e-06 | gnorm 3.194 | train_wall 30 | gb_free 31.3 | wall 63
+2023-05-17 18:09:46 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:09:46 | INFO | fairseq.trainer | begin training epoch 2
+2023-05-17 18:09:46 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:10:11 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:10:20 | INFO | valid | epoch 002 | valid on 'valid' subset | loss 3.721 | ppl 13.19 | wps 16146.3 | wpb 857.5 | bsz 3 | num_updates 12 | best_loss 3.721
+2023-05-17 18:10:20 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 2 @ 12 updates
+2023-05-17 18:10:20 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint2.pt
+2023-05-17 18:10:26 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint2.pt
+2023-05-17 18:10:44 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint2.pt (epoch 2 @ 12 updates, score 3.721) (writing took 24.006503284006612 seconds)
+2023-05-17 18:10:44 | INFO | fairseq_cli.train | end of epoch 2 (average epoch stats below)
+2023-05-17 18:10:44 | INFO | train | epoch 002 | loss 4.259 | ppl 19.15 | wps 2479.1 | ups 0.1 | wpb 23829.8 | bsz 83.3 | num_updates 12 | lr 6.8e-06 | gnorm 2.649 | train_wall 25 | gb_free 31.1 | wall 121
+2023-05-17 18:10:44 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:10:44 | INFO | fairseq.trainer | begin training epoch 3
+2023-05-17 18:10:44 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:11:09 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:11:18 | INFO | valid | epoch 003 | valid on 'valid' subset | loss 3.468 | ppl 11.06 | wps 16143.3 | wpb 857.5 | bsz 3 | num_updates 18 | best_loss 3.468
+2023-05-17 18:11:18 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 3 @ 18 updates
+2023-05-17 18:11:18 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint3.pt
+2023-05-17 18:11:22 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint3.pt
+2023-05-17 18:11:40 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint3.pt (epoch 3 @ 18 updates, score 3.468) (writing took 22.64342422700429 seconds)
+2023-05-17 18:11:40 | INFO | fairseq_cli.train | end of epoch 3 (average epoch stats below)
+2023-05-17 18:11:40 | INFO | train | epoch 003 | loss 3.9 | ppl 14.93 | wps 2537.6 | ups 0.11 | wpb 23829.8 | bsz 83.3 | num_updates 18 | lr 7.7e-06 | gnorm 2.091 | train_wall 25 | gb_free 31.1 | wall 177
+2023-05-17 18:11:40 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:11:40 | INFO | fairseq.trainer | begin training epoch 4
+2023-05-17 18:11:40 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:12:05 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:12:14 | INFO | valid | epoch 004 | valid on 'valid' subset | loss 3.274 | ppl 9.67 | wps 16130.9 | wpb 857.5 | bsz 3 | num_updates 24 | best_loss 3.274
+2023-05-17 18:12:14 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 4 @ 24 updates
+2023-05-17 18:12:14 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint4.pt
+2023-05-17 18:12:19 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint4.pt
+2023-05-17 18:12:37 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint4.pt (epoch 4 @ 24 updates, score 3.274) (writing took 22.661276223996538 seconds)
+2023-05-17 18:12:37 | INFO | fairseq_cli.train | end of epoch 4 (average epoch stats below)
+2023-05-17 18:12:37 | INFO | train | epoch 004 | loss 3.678 | ppl 12.8 | wps 2537.6 | ups 0.11 | wpb 23829.8 | bsz 83.3 | num_updates 24 | lr 8.6e-06 | gnorm 1.774 | train_wall 25 | gb_free 30.6 | wall 234
+2023-05-17 18:12:37 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:12:37 | INFO | fairseq.trainer | begin training epoch 5
+2023-05-17 18:12:37 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:13:02 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:13:10 | INFO | valid | epoch 005 | valid on 'valid' subset | loss 3.083 | ppl 8.47 | wps 16115.5 | wpb 857.5 | bsz 3 | num_updates 30 | best_loss 3.083
+2023-05-17 18:13:10 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 5 @ 30 updates
+2023-05-17 18:13:10 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint5.pt
+2023-05-17 18:13:15 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint5.pt
+2023-05-17 18:13:33 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint5.pt (epoch 5 @ 30 updates, score 3.083) (writing took 22.631338314997265 seconds)
+2023-05-17 18:13:33 | INFO | fairseq_cli.train | end of epoch 5 (average epoch stats below)
+2023-05-17 18:13:33 | INFO | train | epoch 005 | loss 3.477 | ppl 11.14 | wps 2539 | ups 0.11 | wpb 23829.8 | bsz 83.3 | num_updates 30 | lr 9.5e-06 | gnorm 1.503 | train_wall 25 | gb_free 31.1 | wall 290
+2023-05-17 18:13:33 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:13:33 | INFO | fairseq.trainer | begin training epoch 6
+2023-05-17 18:13:33 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:13:58 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:14:07 | INFO | valid | epoch 006 | valid on 'valid' subset | loss 3.001 | ppl 8.01 | wps 16140.5 | wpb 857.5 | bsz 3 | num_updates 36 | best_loss 3.001
+2023-05-17 18:14:07 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 6 @ 36 updates
+2023-05-17 18:14:07 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint6.pt
+2023-05-17 18:14:12 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint6.pt
+2023-05-17 18:14:30 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint6.pt (epoch 6 @ 36 updates, score 3.001) (writing took 22.984489010996185 seconds)
+2023-05-17 18:14:30 | INFO | fairseq_cli.train | end of epoch 6 (average epoch stats below)
+2023-05-17 18:14:30 | INFO | train | epoch 006 | loss 3.275 | ppl 9.68 | wps 2490.7 | ups 0.1 | wpb 23829.8 | bsz 83.3 | num_updates 36 | lr 1.04e-05 | gnorm 1.244 | train_wall 25 | gb_free 30.8 | wall 348
+2023-05-17 18:14:30 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:14:30 | INFO | fairseq.trainer | begin training epoch 7
+2023-05-17 18:14:30 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:14:55 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:15:04 | INFO | valid | epoch 007 | valid on 'valid' subset | loss 2.945 | ppl 7.7 | wps 16141.9 | wpb 857.5 | bsz 3 | num_updates 42 | best_loss 2.945
+2023-05-17 18:15:04 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 7 @ 42 updates
+2023-05-17 18:15:04 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint7.pt
+2023-05-17 18:15:09 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint7.pt
+2023-05-17 18:15:27 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint7.pt (epoch 7 @ 42 updates, score 2.945) (writing took 22.69219098400208 seconds)
+2023-05-17 18:15:28 | INFO | fairseq_cli.train | end of epoch 7 (average epoch stats below)
+2023-05-17 18:15:28 | INFO | train | epoch 007 | loss 3.154 | ppl 8.9 | wps 2502.5 | ups 0.11 | wpb 23829.8 | bsz 83.3 | num_updates 42 | lr 1.13e-05 | gnorm 1.111 | train_wall 25 | gb_free 31.1 | wall 405
+2023-05-17 18:15:28 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:15:28 | INFO | fairseq.trainer | begin training epoch 8
+2023-05-17 18:15:28 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:15:52 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:16:01 | INFO | valid | epoch 008 | valid on 'valid' subset | loss 2.906 | ppl 7.49 | wps 16136.9 | wpb 857.5 | bsz 3 | num_updates 48 | best_loss 2.906
+2023-05-17 18:16:01 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 8 @ 48 updates
+2023-05-17 18:16:01 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint8.pt
+2023-05-17 18:16:06 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint8.pt
+2023-05-17 18:16:24 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint8.pt (epoch 8 @ 48 updates, score 2.906) (writing took 22.71623390399327 seconds)
+2023-05-17 18:16:25 | INFO | fairseq_cli.train | end of epoch 8 (average epoch stats below)
+2023-05-17 18:16:25 | INFO | train | epoch 008 | loss 3.054 | ppl 8.31 | wps 2501 | ups 0.1 | wpb 23829.8 | bsz 83.3 | num_updates 48 | lr 1.22e-05 | gnorm 1.032 | train_wall 25 | gb_free 31.4 | wall 462
+2023-05-17 18:16:25 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:16:25 | INFO | fairseq.trainer | begin training epoch 9
+2023-05-17 18:16:25 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:16:50 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:16:58 | INFO | valid | epoch 009 | valid on 'valid' subset | loss 2.877 | ppl 7.35 | wps 16139.5 | wpb 857.5 | bsz 3 | num_updates 54 | best_loss 2.877
+2023-05-17 18:16:58 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 9 @ 54 updates
+2023-05-17 18:16:58 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint9.pt
+2023-05-17 18:17:03 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint9.pt
+2023-05-17 18:17:21 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint9.pt (epoch 9 @ 54 updates, score 2.877) (writing took 22.68566131699481 seconds)
+2023-05-17 18:17:22 | INFO | fairseq_cli.train | end of epoch 9 (average epoch stats below)
+2023-05-17 18:17:22 | INFO | train | epoch 009 | loss 2.973 | ppl 7.85 | wps 2490.9 | ups 0.1 | wpb 23829.8 | bsz 83.3 | num_updates 54 | lr 1.31e-05 | gnorm 0.965 | train_wall 25 | gb_free 31.5 | wall 519
+2023-05-17 18:17:22 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:17:22 | INFO | fairseq.trainer | begin training epoch 10
+2023-05-17 18:17:22 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:17:47 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:17:56 | INFO | valid | epoch 010 | valid on 'valid' subset | loss 2.859 | ppl 7.25 | wps 16144.4 | wpb 857.5 | bsz 3 | num_updates 60 | best_loss 2.859
+2023-05-17 18:17:56 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 10 @ 60 updates
+2023-05-17 18:17:56 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint10.pt
+2023-05-17 18:18:01 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint10.pt
+2023-05-17 18:18:19 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint10.pt (epoch 10 @ 60 updates, score 2.859) (writing took 22.79374028700113 seconds)
+2023-05-17 18:18:19 | INFO | fairseq_cli.train | end of epoch 10 (average epoch stats below)
+2023-05-17 18:18:19 | INFO | train | epoch 010 | loss 2.901 | ppl 7.47 | wps 2497.8 | ups 0.1 | wpb 23829.8 | bsz 83.3 | num_updates 60 | lr 1.4e-05 | gnorm 0.897 | train_wall 25 | gb_free 31.1 | wall 576
+2023-05-17 18:18:19 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:18:19 | INFO | fairseq.trainer | begin training epoch 11
+2023-05-17 18:18:19 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:18:44 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:18:53 | INFO | valid | epoch 011 | valid on 'valid' subset | loss 2.845 | ppl 7.18 | wps 16132.6 | wpb 857.5 | bsz 3 | num_updates 66 | best_loss 2.845
+2023-05-17 18:18:53 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 11 @ 66 updates
+2023-05-17 18:18:53 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint11.pt
+2023-05-17 18:18:58 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint11.pt
+2023-05-17 18:19:16 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint11.pt (epoch 11 @ 66 updates, score 2.845) (writing took 22.64580542499607 seconds)
+2023-05-17 18:19:16 | INFO | fairseq_cli.train | end of epoch 11 (average epoch stats below)
+2023-05-17 18:19:16 | INFO | train | epoch 011 | loss 2.845 | ppl 7.18 | wps 2504.8 | ups 0.11 | wpb 23829.8 | bsz 83.3 | num_updates 66 | lr 1.49e-05 | gnorm 0.965 | train_wall 25 | gb_free 31.2 | wall 634
+2023-05-17 18:19:16 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:19:16 | INFO | fairseq.trainer | begin training epoch 12
+2023-05-17 18:19:16 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:19:41 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:19:50 | INFO | valid | epoch 012 | valid on 'valid' subset | loss 2.836 | ppl 7.14 | wps 16124.3 | wpb 857.5 | bsz 3 | num_updates 72 | best_loss 2.836
+2023-05-17 18:19:50 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 12 @ 72 updates
+2023-05-17 18:19:50 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint12.pt
+2023-05-17 18:19:55 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint12.pt
+2023-05-17 18:20:13 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint12.pt (epoch 12 @ 72 updates, score 2.836) (writing took 22.931665265001357 seconds)
+2023-05-17 18:20:14 | INFO | fairseq_cli.train | end of epoch 12 (average epoch stats below)
+2023-05-17 18:20:14 | INFO | train | epoch 012 | loss 2.783 | ppl 6.88 | wps 2488 | ups 0.1 | wpb 23829.8 | bsz 83.3 | num_updates 72 | lr 1.58e-05 | gnorm 0.874 | train_wall 25 | gb_free 31.1 | wall 691
+2023-05-17 18:20:14 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:20:14 | INFO | fairseq.trainer | begin training epoch 13
+2023-05-17 18:20:14 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:20:39 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:20:48 | INFO | valid | epoch 013 | valid on 'valid' subset | loss 2.83 | ppl 7.11 | wps 16145.9 | wpb 857.5 | bsz 3 | num_updates 78 | best_loss 2.83
+2023-05-17 18:20:48 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 13 @ 78 updates
+2023-05-17 18:20:48 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint13.pt
+2023-05-17 18:20:52 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint13.pt
+2023-05-17 18:21:10 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint13.pt (epoch 13 @ 78 updates, score 2.83) (writing took 22.80331941100303 seconds)
+2023-05-17 18:21:11 | INFO | fairseq_cli.train | end of epoch 13 (average epoch stats below)
+2023-05-17 18:21:11 | INFO | train | epoch 013 | loss 2.728 | ppl 6.62 | wps 2498.1 | ups 0.1 | wpb 23829.8 | bsz 83.3 | num_updates 78 | lr 1.67e-05 | gnorm 0.874 | train_wall 25 | gb_free 31.1 | wall 748
+2023-05-17 18:21:11 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:21:11 | INFO | fairseq.trainer | begin training epoch 14
+2023-05-17 18:21:11 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:21:36 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:21:45 | INFO | valid | epoch 014 | valid on 'valid' subset | loss 2.828 | ppl 7.1 | wps 16147.8 | wpb 857.5 | bsz 3 | num_updates 84 | best_loss 2.828
+2023-05-17 18:21:45 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 14 @ 84 updates
+2023-05-17 18:21:45 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint14.pt
+2023-05-17 18:21:50 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint14.pt
+2023-05-17 18:22:08 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint14.pt (epoch 14 @ 84 updates, score 2.828) (writing took 22.65737957600504 seconds)
+2023-05-17 18:22:08 | INFO | fairseq_cli.train | end of epoch 14 (average epoch stats below)
+2023-05-17 18:22:08 | INFO | train | epoch 014 | loss 2.675 | ppl 6.38 | wps 2505.5 | ups 0.11 | wpb 23829.8 | bsz 83.3 | num_updates 84 | lr 1.76e-05 | gnorm 0.87 | train_wall 25 | gb_free 31 | wall 805
+2023-05-17 18:22:08 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:22:08 | INFO | fairseq.trainer | begin training epoch 15
+2023-05-17 18:22:08 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:22:33 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:22:42 | INFO | valid | epoch 015 | valid on 'valid' subset | loss 2.827 | ppl 7.09 | wps 16121.2 | wpb 857.5 | bsz 3 | num_updates 90 | best_loss 2.827
+2023-05-17 18:22:42 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 15 @ 90 updates
+2023-05-17 18:22:42 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint15.pt
+2023-05-17 18:22:47 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint15.pt
+2023-05-17 18:23:05 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint15.pt (epoch 15 @ 90 updates, score 2.827) (writing took 22.648487931001 seconds)
+2023-05-17 18:23:05 | INFO | fairseq_cli.train | end of epoch 15 (average epoch stats below)
+2023-05-17 18:23:05 | INFO | train | epoch 015 | loss 2.616 | ppl 6.13 | wps 2502.3 | ups 0.11 | wpb 23829.8 | bsz 83.3 | num_updates 90 | lr 1.85e-05 | gnorm 0.864 | train_wall 25 | gb_free 31.4 | wall 862
+2023-05-17 18:23:05 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:23:05 | INFO | fairseq.trainer | begin training epoch 16
+2023-05-17 18:23:05 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:23:30 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:23:39 | INFO | valid | epoch 016 | valid on 'valid' subset | loss 2.827 | ppl 7.1 | wps 16116.2 | wpb 857.5 | bsz 3 | num_updates 96 | best_loss 2.827
+2023-05-17 18:23:39 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 16 @ 96 updates
+2023-05-17 18:23:39 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint16.pt
+2023-05-17 18:23:44 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint16.pt
+2023-05-17 18:24:02 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint16.pt (epoch 16 @ 96 updates, score 2.827) (writing took 22.649640757997986 seconds)
+2023-05-17 18:24:03 | INFO | fairseq_cli.train | end of epoch 16 (average epoch stats below)
+2023-05-17 18:24:03 | INFO | train | epoch 016 | loss 2.56 | ppl 5.9 | wps 2501.9 | ups 0.1 | wpb 23829.8 | bsz 83.3 | num_updates 96 | lr 1.94e-05 | gnorm 0.845 | train_wall 25 | gb_free 30.7 | wall 920
+2023-05-17 18:24:03 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:24:03 | INFO | fairseq.trainer | begin training epoch 17
+2023-05-17 18:24:03 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:24:21 | INFO | train_inner | epoch 017:      4 / 6 loss=3.19, ppl=9.13, wps=2559.7, ups=0.11, wpb=23951.6, bsz=83.8, num_updates=100, lr=2e-05, gnorm=1.335, train_wall=418, gb_free=31, wall=938
+2023-05-17 18:24:27 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:24:36 | INFO | valid | epoch 017 | valid on 'valid' subset | loss 2.831 | ppl 7.11 | wps 16138.1 | wpb 857.5 | bsz 3 | num_updates 102 | best_loss 2.827
+2023-05-17 18:24:36 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 17 @ 102 updates
+2023-05-17 18:24:36 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint17.pt
+2023-05-17 18:24:41 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint17.pt
+2023-05-17 18:24:50 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint17.pt (epoch 17 @ 102 updates, score 2.831) (writing took 13.637145333996159 seconds)
+2023-05-17 18:24:51 | INFO | fairseq_cli.train | end of epoch 17 (average epoch stats below)
+2023-05-17 18:24:51 | INFO | train | epoch 017 | loss 2.5 | ppl 5.66 | wps 2974.8 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 102 | lr 1.9803e-05 | gnorm 0.858 | train_wall 25 | gb_free 31.4 | wall 968
+2023-05-17 18:24:51 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:24:51 | INFO | fairseq.trainer | begin training epoch 18
+2023-05-17 18:24:51 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:25:15 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:25:24 | INFO | valid | epoch 018 | valid on 'valid' subset | loss 2.833 | ppl 7.12 | wps 16190.3 | wpb 857.5 | bsz 3 | num_updates 108 | best_loss 2.827
+2023-05-17 18:25:24 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 18 @ 108 updates
+2023-05-17 18:25:24 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint18.pt
+2023-05-17 18:25:29 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint18.pt
+2023-05-17 18:25:38 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint18.pt (epoch 18 @ 108 updates, score 2.833) (writing took 13.628986223004176 seconds)
+2023-05-17 18:25:39 | INFO | fairseq_cli.train | end of epoch 18 (average epoch stats below)
+2023-05-17 18:25:39 | INFO | train | epoch 018 | loss 2.442 | ppl 5.44 | wps 2963.6 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 108 | lr 1.9245e-05 | gnorm 0.838 | train_wall 25 | gb_free 31.3 | wall 1016
+2023-05-17 18:25:39 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:25:39 | INFO | fairseq.trainer | begin training epoch 19
+2023-05-17 18:25:39 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:26:04 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:26:13 | INFO | valid | epoch 019 | valid on 'valid' subset | loss 2.842 | ppl 7.17 | wps 16138.1 | wpb 857.5 | bsz 3 | num_updates 114 | best_loss 2.827
+2023-05-17 18:26:13 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 19 @ 114 updates
+2023-05-17 18:26:13 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint19.pt
+2023-05-17 18:26:17 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint19.pt
+2023-05-17 18:26:26 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint19.pt (epoch 19 @ 114 updates, score 2.842) (writing took 13.407348980996176 seconds)
+2023-05-17 18:26:27 | INFO | fairseq_cli.train | end of epoch 19 (average epoch stats below)
+2023-05-17 18:26:27 | INFO | train | epoch 019 | loss 2.39 | ppl 5.24 | wps 2988.8 | ups 0.13 | wpb 23829.8 | bsz 83.3 | num_updates 114 | lr 1.87317e-05 | gnorm 0.848 | train_wall 25 | gb_free 31.1 | wall 1064
+2023-05-17 18:26:27 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:26:27 | INFO | fairseq.trainer | begin training epoch 20
+2023-05-17 18:26:27 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:26:52 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:27:00 | INFO | valid | epoch 020 | valid on 'valid' subset | loss 2.853 | ppl 7.22 | wps 16155.2 | wpb 857.5 | bsz 3 | num_updates 120 | best_loss 2.827
+2023-05-17 18:27:00 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 20 @ 120 updates
+2023-05-17 18:27:00 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint20.pt
+2023-05-17 18:27:05 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint20.pt
+2023-05-17 18:27:14 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint20.pt (epoch 20 @ 120 updates, score 2.853) (writing took 13.383196062000934 seconds)
+2023-05-17 18:27:14 | INFO | fairseq_cli.train | end of epoch 20 (average epoch stats below)
+2023-05-17 18:27:14 | INFO | train | epoch 020 | loss 2.336 | ppl 5.05 | wps 2991 | ups 0.13 | wpb 23829.8 | bsz 83.3 | num_updates 120 | lr 1.82574e-05 | gnorm 0.861 | train_wall 25 | gb_free 31.4 | wall 1112
+2023-05-17 18:27:14 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:27:14 | INFO | fairseq.trainer | begin training epoch 21
+2023-05-17 18:27:14 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:27:39 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:27:48 | INFO | valid | epoch 021 | valid on 'valid' subset | loss 2.858 | ppl 7.25 | wps 16204.7 | wpb 857.5 | bsz 3 | num_updates 126 | best_loss 2.827
+2023-05-17 18:27:48 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 21 @ 126 updates
+2023-05-17 18:27:48 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint21.pt
+2023-05-17 18:27:53 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint21.pt
+2023-05-17 18:28:02 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint21.pt (epoch 21 @ 126 updates, score 2.858) (writing took 13.444529423999484 seconds)
+2023-05-17 18:28:02 | INFO | fairseq_cli.train | end of epoch 21 (average epoch stats below)
+2023-05-17 18:28:02 | INFO | train | epoch 021 | loss 2.29 | ppl 4.89 | wps 2982.3 | ups 0.13 | wpb 23829.8 | bsz 83.3 | num_updates 126 | lr 1.78174e-05 | gnorm 0.866 | train_wall 25 | gb_free 31.1 | wall 1160
+2023-05-17 18:28:02 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:28:02 | INFO | fairseq.trainer | begin training epoch 22
+2023-05-17 18:28:02 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:28:27 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:28:36 | INFO | valid | epoch 022 | valid on 'valid' subset | loss 2.866 | ppl 7.29 | wps 16153 | wpb 857.5 | bsz 3 | num_updates 132 | best_loss 2.827
+2023-05-17 18:28:36 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 22 @ 132 updates
+2023-05-17 18:28:36 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint22.pt
+2023-05-17 18:28:41 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint22.pt
+2023-05-17 18:28:50 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint22.pt (epoch 22 @ 132 updates, score 2.866) (writing took 13.376640336005948 seconds)
+2023-05-17 18:28:50 | INFO | fairseq_cli.train | end of epoch 22 (average epoch stats below)
+2023-05-17 18:28:50 | INFO | train | epoch 022 | loss 2.242 | ppl 4.73 | wps 2986.4 | ups 0.13 | wpb 23829.8 | bsz 83.3 | num_updates 132 | lr 1.74078e-05 | gnorm 0.855 | train_wall 25 | gb_free 31.5 | wall 1207
+2023-05-17 18:28:50 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:28:50 | INFO | fairseq.trainer | begin training epoch 23
+2023-05-17 18:28:50 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:29:15 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:29:24 | INFO | valid | epoch 023 | valid on 'valid' subset | loss 2.876 | ppl 7.34 | wps 16132.5 | wpb 857.5 | bsz 3 | num_updates 138 | best_loss 2.827
+2023-05-17 18:29:24 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 23 @ 138 updates
+2023-05-17 18:29:24 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint23.pt
+2023-05-17 18:29:29 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint23.pt
+2023-05-17 18:29:38 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint23.pt (epoch 23 @ 138 updates, score 2.876) (writing took 13.71091745099693 seconds)
+2023-05-17 18:29:38 | INFO | fairseq_cli.train | end of epoch 23 (average epoch stats below)
+2023-05-17 18:29:38 | INFO | train | epoch 023 | loss 2.198 | ppl 4.59 | wps 2969.6 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 138 | lr 1.70251e-05 | gnorm 0.853 | train_wall 25 | gb_free 31.2 | wall 1256
+2023-05-17 18:29:38 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:29:38 | INFO | fairseq.trainer | begin training epoch 24
+2023-05-17 18:29:38 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:30:03 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:30:12 | INFO | valid | epoch 024 | valid on 'valid' subset | loss 2.887 | ppl 7.4 | wps 16129.7 | wpb 857.5 | bsz 3 | num_updates 144 | best_loss 2.827
+2023-05-17 18:30:12 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 24 @ 144 updates
+2023-05-17 18:30:12 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint24.pt
+2023-05-17 18:30:17 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint24.pt
+2023-05-17 18:30:26 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint24.pt (epoch 24 @ 144 updates, score 2.887) (writing took 13.605230525005027 seconds)
+2023-05-17 18:30:26 | INFO | fairseq_cli.train | end of epoch 24 (average epoch stats below)
+2023-05-17 18:30:26 | INFO | train | epoch 024 | loss 2.154 | ppl 4.45 | wps 2978 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 144 | lr 1.66667e-05 | gnorm 0.86 | train_wall 25 | gb_free 30.7 | wall 1304
+2023-05-17 18:30:26 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:30:26 | INFO | fairseq.trainer | begin training epoch 25
+2023-05-17 18:30:26 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:30:51 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:31:00 | INFO | valid | epoch 025 | valid on 'valid' subset | loss 2.899 | ppl 7.46 | wps 16137.7 | wpb 857.5 | bsz 3 | num_updates 150 | best_loss 2.827
+2023-05-17 18:31:00 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 25 @ 150 updates
+2023-05-17 18:31:00 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint25.pt
+2023-05-17 18:31:05 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint25.pt
+2023-05-17 18:31:14 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint25.pt (epoch 25 @ 150 updates, score 2.899) (writing took 13.682556140003726 seconds)
+2023-05-17 18:31:15 | INFO | fairseq_cli.train | end of epoch 25 (average epoch stats below)
+2023-05-17 18:31:15 | INFO | train | epoch 025 | loss 2.112 | ppl 4.32 | wps 2971.2 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 150 | lr 1.63299e-05 | gnorm 0.853 | train_wall 25 | gb_free 31.2 | wall 1352
+2023-05-17 18:31:15 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:31:15 | INFO | fairseq.trainer | begin training epoch 26
+2023-05-17 18:31:15 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:31:39 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:31:48 | INFO | valid | epoch 026 | valid on 'valid' subset | loss 2.908 | ppl 7.51 | wps 16164.7 | wpb 857.5 | bsz 3 | num_updates 156 | best_loss 2.827
+2023-05-17 18:31:48 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 26 @ 156 updates
+2023-05-17 18:31:48 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint26.pt
+2023-05-17 18:31:53 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint26.pt
+2023-05-17 18:32:02 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint26.pt (epoch 26 @ 156 updates, score 2.908) (writing took 13.669399445003364 seconds)
+2023-05-17 18:32:03 | INFO | fairseq_cli.train | end of epoch 26 (average epoch stats below)
+2023-05-17 18:32:03 | INFO | train | epoch 026 | loss 2.072 | ppl 4.2 | wps 2975 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 156 | lr 1.60128e-05 | gnorm 0.85 | train_wall 25 | gb_free 30.9 | wall 1400
+2023-05-17 18:32:03 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:32:03 | INFO | fairseq.trainer | begin training epoch 27
+2023-05-17 18:32:03 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:32:28 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:32:36 | INFO | valid | epoch 027 | valid on 'valid' subset | loss 2.915 | ppl 7.54 | wps 16157.8 | wpb 857.5 | bsz 3 | num_updates 162 | best_loss 2.827
+2023-05-17 18:32:36 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 27 @ 162 updates
+2023-05-17 18:32:36 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint27.pt
+2023-05-17 18:32:41 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint27.pt
+2023-05-17 18:32:50 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint27.pt (epoch 27 @ 162 updates, score 2.915) (writing took 13.793935879002674 seconds)
+2023-05-17 18:32:51 | INFO | fairseq_cli.train | end of epoch 27 (average epoch stats below)
+2023-05-17 18:32:51 | INFO | train | epoch 027 | loss 2.04 | ppl 4.11 | wps 2949.4 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 162 | lr 1.57135e-05 | gnorm 0.844 | train_wall 25 | gb_free 31 | wall 1448
+2023-05-17 18:32:51 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:32:51 | INFO | fairseq.trainer | begin training epoch 28
+2023-05-17 18:32:51 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:33:16 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:33:25 | INFO | valid | epoch 028 | valid on 'valid' subset | loss 2.93 | ppl 7.62 | wps 16144 | wpb 857.5 | bsz 3 | num_updates 168 | best_loss 2.827
+2023-05-17 18:33:25 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 28 @ 168 updates
+2023-05-17 18:33:25 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint28.pt
+2023-05-17 18:33:29 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint28.pt
+2023-05-17 18:33:38 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint28.pt (epoch 28 @ 168 updates, score 2.93) (writing took 13.582909188000485 seconds)
+2023-05-17 18:33:39 | INFO | fairseq_cli.train | end of epoch 28 (average epoch stats below)
+2023-05-17 18:33:39 | INFO | train | epoch 028 | loss 1.995 | ppl 3.99 | wps 2974.8 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 168 | lr 1.54303e-05 | gnorm 0.844 | train_wall 25 | gb_free 31.5 | wall 1496
+2023-05-17 18:33:39 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:33:39 | INFO | fairseq.trainer | begin training epoch 29
+2023-05-17 18:33:39 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:34:04 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:34:13 | INFO | valid | epoch 029 | valid on 'valid' subset | loss 2.939 | ppl 7.67 | wps 16180.7 | wpb 857.5 | bsz 3 | num_updates 174 | best_loss 2.827
+2023-05-17 18:34:13 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 29 @ 174 updates
+2023-05-17 18:34:13 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint29.pt
+2023-05-17 18:34:17 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint29.pt
+2023-05-17 18:34:26 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint29.pt (epoch 29 @ 174 updates, score 2.939) (writing took 13.476045082992641 seconds)
+2023-05-17 18:34:27 | INFO | fairseq_cli.train | end of epoch 29 (average epoch stats below)
+2023-05-17 18:34:27 | INFO | train | epoch 029 | loss 1.959 | ppl 3.89 | wps 2963.5 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 174 | lr 1.5162e-05 | gnorm 0.856 | train_wall 25 | gb_free 31 | wall 1545
+2023-05-17 18:34:27 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:34:27 | INFO | fairseq.trainer | begin training epoch 30
+2023-05-17 18:34:27 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:34:52 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:35:01 | INFO | valid | epoch 030 | valid on 'valid' subset | loss 2.948 | ppl 7.72 | wps 16135.1 | wpb 857.5 | bsz 3 | num_updates 180 | best_loss 2.827
+2023-05-17 18:35:01 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 30 @ 180 updates
+2023-05-17 18:35:01 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint30.pt
+2023-05-17 18:35:06 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint30.pt
+2023-05-17 18:35:15 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint30.pt (epoch 30 @ 180 updates, score 2.948) (writing took 13.590656051994301 seconds)
+2023-05-17 18:35:16 | INFO | fairseq_cli.train | end of epoch 30 (average epoch stats below)
+2023-05-17 18:35:16 | INFO | train | epoch 030 | loss 1.923 | ppl 3.79 | wps 2969.7 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 180 | lr 1.49071e-05 | gnorm 0.847 | train_wall 25 | gb_free 31.4 | wall 1593
+2023-05-17 18:35:16 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:35:16 | INFO | fairseq.trainer | begin training epoch 31
+2023-05-17 18:35:16 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:35:40 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:35:49 | INFO | valid | epoch 031 | valid on 'valid' subset | loss 2.96 | ppl 7.78 | wps 16143.8 | wpb 857.5 | bsz 3 | num_updates 186 | best_loss 2.827
+2023-05-17 18:35:49 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 31 @ 186 updates
+2023-05-17 18:35:49 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint31.pt
+2023-05-17 18:35:54 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint31.pt
+2023-05-17 18:36:03 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint31.pt (epoch 31 @ 186 updates, score 2.96) (writing took 13.450759702987853 seconds)
+2023-05-17 18:36:04 | INFO | fairseq_cli.train | end of epoch 31 (average epoch stats below)
+2023-05-17 18:36:04 | INFO | train | epoch 031 | loss 1.894 | ppl 3.72 | wps 2977.1 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 186 | lr 1.46647e-05 | gnorm 0.842 | train_wall 25 | gb_free 31.2 | wall 1641
+2023-05-17 18:36:04 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:36:04 | INFO | fairseq.trainer | begin training epoch 32
+2023-05-17 18:36:04 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:36:28 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:36:37 | INFO | valid | epoch 032 | valid on 'valid' subset | loss 2.971 | ppl 7.84 | wps 16119.9 | wpb 857.5 | bsz 3 | num_updates 192 | best_loss 2.827
+2023-05-17 18:36:37 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 32 @ 192 updates
+2023-05-17 18:36:37 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint32.pt
+2023-05-17 18:36:42 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint32.pt
+2023-05-17 18:36:51 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint32.pt (epoch 32 @ 192 updates, score 2.971) (writing took 13.891434076998848 seconds)
+2023-05-17 18:36:52 | INFO | fairseq_cli.train | end of epoch 32 (average epoch stats below)
+2023-05-17 18:36:52 | INFO | train | epoch 032 | loss 1.855 | ppl 3.62 | wps 2953.8 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 192 | lr 1.44338e-05 | gnorm 0.849 | train_wall 25 | gb_free 30.8 | wall 1689
+2023-05-17 18:36:52 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:36:52 | INFO | fairseq.trainer | begin training epoch 33
+2023-05-17 18:36:52 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:37:17 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:37:26 | INFO | valid | epoch 033 | valid on 'valid' subset | loss 2.976 | ppl 7.87 | wps 16126.5 | wpb 857.5 | bsz 3 | num_updates 198 | best_loss 2.827
+2023-05-17 18:37:26 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 33 @ 198 updates
+2023-05-17 18:37:26 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint33.pt
+2023-05-17 18:37:30 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint33.pt
+2023-05-17 18:37:40 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint33.pt (epoch 33 @ 198 updates, score 2.976) (writing took 13.802869164006552 seconds)
+2023-05-17 18:37:41 | INFO | fairseq_cli.train | end of epoch 33 (average epoch stats below)
+2023-05-17 18:37:41 | INFO | train | epoch 033 | loss 1.828 | ppl 3.55 | wps 2946.2 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 198 | lr 1.42134e-05 | gnorm 0.845 | train_wall 25 | gb_free 31 | wall 1738
+2023-05-17 18:37:41 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:37:41 | INFO | fairseq.trainer | begin training epoch 34
+2023-05-17 18:37:41 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:37:50 | INFO | train_inner | epoch 034:      2 / 6 loss=2.107, ppl=4.31, wps=2939.9, ups=0.12, wpb=23778.1, bsz=83.1, num_updates=200, lr=1.41421e-05, gnorm=0.852, train_wall=410, gb_free=30.6, wall=1747
+2023-05-17 18:38:05 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:38:14 | INFO | valid | epoch 034 | valid on 'valid' subset | loss 2.99 | ppl 7.94 | wps 16160.5 | wpb 857.5 | bsz 3 | num_updates 204 | best_loss 2.827
+2023-05-17 18:38:14 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 34 @ 204 updates
+2023-05-17 18:38:14 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint34.pt
+2023-05-17 18:38:19 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint34.pt
+2023-05-17 18:38:28 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint34.pt (epoch 34 @ 204 updates, score 2.99) (writing took 13.830616569000995 seconds)
+2023-05-17 18:38:29 | INFO | fairseq_cli.train | end of epoch 34 (average epoch stats below)
+2023-05-17 18:38:29 | INFO | train | epoch 034 | loss 1.793 | ppl 3.47 | wps 2956 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 204 | lr 1.40028e-05 | gnorm 0.848 | train_wall 25 | gb_free 31 | wall 1786
+2023-05-17 18:38:29 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:38:29 | INFO | fairseq.trainer | begin training epoch 35
+2023-05-17 18:38:29 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:38:54 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:39:03 | INFO | valid | epoch 035 | valid on 'valid' subset | loss 3.002 | ppl 8.01 | wps 16158.2 | wpb 857.5 | bsz 3 | num_updates 210 | best_loss 2.827
+2023-05-17 18:39:03 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 35 @ 210 updates
+2023-05-17 18:39:03 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint35.pt
+2023-05-17 18:39:07 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint35.pt
+2023-05-17 18:39:16 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint35.pt (epoch 35 @ 210 updates, score 3.002) (writing took 13.804394970997237 seconds)
+2023-05-17 18:39:17 | INFO | fairseq_cli.train | end of epoch 35 (average epoch stats below)
+2023-05-17 18:39:17 | INFO | train | epoch 035 | loss 1.762 | ppl 3.39 | wps 2960.9 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 210 | lr 1.38013e-05 | gnorm 0.86 | train_wall 25 | gb_free 31.1 | wall 1834
+2023-05-17 18:39:17 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:39:17 | INFO | fairseq.trainer | begin training epoch 36
+2023-05-17 18:39:17 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:39:42 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:39:51 | INFO | valid | epoch 036 | valid on 'valid' subset | loss 3.012 | ppl 8.07 | wps 16150.5 | wpb 857.5 | bsz 3 | num_updates 216 | best_loss 2.827
+2023-05-17 18:39:51 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 36 @ 216 updates
+2023-05-17 18:39:51 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint36.pt
+2023-05-17 18:39:56 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint36.pt
+2023-05-17 18:40:05 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint36.pt (epoch 36 @ 216 updates, score 3.012) (writing took 13.83986476699647 seconds)
+2023-05-17 18:40:06 | INFO | fairseq_cli.train | end of epoch 36 (average epoch stats below)
+2023-05-17 18:40:06 | INFO | train | epoch 036 | loss 1.739 | ppl 3.34 | wps 2958 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 216 | lr 1.36083e-05 | gnorm 0.84 | train_wall 25 | gb_free 30.7 | wall 1883
+2023-05-17 18:40:06 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:40:06 | INFO | fairseq.trainer | begin training epoch 37
+2023-05-17 18:40:06 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:40:30 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:40:39 | INFO | valid | epoch 037 | valid on 'valid' subset | loss 3.019 | ppl 8.11 | wps 16153.7 | wpb 857.5 | bsz 3 | num_updates 222 | best_loss 2.827
+2023-05-17 18:40:39 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 37 @ 222 updates
+2023-05-17 18:40:39 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint37.pt
+2023-05-17 18:40:44 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint37.pt
+2023-05-17 18:40:53 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint37.pt (epoch 37 @ 222 updates, score 3.019) (writing took 13.74120911800128 seconds)
+2023-05-17 18:40:54 | INFO | fairseq_cli.train | end of epoch 37 (average epoch stats below)
+2023-05-17 18:40:54 | INFO | train | epoch 037 | loss 1.706 | ppl 3.26 | wps 2965.2 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 222 | lr 1.34231e-05 | gnorm 0.846 | train_wall 25 | gb_free 31.2 | wall 1931
+2023-05-17 18:40:54 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:40:54 | INFO | fairseq.trainer | begin training epoch 38
+2023-05-17 18:40:54 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:41:19 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:41:27 | INFO | valid | epoch 038 | valid on 'valid' subset | loss 3.03 | ppl 8.17 | wps 16143.1 | wpb 857.5 | bsz 3 | num_updates 228 | best_loss 2.827
+2023-05-17 18:41:27 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 38 @ 228 updates
+2023-05-17 18:41:27 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint38.pt
+2023-05-17 18:41:32 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint38.pt
+2023-05-17 18:41:41 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint38.pt (epoch 38 @ 228 updates, score 3.03) (writing took 13.655097550989012 seconds)
+2023-05-17 18:41:42 | INFO | fairseq_cli.train | end of epoch 38 (average epoch stats below)
+2023-05-17 18:41:42 | INFO | train | epoch 038 | loss 1.681 | ppl 3.21 | wps 2973.9 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 228 | lr 1.32453e-05 | gnorm 0.857 | train_wall 25 | gb_free 31.1 | wall 1979
+2023-05-17 18:41:42 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:41:42 | INFO | fairseq.trainer | begin training epoch 39
+2023-05-17 18:41:42 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:42:07 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:42:16 | INFO | valid | epoch 039 | valid on 'valid' subset | loss 3.039 | ppl 8.22 | wps 16120.9 | wpb 857.5 | bsz 3 | num_updates 234 | best_loss 2.827
+2023-05-17 18:42:16 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 39 @ 234 updates
+2023-05-17 18:42:16 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint39.pt
+2023-05-17 18:42:20 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint39.pt
+2023-05-17 18:42:29 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint39.pt (epoch 39 @ 234 updates, score 3.039) (writing took 13.788602383006946 seconds)
+2023-05-17 18:42:30 | INFO | fairseq_cli.train | end of epoch 39 (average epoch stats below)
+2023-05-17 18:42:30 | INFO | train | epoch 039 | loss 1.654 | ppl 3.15 | wps 2951.5 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 234 | lr 1.30744e-05 | gnorm 0.84 | train_wall 25 | gb_free 31.4 | wall 2027
+2023-05-17 18:42:30 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:42:30 | INFO | fairseq.trainer | begin training epoch 40
+2023-05-17 18:42:30 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:42:55 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:43:04 | INFO | valid | epoch 040 | valid on 'valid' subset | loss 3.047 | ppl 8.27 | wps 16116.5 | wpb 857.5 | bsz 3 | num_updates 240 | best_loss 2.827
+2023-05-17 18:43:04 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 40 @ 240 updates
+2023-05-17 18:43:04 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint40.pt
+2023-05-17 18:43:09 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint40.pt
+2023-05-17 18:43:18 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint40.pt (epoch 40 @ 240 updates, score 3.047) (writing took 13.854412532993592 seconds)
+2023-05-17 18:43:19 | INFO | fairseq_cli.train | end of epoch 40 (average epoch stats below)
+2023-05-17 18:43:19 | INFO | train | epoch 040 | loss 1.624 | ppl 3.08 | wps 2960.2 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 240 | lr 1.29099e-05 | gnorm 0.848 | train_wall 25 | gb_free 31 | wall 2076
+2023-05-17 18:43:19 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:43:19 | INFO | fairseq.trainer | begin training epoch 41
+2023-05-17 18:43:19 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:43:43 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:43:52 | INFO | valid | epoch 041 | valid on 'valid' subset | loss 3.057 | ppl 8.32 | wps 16200 | wpb 857.5 | bsz 3 | num_updates 246 | best_loss 2.827
+2023-05-17 18:43:52 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 41 @ 246 updates
+2023-05-17 18:43:52 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint41.pt
+2023-05-17 18:43:57 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint41.pt
+2023-05-17 18:44:06 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint41.pt (epoch 41 @ 246 updates, score 3.057) (writing took 13.910477796001942 seconds)
+2023-05-17 18:44:07 | INFO | fairseq_cli.train | end of epoch 41 (average epoch stats below)
+2023-05-17 18:44:07 | INFO | train | epoch 041 | loss 1.6 | ppl 3.03 | wps 2970.4 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 246 | lr 1.27515e-05 | gnorm 0.852 | train_wall 25 | gb_free 31.4 | wall 2124
+2023-05-17 18:44:07 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:44:07 | INFO | fairseq.trainer | begin training epoch 42
+2023-05-17 18:44:07 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:44:32 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:44:40 | INFO | valid | epoch 042 | valid on 'valid' subset | loss 3.068 | ppl 8.39 | wps 16158.5 | wpb 857.5 | bsz 3 | num_updates 252 | best_loss 2.827
+2023-05-17 18:44:40 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 42 @ 252 updates
+2023-05-17 18:44:40 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint42.pt
+2023-05-17 18:44:45 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint42.pt
+2023-05-17 18:44:54 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint42.pt (epoch 42 @ 252 updates, score 3.068) (writing took 13.787271077992045 seconds)
+2023-05-17 18:44:55 | INFO | fairseq_cli.train | end of epoch 42 (average epoch stats below)
+2023-05-17 18:44:55 | INFO | train | epoch 042 | loss 1.575 | ppl 2.98 | wps 2966.9 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 252 | lr 1.25988e-05 | gnorm 0.833 | train_wall 25 | gb_free 31.5 | wall 2172
+2023-05-17 18:44:55 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:44:55 | INFO | fairseq.trainer | begin training epoch 43
+2023-05-17 18:44:55 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:45:20 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:45:29 | INFO | valid | epoch 043 | valid on 'valid' subset | loss 3.077 | ppl 8.44 | wps 16126.4 | wpb 857.5 | bsz 3 | num_updates 258 | best_loss 2.827
+2023-05-17 18:45:29 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 43 @ 258 updates
+2023-05-17 18:45:29 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint43.pt
+2023-05-17 18:45:33 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint43.pt
+2023-05-17 18:45:42 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint43.pt (epoch 43 @ 258 updates, score 3.077) (writing took 13.872287125006551 seconds)
+2023-05-17 18:45:43 | INFO | fairseq_cli.train | end of epoch 43 (average epoch stats below)
+2023-05-17 18:45:43 | INFO | train | epoch 043 | loss 1.551 | ppl 2.93 | wps 2959 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 258 | lr 1.24515e-05 | gnorm 0.841 | train_wall 25 | gb_free 31.2 | wall 2220
+2023-05-17 18:45:43 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:45:43 | INFO | fairseq.trainer | begin training epoch 44
+2023-05-17 18:45:43 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:46:08 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:46:17 | INFO | valid | epoch 044 | valid on 'valid' subset | loss 3.084 | ppl 8.48 | wps 16162.5 | wpb 857.5 | bsz 3 | num_updates 264 | best_loss 2.827
+2023-05-17 18:46:17 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 44 @ 264 updates
+2023-05-17 18:46:17 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint44.pt
+2023-05-17 18:46:21 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint44.pt
+2023-05-17 18:46:30 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint44.pt (epoch 44 @ 264 updates, score 3.084) (writing took 13.534060363002936 seconds)
+2023-05-17 18:46:31 | INFO | fairseq_cli.train | end of epoch 44 (average epoch stats below)
+2023-05-17 18:46:31 | INFO | train | epoch 044 | loss 1.525 | ppl 2.88 | wps 2982.9 | ups 0.13 | wpb 23829.8 | bsz 83.3 | num_updates 264 | lr 1.23091e-05 | gnorm 0.845 | train_wall 25 | gb_free 31.2 | wall 2268
+2023-05-17 18:46:31 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:46:31 | INFO | fairseq.trainer | begin training epoch 45
+2023-05-17 18:46:31 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:46:56 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:47:05 | INFO | valid | epoch 045 | valid on 'valid' subset | loss 3.093 | ppl 8.53 | wps 16109.6 | wpb 857.5 | bsz 3 | num_updates 270 | best_loss 2.827
+2023-05-17 18:47:05 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 45 @ 270 updates
+2023-05-17 18:47:05 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint45.pt
+2023-05-17 18:47:10 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint45.pt
+2023-05-17 18:47:19 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint45.pt (epoch 45 @ 270 updates, score 3.093) (writing took 13.820660259996657 seconds)
+2023-05-17 18:47:19 | INFO | fairseq_cli.train | end of epoch 45 (average epoch stats below)
+2023-05-17 18:47:19 | INFO | train | epoch 045 | loss 1.504 | ppl 2.84 | wps 2962 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 270 | lr 1.21716e-05 | gnorm 0.847 | train_wall 25 | gb_free 31.5 | wall 2317
+2023-05-17 18:47:19 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:47:19 | INFO | fairseq.trainer | begin training epoch 46
+2023-05-17 18:47:19 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:47:44 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:47:53 | INFO | valid | epoch 046 | valid on 'valid' subset | loss 3.097 | ppl 8.56 | wps 16159.9 | wpb 857.5 | bsz 3 | num_updates 276 | best_loss 2.827
+2023-05-17 18:47:53 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 46 @ 276 updates
+2023-05-17 18:47:53 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint46.pt
+2023-05-17 18:47:59 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint46.pt
+2023-05-17 18:48:08 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint46.pt (epoch 46 @ 276 updates, score 3.097) (writing took 14.694227956002578 seconds)
+2023-05-17 18:48:09 | INFO | fairseq_cli.train | end of epoch 46 (average epoch stats below)
+2023-05-17 18:48:09 | INFO | train | epoch 046 | loss 1.483 | ppl 2.8 | wps 2895.4 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 276 | lr 1.20386e-05 | gnorm 0.833 | train_wall 25 | gb_free 31.1 | wall 2366
+2023-05-17 18:48:09 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:48:09 | INFO | fairseq.trainer | begin training epoch 47
+2023-05-17 18:48:09 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:48:34 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:48:42 | INFO | valid | epoch 047 | valid on 'valid' subset | loss 3.108 | ppl 8.62 | wps 16159 | wpb 857.5 | bsz 3 | num_updates 282 | best_loss 2.827
+2023-05-17 18:48:42 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 47 @ 282 updates
+2023-05-17 18:48:42 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint47.pt
+2023-05-17 18:48:47 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint47.pt
+2023-05-17 18:48:56 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint47.pt (epoch 47 @ 282 updates, score 3.108) (writing took 13.844265260995599 seconds)
+2023-05-17 18:48:57 | INFO | fairseq_cli.train | end of epoch 47 (average epoch stats below)
+2023-05-17 18:48:57 | INFO | train | epoch 047 | loss 1.461 | ppl 2.75 | wps 2960.1 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 282 | lr 1.19098e-05 | gnorm 0.836 | train_wall 25 | gb_free 31.1 | wall 2414
+2023-05-17 18:48:57 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:48:57 | INFO | fairseq.trainer | begin training epoch 48
+2023-05-17 18:48:57 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:49:22 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:49:31 | INFO | valid | epoch 048 | valid on 'valid' subset | loss 3.118 | ppl 8.68 | wps 16165.5 | wpb 857.5 | bsz 3 | num_updates 288 | best_loss 2.827
+2023-05-17 18:49:31 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 48 @ 288 updates
+2023-05-17 18:49:31 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint48.pt
+2023-05-17 18:49:36 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint48.pt
+2023-05-17 18:49:44 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint48.pt (epoch 48 @ 288 updates, score 3.118) (writing took 13.681512156006647 seconds)
+2023-05-17 18:49:45 | INFO | fairseq_cli.train | end of epoch 48 (average epoch stats below)
+2023-05-17 18:49:45 | INFO | train | epoch 048 | loss 1.437 | ppl 2.71 | wps 2964.7 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 288 | lr 1.17851e-05 | gnorm 0.854 | train_wall 25 | gb_free 31 | wall 2462
+2023-05-17 18:49:45 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:49:45 | INFO | fairseq.trainer | begin training epoch 49
+2023-05-17 18:49:45 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:50:10 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:50:19 | INFO | valid | epoch 049 | valid on 'valid' subset | loss 3.126 | ppl 8.73 | wps 16184.7 | wpb 857.5 | bsz 3 | num_updates 294 | best_loss 2.827
+2023-05-17 18:50:19 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 49 @ 294 updates
+2023-05-17 18:50:19 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint49.pt
+2023-05-17 18:50:23 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint49.pt
+2023-05-17 18:50:33 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint49.pt (epoch 49 @ 294 updates, score 3.126) (writing took 13.521770495004603 seconds)
+2023-05-17 18:50:34 | INFO | fairseq_cli.train | end of epoch 49 (average epoch stats below)
+2023-05-17 18:50:34 | INFO | train | epoch 049 | loss 1.417 | ppl 2.67 | wps 2960.1 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 294 | lr 1.16642e-05 | gnorm 0.826 | train_wall 25 | gb_free 31 | wall 2511
+2023-05-17 18:50:34 | INFO | fairseq.data.iterators | grouped total_num_itrs = 6
+2023-05-17 18:50:34 | INFO | fairseq.trainer | begin training epoch 50
+2023-05-17 18:50:34 | INFO | fairseq_cli.train | Start iterating over samples
+2023-05-17 18:50:59 | INFO | train_inner | epoch 050:      6 / 6 loss=1.578, ppl=2.99, wps=3013.5, ups=0.13, wpb=23759.8, bsz=83.1, num_updates=300, lr=1.1547e-05, gnorm=0.846, train_wall=410, gb_free=31.6, wall=2536
+2023-05-17 18:50:59 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2023-05-17 18:51:07 | INFO | valid | epoch 050 | valid on 'valid' subset | loss 3.13 | ppl 8.76 | wps 16161.5 | wpb 857.5 | bsz 3 | num_updates 300 | best_loss 2.827
+2023-05-17 18:51:07 | INFO | fairseq.checkpoint_utils | Preparing to save checkpoint for epoch 50 @ 300 updates
+2023-05-17 18:51:07 | INFO | fairseq.trainer | Saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint50.pt
+2023-05-17 18:51:12 | INFO | fairseq.trainer | Finished saving checkpoint to /proj/berzelius-2021-21/users/jacob/BioGPT/checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint50.pt
+2023-05-17 18:51:21 | INFO | fairseq.checkpoint_utils | Saved checkpoint ../../checkpoints/RE-BC5CDR-BioGPT-v3/checkpoint50.pt (epoch 50 @ 300 updates, score 3.13) (writing took 13.76563073800935 seconds)
+2023-05-17 18:51:22 | INFO | fairseq_cli.train | end of epoch 50 (average epoch stats below)
+2023-05-17 18:51:22 | INFO | train | epoch 050 | loss 1.398 | ppl 2.64 | wps 2962.1 | ups 0.12 | wpb 23829.8 | bsz 83.3 | num_updates 300 | lr 1.1547e-05 | gnorm 0.835 | train_wall 25 | gb_free 31.6 | wall 2559
+2023-05-17 18:51:22 | INFO | fairseq_cli.train | done training in 2555.3 seconds
