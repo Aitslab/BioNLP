@@ -57,14 +57,14 @@ with open("../data/BC5CDR/raw/train.entities.json", 'r') as f:
     chemicals = set(entity_data["chemical2id"].keys())
     diseases = set(entity_data["disease2id"].keys())
 
-found_chemicals = []
-found_diseases  = []
+found_chemicals = set()
+found_diseases  = set()
 for word in free_form_text.split():
     if (word in chemicals):
-        found_chemicals.append(word)
+        found_chemicals.add(word)
 
     if (word in diseases):
-        found_diseases.append(word)
+        found_diseases.add(word)
 
 print(f"Found chemicals: {found_chemicals}")
 print(f"Found diseases: {found_diseases}")
