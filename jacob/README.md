@@ -13,7 +13,7 @@ This README describes the codebase I developed for the following sub-projects:
 These bullets are hyperlinks to the sub-project specifc READMEs with 
 documentation on setup, files, usage, and saved results.
 
-A detailed logbook can be found here: [`Jacob_Krucinski_EDAN70_Log.ipynb`](Jacob_Krucinski_EDAN70_Log.ipynb) and final report can be found **here**
+A detailed logbook can be found here: [`Jacob_Krucinski_EDAN70_Log.ipynb`](Jacob_Krucinski_EDAN70_Log.ipynb) and final report can be found [here](EDAN70_Project_Report_JacobK.pdf)
 
 
 # Setup
