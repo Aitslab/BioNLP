@@ -71,7 +71,8 @@ The files/folders I worked on are described below.
 
 # Usage
 To ensure relative paths in scripts work properly, 
-run all scripts from the folder they reside in.
+run all scripts from the folder they reside in
+with the environment activated.
 ## Hyperparameter Tuning
 To start a new hyperparameter tuning experiment, modify the 
 [preprocess_train_vJacob.sh](examples/RE-BC5CDR/preprocess_train_vJacob.sh) script to activate your Anaconda
